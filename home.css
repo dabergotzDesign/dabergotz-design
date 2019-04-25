@@ -75,6 +75,8 @@ header a:hover {
 section {
   padding: 10px;
   background-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 div {
@@ -104,7 +106,6 @@ h1 {
 h2 {
   margin: 0px;
   color: #f55d4b;
-  text-align: left;
   padding: 16px;
   letter-spacing: 1px;
   border-bottom: 1px solid #dddddd;
@@ -112,7 +113,7 @@ h2 {
 
 h3 {
   margin: 0px;
-  padding: 4px;
+  padding: 12px;
   color: #f55d4b;
 }
 
@@ -129,8 +130,6 @@ hr {
 
 #homeSec {
   text-align: center;
-  margin-right: 15%;
-  margin-left: 15%;
 }
 
 #homeText {
@@ -145,11 +144,6 @@ hr {
 }
 
 /*/////////////////////////PORTFOLIO/////////////////////*/
-
-#portSec {
-  margin-right: 15%;
-  margin-left: 15%;
-}
 
 #portText {
   margin: 0px;
@@ -468,12 +462,40 @@ img.demo3 {
   color: white;
 }
 
+/* ////////////////////////////////////////////
+ WEB DESIGN PORTFOLIO
+ ///////////////////////////////////////////// */
+.penFlex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  margin: 16px 42px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 8px;
+  background-color: #555555;
+}
 /*////////////////////////BLOG//////////////////////*/
 
-#blogSec {
+/* #blogSec {
   margin-right: 15%;
   margin-left: 15%;
-}
+} */
 
 /* #blogPost {
   border-bottom: 1px solid #dddddd;
@@ -515,10 +537,10 @@ ul li {
 
 /*///////////////////////CONTACT////////////////////////*/
 
-#conSec {
+/* #conSec {
   margin-right: 15%;
   margin-left: 15%;
-}
+} */
 
 #mailDiv {
   padding-right: 75px;
