@@ -1,0 +1,35 @@
+/*//////////////////////////////////////////////////////////
+                                     ABOUT ME
+/////////////////////////////////////////////////////////*/
+
+#meSec {
+  text-align: left;
+  max-width: 100%;
+  margin-right: 15%;
+  margin-left: 15%;
+  display: inline-block;
+}
+
+#meIMG {
+  float: left;
+  width: 250px;
+  height: 275px;
+  padding: 25px;
+  padding-bottom: 50px;
+}
+
+#infoDiv {
+  columns: 2;
+  column-gap: 70px;
+  column-rule: 2px solid #dddddd;
+}
+
+ul li {
+  padding: 4px 0 0 4px;
+}
+
+/* favorite games list */
+#fav li {
+  list-style: none;
+  padding: 6px;
+}
