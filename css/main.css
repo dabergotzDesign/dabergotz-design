@@ -16,23 +16,45 @@ body {
 }
 
 header {
-  margin: 0px;
   background-color: #666666;
-  text-align: right;
-  display: block;
-  max-width: 100%;
-  width: auto;
-  height: auto;
   height: 100px;
   position: sticky;
   top: 0;
 }
 
-header a {
+.topNav {
+  overflow: hidden;
+  text-align: right;
+  /* margin-right: 50px; */
+  padding-top: 38px;
+  float: right;
+  display: inline;
+}
+
+.topNav a {
   font-size: 20px;
   text-decoration: none;
   color: white;
   transition-duration: 0.4s;
+  padding: 40px 16px;
+  height: 40px;
+  background-color: #666666;
+}
+
+.topNav a:hover {
+  background-color: #555555;
+  text-decoration: underline;
+}
+
+.topNav .icon {
+  display: none;
+  font-size: 20px;
+  padding: 16px 42px;
+}
+
+.active {
+  background-color: #555555;
+  color: white;
 }
 
 header img {
@@ -44,20 +66,6 @@ header img {
   display: block;
   padding: 8px;
   margin-left: 15%;
-}
-
-#headLink {
-  padding: 38px 15px;
-  height: 30px;
-}
-
-#headSpace {
-  margin-right: 50px;
-  padding-top: 38px;
-}
-
-header a:hover {
-  background-color: #555555;
 }
 
 #borderHeadline {
@@ -151,37 +159,3 @@ footer {
   font-size: 0.8em;
   text-align: right;
 }
-/* 
-/////////////////////////////////////////////////
-                            MEDIA QUERY 
- //////////////////////////////////////////////////
-
-/* //// HOME PAGE ///// 
-@media only screen and (min-width: 320px) {
-  
-  .homeMedia {
-    font-size: 4rem;
-  }
-}
-
-@media only screen and (min-width: 768px) {
- 
-  .homeMedia {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  
-  .homeMedia {
-   
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  
-  .homeMedia {
-    
-  }
-}
-*/
