@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>About Me d-dabergotz Design</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="css/about.css">
+	<link rel="stylesheet" href="css/media.css">
 	<link rel="icon" href="img/icon_tab.png">
 	<link
 	rel="stylesheet"
@@ -11,18 +13,19 @@
 	integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y"
 	crossorigin="anonymous"
   />
-<header>
-	<img src="img/icon_web.png" alt="d-dabergotz Logo">
-		<div id="headSpace">
-		<a href="index.html" id="headLink">Home</a>
-		<a href="portfolio.html" id="headLink">Portfolio</a>
-		<a href="blog.html" id="headLink">Blog</a>
-		<a href="aboutMe.html" id="headLink">About Me</a>
-		<a href="contact.html" id="headLink">Contact</a>
-		</div>
-	</header>
 </head>
 <body>
+	<header>
+		<img src="img/icon_web.png" alt="d-dabergotz Logo">
+		<div class="topNav" id="navDrop">
+		<a href="javascript:void(0);" class="icon" onclick="hamMenu()"><i class="fa fa-bars"></i></a>
+		<a href="index.html">Home</a>
+		<a href="portfolio.html">Portfolio</a>
+		<a href="blog.html">Blog</a>
+		<a href="aboutMe.html"  class="active">About Me</a>
+		<a href="contact.html">Contact</a>
+		</div>
+		</header>
 	<div id="borderHeadline">
 		<h1>About Me <p id="headline">Once upon a time...</p></h1>
 	</div>
@@ -115,6 +118,6 @@
 			</div>
 
 	</footer>
-
+	<script src="menu.js"></script>
 </body>
 </html>
