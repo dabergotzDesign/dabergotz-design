@@ -8,8 +8,8 @@
 
 body {
   background-color: #bdd1d3;
-  background-image: url("img/web_bgWEB.jpg");
-  background-size: 100% 90%;
+  background-image: url(../img/web_bgWEB.jpg);
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
