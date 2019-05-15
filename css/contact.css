@@ -1,0 +1,42 @@
+/*//////////////////////////////////////////////////////////
+                                      CONTACT
+/////////////////////////////////////////////////////////*/
+
+/* #conSec {
+  margin-right: 15%;
+  margin-left: 15%;
+} */
+
+#mailDiv {
+  padding-right: 75px;
+  padding-bottom: 16px;
+  /* display: inline-block; */
+  float: right;
+}
+
+#socialDiv {
+  padding-left: 24px;
+  display: inline-block;
+}
+
+#socialButton {
+  background-color: white;
+  color: #bcbcbc;
+  border: solid;
+  border-color: #bcbcbc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 2.5em;
+  transition-duration: 0.4s;
+}
+
+#socialButton:hover {
+  background-color: #4e4e4e;
+  border-color: #4e4e4e;
+  color: whitesmoke;
+}
+
+#at {
+  color: #bcbcbc;
+}
