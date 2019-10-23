@@ -1,0 +1,41 @@
+header .navigation {
+  /* align */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  /* spacing */
+  padding: 16px;
+
+  /* coloring */
+  border-bottom: 2px solid whitesmoke;
+  box-shadow: 0 0 64px rgb(170, 170, 170) inset;
+}
+
+.navigation a {
+  /* spacing */
+  padding: 2px 16px;
+
+  /* color & effect */
+  color: white;
+  text-decoration: none;
+
+  /* font */
+  font-size: 24px;
+}
+
+.navigation a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  display: block;
+  background: rgb(255, 255, 255);
+  transition: width 0.2s ease;
+}
+
+.navigation a:hover::after {
+  width: 100%;
+  left: 0;
+  background: rgb(255, 255, 255);
+}

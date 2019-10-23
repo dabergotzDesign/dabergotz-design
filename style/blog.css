@@ -2,11 +2,7 @@
                                       BLOG
 /////////////////////////////////////////////////////////*/
 
-/* #blogSec {
-  margin-right: 15%;
-  margin-left: 15%;
-} */
-
-/* #blogPost {
-  border-bottom: 1px solid #dddddd;
-} */
+h1 {
+  text-align: center;
+  color: white;
+}
