@@ -17,3 +17,36 @@ h1 {
   text-align: center;
   color: white;
 }
+
+/* ////////// ABOUT ME TEXT ///////////////////// */
+
+.aboutText{
+  background: whitesmoke;
+  height:80vh;
+  width:40vw;
+  border: 4px gray solid;
+  border-radius: 10px;
+  overflow-y: scroll;
+
+  position: absolute;
+  top:8rem;
+  right:6rem;
+  margin:1rem;
+}
+
+.aboutText p{
+  padding: 1rem 2rem;
+}
+
+hr{
+  margin:0 2rem;
+}
+
+h2{
+  text-align: center;
+  padding: 1rem;
+}
+
+.moreAbout{
+
+}
