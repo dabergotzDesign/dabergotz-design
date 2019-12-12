@@ -1,4 +1,4 @@
-/* AFFECTS EVERY PAGE */
+/* BASIC PAGE FORMAT */
 * {
   padding: 0;
   margin: 0;
@@ -7,17 +7,76 @@
 
 body {
   height: 100vh;
-  /* Image exhange with screenshots from interior project */
-  background-image: url("https://evermotion.org/files/publications_images/AI_vol6_01_02.jpg");
+  background-image: url("../img/backgrounds/Room_Home.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  font-family: monospace;
+  font-weight: 100;
 }
 
 h1 {
   text-align: center;
   color: white;
+  margin: 6rem auto;
+  border-bottom: 2px solid white;
+
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 4px;
 }
 
 /* AFFECTS ONLY LANDING PAGE - work with classes from here on*/
+
+.home{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.welcome{
+  display: block;
+  margin: auto;
+  width:50%;
+
+  background:rgba(245, 245, 245, 0.75);
+  border:4px white solid;
+  border-radius: 10px;
+
+  padding: 8px;
+  margin: 14rem auto;
+
+  animation: lift 2s linear;
+}
+
+@keyframes lift{
+  from{
+    margin: 45rem auto;
+    opacity: 0;
+  }
+  to{
+    margin: 14rem auto;
+    opacity: 1;
+  }
+}
+
+.welcomeHeadline{
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 8px;
+}
+
+.welcomeSpeech{
+  text-align: center;
+  font-size: 1rem;
+
+  padding: 8px;
+}
+
+.welcomeSpeech p{
+  padding: 4px;
+}

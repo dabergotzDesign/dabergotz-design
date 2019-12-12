@@ -6,30 +6,31 @@ header .navigation {
   align-items: center;
 
   /* spacing */
-  padding: 16px;
+  padding: 8px;
+  height:8vh;
 
   /* coloring */
   border-bottom: 2px solid whitesmoke;
   box-shadow: 0 0 64px rgb(228, 228, 228) inset;
-  background: rgba(180, 180, 180, 0.5);
+  background: rgba(136, 136, 136, 0.5);
 }
 
 .logo {
   display: block;
-  width: 5%;
+  width: 8%;
   padding: auto;
 }
 
 .navigation a {
   /* spacing */
-  padding: 2px 16px;
+  padding: 0 16px;
 
   /* color & effect */
   color: white;
   text-decoration: none;
 
   /* font */
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Roboto Mono", Arial, monospace;
   font-weight: 100;
 }

@@ -2,6 +2,21 @@
                                       BLOG
 /////////////////////////////////////////////////////////*/
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url("../img/backgrounds/Lounge_Blog.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 h1 {
   text-align: center;
   color: white;
