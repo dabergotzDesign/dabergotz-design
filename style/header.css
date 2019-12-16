@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
 header .navigation {
   /* align */
   display: flex;
@@ -31,7 +33,7 @@ header .navigation {
 
   /* font */
   font-size: 20px;
-  font-family: "Roboto Mono", Arial, monospace;
+  font-family: 'Comfortaa', cursive;
   font-weight: 100;
 }
 

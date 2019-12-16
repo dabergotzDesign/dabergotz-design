@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -16,26 +18,57 @@ body {
 h1 {
   text-align: center;
   color: white;
+  margin: 1rem;
+  text-decoration: underline;
+
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+
+  font-family: 'Comfortaa', cursive;
 }
 
 /* ////////// ABOUT ME TEXT ///////////////////// */
 
-.aboutText{
+.about{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items:center;
+
+  margin:1%;
+}
+
+.aboutText,
+.aboutData{
   background: whitesmoke;
-  height:80vh;
-  width:40vw;
+  height:70vh;
+  width:30vw;
   border: 4px gray solid;
   border-radius: 10px;
-  overflow-y: scroll;
+  
+  padding: 1rem;
+  
+  font-size: 1.1rem;
+  font-family: monospace;
+}
 
-  position: absolute;
-  top:8rem;
-  right:6rem;
-  margin:1rem;
+.aboutData{
+  line-height: 1.2rem;
+  padding: 1.2rem;
+}
+
+.data span{
+  font-weight: 700;
 }
 
 .aboutText p{
   padding: 1rem 2rem;
+}
+
+.skillsSoft,
+.skillsDesign{
+ padding:8px 0;
 }
 
 hr{
@@ -43,10 +76,11 @@ hr{
 }
 
 h2{
+  font-family: 'Comfortaa', cursive;
   text-align: center;
   padding: 1rem;
 }
 
-.moreAbout{
-
-}
+ ul li{
+   list-style: none;
+ }

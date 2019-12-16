@@ -1,4 +1,6 @@
 /* BASIC PAGE FORMAT */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -15,15 +17,15 @@ body {
 
   overflow: hidden;
 
-  font-family: monospace;
+  font-family: 'Comfortaa', cursive;
   font-weight: 100;
 }
 
 h1 {
   text-align: center;
   color: white;
-  margin: 6rem auto;
-  border-bottom: 2px solid white;
+  margin:6rem auto;
+  text-decoration: underline;
 
   font-size: 2.2rem;
   font-weight: 500;

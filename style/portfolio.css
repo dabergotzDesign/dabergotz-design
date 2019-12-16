@@ -2,6 +2,8 @@
       PAGE LAYOUT 
 /////////////////////////*/
 
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -15,17 +17,24 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  font-family: 'Comfortaa', cursive;
 }
 
 h1 {
   text-align: center;
   color: white;
+  margin: 1rem;
+  text-decoration: underline;
+
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 4px;
 }
 
 
 main{
 
-  font-family: monospace;
 }
 
 /* /////////////////////////////////////////////////////////// */
@@ -54,11 +63,15 @@ main{
 
   margin-top:1rem;
   padding: 8px;
-  width:200px;
+  width:240px;
 
   background: rgba(255, 255, 255, 0.8);
   border:4px whitesmoke solid;
   border-radius: 10px;
+}
+
+.g-navigation hr{
+  margin: 1rem;
 }
 
 .navigation div{
@@ -99,22 +112,8 @@ li:hover{
 /* Parent wrapper to carousel. Width can be changed as needed. */
 .carousel-wrapper-1{
   overflow: hidden;
-  width: 90%;
+  width: 80%;
   margin: auto;
-}
-
-/* -- Slides info text --  */
-
-.carousel-wrapper-1 p{
-  display: block;
-  margin:auto;
-  width:50%;
-
-  background:whitesmoke;
-  border-radius: 10px;
-  text-align: center;
-
-  border:2px red solid;
 }
 
 /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
@@ -217,24 +216,10 @@ li:hover{
 /* Parent wrapper to carousel. Width can be changed as needed. */
 .carousel-wrapper-2 {
   overflow: hidden;
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 
-/* -- Slides info text --  */
-
-.carousel-wrapper-2 p{
-  display: block;
-  margin:auto;
-  width:50%;
-
-  background:whitesmoke;
-  border-radius: 10px;
-  text-align: center;
-
-
-  border:2px orange solid;
-}
 
 /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
 .carousel-wrapper-2 * {
@@ -339,20 +324,7 @@ li:hover{
   margin: auto;
 }
 
-/* -- Slides info text --  */
 
-.carousel-wrapper-3 p{
-  display: block;
-  margin:auto;
-  width:50%;
-
-  background:whitesmoke;
-  border-radius: 10px;
-  text-align: center;
-
-
-  border:2px blue solid;
-}
 
 /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
 .carousel-wrapper-3 * {
@@ -452,7 +424,7 @@ li:hover{
 .web_02 img,
 .web_03 img{
   display: block;
-  width:60%;
+  width:75%;
   margin: auto;
 
   padding: 1rem;
@@ -470,14 +442,88 @@ li:hover{
   text-align: center;
 }
 
-.web_01 p{
+
+
+                                        /* ---------------------------
+                                              PROJECT INFO TEXTS
+                                          ----------------------------  */
+
+.projectInfo,
+.projectInfo-2,
+.projectInfo-3,
+.projectInfo-web,
+.projectInfo-web-2,
+.projectInfo-web-3{
+  display: block;
+  margin:auto;
+  width:50%;
+  padding: 1rem;
+
+  background:whitesmoke;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.projectInfo{
+  border:2px red solid;
+}
+
+.projectInfo-2{
+  border:2px orange solid;
+}
+
+.projectInfo-3{
+  border:2px blue solid;
+}
+
+.projectInfo-web{
   border:2px darkred solid;
 }
 
-.web_02 p{
-  border:2px dimgray solid;
+.projectInfo-web-2{
+  border:2px lightslategray solid;
 }
 
-.web_03 p{
-  border:2px darkgrey solid;
+.projectInfo-web-3{
+  border:2px solid black;
 }
+
+.projectInfo span,
+.projectInfo-2 span,
+.projectInfo-3 span,
+.projectInfo-web span,
+.projectInfo-web-2 span,
+.projectInfo-web-3 span{
+  font-weight: 600;
+}
+
+.projectDescription{
+  padding: 8px;
+}
+
+.projectInfo a,
+.projectInfo-2 a,
+.projectInfo-3 a,
+.projectInfo-web a,
+.projectInfo-web-2 a,
+.projectInfo-web-3 a{
+  color: grey;
+  text-decoration: none;
+  background: transparent;
+  border: 2px grey solid;
+  border-radius: 5px;
+
+  padding: 4px;
+  margin: 4rem;
+}
+
+.projectInfo a:hover,
+.projectInfo-2 a:hover,
+.projectInfo-3 a:hover,
+.projectInfo-web a:hover,
+.projectInfo-web-2a a:hover,
+.projectInfo-web-3 a:hover{
+  color: #efefef;
+  background: dimgray;
+}
+
