@@ -12,7 +12,7 @@
 
 body {
   height: 100vh;
-  background-image: url("../img/backgrounds/TV_Portfolio.png");
+  background-image: url("../img/backgrounds/portfolio_tv.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -32,21 +32,18 @@ h1 {
   letter-spacing: 4px;
 }
 
-
 main{
-
+  overflow: hidden;
 }
+
 
 /* /////////////////////////////////////////////////////////// */
 
 
 .content{
   display: flex;
-  flex-flow: row nowrap;
   justify-content: space-evenly;
-  align-items: flex-start;
-
-  margin:4rem;
+  align-items: stretch;
 }
 
 .galleries{
@@ -56,14 +53,17 @@ main{
   align-items: center;
 }
 
+                          /* ////////////////////////////// */
+                                    /* SIDE NAV */
+                          /* ////////////////////////////// */
+
 .g-navigation{
   text-align: center;
   font-size: 1rem;
   color: #111;
 
-  margin-top:1rem;
+  display: block;
   padding: 8px;
-  width:240px;
 
   background: rgba(255, 255, 255, 0.8);
   border:4px whitesmoke solid;
@@ -74,8 +74,11 @@ main{
   margin: 1rem;
 }
 
-.navigation div{
-  padding: 1rem;
+.nav-content-wrapper{
+  margin: auto;
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
 }
 
 li{
@@ -87,6 +90,11 @@ li{
 li:hover{
   text-decoration: underline;
   cursor: pointer;
+}
+
+.responsive-burger{
+  display: none;
+  padding: 4px;
 }
 
                                   /* ////////////////////////// 
@@ -123,8 +131,6 @@ li:hover{
 
 /* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
 .carousel-1 {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
@@ -177,7 +183,7 @@ li:hover{
   cursor: pointer; 
   z-index: 1001; /* Sit on top of everything */
   border:1px solid black;
-/*  opacity: 0;  Hide buttons until carousel is initialised 
+/*  opacity: 0;  Hide buttons until carousel is initialized 
   transition:opacity 1s;*/
 }
 
@@ -228,8 +234,7 @@ li:hover{
 
 /* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
 .carousel-2 {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
+
   transform-style: preserve-3d;
 }
 
@@ -333,8 +338,7 @@ li:hover{
 
 /* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
 .carousel-3 {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
+
   transform-style: preserve-3d;
 }
 
@@ -527,3 +531,84 @@ li:hover{
   background: dimgray;
 }
 
+                                      /* ---------------------------- */
+                                                /* MEDIA QUERY */
+                                      /* ---------------------------- */
+
+@media only screen and (max-width: 1200px){
+  .carousel-wrapper-1,
+  .carousel-wrapper-2,
+  .carousel-wrapper-3,
+  .web_01,
+  .web_02,
+  .web_03{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px){
+
+  .nav-content-wrapper{
+    margin: auto;
+    position:static;
+    top:0;
+    transform: translateY(0%);
+
+
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .content{
+    flex-flow: column-reverse wrap;
+  }
+
+  .responsive-burger{
+    display: block;
+  }
+
+  .g-navigation{
+    display:block;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  /* .g-nav-games,
+  .g-nav-web,hr{
+  
+  } */
+
+  .projectInfo,
+.projectInfo-2,
+.projectInfo-3,
+.projectInfo-web,
+.projectInfo-web-2,
+.projectInfo-web-3{
+  width:80%;
+}
+
+
+.carousel-wrapper-1,
+.carousel-wrapper-2,
+.carousel-wrapper-3,
+.web_01,
+.web_02,
+.web_03{
+  width: 120%;
+}
+
+
+}
+
+@media only screen and (max-width: 370px){
+
+.carousel-wrapper-1,
+.carousel-wrapper-2,
+.carousel-wrapper-3,
+.web_01,
+.web_02,
+.web_03{
+  width: 200%;
+}
+
+}

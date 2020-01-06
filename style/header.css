@@ -23,6 +23,10 @@ header .navigation {
   padding: auto;
 }
 
+.navigation{
+  overflow: hidden;
+}
+
 .navigation a {
   /* spacing */
   padding: 0 16px;
@@ -51,3 +55,53 @@ header .navigation {
   left: 0;
   background: rgb(255, 255, 255);
 }
+
+.menu{
+  display: none;
+}
+
+.menu i{
+  font-size: 2rem;
+}
+
+                                              /* ------------------------------------------------- */
+                                                                /* MEDIA QUERY */
+                                              /* ------------------------------------------------- */
+
+
+          @media only screen and (max-width: 900px){
+            header .navigation {
+              /* align */
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: space-around;
+              align-items: center;
+
+              height:auto;
+              padding: 8px;
+            }
+
+            .navigation a{
+              display:none;
+            }
+
+            .navigation a.menu{
+              float: right;
+              display:block;
+            }
+
+            .navigation.responsive a{
+              display: block;
+              padding: 8px;
+            }
+
+            .logo{
+              width: 16%;
+            }
+
+            .navigation a.menu{
+              display: block;
+              float: right;
+            }
+          }
+

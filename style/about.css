@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  background-image: url("../img/backgrounds/Gallery_AboutMe.png");
+  background-image: url("../img/backgrounds/about_gallery.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -34,7 +34,7 @@ h1 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items:center;
+  align-items:flex-start;
 
   margin:1%;
 }
@@ -42,8 +42,9 @@ h1 {
 .aboutText,
 .aboutData{
   background: whitesmoke;
-  height:70vh;
-  width:30vw;
+  height: auto;
+  width:30%;
+  height: 70vh;
   border: 4px gray solid;
   border-radius: 10px;
   
@@ -84,3 +85,21 @@ h2{
  ul li{
    list-style: none;
  }
+
+                                               /* ------------------------------------------------- */
+                                                                /* MEDIA QUERY */
+                                              /* ------------------------------------------------- */
+
+
+  @media only screen and (max-width: 1900px){
+    .aboutText,
+    .aboutData{
+      overflow-y: scroll;
+    }
+  }
+
+  @media only screen and (max-width: 1030px){
+    .aboutData{
+      width:40%;
+    }
+  }

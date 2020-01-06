@@ -12,7 +12,7 @@
 
 body {
   height: 100vh;
-  background-image: url("../img/backgrounds/Lounge_Blog.png");
+  background-image: url("../img/backgrounds/blog_lounge.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -171,5 +171,15 @@ h3{
 
 
 @media only screen and (max-width: 700px){
-  /* something maybe */
+ 
+  .blogIMG{
+    width:60%;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  
+  .blogIMG{
+    width:70%;
+  }
 }

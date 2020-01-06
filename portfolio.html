@@ -27,6 +27,7 @@
         <a href="blog.html" id="headLink">Blog</a>
         <a href="aboutMe.html" id="headLink">About Me</a>
         <a href="contact.html" id="headLink">Contact</a>
+        <a class="menu" href="javascript:void(0);" onclick="HamburgerMenu()"><i class="fas fa-bars"></i></a>
       </div>
     </header>
   </head>
@@ -185,8 +186,12 @@
                       </div>
   
           </div>
+
+          <!-- SIDE NAV -->
           <div class="g-navigation">
-          <div>
+            <div class="nav-content-wrapper">
+                <!-- <div class="responsive-burger"><i class="fas fa-bars"></i></div> -->
+          <div class="g-nav-games">            
               <ul>
                   <h3>Games</h3>
                   <li class="game_nav_01">Good Luck Daruma</li>
@@ -195,7 +200,7 @@
               </ul>
           </div>
           <hr>
-          <div>
+          <div class="g-nav-web">
               <ul>
                   <h3>Web</h3>
                   <li class="web_nav_01">Pokemon-App</li>
@@ -203,7 +208,9 @@
                   <li class="web_nav_03">Westworld</li>
               </ul>
           </div>
+        </div>
       </div>
+
       </section>
     </main>
   </body>
@@ -211,4 +218,5 @@
 <script src="./scripts/gallery-2.js"></script>
 <script src="./scripts/gallery-3.js"></script>
 <script src="./scripts/gallery_nav.js"></script>
+<script src="scripts/hamburger-menu.js"></script>
 </html>
