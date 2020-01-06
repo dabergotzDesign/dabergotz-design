@@ -428,10 +428,14 @@ li:hover{
 .web_02 img,
 .web_03 img{
   display: block;
-  width:75%;
+  width:90%;
   margin: auto;
 
   padding: 1rem;
+}
+
+.web_03 img{
+  width:70%;
 }
 
 .web_01 p,
