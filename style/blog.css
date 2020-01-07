@@ -73,7 +73,10 @@ h3{
 }
 
 .post p{
-  padding: 1rem;
+  display:block;
+  margin: auto;
+  width: 70%;
+  padding: .5rem;
 }
 
 .blogText{
