@@ -1,102 +1,149 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Blog d-dabergotz Design</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" href="css/blog.css" />
-    <!-- <link rel="stylesheet" href="css/media.css" /> -->
-    <link rel="icon" href="img/icon_tab.png" />
+    <link rel="stylesheet" type="text/css" href="style/header.css" />
+    <link rel="stylesheet" type="text/css" href="style/blog.css" />
+    <link rel="icon" href="img/logo_favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
       integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y"
       crossorigin="anonymous"
     />
-  </head>
-  <body>
     <header>
-      <img src="img/icon_web.png" alt="d-dabergotz Logo" />
-      <div class="topNav" id="navDrop">
-        <a href="javascript:void(0);" class="icon" onclick="hamMenu()"
-          ><i class="fa fa-bars"></i
-        ></a>
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html" class="active">Blog</a>
-        <a href="aboutMe.html">About Me</a>
-        <a href="contact.html">Contact</a>
+      <div class="navigation">
+        <img
+          src="img/logo_site_transparent.png"
+          alt="dabergotzDesign Logo"
+          class="logo"
+        />
+        <a href="index.html" id="headLink">Home</a>
+        <a href="portfolio.html" id="headLink">Portfolio</a>
+        <a href="blog.html" id="headLink">Blog</a>
+        <a href="aboutMe.html" id="headLink">About Me</a>
+        <a href="contact.html" id="headLink">Contact</a>
+        <a class="menu" href="javascript:void(0);" onclick="HamburgerMenu()"><i class="fas fa-bars"></i></a>
       </div>
     </header>
-    <div id="borderHeadline">
-      <h1>
-        Design Blog
-        <p id="headline">What News?</p>
-      </h1>
-    </div>
+  </head>
+  <body>
+    <main>
+      <h1>BLOG</h1>
 
-    <section id="blogSec">
-      <h2>BLOG</h2>
-      <!-- ///// Post 05/01/19 Site Opening ///// -->
-      <div id="blogPost">
-        <h3>01/05/19 - Web Design</h3>
-        <article>
-          <p>Hey friends,</p>
-          <p>
-            the Portfolio page got an update. After all the games comes more for
-            you. <br />
-            With my training for web design the updated Portfolio page contains
-            now my created websites. <br />
-          </p>
-        </article>
-        <hr />
+      <!-- complete Blog -->
+      <section class="blogPage">
+
+        <!-- Blog Post Start -->
+          <div class="post">
+            <h3>New site style</h3>
+            <div class="date">08/01/2020</div>
+            <div class="blogText">
+              <!-- Concept -->
+              <img src="img/blog-imgs/sylvain-sarrailh-highundergardenarstation.jpg" class="blogIMG" alt="concept art by Proletariat Inc.">
+              <p>
+                  I started with a concept art (see image above) where I was looking for an interesting light and room layout.
+              </p>
+              <p> 
+                 Art comes from <a href="https://www.proletariat.com/" target="_blank">Proletariat Inc.</a> from they're game Streamline.
+                Having in mind doing this scene in Unreal, a modern look & realistic look and had assets with interesting materials were the criteria
+                that I had in mind for the background theme for my Website.
+                </p>
+                <p>
+                 The scene from the concept art had everything in it, plus with spaces
+                  where I could put my  own stuff in there.                  
+                </p>
+
+                <!-- Blockout -->
+                <img src="img/blog-imgs/scene_blockout.png" class="blogIMG" alt="blockout scene">
+                <p>
+                  The Blockout phase was quickly done. Some of the models were a good challenge for me, but that's what I've needed to get
+                  a better workaround with 3D Modeling, as I want to get better with it.
+                </p>
+               
+                
+                <!-- first Build -->
+                <img src="img/blog-imgs/scene_firstAsset_build.png" class="blogIMG" alt="first build">
+                <p>
+                  The first asset complete build. Since Unreal was relatively new to me, creating these different materials and set them
+                  up in the scene on the models and see how they interact with the lighting. Not gonna lie I had a blast when I made the
+                  material for the stone wall. 
+                </p>
+                <p>
+                  The gallery and the room where the computer is, not seen on the image, were stuff I added to the scene
+                  because I haven't figured out what I could use as a fitting background for the About Me and Contacts section for the
+                  website. 
+                </p>
+                <p>
+                  The logo on the TV screen is from the old site style. The video played automatically when in play mode, only thing missing and
+                  make it more believable was the light that would emit from the screen. Trying to animate the color of the light didn't work.
+                  A different approach was to code the light colors. Luckily I found a good tutorial which helped me out. That was a first coding
+                  in Unreal for a project, it's very different from what I am used to. Likely gonna use more coding in future projects. 
+                </p>
+
+                <!-- final -->
+                <img src="img/blog-imgs/scene_finish.png" class="blogIMG" alt="final build">
+                <p>
+                  All must-have assets are in scene, lighting and post-processing had it's final touches. It's done...for now.<br/>
+                  The scene itself is complete, but it will have some "live" into it. There are still some empty spaces, also notice
+                  the empty shelves, these will be filled with models.
+                  <p>
+                      I'll see the models as kind of "easter eggs" as I choose to put
+                      models in scene that reference to the portfolio pieces and high likely some of my favorite pieces from modeling. But that
+                      is for the future. 
+                  </p>
+                   
+                </p>
+              
+            </div>
+          </div>
+          <hr>
+          <!-- Blog Post End -->
+
+          <!-- Blog Post Start -->
+          <div class="post">
+              <h3>Website: New Year, New Me. Well kind of...</h3>
+              <div class="date">08/01/2020</div>
+              <div class="blogText">
+                  <p>
+                    R.I.P old website.
+                      <br>2017-2019
+                   </p>
+                <img class="blogIMG" src="img/blog-imgs/website-old.png" alt="Website old style">
+                <p>
+                   Now that I am feeling more comfortable with the Unreal Engine, I think it was time to combine these newly learned skills
+                   with Web design.
+
+                   The background images were all rendered from a scene in Unreal. Having the page elements as an overlay or even be part with
+                   the background itself was a challenge that I gave to myself. What better could be the presentation of a Level Designer and Front-End Developer. 
+                </p>
+                <p>After many platform changes with the old Website, starting as a Jimdo site, then make it in an actual self-made Website and now with the re-design.
+                    For right now this should be the final design choice of my Portfolio Website.
+                </p>
+                <p>The new site will still have changes. The background images will be filled with more assets, hidden but visible, kind of like Easter Eggs within the scenes.
+                  <br> Most assets will come from the games and websites shown here.
+                </p>
+                                
+              </div>
+            </div>
+            <hr>
+            <!-- Blog Post End -->
+      </section>
+      <!-- Modal -->
+      <div class="modal modal_disabled">
+        <!-- close button -->
+        <span class="close">&times;</span>
+        <img class="modal-content img01">
+
+        <!-- image caption -->
+        <div class="caption"></div>
       </div>
-      <!-- //// Post ends here //// -->
-      <!-- ///// Post 04/21/19 Site Opening ///// -->
-      <div id="blogPost">
-        <h3>25/04/19 - Website re-launch</h3>
-        <article>
-          <p>
-            Hey friends,<br />
-            <br />
-            have a warm welcome on my website. The re-launch on it, to be
-            exacty.
-            <br />
-            This website is around to show of my Portfolio for Level Design and
-            the Games I created.<br />
-            As for my Blog you can read updates from me on, some Games outside
-            of my Portfolio, Events I visited and <br />
-            even Webdesign.<br />
-            Take a look around and have fun.
-          </p>
-        </article>
-        <hr />
-      </div>
-      <!-- //// Post ends here //// -->
-    </section>
-
-    <!--
-		///////////////////////////////////////////////////////////////////////////////////////////////////////
-		Work here for a page viewer, here have reference https://codepen.io/dariorinaldi/pen/dazdbw?editors=0010 
-		///////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	-->
-
-    <footer>
-      D.Dabergotz-Design
-      <p id="footText">
-        Level Design with heart
-      </p>
-      <p id="footText">
-        Former School for Games student who now is on the way to become a game
-        developer with the main focus on level design
-      </p>
-
-      <!-- Copyright -->
-      <div id="copyright">
-        <i class="far fa-copyright"></i> 2018-2019 Dennis Dabergotz
-      </div>
-    </footer>
-    <script src="menu.js"></script>
+    </main>
   </body>
+  <script src="scripts/blog-modal.js"></script>
+  <script src="scripts/hamburger-menu.js"></script>
 </html>

@@ -1,0 +1,107 @@
+/* BASIC PAGE FORMAT */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url("../img/backgrounds/home_room.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  font-family: 'Comfortaa', cursive;
+  font-weight: 100;
+}
+
+video{
+  z-index: -999;
+  position: fixed;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin:5rem auto;
+  text-decoration: underline;
+
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+/* AFFECTS ONLY LANDING PAGE - work with classes from here on*/
+
+.home{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.welcome{
+  display: block;
+  margin: auto;
+  width:50%;
+  z-index:1;
+
+  background:rgba(245, 245, 245, 0.75);
+  border:4px white solid;
+  border-radius: 10px;
+
+  padding: 8px;
+  margin: 22rem auto;
+
+  animation: lift 2s linear;
+}
+
+@keyframes lift{
+  from{
+    margin: 45rem auto;
+    opacity: 0;
+  }
+  to{
+    margin: 22rem auto;
+    opacity: 1;
+  }
+}
+
+.welcomeHeadline{
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 8px;
+}
+
+.welcomeSpeech{
+  text-align: center;
+  font-size: 1rem;
+
+  padding: 8px;
+}
+
+.welcomeSpeech p{
+  padding: 4px;
+}
+
+                                              /* ------------------------------------------------- */
+                                                                /* MEDIA QUERY */
+                                              /* ------------------------------------------------- */
+
+
+@media only screen and (max-width: 900px){
+  h1{
+    margin:8rem auto;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  h1{
+    margin:10rem auto;
+  }
+}

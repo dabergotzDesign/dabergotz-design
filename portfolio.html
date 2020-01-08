@@ -1,383 +1,222 @@
 <!DOCTYPE html>
 <html>
-<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Portfolio d-dabergotz Design</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="css/portfolio.css">
-	<!-- <link rel="stylesheet" href="css/media.css"> -->
-	<link rel="icon" href="img/icon_tab.png">
-	<link
-	rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
-	integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y"
-	crossorigin="anonymous"
-/>
-</head>
-<body>
-		<header>
-				<img src="img/icon_web.png" alt="d-dabergotz Logo">
-				<div class="topNav" id="navDrop">
-				<a href="javascript:void(0);" class="icon" onclick="hamMenu()"><i class="fa fa-bars"></i></a>
-				<a href="index.html">Home</a>
-				<a href="portfolio.html" class="active">Portfolio</a>
-				<a href="blog.html">Blog</a>
-				<a href="aboutMe.html">About Me</a>
-				<a href="contact.html">Contact</a>
-				</div>
-			</header>
-	<div id="borderHeadline">
-		<h1>Creations<p id="headline">Games & Websites</p></h1>
-	</div>
+  <head>
+    <title>Portfolio d-dabergotz Design</title>
+    <link rel="stylesheet" type="text/css" href="style/header.css" />
+    <link rel="stylesheet" type="text/css" href="style/portfolio.css" />
+    <link rel="icon" href="img/logo_favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+      integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y"
+      crossorigin="anonymous"
+    />
+    <header>
+      <div class="navigation">
+        <img
+          src="img/logo_site_transparent.png"
+          alt="dabergotzDesign Logo"
+          class="logo"
+        />
+        <a href="index.html" id="headLink">Home</a>
+        <a href="portfolio.html" id="headLink">Portfolio</a>
+        <a href="blog.html" id="headLink">Blog</a>
+        <a href="aboutMe.html" id="headLink">About Me</a>
+        <a href="contact.html" id="headLink">Contact</a>
+        <a class="menu" href="javascript:void(0);" onclick="HamburgerMenu()"><i class="fas fa-bars"></i></a>
+      </div>
+    </header>
+  </head>
+  <body>
+    <main>
+      <h1>PORTFOLIO</h1>
 
-	<section id="portSec">
-		<!--///////////////////////////////////////////////////////////////////////////////////////////////
-	 																			GAME DESIGN
-	///////////////////////////////////////////////////////////////////////////////////////////////// -->
-		<h2>PORTFOLIO - GAMES <span><i class="fas fa-gamepad"></i></span></h2>
-<div>
-	<!--  ///////////////////// Good Luck Daruma /////////////////////////-->
-	<div id="gamesDiv">
-			<h3>Good Luck Daruma</h3>
-			<div>
-			<!-- GALLERY GLD -->
+      <section class="content">
+          <div class="galleries">
+              <!-- Game Galleries -->
+  
+                  <!-- GLD Carousel -->
+                  <div class="carousel-wrapper-1 gallery_01 c-active">
+                          <div class="carousel-1">
+                            
+                     
+                                <img class="carousel__01 initial" src="img/gallery/GLD/gld_lvl01.png">                      
+                                <img class="carousel__01" src="img/gallery/GLD/gld_lvl02.png">                        
+                                <img class="carousel__01" src="img/gallery/GLD/gld_lvl03.png">                         
+                                <img class="carousel__01" src="img/gallery/GLD/gld_lvl04.png">                         
+                                                    
+                                                              
+                            <div class="carousel-1__button--next"></div>
+                            <div class="carousel-1__button--prev"></div>
+                      
+                          </div>
+                          <!-- Project Infos -->
+                          <div class="projectInfo">
+                          <h3>Good Luck Daruma</h3>
+                          <p><span>When:</span> 4th Semester at School4Games</p>
+                          <p><span>Position:</span> All-rounder</p>
+                          <p class="projectDescription">
+                              Daruma is on his way through the feudal Japan and you will help him.
+                              Such as a Daruma is blessing you with luck, this time it is your turn to bring him luck to reach his goal.
+                          </p>
+                          <a href="https://dennisdabergotz.itch.io/good-luck-daruma" target="_blank">PLAY IT!</a>
+                        </div>
 
-		<!-- Images used to open the lightbox -->
-		<div class="row">
-		 <div class="column">
-		    <img src="img\gallery\GLD\gld_lvl01.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
-		  </div>
-		  <div class="column">
-		    <img src="img\gallery\GLD\gld_lvl02.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
-		  </div>
-		  <div class="column">
-		    <img src="img\gallery\GLD\gld_lvl03.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
-		  </div>
-		  <div class="column">
-		    <img src="img\gallery\GLD\gld_lvl04.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
-		  </div>
-		</div>
+                        </div>
+  
+                 
+  
+                  <!-- FTS Carousel -->
+                  <div class="carousel-wrapper-2 gallery_02 c-disabled">
+                          <div class="carousel-2">
+                      
+                            <img class="carousel__02 initial" src="img/gallery/FTS/FtS_logo_sized.png">
+                            <img class="carousel__02" src="img/gallery/FTS/eZ9KPr.png">
+                            <img class="carousel__02" src="img/gallery/FTS/vK6Vcl.png">
+                            <img class="carousel__02" src="img/gallery/FTS/VQ3Vyh.png">
+                                                      
+                            <div class="carousel-2__button--next"></div>
+                            <div class="carousel-2__button--prev"></div>
+                      
+                          </div>
+                          
+                           <!-- Project Infos -->
+                           <div class="projectInfo-2">
+                              <h3>Frilled the Skilled</h3>
+                              <p><span>When:</span> 3rd Semester at School4Games</p>
+                              <p><span>Position:</span> Level Design, Game Design, Art</p>
+                              <p class="projectDescription">
+                                  Meet Frilled, the frilled-lizard,
+                                  who is part of the origin of the world and this is where he is seeing creatures of the australian mythology.
+                                  But also the origins contains some danger that needs to avoided.
+                              </p>
+                              <a href="https://dennisdabergotz.itch.io/frilled-the-skilled" target="_blank">PLAY IT!</a>
+                            </div>
 
-		<!-- The Modal/Lightbox -->
-		<div id="myModal" class="modal">
-		  <span class="close cursor" onclick="closeModal()">&times;</span>
-		  <div class="modal-content">
+                        </div>
+  
+                  
+  
+                    <!-- CS Carousel -->
+                    <div class="carousel-wrapper-3 gallery_03 c-disabled">
+                          <div class="carousel-3">
+                      
+                            <img class="carousel__03 initial" src="img/gallery/CS/CS_Logo.png">
+                            <img class="carousel__03" src="img/gallery/CS/6vkAsV.png">
+                            <img class="carousel__03" src="img/gallery/CS/JGu0fw.png">
+                            <img class="carousel__03" src="img/gallery/CS/YZO06A.png">
+                                                      
+                            <div class="carousel-3__button--next"></div>
+                            <div class="carousel-3__button--prev"></div>
+                      
+                          </div>
+                        
+                          <!-- Project Infos -->
+                          <div class="projectInfo-3">
+                              <h3>Cybersphere</h3>
+                              <p><span>When:</span> 2nd Semester at School4Games</p>
+                              <p><span>Position:</span> Level Design</p>
+                              <p class="projectDescription">
+                                  Reach the top of a high tower in a virtual world, where it means to protect the Cybersphere from its destruction.
+                              </p>
+                              <a href="https://dennisdabergotz.itch.io/cybersphere" target="_blank">PLAY IT!</a>
+                            </div>
 
-		    <div class="mySlides">
-		      <div class="numbertext">1 / 4</div>
-		      <img src="img\gallery\GLD\gld_lvl01.png" style="width:100%">
-		    </div>
+                        </div>
+  
+                  
+  
+  
+              <!-- Web Galleries -->
+              <div class="web_01 c-disabled">
+                  <img src="img/gallery/WEBS/pokemon-app.png">
 
-		    <div class="mySlides">
-		      <div class="numbertext">2 / 4</div>
-		      <img src="img\gallery\GLD\gld_lvl02.png" style="width:100%">
-		    </div>
+                  <!-- Project Infos -->
+                  <div class="projectInfo-web">
+                      <h3>Pokemon-App</h3>
+                      <p><span>When:</span>3rd Portfolio Project at DCI</p>
+                   
+                      <p class="projectDescription">
+                          Working together with the Pokemon-API. Gives you a random Pokemon every time
+                          you click the button.
+                      </p>
+                      <a href="https://dabergotzdesign.github.io/pkmn-app/" target="_blank">VISIT</a>
+                    </div>
 
-		    <div class="mySlides">
-		      <div class="numbertext">3 / 4</div>
-		      <img src="img\gallery\GLD\gld_lvl03.png" style="width:100%">
-		    </div>
+              </div>
+  
+              <div class="web_02 c-disabled">
+                      <img src="img/gallery/WEBS/valar-morghulis-site.png">
 
-		    <div class="mySlides">
-		      <div class="numbertext">4 / 4</div>
-		      <img src="img\gallery\GLD\gld_lvl04.png" style="width:100%">
-		    </div>
+                      <!-- Project Infos -->
+                  <div class="projectInfo-web-2">
+                      <h3>Valar-Morghulis</h3>
+                      <p><span>When:</span>2nd Portfolio Project at DCI</p>
+                   
+                      <p class="projectDescription">
+                          A fan page for the series of Game of Thrones. Showing the biggest Houses and it's members.
+                          Site was made with Sass.
+                      </p>
+                      <a href="https://dabergotzdesign.github.io/valar-morghulis/" target="_blank">VISIT</a>
+                    </div>
 
-		    <!-- Next/previous controls -->
-		    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-		    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+  
+                  <div class="web_03 c-disabled">
+                          <img src="img/gallery/WEBS/westworld-site.png">
+                          
+                                <!-- Project Infos -->
+                  <div class="projectInfo-web-3">
+                      <h3>Westworld</h3>
+                      <p><span>When:</span>1st Portfolio Project at DCI</p>
+                   
+                      <p class="projectDescription">
+                          A fan page for the series of Westworld. I wanted it to look like that you can actually visit the park
+                          and book tickets. References were the Disney Park page. Site was made with React.
+                      </p>
+                      <a href="https://dabergotzdesign.github.io/westworld-react/" target="_blank">VISIT</a>
+                    </div>
 
-		    <!-- Caption text -->
-		    <div class="caption-container">
-		      <p id="caption"></p>
-		    </div>
+                  </div>
 
-		    <!-- Thumbnail image controls -->
-		    <div class="column">
-		      <img class="demo" src="img\gallery\GLD\gld_lvl01.png" onclick="currentSlide(1)" alt="Good-Luck-Daruma Start">
-		    </div>
+                      </div>
+  
+          </div>
 
-		    <div class="column">
-		      <img class="demo" src="img\gallery\GLD\gld_lvl02.png" onclick="currentSlide(2)" alt="Good-Luck-Daruma Level 02">
-		    </div>
+          <!-- SIDE NAV -->
+          <div class="g-navigation">
+            <div class="nav-content-wrapper">
+                <!-- <div class="responsive-burger"><i class="fas fa-bars"></i></div> -->
+          <div class="g-nav-games">            
+              <ul>
+                  <h3>Games</h3>
+                  <li class="game_nav_01">Good Luck Daruma</li>
+                  <li class="game_nav_02">Frilled the Skilled</li>
+                  <li class="game_nav_03">Cybersphere</li>
+              </ul>
+          </div>
+          <hr>
+          <div class="g-nav-web">
+              <ul>
+                  <h3>Web</h3>
+                  <li class="web_nav_01">Pokemon-App</li>
+                  <li class="web_nav_02">Valar-Morghulis</li>
+                  <li class="web_nav_03">Westworld</li>
+              </ul>
+          </div>
+        </div>
+      </div>
 
-		    <div class="column">
-		      <img class="demo" src="img\gallery\GLD\gld_lvl03.png" onclick="currentSlide(3)" alt="Good-Luck-Daruma Level 03">
-		    </div>
-
-		    <div class="column">
-		      <img class="demo" src="img\gallery\GLD\gld_lvl04.png" onclick="currentSlide(4)" alt="Good-Luck-Daruma Level 04">
-		    </div>
-		  </div>
-</div>
-		
-
-			</div>
-
-		<p id="portText">
-			<h4>4th Semester Project, Position: Game Design, Level Design</h4>
-		<p id="portText">
-		Daruma is on his way through the feudal Japan and you will help him.
-		Such as a Daruma is blessing you with luck, this time it is your turn to bring 
-		him luck to reach his goal.
-		</p>
-		</p>
-		<p>
-			<a href="https://dennisdabergotz.itch.io/good-luck-daruma" id="playButton" target="_blank">PLAY IT</a>
-		</p>
-	</div>
-
-	<!--  ///////////////////// Frilled the Skilled /////////////////////////-->
-	<div id="gamesDiv">
-		<h3>Frilled The Skilled</h3>
-				<!-- GALLERY FRILLED THE SKILLED -->
-
-		<!-- Images used to open the lightbox -->
-		<div class="row2">
-		  <div class="column2">
-		    <img src="img\gallery\FTS\FtS_logo.png" onclick="openModal2();currentSlide2(1)" class="hover-shadow">
-		  </div>
-		  <div class="column2">
-		    <img src="img\gallery\FTS\eZ9KPr.png" onclick="openModal2();currentSlide2(2)" class="hover-shadow">
-		  </div>
-		  <div class="column2">
-		    <img src="img\gallery\FTS\VQ3Vyh.png" onclick="openModal2();currentSlide2(3)" class="hover-shadow">
-		  </div>
-		  <div class="column2">
-		    <img src="img\gallery\FTS\vK6Vcl.png" onclick="openModal2();currentSlide2(4)" class="hover-shadow">
-		  </div>
-		</div>
-
-		<!-- The Modal/Lightbox -->
-		<div id="myModal2" class="modal2">
-		  <span class="close cursor" onclick="closeModal2()">&times;</span>
-
-		    <div class="mySlides2">
-		      <div class="numbertext">1 / 4</div>
-		      <img src="img\gallery\FTS\FtS_logo.png" style="width:50%">
-		    </div>
-
-		    <div class="mySlides2">
-		      <div class="numbertext">2 / 4</div>
-		      <img src="img\gallery\FTS\eZ9KPr.png" style="width:100%">
-		    </div>
-
-		    <div class="mySlides2">
-		      <div class="numbertext">3 / 4</div>
-		      <img src="img\gallery\FTS\VQ3Vyh.png" style="width:100%">
-		    </div>
-
-		    <div class="mySlides2">
-		      <div class="numbertext">4 / 4</div>
-		      <img src="img\gallery\FTS\vK6Vcl.png" style="width:100%">
-		    </div>
-
-		    <!-- Next/previous controls -->
-		    <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
-		    <a class="next" onclick="plusSlides2(1)">&#10095;</a>
-
-		    <!-- Caption text -->
-		    <div class="caption-container2">
-		      <p id="caption2"></p>
-		    </div>
-
-		    <!-- Thumbnail image controls -->
-		    <div class="column2">
-		      <img class="demo2" src="img\gallery\FTS\FtS_Logo_2.png" onclick="currentSlide2(1)" alt="frilled-the-skilled-logo">
-		    </div>
-
-		    <div class="column2">
-		      <img class="demo2" src="img\gallery\FTS\eZ9KPr.png" onclick="currentSlide2(2)" alt="frilled-the-skilled-snake">
-		    </div>
-
-		    <div class="column2">
-		      <img class="demo2" src="img\gallery\FTS\VQ3Vyh.png" onclick="currentSlide2(3)" alt="frilled-the-skilled-flood">
-		    </div>
-
-		    <div class="column2">
-		      <img class="demo2" src="img\gallery\FTS\vK6Vcl.png" onclick="currentSlide2(4)" alt="frilled-the-skilled-cliffs">
-		    </div>
-		 </div>
-
-		<p id="portText">
-			<h4>3rd Semester Project</h4>
-		<p id="portText">
-		Meet Frilled, the frilled-lizard, who is part of the origin of the world and this is where he is seeing creatures of the australian mythology. But also the origins contains some danger that needs to avoided.
-		</p>
-		</p>
-		
-		<p>
-			<a href="https://dennisdabergotz.itch.io/frilled-the-skilled" id="playButton" target="_blank">PLAY IT</a>
-		</p>
-	</div>
-
-
-	<!--  ///////////////////// CYBERSPHERE /////////////////////////-->
-	<div id="gamesDiv">
-		<h3>Cybersphere</h3>
-			<div>
-
-			<!-- GALLERY CYBERSPHERE -->
-
-		<!-- Images used to open the lightbox -->
-		<div class="row3">
-		  <div class="column3">
-		    <img src="img\gallery\CS\CS_Logo.png" onclick="openModal3();currentSlide3(1)" class="hover-shadow">
-		  </div>
-		  <div class="column3">
-		    <img src="img\gallery\CS\6vkAsV.png" onclick="openModal3();currentSlide3(2)" class="hover-shadow">
-		  </div>
-		  <div class="column3">
-		    <img src="img\gallery\CS\YZO06A.png" onclick="openModal3();currentSlide3(3)" class="hover-shadow">
-		  </div>
-		  <div class="column3">
-		    <img src="img\gallery\CS\JGu0fw.png" onclick="openModal3();currentSlide3(4)" class="hover-shadow">
-		  </div>
-		</div>
-
-		<!-- The Modal/Lightbox -->
-		<div id="myModal3" class="modal3">
-		  <span class="close cursor" onclick="closeModal3()">&times;</span>
-		  <div class="modal-content3">
-
-		    <div class="mySlides3">
-		      <div class="numbertext">1 / 4</div>
-		      <img src="img\gallery\CS\CS_Logo.png" style="width:100%">
-		    </div>
-
-		    <div class="mySlides3">
-		      <div class="numbertext">2 / 4</div>
-		      <img src="img\gallery\CS\6vkAsV.png" style="width:100%">
-		    </div>
-
-		    <div class="mySlides3">
-		      <div class="numbertext">3 / 4</div>
-		      <img src="img\gallery\CS\YZO06A.png" style="width:100%">
-		    </div>
-
-		    <div class="mySlides3">
-		      <div class="numbertext">4 / 4</div>
-		      <img src="img\gallery\CS\JGu0fw.png" style="width:100%">
-		    </div>
-
-		    <!-- Next/previous controls -->
-		    <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
-		    <a class="next" onclick="plusSlides3(1)">&#10095;</a>
-
-		    <!-- Caption text -->
-		    <div class="caption-container3">
-		      <p id="caption3"></p>
-		    </div>
-
-		    <!-- Thumbnail image controls -->
-		    <div class="column3">
-		      <img class="demo3" src="img\gallery\CS\CS_Logo.png" onclick="currentSlide3(1)" alt="cybersphere-logo">
-		    </div>
-
-		    <div class="column3">
-		      <img class="demo3" src="img\gallery\CS\6vkAsV.png" onclick="currentSlide3(2)" alt="cybersphere-tower
-		     ">
-		    </div>
-
-		    <div class="column3">
-		      <img class="demo3" src="img\gallery\CS\YZO06A.png" onclick="currentSlide3(3)" alt="cybersphere-labyrinth">
-		    </div>
-
-		    <div class="column3">
-		      <img class="demo3" src="img\gallery\CS\JGu0fw.png" onclick="currentSlide3(4)" alt="cybersphere-inside">
-		    </div>
-		  </div>
-
-			</div>
-		<p id="portText">
-			<h4>2nd Semester Project, Position: Level Designer</h4>
-		<p id="portText">
-		Reach the top of a high tower in a virtual world, where it means to protect
-		the Cybersphere from its destruction.
-		</p>
-		</p>
-		
-		<p>
-			<a href="https://dennisdabergotz.itch.io/cybersphere" id="playButton" target="_blank">PLAY IT</a>
-		</p>
-		</div>
-	</div>
-	
-</section>
-
-
-
-<!--///////////////////////////////////////////////////////////////////////////////////////////////
-	 																			WEB DESIGN
-	///////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-	<section class="webPort">
-			<h2>PORTFOLIO - WEB DESIGN <span><i class="fas fa-code"></i></span> </h2>
-			<h3>About Web Development</h3>
-			<p>Surprise! Yes I got that also covered.</p>
-			<p>Besides the game design skills I could get into web design, thanks to the <a href="https://digitalcareerinstitute.org/" target="_blank"> DCI</a>.</br>
-				All sites created, including the dabergotz-design site, are listed below.
-				</p>
-			<hr>
-			<!-- //////// Portfolio sites  /////////-->
-			<h3>Websites</h3>
-			<div class="webFlex">
-
-			<!-- CARD 1 -->
-			<a href="https://dabergotzdesign.github.io/neo-tokyo-city/" target="_blank" class="card">
-				<div>
-					<img src="img/websites/neoTokyo.png" alt="website 1" class="cardImg">
-					<div class="container">
-						<h4><b>Neo Tokyo</b></h4> 
-						<p>An imaginary Tokyo of the future.</p>
-					</div>
-				</div>
-			</a>
-
-					<!-- CARD 2 -->
-					<a href="https://dabergotzdesign.github.io/westworld-react/" target="_blank"  class="card">
-			<div>
-				<img src="img/websites/westworld_fanPage.png" alt="website 2" class="cardImg">
-					<div class="container">
-						<h4><b>Westworld</b></h4> 
-						<p>A fan page for the show Westworld.</p>
-					</div>
-				</div>
-			</a>
-
-						<!-- CARD 3 -->
-				<a href="https://dabergotzdesign.github.io/valar-morghulis/index.html" target="_blank" class="card">
-				<div>
-				<img src="img/websites/valar-morghulis.png" alt="website 3" class="cardImg">
-					<div class="container">
-						<h4><b>Valar Morghulis</b></h4> 
-						<p>Fan page for the show Game of Thrones.</p>
-					</div>
-				</div>
-			</a>
-				
-			</div>
-		</section>
-
-	<footer id="portFooter">
-		
-		D.Dabergotz-Design
-		<p id="footText">
-			Level Design with heart
-		</p>
-		<p id="footText">
-			Former School for Games student who now is on the way to become a game developer with the main focus on level design
-		</p>
-
-		<!-- Copyright -->
-		<div id="copyright">
-			<i class="far fa-copyright"></i> 2018-2019 Dennis Dabergotz
-			</div>
-
-	</footer>
-	<script src="gallery.js"></script>
-	<script src="menu.js"></script>
-</body>
+      </section>
+    </main>
+  </body>
+<script src="./scripts/gallery-1.js"></script>
+<script src="./scripts/gallery-2.js"></script>
+<script src="./scripts/gallery-3.js"></script>
+<script src="./scripts/gallery_nav.js"></script>
+<script src="scripts/hamburger-menu.js"></script>
 </html>

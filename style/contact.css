@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url("../img/backgrounds/contact_computer.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 1rem;
+  text-decoration: underline;
+
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+
+  font-family: 'Comfortaa', cursive;
+}
+
+
+
+.contacts{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Comfortaa', cursive;
+
+  color:#111;
+}
+
+.email{
+  position: absolute;
+  top:45%;
+  left:15%;
+  transform: rotateZ(2deg);
+
+  font-size:1.6rem;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.socials{
+  position: absolute;;
+  top:35%;
+  right:33%;
+  transform: rotateZ(1deg);
+
+  font-size:1.4rem;
+}
+
+.socials li{
+  list-style: none;
+  padding: 4px;
+  margin: 16px auto;
+}
+
+.socials a:hover{
+    color:whitesmoke;
+}
+
+.socials a{
+  color: rgba(17, 17, 17, 0.6);
+  text-decoration: none;
+}
+
+.socials i{
+  padding: 4px 6px;
+}
+
+                                               /* ------------------------------------------------- */
+                                                                /* MEDIA QUERY */
+                                              /* ------------------------------------------------- */
+
+      @media only screen and (max-width: 1200px){
+        .email{
+          left:5%;
+        }
+    }
+
+      @media only screen and (max-width: 900px){
+        .email{
+          left:2%;
+          font-size: 1.4rem;
+        }
+
+        .socials{
+            right:5%;
+        }
+    }
+
+
+    @media only screen and (max-width: 700px){
+      .email{
+        left:.5%;
+        font-size: 1.2rem;
+      }
+  }
+
+  @media only screen and (max-width: 550px){
+    .email{
+      left:0;
+      font-size: 1rem;
+    }
+}
