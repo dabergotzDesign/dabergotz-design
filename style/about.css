@@ -52,6 +52,7 @@ h1 {
   
   font-size: 1.1rem;
   font-family: monospace;
+  overflow-y: scroll;
 }
 
 .aboutData{
