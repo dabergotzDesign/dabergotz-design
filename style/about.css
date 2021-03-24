@@ -41,7 +41,7 @@ h1 {
 
 .aboutText,
 .aboutData{
-  background: whitesmoke;
+  background:rgba(30, 30, 30,.95);
   height: auto;
   width:30%;
   height: 70vh;
@@ -52,6 +52,7 @@ h1 {
   
   font-size: 1.1rem;
   font-family: monospace;
+  color: rgb(230, 230, 230);
   overflow-y: scroll;
 }
 

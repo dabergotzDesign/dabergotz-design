@@ -23,7 +23,7 @@ body {
 
 h1 {
   text-align: center;
-  color: white;
+  color: whitesmoke;
   margin: 1rem;
   text-decoration: underline;
 
@@ -177,12 +177,12 @@ li:hover{
   top:50%;
   width: 3rem;
   height: 3rem;
-  background-color: #FFF;
+  background-color:rgba(230, 230, 230, 0.1);
   transform: translateY(-50%);
   border-radius: 50%;
   cursor: pointer; 
   z-index: 1001; /* Sit on top of everything */
-  border:1px solid black;
+  border:1px solid whitesmoke;
 /*  opacity: 0;  Hide buttons until carousel is initialized 
   transition:opacity 1s;*/
 }
@@ -204,8 +204,8 @@ li:hover{
   height: 10px;
   top: 50%;
   left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+  border-right: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
   transform: translate(-50%, -50%) rotate(135deg);
 }
 
@@ -281,12 +281,12 @@ li:hover{
   top:50%;
   width: 3rem;
   height: 3rem;
-  background-color: #FFF;
+  background-color:rgba(230, 230, 230, 0.1);
   transform: translateY(-50%);
   border-radius: 50%;
   cursor: pointer; 
   z-index: 1001;
-  border:1px solid black;
+  border:1px solid whitesmoke;
 }
 
 .carousel-2__button--prev {
@@ -306,8 +306,8 @@ li:hover{
   height: 10px;
   top: 50%;
   left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+  border-right: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
   transform: translate(-50%, -50%) rotate(135deg);
 }
 
@@ -385,12 +385,12 @@ li:hover{
   top:50%;
   width: 3rem;
   height: 3rem;
-  background-color: #FFF;
+  background-color:rgba(230, 230, 230, 0.1);
   transform: translateY(-50%);
   border-radius: 50%;
   cursor: pointer; 
   z-index: 1001;
-  border:1px solid black;
+  border:1px solid whitesmoke;
 }
 
 .carousel-3__button--prev {
@@ -410,8 +410,8 @@ li:hover{
   height: 10px;
   top: 50%;
   left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+  border-right: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
   transform: translate(-50%, -50%) rotate(135deg);
 }
 
@@ -445,7 +445,7 @@ li:hover{
   margin:auto;
   width:50%;
 
-  background:whitesmoke;
+  background:rgb(30, 30, 30);
   border-radius: 10px;
   text-align: center;
 }
@@ -467,9 +467,10 @@ li:hover{
   width:50%;
   padding: 1rem;
 
-  background:whitesmoke;
+  background:rgb(30, 30, 30);
   border-radius: 10px;
   text-align: center;
+  color: rgb(230,230,230);
 }
 
 .projectInfo{
