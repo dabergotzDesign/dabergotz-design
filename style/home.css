@@ -28,7 +28,7 @@ video{
 
 h1 {
   text-align: center;
-  color: white;
+  color: whitesmoke;
   margin:5rem auto;
   text-decoration: underline;
 
@@ -51,9 +51,10 @@ h1 {
   width:50%;
   z-index:1;
 
-  background:rgba(245, 245, 245, 0.75);
-  border:4px white solid;
+  background:rgba(30, 30, 30, 0.75);
+  border:4px whitesmoke solid;
   border-radius: 10px;
+  color: rgb(230, 230, 230);
 
   padding: 8px;
   margin: 22rem auto;
