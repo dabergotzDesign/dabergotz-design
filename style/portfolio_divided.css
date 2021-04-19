@@ -36,8 +36,12 @@ h2{
   text-align: center;
   text-align: center;
   color: whitesmoke;
-  margin: 1rem;
+  margin: 1.5rem;
   text-decoration: underline;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 main{
@@ -49,28 +53,63 @@ main{
 
 
 .content{
-display: flex;
-  justify-content: space-evenly;
-  align-items: stretch;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
-.galleries{
+.game-galleries{
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+}
+
+img{
+  white-space: pre;
+}
+
+#galleryGames{
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  /* height: 500px; */
+  /* background: red; */
+}
+
+hr{
+  margin: 8px auto;
+  color: whitesmoke;
+}
+
+.web-galleries{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#galleryWeb{
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  /* height: 500px; */
+  /* background: red; */
 }
 
                           /* ////////////////////////////// */
                                     /* SIDE NAV */
                           /* ////////////////////////////// */
 
-.g-navigation{
+/*///////// GAME & WEB SIDE NAV  /////////*/
+
+#gameWrapper,
+#webWrapper{
+  display: none;
+ 
   text-align: center;
   font-size: 1rem;
   color: #111;
 
-  display: block;
   padding: 8px;
 
   background: rgba(255, 255, 255, 0.8);
@@ -78,20 +117,19 @@ display: flex;
   border-radius: 10px;
 }
 
-.g-navigation hr{
-  margin: 1rem;
-}
-
-.nav-content-wrapper{
-  margin: auto;
+#gameWrapper ul,
+#webWrapper ul{
+  margin: 0;
   position: relative;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
+
+
 li{
   list-style: none;
-  padding: .5rem;
+  padding: 1rem;
   line-height: 36px;
 }
 
@@ -105,16 +143,56 @@ li:hover{
   padding: 4px;
 }
 
+/*///////// WEB SIDE NAV  /////////*/
+
+
+
+
                                   /* ////////////////////////// 
                                   ACTIVE & NON-ACTIVE CAROUSELS
                                   ///////////////////////// */
 
+button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
 
-.c-active{
+  background: transparent;
+  border: none;
+}
+
+
+#gameBtn,
+#webBtn{
+  font-size: 2rem;
+  color: whitesmoke;
+}
+
+#gameBtn:hover,
+#webBtn:hover{
+  cursor: pointer;
+}
+
+/* if gallery is shown, rotate button */
+.open{
+  transform: rotateX(-180deg);
+  transition: 0.6s;
+}
+
+/* if gallery is in hide, return button to default rotation */
+.closed{
+  transform: rotateX(0deg);
+  transition: 0.6s;
+}
+
+/* show gallery's carousel */
+.show{
   display: block;
 }
 
-.c-disabled{
+/* hide gallery's carousel */
+.hide{
   display: none;
 }
 
@@ -128,7 +206,7 @@ li:hover{
 /* Parent wrapper to carousel. Width can be changed as needed. */
 .carousel-wrapper-1{
   overflow: hidden;
-  width: 80%;
+  width: auto;
   margin: auto;
 }
 
@@ -543,6 +621,90 @@ li:hover{
   color: #efefef;
   background: dimgray;
 }
+
+
+                            /* ///////////////
+                                   MODAL 
+                            /////////////// */
+.portModal{
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal_active{
+  display:block;
+}
+
+.modal_disabled{
+  display:none;
+}
+
+/* modal image */
+.modal-content{
+    margin:auto;
+    display: block;
+    max-width: 100%;
+}
+
+.caption{
+  margin: 8px auto;
+  display: block;
+  width:80%;
+  max-width: 700px;
+
+  text-align: center;
+  color:#ccc;
+
+  padding: 15px 0;
+  height: 150px;
+
+  background: rgba(0, 0, 0, 0.8);
+  border: 4px whitesmoke solid;
+  border-radius: 10px;
+}
+
+/* modal animation */
+.modal-content, .caption{
+  animation-name: zoom;
+  animation-duration: .6s;
+}
+
+@keyframes zoom{
+  from{
+    transform:scale(0);
+  }to{
+    transform: scale(1);
+  }
+}
+
+/* close button */
+.close{
+  position: absolute;
+  top:70px;
+  right:8%;
+  color: #111;
+  font-size: 40px;
+  font-weight: bold;
+  transition: .3s;
+
+  text-shadow: 0 0 3px whitesmoke;
+}
+
+.close:hover,
+.close:focus{
+  color:#bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 
                                       /* ---------------------------- */
                                                 /* MEDIA QUERY */
