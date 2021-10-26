@@ -472,8 +472,9 @@ li:hover{
 .projectInfo-web-3{
   display: block;
   margin:auto;
-  width:50%;
+  width:80%;
   padding: 1rem;
+  border: 2px solid;
 
   background:rgb(30, 30, 30);
   border-radius: 10px;
@@ -482,27 +483,27 @@ li:hover{
 }
 
 .projectInfo{
-  border:2px red solid;
+  border-color:red;
 }
 
 .projectInfo-2{
-  border:2px orange solid;
+  border-color:orange;
 }
 
 .projectInfo-3{
-  border:2px blue solid;
+  border-color:blue;
 }
 
 .projectInfo-web{
-  border:2px darkred solid;
+  border-color:purple;
 }
 
 .projectInfo-web-2{
-  border:2px lightslategray solid;
+  border-color:lightgray;
 }
 
 .projectInfo-web-3{
-  border:2px solid black;
+  border-color:black;
 }
 
 .projectInfo span,
