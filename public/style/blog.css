@@ -1,0 +1,283 @@
+/*//////////////////////////////////////////////////////////
+                                      BLOG
+/////////////////////////////////////////////////////////*/
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background-image: url("/img/backgrounds/Interior_BG_Lounge_BLOG.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: 'Comfortaa', cursive;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 1rem;
+  text-decoration: underline;
+
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+h2{
+  text-align: center;
+  padding: 8px;
+}
+
+.blogPage{
+  display: block;
+  margin:2rem 10%; 
+}
+
+.date{
+  margin:8px;
+  text-align: right;
+  border-bottom: #111 solid 2px;
+}
+
+hr{
+  margin: 1rem;
+}
+
+h3{
+  font-family: 'Comfortaa', cursive;
+  margin: 0 8px;
+  letter-spacing: 1px;
+}
+
+h4{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Comfortaa';
+  margin: 1rem auto;
+}
+
+.post{
+  background:rgba(1, 1, 1, 0.75);
+  border: 1px whitesmoke solid;
+
+
+  display: block;
+  margin: auto;
+  padding: 1rem;
+  width:100%;
+
+  font-family: monospace;
+  font-size: 1.2rem;
+  color: rgb(230, 230, 230);
+}
+
+.post p{
+  display:block;
+  margin: auto;
+  width: 70%;
+  padding: 1rem;
+  font-size: 16px;
+}
+
+.blogText{
+  display:block;
+  margin: auto;
+  width: 90%;
+}
+
+.blogIMG{
+  display: block;
+  margin: auto;
+  width:50%;
+  border: 1px whitesmoke solid;
+
+  transition: .3s;
+  cursor: pointer;
+}
+
+                                /* /////////////// MODAL /////////////// */
+.modal{
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top:0;
+  width:100%;
+  height:100%;
+/*   background-color: black; */
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal_active{
+  display:block;
+}
+
+.modal_disabled{
+  display:none;
+}
+
+/* modal image */
+.modal-content{
+    margin:auto;
+    display: block;
+    max-width: 80%;
+}
+
+.caption{
+  margin:auto;
+  display: block;
+  width:80%;
+  max-width: 700px;
+  text-align: center;
+  color:#ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* modal animation */
+.modal-content, .caption{
+  animation-name: zoom;
+  animation-duration: .6s;
+}
+
+@keyframes zoom{
+  from{
+    transform:scale(0);
+  }to{
+    transform: scale(1);
+  }
+}
+
+/* close button */
+.close{
+  position: absolute;
+  top:70px;
+  right:8%;
+  color: #111;
+  font-size: 40px;
+  font-weight: bold;
+  transition: .3s;
+
+  text-shadow: 0 0 3px whitesmoke;
+}
+
+.close:hover,
+.close:focus{
+  color:#bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Scroll button */
+.scroll-top{
+  position: fixed;
+  top:95%;
+  right:1%;
+  font-size: 4rem;
+  text-decoration: none;
+  color: whitesmoke;
+  margin: 0 3% ;
+}
+
+.scroll-top:hover{
+  cursor: pointer;
+}
+
+/* image slider */
+.container{
+ /*  position: relative;
+  left: 25%; */
+  display: block;
+  margin: auto;
+  width: 50%;
+  border:1px solid whitesmoke;
+}
+
+.compare{
+  position: relative;
+  width: 640px;
+  height: 360px;
+}
+
+.compare .before{
+  position: relative;
+  top:0;
+  left: 0;
+  width: 640px;
+  height: 360px;
+  background-image: url("/img/blog-imgs/compare_after.png");
+}
+
+.compare .before .after{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 640px;
+  height: 360px;
+  background-image: url("/img/blog-imgs/compare_before.png");
+  z-index: 2;
+}
+
+.compare input{
+  position: absolute;
+  top:0;
+  left:0;
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.compare input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  display: block;
+  width: 10px;
+  height: 360px;
+  background: whitesmoke;
+  cursor: pointer;
+}
+
+.compare input::-moz-range-thumb{
+  -webkit-appearance: none;
+  display: block;
+  width: 4px;
+  height: 360px;
+  background: whitesmoke;
+  cursor: pointer;
+}
+
+
+
+                                              /* ------------------------------------------------- */
+                                                                /* MEDIA QUERY */
+                                              /* ------------------------------------------------- */
+
+
+@media only screen and (max-width: 700px){
+ 
+  .blogIMG{
+    width:60%;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  
+  .blogIMG{
+    width:70%;
+  }
+}
