@@ -28,4 +28,12 @@ close.addEventListener("click",()=>{
     }
 });
 
+window.onclick = function(event){
+    if(event.target == modal){
+        modal.classList.remove("modal_active");
+        modal.classList.add("modal_disabled");
+    };
+};
 
+/* Scroll Up */
+$('html').scrollTop(0);

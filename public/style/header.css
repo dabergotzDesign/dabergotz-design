@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+header .navigation {
+  /* align */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  /* spacing */
+  padding: 8px;
+  height:8vh;
+
+  /* coloring */
+  border-bottom: 2px solid whitesmoke;
+  box-shadow: 0 0 64px rgb(20, 20, 20) inset;
+  background: rgba(20, 20, 20, 0.5);
+}
+
+.logo {
+  display: block;
+  width: 8%;
+  padding: auto;
+}
+
+.navigation{
+  overflow: hidden;
+}
+
+.navigation a {
+  /* spacing */
+  padding: 0 16px;
+
+  /* color & effect */
+  color: white;
+  text-decoration: none;
+
+  /* font */
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 100;
+}
+
+.navigation a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  display: block;
+  background: rgb(255, 255, 255);
+  transition: width 0.2s ease;
+}
+
+.navigation a:hover::after {
+  width: 100%;
+  left: 0;
+  background: rgb(255, 255, 255);
+}
+
+.menu{
+  display: none;
+}
+
+.menu i{
+  font-size: 2rem;
+}
+
+                                              /* ------------------------------------------------- */
+                                                                /* MEDIA QUERY */
+                                              /* ------------------------------------------------- */
+
+
+          @media only screen and (max-width: 900px){
+            header .navigation {
+              /* align */
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: space-around;
+              align-items: center;
+
+              height:auto;
+              padding: 8px;
+            }
+
+            .navigation a{
+              display:none;
+            }
+
+            .navigation a.menu{
+              float: right;
+              display:block;
+            }
+
+            .navigation.responsive a{
+              display: block;
+              padding: 8px;
+            }
+
+            .logo{
+              width: 16%;
+            }
+
+            .navigation a.menu{
+              display: block;
+              float: right;
+            }
+          }
+
