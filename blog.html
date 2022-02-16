@@ -2,8 +2,8 @@
 <html id="top">
   <head>
     <title>Blog d-dabergotz Design</title>
-    <link rel="stylesheet" type="text/css" href="public/style/header.css" />
-    <link rel="stylesheet" type="text/css" href="public/style/blog.css" />
+    <link rel="stylesheet" type="text/css" href="style/header.css" />
+    <link rel="stylesheet" type="text/css" href="style/blog.css" />
     <link rel="icon" href="img/logo_favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
@@ -303,7 +303,12 @@
         <div class="caption"></div>
       </div>
     </main>
-    <a href="#top" class="scroll-top">^</a>
+
+    <div onclick="window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });"  class="scroll-top">^</div>
+  
   </body>
   <script src="scripts/blog-modal.js"></script>
   <script src="scripts/hamburger-menu.js"></script>
