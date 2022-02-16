@@ -36,4 +36,10 @@ window.onclick = function(event){
 };
 
 /* Scroll Up */
-$('html').scrollTop(0);
+/* $('html').scrollTop(0); */
+function scrollTop(){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};

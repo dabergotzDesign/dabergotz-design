@@ -198,11 +198,11 @@ h4{
 
 /* image slider */
 .container{
- /*  position: relative;
+  /* position: relative;
   left: 25%; */
   display: block;
-  margin: auto;
-  width: 50%;
+  margin:auto;
+  width: 642px;
   border:1px solid whitesmoke;
 }
 
