@@ -16,7 +16,7 @@ html{
 
 body {
   height: 100vh;
-  background-image: url("/img/backgrounds/Interior_BG_Lounge_BLOG.png");
+  background-image: url("../img/backgrounds/Interior_BG_Lounge_BLOG.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -218,7 +218,7 @@ h4{
   left: 0;
   width: 640px;
   height: 360px;
-  background-image: url("/img/blog-imgs/compare_after.png");
+  background-image: url("../img/blog-imgs/compare_after.png");
 }
 
 .compare .before .after{
@@ -227,7 +227,7 @@ h4{
   left:0;
   width: 640px;
   height: 360px;
-  background-image: url("/img/blog-imgs/compare_before.png");
+  background-image: url("../img/blog-imgs/compare_before.png");
   z-index: 2;
 }
 
