@@ -9,7 +9,7 @@
 
 body {
   height: 100vh;
-  background-image: url("/img/backgrounds/Interior_BG_Room_HOME.png");
+  background-image: url("../img/backgrounds/Interior_BG_Room_HOME.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
