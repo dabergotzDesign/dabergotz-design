@@ -101,7 +101,7 @@
     "mime-types": "^2.1.34",
     "mimic-response": "^1.0.1",
     "minimatch": "^3.0.5",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "ms": "^2.0.0",
     "negotiator": "^0.6.3",
     "neo-async": "^2.6.2",
