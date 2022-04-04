@@ -12,7 +12,7 @@
 
 body {
   height: 100vh;
-  background-image: url("../img/backgrounds/Interior_BG_TV_PORTFOLIO.png");
+  background-image: url("../img/backgrounds/Interior_BG_LOW_TV_PORTFOLIO.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -560,7 +560,7 @@ button{
 }
 
 .projectInfo{
-  border-color:red;
+  border-color:purple;
 }
 
 .projectInfo-2{
@@ -568,7 +568,7 @@ button{
 }
 
 .projectInfo-3{
-  border-color:blue;
+  border-color:red;
 }
 
 .projectInfo-web{

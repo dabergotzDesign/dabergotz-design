@@ -16,7 +16,7 @@ html{
 
 body {
   height: 100vh;
-  background-image: url("../img/backgrounds/Interior_BG_Lounge_BLOG.png");
+  background-image: url("../img/backgrounds/Interior_BG_LOW_Lounge_BLOG.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -82,6 +82,7 @@ h4{
   font-family: monospace;
   font-size: 1.2rem;
   color: rgb(230, 230, 230);
+  text-align: justify;
 }
 
 .post p{

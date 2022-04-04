@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  background-image: url("../img/backgrounds/Interior_BG_PC_CONTACT.png");
+  background-image: url("../img/backgrounds/Interior_BG_LOW_PC_CONTACT.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -131,8 +131,8 @@ h1 {
   width: 80%;
 }
 
-#form-div {
-/*	background-color:rgba(72,72,72);
+/* #form-div {
+	background-color:rgba(72,72,72);
 	padding-left:35px;
 	padding-right:35px;
 	padding-top:35px;
@@ -144,8 +144,8 @@ h1 {
   margin-top:30px;
 	margin-left: -260px;
   -moz-border-radius: 7px;
-  -webkit-border-radius: 7px; */
-}
+  -webkit-border-radius: 7px;
+} */
 
 .feedback-input {
 	color:whitesmoke;
