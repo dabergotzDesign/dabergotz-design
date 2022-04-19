@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  background-image: url("../img/backgrounds/Interior_BG_LOW_PC_CONTACT.png"), url("../img/backgrounds/Interior_BG_PC_CONTACT.png");
+  background-image: url("../img/backgrounds/Interior_BG_PC_CONTACT.png"), url("../img/backgrounds/Interior_BG_LOW_PC_CONTACT.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
