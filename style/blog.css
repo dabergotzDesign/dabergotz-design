@@ -16,7 +16,7 @@ html{
 
 body {
   height: 100vh;
-  background-image: url("../img/backgrounds/Interior_BG_LOW_Lounge_BLOG.png"), url("../img/backgrounds/Interior_BG_Lounge_BLOG.png");
+  background-image: url("../img/backgrounds/Interior_BG_Lounge_BLOG.png"), url("../img/backgrounds/Interior_BG_LOW_Lounge_BLOG.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
