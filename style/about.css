@@ -8,7 +8,8 @@
 
 body {
   height: 100vh;
-  background-image: url("../img/backgrounds/Interior_BG_Gallery_ABOUTME.png"), url("../img/backgrounds/Interior_BG_LOW_Gallery_ABOUTME.png");
+  background-image: url("../img/backgrounds/Interior_BG_Gallery_ABOUTME.png");
+  background-color: #111;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;

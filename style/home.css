@@ -10,6 +10,7 @@
 body {
   height: 100vh;
   background-image: url("../img/backgrounds/Interior_BG_LOW_Room_HOME.png");
+  background-color: #111;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
