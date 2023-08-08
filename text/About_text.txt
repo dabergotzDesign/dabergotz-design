@@ -1,0 +1,15 @@
+
+INTRO
+
+Hi everyone, my name is Dennis Dabergotz a Web Developer with interest in design, games and technology.
+Coming from a more hand crafting background, I turned my eyes on to the digital way when I started at the <italic> School for Games </italic>
+as game developer.
+Back then I wasn't sure about the coding part, though I was more focused on design and art. Everything changed on the project <italic> Frilled the Skilled </italic>.
+A simple project that I had to manage together with a college who was also involved in it. 
+With this project and some game projects afterwards, I've grown on coding  for game mechanics and getting more more save with manganing code and development.
+
+After the graduation of <italic> School for Games </italic> the following months got to finishing up my final game project and try to get into Game Development in job.
+The non-success on that part got me slowly into Web Development. With the help, or more precisely a kick in the butt, of a company where I got some help
+to convert to Web Development. This process led me to two different educations on Web Development. 
+
+

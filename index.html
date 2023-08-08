@@ -1,55 +1,63 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Home d-dabergotz Design</title>
-    <link rel="stylesheet" type="text/css" href="style/home.css" />
-    <link rel="stylesheet" type="text/css" href="style/header.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="img/logo_favicon.png" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
-      integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y"
-      crossorigin="anonymous"
-    />
-    <header>
-      <nav class="navigation">
-        <img
-          src="img/logo_site_transparent.png"
-          alt="dabergotzDesign Logo"
-          class="logo"
-        />
-        <a href="index.html" id="headLink">Home</a>
-        <a href="portfolio_web_game.html" id="headLink">Portfolio</a>
-        <a href="blog.html" id="headLink">Blog</a>
-        <a href="aboutMe.html" id="headLink">About Me</a>
-        <a href="contact.html" id="headLink">Contact</a>
-        <a class="menu" href="javascript:void(0);" onclick="HamburgerMenu()"><i class="fas fa-bars"></i></a>
-      </nav>
-    </header>
-  </head>
-  <body class="asyncImage" data-src="../img/backgrounds/Interior_BG_Room_HOME.png">
-    <video autoplay muted loop src="video/home_bg_video.mp4"></video>
-    <main class="home">
-      <h1>HOME</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/css/style.css">
+    <link rel="shortcut icon" href="img/logo_favicon.png" type="image/x-icon">
 
-      <section class="welcome">
-        <h2 class="welcomeHeadline">Welcome to dabergotzDesign</h2>
-        <div class="welcomeSpeech">
-        <p>
-          Passion for new Technology and Design. Developer with skills in Game Development & Web Development
-          <br> A creator with heart.
-        </p>
-        <hr>
-        <p>
-          The Portfolio page with Level Design & Front-End Development made by Dennis Dabergotz.
-        </p>
-      </div>
-      </section>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Poppins:wght@200;300;400;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
+    <title>dabergotzDesign - Home</title>
+
+    <script src="./js/sidebar.js" defer></script>
+</head>
+<body class="page__home">
+    <aside class="sidebar">
+
+        <h1 class="sidebar__title">
+            <a href="index.html">
+                <img src="./img/logo_site_transparent.png" height="154px" width="270px" alt="dabergotzDesign logo">
+            </a>
+        </h1>
+
+        <nav class="sidebar__nav">
+            <ul>
+                <li class="sidebar__nav-item"><a href="#">Home</a></li>
+                <li class="sidebar__nav-item"><a href="./html/portfolio.html">Portfolio</a></li>
+                <li class="sidebar__nav-item"><a href="./html/about.html">About</a></li>
+                <li class="sidebar__nav-item"><a href="./html/blog.html">Blog</a></li>
+                <li class="sidebar__nav-item"><a href="./html/contact.html">Contact</a></li>
+            </ul>
+
+            <div class="sidebar__controls">
+                <button class="fa-solid fa-chevron-left sidebar__controls-close"></button>
+                <button class="fa-solid fa-chevron-right sidebar__controls-open hidden"></button>
+            </div>
+            
+        </nav>
+
+    </aside>
+    
+    <main class="home__main">
+        <h1 class="page__title">home</h1>
+
+        <section class="welcome__box">
+            <h1 class="welcome__title">Welcome to dabergotzDesign</h1>
+            <article>
+                <p>Passion for new Technology and Design. Developer with skills in Web Development & Game Development
+                    <br> A creator with heart.
+                </p>
+                <hr>
+                <p>
+                    Have a look into my <a href="./html/portfolio.html">Portfolio</a>
+                </p>
+            </article>
+        </section>
     </main>
-  </body>
-  <script src="scripts/hamburger-menu.js"></script>
+    <video src="video/home_bg_video.mp4" width="1920" height="1080" loop autoplay></video>    
+</body>
 </html>

@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;
+}
+
+body{
+    background-color: var(--bg-dark);
+}
+
+.page{
+    &__home,
+    &__portfolio,
+    &__about,
+    &__blog,
+    &__contact{
+        height: 100%;
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: var(--bg-dark);
+    }
+
+    &__title{
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0 0 8px var(--bg-dark);
+        
+        font-family: var(--font-space-mono);
+        font-size: 2.5rem;
+        font-weight: 400;
+
+        letter-spacing: 4px;
+        color: var(--text-light);
+        margin-top: .5rem;
+    }
+
+    //background images
+    &__home{
+        background-image: url("../../img/backgrounds/Interior_BG_Room_HOME.png");
+        overflow: hidden;
+    }
+
+    &__portfolio{
+        background-image: url("../../img/backgrounds/Tokyo_city_street_placeholder.png");
+    }
+
+    &__about{
+        background-image: url("../../img/backgrounds/Japanese_Home_re-color.png");
+    }
+
+    &__blog{
+        background-image: url("../../img/backgrounds/living_room_cyberpunk.png");
+    }
+
+    &__contact{
+        background-image: url("../../img/backgrounds/Interior_BG_LOW_PC_CONTACT.png");
+    }
+}

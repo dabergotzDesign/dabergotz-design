@@ -1,0 +1,26 @@
+
+//Colors
+:root{
+    --text-light: whitesmoke;
+    --text-dark: #1d1d1d;
+    --text-link: rgb(0, 174, 255);
+    --bg-dark: #1d1d1d;
+    --bg-dark-transparent: #1d1d1dec;
+    --bg-light: whitesmoke;
+    --bg-light-transparent: rgba(245, 245, 245, 0.5)
+}
+
+//Font Sizes
+:root{
+    --size-16: 1rem;
+    --size-24: 1.5rem;
+    --size-32: 2rem;
+}
+
+//Fonts
+:root{
+    --font-poppins: 'Poppins', sans-serif;
+    --font-space-mono: 'Space Mono', monospace;
+    --font-hepta: 'Hepta Slab', serif;
+}
+

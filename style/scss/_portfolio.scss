@@ -1,0 +1,219 @@
+.page{
+    &__portfolio{
+
+        .portfolio{  
+            
+                &__main{
+
+                    overflow-x: hidden;
+
+                    //creates space after portfolio, helps the parallax
+                    .space{
+                        margin: 0 10%;
+                        height: 240px;
+                        width: 100%;
+
+                        @media screen and (max-width: 800px) {
+                            height: calc(240px / 2);
+                        }
+                    }
+        
+                }
+
+                &__container{
+                    background-color: var(--bg-dark);
+                    border: thin solid var(--text-light);
+                    width: 60%;
+
+                    margin: auto;
+                    margin-left: 20%;
+
+                    display: flex;
+                    flex-flow: column nowrap;
+
+                    @media screen and (max-width: 800px) {
+                        width: 80%;
+                        margin-left: 10%;
+                    }
+                }
+    
+                &__content{
+                       
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    height: 540px;
+                    width: 720px;
+
+                    max-width: 100%;
+                    max-height: 100%;
+
+                    display: block;
+                    margin: auto;
+                    
+
+                    transition: all .8s ease;
+                    position: relative;
+
+                    @media screen and (max-width: 800px) {
+                        background-size: cover;
+                    }
+
+                    &:hover,
+                    &:focus{
+                        height: 720px;
+                        width: 1080px;
+
+                        .image__text{
+                            height: 460px;
+
+                            .button__icon{
+                                content: 'f078';
+                            }
+                        }
+
+                        .image__description{
+                            color: rgba($color: var(--text-light), $alpha: 1.0);
+                        }
+
+                        .portfolio__link{
+                            opacity: 1;
+                        }
+
+                        
+                    }
+                    
+    
+                    &.image{
+                        &__port-1{
+                            background-image: url("../../img/portfolio/weeb_shop.png");
+                        }
+
+                        &__port-2{
+                            background-image: url("../../img/portfolio/genshin_teams_light-version.png");
+                        }
+
+                        &__port-3{
+                            background-image: url("../../img/portfolio/WallOfWishes_site.jpg");
+                        }
+
+                        &__port-4{
+                            background-image: url("../../img/portfolio/valar-morghulis.png");
+                        }
+                    }
+                        
+
+                    .image{
+                        &__text{
+                            display: flex;
+                            flex-flow: column nowrap;
+                            align-items: center;
+
+                            position: absolute;
+                            bottom: 0;
+
+                            padding: 1rem;
+                            width: 100%;
+                            height: 60px;
+                            overflow: hidden;
+
+                            color: var(--text-light);
+                            background-color: var(--bg-dark-transparent);
+                            border: thin solid var(--text-light);
+                            transition: height 0.5s ease;
+
+                            @media screen and (max-width: 480px) {
+                                :hover{
+                                    @media screen and (max-width: 480px) {
+                                        height: 320px;
+                                        overflow-y: scroll;
+                                    }
+                                }
+                            }
+
+                            .portfolio__radio{
+
+                                display: none;
+
+                                width: 100%;
+                                text-align: center;
+                                z-index: 5;
+
+                                @media screen and (max-width: 800px) {
+                                    display: block;
+                                 }
+
+                                .button__icon{
+                                    padding: 0.25rem;
+                                    margin-bottom: 0.25rem;
+                                    border: thin solid var(--bg-light);
+                                }
+                                
+                            }
+                            
+                            .radio{
+                                display: none;
+                            }
+
+                            
+                        }
+
+                        &__title{
+                            text-align: center;
+                            text-transform: capitalize;
+
+                            font-family: var(--font-space-mono);
+                            font-weight: 700;
+
+                            padding: .5rem;
+                        }
+
+                        &__description{
+                            text-align: center;
+                            font-family: var(--font-hepta);
+                            padding: .25rem 1.5rem;
+                            margin-bottom: 1rem;
+
+                            &-time{
+                                padding-left: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                &__link{                          
+
+                    opacity: 0;
+                    
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: none;
+
+                    font-size: 1rem;
+                    font-weight: 700;
+                    font-family: var(--font-space-mono);
+                    letter-spacing: 3px;
+                    color: var(--text-light);
+
+                    display: block;
+                    margin: auto 2rem;
+                    padding: .5rem 1.5rem;
+                    width: fit-content;
+                    transition: all 0.3s ease;
+
+                    &:hover{
+                        border: thin solid var(--text-light);
+                        border-radius: .25rem;
+                    }
+
+                    &:active{
+                        box-shadow: -1px -1px 4px inset;
+                    }
+                }
+
+                
+            }
+    }
+}
