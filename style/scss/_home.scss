@@ -1,0 +1,87 @@
+
+
+.page__home{
+
+    .home{
+
+        &__main{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 30rem;
+
+            margin: auto;
+            margin-left: 25%;
+            margin-right: 10%;
+
+            @media screen and (max-width: 800px) {
+                margin-left: 10%;
+            }
+
+            @media screen and (max-width: 480px) {
+                gap: 20rem;
+                margin-right: 5%;
+            }
+
+            .welcome{
+
+                &__box{
+                    background-color: var(--bg-dark);
+                    border: 1px solid var(--text-light);
+                    
+                    margin: auto;
+                    padding: 1.5rem;
+        
+                    
+                    article{
+                        padding: .5rem;
+        
+                        hr{
+                            margin: 1rem;
+                        }
+        
+                        p{
+                            color: var(--text-light);
+                            font-family: var(--font-hepta);
+                            text-align: center;
+                            padding: .25rem;
+        
+                            a{
+                                color: var(--text-light);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                
+                //Welcome box title
+                &__title{
+                    color: var(--text-light);
+                    font-family: var(--font-space-mono);
+                    font-weight: 500;
+        
+                    text-align: center;
+                    text-transform: uppercase;
+
+                }
+        
+                
+            }
+        }
+    }
+
+
+    }
+
+
+
+video{
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+}
