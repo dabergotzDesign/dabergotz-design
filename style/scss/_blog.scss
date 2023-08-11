@@ -180,7 +180,7 @@ $color-lightgrey: #bbb;
                                 height: 100%;
                                 background: transparent;
                                 
-                                &::-webkit-slider-thumb,
+                                /* &::-webkit-slider-thumb,
                                 &::-moz-range-thumb{
                                     -webkit-appearance: none;
                                     -moz-appearance: none;
@@ -195,7 +195,18 @@ $color-lightgrey: #bbb;
                                     @media screen and (max-width: 800px) {
                                         height: calc(360px / 2);
                                     }
-                                }
+                                } */
+
+                            }
+                            
+                            .slider::-webkit-slider-thumb{
+                                appearance: none;
+                                background-color: var(--bg-light);
+                                border: thin solid var(--bg-dark);
+                                height: 3rem;
+                                width: 8px;
+                                border-radius: .5rem;
+                                position: relative;
                             }
 
                                 

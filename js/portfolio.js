@@ -1,12 +1,17 @@
-/* let portfolioPiece  = document.querySelectorAll(".image__text"),
-    radioButton = document.querySelectorAll(".portfolio__radio"),
-    buttonIcon = document.querySelectorAll(".button__icon");
+let acc = document.getElementsByClassName("accordion");
 
 
-let radio1 = document.getElementById("radio-button-1");
+for (let i = 0; i < acc.length; i++) {
 
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
 
-radio1.addEventListener("change", ()=>{
-    
-}); */
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
 
+  });
+}
