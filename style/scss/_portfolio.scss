@@ -1,5 +1,5 @@
 //media variables
-$media-laptop: 1200px;
+$media-laptop: 1440px;
 $media-tablet: 1024px;
 $media-mobile: 450px;
 
@@ -791,6 +791,101 @@ $width-card-default-m: 5em;
                     img:nth-child(3){
                         grid-column: span 2;
                         margin: auto;
+                    }
+                }
+
+                &__container-mobile{
+                    display: none;
+                    width: 80%;
+                    margin-left: 10%;
+
+                    @media screen and (max-width: 800px){
+                        display: block;
+                    }
+
+                    
+                    .accordion
+                    {
+                        background-color: var(--bg-dark);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+
+                        text-align: center;
+                        font-family: var(--font-space-mono);
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        letter-spacing: 2px;
+                        
+
+                        outline: none;
+                        border: none;
+
+                        padding: 1.1rem;
+                        width: 100%;
+                        height: 240px;
+                     
+                        transition: all 0.3s ease;
+                        position: relative;
+
+                                                                      
+
+                        &.active{
+                            background-color: var(--bg-dark-grey);
+                        }
+
+                        &.piece-1{
+                            background-image: url("../../img/portfolio/weeb_shop.png");
+                            color: $accordion-text;
+                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
+
+                        }
+
+                        &.piece-2{
+                            background-image: url("../../img/portfolio/genshin_teams_light-version.png");
+                            color: var(--text-light);
+                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
+                        }
+
+                        &.piece-3{
+                            background-image: url("../../img/portfolio/WallOfWishes_site.jpg");
+                            color: var(--text-light);
+                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
+                        }
+
+                        &.piece-4{
+                            background-image: url("../../img/portfolio/valar-morghulis.png");
+                        }
+                        
+
+                    }
+
+
+                    .panel{
+                        max-height: 0;
+                        padding: 0 1.1rem;
+                        background-color: var(--bg-dark);
+                        border-left: thin solid var(--bg-light);
+                        border-right: thin solid var(--bg-light);
+                        overflow: hidden;
+                        transition: max-height 0.3s ease;
+
+                        .accordion{
+                            &__title{
+                                text-align: center;
+                                color: var(--text-light);
+                                font-family: var(--font-space-mono);
+                            }
+
+                            &__description{
+                                @include panel-text;
+                                color: var(--text-light);
+
+                                span{
+                                    padding-left: 0.5rem;
+                                }
+                            }
+                        }
                     }
                 }
 
