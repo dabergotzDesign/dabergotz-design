@@ -565,6 +565,17 @@ body{
                         }
                     }
 
+                    .fade-in{
+                        opacity: 0;
+                        transform: translateY(60%);
+                        transition: all 0.5s ease-out;
+        
+                        &.active{
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
                     h3{
                         color: var(--c-highlight);
                         font-family: var(--font-noto);

@@ -151,6 +151,43 @@ const observe_work = new IntersectionObserver(entries => {
   });
 });
 
+
+
+/*
+
+menuAni.to(
+    navMain, 0.8, {
+        width: 320,
+        ease: Power2.easeInOut,
+        transform: "translate3d(0,0,0)"
+    }
+    ,0
+)
+
+menuAniReverse.to(
+    navMain, 0.5, {
+        width: 0,
+        ease: Power2.easeIn,
+        transform: "translate3d(0,0,0)"
+    }
+    , 0
+)
+
+menuBtn.addEventListener("click", ()=>{
+    toggle = !toggle;
+    toggle == false ? menuAni.play(0) : menuAniReverse.play(0);
+
+    if(toggle == false){
+        menuBtn.classList.remove("fa-bars");
+        menuBtn.classList.add("fa-chevron-left");
+    }else{
+        menuBtn.classList.remove("fa-chevron-left");
+        menuBtn.classList.add("fa-bars");
+    }
+})
+
+*/
+
 observe_work.observe(document.querySelector('#portfolio'));
 
 ///////////////////////
