@@ -10,9 +10,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Poppins:wght@200;300;400;700&family=Space+Mono&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
+
     <title>dabergotzDesign - Contact</title>
 
+    <script src="../js/splash.js" defer></script>
     <script src="../js/contact.js" defer></script>
     <script src="../js/sidebar.js" defer></script>
 </head>
@@ -20,22 +26,23 @@
     <aside class="sidebar">
 
         <h1 class="sidebar__title">
-            <a href="../index.html">
+            <a href="javascript: delay('../index.html')">
                 <img src="../img/logo_site_transparent.png" height="154px" width="270px" alt="dabergotzDesign logo">
             </a>
         </h1>
     <nav class="sidebar__nav">
         <ul>
-            <li class="sidebar__nav-item"><a href="../index.html">Home</a></li>
-            <li class="sidebar__nav-item"><a href="./portfolio.html">Portfolio</a></li>
-            <li class="sidebar__nav-item"><a href="./about.html">About</a></li>
-            <li class="sidebar__nav-item"><a href="./blog.html">Blog</a></li>
+            <li class="sidebar__nav-item"><a href="javascript: delay('../index.html')">Home</a></li>
+            <li class="sidebar__nav-item"><a href="javascript: delay('./portfolio.html')">Portfolio</a></li>
+            <li class="sidebar__nav-item"><a href="javascript: delay('./about.html')">About</a></li>
+            <li class="sidebar__nav-item"><a href="javascript: delay('./blog.html')">Blog</a></li>
             <li class="sidebar__nav-item"><a href="#">Contact</a></li>
         </ul>
 
         <div class="sidebar__controls">
-            <button class="fa-solid fa-chevron-left sidebar__controls-close"></button>
-            <button class="fa-solid fa-chevron-right sidebar__controls-open hidden"></button>
+            <!-- <button class="fa-solid fa-chevron-left sidebar__controls-close"></button>
+            <button class="fa-solid fa-chevron-right sidebar__controls-open hidden"></button> -->
+            <button class="fa-solid fa-bars sidebar__controls-button"></button>
         </div>
 
     </nav>
@@ -43,19 +50,21 @@
 
     <main class="contact__main">
         <h1 class="contact__title">contact</h1>
+
+        <h3>get in contact with me</h3>
+
         <div class="contacts__wrapper">
+
 
             <!-- Messanger -->
             <section class="contacts__mails envelope_button">
-                <h4>message me</h4>
+               
                 <i class="fas fa-envelope"></i>
             </section>
 
             <!-- Social Channels -->
             <section class="contacts__socials">
-                <h4>
-                    contact me on socials
-                </h4>
+          
                 <ul>
                     <li>
                         <i class="fab fa-github"></i>
@@ -81,7 +90,7 @@
 
             <div id="form-main">
                 <div id="form-div">
-                <form class="form" id="form1" method="POST" action="https://formspree.io/f/myyoeqvb">
+                <form class="form" id="form1" method="POST" action="https://formspree.io/f/myyoeqvb" action="../js/contact.js" onsubmit="return formValidation()">
                         
                 <input type="text" name="_gotcha" style="display:none" />
                  
@@ -94,7 +103,7 @@
                     <textarea name="text" class="validate[required,custom[onlyLetter],length[6,300]] input__feedback" id="message" placeholder="Message"></textarea>
 
                     <div class="submit">
-                    <input type="submit" value="SUBMIT" class="submit__button"/>
+                    <input type="submit" value="SUBMIT" class="submit__button" disabled/>
                     </div>
 
                 </form>
@@ -106,5 +115,12 @@
     </section>
 
 </main>
+
+    <!-- Splash Screen Overlay -->
+    <div class="splash">
+        <div class="spinner"></div>
+        <img src="../img/dddesign_logo_transparent.png" height="2048px" width="2048px" alt="logo">
+    </div>
+
 </body>
 </html>

@@ -39,3 +39,26 @@ window.onclick = function(event){
 document.querySelector(".compare #compare-ip").addEventListener("input", (e)=>{
     document.querySelector(".compare .before .after").style.width= (+e.target.value) + "px";
 });
+
+
+///FADE IN
+/* function inView(el) {
+    const rect = el.getBoundingClientRect();
+
+    return(
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+const blog = document.querySelector(".blog__section");
+const post = document.querySelectorAll('.post');
+
+
+document.addEventListener("scroll", () =>{
+    post.forEach(el => {
+        el.classList.add("active");
+    });
+}) */

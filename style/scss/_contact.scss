@@ -1,46 +1,56 @@
-$lightgrey: #bbb;
-$grey: #757575;
-$darkgrey: #1d1d1d;
-$black: #111;
-
 .page{
 
-    position: relative;
-
-    
     &__contact{
+
+        overflow: hidden;
 
         .contact{
 
         &__main{
-            width: 80%;
-            margin-left: 10%;
+            //width: 80%;
+            height: 100vh;
+            position: relative;
+        
+            margin: auto;
+            margin-left: 25%;
+
+            background-color: var(--bg-dark-transparent);
 
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
-            gap: 20rem;
+            justify-content: center;
+        
+            
+            h3{
+                color: var(--text-light);
+                font-family: var(--font-poppins);
+                font-size: 2rem;
 
-            @media screen and (max-width: 800px) {
-                gap: 15rem;
+                text-align: center;
+                text-transform: uppercase;
+                
+                padding: 2rem;
+
+                @media screen and (max-width: 500px) {
+                    font-size: 1.5rem;
+                }
             }
-
            
             .contacts{
                 &__wrapper{
                     display: flex;
-                    justify-content: space-evenly;
-                    gap: 20rem;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 12rem;
 
-                    @media screen and (max-width: 800px) {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: flex-start;
+
+                    @media screen and (max-width: 900px) {
                         gap: 8rem;
                     }
 
-                    @media screen and (max-width: 480px) {
-                        gap: 1rem;
+                    @media screen and (max-width: 500px) {
+                        gap: 3rem;
                     }
 
                     h4{
@@ -59,27 +69,25 @@ $black: #111;
                 }
 
                 &__mails{
-                    font-size: 2rem;
+                    font-size: 4rem;
                     font-family: var(--font-space-mono);
                     text-align: center;
                     transition: all 0.3s ease;
+                    color: var(--text-light);
 
                     @media screen and (max-width: 800px){
-                        background-color: var(--bg-dark-transparent);
-                        color: var(--text-light);
                         padding: 1rem;                        
-                        border: thin solid var(--bg-light);
                     }
 
                                     
                     &:hover{
                         cursor: pointer;
-                        color: $lightgrey;
-                        text-shadow: 0 0 4px $darkgrey;
+                        scale: 1.2;
+                        text-shadow: 0 0 2px var(--text-dark);
                     }
 
                     &:active{
-                        color: $darkgrey;
+                        color: var(--bg-dark-grey);
                         text-shadow: 0 0 4px var(--text-light);
                     }
 
@@ -92,12 +100,28 @@ $black: #111;
                 &__socials{
 
                     text-align: center;
+                    color: var(--text-light);
+                    position: relative;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -24%;
+                        margin-right: 2rem;
+
+                        width: 4px;
+                        height: 100%;
+                        background-color: var(--bg-light);
+
+                        @media screen and (max-width: 480px){
+                            left: -8%;                        
+                        }
+
+                    }
 
                     @media screen and (max-width: 800px){
-                        background-color: var(--bg-dark-transparent);
-                        color: var(--text-light);
                         padding: 1rem;                        
-                        border: thin solid var(--bg-light);
                     }
                                        
 
@@ -111,39 +135,52 @@ $black: #111;
                         }
                     }
 
-                    li{
-                        list-style: none;
-                        font-size: var(--size-24);
-                        font-family: var(--font-space-mono);
-                        padding: .5rem 0;
-                        transition: all 0.3s ease;
-
-                        @media screen and (max-width: 800px) {
-                            padding: 0.5rem 0;
-                            font-size: 1.2rem;
-                        }
-
-                        
-                        &:hover{
-                            color: var(--text-light);
-                            text-shadow: 0 0 2px $black;
+                    ul{
+                        padding-left: 0;
+                                              
+                        li{
+                            list-style: none;
+                            font-size: 2.3rem;
+                            font-family: var(--font-space-mono);
+                            
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            
+                            padding: 1rem 0;
+                            transition: all 0.3s ease;
+                            
+                            @media screen and (max-width: 800px) {
+                                padding: 0.5rem 0;
+                                font-size: 1.2rem;
+                            }
+                            
+                            
+                            
+                            
+                            &:hover{
+                                color: var(--text-light);
+                            text-shadow: 0 0 2px var(--bg-dark);
                             scale: 1.2;
-
+                            
                             @media screen and (max-width: 800px) {
                                 scale: 1;
                                 text-shadow: none;
                             }
 
+                            //hover effect                            
                             a{
                                 color: var(--text-light);
-                                text-shadow: 0 0 2px $black;
                             }
                         }
-
+                        
+                        
                         a{
                             text-decoration: none;
-                            color: $darkgrey;
-
+                            text-align: left;
+                            color: var(--text-light);
+                            padding-left: 1rem;
+                            
                             @media screen and (max-width: 800px) {
                                 color: var(--text-light);
                             }
@@ -151,6 +188,7 @@ $black: #111;
                     }
                 }
             }
+        }
 
             .mailModal{
                 display: none;
@@ -207,7 +245,7 @@ $black: #111;
                             font-family: var(--font-hepta);
                             font-weight:100;
                             font-size: 1.2rem;
-                            background-color: $black;
+                            background-color: var(--bg-dark);
                             padding: .8rem;
                             margin-bottom: 10px;
                             width:100%;
@@ -241,7 +279,7 @@ $black: #111;
                             padding: 1.1rem 0;
 
                             border: var(--text-light) solid 1px;
-                            background-color: $black;
+                            background-color: var(--bg-dark);
                             color: var(--text-light);
                             cursor:pointer;
 
@@ -251,10 +289,17 @@ $black: #111;
                             position: relative;
 
                             &:hover{
-                                color: $black;
+                                color: var(--text-dark);
                                 background-color: var(--text-light);
-                                border-color: $black;
-                                box-shadow: 0 0 1rem $darkgrey inset;
+                                border-color: var(--bg-dark);
+                                box-shadow: 0 0 1rem var(--bg-dark-grey) inset;
+                            }
+
+                            &:disabled{
+                                background-color: var(--bg-dark-grey);
+                                border-color: var(--bg-lightgrey);
+                                color: var(--text-disabled);
+                                cursor: not-allowed;
                             }
                         }
                     }
@@ -264,6 +309,9 @@ $black: #111;
         }
 
         &__title{
+
+            opacity: 0;
+
             text-align: center;
             text-transform: uppercase;
             text-shadow: 0 0 4px var(--bg-dark);

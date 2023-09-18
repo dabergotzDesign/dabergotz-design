@@ -10,32 +10,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Poppins:wght@200;300;400;700&family=Space+Mono&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
+
     <title>dabergotzDesign - About</title>
 
+    <script src="../js/splash.js" defer></script>
     <script src="../js/sidebar.js" defer></script>
+    
 </head>
 <body class="page__about">
     
     <aside class="sidebar">
 
         <h1 class="sidebar__title">
-            <a href="../index.html">
+            <a href="javascript: delay('../index.html')">
                 <img src="../img/logo_site_transparent.png" height="154px" width="270px" alt="dabergotzDesign logo">
             </a>
         </h1>    
         <nav class="sidebar__nav">
             <ul>
-                <li class="sidebar__nav-item"><a href="../index.html">Home</a></li>
-                <li class="sidebar__nav-item"><a href="./portfolio.html">Portfolio</a></li>
+                <li class="sidebar__nav-item"><a href="javascript: delay('../index.html')">Home</a></li>
+                <li class="sidebar__nav-item"><a href="javascript: delay('./portfolio.html')">Portfolio</a></li>
                 <li class="sidebar__nav-item"><a href="#">About</a></li>
-                <li class="sidebar__nav-item"><a href="./blog.html">Blog</a></li>
-                <li class="sidebar__nav-item"><a href="./contact.html">Contact</a></li>
+                <li class="sidebar__nav-item"><a href="javascript: delay('./blog.html')">Blog</a></li>
+                <li class="sidebar__nav-item"><a href="javascript: delay('./contact.html')">Contact</a></li>
             </ul>
 
             <div class="sidebar__controls">
-                <button class="fa-solid fa-chevron-left sidebar__controls-close"></button>
-                <button class="fa-solid fa-chevron-right sidebar__controls-open hidden"></button>
+                <!-- <button class="fa-solid fa-chevron-left sidebar__controls-close"></button>
+                <button class="fa-solid fa-chevron-right sidebar__controls-open hidden"></button> -->
+                <button class="fa-solid fa-bars sidebar__controls-button"></button>
             </div>
 
         </nav>
@@ -59,17 +67,15 @@
                         <br>
                         A simple game that I had to manage together with a college who was also involved in it. 
                         With this project and some game projects afterwards, I've grown on coding  for game mechanics and getting more more save with manganing code and development.
+                        After the graduation of <em>School for Games</em> the following months got me to finishing up my final game project and 
+                        try to get into a job position as Game Developer - Level Design to be precise.
                         </p>
 
                         <p class="about__description">
-                        After the graduation of <em>School for Games</em> the following months got to finishing up my final game project and try to get into Game Development in job.
-                        <br>
                         The non-success on that part got me slowly into Web Development.
                         With the help, or more precisely a kick in the butt, of a company where I got some help
                         to convert to Web Development.
-                        <br>
                         This process led me to two different educations on Web Development.
-    
                         </p>
                     </p>
                 </section>
@@ -123,6 +129,13 @@
             </div>
         </div>
 
-    </main>    
+    </main>  
+    
+    <!-- Splash Screen Overlay -->
+    <div class="splash">
+        <div class="spinner"></div>
+        <img src="../img/dddesign_logo_transparent.png" height="2048px" width="2048px" alt="logo">
+    </div>
+    
 </body>
 </html>

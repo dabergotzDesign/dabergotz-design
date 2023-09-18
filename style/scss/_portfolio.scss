@@ -6,6 +6,7 @@ $accordion-text: rgb(238, 232, 179);
     font-family: var(--font-hepta);
     padding: .25rem 1.5rem;
     margin-bottom: 1rem;
+    line-height: 2.5vh;
 }
 
 
@@ -17,7 +18,7 @@ $accordion-text: rgb(238, 232, 179);
                 &__main{
 
                     overflow-x: hidden;
-
+                    
                     //creates space after portfolio, helps the parallax
                     .space{
                         margin: 0 10%;
@@ -32,15 +33,16 @@ $accordion-text: rgb(238, 232, 179);
                 }
 
                 &__container{
-                    background-color: var(--bg-dark);
-                    border: thin solid var(--text-light);
-                    width: 60%;
+                    background-color: var(--bg-dark-transparent);
+                    //border: thin solid var(--text-light);
+                    width: 70%;
 
                     margin: auto;
                     margin-left: 20%;
 
                     display: flex;
                     flex-flow: column nowrap;
+                    gap: 6rem;
 
                     @media screen and (max-width: 800px) {
 
@@ -56,19 +58,20 @@ $accordion-text: rgb(238, 232, 179);
                 &__content{
                        
                     background-attachment: fixed;
-                    background-position: center;
+                    background-position: center center;
                     background-repeat: no-repeat;
                     background-size: contain;
 
-                    height: 540px;
-                    width: 720px;
+                    height: 640px;
+                    width: 960px;
 
                     max-width: 100%;
                     max-height: 100%;
 
                     display: block;
                     margin: auto;
-                    
+                    width: 80%;
+                                        
 
                     transition: all .8s ease;
                     position: relative;
@@ -108,7 +111,7 @@ $accordion-text: rgb(238, 232, 179);
                         }
 
                         &__port-2{
-                            background-image: url("../../img/portfolio/genshin_teams_light-version.png");
+                            background-image: url("../../img/portfolio/genshin_teams_light_size.jpg");
                         }
 
                         &__port-3{
@@ -116,12 +119,13 @@ $accordion-text: rgb(238, 232, 179);
                         }
 
                         &__port-4{
-                            background-image: url("../../img/portfolio/valar-morghulis.png");
+                            background-image: url("../../img/portfolio/to-do-lists.png");
                         }
                     }
                         
 
                     .image{
+                        
                         &__text{
                             display: flex;
                             flex-flow: column nowrap;
@@ -139,41 +143,14 @@ $accordion-text: rgb(238, 232, 179);
                             background-color: var(--bg-dark-transparent);
                             border: thin solid var(--text-light);
                             transition: height 0.5s ease;
-
-                            @media screen and (max-width: 480px) {
-                                :hover{
-                                    @media screen and (max-width: 480px) {
-                                        height: 320px;
-                                        overflow-y: scroll;
-                                    }
-                                }
-                            }
-
-                            /* .portfolio__radio{
-
-                                display: none;
-
-                                width: 100%;
-                                text-align: center;
-                                z-index: 5;
-
-                                @media screen and (max-width: 800px) {
-                                    display: block;
-                                 }
-
-                                .button__icon{
-                                    padding: 0.25rem;
-                                    margin-bottom: 0.25rem;
-                                    border: thin solid var(--bg-light);
-                                }
-                                
-                            }
                             
-                            .radio{
-                                display: none;
-                            } */
+                        }
 
-                            
+                        &__data{
+                            p{
+                                font-family: var(--font-hepta);
+                                padding: 4px 0;
+                            }
                         }
 
                         &__title{
@@ -209,20 +186,25 @@ $accordion-text: rgb(238, 232, 179);
                     font-family: var(--font-space-mono);
                     letter-spacing: 3px;
                     color: var(--text-light);
+                    border-radius: .25rem;
 
                     display: block;
-                    margin: auto 2rem;
-                    padding: .5rem 1.5rem;
+                    padding: .5rem;
+                    margin-top: 0.5rem;
                     width: fit-content;
                     transition: all 0.3s ease;
 
-                    &:hover{
-                        border: thin solid var(--text-light);
-                        border-radius: .25rem;
+                    @media screen and (max-width: 500px) {
+                        outline: thin solid var(--bg-light);
+                    }
+
+                    &:hover,
+                    &:focus{
+                        outline: thin solid var(--text-light);
                     }
 
                     &:active{
-                        box-shadow: -1px -1px 4px inset;
+                        box-shadow: -1px -1px 4px inset var(--bg-light);
                     }
                 }
 
@@ -286,7 +268,9 @@ $accordion-text: rgb(238, 232, 179);
                         }
 
                         &.piece-4{
-                            background-image: url("../../img/portfolio/valar-morghulis.png");
+                            background-image: url("../../img/portfolio/to-do-lists.png");
+                            color: var(--text-light);
+                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
                         }
                         
 
@@ -312,6 +296,7 @@ $accordion-text: rgb(238, 232, 179);
                             &__description{
                                 @include panel-text;
                                 color: var(--text-light);
+                                font-size: 0.9rem;
 
                                 span{
                                     padding-left: 0.5rem;
