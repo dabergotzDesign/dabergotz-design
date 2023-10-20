@@ -56,6 +56,11 @@
         height: calc(2048px / 4);
         width: calc(2048px / 4);
         object-fit: cover;
+
+        @media screen and (max-width: 500px) {
+            height: calc(2048px / 6);
+            width: calc(2048px / 6);
+        }
     }
 }
 
