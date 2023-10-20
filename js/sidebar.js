@@ -1,5 +1,4 @@
-//let open_menu = document.querySelector(".sidebar__controls-open");
-//let close_menu = document.querySelector(".sidebar__controls-close");
+///!!! DEPRECATED !!!/// (but keep it, cause you never know)
 
 const sidebar = document.querySelector(".sidebar");
 const sidebar_title = document.querySelector(".sidebar__title");

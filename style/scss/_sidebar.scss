@@ -9,9 +9,8 @@ aside{
     top: 0;
     z-index: 10;
 
-    //border-right: 2px solid var(--text-light);
     height: 100%;
-    //width: 320px;
+   
 
     background-image: linear-gradient(to right, var(--bg-dark), var(--bg-dark-transparent), transparent);
 
@@ -19,12 +18,17 @@ aside{
 
     @media screen  and (max-width: 900px){
         background-color: var(--bg-dark-transparent);
+        width: fit-content;
     }
 
+    //sidebar logo
     img{
+        height: 154px;
+        width: 270px;
 
-        height: 124px;
-        width: 240px;
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
     }
 
 
@@ -32,6 +36,10 @@ aside{
         
         &__nav{
             position: relative;
+
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
                 
             &-item{
                 list-style: none;
@@ -76,6 +84,42 @@ aside{
                     }
 
                 }
+            }
+
+
+            //NAVIGATION MOBILE VERSION
+            &-mobile{
+                display: none;
+                width: 10vw;
+                position: relative;
+                
+                @media screen and (max-width: 900px) {
+                    display: block;
+                }
+
+                ul{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    gap: 30px;
+                    transform: translateY(50%);
+                }
+                
+                .mobile__nav-item{
+                    list-style: none;
+
+                    padding: 0.5rem;
+
+                    a{
+                        color: var(--bg-light);
+
+                        i{
+                            font-size: 1.5rem;
+                            text-align: center;
+                        }
+                    }
+                }
+
             }
         }
 

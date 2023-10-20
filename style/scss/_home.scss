@@ -7,6 +7,10 @@ $card-color: rgba(255,255,255,0.2);
 
     overflow-x: hidden;
 
+    @media screen and (max-width: 500px) {
+        overflow: hidden;
+    }
+
     .home{
 
         &__main{
@@ -76,7 +80,161 @@ $card-color: rgba(255,255,255,0.2);
                         margin: 2rem;
                         animation: divider 2s 2s forwards;                        
                     }
-                    
+
+                    //SLIDE
+                    .slider{
+
+                        &__wrapper{
+                            position: relative;
+                            
+
+                            .dots{
+                                display: block;
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                margin: auto;
+                                text-align: center;
+
+                                @media screen and (max-width: 900px) {
+                                    bottom: -10%;
+                                }
+
+                                .dot{
+                                    height: 16px;
+                                    width: 16px;
+                                    background-color: var(--bg-dark);
+                                    outline: thin solid var(--bg-lightgrey);
+
+                                    margin: 0 2px;
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                    transition: background-color 0.3s ease;
+
+                                    @media screen and (max-width: 500px) {
+                                        height: 12px;
+                                        width: 12px;
+                                    }
+
+                                    &.active-d{
+                                        background-color: var(--bg-lightgrey);
+                                    }
+                                }
+                            }
+                        }
+
+                        &__container{
+                            max-width: 50vw;
+                            height: 25vh;
+                                                                                                        
+                            position: relative;
+                            margin: auto;
+                            overflow: hidden;
+
+                            @media screen and (max-width: 500px) {
+                                height: 30vh;
+                                max-width: 100%;
+                            }
+                                                                                                     
+
+                            .slide{
+                                &__home,
+                                &__portfolio,
+                                &__about,
+                                &__blog,
+                                &__contact{
+
+                                    display: inline-block;
+                                    transform: translate(200%);
+                                    
+                                    position: relative;
+                                    margin: auto;
+                                    padding: 1rem;
+                                    padding-left: 2rem;
+                                    
+                                    max-width: 100%;
+                                    width: 80vw;
+                                    z-index: 3;
+
+                                    transition: transform 0.3s ease;
+
+                                    @media screen and (max-width: 500px) {
+                                        max-width: fit-content;
+                                    }
+
+                                    &:hover,
+                                    &:focus{
+                                        background-color: rgba(255,255,255,0.2);
+                                        border-radius: 0.5rem;
+                                    }
+
+                                    p{
+                                        color: var(--text-light);
+                                        font-family: var(--font-hepta);
+                                        font-size: 1.1rem;
+                                        text-shadow: 1px 1px 3px var(--bg-dark);
+                                        line-height: 1.8rem;
+                                        padding: 0.5rem;
+
+                                        @media screen and (max-width: 900px) {
+                                            font-size: 1.4rem;
+                                        }
+
+                                        @media screen and (max-width: 500px) {
+                                            font-size: 0.9rem;
+                                            hyphens: auto;
+                                        }
+
+                                        a{
+                                            color: var(--text-link);
+                                        }
+                                    }
+
+                                    i{
+                                        position: absolute;
+                                        color: var(--text-light);
+                                        font-size: 8rem;
+                                        z-index: 1;
+                                        opacity: 0.3;
+                                    }
+
+                                    .slide__link{
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        
+                                        //background-color: cyan; //check for placement
+                                    }
+
+                                    &.active{
+                                        transform: translate(0);
+                                    }
+
+                                    &.out{
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            h3{
+                                color: var(--text-light);
+                                font-family: var(--font-space-mono);
+                                font-size: 2.5rem;
+                                font-weight: 200;
+                                text-transform: uppercase;
+
+                                @media screen and (max-width: 500px) {
+                                    font-size: 1.2rem;
+                                }
+                            }
+
+                            
+                        }
+                    }
+
+                    //OLD                    
                     .article__container{
 
                         display: flex;
@@ -258,7 +416,7 @@ $card-color: rgba(255,255,255,0.2);
                     }
 
                     @media screen and (max-width: 500px) {
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                     }
 
                     

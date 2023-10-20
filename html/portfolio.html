@@ -20,7 +20,8 @@
 
     <script src="../js/splash.js" defer></script>
     <script src="../js/portfolio.js" defer></script>
-    <script src="../js/sidebar.js" defer></script>
+    <!-- <script src="../js/sidebar.js" defer></script> -->
+    
 </head>
 <body class="page__portfolio">
     
@@ -30,23 +31,30 @@
             <a href="javascript: delay('../index.html')">
                 <img src="../img/logo_site_transparent.png" height="154px" width="270px" alt="dabergotzDesign logo">
             </a>
-        </h1>    
-        <nav class="sidebar__nav">
-            <ul>
-                <li class="sidebar__nav-item"><a href="javascript: delay('../index.html')">Home</a></li>
-            <li class="sidebar__nav-item"><a href="#">Portfolio</a></li>
-            <li class="sidebar__nav-item"><a href="javascript: delay('./about.html')">About</a></li>
-            <li class="sidebar__nav-item"><a href="javascript: delay('./blog.html')">Blog</a></li>
-            <li class="sidebar__nav-item"><a href="javascript: delay('./contact.html')">Contact</a></li>
-            </ul>
+        </h1> 
 
-            <div class="sidebar__controls">
-                <!-- <button class="fa-solid fa-chevron-left sidebar__controls-close"></button>
-                <button class="fa-solid fa-chevron-right sidebar__controls-open hidden"></button> -->
-                <button class="fa-solid fa-bars sidebar__controls-button"></button>
-            </div>
+        <div class="navigation">
+            <nav class="sidebar__nav">
+                <ul>
+                    <li class="sidebar__nav-item"><a href="javascript: delay('../index.html')">Home</a></li>
+                    <li class="sidebar__nav-item"><a href="#">Portfolio</a></li>
+                    <li class="sidebar__nav-item"><a href="javascript: delay('./about.html')">About</a></li>
+                    <li class="sidebar__nav-item"><a href="javascript: delay('./blog.html')">Blog</a></li>
+                    <li class="sidebar__nav-item"><a href="javascript: delay('./contact.html')" disabled>Contact</a></li>
+                </ul>            
+            </nav>
+    
+            <nav class="sidebar__nav-mobile">
+                <ul>
+                    <li class="mobile__nav-item"><a href="javascript: delay('../index.html')"><i class="fa-solid fa-house"></i></a></li>
+                    <li class="mobile__nav-item"><a href="#"><i class="fa-solid fa-book"></i></a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./about.html')"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./blog.html')"><i class="fa-solid fa-pen"></i></a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./contact.html')"><i class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </nav>
+        </div>
 
-        </nav>
         </aside>
 
         <main class="portfolio__main">
@@ -192,115 +200,129 @@
                 </div>
             </div>
 
-            <div class="portfolio__container-mobile">
 
-                <!-- Mobile portfolio piece 1 -->
-                <button class="accordion piece-1">Weeb Shop</button>
-                <div class="panel">
-                    <article class="accordion__article">
-                        <p class="accordion__description">
+            <!-- PORTFOLIO MOBILE VERSION -->
+            <div class="portfolio__wrapper-mobile">
 
-                            <h2 class="accordion__title">Weeb Shop</h2>
-                            <hr>                            
-                            <p class="accordion__description">
-                                <strong>When?</strong><span class="accordion__description-time">2023</span>
-                                <br>
-                                <strong>What used?</strong><span>PHP, MySQL, Sass</span>
-                            </p>
-                            <p class="accordion__description">
-                                This site is a PHP project which was one of the final projects for the FiGD(Institute for education, development and design) <br>
-                                The idea of the project was to build a little shop where I can work with a MySQL Library of dummy users.
-                                Since the site is in PHP I provide a link to my Github to fork/download the project.
-                            </p>
-                            <p class="accordion__description">
-                                This demo is in javascript and will use PHP in the full version. Because of that I decided to present it
-                                only as a download/forkable version on my Github.
-                            </p>
-                        </p>
-    
-                        <a class="portfolio__link" href="https://github.com/dabergotzDesign/weeb_shop" target="_blank">visit</a>
-                    </article>
+                <div class="progress__bar">
+                    <div class="progress" id="bar"></div>
                 </div>
 
-                <!-- Mobile portfolio piece 2 -->
-                <button class="accordion piece-2">Genshin-Teams App (Light Version)</button>
-                <div class="panel">
-                    <article class="accordion__article">
-                            
-                        <!-- <p class="accordion__description"> -->
+                <div class="portfolio__container-mobile scrollX">
 
-                            <h2 class="accordion__title">Genshin-Teams App (Light Version)</h2>
-                            <hr>
-                                                        
-                            <p class="accordion__description">
-                                <strong>When?</strong><span class="accordion__description-time">2023</span>
-                                <br>
-                                <strong>What used?</strong><span>Javascript, Sass</span>
-                                                       
+
+                    <section class="portfolio__piece-1">
+                        <h1>Weeb Shop</h1>
+                        <article class="col">
+                            <img src="../img/portfolio/weeb_shop.png" width="1920px" height="1080px" alt="weeb shop project">
+                            
+                            <p>
+                                <hr>
+                                <div class="portfolio__data">
+                                    <p>
+                                        <strong>When?</strong><span>2023</span>
+                                        <br>
+                                        <strong>What used?</strong><span>PHP, MySQL, Sass</span>
+                                    </p>
+                                </div>                         
+                                <p>
+                                    This site is a PHP project which was one of the final projects for the FiGD (Institute for education, development and design) <br>
+                                    The idea of the project was to build a little shop where I can work with a MySQL Library of dummy users.
+                                    Since the site is in PHP I provide a link to my Github to fork/download the project.
+                                </p>
+                            </p>
+                            <a class="link__mobile" href="https://github.com/dabergotzDesign/weeb_shop" target="_blank">Github</a>
+                        </article>
+                    </section>
+
+                    <section class="portfolio__piece-2">
+                        <h1>Genshin Teams (Light Version)</h1>
+                        <article class="col">
+                            <img src="../img/portfolio/genshin_teams_light_size.jpg" width="1920px" height="1080px" alt="weeb shop project">
+                          
+                            <p>
+                                <hr>
+                            <div class="portfolio__data">
+                                <p>
+                                    <strong>When?</strong><span class="image__description-time">2023</span>
+                                </p>
                                 
-                            <p class="accordion__description">
+                                <p>
+                                    <strong>What used?</strong><span>Javascript, SCSS</span>
+                                </p>
+                            </div>
+    
+                            <p>
                                 An app that works with the fan-made Genshin API based on the game 'Genshin Impact'. <br>
                                 This version of my app was to test the API and create Teams. Light version says that it is just a demo
                                 of the real version that I like to made out of this one.
                             </p>
-
-                            <p class="accordion__description">
+                            <p>
                                 This demo is in javascript and will use PHP in the full version. Because of that I decided to present it
                                 only as a download/forkable version on my Github.
                             </p>
-                        </p>
-    
-                        <a class="portfolio__link" href="https://github.com/dabergotzDesign/weeb_shop" target="_blank">visit</a>
-                    </article>
-                </div>
-
-                <!-- Mobile portfolio piece 3 -->
-                <button class="accordion piece-3">Wall of Wishes</button>
-                <div class="panel">
-                    <article class="accordion__article">
-
-                        <h2 class="accordion__title">Wall of Wishes</h2>
-                            <hr>
-                            
-                            <p class="accordion__description">
-                                <strong>What used?</strong><span>React</span>
-                                <br>
-                                <strong>When?</strong><span class="accordion__description-time">2021</span>
                             </p>
+                                               
+                        <a class="link__mobile" href="https://github.com/dabergotzDesign/Genshin-Teams----light-" target="_blank">Github</a>
+
+                        </article>
+                    </section>
+
+                    <section class="portfolio__piece-3">
+                        <h1>Wall of Wishes</h1>
+                        <article class="col">
+                            <img src="../img/portfolio/WallOfWishes_site.jpg" width="1920px" height="1080px" alt="weeb shop project">
                             
-                            <p class="accordion__description">                            
+                            <div class="image__data">
+                                <p>
+                                    <strong>When?</strong><span>2021</span>
+                                </p>
+                                
+                                <p>
+                                    <strong>What used?</strong><span>React</span>
+                                </p>
+                            </div>
+    
+                            <p>
                                 Creating a game feature within a React App.
-                                Working with React & Javascript to showcase an application with many different features. 
+                                Working with React & Javascript to showcase an application with many different features.
                             </p>
-    
-                        <a class="portfolio__link" href="https://github.com/dabergotzDesign/weeb_shop" target="_blank">visit</a>
-                    </article>
-                </div>
+                        
+                        <div class="link__mobile">
+                            <a href="https://dabergotzdesign.github.io/wallofwishes/" target="_blank">visit</a>
+                            <p>|</p>
+                            <a href="https://github.com/dabergotzDesign/wallofwishes" target="_blank">Github</a>
+                        </div>
 
-                <!-- Mobile portfolio piece 4 -->
-                <button class="accordion piece-4"></button> <!-- name in the image -->
-                <div class="panel">
-                    <article class="accordion__article">
+                        </article>
+                    </section>
 
-                        <h2 class="accordion__title">To Do Lists - Angular, React, Vue</h2>
-                            <hr>
-                            
-                        <p class="accordion__description">
-                            <strong>When?</strong><span class="accordion__description-time">2021</span>
-                            <br>
-                             <strong>What used?</strong><span>Javascript, SCSS, Angular, React, Vue</span>
-                            
-
-                            <p class="accordion__description">
+                    <section class="portfolio__piece-4">
+                        <h1>To Do Lists - Angular, React, Vue</h1>
+                        <article class="col">
+                            <img src="../img/portfolio/to-do-lists.png" width="1920px" height="1080px" alt="weeb shop project">
+                                                        
+                                <div class="image__data">
+                                    <p>
+                                        <strong>When?</strong><span>2021</span>
+                                    </p>
+                                    
+                                    <p>
+                                        <strong>What used?</strong><span>Javascript, SCSS, Angular, React, Vue</span>
+                                    </p>
+                                </div>
+                                    
+                            <p>
                                 The same app, but in three different frameworks. <br>
                                 It started out with the tutorial in angular and ended up with the idea on doing the same app (a to do app) again.
                                 The first to-do app came from an Angular tutorial, the other two were made from scratch (React, Vue).
                             </p>
-                            
-                        </p>
-    
-                        <a class="portfolio__link" href="https://github.com/dabergotzDesign/weeb_shop" target="_blank">visit</a>
-                    </article>
+                            <a class="link__mobile" href="https://github.com/dabergotzDesign/3-to-do-lists" target="_blank">Github</a>
+
+                        </article>
+                    </section>                   
+
+
                 </div>
 
             </div>

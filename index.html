@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
 
     <script src="./js/splash.js" defer></script>
-    <script src="./js/sidebar.js" defer></script>
+    <!-- <script src="./js/sidebar.js" defer></script> -->
     <script src="./js/fade.js" defer></script>
     
     <title>dabergotzDesign - Home</title>
@@ -32,22 +32,27 @@
             </a>
         </h1>
 
-        <nav class="sidebar__nav">
-            <ul>
-                <li class="sidebar__nav-item"><a href="#" disabled>Home</a></li>
-            <li class="sidebar__nav-item"><a href="javascript: delay('./html/portfolio.html')">Portfolio</a></li>
-            <li class="sidebar__nav-item"><a href="javascript: delay('./html/about.html')">About</a></li>
-            <li class="sidebar__nav-item"><a href="javascript: delay('./html/blog.html')">Blog</a></li>
-            <li class="sidebar__nav-item"><a href="javascript: delay('./html/contact.html')">Contact</a></li>
-            </ul>
-
-            <div class="sidebar__controls">
-                <!-- <button class="fa-solid fa-chevron-left sidebar__controls-close"></button>
-                <button class="fa-solid fa-chevron-right sidebar__controls-open hidden"></button> -->
-                <button class="fa-solid fa-bars sidebar__controls-button"></button>
-            </div>
-            
-        </nav>
+        <div class="navigation">
+            <nav class="sidebar__nav">
+                <ul>
+                    <li class="sidebar__nav-item"><a href="#" disabled>Home</a></li>
+                    <li class="sidebar__nav-item"><a href="javascript: delay('./html/portfolio.html')">Portfolio</a></li>
+                    <li class="sidebar__nav-item"><a href="javascript: delay('./html/about.html')">About</a></li>
+                    <li class="sidebar__nav-item"><a href="javascript: delay('./html/blog.html')">Blog</a></li>
+                    <li class="sidebar__nav-item"><a href="javascript: delay('./html/contact.html')">Contact</a></li>
+                </ul>            
+            </nav>
+    
+            <nav class="sidebar__nav-mobile">
+                <ul>
+                    <li class="mobile__nav-item"><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./html/portfolio.html')"><i class="fa-solid fa-book"></i></a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./html/about.html')"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./html/blog.html')"><i class="fa-solid fa-pen"></i></a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./html/contact.html')"><i class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </nav>
+        </div>
 
     </aside>
     
@@ -65,51 +70,65 @@
 
             <hr class="divider">
 
-            <div class="article__container">
+                        
+            <div class="slider__wrapper">          
 
-                <article class="article__welcome">
+            <div class="slider__container">
+
+                <div class="slide slide__home active">
+                    <i class="fa-solid fa-house"></i>
                     <h3>Home</h3>
                     <p>
                         Meet Dennis Dabergotz a Web Developer at the start of his career.
+                        <br>
                         On this website you'll find out more about me and my work.
                         <p>Have fun and take a look.</p>                        
                     </p>
-                    <i class="fa-solid fa-house card__icon"></i>
-                </article>
+                </div>
 
-                <article class="article__portfolio fade-in">
+                <div class="slide slide__portfolio">
+                    <i class="fa-solid fa-book"></i>
                     <h3>Portfolio</h3>
                     <p>Here's a selection of works I've during my time to become a Web Developer <a href="./html/portfolio.html">check it out</a></p>
-                    <i class="fa-solid fa-book card__icon"></i>
 
-                    <a href="./html/portfolio.html" class="article__link"></a>
-                </article>
+                    <a href="./html/portfolio.html" class="slide__link"></a>
+                </div>
 
-                <article class="article__about fade-in">
+                <div class="slide slide__about">
+                    <i class="fa-solid fa-user"></i>
                     <h3>About</h3>
                     <p>If you would like to know me more in detailed way, you are welcome to visit the About page</p>
-                    <i class="fa-solid fa-user card__icon"></i>
-                    
-                    <a href="./html/about.html" class="article__link"></a>
-                </article>
 
-                <article class="article__blog fade-in">
+                    <a href="./html/about.html" class="slide__link"></a>
+                </div>
+
+                <div class="slide slide__blog">
+                    <i class="fa-solid fa-pen"></i>
                     <h3>Blog</h3>
                     <p>News, Projects, Site updates and more...</p>
-                    <i class="fa-solid fa-pen card__icon"></i>
 
-                    <a href="./html/blog.html" class="article__link"></a>
-                </article>
+                    <a href="./html/blog.html" class="slide__link"></a>
+                </div>
 
-                <article class="article__contact fade-in">
+                <div class="slide slide__contact">
+                    <i class="fa-solid fa-envelope"></i>
                     <h3>Contact</h3>
                     <p>Get in touch with me</p>
-                    <i class="fa-solid fa-envelope card__icon"></i>
-                    
-                    <a href="./html/contact.html" class="article__link"></a>
-                </article>
 
+                    <a href="./html/contact.html" class="slide__link"></a>
+                </div>
+                
             </div>
+
+            <div class="dots">
+                <span class="dot active-d"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+        </div>
 
         </section>
     </main>

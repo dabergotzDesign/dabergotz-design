@@ -130,6 +130,7 @@
                 padding: 1rem;
                 width: 50%;
 
+                font-size: clamp(1rem, 2vw, 1.2rem);
                 line-height: 24px;
                 hyphens: auto;
                 text-align: justify;
@@ -159,7 +160,7 @@
         
                     &__description{
                         font-family: var(--font-hepta);                        
-                        padding: .5rem;
+                        padding: clamp(16px, 5vw, 32px);
 
                         @media screen and (max-width: 500px) {
                             font-size: 0.9rem;

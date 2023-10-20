@@ -21,7 +21,7 @@
     <script src="../js/splash.js" defer></script>
     <script src="../js/smooth-scroll.js" defer></script>
     <script src="../js/blog.js" defer></script>
-    <script src="../js/sidebar.js" defer></script>
+    <!-- <script src="../js/sidebar.js" defer></script> -->
 </head>
 <body class="page__blog">
   <aside class="sidebar">
@@ -32,22 +32,27 @@
             </a>
         </h1>
 
-        <nav class="sidebar__nav">
-            <ul>
-              <li class="sidebar__nav-item"><a href="javascript: delay('../index.html')">Home</a></li>
-              <li class="sidebar__nav-item"><a href="javascript: delay('./portfolio.html')">Portfolio</a></li>
-              <li class="sidebar__nav-item"><a href="javascript: delay('./about.html')">About</a></li>
-              <li class="sidebar__nav-item"><a href="#">Blog</a></li>
-              <li class="sidebar__nav-item"><a href="javascript: delay('./contact.html')">Contact</a></li>
-            </ul>
-
-            <div class="sidebar__controls">
-              <!-- <button class="fa-solid fa-chevron-left sidebar__controls-close"></button>
-              <button class="fa-solid fa-chevron-right sidebar__controls-open hidden"></button> -->
-              <button class="fa-solid fa-bars sidebar__controls-button"></button>
-          </div>
-
-        </nav>
+        <div class="navigation">
+          <nav class="sidebar__nav">
+              <ul>
+                  <li class="sidebar__nav-item"><a href="javascript: delay('../index.html')">Home</a></li>
+                  <li class="sidebar__nav-item"><a href="javascript: delay('./portfolio.html')">Portfolio</a></li>
+                  <li class="sidebar__nav-item"><a href="javascript: delay('./about.html')">About</a></li>
+                  <li class="sidebar__nav-item"><a href="#" disabled>Blog</a></li>
+                  <li class="sidebar__nav-item"><a href="javascript: delay('./contact.html')">Contact</a></li>
+              </ul>            
+          </nav>
+  
+          <nav class="sidebar__nav-mobile">
+              <ul>
+                  <li class="mobile__nav-item"><a href="javascript: delay('../index.html')"><i class="fa-solid fa-house"></i></a></li>
+                  <li class="mobile__nav-item"><a href="javascript: delay('./portfolio.html')"><i class="fa-solid fa-book"></i></a></li>
+                  <li class="mobile__nav-item"><a href="javascript: delay('./about.html')"><i class="fa-solid fa-user"></i></a></li>
+                  <li class="mobile__nav-item"><a href="#" disabled><i class="fa-solid fa-pen"></i></a></li>
+                  <li class="mobile__nav-item"><a href="javascript: delay('./contact.html')"><i class="fa-solid fa-envelope"></i></a></li>
+              </ul>
+          </nav>
+      </div>
 
         </aside>
         
