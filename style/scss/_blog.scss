@@ -616,7 +616,7 @@ body{
                         }
 
                         h4{
-                            font-family: var(--font-noto);
+                            font-family: var(--font-space);
                             font-weight: 400;
                             font-size: var(--size-24);
                             letter-spacing: 3px;
@@ -634,7 +634,7 @@ body{
                         }
                         
                         p{
-                            font-family: var(--font-space);
+                            font-family: var(--font-noto);
                             font-size: 20px;
                             line-height: 28px;
                             letter-spacing: 1.5%;
@@ -654,6 +654,11 @@ body{
                                 padding: var(--size-16) var(--size-4);
                                 text-wrap: wrap;
                                 line-height: 140%;
+                            }
+
+                            @media screen and (max-width: $media-mobile) {
+                                font-size: 0.8rem;
+                                padding: 1rem 0.25rem;
                             }
                             
                             a{

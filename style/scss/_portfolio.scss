@@ -750,11 +750,12 @@ $media-mobile: 450px;
                 }
 
                 &__wrapper-mobile{
-                    display: none;
+                    display: block;
+                    
                     overflow-x: scroll;
                     position: relative; 
                                                           
-                    @media screen and (max-width: 800px) {
+                    @media screen and (max-width: $media-tablet) {
                         display: block;
                         margin-left: 5%;
                     }
@@ -790,28 +791,13 @@ $media-mobile: 450px;
                                                             
                     margin-left: 10%;
 
-                    @media screen and (max-width: 800px){
+                    @media screen and (max-width: $media-tablet){
                         display: flex;
                         align-items: flex-start;
                         justify-content: space-evenly;
                     }
 
-                    
-
-                    /* svg{
-                        position: absolute;
-                        top: 0;
-                        left: 3%;
-                        width: 50vw;
-
-                        scale: 1.2;
-
-                        .mask{
-                            width: 0;
-                        }
-                    } */
-
-                    
+                                        
                     section{
                         width: 100vw;
                         height: 80%;
@@ -911,7 +897,7 @@ $media-mobile: 450px;
                         }
                     }
                     
-                    .accordion
+                /*     .accordion
                     {
                         background-color: var(--bg-dark);
                         background-position: center;
@@ -996,8 +982,12 @@ $media-mobile: 450px;
                                 }
                             }
                         }
-                    }
+                    } 
                 }
+
+                */
+
+                
 
                 
                 img{
