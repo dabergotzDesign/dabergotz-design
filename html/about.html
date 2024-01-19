@@ -45,13 +45,14 @@
     
             <nav class="sidebar__nav-mobile">
                 <ul>
-                    <li class="mobile__nav-item"><a href="javascript: delay('../index.html')"><i class="fa-solid fa-house"></i></a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./portfolio.html')"><i class="fa-solid fa-book"></i></a></li>
-                    <li class="mobile__nav-item"><a href="#" disabled><i class="fa-solid fa-user"></i></a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./blog.html')"><i class="fa-solid fa-pen"></i></a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./contact.html')"><i class="fa-solid fa-envelope"></i></a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('../index.html')"><i class="fa-solid fa-house"></i> Home </a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./portfolio.html')"><i class="fa-solid fa-book"></i> Portfolio </a></li>
+                    <li class="mobile__nav-item"><a href="#" disabled><i class="fa-solid fa-user"></i> About </a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./blog.html')"><i class="fa-solid fa-pen"></i> Blog </a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./contact.html')"><i class="fa-solid fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
+
         </div>
 
         </aside>
@@ -60,8 +61,14 @@
         <h1 class="page__title">About</h1>
 
         <div class="about__container">
+
             <div class="about__intro">
                 <section class="about__text">
+                    <div class="about__image">                    
+                        <img class="about__image-portrait" src="../img/ddabergotz.png" width="1720px" height="1956px" alt="dabergotzDesign profile image">                  
+                    </div>
+                    
+                    <div class="about__intro-text">
                     <h3 class="about__title">May I introduce myself</h3>
                     <p class="about__description">
                         Hi everyone, my name is Dennis Dabergotz a Web Developer with interest in design, games and technology.
@@ -85,23 +92,24 @@
                         This process led me to two different educations on Web Development.
                         </p>
                     </p>
-                </section>
-                <div class="about__image">
-                    <figure>
-                        <img class="about__image-portrait" src="../img/ddabergotz.png" width="1720px" height="1956px" alt="dabergotzDesign profile image">
-                    </figure>
-                    <!-- <div class="about__cv">
-                        <a href="https://dabergotzdesign.github.io/cv-vue/" target="_blank">to my CV</a>
-                    </div> -->
                 </div>
+
+                </section>
             </div>
+
             <div class="about__career">
-                <section class="about__skill">
+               <!--  <section class="about__skill"> -->
                     <h3 class="about__title">Development Career</h3>
                     <ul class="about__career-tree">
-                        <li><span>10/2013 - 10/2015</span>Education in Game Design - School for Games</li>
-                        <li><span>03/2019 - 03/2020</span>Education Web Development - Digital Career Institute (DCI)</li>
-                        <li><span>11/2022 - 06/2023</span>further Education Web Development - Fachinstitut für Informatik & Grafikdesign (FiGD)</li>
+                        <li>
+                            <p class="career__date">10/2013 - 10/2015</p><p>Education in Game Design - <br> School for Games</p>
+                        </li>
+                        <li>
+                            <p class="career__date">03/2019 - 03/2020</p><p>Education in Web Development - <br> Digital Career Institute (DCI)</p>
+                        </li>
+                        <li>
+                            <p class="career__date">11/2022 - 06/2023</p><p>further Education in Web Development - <br> Fachinstitut für Informatik & Grafikdesign (FiGD)</p>
+                        </li>
                     </ul>
 
                     <h3 class="about__title">Web Development Skills</h3>
@@ -132,8 +140,9 @@
                             <li>Unity 3D</li>
                         </ol>
                     </ul>
-                </section>
+               <!--  </section> -->
             </div>
+            
         </div>
 
     </main>  

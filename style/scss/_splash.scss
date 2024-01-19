@@ -4,10 +4,13 @@
     left: 0;
     overflow: hidden;
 
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 
-    height: 100vh;
+    padding-top: 20%;
+
+    height: 200vh;
     width: 100%;
     z-index: 999;
 
@@ -26,7 +29,7 @@
     .spinner{
         position: relative;
         margin: 0 auto;
-
+       
         height: 90px;
         width: 90px;
 

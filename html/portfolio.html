@@ -46,13 +46,14 @@
     
             <nav class="sidebar__nav-mobile">
                 <ul>
-                    <li class="mobile__nav-item"><a href="javascript: delay('../index.html')"><i class="fa-solid fa-house"></i></a></li>
-                    <li class="mobile__nav-item"><a href="#"><i class="fa-solid fa-book"></i></a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./about.html')"><i class="fa-solid fa-user"></i></a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./blog.html')"><i class="fa-solid fa-pen"></i></a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./contact.html')"><i class="fa-solid fa-envelope"></i></a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('../index.html')"><i class="fa-solid fa-house"></i> Home </a></li>
+                    <li class="mobile__nav-item"><a href="#" disabled><i class="fa-solid fa-book"></i> Portfolio </a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./about.html')"><i class="fa-solid fa-user"></i> About </a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./blog.html')"><i class="fa-solid fa-pen"></i> Blog </a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./contact.html')"><i class="fa-solid fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
+
         </div>
 
         </aside>
@@ -62,272 +63,185 @@
             <h1 class="page__title">Portfolio</h1>
     
             <div class="portfolio__container">
-                
-                <!-- Portfolio piece 1 -->
-                <div class="portfolio__content image__port-1">
-                    <article class="image__text">
-                        <!-- <label for="radio-button" class="portfolio__radio">
-                            <i class="fa-solid fa-up-down button__icon"></i>
-                        </label>
-                        <input type="radio" name="portfolio__radio" id="radio-button-1" class="radio" value="radio1"> -->
-    
-                        <h3 class="image__title">Weeb Shop (PHP Project)</h3>
-                        <div class="image__description">
-                            <div class="image__data">
-                                <p>
-                                    <strong>When?</strong><span class="image__description-time">2023</span>
-                                </p>
+                <div class="slider__wrapper">
+                    
+                    <button class="slider__button-left"><i class="fa-solid fa-chevron-left"></i></button>
 
-                                <p>
-                                    <strong>What used?</strong><span class="image__description">PHP, MySQL</span>
-                                </p>
-                            </div>
+                    <div class="card__wrapper">
 
-                            <p class="image__description">
-                                This site is a PHP project which was one of the final projects for the FiGD(Institute for education an development and design) <br>
-                                The idea of the project was to build a little shop where I can work with a MySQL Library of dummy users.
-                                Since the site is in PHP I provide a link to my Github to fork/download the project.
-                            </p>
-                            <p class="image__description">
-                                This demo is in javascript and will use PHP in the full version. Because of that I decided to present it
-                                only as a download/forkable version on my Github.
-                            </p>
-                        </div>
-    
-                        <a class="portfolio__link" href="https://github.com/dabergotzDesign/weeb_shop" target="_blank">Github</a>
-                    </article>
-                </div>
-    
-                <!-- Portfolio piece 2 -->
-                <div class="portfolio__content image__port-2">
-                    <article class="image__text">
-                        
-                        <!-- <label for="portfolio__radio" class="portfolio__radio">
-                            <i class="fa-solid fa-up-down button__icon"></i>
-                        </label>
-                        <input type="radio" name="portfolio__radio" id="radio-button-2" class="radio" value="radio2"> -->
-    
-                        <h3 class="image__title">Genshin-Teams App (light version)</h3>
-                        <div class="image__description">
-                            <div class="image__data">
-                                <p>
-                                    <strong>When?</strong><span class="image__description-time">2023</span>
-                                </p>
-                                
-                                <p>
-                                    <strong>What used?</strong><span class="image__description">Javascript, SCSS</span>
-                                </p>
+                        <div class="card previous">
+                            <div class="card__image">
+                                <img src="../img/portfolio/WallOfWishes_site.jpg" alt="App Genshin Teams">
+                                <figure class="card__info">
+                                    <figcaption>
+                                        Destiny 2 - Wall of Wishes
+                                    </figcaption>
+                                </figure>
                             </div>
-    
-                            <p class="image__description">
-                                An app that works with the fan-made Genshin API based on the game 'Genshin Impact'. <br>
-                                This version of my app was to test the API and create Teams. Light version says that it is just a demo
-                                of the real version that I like to made out of this one.
-                            </p>
-                            <p class="image__description">
-                                This demo is in javascript and will use PHP in the full version. Because of that I decided to present it
-                                only as a download/forkable version on my Github.
-                            </p>
                         </div>
-    
-                        
-                        <a class="portfolio__link" href="https://github.com/dabergotzDesign/Genshin-Teams----light-" target="_blank">Github</a>
-                    </article>
-                </div>
-    
-                <!-- Portfolio piece 3 -->
-                <div class="portfolio__content image__port-3">
-                    <article class="image__text">
-    
-                        <!-- <label for="portfolio__radio" class="portfolio__radio">
-                            <i class="fa-solid fa-up-down button__icon"></i>
-                        </label>
-                        <input type="radio" name="portfolio__radio" id="radio-button-3" class="radio" value="radio3"> -->
-    
-                        <h3 class="image__title">Wall of Wishes</h3>
-                        <div class="image__description">
-                            <div class="image__data">
-                                <p>
-                                    <strong>When?</strong><span class="image__description-time">2021</span>
-                                </p>
-                                
-                                <p>
-                                    <strong>What used?</strong><span class="image__description">React</span>
-                                </p>
-                            </div>
-    
-                            <p class="image__description">
-                                Creating a game feature within a React App.
-                                Working with React & Javascript to showcase an application with many different features.
-                            </p>
-                        </div>
-    
-                        <a class="portfolio__link" href="https://dabergotzdesign.github.io/wallofwishes/" target="_blank">visit</a>
 
-                        <a class="portfolio__link" href="https://github.com/dabergotzDesign/wallofwishes" target="_blank">Github</a>
-                    </article>
-                </div>
-    
-                <!-- Portfolio piece 4 -->
-                <div class="portfolio__content image__port-4">
-                    <article class="image__text">
-                        
-                        <!-- <label for="portfolio__radio" class="portfolio__radio">
-                            <i class="fa-solid fa-up-down button__icon"></i>
-                        </label>
-                        <input type="radio" name="portfolio__radio" id="radio-button-4" class="radio" value="radio4"> -->
-    
-                        <h3 class="image__title">To Do Lists - Angular, React, Vue</h3>
-                        <div class="image__description">
-                            <div class="image__data">
-                                <p>
-                                    <strong>When?</strong><span class="image__description-time">2021</span>
-                                </p>
-                                
-                                <p>
-                                    <strong>What used?</strong><span class="image__description">Javascript, SCSS, Angular, React, Vue</span>
-                                </p>
+                        <div class="card current active">
+                            <div class="card__image">
+                                <img src="../img/portfolio/genshin_teams_light_size.jpg" alt="App Genshin Teams">
+                                <figure class="card__info">
+                                    <figcaption>
+                                        Genshin-Teams App
+                                    </figcaption>
+                                </figure>
                             </div>
                         </div>
-    
-                        <p class="image__description">
-                            The same app, but in three different frameworks. <br>
-                            It started out with the tutorial in angular and ended up with the idea on doing the same app (a to do app) again.
-                            The first to-do app came from an Angular tutorial, the other two were made from scratch (React, Vue).
-                        </p>
-                        <a class="portfolio__link" href="https://github.com/dabergotzDesign/3-to-do-lists" target="_blank">Github</a>
-                    </article>
+
+                        <div class="card next">
+                            <div class="card__image">
+                                <img src="../img/portfolio/weeb_shop.png" alt="App Genshin Teams">
+                                <figure class="card__info">
+                                    <figcaption>
+                                        Weeb Shop
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>   
+                        
+                    </div>
+                    
+                    <button class="slider__button-right"><i class="fa-solid fa-chevron-right"></i></button>
+
                 </div>
             </div>
 
+        <div class="space"></div>
 
-            <!-- PORTFOLIO MOBILE VERSION -->
-            <div class="portfolio__wrapper-mobile">
+        <!-- <div class="modal__wrapper"> -->
+            <div class="modal__container">
 
-                <div class="progress__bar">
-                    <div class="progress" id="bar"></div>
+                <i class="fa-solid fa-close close"></i>
+
+                <!-- Genshin Teams  -->
+                <div class="modal__card-1">
+                    <img src="../img/portfolio/genshin_teams_light_size.jpg" alt="Genshin-Teams App">
+                    <div class="modal__card-info">
+                        
+                        <h3>Genshin-Teams App</h3>
+                        
+                        <div class="card__content">
+
+                            <div>
+                                <div class="card__shorts">
+                                    <h4>What used?</h4>
+                                    <p>HTML, SASS, JS</p>
+                                </div>
+                                <div class="card__shorts">
+                                    <h4>When?</h4>
+                                    <p>2023</p>
+                                </div>
+                                <div class="card__links">
+                                    <!-- <a href="#" target="_blank">visit</a> -->
+                                    <a href="https://github.com/dabergotzDesign/Genshin-Teams----light-" target="_blank">Github</a>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="card__info-text">
+                                
+                                <p>
+                                    An app that works with the fan-made Genshin API based on the game 'Genshin Impact'.
+                                    This version of my app was to test the API and create Teams.
+                                    Light version says that it is just a demo of the real version that I like to made out of this one.
+                                </p>
+                                <p>
+                                    This demo is in javascript and will use PHP in the full version.
+                                    Because of that I decided to present it only as a download/forkable version on my Github.
+                                </p>
+                            </div>
+                            
+                        </div>
+                        </div>
                 </div>
 
-                <div class="portfolio__container-mobile scrollX">
+                <!-- Weeb Shop -->
+                <div class="modal__card-2">
+                    <img src="../img/portfolio/weeb_shop.png" alt="Weeb Shop">
+                    <div class="modal__card-info">
+                        
+                        <h3>Weeb Shop</h3>
+                        
+                        <div class="card__content">
 
-
-                    <section class="portfolio__piece-1">
-                        <h1>Weeb Shop</h1>
-                        <article class="col">
-                            <img src="../img/portfolio/weeb_shop.png" width="1920px" height="1080px" alt="weeb shop project">
+                            <div>
+                                <div class="card__shorts">
+                                    <h4>What used?</h4>
+                                    <p>HTML, SASS, PHP, JS</p>
+                                </div>
+                                <div class="card__shorts">
+                                    <h4>When?</h4>
+                                    <p>2023</p>
+                                </div>
+                                <div class="card__links">
+                                    <!-- <a href="#" target="_blank">visit</a> -->
+                                    <a href="https://github.com/dabergotzDesign/weeb_shop" target="_blank">Github</a>
+                                </div>
+                            </div>
                             
-                            <p>
-                                <hr>
-                                <div class="portfolio__data">
-                                    <p>
-                                        <strong>When?</strong><span>2023</span>
-                                        <br>
-                                        <strong>What used?</strong><span>PHP, MySQL, Sass</span>
-                                    </p>
-                                </div>                         
+                            
+                            <div class="card__info-text">
+                                
                                 <p>
-                                    This site is a PHP project which was one of the final projects for the FiGD (Institute for education, development and design) <br>
+                                    This site is a PHP project which was one of the final projects for the FiGD(Institute for education an development and design)
                                     The idea of the project was to build a little shop where I can work with a MySQL Library of dummy users.
                                     Since the site is in PHP I provide a link to my Github to fork/download the project.
                                 </p>
-                            </p>
-                            <a class="link__mobile" href="https://github.com/dabergotzDesign/weeb_shop" target="_blank">Github</a>
-                        </article>
-                    </section>
-
-                    <section class="portfolio__piece-2">
-                        <h1>Genshin Teams (Light Version)</h1>
-                        <article class="col">
-                            <img src="../img/portfolio/genshin_teams_light_size.jpg" width="1920px" height="1080px" alt="weeb shop project">
-                          
-                            <p>
-                                <hr>
-                            <div class="portfolio__data">
                                 <p>
-                                    <strong>When?</strong><span class="image__description-time">2023</span>
-                                </p>
-                                
-                                <p>
-                                    <strong>What used?</strong><span>Javascript, SCSS</span>
+                                    Because it's written in PHP I unfortunalety can not create a running website out of it.
+                                     As I let publish over Github Pages which not support the PHP format.
                                 </p>
                             </div>
-    
-                            <p>
-                                An app that works with the fan-made Genshin API based on the game 'Genshin Impact'. <br>
-                                This version of my app was to test the API and create Teams. Light version says that it is just a demo
-                                of the real version that I like to made out of this one.
-                            </p>
-                            <p>
-                                This demo is in javascript and will use PHP in the full version. Because of that I decided to present it
-                                only as a download/forkable version on my Github.
-                            </p>
-                            </p>
-                                               
-                        <a class="link__mobile" href="https://github.com/dabergotzDesign/Genshin-Teams----light-" target="_blank">Github</a>
-
-                        </article>
-                    </section>
-
-                    <section class="portfolio__piece-3">
-                        <h1>Wall of Wishes</h1>
-                        <article class="col">
-                            <img src="../img/portfolio/WallOfWishes_site.jpg" width="1920px" height="1080px" alt="weeb shop project">
                             
-                            <div class="image__data">
-                                <p>
-                                    <strong>When?</strong><span>2021</span>
-                                </p>
-                                
-                                <p>
-                                    <strong>What used?</strong><span>React</span>
-                                </p>
-                            </div>
-    
-                            <p>
-                                Creating a game feature within a React App.
-                                Working with React & Javascript to showcase an application with many different features.
-                            </p>
-                        
-                        <div class="link__mobile">
-                            <a href="https://dabergotzdesign.github.io/wallofwishes/" target="_blank">visit</a>
-                            <p>|</p>
-                            <a href="https://github.com/dabergotzDesign/wallofwishes" target="_blank">Github</a>
                         </div>
-
-                        </article>
-                    </section>
-
-                    <section class="portfolio__piece-4">
-                        <h1>To Do Lists - Angular, React, Vue</h1>
-                        <article class="col">
-                            <img src="../img/portfolio/to-do-lists.png" width="1920px" height="1080px" alt="weeb shop project">
-                                                        
-                                <div class="image__data">
-                                    <p>
-                                        <strong>When?</strong><span>2021</span>
-                                    </p>
-                                    
-                                    <p>
-                                        <strong>What used?</strong><span>Javascript, SCSS, Angular, React, Vue</span>
-                                    </p>
-                                </div>
-                                    
-                            <p>
-                                The same app, but in three different frameworks. <br>
-                                It started out with the tutorial in angular and ended up with the idea on doing the same app (a to do app) again.
-                                The first to-do app came from an Angular tutorial, the other two were made from scratch (React, Vue).
-                            </p>
-                            <a class="link__mobile" href="https://github.com/dabergotzDesign/3-to-do-lists" target="_blank">Github</a>
-
-                        </article>
-                    </section>                   
-
-
+                        </div>
                 </div>
 
+                <!-- Wall of Wishes -->
+                <div class="modal__card-3">
+                    <img src="../img/portfolio/WallOfWishes_site.jpg" alt="Wall of Wishes">
+                    <div class="modal__card-info">
+                        
+                        <h3>wall of wishes</h3>
+                        
+                        <div class="card__content">
+
+                            <div>
+                                <div class="card__shorts">
+                                    <h4>What used?</h4>
+                                    <p>HTML, CSS, JS, React</p>
+                                </div>
+                                <div class="card__shorts">
+                                    <h4>When?</h4>
+                                    <p>2023</p>
+                                </div>
+                                <div class="card__links">
+                                    <a href="https://dabergotzdesign.github.io/wallofwishes/" target="_blank">visit</a>
+                                    <a href="https://github.com/dabergotzDesign/wallofwishes" target="_blank">Github</a>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="card__info-text">
+                                
+                                <p>
+                                   The idea behind this project was to recreate a game feature within a React App. Working with React & Javascript to showcase an application with many different features.
+                                </p>
+                                <p>
+                                    This Version is not optimized and has a view bugs.
+                                    When I have the time I'll fix it, as I have to make more than just looking at the bugs.
+                                </p>
+                            </div>
+                            
+                        </div>
+                        </div>
+                </div>
+                    
             </div>
-    
-            <div class="space"></div>
+        <!-- </div> -->
     
         </main>
 

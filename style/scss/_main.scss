@@ -1,3 +1,8 @@
+//media variables
+$media-tablet-wide: 1024px;
+$media-tablet: 800px;
+$media-mobile: 500px;
+
 *{
     margin: 0;
     padding: 0;
@@ -34,34 +39,38 @@ body{
         text-transform: uppercase;
         text-shadow: 0 0 8px var(--bg-dark);
         
-        font-family: var(--font-space-mono);
-        font-size: 2.5rem;
-        font-weight: 400;
+        font-family: var(--font-poppins);
+        font-size: 1.5rem;
+        font-weight: 300;
 
         letter-spacing: 4px;
-        color: var(--text-light);
+        color: red;
         margin-top: .5rem;
+
+        @media screen and (max-width: $media-mobile) {
+            font-size: 0.8rem;
+        }
     }
 
     //background images
     &__home{
-        background-image: url("../../img/backgrounds/ddesign_bg_home.jpg");
+        background-image: url("../../img/backgrounds/bg_home_AI.jpg");
         overflow: hidden;
     }
 
     &__portfolio{
-        background-image: url("../../img/backgrounds/Tokyo_city_street_placeholder.png");
+        background-image: url("../../img/backgrounds/bg_portfolio_AI.jpg");
     }
 
     &__about{
-        background-image: url("../../img/backgrounds/Japanese_Home-background.jpg");
+        background-image: url("../../img/backgrounds/bg_about_AI.jpg");
     }
 
     &__blog{
-        background-image: url("../../img/backgrounds/living_room_cyberpunk.png");
+        background-image: url("../../img/backgrounds/bg_blog_AI.jpg");
     }
 
     &__contact{
-        background-image: url("../../img/backgrounds/ddesign_bg_contact.jpg");
+        background-image: url("../../img/backgrounds/bg_contact_AI.jpg");
     }
 }

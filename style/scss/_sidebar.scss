@@ -1,33 +1,62 @@
+//media variables
+$media-tablet-wide: 1024px;
+$media-tablet: 800px;
+$media-mobile: 500px;
+
 aside{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    gap: 8rem;
+    justify-items: center;
+    gap: 9rem;
 
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 10;
+    z-index: 2;
 
     height: 100%;
+    width: 12vw;
    
 
-    background-image: linear-gradient(to right, var(--bg-dark), var(--bg-dark-transparent), transparent);
+    background-color: var(--bg-dark-transparent);
 
     transition: width 0.8s ease;
 
-    @media screen  and (max-width: 900px){
-        background-color: var(--bg-dark-transparent);
+    @media screen  and (max-width: $media-tablet){
         width: fit-content;
+    }
+
+     
+    @media screen and (max-width: $media-mobile) {
+        gap:0;
     }
 
     //sidebar logo
     img{
-        height: 154px;
-        width: 270px;
+        height: calc(154px / 2);
+        width: calc(270px / 2);
 
-        @media screen and (max-width: 900px) {
-            display: none;
+        margin: 25% 0;
+
+
+        @media screen and (max-width: $media-tablet-wide) {
+            height: calc(154px / 2.5);
+            width: calc(270px / 2.5);
+        }
+
+        @media screen and (max-width: $media-tablet) {
+            height: calc(154px / 2.8);
+            width: calc(270px / 2.8);
+            margin-top: 45%;
+        }
+
+         
+        @media screen and (max-width: $media-mobile) {
+            height: calc(154px / 3.1);
+            width: calc(270px / 3.1);
+            margin-top: 45%;
+            padding: 0.25rem;
         }
     }
 
@@ -36,21 +65,22 @@ aside{
         
         &__nav{
             position: relative;
-
-            @media screen and (max-width: 900px) {
+            
+            //mobile mode
+            @media screen and (max-width: $media-tablet) {
                 display: none;
             }
                 
             &-item{
                 list-style: none;
-                text-align: center;
                 margin: 2.2rem 0;
+                
 
                 a{
                     text-decoration: none;
                     text-align: center;
 
-                    font-size: var(--size-24);
+                    font-size: var(--size-h4);
                     font-family: var(--font-poppins);
                     font-weight: 200;
 
@@ -83,6 +113,18 @@ aside{
                         }
                     }
 
+                    //tablet mode wide
+                    @media screen and (max-width: $media-tablet-wide) {
+                        font-size: 20px;
+                    }
+
+                    
+
+                    //mobile mode
+                    @media screen and (max-width: $media-mobile) {
+                        display: none;
+                    }
+
                 }
             }
 
@@ -90,10 +132,12 @@ aside{
             //NAVIGATION MOBILE VERSION
             &-mobile{
                 display: none;
-                width: 10vw;
+                width: 18vw;
                 position: relative;
+                margin-top: auto;
+                margin-bottom: auto;
                 
-                @media screen and (max-width: 900px) {
+                @media screen and (max-width: $media-tablet) {
                     display: block;
                 }
 
@@ -101,22 +145,55 @@ aside{
                     display: flex;
                     flex-flow: column nowrap;
                     align-items: center;
+                    justify-content: center;
                     gap: 30px;
-                    transform: translateY(50%);
+
+                    @media screen and (max-width: $media-mobile) {
+                        gap: 0;
+                    }
                 }
                 
                 .mobile__nav-item{
                     list-style: none;
-
                     padding: 0.5rem;
-
+                                        
                     a{
                         color: var(--bg-light);
+                        padding: 0.25rem;
 
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        text-align: center;
+                        letter-spacing: 2px;
+
+                        font-family: var(--font-poppins);
+                        font-size: 8px;
+                        position: relative;
+
+                        &[href="#"]{
+                            text-decoration: underline;
+                        }
+
+                        
                         i{
                             font-size: 1.5rem;
                             text-align: center;
+
+                            display: block;
+                            margin: auto;
                         }
+
+                    //tablet mode 
+                    @media screen and (max-width: $media-tablet) {
+                        font-size: 20px;
+                    }
+
+
+                    @media screen and (max-width: $media-mobile) {
+                        font-size: 10px;
+                        padding: 0 0.25rem;
+                    }
+
                     }
                 }
 
@@ -150,62 +227,13 @@ aside{
 
                 padding: 0.5rem;
 
-                @media screen and (max-width: 900px) {
+                @media screen and (max-width: $media-tablet) {
                     display: block;
                 }
 
             }
-
-            /* &-open,
-            &-close{
-                display: none;
-
-                border: none;               
-                
-                font-size: 1.2rem;
-                font-weight: 700;
-                
-                height: 100%;
-                padding: .5rem;
-                margin: 0 0.5rem;
-                
-                transition: all 0.3s ease;
-
-                @media screen and (max-width: 900px){
-                    display: block;
-                }
-
-                &:hover{
-                    cursor: pointer;
-                    scale: 1.2;
-                }
-
-                &.hidden{
-                    visibility: hidden;
-                }
-            } */
-
-
-            /* &-open{
-                background-color: transparent;
-                color: var(--bg-light);
-                outline: thin solid var(--bg-light);
-                box-shadow: 0 0 8px var(--bg-dark) inset;
-
-                &:hover{
-                    border: thin solid var(--bg-light);
-                }
-            }
-
-            &-close{
-                color: var(--text-light);
-                background-color: transparent;
-                
-                &:hover{
-                    border: thin solid var(--bg-light);
-                }
-            } */
 
         }
+
     }
 }

@@ -1,3 +1,8 @@
+//media variables
+$media-tablet-wide: 1024px;
+$media-tablet: 800px;
+$media-mobile: 500px;
+
 .page{
 
     &__contact{
@@ -8,7 +13,7 @@
 
         &__main{
             //width: 80%;
-            height: 100vh;
+            height: 100%;
             position: relative;
         
             margin: auto;
@@ -22,18 +27,22 @@
             justify-content: center;
         
             
-            h3{
+            h2{
                 color: var(--text-light);
                 font-family: var(--font-poppins);
-                font-size: 2rem;
+                font-size: var(--size-h2);
+                font-weight: 400;
+                letter-spacing: 3px;
 
                 text-align: center;
                 text-transform: uppercase;
                 
                 padding: 2rem;
+                margin-bottom: 6rem;
 
-                @media screen and (max-width: 500px) {
+                @media screen and (max-width: $media-mobile) {
                     font-size: 1.5rem;
+                    margin-bottom: 2rem;
                 }
             }
            
@@ -45,12 +54,16 @@
                     gap: 12rem;
 
 
-                    @media screen and (max-width: 900px) {
+                    @media screen and (max-width: $media-tablet) {
                         gap: 8rem;
                     }
 
-                    @media screen and (max-width: 500px) {
-                        gap: 3rem;
+                    @media screen and (max-width: $media-mobile) {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0;
                     }
 
                     h4{
@@ -60,41 +73,69 @@
                         font-size: 2rem;
                         letter-spacing: 1px;
 
-                        @media screen and (max-width: 480px) {
+                        @media screen and (max-width: $media-mobile) {
                             font-size: 1.2rem;
                         }
 
                     }
 
+                    //the "or"
+                    h5{
+                        display: none;
+                        color: var(--text-light);
+                        font-family: var(--font-poppins);
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        padding: 1rem;
+
+                        @media screen and (max-width: $media-mobile) {
+                            display: block;
+                        }
+                    }
+
                 }
 
                 &__mails{
-                    font-size: 4rem;
                     font-family: var(--font-space-mono);
                     text-align: center;
                     transition: all 0.3s ease;
                     color: var(--text-light);
-
-                    @media screen and (max-width: 800px){
+                    
+                    @media screen and (max-width: $media-tablet){
                         padding: 1rem;                        
                     }
-
-                                    
+                    
+                    
                     &:hover{
                         cursor: pointer;
                         scale: 1.2;
                         text-shadow: 0 0 2px var(--text-dark);
                     }
-
+                    
                     &:active{
                         color: var(--bg-dark-grey);
                         text-shadow: 0 0 4px var(--text-light);
                     }
+                    
+                    p{
+                        display: none;
+                        font-family: var(--font-poppins);
+                        text-transform: uppercase;
+                        padding: 0.5rem;
 
-                    @media screen and (max-width: 480px) {
-                        font-size: 1.5rem;
-                        margin-top: 1.5rem;
+                        @media screen and (max-width: $media-mobile) {
+                            display: block;
+                        }
                     }
+                    
+                    i{
+                        font-size: 8rem;
+
+                        @media screen and (max-width: $media-mobile) {
+                            font-size: 3rem;
+                        }
+                    }
+
                 }
 
                 &__socials{
@@ -114,14 +155,14 @@
                         height: 100%;
                         background-color: var(--bg-light);
 
-                        @media screen and (max-width: 480px){
-                            left: -8%;                        
+                        @media screen and (max-width: $media-mobile){
+                            display: none;                  
                         }
 
                     }
 
-                    @media screen and (max-width: 800px){
-                        padding: 1rem;                        
+                    @media screen and (max-width: $media-tablet){
+                        //padding: 1rem;                        
                     }
                                        
 
@@ -129,9 +170,9 @@
                         font-size: 1.5rem;
                         font-family: var(--font-space-mono);
 
-                        @media screen and (max-width: 480px) {
-                            font-size: 1rem;
-                            padding-bottom: 1rem;
+                        @media screen and (max-width: $media-mobile) {
+                            /* font-size: 1rem;
+                            padding-bottom: 1rem; */
                         }
                     }
 
@@ -145,14 +186,15 @@
                             
                             display: flex;
                             align-items: center;
-                            justify-content: center;
+                            justify-content: flex-start;
                             
                             padding: 1rem 0;
+                            margin: 0.5rem;
                             transition: all 0.3s ease;
                             
                             @media screen and (max-width: 800px) {
                                 padding: 0.5rem 0;
-                                font-size: 1.2rem;
+                                font-size: 2rem;
                             }
                             
                             
@@ -178,11 +220,28 @@
                         a{
                             text-decoration: none;
                             text-align: left;
+
                             color: var(--text-light);
+                            font-size: var(--size-h5);
+                            font-family: var(--font-poppins);
+                            letter-spacing: 2px;
+
                             padding-left: 1rem;
-                            
-                            @media screen and (max-width: 800px) {
+                            position: relative;
+
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: -30%;
+                                //background-color: red;
+                                width: 10vw;
+                                height: 100%;
+                            }
+                                                        
+                            @media screen and (max-width: $media-tablet) {
                                 color: var(--text-light);
+                                font-size: var(--size-p);
                             }
                         }
                     }
@@ -193,7 +252,7 @@
             .mailModal{
                 display: none;
                 position: fixed;
-                z-index: 1;
+                z-index: 99;
                 left: 0;
                 top: 0;
                 width: 100%;
@@ -203,33 +262,58 @@
 
                 &__Content{
                     background:#111;
-                    margin: 15% auto;
+                    margin: 10% auto;
                     padding: 20px;
                     border: 1px solid var(--text-light);
-                    width: 50%;
+                    width: 60%;
+                    height: auto;
                     color: var(--text-light);
                     
                     position: relative;
 
-                    @media screen and (max-width: 800px) {
-                        width: 75%;
+                    @media screen and (max-width: $media-tablet) {
+                        margin: 20% auto;
+                        margin-left: 20%;
+                        width: 70%;
+                        scale: 0.9;
+                    }
+
+                    @media screen and (max-width: $media-mobile) {
+                        width: 90%;
+                        margin-left: 0;
+                        margin: auto;
                     }
 
                     h1{
                         margin: 1rem 0;
-                        margin-bottom: 1.5rem;
+                        margin-bottom: 4rem;
 
-                        font-family: var(--font-space-mono);
+                        font-family: var(--font-poppins);
+                        font-size: var(--size-h2);
+                        font-weight: 400;
+
+                        @media screen and (max-width: $media-tablet) {
+                            font-size: var(--size-h3);
+                        }
+
+                        @media screen and (max-width: $media-mobile) {
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                            letter-spacing: 2px;
+                        }
                     }
 
                     .close{
-                        color: #aaa;
+                        color: var(--text-light);
+                        outline: 2px solid var(--bg-light);
+                        border-radius: 50%;
+                        padding: 0 12px;
                         float: right;
                         font-size: 2.5rem;
                         font-weight: bold;
 
                         position: absolute;
-                        top: 0;
+                        top: 1rem;
                         right: 1rem;
 
                         &:hover,
@@ -237,38 +321,106 @@
                             cursor: pointer;
                             color:var(--text-light);
                         }
-                    }
 
-                    .input{
-                        &__feedback{
-                            color:var(--text-light);
-                            font-family: var(--font-hepta);
-                            font-weight:100;
+                        @media screen and (max-width: $media-mobile) {
                             font-size: 1.2rem;
-                            background-color: var(--bg-dark);
-                            padding: .8rem;
-                            margin-bottom: 10px;
-                            width:100%;
-                            box-sizing: border-box;
-                            border: 1px solid var(--text-light);
-
-                            @media screen and (max-width: 480px) {
-                                font-size: 0.8rem;
-                                margin-bottom: 15px;
-                            }
-
-
+                            padding: 0 6px;
                         }
                     }
 
+                    .input{
+
+                        &__wrap{                            
+                            width:80%;
+                            height: 50px;
+                            position: relative;
+
+                            outline: 1px solid var(--text-light);
+                            margin-bottom: 2.5rem;
+
+                            @media screen and (max-width: $media-mobile) {
+                                width: 100%;
+                            }
+
+                            .input{
+                                color:var(--text-light);
+                                font-family: var(--font-poppins);
+                                font-weight:300;
+                                font-size: 1.2rem;
+                                background-color: var(--bg-dark);
+                                padding: .8rem;
+                                width: 100%;
+                                height: 50px;
+                                border: none;
+                                outline: 1px solid var(--bg-lightgrey);
+
+                                &:focus{
+                                    border: 2px solid var(--bg-light);
+                                }
+
+                                @media screen and (max-width: $media-mobile) {
+                                    font-size: 1rem;
+                                    letter-spacing: 2px;
+                                }
+
+                                
+                            }
+                            
+                        }
+
+                                                
+
+                        &__label{
+                            color: var(--bg-lightgrey);
+                            font-family: var(--font-poppins);
+                            font-size: 0.8rem;
+                            font-weight: 400;
+                            letter-spacing: 3px;
+                            background-color: var(--bg-dark);
+
+                            position: absolute;
+                            top: -20%;
+                            left: 1%; 
+                            padding: 0 0.5rem;                           
+                            transition: all 0.3s ease;
+
+                            @media screen and (max-width: $media-mobile) {
+                                background-color: transparent;
+                                top: -40%;
+                                left: 0;
+                                padding-left: 0;
+                            }
+
+                        }
+                                               
+                    }
+
+                    textarea{
+                        background-color: var(--bg-dark);
+                        color: var(--text-light);
+                        padding: 0.5rem;
+                        width: 100%;
+
+                        font-size: var(--size-p);
+                        font-family: var(--font-hepta);
+                        letter-spacing: 1.5px;
+
+                        &:focus{
+                            outline: 2px solid var(--bg-light);
+                        }
+                    }
+
+                                        
+    
                     //textarea
                     #message{
                         resize: vertical;
+                        height: 12vh;
                     }
 
                     .submit{
                         &__button{
-                            font-family: var(--font-space-mono);
+                            font-family: var(--font-poppins);
                             font-weight: 500;
                             font-size: 1.5rem;
                             letter-spacing: 0.2rem;

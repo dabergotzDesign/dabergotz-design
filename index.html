@@ -18,7 +18,7 @@
 
     <script src="./js/splash.js" defer></script>
     <!-- <script src="./js/sidebar.js" defer></script> -->
-    <script src="./js/fade.js" defer></script>
+    <!-- <script src="./js/fade.js" defer></script> -->
     
     <title>dabergotzDesign - Home</title>
 
@@ -45,13 +45,14 @@
     
             <nav class="sidebar__nav-mobile">
                 <ul>
-                    <li class="mobile__nav-item"><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./html/portfolio.html')"><i class="fa-solid fa-book"></i></a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./html/about.html')"><i class="fa-solid fa-user"></i></a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./html/blog.html')"><i class="fa-solid fa-pen"></i></a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./html/contact.html')"><i class="fa-solid fa-envelope"></i></a></li>
+                    <li class="mobile__nav-item"><a href="#"><i class="fa-solid fa-house"></i> Home </a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./html/portfolio.html')"><i class="fa-solid fa-book"></i> Portfolio </a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./html/about.html')"><i class="fa-solid fa-user"></i> About </a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./html/blog.html')"><i class="fa-solid fa-pen"></i> Blog </a></li>
+                    <li class="mobile__nav-item"><a href="javascript: delay('./html/contact.html')"><i class="fa-solid fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
+
         </div>
 
     </aside>
@@ -65,70 +66,81 @@
                 <h1>
                     Welcome to dabergotzDesign
                 </h1>
-                <!-- <img src="./img/logo_site_transparent.png" alt="logo dabergotzDesign front page" height="154px" width="270px"> -->
+                <h1 id="subheadline">
+                    A portfolio website from dennis dabergotz
+                </h1>
             </div>
 
-            <hr class="divider">
+            <div class="welcome__card-container">
 
-                        
-            <div class="slider__wrapper">          
-
-            <div class="slider__container">
-
-                <div class="slide slide__home active">
-                    <i class="fa-solid fa-house"></i>
-                    <h3>Home</h3>
-                    <p>
-                        Meet Dennis Dabergotz a Web Developer at the start of his career.
-                        <br>
+                <div class="welcome__card">
+                    <div class="card__img home">
+                        <h2><span>home</span></h2>
+                  </div>
+                    <p class="card__text">
+                        Meet Dennis Dabergotz a Web Developer and UI Designer at the start of his career.
                         On this website you'll find out more about me and my work.
-                        <p>Have fun and take a look.</p>                        
+                    </p>
+                    <p class="card__text">
+                        When there is something to design, just sign me up.
                     </p>
                 </div>
 
-                <div class="slide slide__portfolio">
-                    <i class="fa-solid fa-book"></i>
-                    <h3>Portfolio</h3>
-                    <p>Here's a selection of works I've during my time to become a Web Developer <a href="./html/portfolio.html">check it out</a></p>
-
-                    <a href="./html/portfolio.html" class="slide__link"></a>
+                <div class="welcome__card">
+                    <div class="card__img portfolio">
+                        <h2><span>portfolio</span></h2>                        
+                    </div>
+                    <p class="card__text">
+                        Check out my portfolio for some of my favorite work, that I like to present.
+                    </p>
+                    <p class="card__text">
+                        My work focuses on front-end development and UI/UX design, all of presented as websites with different challenges and themes.
+                    </p>
                 </div>
 
-                <div class="slide slide__about">
-                    <i class="fa-solid fa-user"></i>
-                    <h3>About</h3>
-                    <p>If you would like to know me more in detailed way, you are welcome to visit the About page</p>
+                <div class="welcome__card">
+                    <div class="card__img about">
+                        <h2><span>about</span></h2>
+                    </div>
 
-                    <a href="./html/about.html" class="slide__link"></a>
+                    <p class="card__text">
+                        Curious who is behind the work and get a face of the Dev behind the scene?
+                    </p>
+                    <p class="card__text">
+                        I got you covered. 
+                    </p>
+
                 </div>
 
-                <div class="slide slide__blog">
-                    <i class="fa-solid fa-pen"></i>
-                    <h3>Blog</h3>
-                    <p>News, Projects, Site updates and more...</p>
+                <div class="welcome__card">
+                    <div class="card__img blog">
+                        <h2><span>blog</span></h2>
+                    </div>
 
-                    <a href="./html/blog.html" class="slide__link"></a>
+                    <p class="card__text">
+                        What is happening outside of my portfolio and what else do I like to show?
+                    </p>
+                    <p class="card__text">
+                        This is where my blog comes in, as I like to show some work outside of my portfolio or talk about some achievements throughout my career
+                        and more.
+                    </p>
+
                 </div>
 
-                <div class="slide slide__contact">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h3>Contact</h3>
-                    <p>Get in touch with me</p>
+                <div class="welcome__card">
+                    <div class="card__img contact">
+                        <h2><span>contact</span></h2>
+                    </div>
 
-                    <a href="./html/contact.html" class="slide__link"></a>
+                    <p class="card__text">
+                        If you want to get in contact with me, just write me a message or checkout some social profiles.
+                        <br>
+                        I am open to talk.
+                    </p>
+
                 </div>
-                
+
             </div>
-
-            <div class="dots">
-                <span class="dot active-d"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-
-        </div>
 
         </section>
     </main>
@@ -138,7 +150,6 @@
         <div class="spinner"></div>
         <img src="./img/dddesign_logo_transparent.png" height="2048px" width="2048px" alt="logo">
     </div>
-
-    <!-- <video src="video/home_bg_video.mp4" width="1920" height="1080" loop autoplay></video> -->  
+    
 </body>
 </html>

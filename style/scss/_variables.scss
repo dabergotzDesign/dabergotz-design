@@ -1,7 +1,7 @@
 
 //Colors
 :root{
-    --text-light: whitesmoke;
+    --text-light:#efefef;
     --text-dark: #1d1d1d;
     --text-disabled: #474747;
     --text-link: rgb(0, 174, 255);
@@ -15,15 +15,17 @@
 
 //Font Sizes
 :root{
-    --size-16: 1rem;
-    --size-24: 1.5rem;
-    --size-32: 2rem;
+    --size-h1: 45px;
+    --size-h2: 35px;
+    --size-h3: 32px;
+    --size-h4: 28px;
+    --size-p: 18px;
 }
 
 //Fonts
 :root{
-    --font-poppins: 'Poppins', sans-serif;
-    --font-space-mono: 'Space Mono', monospace;
-    --font-hepta: 'Hepta Slab', serif;
+    --font-poppins: 'Poppins', sans-serif; //used for headlines, nav and labels
+    --font-hepta: 'Hepta Slab', serif; //used for paragraphs
 }
+
 
