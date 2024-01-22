@@ -32,23 +32,33 @@ body{
         background-color: var(--bg-dark);
     }
 
-    &__title{
-        visibility: hidden;
-
+    &__headline{
+        
         text-align: center;
         text-transform: uppercase;
-        text-shadow: 0 0 8px var(--bg-dark);
-        
+                        
         font-family: var(--font-poppins);
-        font-size: 1.5rem;
+        font-size: var(--size-h2);
         font-weight: 300;
 
         letter-spacing: 4px;
-        color: red;
-        margin-top: .5rem;
+        color: var(--text-light);
+        margin-top: 1rem;
+        padding: 0.5rem;
+
+        background-color: var(--bg-dark-transparent);
+        border: thin solid var(--bg-light);
+        
+
 
         @media screen and (max-width: $media-mobile) {
             font-size: 0.8rem;
+            margin: 0.5rem;
+            margin-left: 25%;
+        }
+
+        &.inactive{
+            visibility: hidden;
         }
     }
 
