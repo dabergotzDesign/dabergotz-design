@@ -1,6 +1,7 @@
 //media variables
 $media-tablet-wide: 1024px;
 $media-tablet: 800px;
+$media-mobile-wide: 700px;
 $media-mobile: 500px;
 
 @mixin title {
@@ -259,6 +260,10 @@ $media-mobile: 500px;
                     
                 }
 
+                @media screen and (max-width: $media-mobile-wide) {
+                    align-items: center;
+                }
+
                 @media screen and (max-width: $media-mobile) {
                     align-items: center;
                     width: 70%;
@@ -321,6 +326,11 @@ $media-mobile: 500px;
                         height: 16vh;
                         object-fit: cover;
                         margin-top: 0;
+                    }
+
+                    @media screen and (max-width: $media-mobile-wide) {
+                        width: 15vw;
+                        height: 30vh;
                     }
 
                     @media screen and (max-width: $media-mobile) {

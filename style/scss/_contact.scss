@@ -1,6 +1,7 @@
 //media variables
 $media-tablet-wide: 1024px;
 $media-tablet: 800px;
+$media-mobile-wide: 700px;
 $media-mobile: 500px;
 
 .page{
@@ -39,6 +40,10 @@ $media-mobile: 500px;
                 
                 padding: 2rem;
                 margin-bottom: 6rem;
+
+                @media screen and (max-width: $media-mobile-wide) {
+                    margin-bottom: 1rem;
+                }
 
                 @media screen and (max-width: $media-mobile) {
                     font-size: 1.5rem;
@@ -128,8 +133,13 @@ $media-mobile: 500px;
                         }
                     }
                     
+                    //envelope button
                     i{
                         font-size: 8rem;
+
+                        @media screen and (max-width: $media-mobile-wide) {
+                            font-size: 5rem;
+                        }
 
                         @media screen and (max-width: $media-mobile) {
                             font-size: 3rem;
@@ -168,7 +178,7 @@ $media-mobile: 500px;
 
                     div{
                         font-size: 1.5rem;
-                        font-family: var(--font-space-mono);
+                        font-family: var(--font-hepta);
 
                         @media screen and (max-width: $media-mobile) {
                             /* font-size: 1rem;
@@ -182,7 +192,7 @@ $media-mobile: 500px;
                         li{
                             list-style: none;
                             font-size: 2.3rem;
-                            font-family: var(--font-space-mono);
+                            font-family: var(--font-hepta);
                             
                             display: flex;
                             align-items: center;
@@ -407,6 +417,12 @@ $media-mobile: 500px;
 
                         &:focus{
                             outline: 2px solid var(--bg-light);
+                        }
+
+                        @media screen and (max-width: $media-mobile-wide) {
+                            font-size: 0.8rem;
+                            line-height: 144%;
+                            text-wrap: pretty;
                         }
                     }
 

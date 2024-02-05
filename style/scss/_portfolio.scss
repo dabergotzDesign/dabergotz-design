@@ -1,6 +1,7 @@
 //media variables
 $media-tablet-wide: 1024px;
 $media-tablet: 800px;
+$media-mobile-wide: 700px;
 $media-mobile: 500px;
 
 
@@ -19,6 +20,7 @@ $media-mobile: 500px;
 .page{
     &__portfolio{
         
+        
         overflow: hidden;
         overflow-y: scroll;
         
@@ -34,10 +36,15 @@ $media-mobile: 500px;
                 flex-flow: column nowrap;
                 gap: 0;
 
-                //overflow: hidden;
+                overflow: hidden;
+                height: 120vh;
                 
                 @media screen and (max-width: $media-tablet) {
                     gap: 4rem;
+                }
+
+                @media screen and (max-width: $media-mobile-wide) {
+                    gap: 0;
                 }
 
                 @media screen and (max-width: $media-mobile) {
@@ -88,6 +95,12 @@ $media-mobile: 500px;
                                 //justify-content: center;
                             }
 
+                            @media screen and (max-width: $media-mobile-wide) {
+                                width: auto;
+                                height: auto;
+                            }
+
+
                           
                             .close{
                                 position: absolute;
@@ -106,7 +119,7 @@ $media-mobile: 500px;
                                     font-size: 2rem;
                                 }
 
-                                @media screen and (max-width: $media-mobile) {
+                                @media screen and (max-width: $media-mobile-wide) {
                                     font-size: 1.5rem;
                                     padding: 0.3rem 0.5rem;
                                 }
@@ -129,7 +142,7 @@ $media-mobile: 500px;
                                         scale: 1.1;
                                     }
 
-                                    @media screen and (max-width: $media-mobile) {
+                                    @media screen and (max-width: $media-mobile-wide) {
                                         scale: 0.8;
                                     }
                                                                                                                                             
@@ -175,7 +188,7 @@ $media-mobile: 500px;
                                                 gap: 4rem;
                                             }
 
-                                            @media screen and (max-width: $media-mobile) {
+                                            @media screen and (max-width: $media-mobile-wide) {
                                                 align-items: flex-start;
                                                 gap: 3rem;
                                             }
@@ -244,9 +257,11 @@ $media-mobile: 500px;
                                                 width: 50%;
                                                 color: var(--text-light);
                                                 font-family: var(--font-hepta);
+                                                text-wrap: pretty;
                                                 line-height: 155%;
                                                 letter-spacing: 2px;
                                                 padding: 1rem;
+                                                
 
                                                 @media screen and (max-width: $media-tablet-wide) {
                                                     width: 60%;
@@ -478,6 +493,10 @@ $media-mobile: 500px;
                             left: -100%;                            
                         }
 
+                        @media screen and (max-width: $media-mobile-wide) {
+                            top: 100%;
+                        }
+
                        }
 
                        &__button-right{
@@ -490,11 +509,15 @@ $media-mobile: 500px;
                             top: 80%;
                         }
 
+                        
                         @media screen and (max-width: $media-tablet) {
                             top: 110%;
                             right: -100%;
                         }
-
+                        
+                        @media screen and (max-width: $media-mobile-wide) {
+                            top: 100%;
+                        }
     
                        }
                     }

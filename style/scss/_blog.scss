@@ -1,6 +1,7 @@
 //media variables
 $media-tablet-wide: 1024px;
 $media-tablet: 800px;
+$media-mobile-wide: 700px;
 $media-mobile: 500px;
 
 $color-lightgrey: #bbb;
@@ -147,6 +148,7 @@ $color-lightgrey: #bbb;
                             font-size: var(--size-p);
                             line-height: 150%;
                             letter-spacing: 1px;
+                            text-wrap: pretty;
 
                             margin: auto;
                             width: 70%;
@@ -320,12 +322,20 @@ $color-lightgrey: #bbb;
                         display: block;
                         max-width: 100%;
                         max-height: 100%;
-                        width: 45%;
-                        height: 45%;
+                        width: 55%;
+                        height: 55%;
 
                         @media screen and (max-width: $media-tablet) {
                             width: fit-content;
                             height: fit-content;
+                        }
+
+                        @media screen and (max-width: $media-mobile-wide) {
+                            width: 60%;                            
+                        }
+
+                        @media screen and (max-width: $media-mobile) {
+                            width: 80%;
                         }
                     }
 

@@ -17,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
 
     <script src="./js/splash.js" defer></script>
+    <!-- <script src="./js/accordion.js" defer></script> -->
     <!-- <script src="./js/sidebar.js" defer></script> -->
     <!-- <script src="./js/fade.js" defer></script> -->
     
@@ -27,15 +28,14 @@
     <aside class="sidebar">
 
         <h1 class="sidebar__title">
-            <a href="javascript: delay('index.html')">
-                <img src="./img/logo_site_transparent.png" height="154px" width="270px" alt="dabergotzDesign logo">
-            </a>
+            <img src="./img/logo_site_transparent.png" height="154" width="270" alt="dabergotzDesign logo">
+            <a href="javascript: delay('index.html')"></a>
         </h1>
 
         <div class="navigation">
             <nav class="sidebar__nav">
                 <ul>
-                    <li class="sidebar__nav-item"><a href="#" disabled>Home</a></li>
+                    <li class="sidebar__nav-item"><a href="#">Home</a></li>
                     <li class="sidebar__nav-item"><a href="javascript: delay('./html/portfolio.html')">Portfolio</a></li>
                     <li class="sidebar__nav-item"><a href="javascript: delay('./html/about.html')">About</a></li>
                     <li class="sidebar__nav-item"><a href="javascript: delay('./html/blog.html')">Blog</a></li>
@@ -58,9 +58,9 @@
     </aside>
     
     <main class="home__main">
-
+        
         <h1 class="page__headline inactive">home</h1>
-
+        
         <section class="welcome__box">
                   
             <div class="welcome__title">
@@ -72,85 +72,121 @@
                 </h1>
             </div>
 
-            <div class="welcome__card-container">
+            <div class="welcome_accordion_container">
 
-                <div class="welcome__card">
-                    <div class="card__img home">
-                        <h2>Home</h2>
-                  </div>
-                    <p class="card__text">
-                        Meet Dennis Dabergotz a Web Developer and UI Designer at the start of his career.
-                        On this website you'll find out more about me and my work.
-                    </p>
-                    <p class="card__text">
-                        When there is something to design, just sign me up.
-                    </p>
+                
+                <div class="accordion__card">
+                    
+                    <label for="home" class="accordion__radio"></label>
+                    <input type="radio" name="card" id="home">
 
-                    <a href="./index.html"></a>
-                </div>
-
-                <div class="welcome__card">
-                    <div class="card__img portfolio">
-                        <h2>portfolio</h2>                       
+                    <div class="accordion__image home">
+                        <h2>home</h2>
                     </div>
-                    <p class="card__text">
-                        Check out my portfolio for some of my favorite work, that I like to present.
-                    </p>
-                    <p class="card__text">
-                        My work focuses on front-end development and UI/UX design, all of presented as websites with different challenges and themes.
-                    </p>
+                    <div class="panel">
+                        <h2>home</h2>
 
-                    <a href="./html/portfolio.html"></a>
+                        <p class="card__text">
+                            Meet Dennis Dabergotz a Web Developer and UI Designer at the start of his career.
+                            On this website you'll find out more about me and my work.
+                        </p>
+                        <p class="card__text" id="home__bottom-text">
+                            When there's something to design, just sign me up.
+                        </p>
+                    </div>
+                    
+                </div>
+                
+                <div class="accordion__card">
+
+                    <label for="portfolio" class="accordion__radio"></label>
+                    <input type="radio" name="card" id="portfolio">
+
+                    <div class="accordion__image portfolio">
+                        <h2>portfolio</h2>
+                    </div>
+                    <div class="panel">
+
+                        <h2>portfolio</h2>
+
+                        <p class="card__text">
+                            Check out my portfolio <br> ( work includes frontend development & UI/UX Design ) for some of my favorite work, that I like to present.
+                        </p>
+                        <!-- <p class="card__text">
+                            My work focuses on front-end development and UI/UX design, all presented as websites with different challenges and themes.
+                        </p> -->
+
+                        <a href="./html/portfolio.html">check out my work <i>→</i></a>
+                    </div>
+
                 </div>
 
-                <div class="welcome__card">
-                    <div class="card__img about">
+                <div class="accordion__card">
+                    
+                    <label for="about" class="accordion__radio"></label>
+                    <input type="radio" name="card" id="about">
+
+                    <div class="accordion__image about">
                         <h2>about</h2>
-                        <div class="bg"></div>
+                    </div>
+                    <div class="panel">
+                        <h2>about</h2>
+
+                        <p class="card__text">
+                            Curious who is behind the work and get a face of the Dev behind the scene?
+                        </p>
+                        <p class="card__text">
+                            I got you covered. 
+                        </p>
+
+                        <a href="./html/about.html">learn more about me <i>→</i></a>
                     </div>
 
-                    <p class="card__text">
-                        Curious who is behind the work and get a face of the Dev behind the scene?
-                    </p>
-                    <p class="card__text">
-                        I got you covered. 
-                    </p>
 
-                    <a href="./html/about.html"></a>
                 </div>
 
-                <div class="welcome__card">
-                    <div class="card__img blog">
+                <div class="accordion__card">
+
+                    <label for="blog" class="accordion__radio"></label>
+                    <input type="radio" name="card" id="blog">
+
+                    <div class="accordion__image blog">
                         <h2>blog</h2>
-                        <div class="bg"></div>
                     </div>
+                    <div class="panel">
+                        <h2>blog</h2>
 
-                    <p class="card__text">
-                        What is happening outside of my portfolio and what else do I like to show?
-                    </p>
-                    <p class="card__text">
-                        This is where my blog comes in, as I like to show some work outside of my portfolio or talk about some achievements throughout my career
-                        and more.
-                    </p>
+                        <p class="card__text">
+                            What is happening outside of my portfolio and what else do I like to show?
+                        </p>
+                        <!-- <p class="card__text">
+                            This is where my blog comes in, as I like to show some work outside of my portfolio or talk about some achievements throughout my career
+                            and more.
+                        </p> -->
 
-                    <a href="./html/blog.html"></a>
-
+                        <a href="./html/blog.html">some news <i>→</i></a>
+                    </div>
                 </div>
 
-                <div class="welcome__card">
-                    <div class="card__img contact">
+                <div class="accordion__card">
+
+                    <label for="contact" class="accordion__radio"></label>
+                    <input type="radio" name="card" id="contact">
+
+                    <div class="accordion__image contact">
                         <h2>contact</h2>
-                        <div class="bg"></div>
                     </div>
+                    <div class="panel">
+                        <h2>contact</h2>
 
-                    <p class="card__text">
-                        If you want to get in contact with me, just write me a message or checkout some social profiles.
-                        <br>
-                        I am open to talk.
-                    </p>
+                        <p class="card__text">
+                            If you want to get in contact with me, just write me a message or checkout some social profiles.
+                            <br>
+                            I am open to talk.
+                        </p>
 
-                    <a href="./html/contact.html"></a>
-
+                        <a href="./html/contact.html">get in contact <i>→</i></a>
+                    </div>
                 </div>
 
             </div>
@@ -161,7 +197,7 @@
     <!-- Splash Screen Overlay -->
     <div class="splash">
         <div class="spinner"></div>
-        <img src="./img/dddesign_logo_transparent.png" height="2048px" width="2048px" alt="logo">
+        <img src="./img/dddesign_logo_transparent.png" height="2048" width="2048" alt="logo">
     </div>
     
 </body>

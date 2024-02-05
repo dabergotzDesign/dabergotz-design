@@ -1,6 +1,7 @@
 //media variables
 $media-tablet-wide: 1024px;
 $media-tablet: 800px;
+$media-mobile-wide: 700px;
 $media-mobile: 500px;
 
 *{
@@ -36,6 +37,7 @@ body{
         
         text-align: center;
         text-transform: uppercase;
+        text-shadow: 0 0 4px var(--bg-dark);
                         
         font-family: var(--font-poppins);
         font-size: var(--size-h2);
@@ -46,9 +48,15 @@ body{
         margin-top: 1rem;
         padding: 0.5rem;
 
-        background-color: var(--bg-dark-transparent);
-        border: thin solid var(--bg-light);
-        
+        //background-color: var(--bg-dark-transparent);
+        //border: thin solid var(--bg-light);
+
+
+        @media screen and (max-width: $media-mobile-wide) {
+            font-size: 1.2rem;
+            margin: 0.5rem;
+            margin-left: 25%;
+        }
 
 
         @media screen and (max-width: $media-mobile) {
