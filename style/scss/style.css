@@ -195,6 +195,11 @@ aside.hidden .sidebar__nav {
 aside.hidden .sidebar__nav-mobile {
   transform: translateX(-100%);
 }
+@media screen and (max-width: 500px) {
+  aside {
+    gap: 0;
+  }
+}
 aside img {
   height: 77px;
   width: 135px;
@@ -213,7 +218,7 @@ aside img {
     margin-top: 45%;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   aside img {
     scale: 0.9;
     margin-top: 5%;
@@ -378,6 +383,16 @@ aside .sidebar__nav-item a[href="#"] {
 }
 aside .sidebar__nav li .active {
   outline: thin solid var(--bg-light);
+}
+@media screen and (max-width: 1024px) {
+  aside .sidebar__nav-item a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  aside .sidebar__nav-item a {
+    display: none;
+  }
 }
 aside .sidebar__nav-mobile {
   display: none;
