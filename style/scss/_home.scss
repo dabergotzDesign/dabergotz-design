@@ -709,7 +709,7 @@ $height: 50vh;
                         text-shadow: 0 0 4px var(--text-dark);
                         font-family: var(--font-poppins);
                         font-weight: 100;
-                        animation: letters 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+                        animation: letters 2.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
                         animation-delay: 2s;
 
                         @media screen and (max-width: $media-mobile-wide) {
