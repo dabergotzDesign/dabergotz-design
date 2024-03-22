@@ -659,6 +659,7 @@ body{
                             @media screen and (max-width: $media-mobile) {
                                 font-size: 0.8rem;
                                 padding: 1rem 0.25rem;
+                                text-wrap: wrap;
                             }
                             
                             a{

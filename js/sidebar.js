@@ -153,40 +153,48 @@ const observe_work = new IntersectionObserver(entries => {
 
 
 
-/*
+/////CURRENT SECTION ACTIVE
 
-menuAni.to(
-    navMain, 0.8, {
-        width: 320,
-        ease: Power2.easeInOut,
-        transform: "translate3d(0,0,0)"
+let sections = [...document.querySelectorAll(".main__section")];
+const getLinkById = (id) => document.querySelector(`a[href='#${id}']`);
+
+
+
+const inView = (section) => {
+  let top = section.offsetTop;
+  let height = section.offsetHeight;
+
+  while (section.offsetParent) {
+    section = section.offsetParent;
+    top += section.offsetTop;
+  }
+
+  return (
+    top < window.scrollY + window.innerHeight &&
+    top + height > window.scrollY
+  );
+};
+
+window.addEventListener("scroll", ()=>{
+
+  let next = false;
+
+  sections.forEach((sect) => {
+    const a = getLinkById(sect.id);
+
+    if (inView(sect) && !next) {
+      a.classList.add("active");
+      next = true;
+    } else {
+      a.classList.remove("active");
     }
-    ,0
-)
+  });
 
-menuAniReverse.to(
-    navMain, 0.5, {
-        width: 0,
-        ease: Power2.easeIn,
-        transform: "translate3d(0,0,0)"
-    }
-    , 0
-)
-
-menuBtn.addEventListener("click", ()=>{
-    toggle = !toggle;
-    toggle == false ? menuAni.play(0) : menuAniReverse.play(0);
-
-    if(toggle == false){
-        menuBtn.classList.remove("fa-bars");
-        menuBtn.classList.add("fa-chevron-left");
-    }else{
-        menuBtn.classList.remove("fa-chevron-left");
-        menuBtn.classList.add("fa-bars");
-    }
 })
 
-*/
+/* 
+ window.onscroll = () => {
+  let next = false;
 
 observe_work.observe(document.querySelector('#portfolio'));
 
@@ -271,4 +279,12 @@ window.addEventListener("scroll", ()=>{
   });
 
 }) */
-
+/* 
+    if (inView(sect) && !next) {
+      a.classList.add("active");
+      next = true;
+    } else {
+      a.classList.remove("active");
+    }
+  });
+}; */

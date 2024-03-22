@@ -100,6 +100,7 @@ form.addEventListener("change", ()=>{
 
 
 /* MESSENGER VALIDATION */
+/*
 let msgName = document.querySelector("#name");
 let msgEmail = document.querySelector("#email");
 let msgSubject = document.querySelector("#subject");
