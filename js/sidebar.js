@@ -92,12 +92,17 @@ if(window.innerWidth >= "480"){
 
 } 
 
+if(window.innerWidth <= 480){
 
-navButton.forEach( a => {
+  navButton.forEach( a => {
+  
+    a.addEventListener("click", mobileMenu);
+  
+  });
 
-  a.addEventListener("click", mobileMenu);
+}
 
-});
+
 
 menuB.addEventListener("click", mobileMenu);
 
