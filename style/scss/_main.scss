@@ -10,15 +10,44 @@ $media-mobile: 500px;
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body,html{
     height: 100%;
 }
 
 body{
     background-color: var(--bg-dark);
+    overflow-x: hidden;
 }
 
-.page{
+.sidebar{
+    position: fixed;
+}
+
+.main{
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: var(--bg-dark);
+
+    .space{
+
+        height: 20vh;
+        
+    }
+}
+
+.inactive{
+    visibility: hidden;
+}
+
+/* .page{
     &__home,
     &__portfolio,
     &__about,
@@ -70,9 +99,15 @@ body{
         }
     }
 
+    #home{
+
+        height: 100%;
+        background-image: url("../../img/backgrounds/bg_home_AI.jpg");
+
+    }
+
     //background images
     &__home{
-        background-image: url("../../img/backgrounds/bg_home_AI.jpg");
         overflow: hidden;
     }
 
@@ -91,4 +126,4 @@ body{
     &__contact{
         background-image: url("../../img/backgrounds/bg_contact_AI.jpg");
     }
-}
+} */

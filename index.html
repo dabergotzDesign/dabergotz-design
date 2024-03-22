@@ -16,16 +16,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
 
-    <script src="./js/splash.js" defer></script>
-    <!-- <script src="./js/accordion.js" defer></script> -->
-    <!-- <script src="./js/sidebar.js" defer></script> -->
-    <!-- <script src="./js/fade.js" defer></script> -->
+    <script src="./js/sidebar.js" defer></script>
+    <script src="./js/portfolio.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+
     
-    <title>dabergotzDesign - Home</title>
+    <title>dabergotzDesign - UI/UX Design & Frontend Development</title>
 
 </head>
-<body class="page__home">
-    <aside class="sidebar">
+<body>
+    <aside class="sidebar hidden">
 
         <h1 class="sidebar__title">
             <img src="./img/logo_site_transparent.png" height="154" width="270" alt="dabergotzDesign logo">
@@ -35,40 +35,49 @@
         <div class="navigation">
             <nav class="sidebar__nav">
                 <ul>
-                    <li class="sidebar__nav-item"><a href="#">Home</a></li>
-                    <li class="sidebar__nav-item"><a href="javascript: delay('./html/portfolio.html')">Portfolio</a></li>
-                    <li class="sidebar__nav-item"><a href="javascript: delay('./html/about.html')">About</a></li>
-                    <li class="sidebar__nav-item"><a href="javascript: delay('./html/blog.html')">Blog</a></li>
-                    <li class="sidebar__nav-item"><a href="javascript: delay('./html/contact.html')">Contact</a></li>
+                    <li class="sidebar__nav-item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="sidebar__pole"></li>
+                    <li class="sidebar__nav-item"><a href="#portfolio" class="nav__link">Work</a></li>
+                    <li class="sidebar__pole"></li>
+                    <li class="sidebar__nav-item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="sidebar__pole"></li>
+                    <li class="sidebar__nav-item"><a href="#blog" class="nav__link">Blog</a></li>
+                    <li class="sidebar__pole"></li>
+                    <li class="sidebar__nav-item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>            
             </nav>
     
             <nav class="sidebar__nav-mobile">
                 <ul>
-                    <li class="mobile__nav-item"><a href="#"><i class="fa-solid fa-house"></i> Home </a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./html/portfolio.html')"><i class="fa-solid fa-book"></i> Portfolio </a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./html/about.html')"><i class="fa-solid fa-user"></i> About </a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./html/blog.html')"><i class="fa-solid fa-pen"></i> Blog </a></li>
-                    <li class="mobile__nav-item"><a href="javascript: delay('./html/contact.html')"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                    <li class="mobile__nav-item"><a href="#home" class="nav__link"><i class="fa-solid fa-house"></i> Home </a></li>
+                    <li class="mobile__nav-item"><a href="#portfolio" class="nav__link"><i class="fa-solid fa-book"></i> Work </a></li>
+                    <li class="mobile__nav-item"><a href="#about" class="nav__link"><i class="fa-solid fa-user"></i> About </a></li>
+                    <li class="mobile__nav-item"><a href="#blog" class="nav__link"><i class="fa-solid fa-pen"></i> Blog </a></li>
+                    <li class="mobile__nav-item"><a href="#contact" class="nav__link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
+
+            <!-- mobile menu button -->
+            <button class="nav__button menu"><i class="fa-solid fa-bars icon"></i></button>
 
         </div>
 
     </aside>
     
-    <main class="home__main">
+    <main class="main">
+
+    <section id="home" class="main__section">
         
-        <h1 class="page__headline inactive">home</h1>
+        <h1 class="home__headline inactive">home</h1>
         
-        <section class="welcome__box">
+        <div class="welcome__box">
                   
             <div class="welcome__title">
                 <h1>
                     Welcome to dabergotzDesign
                 </h1>
                 <h1 id="subheadline">
-                    A portfolio website from dennis dabergotz
+                    UI/UX Design & Front End Development <br> by Dennis Dabergotz
                 </h1>
             </div>
 
@@ -77,8 +86,8 @@
                 
                 <div class="accordion__card">
                     
-                    <label for="home" class="accordion__radio"></label>
-                    <input type="radio" name="card" id="home">
+                    <label for="h" class="accordion__radio"></label>
+                    <input type="radio" checked="checked" name="card" id="h">
 
                     <div class="accordion__image home">
                         <h2>home</h2>
@@ -99,15 +108,15 @@
                 
                 <div class="accordion__card">
 
-                    <label for="portfolio" class="accordion__radio"></label>
-                    <input type="radio" name="card" id="portfolio">
+                    <label for="p" class="accordion__radio"></label>
+                    <input type="radio" name="card" id="p">
 
                     <div class="accordion__image portfolio">
-                        <h2>portfolio</h2>
+                        <h2>work</h2>
                     </div>
                     <div class="panel">
 
-                        <h2>portfolio</h2>
+                        <h2>work</h2>
 
                         <p class="card__text">
                             Check out my portfolio <br> ( work includes frontend development & UI/UX Design ) for some of my favorite work, that I like to present.
@@ -116,15 +125,15 @@
                             My work focuses on front-end development and UI/UX design, all presented as websites with different challenges and themes.
                         </p> -->
 
-                        <a href="./html/portfolio.html">check out my work <i>→</i></a>
+                        <a href="#portfolio">check out my work <i>→</i></a>
                     </div>
 
                 </div>
 
                 <div class="accordion__card">
                     
-                    <label for="about" class="accordion__radio"></label>
-                    <input type="radio" name="card" id="about">
+                    <label for="a" class="accordion__radio"></label>
+                    <input type="radio" name="card" id="a">
 
                     <div class="accordion__image about">
                         <h2>about</h2>
@@ -139,7 +148,7 @@
                             I got you covered. 
                         </p>
 
-                        <a href="./html/about.html">learn more about me <i>→</i></a>
+                        <a href="#about">learn more about me <i>→</i></a>
                     </div>
 
 
@@ -147,8 +156,8 @@
 
                 <div class="accordion__card">
 
-                    <label for="blog" class="accordion__radio"></label>
-                    <input type="radio" name="card" id="blog">
+                    <label for="b" class="accordion__radio"></label>
+                    <input type="radio" name="card" id="b">
 
                     <div class="accordion__image blog">
                         <h2>blog</h2>
@@ -164,14 +173,14 @@
                             and more.
                         </p> -->
 
-                        <a href="./html/blog.html">some news <i>→</i></a>
+                        <a href="#blog">some news <i>→</i></a>
                     </div>
                 </div>
 
                 <div class="accordion__card">
 
-                    <label for="contact" class="accordion__radio"></label>
-                    <input type="radio" name="card" id="contact">
+                    <label for="c" class="accordion__radio"></label>
+                    <input type="radio" name="card" id="c">
 
                     <div class="accordion__image contact">
                         <h2>contact</h2>
@@ -185,20 +194,450 @@
                             I am open to talk.
                         </p>
 
-                        <a href="./html/contact.html">get in contact <i>→</i></a>
+                        <a href="#contact">get in contact <i>→</i></a>
                     </div>
                 </div>
 
             </div>
 
-        </section>
+        </div>
+    </section>
+
+    <div class="space"></div>
+
+    <section id="portfolio" class="main__section">
+        <h1 class="title">I invite you to my portfolio</h1>
+            
+            <div class="container">
+                <div class="slider__wrapper">
+                    
+                    <button class="slider__button-left"><i class="fa-solid fa-chevron-left"></i></button>
+
+                    <div class="card__wrapper">
+
+                        <div class="card previous">
+                            <div class="card__image">
+                                <img src="../img/portfolio/WallOfWishes_site.jpg" alt="App Genshin Teams">
+                                <figure class="card__info">
+                                    <figcaption>
+                                        Destiny 2 - Wall of Wishes
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="card current active">
+                            <div class="card__image">
+                                <img src="../img/portfolio/traveler_companion.png" alt="App Genshin Teams">
+                                <figure class="card__info">
+                                    <figcaption>
+                                        Genshin-Teams App Ver. 0.2
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="card next">
+                            <div class="card__image">
+                                <img src="../img/portfolio/weeb_shop.png" alt="App Genshin Teams">
+                                <figure class="card__info">
+                                    <figcaption>
+                                        Weeb Shop
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>   
+                        
+                    </div>
+                    
+                    <button class="slider__button-right"><i class="fa-solid fa-chevron-right"></i></button>
+
+                </div>
+            </div>
+
+        <div class="space"></div>
+
+        <!-- <div class="modal__wrapper"> -->
+            <div class="modal__container">
+
+                <i class="close fa-solid fa-close"></i>
+
+                <!-- Genshin Teams  -->
+                <div class="modal__card-1">
+
+                    <div class="slider__wrapper">
+                        <div class="slider">
+
+                                <img src="./img/portfolio/traveler_companion.png" alt="Genshin-Teams App">                         
+
+                                <img src="./img/portfolio/Desktop - Team.png" alt="Genshin-Teams App">                       
+
+                                <img src="./img/portfolio/Desktop - Character.png" alt="Genshin-Teams App">
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="modal__card-info">
+                        
+                        <h3>Genshin-Teams App Ver. 0.2</h3>
+                        
+                        <div class="card__content">
+
+                            <div>
+                                <div class="card__shorts">
+                                    <h4>What used?</h4>
+                                    <p>HTML, SASS, JS</p>
+                                </div>
+                                <div class="card__shorts">
+                                    <h4>When?</h4>
+                                    <p>2023</p>
+                                </div>
+                                <div class="card__links">
+                                    <a href="https://dabergotzdesign.github.io/Genshin-Teams----light-/index.html" target="_blank">visit</a>
+                                    <a href="https://github.com/dabergotzDesign/Genshin-Teams----light-" target="_blank">Github</a>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="card__info-text">
+                                
+                                <p>
+                                    An app that works with the fan-made Genshin API based on the game 'Genshin Impact'.
+                                    This version of my app was to test the API and create Teams.
+                                    Light version says that it is just a demo of the real version that I like to made out of this one.
+                                </p>
+                                <p>
+                                    This demo is in javascript and will use PHP in the full version.
+                                    Because of that I decided to present it only as a download/forkable version on my Github.
+                                </p>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        
+                </div>
+
+                <!-- Weeb Shop -->
+                <div class="modal__card-2">
+                    
+                    <div class="slider__wrapper">
+                        <div class="slider">
+
+                                <img src="./img/portfolio/weeb_shop.png" alt="Weeb Shop front page">                         
+
+                                <img src="./img/portfolio/weeb_shop_order_form.png" alt="Weeb Shop order form">                       
+
+                                <img src="./img/portfolio/weeb_shop_success.png" alt="Weeb Shop successful order">
+
+                        </div>
+                    </div>
+
+
+                    <div class="modal__card-info">
+                        
+                        <h3>Weeb Shop</h3>
+                        
+                        <div class="card__content">
+
+                            <div>
+                                <div class="card__shorts">
+                                    <h4>What used?</h4>
+                                    <p>HTML, SASS, PHP, JS</p>
+                                </div>
+                                <div class="card__shorts">
+                                    <h4>When?</h4>
+                                    <p>2023</p>
+                                </div>
+                                <div class="card__links">
+                                    <a href="https://www.figma.com/proto/0zFs7L54uKLCl3DoMdrGXj/Weeb-Shop?page-id=0%3A1&type=design&node-id=1-3&viewport=-1264%2C213%2C0.52&t=s6wHfIMxH0X5MIBd-1&scaling=min-zoom&mode=design" target="_blank">Design</a>
+                                    <a href="https://github.com/dabergotzDesign/weeb_shop" target="_blank">Github</a>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="card__info-text">
+                                
+                                <p>
+                                    This site is a PHP project which was one of the final projects for the FiGD(Institute for education an development and design)
+                                    The idea of the project was to build a little shop where I can work with a MySQL Library of dummy users.
+                                    Since the site is in PHP I provide a link to my Github to fork/download the project.
+                                </p>
+                                <p>
+                                    While I can't show you the final product. I can instead showcase the design from Figma.
+                                </p>
+                            </div>
+                            
+                        </div>
+                        </div>
+                </div>
+
+                <!-- Wall of Wishes -->
+                <div class="modal__card-3">
+
+                    <div class="slider__wrapper">
+                        <div class="slider">
+
+                                <img src="./img/portfolio/WallOfWishes_site.jpg" alt="Wall of Wishes front page">                         
+
+                                <img src="./img/portfolio/WallOfWishes_riven.jpg" alt="Wall of Wishes Riven">                       
+
+                                <img src="./img/portfolio/WallOfWishes_eggs.png" alt="Wall of Wishes corrupted eggs">
+
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="modal__card-info">
+                        
+                        <h3>wall of wishes</h3>
+                        
+                        <div class="card__content">
+
+                            <div>
+                                <div class="card__shorts">
+                                    <h4>What used?</h4>
+                                    <p>HTML, CSS, JS, React</p>
+                                </div>
+                                <div class="card__shorts">
+                                    <h4>When?</h4>
+                                    <p>2023</p>
+                                </div>
+                                <div class="card__links">
+                                    <a href="https://dabergotzdesign.github.io/wallofwishes/" target="_blank">visit</a>
+                                    <a href="https://www.figma.com/file/SCj7QPxAnAcHzi40AJ0Lh2/Wall-of-Wishes?type=design&node-id=0%3A1&mode=design&t=bM7zsYvntq1h7zAs-1" target="_blank">Design</a>
+                                    <a href="https://github.com/dabergotzDesign/wallofwishes" target="_blank">Github</a>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="card__info-text">
+                                
+                                <p>
+                                   The idea behind this project was to recreate a game feature within a React App. Working with React & Javascript to showcase an application with many different features.
+                                </p>
+                                <p>
+                                    This Version is not optimized and has a view bugs.
+                                    When I have the time I'll fix it, as I have to make more than just looking at the bugs.
+                                </p>
+                            </div>
+                            
+                        </div>
+                        </div>
+                </div>
+                    
+            </div>
+        <!-- </div> -->
+       
+
+    </section>
+
+    <div class="space"></div>
+
+    <section id="about" class="main__section">
+        <h1 class="title">Yep, that's me</h1>
+
+        <div class="about__container">
+
+            <div class="about__intro">
+                <div class="about__text">
+                    <div class="about__image">                    
+                        <img class="about__image-portrait" src="../img/ddabergotz.png" width="1720px" height="1956px" alt="dabergotzDesign profile image">                  
+                    </div>
+                    
+                    <div class="about__intro-text">
+                    <h3 class="about__title">May I introduce myself</h3>
+                    <p class="about__description">
+                        Hi everyone, my name is Dennis Dabergotz a Web Developer with interest in design, games and technology.
+                        <br>
+                        Coming from a more hand crafting background, I turned my eyes on to the digital way when I started at the <em>School for Games</em>
+                        as Game Developer.                     
+
+                        <p class="about__description">
+                        Back then I wasn't sure about the coding part, though I was more focused on design and art. Everything changed on the second game project.
+                        <br>
+                        A simple game that I had to manage together with a college who was also involved in it. 
+                        With this project and some game projects afterwards, I've grown on coding  for game mechanics and getting more more save with manganing code and development.
+                        After the graduation of <em>School for Games</em> the following months got me to finishing up my final game project and 
+                        try to get into a job position as Game Developer - Level Design to be precise.
+                        </p>
+
+                        <p class="about__description">
+                        The non-success on that part got me slowly into Web Development.
+                        With the help, or more precisely a kick in the butt, of a company where I got some help
+                        to convert to Web Development.
+                        This process led me to two different educations on Web Development.
+                        </p>
+                    </p>
+                </div>
+
+            </div>
+            </div>
+
+            <div class="about__career">
+               <!--  <section class="about__skill"> -->
+                    <h3 class="about__title">Development Career</h3>
+
+                    <ul class="about__career-tree">
+                        <li>
+                            <p class="career__date">10/2013 - 10/2015</p><p>Education in Game Design - School for Games</p>
+                        </li>
+                        
+                        <li>
+                            <p class="career__date">03/2019 - 03/2020</p><p>Education in Web Development - Digital Career Institute (DCI)</p>
+                        </li>
+
+                        <li>
+                            <p class="career__date">11/2022 - 06/2023</p><p>further Education in Web Development - Fachinstitut für Informatik & Grafikdesign (FiGD)</p>
+                        </li>
+
+                        <li>
+                            <p class="career__date">10/2023 - today</p><p>self education in UI/UX Design - Online</p>
+                        </li>
+                    </ul>
+
+                                          
+
+                    <h3 class="about__title">Web Development Skills</h3>
+                    <ul class="about__skill-tree">
+                        <ol>
+                            <li><i class="fa-brands fa-html5"></i> HTML</li>
+                            <li><i class="fa-brands fa-css3"></i> CSS</li>
+                            <li><i class="fa-brands fa-js"></i> Javascript</li>
+                            <li><i class="fa-brands fa-react"></i> React</li>
+                        </ol>
+                        <ol>
+                            <li><i class="fa-brands fa-sass"></i> Sass</li>
+                            <li><i class="fa-brands fa-php"></i> PHP</li>
+                            <li><i class="fa-brands fa-vuejs"></i> VueJS</li>
+                            <li><i class="fa-brands fa-figma"></i> Figma</li>
+                        </ol>
+                    </ul>
+                    <h3 class="about__title">Other Development Skills</h3>
+                    <ul class="about__skill-tree">
+                        <ol>
+                            <li>Photoshop</li>
+                            <li>Autodesk Maya</li>
+                            <li>C#</li>                          
+                        </ol>
+                        <ol>
+                            <li>Blender</li>
+                            <li>Unreal Engine</li>
+                            <li>Unity 3D</li>
+                        </ol>
+                    </ul>
+               <!--  </section> -->
+            </div>
+            
+        </div>
+
+    </section>
+
+    <div class="space"></div>
+
+    <section id="blog" class="main__section">
+        <h1 class="title">what is happening?</h1>
+
+        <h2>get updates to the site & other projects i have in my blog, <br> happy reading</h2>
+
+        <a href="./html/blog.html" class="button">to the blog <span><i class="fa-solid fa-angle-right"></i></span></a>
+
+    </section>
+
+    <div class="space"></div>
+
+    <section id="contact" class="main__section">
+        
+    
+            <h1 class="title">let's chat, hit me up</h1>
+    
+            <div class="contacts__wrapper">
+    
+    
+                <!-- Messanger -->
+                <div class="contacts__mails envelope_button">               
+                    <p>send me a message</p><i class="fas fa-envelope"></i>
+                </div>
+    
+                <h5>or</h5>
+    
+                <!-- Social Channels -->
+                <div class="contacts__socials">
+    
+                    <h5 class="mobile__healine-socials">contact me on socials</h5>
+              
+                    <ul>
+                        <li>
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/dabergotzDesign" target="_blank">Github</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/dennisdabergotz/" target="_blank">LinkedIn</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-twitter"></i>
+                            <a href="https://twitter.com/dabergotzDesign" target="_blank">Twitter</a>
+                        </li>                   
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Email modal -->
+            <div class="mailModal">
+                <div class="mailModal__Content">
+                    <h1>Send me a message</h1>
+                <span class="closeMail">&times;</span>
+    
+                <div id="form-main">
+                    <div id="form-div">
+                    <form class="form" id="form1" method="POST" action="https://formspree.io/f/myyoeqvb" action="../js/contact.js" onsubmit="return formValidation()">
+                            
+                    <input type="text" name="_gotcha" style="display:none" />
+                        
+                    <div class="input__wrap">
+                        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] input" id="name" />               
+                        <label for="name" class="input__label">Full Name</label>
+                    </div>
+    
+                    <div class="input__wrap">
+                        <input name="email" type="text" class="validate[required,custom[email]] input" id="email" />
+                        <label for="email" class="input__label">Email</label>
+                    </div>
+                    
+                    <div class="input__wrap">
+                        <input name="subject" type="text" class="validate[required,custom[onlyLetter],length[0,30]] input" id="subject" />
+                        <label for="subject" class="input__label">Subject</label>
+                    </div>
+    
+                        
+                        <textarea name="text" class="validate[required,custom[onlyLetter],length[6,300]] input" id="message" placeholder="Your Message"></textarea>
+                        
+    
+                        <div class="submit">
+                        <input type="submit" value="Send Message" class="submit__button" disabled/>
+                        </div>
+    
+                    </form>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+
+
+    </section>
+
+
     </main>
 
     <!-- Splash Screen Overlay -->
-    <div class="splash">
+    <!-- <div class="splash">
         <div class="spinner"></div>
         <img src="./img/dddesign_logo_transparent.png" height="2048" width="2048" alt="logo">
-    </div>
+    </div> -->
     
 </body>
 </html>

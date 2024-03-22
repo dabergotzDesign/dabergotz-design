@@ -1,9 +1,10 @@
 
-let button_next = document.querySelector(".slider__button-right");
-let button_prev = document.querySelector(".slider__button-left");
-let nextCard = document.querySelector(".next");
-let currentCard = document.querySelector(".current");
-let previousCard = document.querySelector(".previous");
+let button_next = document.querySelector(".slider__button-right"),
+ button_prev = document.querySelector(".slider__button-left"),
+ nextCard = document.querySelector(".next"),
+ currentCard = document.querySelector(".current"),
+ previousCard = document.querySelector(".previous");
+ 
 
 
 button_next.addEventListener("click", () =>{
@@ -87,43 +88,64 @@ let closeModal = document.querySelector(".close"),
     card_3 = document.querySelector(".previous"),
     modal_content_1 = document.querySelector(".modal__card-1"),
     modal_content_2 = document.querySelector(".modal__card-2"),
-    modal_content_3 = document.querySelector(".modal__card-3");
+    modal_content_3 = document.querySelector(".modal__card-3"),
+    modal_portfolio = document.querySelector(".modal__container");
+
 
 const modal = document.querySelector(".modal__container");
 
 
 closeModal.addEventListener("click", () =>{
-    modal.style.display = "none";
-    modal_content_1.style.display = "none";
-    modal_content_2.style.display = "none";
-    modal_content_3.style.display = "none";
+
+   modal_portfolio.classList.add("out");
+
+   setTimeout(function(){
+
+     modal.style.display = "none";
+     modal_content_1.style.display = "none";
+     modal_content_2.style.display = "none";
+     modal_content_3.style.display = "none";
+     
+   }, 1000)
+
+
 });
 
 card_1.addEventListener("click", () =>{
 
   if(card_1.classList.contains("active")){
+
+    modal_portfolio.classList.remove("out");
     modal.style.display = "flex";
-    modal_content_1.style.display = "block";
+    modal_content_1.style.display = "block";  
 
   }
 });
 
 card_2.addEventListener("click", () =>{
 
+
   if(card_2.classList.contains("active")){
+
+    modal_portfolio.classList.remove("out");
     modal.style.display = "flex";
-    modal_content_2.style.display = "block";
+    modal_content_2.style.display = "block";    
 
   }
+  
+
 });
 
-card_3.addEventListener("click", () =>{
-
+card_3.addEventListener("click", () =>{  
+  
   if(card_3.classList.contains("active")){
+
+    modal_portfolio.classList.remove("out");
     modal.style.display = "flex";
-    modal_content_3.style.display = "block";
+    modal_content_3.style.display = "block";    
 
   }
+
 });
 
 //MOBILE SLIDER

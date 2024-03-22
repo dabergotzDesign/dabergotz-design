@@ -4,50 +4,52 @@ $media-tablet: 950px;
 $media-mobile-wide: 900px;
 $media-mobile: 600px;
 
-.page{
+//.page{
 
-    &__contact{
+    //&__contact{
 
-        overflow: hidden;
+        //overflow: hidden;
 
-        .contact{
+        //.contact{
 
-        &__main{
-            //width: 80%;
+        #contact{
+
             height: 100%;
             position: relative;
         
             margin: auto;
-            margin-left: 25%;
+            
+            background-image: url("../../img/backgrounds/bg_contact_AI.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
 
-            background-color: var(--bg-dark-transparent);
 
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
             justify-content: center;
-        
-            
-            h2{
-                color: var(--text-light);
-                font-family: var(--font-poppins);
-                font-size: var(--size-h2);
-                font-weight: 400;
-                letter-spacing: 3px;
 
+                  
+            
+            .title{
+                color: var(--text-light);
                 text-align: center;
                 text-transform: uppercase;
-                
-                padding: 2rem;
-                margin-bottom: 6rem;
+                font-size: var(--size-h2);
+                font-family: var(--font-poppins);
+                font-weight: 200;
+
+                background-color: var(--bg-dark-transparent);
+                width: 100%;
+                padding-top: 6rem;
 
                 @media screen and (max-width: $media-mobile-wide) {
-                    margin-bottom: 1rem;
+                    
                 }
 
                 @media screen and (max-width: $media-mobile) {
-                    font-size: 1.5rem;
-                    margin-bottom: 2rem;
+                    font-size: 1.2rem;
                 }
             }
            
@@ -58,6 +60,9 @@ $media-mobile: 600px;
                     align-items: center;
                     gap: 12rem;
 
+                    height: 100%;
+                    width: 100%;
+                    background-color: var(--bg-dark-transparent);
 
                     @media screen and (max-width: $media-tablet) {
                         gap: 8rem;
@@ -289,9 +294,10 @@ $media-mobile: 600px;
                     }
 
                     @media screen and (max-width: $media-mobile) {
-                        width: 90%;
+                        width: 80%;
                         margin-left: 0;
                         margin: auto;
+                        transform: translateX(-10%);
                     }
 
                     h1{
@@ -313,7 +319,7 @@ $media-mobile: 600px;
                         }
                     }
 
-                    .close{
+                    .closeMail{
                         color: var(--text-light);
                         outline: 2px solid var(--bg-light);
                         border-radius: 50%;
@@ -460,15 +466,20 @@ $media-mobile: 600px;
                                 color: var(--text-dark);
                                 background-color: var(--text-light);
                                 border-color: var(--bg-dark);
-                                box-shadow: 0 0 1rem var(--bg-dark-grey) inset;
+                                box-shadow: 0 0 1rem var(--bg-darkgrey) inset;
                             }
 
                             &:disabled{
-                                background-color: var(--bg-dark-grey);
+                                background-color: var(--bg-darkgrey);
                                 border-color: var(--bg-lightgrey);
                                 color: var(--text-disabled);
                                 cursor: not-allowed;
                             }
+
+                            @media screen and (max-width: $media-mobile-wide) {
+                                font-size: 1rem;
+                            }
+
                         }
                     }
 
@@ -476,7 +487,7 @@ $media-mobile: 600px;
               }
         }
 
-        &__title{
+        /* .title{
 
             opacity: 0;
 
@@ -490,13 +501,13 @@ $media-mobile: 600px;
 
             letter-spacing: 4px;
             color: var(--text-light);
-        }
+        } */
 
 
-    }
+    //}
 
-    }
+    //}
 
     
 
-}
+//}

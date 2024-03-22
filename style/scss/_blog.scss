@@ -6,12 +6,114 @@ $media-mobile: 600px;
 
 $color-lightgrey: #bbb;
 
+@mixin titles{
+    color: var(--text-light);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--size-h2);
+    font-family: var(--font-poppins);
+    font-weight: 200;
+
+    padding-top: 4rem;
+}
+
+@mixin backButton{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    color: var(--text-light);
+    font-size: var(--size-h5);
+    font-family: var(--font-poppins);
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: var(--bg-dark);
+    border: thin solid var(--bg-light);
+    padding: 1rem;
+    margin: 2rem;
+
+    transition: all 0.3s ease;
+
+    @media screen and (max-width: $media-mobile) {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+//disables html smooth scroll for gsap/lenis smooth scroll
+.no__smooth{
+    scroll-behavior: auto;
+}
+
+
+#blog{
+    height: 720px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(to bottom, var(--bg-dark), var(--bg-darkgrey));
+
+    .title{
+        @include titles();
+
+        @media screen and (max-width: $media-mobile) {
+            font-size: 20px;
+            font-weight: 300;
+        }
+    }
+
+    h2{
+        @include titles();
+        font-size: var(--size-h3);
+
+        @media screen and (max-width: $media-mobile) {
+            font-size: 16px;
+            width: 50%;
+        }
+    }
+
+    //to the blog button
+    .button{
+        margin: 4rem;
+        padding: 1rem;
+
+        @include titles();
+        padding-top: 1rem;
+        font-size: var(--size-h4);
+        text-decoration: none;
+        font-weight: 500;
+        border: thin solid var(--bg-light);
+        transition: all 0.3s ease;
+
+        &:hover{
+            scale: 1.1;
+            box-shadow: 4px 4px 2px var(--bg-light-transparent);
+        }
+
+        @media screen and (max-width: $media-mobile) {
+            font-size: 16px;
+        }
+    }
+}
+
 
 .page{
+    
     &__blog{
 
         overflow-x: hidden;
-        
+        background-image: url("../../img/backgrounds/bg_blog_AI.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
         /* Scroll button */
         .scroll__top{
             position: fixed;
@@ -28,6 +130,37 @@ $color-lightgrey: #bbb;
             @media screen and (max-width: $media-mobile) {
                 font-size: 1.2rem;
                 right: 0.5%;
+            }
+        }
+
+        /* back to home */
+        .backHome{
+
+            @include backButton();            
+
+            &:hover{
+                scale: 1.1;
+                box-shadow: 2px 2px 2px var(--bg-dark-transparent);
+            }
+
+            @media screen and (max-width: $media-mobile) {
+                display: none;
+            }
+
+        }
+
+        .backHome__mobile{
+            @include backButton();
+            display: none;
+
+            @media screen and (max-width: $media-mobile) {
+                display: block;
+            }
+        }
+
+        span{
+            i{
+                padding-right: 0.5rem;
             }
         }
         
@@ -139,7 +272,7 @@ $color-lightgrey: #bbb;
                             padding: 1rem;
 
                             @media screen and (max-width: $media-mobile) {
-                                font-size: 20px;
+                                font-size: 14px;
                             }
                         }
                         
@@ -162,6 +295,7 @@ $color-lightgrey: #bbb;
                             @media screen and (max-width: $media-mobile) {
                                 font-size: 0.8rem;
                                 padding: 1rem 0.25rem;
+                                text-wrap: wrap;
                             }
                             
                             a{
@@ -394,20 +528,28 @@ $color-lightgrey: #bbb;
             }
 
         }
+
     }
 
-    &__title{
+    &__headline{
         text-align: center;
         text-transform: uppercase;
         text-shadow: 0 0 4px var(--bg-dark);
         
         font-family: var(--font-poppins);
         font-size: 2.5rem;
-        font-weight: 400;
+        font-weight: 300;
 
         letter-spacing: 4px;
         color: var(--text-light);
+
+        @media screen and (max-width: $media-mobile-wide) {
+            font-size: 20px;
+            padding: 1rem 0;
+        }
     }
+
+
 }
 
 //Modal content animation

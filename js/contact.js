@@ -1,19 +1,19 @@
 /* MAIL MODAL */
-const modal = document.querySelector(".mailModal");
+const mailM = document.querySelector(".mailModal");
 const open = document.querySelector(".envelope_button");
-const close = document.querySelector(".close");
+const close = document.querySelector(".closeMail");
 
 open.onclick = function(){
-    modal.style.display = "block";
+    mailM.style.display = "block";
 }
 
 close.onclick = function(){
-    modal.style.display = "none";
+    mailM.style.display = "none";
 }
 
 window.onclick = function(e){
-    if(e.target == modal){
-        modal.style.display = "none";
+    if(e.target == mailM){
+        mailM.style.display = "none";
     }
 }
 
