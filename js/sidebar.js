@@ -76,7 +76,7 @@ const menuB = document.querySelector(".nav__button"),
       menuIcon = document.querySelector(".icon"),
       sidebarM = document.querySelector(".sidebar");
 
-let navButton = document.querySelectorAll(".nav__link");
+let navButton = document.querySelectorAll(".mobile__nav-item");
 
 
 if(window.innerWidth >= "480"){
