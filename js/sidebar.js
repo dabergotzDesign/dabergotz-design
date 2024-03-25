@@ -79,7 +79,7 @@ const menuB = document.querySelector(".nav__button"),
 let navButton = document.querySelectorAll(".mobile__nav-item");
 
 
-if(window.innerWidth >= "480"){
+if(window.innerWidth >= "900"){
   
   menuB.style.display = "none";
 
@@ -92,7 +92,8 @@ if(window.innerWidth >= "480"){
 
 } 
 
-if(window.innerWidth <= 480){
+//for small tablet and mobile wide
+if(window.innerWidth <= "900"){
 
   navButton.forEach( a => {
   
