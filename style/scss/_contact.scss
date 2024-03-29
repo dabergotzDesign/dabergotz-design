@@ -45,7 +45,7 @@ $media-mobile: 600px;
                 padding-top: 6rem;
 
                 @media screen and (max-width: $media-mobile-wide) {
-                    
+                    font-size: 1.4rem;
                 }
 
                 @media screen and (max-width: $media-mobile) {
@@ -293,6 +293,10 @@ $media-mobile: 600px;
                         scale: 0.9;
                     }
 
+                    @media screen and (max-width: $media-mobile-wide) {
+                        margin: 0 5%;
+                    }
+
                     @media screen and (max-width: $media-mobile) {
                         width: 80%;
                         margin-left: 0;
@@ -338,9 +342,13 @@ $media-mobile: 600px;
                             color:var(--text-light);
                         }
 
+                        @media screen and (max-width: $media-mobile-wide) {
+                            font-size: 1.6rem;
+                            padding: 0 6px;
+                        }
+
                         @media screen and (max-width: $media-mobile) {
                             font-size: 1.2rem;
-                            padding: 0 6px;
                         }
                     }
 
@@ -354,7 +362,7 @@ $media-mobile: 600px;
                             outline: 1px solid var(--text-light);
                             margin-bottom: 2.5rem;
 
-                            @media screen and (max-width: $media-mobile) {
+                            @media screen and (max-width: $media-mobile-wide) {
                                 width: 100%;
                             }
 
@@ -374,7 +382,7 @@ $media-mobile: 600px;
                                     border: 2px solid var(--bg-light);
                                 }
 
-                                @media screen and (max-width: $media-mobile) {
+                                @media screen and (max-width: $media-mobile-wide) {
                                     font-size: 1rem;
                                     letter-spacing: 2px;
                                 }
@@ -438,6 +446,10 @@ $media-mobile: 600px;
                     #message{
                         resize: vertical;
                         height: 12vh;
+
+                        @media screen and (max-width: $media-mobile-wide) {
+                            height: 45vh;
+                        }
                     }
 
                     .submit{

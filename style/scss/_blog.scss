@@ -62,9 +62,10 @@ $color-lightgrey: #bbb;
     .title{
         @include titles();
 
-        @media screen and (max-width: $media-mobile) {
-            font-size: 20px;
+        @media screen and (max-width: $media-mobile-wide) {
+            font-size: 24px;
             font-weight: 300;
+            padding-top: 2rem;
         }
     }
 
@@ -72,9 +73,10 @@ $color-lightgrey: #bbb;
         @include titles();
         font-size: var(--size-h3);
 
-        @media screen and (max-width: $media-mobile) {
-            font-size: 16px;
+        @media screen and (max-width: $media-mobile-wide) {
+            font-size: 1rem;
             width: 50%;
+            padding-top: 2rem;
         }
     }
 
@@ -96,8 +98,8 @@ $color-lightgrey: #bbb;
             box-shadow: 4px 4px 2px var(--bg-light-transparent);
         }
 
-        @media screen and (max-width: $media-mobile) {
-            font-size: 16px;
+        @media screen and (max-width: $media-mobile-wide) {
+            font-size: 1rem;
         }
     }
 }
@@ -143,7 +145,7 @@ $color-lightgrey: #bbb;
                 box-shadow: 2px 2px 2px var(--bg-dark-transparent);
             }
 
-            @media screen and (max-width: $media-mobile) {
+            @media screen and (max-width: $media-mobile-wide) {
                 display: none;
             }
 
@@ -153,8 +155,13 @@ $color-lightgrey: #bbb;
             @include backButton();
             display: none;
 
-            @media screen and (max-width: $media-mobile) {
+            @media screen and (max-width: $media-mobile-wide) {
                 display: block;
+                transform: translateX(-12%);
+            }
+
+            @media screen and (max-width: $media-mobile) {
+                transform: translateX(0);
             }
         }
 
