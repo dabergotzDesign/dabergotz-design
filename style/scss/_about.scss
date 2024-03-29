@@ -89,7 +89,7 @@ $media-mobile: 480px;
                     font-family: var(--font-poppins);
                     font-weight: 200;
 
-                    @media screen and (max-width: $media-mobile) {
+                    @media screen and (max-width: $media-mobile-wide) {
                         font-size: 20px;
                         padding-bottom: 2rem;
                     }
