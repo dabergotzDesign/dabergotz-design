@@ -10,11 +10,9 @@ $media-mobile: 500px;
     box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
-}
 
 body,html{
+    scroll-behavior: smooth !important;
     height: 100%;
     overflow-x: hidden;
 }
@@ -29,6 +27,7 @@ body{
 
 .main{
     height: 100%;
+    width: auto;
 
     background-position: center;
     background-size: cover;
