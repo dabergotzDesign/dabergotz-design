@@ -78,7 +78,6 @@ button_prev.addEventListener("click", () =>{
 
 });
 
-//mobile
 
 
 //MODAL

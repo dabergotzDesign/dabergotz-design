@@ -294,14 +294,13 @@ $media-mobile: 600px;
                     }
 
                     @media screen and (max-width: $media-mobile-wide) {
-                        margin: 0 5%;
+                        margin: auto;
                     }
 
                     @media screen and (max-width: $media-mobile) {
-                        width: 80%;
+                        width: 90%;
                         margin-left: 0;
                         margin: auto;
-                        transform: translateX(-10%);
                     }
 
                     h1{
