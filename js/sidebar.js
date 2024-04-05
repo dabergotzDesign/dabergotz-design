@@ -125,7 +125,80 @@ function mobileMenu(){
 
 /////CURRENT SECTION ACTIVE
 
-let sections = [...document.querySelectorAll(".main__section")];
+const observe_home = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      document.querySelectorAll(".nav__link")[0].classList.add("active");
+    }else{
+      document.querySelectorAll(".nav__link")[0].classList.remove("active");
+    }
+    
+  });
+});
+
+observe_home.observe(document.querySelector('#home'));
+
+//////////////
+
+const observe_work = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      document.querySelectorAll(".nav__link")[1].classList.add("active");
+    }else{
+      document.querySelectorAll(".nav__link")[1].classList.remove("active");
+    }
+    
+  });
+});
+
+observe_work.observe(document.querySelector('#portfolio'));
+
+///////////////////////
+
+const observe_about = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      document.querySelectorAll(".nav__link")[2].classList.add("active");
+    }else{
+      document.querySelectorAll(".nav__link")[2].classList.remove("active");
+    }
+    
+  });
+});
+
+observe_about.observe(document.querySelector('#about'));
+
+///////////////
+
+const observe_blog = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      document.querySelectorAll(".nav__link")[3].classList.add("active");
+    }else{
+      document.querySelectorAll(".nav__link")[3].classList.remove("active");
+    }
+    
+  });
+});
+
+observe_blog.observe(document.querySelector('#blog'));
+
+//////////////////////-
+
+const observe_contact = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      document.querySelectorAll(".nav__link")[4].classList.add("active");
+    }else{
+      document.querySelectorAll(".nav__link")[4].classList.remove("active");
+    }
+    
+  });
+});
+
+observe_contact.observe(document.querySelector('#contact'));
+
+/* let sections = [...document.querySelectorAll(".main__section")];
 const getLinkById = (id) => document.querySelector(`a[href='#${id}']`);
 
 
@@ -160,21 +233,5 @@ window.addEventListener("scroll", ()=>{
     }
   });
 
-})
+}) */
 
-/* 
- window.onscroll = () => {
-  let next = false;
-
-  sections.forEach((sect) => {
-    const a = getLinkById(sect.id);
-
-    if (inView(sect) && !next) {
-      a.classList.add("active");
-      next = true;
-    } else {
-      a.classList.remove("active");
-    }
-  });
-};
- */
