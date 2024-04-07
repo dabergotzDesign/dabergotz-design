@@ -479,17 +479,19 @@ $media-mobile: 600px;
                         .slider__button-left,
                        .slider__button-right{
                             background: none;
-                            border: 1px solid var(--bg-light);
+                            border: none;
                             cursor: pointer;
                             font-size: var(--size-h1);
                             color: var(--text-light);
-                            background-color: var(--bg-dark-transparent);
+                            //background-color: var(--bg-dark-transparent);
                             height: 80%;
+                            width: 15%;
                             padding: 1rem;
+                            transition: all 0.3s ease;
 
-                            &:focus{
+                            /* &:focus{
                                 border: 2px solid var(--bg-light);
-                            }
+                            } */
 
                             @media screen and (max-width: $media-tablet-wide) {
                                 padding: 0.8rem;
@@ -505,6 +507,13 @@ $media-mobile: 600px;
                                 font-size: 18px;
                                 height: fit-content;
                             }
+
+                       }
+
+                       //button icons left & right
+                       .slider__button-right:hover i,
+                       .slider__button-left:hover i{                        
+                          scale: 1.2;                                           
                        }
 
                        //Slider Cards
