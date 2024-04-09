@@ -8,12 +8,22 @@ open.onclick = function(){
 }
 
 close.onclick = function(){
+    mailM.classList.add("out");
     mailM.style.display = "none";
+
+    setTimeout(() => {
+        mailM.classList.remove("out");
+    }, 300);
 }
 
 window.onclick = function(e){
     if(e.target == mailM){
+        mailM.classList.add("out");
         mailM.style.display = "none";
+
+        setTimeout(() => {
+            mailM.classList.remove("out");
+        }, 300);
     }
 }
 
