@@ -15,6 +15,10 @@ close.onclick = function(){
     }, 300);
     
     mailM.style.display = "none";
+
+    setTimeout(() => {
+        mailM.classList.remove("out");
+    }, 300);
 }
 
 window.onclick = function(e){
@@ -26,6 +30,10 @@ window.onclick = function(e){
         }, 300);
         
         mailM.style.display = "none";
+
+        setTimeout(() => {
+            mailM.classList.remove("out");
+        }, 300);
     }
 } */
 
