@@ -19,6 +19,8 @@ close.onclick = function(){
     setTimeout(() => {
         mailM.classList.remove("out");
     }, 300);
+    
+    mailM.style.display = "none";
 }
 
 window.onclick = function(e){
@@ -34,6 +36,8 @@ window.onclick = function(e){
         setTimeout(() => {
             mailM.classList.remove("out");
         }, 300);
+        
+        mailM.style.display = "none";
     }
 } */
 

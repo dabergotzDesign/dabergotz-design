@@ -2,9 +2,12 @@
 INTRO
 
 Hi everyone, my name is Dennis Dabergotz a Front End Web Developer with interest in design, games and technology.
-Coming from a more hand crafting background, I turned my eyes on to the digital way when I started at the <italic> School for Games </italic>
-as game developer.
-Graduating then as Game Developer got me into Web Development through suggestions.
-And this is where I ended up loving it and see a future in it. Especially being involved in the design process. Hello UI/UX Design.  
+Coming from a more hand crafting background, I turned my eyes on the digital way, which lead me to the <italic> School for Games </italic>
+to become game developer.
+
+Graduating as Game Developer got me into Web Development through suggestions, because a career as Game Developer is fragile.
+I felled more and more in love with Web Development. Especially the Front-End and Design part. Hello UI/UX Design I said to myself and now after some online courses &
+more self-study on the material, I want to go the way as UI/UX Designer.
+
 
 

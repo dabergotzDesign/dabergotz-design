@@ -51,6 +51,7 @@ window.onclick = function(event){
     document.querySelector(".compare .before .after").style.width= (+e.target.value) + "px";
 }); */
 
+//scroll to top
 
 /* Pagination */
 
