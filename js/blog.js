@@ -1,5 +1,5 @@
 // Get the modal
-const modal = document.querySelector(".modal");
+const modalBlog = document.querySelector(".modal__blog");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 let modalImg = document.querySelector(".img01");
@@ -9,8 +9,8 @@ let getImg = document.querySelectorAll(".blog__img");
 
 getImg.forEach((getImg)=>{
     getImg.onclick=function(){
-        modal.classList.remove("disabled");
-        modal.classList.add("active");
+        modalBlog.classList.remove("disabled");
+        modalBlog.classList.add("active");
         modalImg.src=this.src;
         captionText.innerHTML=this.alt;
     } 
@@ -20,18 +20,18 @@ getImg.forEach((getImg)=>{
 let close = document.querySelector(".close");
 
 // When the user clicks on <span> (x), close the modal
-// close image in modal
+// close image in modalBlog
 close.addEventListener("click",()=>{
-    if(modal.classList.contains("active")){
-        modal.classList.remove("active");
-        modal.classList.add("disabled");
+    if(modalBlog.classList.contains("active")){
+        modalBlog.classList.remove("active");
+        modalBlog.classList.add("disabled");
     }
 });
 
 window.onclick = function(event){
-    if(event.target == modal){
-        modal.classList.remove("active");
-        modal.classList.add("disabled");
+    if(event.target == modalBlog){
+        modalBlog.classList.remove("active");
+        modalBlog.classList.add("disabled");
     };
 };
 
@@ -40,25 +40,17 @@ document.querySelector(".compare #compare-ip").addEventListener("input", (e)=>{
     document.querySelector(".compare .before .after").style.width= (+e.target.value) + "px";
 });
 
+//scroll to top
 
-///FADE IN
-/* function inView(el) {
-    const rect = el.getBoundingClientRect();
+const scrollUpBtn = document.querySelector(".scroll__top"),
+        blog = document.querySelector(".page__blog");
 
-    return(
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+scrollUpBtn.addEventListener("click", () =>{
 
-const blog = document.querySelector(".blog__section");
-const post = document.querySelectorAll('.post');
+   blog.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+   })
 
+});
 
-document.addEventListener("scroll", () =>{
-    post.forEach(el => {
-        el.classList.add("active");
-    });
-}) */

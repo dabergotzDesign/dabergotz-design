@@ -79,28 +79,26 @@ button_prev.addEventListener("click", () =>{
 });
 
 
-
 //MODAL
 let closeModal = document.querySelector(".close"),
     card_1 = document.querySelector(".current"),
     card_2 = document.querySelector(".next"),
     card_3 = document.querySelector(".previous"),
+    modalWork = document.querySelector(".modal__container"),
     modal_content_1 = document.querySelector(".modal__card-1"),
     modal_content_2 = document.querySelector(".modal__card-2"),
     modal_content_3 = document.querySelector(".modal__card-3"),
     modal_portfolio = document.querySelector(".modal__container");
 
 
-const modal = document.querySelector(".modal__container");
-
-
-closeModal.addEventListener("click", () =>{
+  
+  closeModal.addEventListener("click", () =>{
 
    modal_portfolio.classList.add("out");
 
    setTimeout(function(){
 
-     modal.style.display = "none";
+     modalWork.style.display = "none";
      modal_content_1.style.display = "none";
      modal_content_2.style.display = "none";
      modal_content_3.style.display = "none";
@@ -115,7 +113,7 @@ card_1.addEventListener("click", () =>{
   if(card_1.classList.contains("active")){
 
     modal_portfolio.classList.remove("out");
-    modal.style.display = "flex";
+    modalWork.style.display = "flex";
     modal_content_1.style.display = "block";  
 
   }
@@ -127,7 +125,7 @@ card_2.addEventListener("click", () =>{
   if(card_2.classList.contains("active")){
 
     modal_portfolio.classList.remove("out");
-    modal.style.display = "flex";
+    modalWork.style.display = "flex";
     modal_content_2.style.display = "block";    
 
   }
@@ -140,7 +138,7 @@ card_3.addEventListener("click", () =>{
   if(card_3.classList.contains("active")){
 
     modal_portfolio.classList.remove("out");
-    modal.style.display = "flex";
+    modalWork.style.display = "flex";
     modal_content_3.style.display = "block";    
 
   }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no__smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +23,7 @@
     <script src="../js/blog.js" defer></script>
     <!-- <script src="../js/sidebar.js" defer></script> -->
 </head>
-<body class="page__blog">
+<body class="page__blog" id="no__smooth">
 
   <!-- <aside class="sidebar">
 
@@ -507,7 +507,7 @@
 
 
       <!-- Modal -->
-      <div class="modal disabled">
+      <div class="modal__blog disabled">
         <!-- close button -->
         <span class="close">×</span>
         <figure>
@@ -518,10 +518,7 @@
 
 
     <!-- back to top button -->
-    <div onclick="window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });"  class="scroll__top fa-solid fa-chevron-up"></div>
+    <div class="scroll__top fa-solid fa-chevron-up"></div>
 
     <!-- back to home page -->
     <a href="../index.html" class="backHome"><span><i class="fa-solid fa-angle-left"></i></span> back to home</a>

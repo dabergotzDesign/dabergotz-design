@@ -235,8 +235,9 @@ $media-mobile: 600px;
                     color: var(--text-light);
                     font-family: var(--font-hepta);
                     font-weight: 500;
-                    font-size: 1.4rem;
+                    font-size: 1.5rem;
                     text-shadow: 0 0 4px var(--bg-dark);
+                    
 
                     @media screen and (max-width: $media-tablet-wide) {
                         font-size: 1rem;
@@ -329,6 +330,11 @@ $media-mobile: 600px;
                     &__description{
                         font-family: var(--font-hepta);                        
                         padding: 1rem 0.25rem;
+                        margin: auto;
+                        width: 60%;
+                        text-wrap: wrap;
+                        line-height: 145%;
+                        letter-spacing: 2px;
                         
                         @media screen and (max-width: $media-mobile) {
                             font-size: 0.9rem;

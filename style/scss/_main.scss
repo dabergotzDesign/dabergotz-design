@@ -18,8 +18,13 @@ body,html{
     overflow-x: hidden;
 }
 
+
 body{
     background-color: var(--bg-dark);
+    
+    &#no__smooth{
+        scroll-behavior: auto !important;
+    }
 }
 
 .sidebar{

@@ -43,14 +43,6 @@ $color-lightgrey: #bbb;
     }
 }
 
-//disables html smooth scroll for gsap/lenis smooth scroll
-.no__smooth{
-    scroll-behavior: auto;
-}
-
-
-
-
 
 #blog{
     height: 720px;
@@ -450,6 +442,8 @@ $color-lightgrey: #bbb;
 
                 /* MODAL WITH IMAGES */
                 .modal{
+
+                    &__blog{
                     position: fixed;
                     z-index: 999;
                     padding-top: 100px;
@@ -457,9 +451,41 @@ $color-lightgrey: #bbb;
                     top:0;
                     width:100%;
                     height:100%;
-                    /*   background-color: black; */
+            
                     background-color: var(--bg-dark-transparent);
                     overflow-y: scroll;
+
+                    &.active{
+                        display: block;
+                    }
+
+                    &.disabled{
+                        display: none;
+                    }
+
+                    /* close button */
+                    .close{
+                        position: absolute;
+                        top: 5%;
+                        right: 8%;
+                        //padding: 4px 7px;
+
+                        color: var(--text-light);
+                        //outline: 2px solid var(--bg-light);
+                        //border-radius: 50%;
+                        font-size: 3rem;
+                        font-weight: 600;
+                        transition: all 0.3s ease;
+                    }
+                    
+                    .close:hover,
+                    .close:focus{
+                        color: $color-lightgrey;
+                        outline-color: $color-lightgrey;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
 
                     &__content{
                         margin:auto;
@@ -503,36 +529,8 @@ $color-lightgrey: #bbb;
                         letter-spacing: 1px;
                     }
 
-                    &.active{
-                        display: block;
-                    }
-
-                    &.disabled{
-                        display: none;
-                    }
-
-                    /* close button */
-                    .close{
-                        position: absolute;
-                        top: 5%;
-                        right: 8%;
-                        //padding: 4px 7px;
-
-                        color: var(--text-light);
-                        //outline: 2px solid var(--bg-light);
-                        //border-radius: 50%;
-                        font-size: 3rem;
-                        font-weight: 600;
-                        transition: all 0.3s ease;
-                    }
                     
-                    .close:hover,
-                    .close:focus{
-                        color: $color-lightgrey;
-                        outline-color: $color-lightgrey;
-                        text-decoration: none;
-                        cursor: pointer;
-                    }
+                    
                 }
 
             }
