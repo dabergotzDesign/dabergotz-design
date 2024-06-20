@@ -44,6 +44,10 @@ $media-mobile: 600px;
                 width: 100%;
                 padding-top: 6rem;
 
+                @media screen and (max-width: $media-tablet-wide) {
+                    font-size: 36px;
+                }
+
                 @media screen and (max-width: $media-mobile-wide) {
                     font-size: 1.4rem;
                 }
@@ -302,6 +306,7 @@ $media-mobile: 600px;
                         animation: moveOut 0.3s ease;
                     }
 
+                    
                     @media screen and (max-width: $media-tablet) {
                         margin: 20% auto;
                         margin-left: 20%;
@@ -378,6 +383,10 @@ $media-mobile: 600px;
                             margin-bottom: 2.5rem;
                             margin-left: 1.2rem;
 
+                            @media screen and (max-width: $media-tablet-wide) {
+                                margin-left: 0;
+                            }
+
                             @media screen and (max-width: $media-mobile-wide) {
                                 width: 100%;
                             }
@@ -396,14 +405,14 @@ $media-mobile: 600px;
                                     outline: 1px solid var(--bg-lightgrey);
 
                                     &:not(:placeholder-shown){
-                                        background-color: #111;
+                                        background-color: var(--bg-dark);
                                     }
                                 
 
                                 &:focus,
                                 &:not(:placeholder-shown){
-                                    background-color: var(--bg-darkgrey);
-                                    border: none;
+                                    background-color: var(--bg-dark);
+                                    border: 2px solid var(--bg-light);
                                     outline: none;
                                     height: 100%;
                                     width: 100%;
@@ -418,11 +427,11 @@ $media-mobile: 600px;
                                     top: -12%;
                                     left: 1%; 
                                     padding: 0 0.5rem;
-                                    background-color: var(--bg-darkgrey);                           
+                                    background-color: var(--bg-dark);                           
                                 }
 
 
-                                @media screen and (max-width: $media-mobile-wide) {
+                                @media screen and (max-width: $media-mobile) {
                                     font-size: 1rem;
                                     letter-spacing: 2px;
                                 }
@@ -452,6 +461,7 @@ $media-mobile: 600px;
                                 top: -40%;
                                 left: 0;
                                 padding-left: 0;
+                                font-size: 0.8rem;
                             }
 
                         }
