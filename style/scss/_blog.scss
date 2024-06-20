@@ -660,6 +660,7 @@ body{
                                 font-size: 0.8rem;
                                 padding: 1rem 0.25rem;
                                 text-wrap: wrap;
+                                line-height: 140%;
                             }
                             
                             a{
@@ -711,6 +712,11 @@ body{
 
                                 @media screen and (max-width: $media-laptop) {
                                     width: 90%;
+                                }
+
+                                @media screen and (max-width: $media-tablet-wide) {
+                                    max-width: calc(720px / 1.8);
+                                    max-height: calc(512px / 1.8);
                                 }
 
                                 @media screen and (max-width: $media-tablet) {

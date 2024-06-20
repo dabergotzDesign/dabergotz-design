@@ -17,7 +17,10 @@ aside{
 
     height: 100%;
     width: 8vw;
-   
+
+    @media screen and (max-width: $media-mobile) {
+        width: 28vw;  
+    }   
 
     background-image: linear-gradient(-45deg, var(--bg-grey-transparent), var(--bg-dark-transparent), var(--bg-dark-transparent));
     outline: 1px solid var(--bg-light);
@@ -26,11 +29,16 @@ aside{
 
     &.hidden{
         width: 0;
-
+        
+        
         .sidebar{
-
+            
             &__title{
                 display: none;
+                }
+                
+                &__nav{
+                opacity: 0;
             }
 
             &__nav-mobile{
@@ -40,12 +48,12 @@ aside{
         }
     }
 
-    @media screen  and (max-width: $media-tablet){
-        width: fit-content;
-    }
+    /* @media screen  and (max-width: $media-tablet-wide){
+        width: 12vw;
+    } */
 
      
-    @media screen and (max-width: $media-mobile-wide) {
+    /* @media screen and (max-width: $media-mobile-wide) {
         gap: 0;
         width: 16%;
     }
@@ -53,7 +61,7 @@ aside{
     @media screen and (max-width: $media-mobile) {
         gap: 15%;
         width: 18%;
-    }
+    } */
 
 
 
@@ -96,6 +104,14 @@ aside{
             left: 16%;
             outline: thin solid var(--bg-light);
             transition: all 0.3s ease;
+
+            @media screen and (max-width: $media-tablet) {
+                left: 11%;
+            }
+
+            @media screen and (max-width: $media-mobile) {
+                left: 25%;
+            }
 
             i{
                 color: var(--text-light);
@@ -223,7 +239,7 @@ aside{
             //NAVIGATION MOBILE VERSION
             &-mobile{
                 display: none;
-                width: 18vw;
+                width: 28vw;
                 position: relative;
                 margin-top: auto;
                 margin-bottom: auto;
