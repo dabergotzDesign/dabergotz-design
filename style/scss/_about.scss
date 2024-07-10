@@ -40,11 +40,14 @@ $media-mobile: 600px;
                 background-position: center;
                 background-repeat: no-repeat;
                 
-                display: flex;
+                /* display: flex;
                 flex-flow: column nowrap;
                 align-items: center;
                 justify-content: center;
-                gap: 4rem;
+                gap: 4rem; */
+                display: grid;
+                place-content: center;
+                
 
                 @media screen and (max-width: $media-mobile) {
                     gap:0;
@@ -77,9 +80,10 @@ $media-mobile: 600px;
                 align-items: center;
 
                 margin: auto;
-                margin-left: 20%;
-                margin-right: 10%;
-
+                margin-top: 5%;
+                margin-left: 12%;
+                width: 80%;
+                
                 
                 @media screen and (max-width: $media-mobile) {
                     margin: auto;

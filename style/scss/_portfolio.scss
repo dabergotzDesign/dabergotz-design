@@ -505,7 +505,7 @@ $media-mobile: 600px;
                             cursor: pointer;
                             font-size: var(--size-h1);
                             color: var(--text-light);
-                            //background-color: var(--bg-dark-transparent);
+                            //background-color: red; //to check on the whole button
                             height: 80%;
                             width: 15%;
                             padding: 1rem;
@@ -527,8 +527,10 @@ $media-mobile: 600px;
 
                             @media screen and (max-width: $media-mobile) {
                                 font-size: 18px;
-                                width: 25%;
+                                width: 30%;
+                                padding: 0 1rem;
                             }
+
 
                        }
 
@@ -669,7 +671,7 @@ $media-mobile: 600px;
                         @media screen and (max-width: $media-mobile) {
                             top: 0;
                             left: 0;
-                            transform: translateX(-450%);
+                            transform: translateX(-480%);
                         }
 
                        }

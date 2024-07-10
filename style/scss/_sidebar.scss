@@ -19,6 +19,10 @@ aside{
     height: 100%;
     width: 8vw;
 
+    @media screen and (max-width: $media-tablet) {
+        width: 13vw;         
+    }
+
     @media screen and (max-width: $media-mobile) {
         width: 28vw;  
     }   
@@ -68,8 +72,8 @@ aside{
 
     //sidebar logo
     img{
-        height: calc(154px / 2);
-        width: calc(270px / 2);
+        height: auto;
+        width: 100%;
 
         margin: 5% 0;
        
@@ -117,6 +121,11 @@ aside{
             i{
                 color: var(--text-light);
                 font-size: 1.1rem;
+
+                @media screen and (max-width: $media-tablet) {
+                    font-size: 1.5rem;
+                    padding: 0.25rem;
+                }
             }
 
             &.menu{
