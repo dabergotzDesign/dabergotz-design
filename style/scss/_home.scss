@@ -51,6 +51,9 @@ $height: 36vh;
             //margin-left: 15%;
             height: 110%;
             background-image: url("../../img/backgrounds/bg_home_AI.jpg");
+            background-size: cover;
+            background-position: center center;
+           
             
             position: relative;
             z-index: 1;
@@ -344,7 +347,7 @@ $height: 36vh;
                             }
 
                             &.blog{
-                                background-image: url("../../img/backgrounds/bg_blog_AI.jpg");
+                                background-image: url("../../img/backgrounds/ddesign_blog_bg.jpg");
                             }
 
                             &.contact{

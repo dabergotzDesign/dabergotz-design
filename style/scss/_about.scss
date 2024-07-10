@@ -43,7 +43,7 @@ $media-mobile: 480px;
                 background-repeat: no-repeat;
                 background: var(--c-dark);
                 
-                display: flex;
+                /* display: flex;
                 flex-flow: column nowrap;
                                 
                 position: relative;
@@ -537,7 +537,7 @@ $media-mobile: 480px;
             }
         
         
-        }
+        /* } */
 
         @keyframes primaryScroll {
             from{left: 0;}
