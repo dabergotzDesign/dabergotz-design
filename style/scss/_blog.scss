@@ -517,7 +517,7 @@ $color-lightgrey: #bbb;
 
                     /* close button */
                     .close{
-                        position: absolute;
+                        position: fixed;
                         top: 5%;
                         right: 8%;
                         padding: 0.05em 0.3em;
@@ -528,6 +528,12 @@ $color-lightgrey: #bbb;
                         font-size: 3rem;
                         font-weight: 600;
                         transition: all 0.3s ease;
+
+                        @media screen and (max-width: $media-mobile) {
+                            scale: 0.5;
+                            top: 10%;
+                            right: 2%;
+                        }
                     }
                     
                     .close:hover,
@@ -557,7 +563,7 @@ $color-lightgrey: #bbb;
                         }
 
                         @media screen and (max-width: $media-mobile) {
-                            width: 80%;
+                            width: 90%;
                         }
                     }
 
