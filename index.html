@@ -7,20 +7,24 @@
     <link rel="stylesheet" href="./style/css/style.css">
     <link rel="shortcut icon" href="./img/logo_favicon.png" type="image/x-icon">
 
+    
+    <!-- FONTS -->
+    <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Poppins:wght@200;300;400;700&family=Space+Mono&display=swap" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <!-- GSAP, ScrollTrigger, Lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
 
     <script src="./js/sidebar.js" defer></script>
     <script src="./js/portfolio.js" defer></script>
     <script src="./js/contact.js" defer></script>
+    <script src="./js/gsap.js" defer></script>
 
     
     <title>dabergotzDesign - UI/UX Design & Frontend Development</title>
@@ -30,7 +34,38 @@
     <aside class="sidebar hidden">
 
         <h1 class="sidebar__title">
-            <img src="./img/svg/ddesign_logo.svg" alt="dabergotzDesign logo">
+            <!-- <img src="./img/svg/ddesign_logo.svg" alt="dabergotzDesign logo"> -->
+
+            <svg width="1798px" height="566px" viewbox="0 0 1920 1080" preserveAspectRatio="xMinYMin slice" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                <g>
+                    <g id="Final_curves">
+                        <path d="M406.094,409.599L509.062,409.599C615.446,409.599 672.542,334.935 672.542,230.503C672.542,137.295 613.982,66.047 510.038,66.047L406.094,66.047L406.094,409.599ZM415.854,74.831L508.574,74.831C607.638,74.831 662.294,141.687 662.294,230.991C662.294,338.839 601.782,400.815 510.038,400.815L415.854,400.815L415.854,74.831Z" style="fill:white;"/>
+                        <path d="M920.934,285.647C921.422,280.279 921.422,278.815 921.422,273.447C921.422,227.087 897.998,161.207 822.846,161.207C763.31,161.207 721.342,210.007 721.342,287.599C721.342,347.623 747.206,414.479 821.87,414.479C873.598,414.479 901.414,386.175 916.054,348.111L906.294,348.111C892.142,379.831 869.206,405.695 821.382,405.695C768.678,405.695 731.102,361.287 731.102,285.647L920.934,285.647ZM731.59,276.863C734.518,214.399 768.678,169.991 822.358,169.991C882.87,169.991 912.15,218.303 912.15,276.863L731.59,276.863Z" style="fill:white;"/>
+                        <path d="M970.222,345.183C977.054,388.127 1002.92,415.455 1060.01,415.455C1110.28,415.455 1142.97,390.079 1142.97,349.575C1142.97,313.951 1124.92,292.967 1061.48,276.863C1005.85,262.711 992.67,247.583 992.67,219.279C992.67,194.391 1010.73,169.991 1057.57,169.991C1107.35,169.991 1124.92,200.247 1128.82,227.087L1138.58,227.087C1134.68,190.487 1107.84,161.207 1058.06,161.207C1006.33,161.207 982.91,189.511 982.91,220.255C982.91,251.487 996.574,269.055 1057.57,285.159C1120.04,301.751 1132.73,319.319 1132.73,350.551C1132.73,381.295 1109.3,406.671 1060.01,406.671C1012.19,406.671 988.278,386.175 979.982,345.183L970.222,345.183Z" style="fill:white;"/>
+                        <path d="M1204.95,409.599L1214.71,409.599L1214.71,167.063L1204.95,167.063L1204.95,409.599ZM1204.95,87.519L1214.71,87.519L1214.71,43.111L1204.95,43.111L1204.95,87.519Z" style="fill:white;"/>
+                        <path d="M1480.67,232.943C1480.67,201.223 1481.16,172.919 1481.16,167.063L1471.89,167.063C1471.89,170.479 1471.4,193.415 1471.4,220.255C1463.59,191.463 1439.68,161.207 1386.49,161.207C1333.29,161.207 1281.08,203.663 1281.08,288.575C1281.08,364.703 1325,409.599 1382.09,409.599C1428.45,409.599 1458.22,387.639 1470.91,346.159L1470.91,399.839C1470.91,473.527 1450.41,514.031 1377.7,514.031C1329.88,514.031 1302.55,488.655 1295.23,453.031L1285.47,453.031C1290.84,489.631 1319.14,522.815 1377.21,522.815C1456.27,522.815 1480.67,478.895 1480.67,401.303L1480.67,232.943ZM1386,170.479C1463.59,170.479 1471.4,235.383 1471.4,283.695C1471.4,342.743 1455.29,400.327 1382.58,400.327C1332.32,400.327 1291.33,359.823 1291.33,288.087C1291.33,219.767 1327.93,170.479 1386,170.479Z" style="fill:white;"/>
+                        <path d="M1563.63,409.599L1573.39,409.599L1573.39,276.375C1573.39,219.279 1606.09,170.479 1664.16,170.479C1713.93,170.479 1737.36,207.567 1737.36,255.879L1737.36,409.599L1747.61,409.599L1747.61,254.903C1747.61,184.631 1706.13,161.207 1665.62,161.207C1607.06,161.207 1582.17,201.711 1573.39,228.063C1573.88,199.271 1573.39,178.287 1572.9,167.063L1563.14,167.063C1563.14,172.431 1563.63,202.199 1563.63,226.111L1563.63,409.599Z" style="fill:white;"/>
+                        <path d="M226.962,409.599L329.93,409.599C436.314,409.599 493.41,334.935 493.41,230.503C493.41,137.295 434.85,66.047 330.906,66.047L226.962,66.047L226.962,409.599ZM236.722,74.831L329.442,74.831C428.506,74.831 483.162,141.687 483.162,230.991C483.162,338.839 422.65,400.815 330.906,400.815L236.722,400.815L236.722,74.831Z" style="fill:white;fill-rule:nonzero;"/>
+                        <path d="M44.862,409.599L147.83,409.599C254.214,409.599 311.31,334.935 311.31,230.503C311.31,137.295 252.75,66.047 148.806,66.047L44.862,66.047L44.862,409.599ZM54.622,74.831L147.342,74.831C246.406,74.831 301.062,141.687 301.062,230.991C301.062,338.839 240.55,400.815 148.806,400.815L54.622,400.815L54.622,74.831Z" style="fill:white;fill-rule:nonzero;"/>
+                        <rect x="1499.28" y="436.271" width="251.607" height="8" style="fill:white;"/>
+                        <rect x="47.111" y="436.271" width="1218.44" height="8" style="fill:white;"/>
+                    </g>
+                    <g>
+                        <path d="M406.094,409.599L509.062,409.599C615.446,409.599 672.542,334.935 672.542,230.503C672.542,137.295 613.982,66.047 510.038,66.047L406.094,66.047L406.094,409.599ZM415.854,74.831L508.574,74.831C607.638,74.831 662.294,141.687 662.294,230.991C662.294,338.839 601.782,400.815 510.038,400.815L415.854,400.815L415.854,74.831Z" style="fill:white;"/>
+                        <path d="M920.934,285.647C921.422,280.279 921.422,278.815 921.422,273.447C921.422,227.087 897.998,161.207 822.846,161.207C763.31,161.207 721.342,210.007 721.342,287.599C721.342,347.623 747.206,414.479 821.87,414.479C873.598,414.479 901.414,386.175 916.054,348.111L906.294,348.111C892.142,379.831 869.206,405.695 821.382,405.695C768.678,405.695 731.102,361.287 731.102,285.647L920.934,285.647ZM731.59,276.863C734.518,214.399 768.678,169.991 822.358,169.991C882.87,169.991 912.15,218.303 912.15,276.863L731.59,276.863Z" style="fill:white;"/>
+                        <path d="M970.222,345.183C977.054,388.127 1002.92,415.455 1060.01,415.455C1110.28,415.455 1142.97,390.079 1142.97,349.575C1142.97,313.951 1124.92,292.967 1061.48,276.863C1005.85,262.711 992.67,247.583 992.67,219.279C992.67,194.391 1010.73,169.991 1057.57,169.991C1107.35,169.991 1124.92,200.247 1128.82,227.087L1138.58,227.087C1134.68,190.487 1107.84,161.207 1058.06,161.207C1006.33,161.207 982.91,189.511 982.91,220.255C982.91,251.487 996.574,269.055 1057.57,285.159C1120.04,301.751 1132.73,319.319 1132.73,350.551C1132.73,381.295 1109.3,406.671 1060.01,406.671C1012.19,406.671 988.278,386.175 979.982,345.183L970.222,345.183Z" style="fill:white;"/>
+                        <path d="M1204.95,409.599L1214.71,409.599L1214.71,167.063L1204.95,167.063L1204.95,409.599ZM1204.95,87.519L1214.71,87.519L1214.71,43.111L1204.95,43.111L1204.95,87.519Z" style="fill:white;"/>
+                        <path d="M1480.67,232.943C1480.67,201.223 1481.16,172.919 1481.16,167.063L1471.89,167.063C1471.89,170.479 1471.4,193.415 1471.4,220.255C1463.59,191.463 1439.68,161.207 1386.49,161.207C1333.29,161.207 1281.08,203.663 1281.08,288.575C1281.08,364.703 1325,409.599 1382.09,409.599C1428.45,409.599 1458.22,387.639 1470.91,346.159L1470.91,399.839C1470.91,473.527 1450.41,514.031 1377.7,514.031C1329.88,514.031 1302.55,488.655 1295.23,453.031L1285.47,453.031C1290.84,489.631 1319.14,522.815 1377.21,522.815C1456.27,522.815 1480.67,478.895 1480.67,401.303L1480.67,232.943ZM1386,170.479C1463.59,170.479 1471.4,235.383 1471.4,283.695C1471.4,342.743 1455.29,400.327 1382.58,400.327C1332.32,400.327 1291.33,359.823 1291.33,288.087C1291.33,219.767 1327.93,170.479 1386,170.479Z" style="fill:white;"/>
+                        <path d="M1563.63,409.599L1573.39,409.599L1573.39,276.375C1573.39,219.279 1606.09,170.479 1664.16,170.479C1713.93,170.479 1737.36,207.567 1737.36,255.879L1737.36,409.599L1747.61,409.599L1747.61,254.903C1747.61,184.631 1706.13,161.207 1665.62,161.207C1607.06,161.207 1582.17,201.711 1573.39,228.063C1573.88,199.271 1573.39,178.287 1572.9,167.063L1563.14,167.063C1563.14,172.431 1563.63,202.199 1563.63,226.111L1563.63,409.599Z" style="fill:white;"/>
+                        <path d="M226.962,409.599L329.93,409.599C436.314,409.599 493.41,334.935 493.41,230.503C493.41,137.295 434.85,66.047 330.906,66.047L226.962,66.047L226.962,409.599ZM236.722,74.831L329.442,74.831C428.506,74.831 483.162,141.687 483.162,230.991C483.162,338.839 422.65,400.815 330.906,400.815L236.722,400.815L236.722,74.831Z" style="fill:white;fill-rule:nonzero;"/>
+                        <path d="M44.862,409.599L147.83,409.599C254.214,409.599 311.31,334.935 311.31,230.503C311.31,137.295 252.75,66.047 148.806,66.047L44.862,66.047L44.862,409.599ZM54.622,74.831L147.342,74.831C246.406,74.831 301.062,141.687 301.062,230.991C301.062,338.839 240.55,400.815 148.806,400.815L54.622,400.815L54.622,74.831Z" style="fill:white;fill-rule:nonzero;"/>
+                        <rect x="1499.28" y="436.271" width="251.607" height="8" style="fill:white;"/>
+                        <rect x="47.111" y="436.271" width="1218.44" height="8" style="fill:white;"/>
+                    </g>
+                </g>
+            </svg>
+
+
             <a href="javascript: delay('index.html')"></a>
         </h1>
 
@@ -75,17 +110,20 @@
         <div class="welcome__box">
                   
             <div class="welcome__title">
-                <h1>
-                    Welcome to dabergotzDesign
-                </h1>
-                <h1 id="subheadline">
-                    UI/UX Design & Front End Development <br> by Dennis Dabergotz
-                </h1>
+                <div class="mask">
+                    <h1 class="headline">
+                        Welcome to dabergotzDesign
+                    </h1>
+                </div>
+                <div class="mask">
+                    <h1 id="subheadline">
+                        UI/UX Design & Front End Development <br> by Dennis Dabergotz
+                    </h1>
+                </div>
             </div>
 
             <div class="welcome_accordion_container">
-
-                
+                                
                 <div class="accordion__card">
                     
                     <label for="h" class="accordion__radio"></label>
@@ -195,12 +233,19 @@
                         </p>
 
                         <a href="#contact">get in contact <i>→</i></a>
-                    </div>
+                    </div>                
                 </div>
 
             </div>
 
         </div>
+
+        <video width="1920" height="1080" autoplay loop>
+            <source src="./video/lights.mp4" type="video/mp4" >
+        </video>
+
+        <div class="bg-home"></div>
+
     </section>
 
     <div class="space"></div>
@@ -263,46 +308,32 @@
 
                 <i class="close">&times;</i>
 
-                <!-- Genshin Teams  -->
+                <!-- Traveler Companion  -->
                 <div class="modal__card-1">
-
-                    <div class="slider__wrapper">
-                        <div class="slider">
-
-                                <img src="./img/portfolio/traveler_companion.png" alt="Genshin-Teams App">                         
-
-                                <img src="./img/portfolio/Desktop - Team.png" alt="Genshin-Teams App">                       
-
-                                <img src="./img/portfolio/Desktop - Character.png" alt="Genshin-Teams App">
-
-                        </div>
-                        
+                    <div class="slider">
+                        <img src="./img/portfolio/traveler_companion.png" alt="Traveler Companion App">
+                        <img src="./img/portfolio/Desktop - Character.png" alt="Traveler Companion App">
+                        <img src="./img/portfolio/Desktop - Team.png" alt="Traveler Companion App">
                     </div>
-
                     <div class="modal__card-info">
-                        
-                        <h3>Genshin-Teams App Ver. 0.2</h3>
-                        
+                        <h1>Traveler Companion</h1>
                         <div class="card__content">
-
                             <div>
-                                <div class="card__shorts">
+                                <div class="shorts">
                                     <h4>What used?</h4>
-                                    <p>HTML, SASS, JS</p>
+                                    <p>HTML, Sass, JS</p>
                                 </div>
-                                <div class="card__shorts">
+                                <div class="shorts">
                                     <h4>When?</h4>
                                     <p>2023</p>
                                 </div>
-                                <div class="card__links">
+                                <div class="links">
                                     <a href="https://dabergotzdesign.github.io/Genshin-Teams----light-/index.html" target="_blank">visit</a>
                                     <a href="https://github.com/dabergotzDesign/Genshin-Teams----light-" target="_blank">Github</a>
                                 </div>
                             </div>
-                            
-                            
-                            <div class="card__info-text">
-                                
+
+                            <div class="info">
                                 <p>
                                     An app that works with the fan-made Genshin API based on the game 'Genshin Impact'.
                                     This version of my app was to test the API and create Teams.
@@ -312,119 +343,92 @@
                                     Current release is a demo with just the team building system. More to come.
                                 </p>
                             </div>
-                            
                         </div>
-                        </div>
-                        
+
+                    </div>
                 </div>
 
-                <!-- Stream Hub -->
+                <!-- Stream Hub  -->
                 <div class="modal__card-2">
-                    
-                    <div class="slider__wrapper">
-                        <div class="slider">
+                    <div class="slider">
+                        <img src="./img/portfolio/StreamHub_home.png" alt="home page stream hub">                         
 
-                                <img src="./img/blog-imgs/streamhub/home_page.png" alt="home page stream hub">                         
+                        <img src="./img/portfolio/StreamHub_streamer_site.png" alt="page for streamer presentation">                       
 
-                                <img src="./img/blog-imgs/streamhub/Streamer_site.png" alt="page for streamer presentation">                       
-
-                                <img src="./img/blog-imgs/streamhub/Landing_Page.png" alt="landing page of stream hub advertising the app">
-
-                        </div>
+                        <img src="./img/portfolio/StreamHub_landing.png" alt="landing page of stream hub advertising the app">
                     </div>
-
-
                     <div class="modal__card-info">
-                        
-                        <h3>Stream Hub - case study</h3>
-                        
+                        <h1>Stream Hub</h1>
                         <div class="card__content">
-
                             <div>
-                                <div class="card__shorts">
+                                <div class="shorts">
                                     <h4>What used?</h4>
                                     <p>Figma, Easy Diffusion</p>
                                 </div>
-                                <div class="card__shorts">
+                                <div class="shorts">
                                     <h4>When?</h4>
                                     <p>2024</p>
                                 </div>
-                                <div class="card__links">
+                                <div class="links">
                                     <a href="https://www.figma.com/design/3nHHX5Fp7jD8ZE4WeB6fpt/StreamHub?node-id=25-328&t=b3lj0TpQ7yYLP31W-1" target="_blank">Design</a>
                                 </div>
                             </div>
-                            
-                            
-                            <div class="card__info-text">
-                                
+
+                            <div class="info">
                                 <p>
                                     A companion app for social streaming platforms. Used as an hub to cover live streams.
                                 </p>
                                 <p>
-                                    The idea is simple to have a hub for streaming platforms, which this case study shows.
-                                    
+                                    The idea is simple to have a hub for streaming platforms, which this case study shows.                                    
                                 </p>
                             </div>
-                            
                         </div>
-                        </div>
+
+                    </div>
                 </div>
 
-                <!-- Wall of Wishes -->
+                <!-- Valar Morghulis  -->
                 <div class="modal__card-3">
+                    <div class="slider">
+                        <img src="./img/portfolio/vm_throne.png" alt="Valar Morghulis - Home Page">                         
 
-                    <div class="slider__wrapper">
-                        <div class="slider">
+                        <img src="./img/portfolio/vm_wolf.png" alt="Valar Morghulis - House Stark Page">                       
 
-                                <img src="./img/portfolio/vm_throne.png" alt="Valar Morghulis - Home Page">                         
-
-                                <img src="./img/portfolio/vm_wolf.png" alt="Valar Morghulis - House Stark Page">                       
-
-                                <img src="./img/portfolio/vm_dragon.png" alt="Valar Morghulis - House Tagaryen Page">
-
-                        </div>
-                        
+                        <img src="./img/portfolio/vm_dragon.png" alt="Valar Morghulis - House Tagaryen Page">
                     </div>
-
-
                     <div class="modal__card-info">
-                        
-                        <h3>Valar Morghulis - A Game of Thrones Fan site</h3>
-                        
+                        <h1>Valar Morghulis - A Game of Thrones fan site</h1>
                         <div class="card__content">
-
                             <div>
-                                <div class="card__shorts">
+                                <div class="shorts">
                                     <h4>What used?</h4>
-                                    <p>HTML, CSS, Sass, JS</p>
+                                    <p>HTML, Sass, JS</p>
                                 </div>
-                                <div class="card__shorts">
+                                <div class="shorts">
                                     <h4>When?</h4>
                                     <p>2019 & 2024</p>
                                 </div>
-                                <div class="card__links">
+                                <div class="links">
                                     <a href="https://dabergotzdesign.github.io/valar-morghulis" target="_blank">visit</a>
                                     <a href="https://github.com/dabergotzDesign/valar-morghulis" target="_blank">Github</a>
                                 </div>
                             </div>
-                            
-                            
-                            <div class="card__info-text">
-                                
+
+                            <div class="info">
                                 <p>
-                                 A fan site about the show 'Game of Thronse' showcasing the great houses and some of their members.
-                                </p>
-                                <p>
-                                    The idea behind this project was to create a site with a theme - in this case 'Game of Thrones'.
-                                    Not only was my goal to play with the overall theme of the show but also the themes of the different houses.
-                                    Overall it was fun to play with themes and working with images and video.
-                                </p>
+                                    A fan site about the show 'Game of Thronse' showcasing the great houses and some of their members.
+                                   </p>
+                                   <p>
+                                       The idea behind this project was to create a site with a theme - in this case 'Game of Thrones'.
+                                       Not only was my goal to play with the overall theme of the show but also the themes of the different houses.
+                                       Overall it was fun to play with themes and working with images and video.
+                                   </p>
                             </div>
-                            
                         </div>
-                        </div>
+
+                    </div>
                 </div>
-                    
+  
             </div>
         <!-- </div> -->
        
@@ -447,18 +451,12 @@
                     <div class="about__intro-text">
                     <h3 class="about__title">May I introduce myself</h3>
                     <p class="about__description">
-                        Hi everyone, my name is Dennis Dabergotz a Front End Web Developer with interest in design, games and technology.
-                        
+                        Hello everyone, I'm Dennis Dabergotz, a Front-End Web Developer with a passion for design, games, and technology. 
+                        Originating from a hands-on <br> crafting background, I transitioned to the digital realm at the School for Games, initially aiming to become a Game Developer.
                         <p class="about__description">
-                            Coming from a more hand crafting background, I turned my eyes on the digital way, which lead me to the <em> School for Games </em>
-                            to become Game Developer.
-                        </p>
-
-                        <p class="about__description">
-                            Graduating as Game Developer got me into Web Development through suggestions, because a career as Game Developer is fragile. 
-                            <br>
-                            I felled more and more in love with Web Development. Especially the Front-End and Design part. "<em>Hello UI/UX Design</em>" I said to myself and now after some online courses &
-                            self-study on the material, I want to go the way as UI/UX Designer.
+                            However, upon graduation, I was steered towards Web Development due to its stability compared to game development. 
+                            I quickly grew fond of Web Development, particularly the Front-End and Design aspects. 
+                            This led me to explore UI/UX Design through online courses and self-study. Now, I'm keen to pursue a career as a UI/UX Designer.
                         </p>
                     </p>
                 </div>

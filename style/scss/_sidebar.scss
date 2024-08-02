@@ -78,7 +78,7 @@ aside{
         margin: 5% 0;
        
 
-        @media screen and (max-width: $media-tablet-wide) {
+        /* @media screen and (max-width: $media-tablet-wide) {
             height: calc(154px / 2.5);
             width: calc(270px / 2.5);
         }
@@ -94,7 +94,13 @@ aside{
             scale: 0.9;
             margin-top: 5%;
             padding: 0.25rem;
-        }
+        } */
+    }
+
+    svg{
+        width: fit-content;
+        height: auto;
+        padding: 1em;
     }
 
     .navigation{
@@ -123,13 +129,13 @@ aside{
                 font-size: 1.1rem;
 
                 @media screen and (max-width: $media-tablet) {
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     padding: 0.25rem;
                 }
             }
 
             &.menu{
-                left: 3%;
+                left: 0;
             }
         }
     }
@@ -147,6 +153,10 @@ aside{
            display: flex;
            align-items: center;
            justify-content: center;
+
+           img{
+            padding: 1em;
+           }
             
             a{
                 position: absolute;
@@ -160,8 +170,9 @@ aside{
         &__pole{
             list-style: none;
             height: 24px;
-            width: 0;
-            border: 1px solid var(--bg-light);
+            width: 1px;
+            background-color: var(--bg-light);
+            opacity: 0.2;
         }
         
         &__nav{
@@ -184,36 +195,37 @@ aside{
                 padding: 0.25rem;
                 position: relative;
                 transition: all 0.3s ease;
+                overflow: hidden;
 
                 &:hover{
                     scale: 1.2;
                 }
 
-                &::before,
+                /* &::before,
                 &::after{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        content: '';
+                        content: '•';
                         background: var(--bg-light);                        
-                    }
+                    } */
 
                 &::before{
-                    height: 0;
-                    width: 2px;
+                    display: none;
+                    content: '•';
+                    font-size: 1.2rem;
+                    color: var(--bg-light);
                 }
 
-                &::after{
+               
+                /* &::after{
                     width: 0;
                     height: 2px;
-                }
+                } */
                 
 
                 a{
                     text-decoration: none;
                     text-align: center;
 
-                    font-size: 20px;
+                    font-size: 1.1rem;
                     font-family: var(--font-poppins);
                     font-weight: 200;
 
@@ -231,7 +243,7 @@ aside{
 
                     //tablet mode wide
                     @media screen and (max-width: $media-tablet-wide) {
-                        font-size: 20px;
+                        font-size: 0.8rem;
                     }                    
 
                     //mobile mode
@@ -243,7 +255,12 @@ aside{
             }
 
             li .active{
-                outline: thin solid var(--bg-light);
+                //outline: thin solid var(--bg-light);
+                font-weight: 400;
+                letter-spacing: 6px;
+                //border-bottom: 1px solid var(--text-light);
+                
+
             }
 
             //NAVIGATION MOBILE VERSION

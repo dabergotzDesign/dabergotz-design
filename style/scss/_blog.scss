@@ -111,6 +111,7 @@ $color-lightgrey: #bbb;
 }
 
 
+
 .page{
     
     &__blog{
@@ -121,6 +122,20 @@ $color-lightgrey: #bbb;
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+
+        &::-webkit-scrollbar{
+            width: 5px;
+        }  
+        
+        &::-webkit-scrollbar-thumb{
+           background-color: var(--bg-light);
+           border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track{
+            background-color: var(--bg-dark-transparent);
+        }
+
 
         /* Scroll button */
         .scroll__top{
@@ -202,7 +217,7 @@ $color-lightgrey: #bbb;
             justify-content: flex-start;
             align-items: center;
 
-            //margin-left: 5%;
+            margin-top: 8em;
 
             @media screen and (max-width: $media-tablet) {
                 justify-content: center;
@@ -256,6 +271,7 @@ $color-lightgrey: #bbb;
                         font-family: var(--font-poppins);
                         font-size: var(--size-h3);
                         font-weight: 400;
+                        margin: 0.1em 0.3em;
 
                         @media screen and (max-width: $media-mobile) {
                             font-size: 1.1rem;
@@ -348,8 +364,8 @@ $color-lightgrey: #bbb;
                 
                            .blog__img{
                                 
-                                max-width: 720px;
-                                max-height: 512px;
+                                max-width: 45em;
+                                max-height: 32em;
                                 width: 100%;
                                 height: 100%;
                                 object-fit: cover;
@@ -362,18 +378,18 @@ $color-lightgrey: #bbb;
                                 cursor: pointer;
 
                                 @media screen and (max-width: $media-tablet-wide) {
-                                    max-width: calc(720px / 1.8);
-                                    max-height: calc(512px / 1.8);
+                                    max-width: calc(45em / 1.8);
+                                    max-height: calc(32em / 1.8);
                                 }
 
                                 @media screen and (max-width: $media-tablet) {
-                                    max-width: calc(720px / 2);
-                                    max-height: calc(512px / 2);
+                                    max-width: calc(45em / 2);
+                                    max-height: calc(32em / 2);
                                 }
 
                                 @media screen and (max-width: $media-mobile) {
-                                    max-width: calc(720px / 3);
-                                    max-height: calc(512px / 3);
+                                    max-width: calc(45em / 3);
+                                    max-height: calc(32em / 3);
                                 }
                             }
 
@@ -482,7 +498,6 @@ $color-lightgrey: #bbb;
                     &__blog{
                     position: fixed;
                     z-index: 999;
-                    padding-top: 100px;
                     left: 0;
                     top:0;
                     width:100%;
@@ -492,7 +507,8 @@ $color-lightgrey: #bbb;
                     overflow-y: scroll;
 
                     &.active{
-                        display: block;
+                        display: grid;
+                        place-content: center;
                     }
 
                     &.disabled{
@@ -503,12 +519,12 @@ $color-lightgrey: #bbb;
                     .close{
                         position: absolute;
                         top: 5%;
-                        right: 0;
-                        //padding: 4px 7px;
+                        right: 8%;
+                        padding: 0.05em 0.3em;
 
                         color: var(--text-light);
-                        //outline: 2px solid var(--bg-light);
-                        //border-radius: 50%;
+                        outline: 1px solid var(--bg-light);
+                        border-radius: 50%;
                         font-size: 3rem;
                         font-weight: 600;
                         transition: all 0.3s ease;
@@ -528,8 +544,8 @@ $color-lightgrey: #bbb;
                         display: block;
                         max-width: 100%;
                         max-height: 100%;
-                        width: 55%;
-                        height: 55%;
+                        width: 60vw;
+                        height: auto;
 
                         @media screen and (max-width: $media-tablet) {
                             width: fit-content;
@@ -576,6 +592,10 @@ $color-lightgrey: #bbb;
     }
 
     &__headline{
+        position: fixed;
+        top: 0;
+        left: 0;
+
         text-align: center;
         text-transform: uppercase;
         text-shadow: 0 0 4px var(--bg-dark);

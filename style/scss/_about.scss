@@ -1,5 +1,5 @@
 //media variables
-$media-tablet-wide: 1024px;
+$media-laptop: 1024px;
 $media-tablet: 950px;
 $media-mobile-wide: 900px;
 $media-mobile: 600px;
@@ -35,9 +35,9 @@ $media-mobile: 600px;
         #about{
 
                 padding-top: 6rem;
-                background-image: url("../../img/backgrounds/ddesign_about_bg.jpg");
+                background-image: url("../../img/backgrounds/hexagons.jpg");
                 background-size: cover;
-                background-position: center;
+                background-position: center center;
                 background-repeat: no-repeat;
                 
                 /* display: flex;
@@ -47,6 +47,7 @@ $media-mobile: 600px;
                 gap: 4rem; */
                 display: grid;
                 place-content: center;
+                position: relative;
                 
 
                 @media screen and (max-width: $media-mobile) {
@@ -61,8 +62,12 @@ $media-mobile: 600px;
                     font-family: var(--font-poppins);
                     font-weight: 200;
                     
-                    background-color: var(--bg-dark-transparent);
-                    width: 100%;
+                    //background-color: var(--bg-dark-transparent);
+                    //width: 100%;
+
+                    @media screen and (max-width: $media-laptop) {
+                        
+                    }
 
                     @media screen and (max-width: $media-mobile) {
                         font-size: 20px;
@@ -87,7 +92,6 @@ $media-mobile: 600px;
                 
                 @media screen and (max-width: $media-mobile) {
                     margin: auto;
-                    margin-left: 0;
                 }
             }
 
@@ -98,7 +102,7 @@ $media-mobile: 600px;
                 gap: 1rem;
                 width: 100%;
 
-                @media screen and (max-width: $media-tablet-wide) {
+                @media screen and (max-width: $media-laptop) {
                     width: 90%;
                 }
 
@@ -125,7 +129,7 @@ $media-mobile: 600px;
                 flex-direction: column;
                 align-items: center;
 
-                /* @media screen and (max-width: $media-tablet-wide) {
+                /* @media screen and (max-width: $media-laptop) {
                     width: 90%;
                 } */
 
@@ -151,7 +155,7 @@ $media-mobile: 600px;
                     justify-content: space-between;
                     gap: 2rem;  
                     
-                    /* @media screen and (max-width: $media-tablet-wide) {
+                    /* @media screen and (max-width: $media-laptop) {
                         padding: 5rem;
                         justify-content: flex-start;
                     } */
@@ -188,7 +192,7 @@ $media-mobile: 600px;
                         font-family: var(--font-space-mono);
                         font-size: var(--size-p);
 
-                        /* @media screen and (max-width: $media-tablet-wide) {
+                        /* @media screen and (max-width: $media-laptop) {
                             align-items: flex-start;
                         }   */                  
                         
@@ -248,21 +252,25 @@ $media-mobile: 600px;
                 align-items: center;
                 
 
-                @media screen and (max-width: $media-tablet-wide) {
-                    flex-flow: row nowrap;
+                @media screen and (max-width: $media-laptop) {
                     justify-content: center;
                     gap: 0.5rem;
+                }
 
-                    @media screen and (max-width: $media-mobile) {
-                        gap:0;
-                    }
+                @media screen and (max-width: $media-mobile) {
+                    gap:0;
                 }
 
                 ol{
                     margin: 2rem;
 
+                    @media screen and (max-width: $media-laptop) {
+                        margin: 1rem;
+                    }
+
                     @media screen and (max-width: $media-mobile) {
                         margin: auto;
+                        width: 100%;
                     }
                 }
 
@@ -323,7 +331,7 @@ $media-mobile: 600px;
         
                 color: var(--text-light);
 
-                /* @media screen and (max-width: $media-tablet-wide) {
+                /* @media screen and (max-width: $media-laptop) {
                     align-items: flex-start;
                 } */
 
@@ -351,17 +359,17 @@ $media-mobile: 600px;
                 @media screen and (max-width: $media-mobile) {
                     align-items: center;
                     width: 85%;
-                    height: 390px;
+                    line-height: 145%;
                     overflow-y: scroll;
-                    padding: 1.5rem;
+                    padding: 1.5em;
                 }
         
                 .about{
                     &__title{
                         @include title();
 
-                        @media screen and (max-width: $media-tablet-wide) {
-                            font-size: var(--size-h4);
+                        @media screen and (max-width: $media-laptop) {
+                            font-size: var(--size-h2);
                             line-height: 110%;
                         }
 
@@ -379,13 +387,17 @@ $media-mobile: 600px;
                         text-wrap: wrap;
                         line-height: 145%;
                         letter-spacing: 2px;
+
+                        @media screen and (max-width: $media-laptop) {
+                            width: 90%;
+                        }
                         
                         @media screen and (max-width: $media-mobile) {
-                            font-size: 14px;
+                            font-size: 12px;
                             padding: 0;
                             padding-top: 0.5rem;
                             width: 100%;
-                            line-height: 135%;
+                            line-height: 150%;
                             letter-spacing: 1px;
                             word-wrap: normal;
                             text-align: left;
@@ -411,7 +423,7 @@ $media-mobile: 600px;
                     box-shadow: 4px 4px 3px var(--bg-dark-transparent);
 
                     //tablet mode
-                    /* @media screen and (max-width: $media-tablet-wide) {
+                    /* @media screen and (max-width: $media-laptop) {
                         margin-top: 7rem;
                         width: 150%;
                         height: 150%;

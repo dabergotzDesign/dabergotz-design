@@ -1,4 +1,3 @@
-
 let button_next = document.querySelector(".slider__button-right"),
  button_prev = document.querySelector(".slider__button-left"),
  nextCard = document.querySelector(".next"),
@@ -90,6 +89,19 @@ let closeModal = document.querySelector(".close"),
     modal_content_3 = document.querySelector(".modal__card-3"),
     modal_portfolio = document.querySelector(".modal__container");
 
+/* Portfolio - modal images */
+
+const slider = gsap.utils.toArray(".slider img")
+
+const workTL = gsap.timeline({
+    defaults: {
+        ease: 'power1.inOut',
+        delay: 3,
+        duration: 1,
+        repeatDelay: 0.5,
+        yoyo: true
+    }
+})
 
   
   closeModal.addEventListener("click", () =>{
@@ -116,6 +128,21 @@ card_1.addEventListener("click", () =>{
     modalWork.style.display = "flex";
     modal_content_1.style.display = "block";  
 
+    workTL
+        .to(slider, {
+          xPercent: -100,
+        })
+        .to(slider, {
+          xPercent: -200,
+        })
+        .to(slider, {
+          xPercent: -100,
+        })
+        .to(slider, {
+          xPercent: 0,
+        })
+        .repeat(-1)
+    
   }
 });
 
@@ -126,7 +153,22 @@ card_2.addEventListener("click", () =>{
 
     modal_portfolio.classList.remove("out");
     modalWork.style.display = "flex";
-    modal_content_2.style.display = "block";    
+    modal_content_2.style.display = "block"; 
+    
+    workTL
+        .to(slider, {
+          xPercent: -100,
+        })
+        .to(slider, {
+          xPercent: -200,
+        })
+        .to(slider, {
+          xPercent: -100,
+        })
+        .to(slider, {
+          xPercent: 0,
+        })
+        .repeat(-1)
 
   }
   
@@ -139,11 +181,27 @@ card_3.addEventListener("click", () =>{
 
     modal_portfolio.classList.remove("out");
     modalWork.style.display = "flex";
-    modal_content_3.style.display = "block";    
+    modal_content_3.style.display = "block";   
+    
+    workTL
+        .to(slider, {
+          xPercent: -100,
+        })
+        .to(slider, {
+          xPercent: -200,
+        })
+        .to(slider, {
+          xPercent: -100,
+        })
+        .to(slider, {
+          xPercent: 0,
+        })
+        .repeat(-1)
 
   }
 
 });
+
 
 //MOBILE SLIDER
 
