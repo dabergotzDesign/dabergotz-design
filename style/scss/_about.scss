@@ -89,8 +89,12 @@ $media-mobile: 480px;
                     font-family: var(--font-poppins);
                     font-weight: 200;
                     
-                    background-color: var(--bg-dark-transparent);
-                    width: 100%;
+                    //background-color: var(--bg-dark-transparent);
+                    //width: 100%;
+
+                    @media screen and (max-width: $media-laptop) {
+                        
+                    }
 
                     @media screen and (max-width: $media-mobile) {
                         font-size: 20px;
@@ -141,7 +145,7 @@ $media-mobile: 480px;
                     padding: var(--size-24);
                 }
 
-                @media screen and (max-width: $media-tablet-wide) {
+                @media screen and (max-width: $media-laptop) {
                     width: 90%;
                 }
 

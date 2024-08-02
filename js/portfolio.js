@@ -112,6 +112,19 @@ menuButtonHide.addEventListener("click", ()=>{
 /* const playVideo = document.querySelectorAll(".article__container figure video");
 const btnPlay = document.querySelector(".article__container figure i");
 
+/* Portfolio - modal images */
+
+const slider = gsap.utils.toArray(".slider img")
+
+const workTL = gsap.timeline({
+    defaults: {
+        ease: 'power1.inOut',
+        delay: 3,
+        duration: 1,
+        repeatDelay: 0.5,
+        yoyo: true
+    }
+})
 
 playVideo.forEach(vid => {
 
@@ -126,7 +139,7 @@ playVideo.forEach(vid => {
     }
     
     vid.addEventListener("click", togglePlay);
-}); */
+});
 
 const playVideos = document.querySelectorAll(".article__container figure video");
 

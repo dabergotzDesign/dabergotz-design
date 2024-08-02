@@ -754,7 +754,7 @@ $media-mobile: 450px;
                     }
                 }
 
-                @keyframes slide {
+                /* @keyframes slide {
                     0%{
                         transform: translateX(0);
                     }
@@ -818,7 +818,7 @@ $media-mobile: 450px;
                     100%{
                         transform: translateX(0);
                     }
-                }
+                } */
 
                 
                 @media screen and (max-width: $media-mobile){

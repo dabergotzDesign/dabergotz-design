@@ -715,8 +715,8 @@ body{
                                 }
 
                                 @media screen and (max-width: $media-tablet-wide) {
-                                    max-width: calc(720px / 1.8);
-                                    max-height: calc(512px / 1.8);
+                                    max-width: calc(45em / 1.8);
+                                    max-height: calc(32em / 1.8);
                                 }
 
                                 @media screen and (max-width: $media-tablet) {
