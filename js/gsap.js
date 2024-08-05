@@ -20,11 +20,12 @@ const homeTL = gsap.timeline({
 gsap.set(bg, {width: 0})
 
 mm.add({
-    isMobile: '(max-width: 600px)',
-    isDesktop: '(min-width: 601px)'
+    isMobile: '(max-width: 320px)',
+    isTablet: '(max-width: 768px)',
+    isDesktop: '(min-width: 1024px)'
 }, (context)=>{
     
-    let {isMobile, isDesktop} = context.conditions;
+    let {isMobile, isTablet, isDesktop} = context.conditions;
 
     if(isDesktop){
 
@@ -51,7 +52,34 @@ mm.add({
                 ease: 'power4.in'
             }) */
 
-    }    
+    }  
+    
+    if(isTablet){
+
+
+        homeTL
+            .to(bg, {
+                width: '90%',
+                ease: 'power1.in',
+                duration: 1
+            })
+            .from('.word', {
+                yPercent: 180,
+                duration: 1,
+                stagger: 0.1
+            }, "-=.5")
+            .from(subTitle, {
+                yPercent: -100,
+                duration: 1
+            }, "<")
+            /* .fromTo(accordion, {
+                width: 0
+            },{
+                width: '20vw',
+                ease: 'power4.in'
+            }) */
+
+    } 
 
     if(isMobile){
 

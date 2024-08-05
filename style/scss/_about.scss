@@ -1,8 +1,7 @@
 //media variables
 $media-laptop: 1024px;
-$media-tablet: 950px;
-$media-mobile-wide: 900px;
-$media-mobile: 600px;
+$media-tablet: 768px;
+$media-mobile: 450px;
 
 @mixin title {
     font-family: var(--font-poppins);
@@ -69,6 +68,12 @@ $media-mobile: 600px;
                         
                     }
 
+                    @media screen and (max-width: $media-tablet) {
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                    }
+
                     @media screen and (max-width: $media-mobile) {
                         font-size: 20px;
                         margin-bottom: 2rem;
@@ -129,9 +134,9 @@ $media-mobile: 600px;
                 flex-direction: column;
                 align-items: center;
 
-                /* @media screen and (max-width: $media-laptop) {
+                @media screen and (max-width: $media-laptop) {
                     width: 90%;
-                } */
+                }
 
                 @media screen and (max-width: $media-mobile) {
                     display: flex;
@@ -199,7 +204,7 @@ $media-mobile: 600px;
                         @media screen and (max-width: $media-tablet) {
                             flex-flow: column nowrap;
                             padding: 0.5rem;
-                            width: 110%;
+                            width: 100%;
                         }
 
                         @media screen and (max-width: $media-mobile) {
@@ -234,13 +239,17 @@ $media-mobile: 600px;
 
                 h3{
                     @include title();
-                    text-shadow: 1px 1px 4px var(--text-dark);
+                    //text-shadow: 1px 1px 4px var(--text-dark);
                     text-transform: uppercase;
                     margin-top: 2rem;
 
+                    @media screen and (max-width: $media-tablet) {
+                        font-weight: 600;
+                        font-size: var(--size-h2);
+                    }
+
                     @media screen and (max-width: $media-mobile) {
-                        font-size: 0.9rem;
-                        font-weight: 600;                      
+                        font-size: 0.9rem;                     
                     }
                 }
             }
@@ -373,6 +382,10 @@ $media-mobile: 600px;
                             line-height: 110%;
                         }
 
+                        @media screen and (max-width: $media-tablet) {
+                            font-size: 1.2rem;
+                        }
+
                         @media screen and (max-width: $media-mobile) {
                             font-size: 1rem;
                             font-weight: 600;
@@ -435,11 +448,6 @@ $media-mobile: 600px;
                         height: 16vh;
                         object-fit: cover;
                         margin-top: 0;
-                    }
-
-                    @media screen and (max-width: $media-mobile-wide) {
-                        width: 15vw;
-                        height: 30vh;
                     }
 
                     @media screen and (max-width: $media-mobile) {
