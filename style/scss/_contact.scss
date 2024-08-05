@@ -72,12 +72,8 @@ $media-mobile: 450px;
                     font-size: var(--size-64);
                 }
 
-                @media screen and (max-width: $media-tablet-wide) {
-                    font-size: 36px;
-                }
-
-                @media screen and (max-width: $media-mobile-wide) {
-                    font-size: 1.4rem;
+                @media screen and (max-width: $media-tablet) {
+                    font-size: 1.8rem;
                 }
 
                 @media screen and (max-width: $media-mobile) {
