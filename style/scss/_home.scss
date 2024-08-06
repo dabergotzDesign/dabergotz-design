@@ -121,15 +121,18 @@ $height: 36vh;
 
                 filter: blur(4px);
 
+                @media screen and (max-width: $media-laptop) {
+                    height: 120vh;
+                    width: auto;    
+                }
+
                 @media screen and (max-width: $media-tablet) {
-                    width: auto;
+                    //width: auto;
                     height: 100vh;
                 }
 
-                @media screen and (max-width: $media-mobile) {
-                    width: auto;
-                    height: 100vh;
-                }
+                 
+        
             }
 
             .welcome{
@@ -386,6 +389,7 @@ $height: 36vh;
                                 padding: 1.2rem;
                             }
                             
+                            //label title
                             h2{
                                 font-size: var(--size-h3);
                                 font-family: var(--font-poppins);
@@ -398,11 +402,9 @@ $height: 36vh;
 
                                 @media screen and (max-width: $media-laptop) {
                                     font-size: 1.25rem;
-                                    text-orientation: sideways;
-                                    writing-mode: horizontal-tb;
                                 }
 
-                                @media screen and (max-width: $media-mobile) {
+                                @media screen and (max-width: $media-tablet) {
                                     text-orientation: sideways;
                                     writing-mode: horizontal-tb;
                                 }

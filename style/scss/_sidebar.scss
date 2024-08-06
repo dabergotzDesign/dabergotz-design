@@ -18,6 +18,10 @@ aside{
     height: 100%;
     width: 8vw;
 
+    @media screen and (max-width: $media-laptop) {
+        width: 10vw;         
+    }
+
     @media screen and (max-width: $media-tablet) {
         width: 13vw;         
     }
@@ -76,24 +80,6 @@ aside{
 
         margin: 5% 0;
        
-
-        /* @media screen and (max-width: $media-tablet-wide) {
-            height: calc(154px / 2.5);
-            width: calc(270px / 2.5);
-        }
-
-        @media screen and (max-width: $media-tablet) {
-            height: calc(154px / 2.8);
-            width: calc(270px / 2.8);
-            margin-top: 45%;
-        }
-
-         
-        @media screen and (max-width: $media-mobile-wide) {
-            scale: 0.9;
-            margin-top: 5%;
-            padding: 0.25rem;
-        } */
     }
 
     svg{
@@ -196,6 +182,10 @@ aside{
                 transition: all 0.3s ease;
                 overflow: hidden;
 
+                @media screen and (max-width: $media-laptop) {
+                    margin: 0.5rem 0;           
+                }
+
                 &:hover{
                     scale: 1.2;
                 }
@@ -238,15 +228,14 @@ aside{
                         text-shadow: 0 0 2px var(--text-light);
                     }
 
-                    
+                    @media screen and (max-width: $media-laptop) {
+                        font-size: 0.85rem;
+                        padding: 0;
+                    }
 
-                    //tablet mode wide
-                    @media screen and (max-width: $media-tablet-wide) {
-                        font-size: 0.8rem;
-                    }                    
 
                     //mobile mode
-                    @media screen and (max-width: $media-mobile-wide) {
+                    @media screen and (max-width: $media-mobile) {
                         display: none;
                     }
 
@@ -283,7 +272,7 @@ aside{
                     justify-content: center;
                     gap: 30px;
 
-                    @media screen and (max-width: $media-mobile-wide) {
+                    @media screen and (max-width: $media-mobile) {
                         gap: 0;
                     }
                 }
@@ -292,7 +281,7 @@ aside{
                     list-style: none;
                     padding: 0.5rem;
 
-                    @media screen and (max-width: $media-mobile-wide) {
+                    @media screen and (max-width: $media-mobile) {
                         padding: 0.25rem;
                     }
                                         
@@ -322,7 +311,7 @@ aside{
                             display: block;
                             margin: auto;
 
-                            @media screen and (max-width: $media-mobile-wide) {
+                            @media screen and (max-width: $media-mobile) {
                                 font-size: 0.8rem;
                                 padding: 0 0.25rem;
                             }
@@ -334,7 +323,7 @@ aside{
                     }
 
 
-                    @media screen and (max-width: $media-mobile-wide) {
+                    @media screen and (max-width: $media-mobile) {
                         font-size: 8px;
                         padding: 0 0.25rem;
                     }

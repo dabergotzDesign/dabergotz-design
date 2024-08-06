@@ -99,6 +99,10 @@ body{
         border-radius: var(--size-16);
         padding: var(--size-24);
 
+        @media screen and (max-width: $media-laptop) {
+            font-size: 2.4rem;               
+        }
+
         @media screen and (max-width: $media-tablet) {
             align-items: center;
             width: 100%;
@@ -250,6 +254,10 @@ body{
         height: 56vh;
         overflow: hidden;
         position: relative;
+
+        @media screen and (max-width: $media-laptop) {
+            padding-top: 0.5em;         
+        }
 
         @media screen and (max-width: $media-tablet) {
             display: none;
@@ -445,6 +453,13 @@ body{
                     width: 100%;
                     opacity: 1;
                }
+            }
+
+            @media screen and (max-width: $media-laptop) {
+                scale: 0.9;
+                left: 0;
+                padding: 0.5em;
+                font-size: 0.9rem;      
             }
 
             @media screen and (max-width: $media-laptop) {
