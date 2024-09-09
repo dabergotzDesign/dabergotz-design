@@ -53,7 +53,7 @@ $height: 36vh;
             
             margin: auto;
             //margin-left: 15%;
-            height: 110%;
+            height: 110vh;
             //background-image: url("../../img/backgrounds/bg_home_AI.jpg");
             background-size: cover;
             background-position: center center;
@@ -142,7 +142,7 @@ $height: 36vh;
                 &_accordion_container{
        
                     width: 90%;
-                    height: 50vh;
+                    height: 45vh;
                     margin-left: 20%;
                     margin-top: 4%;
 
@@ -391,7 +391,7 @@ $height: 36vh;
                             
                             //label title
                             h2{
-                                font-size: var(--size-h3);
+                                font-size: var(--size-h4);
                                 font-family: var(--font-poppins);
                                 font-weight: 300;
                                                                 

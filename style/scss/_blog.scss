@@ -730,8 +730,7 @@ body{
                                 }
 
                                 @media screen and (max-width: $media-laptop) {
-                                    max-width: calc(45em / 1.8);
-                                    max-height: calc(32em / 1.8);
+                                    width: 90%;
                                 }
 
                                 @media screen and (max-width: $media-tablet) {
