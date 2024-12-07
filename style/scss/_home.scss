@@ -50,15 +50,20 @@ $height: 36vh;
             flex-flow: column nowrap;
             align-items: center;
             gap: 8em;
+
             
             margin: auto;
             //margin-left: 15%;
-            height: 110vh;
+            height: auto;
+            width: 100%;
             //background-image: url("../../img/backgrounds/bg_home_AI.jpg");
             background-size: cover;
             background-position: center center;
+
+            padding-bottom: 4em;
+            margin-bottom: 2em;
            
-            overflow: hidden;
+            //overflow: hidden;
             position: relative;
             z-index: 1;
 
@@ -95,13 +100,13 @@ $height: 36vh;
                 top: 0;
                 right: 0;
                 width: 85%;
-                height: 130%;
+                height: 115%;
                 background-color: var(--bg-dark-transparent);
                 //background-color: red; //for testing
                 z-index: -1;
 
                 @media screen and (max-width: $media-tablet) {
-                    width: 90%;
+                    width: 100%;
                 }
 
                 @media screen and (max-width: $media-mobile) {
@@ -443,7 +448,7 @@ $height: 36vh;
                 &__box{
                     
                     width: 90%;
-                    margin-left: 10%;
+                    //margin-left: 10%;
                     position: relative;
 
                     display: flex;
@@ -698,18 +703,18 @@ $height: 36vh;
 
 @keyframes slideIn {
     to{
-        width: 80%;
+        width: 100%;
     }
 }
 
 
-@media screen and (max-width: $media-tablet) {
+/* @media screen and (max-width: $media-tablet) {
         @keyframes slideIn {
             to{
                 width: 100%;
             }
         }
-}
+} */
 
 
 @keyframes letters {

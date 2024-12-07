@@ -36,17 +36,19 @@ $media-mobile: 450px;
                 flex-flow: column nowrap;
                 gap: 0;
 
-                overflow: hidden;
-                height: 120vh;
-                padding-top: 8rem;
+                //overflow: hidden;
+                height: auto;
+                padding: 6em;
               
                 @media screen and (max-width: $media-tablet) {
-                    padding-top: 0;
+                    padding-top: 4rem;
                 }
 
                 @media screen and (max-width: $media-mobile) {
-                    padding-top: 4rem;
                     height: fit-content;
+                    padding: 0;
+                    padding-top: 4rem;
+                    gap: 2em;
                 }
 
                 .title{
@@ -64,23 +66,12 @@ $media-mobile: 450px;
 
     
                     @media screen and (max-width: $media-mobile) {
-                       width: 50%;
+                       width: auto;
                     }
                     
                 }
                 
-                /* @media screen and (max-width: $media-tablet) {
-                    gap: 4rem;
-                }
-
-                @media screen and (max-width: $media-tablet) {
-                    gap: 0;
-                }
-
-                @media screen and (max-width: $media-mobile) {
-                    gap: 6rem;
-                } */
-                                
+                                          
                                                             
                     //creates space at the bottom of the portfolio, helps the parallax
                     .space{
@@ -734,7 +725,7 @@ $media-mobile: 450px;
 
                        
                         @media screen and (max-width: $media-tablet) {
-                            left: -10%;                            
+                            left: -5%;                            
                         }
 
                     
@@ -753,7 +744,7 @@ $media-mobile: 450px;
 
                                                                        
                         @media screen and (max-width: $media-tablet) {
-                            right: -10%;
+                            right: -5%;
                         }
 
                         @media screen and (max-width: $media-mobile) {

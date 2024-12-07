@@ -1,0 +1,69 @@
+//media variables
+$media-laptop: 1024px;
+$media-tablet: 768px;
+$media-mobile: 450px;
+
+
+footer{
+
+    height: 25vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2em 12em;
+
+    @media screen and (max-width: $media-tablet) {
+        padding: 0.8rem 6rem;
+    }
+
+    @media screen and (max-width: $media-mobile) {
+        padding: 0.8em;
+    }
+
+    p{
+        color: var(--text-light);
+        font-family: var(--font-poppins);
+
+        @media screen and (max-width: $media-mobile) {
+            font-size: 0.8rem;
+        }
+    }
+
+
+    img{
+        max-width: 100%;
+        height: auto;
+        width: 20%;
+
+        @media screen and (max-width: $media-mobile) {
+            width: 30%;
+        }
+    }
+
+    .watermark{
+        position: absolute;
+        bottom: -15%;
+        right: 20%;
+
+        z-index: -1;
+        opacity: 0.15;
+        scale: 3;
+
+        @media screen and (max-width: $media-mobile) {
+            scale: 3;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            opacity: 0.2;
+
+        }
+
+    }
+
+}

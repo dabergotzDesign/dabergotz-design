@@ -18,20 +18,25 @@ aside{
     height: 100%;
     width: 8vw;
 
+    background-image: linear-gradient(-45deg, var(--bg-grey-transparent), var(--bg-dark-transparent), var(--bg-dark-transparent));
+    outline: 1px solid rgba($color: whitesmoke, $alpha: 0.2);
+
     @media screen and (max-width: $media-laptop) {
-        width: 10vw;         
+        width: 11vw;         
     }
 
     @media screen and (max-width: $media-tablet) {
-        width: 13vw;         
+        gap: 4rem;
+        width: 13vw;
+        background-image: linear-gradient(-45deg, var(--bg-grey-transparent), var(--bg-dark-transparent), var(--bg-dark-transparent));
+        outline: 1px solid whitesmoke;        
     }
 
     @media screen and (max-width: $media-mobile) {
         width: 28vw;  
     }   
 
-    background-image: linear-gradient(-45deg, var(--bg-grey-transparent), var(--bg-dark-transparent), var(--bg-dark-transparent));
-    outline: 1px solid var(--bg-light);
+    
 
     transition: width 0.8s ease;
 
@@ -113,6 +118,7 @@ aside{
                 color: var(--text-light);
                 font-size: 1.1rem;
 
+              
                 @media screen and (max-width: $media-tablet) {
                     font-size: 1rem;
                     padding: 0.25rem;
@@ -214,7 +220,7 @@ aside{
                     text-decoration: none;
                     text-align: center;
 
-                    font-size: 1.1rem;
+                    font-size: 0.8rem;
                     font-family: var(--font-poppins);
                     font-weight: 200;
 
@@ -233,6 +239,7 @@ aside{
                         padding: 0;
                     }
 
+              
 
                     //mobile mode
                     @media screen and (max-width: $media-mobile) {
@@ -245,8 +252,14 @@ aside{
             li .active{
                 //outline: thin solid var(--bg-light);
                 font-weight: 400;
+                font-size: 1.1rem;
                 letter-spacing: 6px;
                 //border-bottom: 1px solid var(--text-light);
+
+                @media screen and (max-width: $media-laptop) {
+                    font-size: 0.9rem;
+                    letter-spacing: 4px;
+                }
                 
 
             }
@@ -319,7 +332,7 @@ aside{
 
                     //tablet mode 
                     @media screen and (max-width: $media-tablet) {
-                        font-size: 20px;
+                        font-size: 12px;
                     }
 
 

@@ -13,8 +13,9 @@ $media-mobile: 450px;
 
         #contact{
 
-            height: 100%;
-            position: relative;
+            height: auto;
+            width: 100%;
+            padding: 3em;
         
             margin: auto;
             
@@ -22,6 +23,7 @@ $media-mobile: 450px;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
+            box-shadow: inset 40em 80em var(--bg-dark-transparent);
 
 
             display: flex;
@@ -39,9 +41,10 @@ $media-mobile: 450px;
                 font-family: var(--font-poppins);
                 font-weight: 200;
 
-                background-color: var(--bg-dark-transparent);
+                //background-color: var(--bg-dark-transparent);
                 width: 100%;
-                padding-top: 6rem;
+                //padding-top: 6rem;
+                margin: 1em;
 
                 @media screen and (max-width: $media-tablet) {
                     font-size: 1.8rem;
@@ -59,9 +62,9 @@ $media-mobile: 450px;
                     align-items: center;
                     gap: 12rem;
 
-                    height: 100%;
+                    height: auto;
                     width: 100%;
-                    background-color: var(--bg-dark-transparent);
+                    //background-color: var(--bg-dark-transparent);
 
                     @media screen and (max-width: $media-tablet) {
                         gap: 8rem;

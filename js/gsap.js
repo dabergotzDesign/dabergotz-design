@@ -32,9 +32,9 @@ mm.add({
 
         homeTL
             .to(bg, {
-                width: '85%',
-                ease: 'power1.in',
-                duration: 2
+                width: '100%',
+                ease: 'power4.in',
+                duration: 1.8
             })
             .from('.word', {
                 yPercent: 100,
@@ -45,21 +45,16 @@ mm.add({
                 yPercent: -100,
                 duration: 1
             }, "<")
-            /* .fromTo(accordion, {
-                width: 0
-            },{
-                width: '20vw',
-                ease: 'power4.in'
-            }) */
-
+           
     }  
+    
     
     if(isTablet){
 
 
         homeTL
             .to(bg, {
-                width: '90%',
+                width: '100%',
                 ease: 'power1.in',
                 duration: 1
             })
@@ -72,12 +67,6 @@ mm.add({
                 yPercent: -100,
                 duration: 1
             }, "<")
-            /* .fromTo(accordion, {
-                width: 0
-            },{
-                width: '20vw',
-                ease: 'power4.in'
-            }) */
 
     } 
 
@@ -97,14 +86,9 @@ mm.add({
                 yPercent: -100,
                 duration: 1
             }, "<")
-            /* .fromTo(accordion, {
-                height: 0
-            }, {
-                height: '30vh',
-                ease: 'power4.in'
-            }, "-=.3") */
 
     }
+
 
 
 })
