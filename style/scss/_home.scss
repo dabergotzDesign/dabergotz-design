@@ -102,8 +102,11 @@ $height: 36vh;
                 width: 85%;
                 height: 115%;
                 background-color: var(--bg-dark-transparent);
-                //background-color: red; //for testing
                 z-index: -1;
+
+                iframe{
+                    border: none;
+                }
 
                 @media screen and (max-width: $media-tablet) {
                     width: 100%;
@@ -135,9 +138,7 @@ $height: 36vh;
                     //width: auto;
                     height: 100vh;
                 }
-
-                 
-        
+       
             }
 
             .welcome{
