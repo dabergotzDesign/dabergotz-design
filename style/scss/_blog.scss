@@ -55,6 +55,13 @@ body{
 
 #blog{
 
+    height: 60vh;
+    width: 65vw;  
+    position: relative;
+    overflow: hidden;
+
+    margin: 20em auto;
+    
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
@@ -381,8 +388,9 @@ body{
         background: url("../../img/backgrounds/scene.webp");
         background-position: 50% center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 200vh;
         background-attachment: fixed;
+   
 
         //position: relative;
         
@@ -1061,7 +1069,6 @@ body{
                                                            
                     
                 }
-
 
                 /* PAGE NAVIGATION */
                 .bottom__nav{

@@ -305,6 +305,10 @@ $media-mobile: 450px;
                             @media screen and (max-width: $media-tablet) {
                                 font-size: var(--size-48);
                             }
+                        }   
+                        
+                        i{
+                            margin-right: 0.5em;
 
                             @media screen and (max-width: $media-mobile) {
                                 font-size: var(--size-32);

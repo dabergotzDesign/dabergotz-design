@@ -1,28 +1,20 @@
-const splash = document.querySelector(".splash");
+const r_load = new rive.Rive({
+    src: "./rive/loader.riv",
+    // OR the path to a discoverable and public Rive asset
+    // src: '/public/example.riv',
+    canvas: document.getElementById("canvas-loading"),
+    autoplay: true,
+    artboard: "loading", // Optional. If not supplied the default is selected
+    stateMachines: "Load State",
+    onLoad: () => {
+      r_load.resizeDrawingSurfaceToCanvas();
+    },
+});
 
+window.addEventListener("DOMContentLoaded", ()=>{
+    const loader = document.querySelector(".loading"),
+        page = document.querySelector(".main");
 
-//delay links in nav
-function delay(url){
-
-    loadSplash();
-
-    setTimeout(() => {
-        window.location = url
-    }, 500);
-}
-
-
-function splashScreen(){
-    splash.classList.add("slideOut");
-}
-
-function loadSplash(){
-    splash.classList.add("loadSplash");
-}
-
-setTimeout(() => {
-    splashScreen()
-}, 500);
-
-
-
+    loader.style.display = "none";
+    page.style.visibility = "visible";
+})

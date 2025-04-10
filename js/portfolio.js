@@ -124,7 +124,6 @@ const workTL = gsap.timeline({
         repeatDelay: 0.5,
         yoyo: true
     }
-})
 
 playVideo.forEach(vid => {
 
