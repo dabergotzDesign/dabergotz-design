@@ -8,664 +8,626 @@
     <link rel="shortcut icon" href="./img/logo_favicon.png" type="image/x-icon">
 
     
-    <!-- FONTS -->
+    <!-- FONTS, ICONS -->
     <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Poppins:wght@200;300;400;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 
-    <!-- GSAP, ScrollTrigger, Lenis -->
+
+
+    <!-- GSAP, ScrollTrigger, Lenis, Rive -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/@rive-app/canvas"></script>
 
-    <script src="./js/sidebar.js" defer></script>
-    <script src="./js/portfolio.js" defer></script>
-    <script src="./js/contact.js" defer></script>
     <script src="./js/gsap.js" defer></script>
+    <script src="./js/portfolio.js" defer></script>
+    <script src="./js/about.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+    <script src="./js/welcome_title.js" defer></script>
 
+    <script src="./js/splash.js" defer></script>
+    <script src="./js/home_slider.js" defer></script>
+    <script src="./js/lucide.js" defer></script>
+    <script src="./js/smooth-scroll.js" defer></script>
+ 
     
     <title>dabergotzDesign - UI/UX Design & Frontend Development</title>
 
 </head>
 <body>
-    <aside class="sidebar hidden">
 
-        <h1 class="sidebar__title">
-            <!-- <img src="./img/svg/ddesign_logo.svg" alt="dabergotzDesign logo"> -->
-
-            <svg width="1798px" height="566px" viewbox="0 0 1920 1080" preserveAspectRatio="xMinYMin slice" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-                <g>
-                    <g id="Final_curves">
-                        <path d="M406.094,409.599L509.062,409.599C615.446,409.599 672.542,334.935 672.542,230.503C672.542,137.295 613.982,66.047 510.038,66.047L406.094,66.047L406.094,409.599ZM415.854,74.831L508.574,74.831C607.638,74.831 662.294,141.687 662.294,230.991C662.294,338.839 601.782,400.815 510.038,400.815L415.854,400.815L415.854,74.831Z" style="fill:white;"/>
-                        <path d="M920.934,285.647C921.422,280.279 921.422,278.815 921.422,273.447C921.422,227.087 897.998,161.207 822.846,161.207C763.31,161.207 721.342,210.007 721.342,287.599C721.342,347.623 747.206,414.479 821.87,414.479C873.598,414.479 901.414,386.175 916.054,348.111L906.294,348.111C892.142,379.831 869.206,405.695 821.382,405.695C768.678,405.695 731.102,361.287 731.102,285.647L920.934,285.647ZM731.59,276.863C734.518,214.399 768.678,169.991 822.358,169.991C882.87,169.991 912.15,218.303 912.15,276.863L731.59,276.863Z" style="fill:white;"/>
-                        <path d="M970.222,345.183C977.054,388.127 1002.92,415.455 1060.01,415.455C1110.28,415.455 1142.97,390.079 1142.97,349.575C1142.97,313.951 1124.92,292.967 1061.48,276.863C1005.85,262.711 992.67,247.583 992.67,219.279C992.67,194.391 1010.73,169.991 1057.57,169.991C1107.35,169.991 1124.92,200.247 1128.82,227.087L1138.58,227.087C1134.68,190.487 1107.84,161.207 1058.06,161.207C1006.33,161.207 982.91,189.511 982.91,220.255C982.91,251.487 996.574,269.055 1057.57,285.159C1120.04,301.751 1132.73,319.319 1132.73,350.551C1132.73,381.295 1109.3,406.671 1060.01,406.671C1012.19,406.671 988.278,386.175 979.982,345.183L970.222,345.183Z" style="fill:white;"/>
-                        <path d="M1204.95,409.599L1214.71,409.599L1214.71,167.063L1204.95,167.063L1204.95,409.599ZM1204.95,87.519L1214.71,87.519L1214.71,43.111L1204.95,43.111L1204.95,87.519Z" style="fill:white;"/>
-                        <path d="M1480.67,232.943C1480.67,201.223 1481.16,172.919 1481.16,167.063L1471.89,167.063C1471.89,170.479 1471.4,193.415 1471.4,220.255C1463.59,191.463 1439.68,161.207 1386.49,161.207C1333.29,161.207 1281.08,203.663 1281.08,288.575C1281.08,364.703 1325,409.599 1382.09,409.599C1428.45,409.599 1458.22,387.639 1470.91,346.159L1470.91,399.839C1470.91,473.527 1450.41,514.031 1377.7,514.031C1329.88,514.031 1302.55,488.655 1295.23,453.031L1285.47,453.031C1290.84,489.631 1319.14,522.815 1377.21,522.815C1456.27,522.815 1480.67,478.895 1480.67,401.303L1480.67,232.943ZM1386,170.479C1463.59,170.479 1471.4,235.383 1471.4,283.695C1471.4,342.743 1455.29,400.327 1382.58,400.327C1332.32,400.327 1291.33,359.823 1291.33,288.087C1291.33,219.767 1327.93,170.479 1386,170.479Z" style="fill:white;"/>
-                        <path d="M1563.63,409.599L1573.39,409.599L1573.39,276.375C1573.39,219.279 1606.09,170.479 1664.16,170.479C1713.93,170.479 1737.36,207.567 1737.36,255.879L1737.36,409.599L1747.61,409.599L1747.61,254.903C1747.61,184.631 1706.13,161.207 1665.62,161.207C1607.06,161.207 1582.17,201.711 1573.39,228.063C1573.88,199.271 1573.39,178.287 1572.9,167.063L1563.14,167.063C1563.14,172.431 1563.63,202.199 1563.63,226.111L1563.63,409.599Z" style="fill:white;"/>
-                        <path d="M226.962,409.599L329.93,409.599C436.314,409.599 493.41,334.935 493.41,230.503C493.41,137.295 434.85,66.047 330.906,66.047L226.962,66.047L226.962,409.599ZM236.722,74.831L329.442,74.831C428.506,74.831 483.162,141.687 483.162,230.991C483.162,338.839 422.65,400.815 330.906,400.815L236.722,400.815L236.722,74.831Z" style="fill:white;fill-rule:nonzero;"/>
-                        <path d="M44.862,409.599L147.83,409.599C254.214,409.599 311.31,334.935 311.31,230.503C311.31,137.295 252.75,66.047 148.806,66.047L44.862,66.047L44.862,409.599ZM54.622,74.831L147.342,74.831C246.406,74.831 301.062,141.687 301.062,230.991C301.062,338.839 240.55,400.815 148.806,400.815L54.622,400.815L54.622,74.831Z" style="fill:white;fill-rule:nonzero;"/>
-                        <rect x="1499.28" y="436.271" width="251.607" height="8" style="fill:white;"/>
-                        <rect x="47.111" y="436.271" width="1218.44" height="8" style="fill:white;"/>
-                    </g>
-                    <g>
-                        <path d="M406.094,409.599L509.062,409.599C615.446,409.599 672.542,334.935 672.542,230.503C672.542,137.295 613.982,66.047 510.038,66.047L406.094,66.047L406.094,409.599ZM415.854,74.831L508.574,74.831C607.638,74.831 662.294,141.687 662.294,230.991C662.294,338.839 601.782,400.815 510.038,400.815L415.854,400.815L415.854,74.831Z" style="fill:white;"/>
-                        <path d="M920.934,285.647C921.422,280.279 921.422,278.815 921.422,273.447C921.422,227.087 897.998,161.207 822.846,161.207C763.31,161.207 721.342,210.007 721.342,287.599C721.342,347.623 747.206,414.479 821.87,414.479C873.598,414.479 901.414,386.175 916.054,348.111L906.294,348.111C892.142,379.831 869.206,405.695 821.382,405.695C768.678,405.695 731.102,361.287 731.102,285.647L920.934,285.647ZM731.59,276.863C734.518,214.399 768.678,169.991 822.358,169.991C882.87,169.991 912.15,218.303 912.15,276.863L731.59,276.863Z" style="fill:white;"/>
-                        <path d="M970.222,345.183C977.054,388.127 1002.92,415.455 1060.01,415.455C1110.28,415.455 1142.97,390.079 1142.97,349.575C1142.97,313.951 1124.92,292.967 1061.48,276.863C1005.85,262.711 992.67,247.583 992.67,219.279C992.67,194.391 1010.73,169.991 1057.57,169.991C1107.35,169.991 1124.92,200.247 1128.82,227.087L1138.58,227.087C1134.68,190.487 1107.84,161.207 1058.06,161.207C1006.33,161.207 982.91,189.511 982.91,220.255C982.91,251.487 996.574,269.055 1057.57,285.159C1120.04,301.751 1132.73,319.319 1132.73,350.551C1132.73,381.295 1109.3,406.671 1060.01,406.671C1012.19,406.671 988.278,386.175 979.982,345.183L970.222,345.183Z" style="fill:white;"/>
-                        <path d="M1204.95,409.599L1214.71,409.599L1214.71,167.063L1204.95,167.063L1204.95,409.599ZM1204.95,87.519L1214.71,87.519L1214.71,43.111L1204.95,43.111L1204.95,87.519Z" style="fill:white;"/>
-                        <path d="M1480.67,232.943C1480.67,201.223 1481.16,172.919 1481.16,167.063L1471.89,167.063C1471.89,170.479 1471.4,193.415 1471.4,220.255C1463.59,191.463 1439.68,161.207 1386.49,161.207C1333.29,161.207 1281.08,203.663 1281.08,288.575C1281.08,364.703 1325,409.599 1382.09,409.599C1428.45,409.599 1458.22,387.639 1470.91,346.159L1470.91,399.839C1470.91,473.527 1450.41,514.031 1377.7,514.031C1329.88,514.031 1302.55,488.655 1295.23,453.031L1285.47,453.031C1290.84,489.631 1319.14,522.815 1377.21,522.815C1456.27,522.815 1480.67,478.895 1480.67,401.303L1480.67,232.943ZM1386,170.479C1463.59,170.479 1471.4,235.383 1471.4,283.695C1471.4,342.743 1455.29,400.327 1382.58,400.327C1332.32,400.327 1291.33,359.823 1291.33,288.087C1291.33,219.767 1327.93,170.479 1386,170.479Z" style="fill:white;"/>
-                        <path d="M1563.63,409.599L1573.39,409.599L1573.39,276.375C1573.39,219.279 1606.09,170.479 1664.16,170.479C1713.93,170.479 1737.36,207.567 1737.36,255.879L1737.36,409.599L1747.61,409.599L1747.61,254.903C1747.61,184.631 1706.13,161.207 1665.62,161.207C1607.06,161.207 1582.17,201.711 1573.39,228.063C1573.88,199.271 1573.39,178.287 1572.9,167.063L1563.14,167.063C1563.14,172.431 1563.63,202.199 1563.63,226.111L1563.63,409.599Z" style="fill:white;"/>
-                        <path d="M226.962,409.599L329.93,409.599C436.314,409.599 493.41,334.935 493.41,230.503C493.41,137.295 434.85,66.047 330.906,66.047L226.962,66.047L226.962,409.599ZM236.722,74.831L329.442,74.831C428.506,74.831 483.162,141.687 483.162,230.991C483.162,338.839 422.65,400.815 330.906,400.815L236.722,400.815L236.722,74.831Z" style="fill:white;fill-rule:nonzero;"/>
-                        <path d="M44.862,409.599L147.83,409.599C254.214,409.599 311.31,334.935 311.31,230.503C311.31,137.295 252.75,66.047 148.806,66.047L44.862,66.047L44.862,409.599ZM54.622,74.831L147.342,74.831C246.406,74.831 301.062,141.687 301.062,230.991C301.062,338.839 240.55,400.815 148.806,400.815L54.622,400.815L54.622,74.831Z" style="fill:white;fill-rule:nonzero;"/>
-                        <rect x="1499.28" y="436.271" width="251.607" height="8" style="fill:white;"/>
-                        <rect x="47.111" y="436.271" width="1218.44" height="8" style="fill:white;"/>
-                    </g>
-                </g>
-            </svg>
-
-
-            <a href="javascript: delay('index.html')"></a>
-        </h1>
-
-        <div class="navigation">
-            <nav class="sidebar__nav">
-                <ul>
-                    <li class="sidebar__nav-item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="sidebar__pole"></li>
-                    <li class="sidebar__nav-item"><a href="#portfolio" class="nav__link">Work</a></li>
-                    <li class="sidebar__pole"></li>
-                    <li class="sidebar__nav-item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="sidebar__pole"></li>
-                    <li class="sidebar__nav-item"><a href="#blog" class="nav__link">Blog</a></li>
-                    <li class="sidebar__pole"></li>
-                    <li class="sidebar__nav-item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>            
-            </nav>
     
-            <nav class="sidebar__nav-mobile">
-                <ul>
-                    <li class="mobile__nav-item"><a href="#home" class="nav__link"><i class="fa-solid fa-house"></i> Home </a></li>
-                    <li class="mobile__nav-item"><a href="#portfolio" class="nav__link"><i class="fa-solid fa-book"></i> Work </a></li>
-                    <li class="mobile__nav-item"><a href="#about" class="nav__link"><i class="fa-solid fa-user"></i> About </a></li>
-                    <li class="mobile__nav-item"><a href="#blog" class="nav__link"><i class="fa-solid fa-pen"></i> Blog </a></li>
-                    <li class="mobile__nav-item"><a href="#contact" class="nav__link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-                </ul>
-            </nav>
+       
+<main class="main">
 
-            <!-- mobile menu button -->
-            <button class="nav__button menu"><i class="fa-solid fa-bars icon"></i></button>
+    <div id="top"></div>
 
+    <div class="top__menu">
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#blog">blog</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="top__menu-mobile">
+        <a href="javascript:void(0);" class="menu">
+            <i data-lucide="menu"></i>
+        </a>
+        <nav class="menu__nav hidden">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#blog">blog</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="splash">
+        <div class="welcome">
+            <canvas id="canvas" width="1440" height="500"></canvas>
         </div>
-
-    </aside>
-    
-    <main class="main">
-
-    <section id="home" class="main__section">
         
-        <h1 class="home__headline inactive">home</h1>
+        <i data-lucide="mouse" class="scroll__indicator"></i>
         
-        <div class="welcome__box">
-                  
-            <div class="welcome__title">
-                <div class="mask">
-                    <h1 class="headline">
-                        Welcome to dabergotzDesign
-                    </h1>
-                </div>
-                <div class="mask">
-                    <h1 id="subheadline">
-                        UI/UX Design & Front End Development <br> by Dennis Dabergotz
-                    </h1>
-                </div>
-            </div>
+        <iframe class="ddesign__logo-bg" src="https://unicorn.studio/embed/qx1CX5xw1o0wztFyOlg1" loading="lazy"></iframe>
+    </div>
 
-            <div class="welcome_accordion_container">
-                                
-                <div class="accordion__card">
-                    
-                    <label for="h" class="accordion__radio"></label>
-                    <input type="radio" checked="checked" name="card" id="h">
+    <div class="content" id="content">
 
-                    <div class="accordion__image home">
-                        <h2>home</h2>
-                    </div>
-                    <div class="panel">
-                        <h2>home</h2>
+        <section id="home" class="main__section">
+            
+            <div class="slider__container">
 
-                        <p class="card__text">
-                            Meet Dennis Dabergotz a Web Developer and UI Designer at the start of his career.
+                <!-- SLIDE: Home -->
+                <div class="slide home">                                    
+                    <div class="text">
+                        <p>Meet Dennis Dabergotz an UI/UX Designer & Web Developer at the start of his career. 
+                            <br>
                             On this website you'll find out more about me and my work.
-                        </p>
-                        <p class="card__text" id="home__bottom-text">
                             When there's something to design, just sign me up.
                         </p>
-                    </div>
-                    
-                </div>
-                
-                <div class="accordion__card">
-
-                    <label for="p" class="accordion__radio"></label>
-                    <input type="radio" name="card" id="p">
-
-                    <div class="accordion__image portfolio">
-                        <h2>work</h2>
-                    </div>
-                    <div class="panel">
-
-                        <h2>work</h2>
-
-                        <p class="card__text">
-                            Check out my portfolio <br> work includes frontend development & UI/UX Design.
-                        </p>
-                        
-
-                        <a href="#portfolio">check out my work <i>→</i></a>
-                    </div>
-
-                </div>
-
-                <div class="accordion__card">
-                    
-                    <label for="a" class="accordion__radio"></label>
-                    <input type="radio" name="card" id="a">
-
-                    <div class="accordion__image about">
-                        <h2>about</h2>
-                    </div>
-                    <div class="panel">
-                        <h2>about</h2>
-
-                        <p class="card__text">
-                            Curious who is behind the work and get a face of the Dev behind the scene?
-                        </p>
-                        <p class="card__text">
-                            I got you covered. 
-                        </p>
-
-                        <a href="#about">learn more about me <i>→</i></a>
-                    </div>
-
-
-                </div>
-
-                <div class="accordion__card">
-
-                    <label for="b" class="accordion__radio"></label>
-                    <input type="radio" name="card" id="b">
-
-                    <div class="accordion__image blog">
-                        <h2>blog</h2>
-                    </div>
-                    <div class="panel">
-                        <h2>blog</h2>
-
-                        <p class="card__text">
-                            What is happening outside of my portfolio and what else do I like to show?
-                        </p>
-                        <!-- <p class="card__text">
-                            This is where my blog comes in, as I like to show some work outside of my portfolio or talk about some achievements throughout my career
-                            and more.
-                        </p> -->
-
-                        <a href="#blog">some news <i>→</i></a>
+                        <h4>Home <span>ホーム</span></h4>
                     </div>
                 </div>
 
-                <div class="accordion__card">
+                <!-- SLIDE: Portfolio -->
+                <div class="slide portfolio">
+                    <a href="#portfolio" class="slide__button">check it out<i data-lucide="chevron-right"></i></a>
+                </div>
 
-                    <label for="c" class="accordion__radio"></label>
-                    <input type="radio" name="card" id="c">
-
-                    <div class="accordion__image contact">
-                        <h2>contact</h2>
+                <!-- SLIDE: About -->
+                <div class="slide about">
+                    <div class="text__wrapper">
+                        <p>Curious who is behind the work and get a face of the Dev behind the scene?</p>
+                        <p>I got you covered.</p>
                     </div>
-                    <div class="panel">
-                        <h2>contact</h2>
+                    <a href="#about" class="slide__button">learn more<i data-lucide="chevron-right"></i></a>
+                </div>
 
-                        <p class="card__text">
-                            If you want to get in contact with me, just write me a message or checkout some social profiles.
-                            <br>
-                            I am open to talk.
-                        </p>
+                <!-- SLIDE: Blog -->
+                <div class="slide blog">
+                    <div class="wrapper">
+                        <p>What is happening outside of my portfolio and what else do I like to show?</p>
+                    </div>
+                    <a href="#blog" class="slide__button">get the news<i data-lucide="chevron-right"></i></a>
+                </div>
 
-                        <a href="#contact">get in contact <i>→</i></a>
-                    </div>                
+                <!-- SLIDE: Contact -->
+                <div class="slide contact">
+                    <a href="#contact" class="slide__button">get in contact<i data-lucide="chevron-right"></i></a>
+                </div>
+
+                <!-- Controls -->
+                 <a class="prev" onclick="plusSlides(-1)"><i data-lucide="chevron-left"></i></a>
+                 <a class="next" onclick="plusSlides(1)"><i data-lucide="chevron-right"></i></a>
+
+                 <div class="indicators">
+                    <span class="dot active" data-text="Home" onclick="currentSlide(1)"></span>
+                    <span class="dot" data-text="Portfolio" onclick="currentSlide(2)"></span>
+                    <span class="dot" data-text="About" onclick="currentSlide(3)"></span>
+                    <span class="dot" data-text="Blog" onclick="currentSlide(4)"></span>
+                    <span class="dot" data-text="Contact" onclick="currentSlide(5)"></span>
                 </div>
 
             </div>
 
-        </div>
-
-        <video width="1920" height="1080" autoplay muted loop>
-            <source src="./video/lights.mp4" type="video/mp4" >
-        </video>
-
-        <!-- <div class="bg-home">
-            <iframe src="https://unicorn.studio/embed/qx1CX5xw1o0wztFyOlg1" width="1920px" height="1080px" loading="lazy"></iframe>
-        </div> -->
-
-    </section>
-
-    <div class="space"></div>
-
-    <section id="portfolio" class="main__section">
-        <h1 class="title">I invite you to my portfolio</h1>
             
-            <div class="container">
-                <div class="slider__wrapper">
-                    
-                    <button class="slider__button-left"><i class="fa-solid fa-chevron-left"></i></button>
+        </section>
 
-                    <div class="card__wrapper">
+        <section id="portfolio" class="main__section">
 
-                        <div class="card previous">
-                            <div class="card__image">
-                                <img src="./img/portfolio/vm_throne.png" alt="Valar Morghulis - Home Page">
-                                <figure class="card__info">
-                                    <figcaption>
-                                        Valar Morghulis
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-
-                        <div class="card current active">
-                            <div class="card__image">
-                                <img src="../img/portfolio/traveler_companion.png" alt="App Traveler Companion">
-                                <figure class="card__info">
-                                    <figcaption>
-                                        Genshin-Teams App Ver. 0.2
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-
-                        <div class="card next">
-                            <div class="card__image">
-                                <img src="./img/portfolio/remscape_1.png" width="1440" height="1024" alt="App Stream Hub">
-                                <figure class="card__info">
-                                    <figcaption>
-                                        REMscape
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>   
-                        
-                    </div>
-                    
-                    <button class="slider__button-right"><i class="fa-solid fa-chevron-right"></i></button>
-
-                </div>
+            <div class="mask">
+                <h1 class="title">Intuitive Designs, Impactful Experiences</h1>
             </div>
 
-        <div class="space"></div>
+            <!-- //// ACCORDION //// -->
+             <div class="accordion__container">
 
-        <!-- /// PORTFOLIO MODAL /// -->
-        <!-- <div class="modal__wrapper"> -->
-            <div class="modal__container">
+                <!-- Traveler Companion -->
+                <div class="accordion__card-wrapper">
 
-                 <div class="close">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" fill="black"/>
-                        <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="white"/>
-                        <line x1="20.7071" y1="18.2929" x2="45.1164" y2="42.7022" stroke="white" stroke-width="2"/>
-                        <line x1="19.2929" y1="43.4082" x2="43.7022" y2="18.9989" stroke="white" stroke-width="2"/>
+                    <label for="c1"></label>
+                    <input type="radio" name="card" id="c1">
+
+                    <div class="mask">
+                        <h3 class="card__title title-1">Traveler Companion</h3>
+                    </div>
+                    <div class="card__thumbnail card-1"></div>
+                    <a href="#modal-1" class="button__info info-1">learn more</a>
+                </div>
+
+                <!-- REMscape -->
+                <div class="accordion__card-wrapper">
+                    <label for="c2"></label>
+                    <input type="radio" name="card" id="c2">
+
+                    <div class="mask">
+                        <h3 class="card__title title-2">REMscape</h3>
+                    </div>
+                    <div class="card__thumbnail card-2"></div>
+                    <a href="#modal-2" class="button__info info-2">learn more</a>
+                </div>
+
+                <!-- asozial -->
+                <div class="accordion__card-wrapper">
+                    <label for="c3"></label>
+                    <input type="radio" name="card" id="c3">
+
+                    <div class="mask">
+                        <h3 class="card__title title-3">asozial</h3>
+                    </div>
+                    <div class="card__thumbnail card-3"></div>
+                    <a href="#modal-3" class="button__info info-3">learn more</a>
+                </div>
+
+                <!-- Valar Morghulis -->
+                <div class="accordion__card-wrapper">
+                    <label for="c4"></label>
+                    <input type="radio" name="card" id="c4">
+
+                    <div class="mask">
+                        <h3 class="card__title title-4">Valar Morghulis</h3>
+                    </div>
+                    <div class="card__thumbnail card-4"></div>
+                    <a href="#modal-4" class="button__info info-4">learn more</a>
+                </div>
+
+             </div>
+                            
+            
+            <!-- /// PORTFOLIO MODAL /// -->
+
+                <div class="modal__container">
+
+                    <div class="close">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" fill="black"/>
+                            <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="white"/>
+                            <line x1="20.7071" y1="18.2929" x2="45.1164" y2="42.7022" stroke="white" stroke-width="2"/>
+                            <line x1="19.2929" y1="43.4082" x2="43.7022" y2="18.9989" stroke="white" stroke-width="2"/>
                         </svg>
-                 </div>
-
-                <!-- Traveler Companion  -->
-                <div class="modal__card-1">
-                    <div class="slider">
-                        <img src="./img/portfolio/traveler_companion.png" alt="Traveler Companion App">
-                        <img src="./img/portfolio/Desktop - Character.png" alt="Traveler Companion App">
-                        <img src="./img/portfolio/Desktop - Team.png" alt="Traveler Companion App">
                     </div>
-                    <div class="modal__card-info">
-                        <h1>Traveler Companion</h1>
-                        <div class="card__content">
-                            <div>
-                                <div class="shorts">
-                                    <h4>What used?</h4>
-                                    <p>HTML, Sass, JS</p>
-                                </div>
-                                <div class="shorts">
-                                    <h4>When?</h4>
-                                    <p>2023</p>
-                                </div>
-                                <div class="links">
-                                    <a href="https://dabergotzdesign.github.io/Genshin-Teams----light-/index.html" target="_blank">Demo</a>
-                                    <a href="https://www.figma.com/proto/bk7H4tY2PcSw5FYPu9rcdy/Traveler-Companion?page-id=327%3A137&node-id=1571-111&node-type=frame&viewport=519%2C462%2C0.18&t=7TDmyXTJ5i991Zhp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1573%3A111" target="_blank">Prototype</a>
-                                </div>
-                            </div>
 
-                            <div class="info">
-                                <p>
-                                    An app that works with the fan-made Genshin API based on the game 'Genshin Impact'.
-                                    This version of my app was to test the API and create Teams.
-                                    Light version says that it is just a demo of the real version that I like to made out of this one.
-                                </p>
-                                <p>
-                                    Current release is a demo with just the team building system. More to come.
-                                </p>
-                            </div>
+                    <!-- Traveler Companion  -->
+                    <div class="prtfl__modal" id="modal-1">
+                        <div class="modal__cards">
+                            <canvas id="p_canvas-1" width="1200" height="700"></canvas>
                         </div>
-
-                    </div>
-                </div>
-
-                <!-- Stream Hub  -->
-                <div class="modal__card-2">
-                    <div class="slider">
-                        <img src="./img/portfolio/remscape_1.png" alt="thumbnail REMscape">                         
-
-                        <img src="./img/portfolio/remscape_2.png" alt="dream journal REMscape">                       
-
-                        <img src="./img/portfolio/remscape_3.png" alt="REMscape app screens">
-                    </div>
-                    <div class="modal__card-info">
-                        <h1>REMscape</h1>
-                        <div class="card__content">
-                            <div>
-                                <div class="shorts">
-                                    <h4>What used?</h4>
-                                    <p>Figma, Photoshop</p>
+                        <div class="modal__card-info">
+                            <h1>Traveler Companion</h1>
+                            <div class="card__content">
+                                <div>
+                                    <div class="shorts__wrapper">
+                                        <div class="shorts">
+                                            <h4>What used?</h4>
+                                            <p>HTML, Sass, JS</p>
+                                        </div>
+                                        <div class="shorts">
+                                            <h4>When?</h4>
+                                            <p>2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="tools">
+                                        <h4>Design Tools</h4>
+                                        <p>Figma, Affinity Design, Rive</p>
+                                    </div>
+                                    <div class="links">
+                                        <a data-text="Live Demo from Light Version" href="https://dabergotzdesign.github.io/Genshin-Teams----light-/index.html" target="_blank">Demo</a>
+                                        <a data-text="Figma Prototype" href="https://www.figma.com/proto/bk7H4tY2PcSw5FYPu9rcdy/Traveler-Companion?page-id=327%3A137&node-id=1571-111&node-type=frame&viewport=519%2C462%2C0.18&t=7TDmyXTJ5i991Zhp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1573%3A111" target="_blank">Prototype</a>
+                                    </div>
                                 </div>
-                                <div class="shorts">
-                                    <h4>When?</h4>
-                                    <p>2024</p>
-                                </div>
-                                <div class="links">
-                                    <a href="https://www.figma.com/proto/xfHZWTrEJ2fLo94m92pDWC/REMscape?page-id=120%3A747&node-id=321-245&node-type=canvas&viewport=322%2C142%2C0.2&t=FZsnZclEgv2cYRc8-1&scaling=scale-down&content-scaling=fixed" target="_blank">Prototype</a>
-                                    <a href="https://www.behance.net/gallery/212660155/REMscape" target="_blank">Case Study</a>
+
+                                <div class="info">
+                                    <p>
+                                        An app that integrates with the fan-made Genshin API, based on the game Genshin Impact.
+                                        <br>
+                                        This version serves as a prototype for testing the API and building team compositions.
+                                        The 'Light' version is a simplified demo, laying the groundwork for a more complete version I plan to develop.
+                                    </p>
+                                    <p>
+                                        Future version will use a database for team compositions and character biulds. Stay tuned.
+                                    </p>
                                 </div>
                             </div>
 
-                            <div class="info">
-                                <p>
-                                    A sleep tracker companion app with a dream journal
-                                </p>
-                                <p>
-                                    REMscape is a sleep tracker and dream journal that analyzes your chronotype to optimize your sleep.
-                                    Track your sleep patterns, journalize your dreams, and wake up feeling refreshed and energized every morning.                                   
-                                </p>
-                            </div>
                         </div>
-
                     </div>
-                </div>
 
-                <!-- Valar Morghulis  -->
-                <div class="modal__card-3">
-                    <div class="slider">
-                        <img src="./img/portfolio/vm_throne.png" alt="Valar Morghulis - Home Page">                         
-
-                        <img src="./img/portfolio/vm_wolf.png" alt="Valar Morghulis - House Stark Page">                       
-
-                        <img src="./img/portfolio/vm_dragon.png" alt="Valar Morghulis - House Tagaryen Page">
-                    </div>
-                    <div class="modal__card-info">
-                        <h1>Valar Morghulis - A Game of Thrones fan site</h1>
-                        <div class="card__content">
-                            <div>
-                                <div class="shorts">
-                                    <h4>What used?</h4>
-                                    <p>HTML, Sass, JS</p>
-                                </div>
-                                <div class="shorts">
-                                    <h4>When?</h4>
-                                    <p>2019 & 2024</p>
-                                </div>
-                                <div class="links">
-                                    <a href="https://dabergotzdesign.github.io/valar-morghulis" target="_blank">visit</a>
-                                    <a href="https://github.com/dabergotzDesign/valar-morghulis" target="_blank">Github</a>
-                                </div>
-                            </div>
-
-                            <div class="info">
-                                <p>
-                                    A dedicated website for the 'Game of Thrones' series, featuring prominent houses and their members. 
-                                    The objective of this project was to develop a site with a distinct theme, specifically 'Game of Thrones'. 
-                                </p>
-                                <p>
-                                    This not only allowed for exploration of the show's overarching theme but also the unique themes of the different houses. 
-                                    The process was enjoyable, particularly when working with themes, images, and videos.
-                                </p>
-                            </div>
+                    <!-- REMscape -->
+                    <div class="prtfl__modal" id="modal-2">
+                        <div class="modal__cards">
+                            <canvas id="p_canvas-2" width="1200" height="700"></canvas>
                         </div>
+                        <div class="modal__card-info">
+                            <h1>REMscape</h1>
+                            <div class="card__content">
+                                <div>
+                                    <div class="shorts">
+                                        <h4>What used?</h4>
+                                        <p>Figma, Photoshop</p>
+                                    </div>
+                                    <div class="shorts">
+                                        <h4>When?</h4>
+                                        <p>2024</p>
+                                    </div>
+                                    <div class="links">
+                                        <a href="https://www.figma.com/proto/xfHZWTrEJ2fLo94m92pDWC/REMscape?page-id=120%3A747&node-id=321-245&node-type=canvas&viewport=322%2C142%2C0.2&t=FZsnZclEgv2cYRc8-1&scaling=scale-down&content-scaling=fixed" target="_blank">Prototype</a>
+                                        <a href="https://www.behance.net/gallery/212660155/REMscape" target="_blank">Case Study</a>
+                                    </div>
+                                </div>
 
+                                <div class="info">
+                                    <p>
+                                        A sleep tracker companion app with a dream journal
+                                    </p>
+                                    <p>
+                                        REMscape is a sleep tracker and dream journal that analyzes your chronotype to optimize your sleep.
+                                        Track your sleep patterns, journalize your dreams, and wake up feeling refreshed and energized every morning.                                   
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
+
+                    <!-- asozial  -->
+                    <div class="prtfl__modal" id="modal-3">
+                        <div class="modal__cards">
+                            <canvas id="p_canvas-3" width="1200" height="700"></canvas>
+                        </div>
+                        <div class="modal__card-info">
+                            <h1>asozial - social media for the anti-social developer</h1>
+                            <div class="card__content">
+                                <div>
+                                    <div class="shorts">
+                                        <h4>What used?</h4>
+                                        <p>Figma, Photoshop</p>
+                                    </div>
+                                    <div class="shorts">
+                                        <h4>When?</h4>
+                                        <p>2024</p>
+                                    </div>
+                                    <div class="links">
+                                        <a href="https://www.behance.net/gallery/214598859/asozial-Case-Study-(Matching)-Dennis-Dabergotz" target="_blank">Case Study</a>
+                                        <a href="https://www.figma.com/proto/HFwKti3Ucl0BnzMdfVPsTu/%5BDENNIS%5D--Team-%23-%7C-FINAL-PROJECT%E2%80%94-asozial?page-id=8370%3A386&node-id=8374-1744&p=f&viewport=642%2C600%2C0.07&t=BastGz020mUklFPN-1&scaling=contain&content-scaling=fixed&starting-point-node-id=8374%3A1744" target="_blank">Prototype</a>
+                                    </div>
+                                </div>
+
+                                <div class="info">
+                                    <p>
+                                        'asozial' noun: German for being anti-social.
+                                    </p>
+                                    <p>
+                                        For my final project at Ironhack, I worked on the matching system for the social website 'asozial.' 
+                                        The project's style was based directly on the client's existing website, ensuring a cohesive design.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Valar Morghulis  -->
+                    <div class="prtfl__modal" id="modal-4">
+                        <div class="modal__cards">
+                            <canvas id="p_canvas-4" width="1200" height="700"></canvas>
+                        </div>
+                        <div class="modal__card-info">
+                            <h1>Valar Morghulis - A Game of Thrones fan site</h1>
+                            <div class="card__content">
+                                <div>
+                                    <div class="shorts">
+                                        <h4>What used?</h4>
+                                        <p>HTML, Sass, JS</p>           
+                                    </div>
+                                    <div class="shorts">
+                                        <h4>When?</h4>
+                                        <p>2019 & 2024</p>
+                                    </div>
+                                    <div class="links">
+                                        <a href="https://dabergotzdesign.github.io/valar-morghulis" target="_blank">visit</a>
+                                        <a href="https://github.com/dabergotzDesign/valar-morghulis" target="_blank">Github</a>
+                                    </div>
+                                </div>
+
+                                <div class="info">
+                                    <p>
+                                        A dedicated website for the 'Game of Thrones' series, featuring prominent houses and their members. 
+                                        The objective of this project was to develop a site with a distinct theme, specifically 'Game of Thrones'. 
+                                    </p>
+                                    <p>
+                                        This not only allowed for exploration of the show's overarching theme but also the unique themes of the different houses. 
+                                        The process was enjoyable, particularly when working with themes, images, and videos.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+    
                 </div>
-  
-            </div>
-        <!-- </div> -->
-       
+            <!-- </div> -->
+        
 
-    </section>
+        </section>
 
-    <div class="space"></div>
 
-    <section id="about" class="main__section">
-        <h1 class="title">Yep, that's me</h1>
+        <section id="about" class="main__section">
+         
+            <h1 class="title">Yep, that's me</h1>
+           
 
-        <div class="about__container">
+            <div class="about__container">
 
-            <div class="about__intro">
-                <div class="about__text">
-                    <!-- <div class="about__image">                    
-                        <img class="about__image-portrait" src="../img/ddabergotz.png" width="1720px" height="1956px" alt="dabergotzDesign profile image">                  
-                    </div> -->
-                    
-                    <div class="about__intro-text">
-                    <h3 class="about__title">May I introduce myself</h3>
-                    <p class="about__description">
-                        Hello everyone, I'm Dennis Dabergotz, a Front-End Web Developer with a passion for design, games, and technology. 
-                        Originating from a hands-on crafting background, I transitioned to the digital realm at the School for Games, initially aiming to become a Game Developer.
+                <div class="about__intro">
+                    <div class="about__text">
+                                                
+                        <div class="about__intro-text">
+                        <h3 class="about__title">May I introduce myself</h3>
+                        <p class="about__description">
+                            Hello everyone, I'm Dennis Dabergotz, a Front-End Web Developer with a passion for design, games, and technology. 
+                            Originating from a hands-on crafting background, I transitioned to the digital realm at the School for Games, initially aiming to become a Game Developer.
+                        </p>
                         <p class="about__description">
                             However, upon graduation, I was steered towards Web Development due to its stability compared to game development. 
                             I quickly grew fond of Web Development, particularly the Front-End and Design aspects. 
                             This led me to explore UI/UX Design through online courses and self-study. Now, I'm keen to pursue a career as a UI/UX Designer.
                         </p>
-                    </p>
-                </div>
-
-            </div>
-            </div>
-
-            <div class="about__career">
-               <!--  <section class="about__skill"> -->
-                    <h3 class="about__title">Development Career</h3>
-
-                    <ul class="about__career-tree">
-                       
-                        <li>
-                            <p class="career__date">10/2013 - 10/2015</p><p>Education in Game Design - School for Games</p>
-                        </li>
                         
-                        <li>
-                            <p class="career__date">03/2019 - 03/2020</p><p>Education in Web Development - Digital Career Institute (DCI)</p>
-                        </li>
+                    </div>
 
-                        <li>
-                            <p class="career__date">11/2022 - 06/2023</p><p>further Education in Web Development - Fachinstitut für Informatik & Grafikdesign (FiGD)</p>
-                        </li>
-
-                        <li>
-                            <p class="career__date">10/2023 - 09/2024</p><p>self education in UI/UX Design - Online</p>
-                        </li>
-
-                        <li>
-                            <p class="career__date">09/2024 - 12/2024</p><p>UI/UX Design study within a Bootcamp - Ironhack</p>
-                        </li>
-                    </ul>
-
-                                          
-
-                    <h3 class="about__title">Web Development Skills</h3>
-                    <ul class="about__skill-tree">
-                        <ol>
-                            <li><i class="fa-brands fa-html5"></i> HTML</li>
-                            <li><i class="fa-brands fa-css3"></i> CSS</li>
-                            <li><i class="fa-brands fa-js"></i> Javascript</li>
-                            <li><i class="fa-brands fa-react"></i> React</li>
-                        </ol>
-                        <ol>
-                            <li><i class="fa-brands fa-sass"></i> Sass</li>
-                            <li><i class="fa-brands fa-php"></i> PHP</li>
-                            <li><i class="fa-brands fa-vuejs"></i> VueJS</li>
-                            <li><i class="fa-brands fa-figma"></i> Figma</li>
-                        </ol>
-                    </ul>
-                    <h3 class="about__title">Other Development Skills</h3>
-                    <ul class="about__skill-tree">
-                        <ol>
-                            <li>Photoshop</li>
-                            <li>Autodesk Maya</li>
-                            <li>C#</li>                          
-                        </ol>
-                        <ol>
-                            <li>Blender</li>
-                            <li>Unreal Engine</li>
-                            <li>Unity 3D</li>
-                        </ol>
-                    </ul>
-               <!--  </section> -->
-            </div>
-            
-        </div>
-
-    </section>
-
-    <div class="space"></div>
-
-    <section id="blog" class="main__section">
-        <h1 class="title">what is happening?</h1>
-
-        <h2>get updates to the site & other projects in my blog, <br> happy reading</h2>
-
-        <a href="./html/blog.html" class="button">to the blog <span><i class="fa-solid fa-angle-right"></i></span></a>
-
-    </section>
-
-    <div class="space"></div>
-
-    <section id="contact" class="main__section">
-        
-    
-            <h1 class="title">let's chat, hit me up</h1>
-    
-            <div class="contacts__wrapper">
-    
-    
-                <!-- Messanger -->
-                <div class="contacts__mails envelope_button">               
-                    <p>send me a message</p> <i class="material-symbols-sharp">mail</i>
                 </div>
-    
-                <h5>or</h5>
-    
-                <!-- Social Channels -->
-                <div class="contacts__socials">
-    
-                    <h5 class="mobile__healine-socials">get in touch</h5>
-              
-                    <ul>
-                        <li>
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/dabergotzDesign" target="_blank">Github</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://www.linkedin.com/in/dennisdabergotz/" target="_blank">LinkedIn</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-figma"></i>
-                            <a href="https://www.figma.com/@dabergotzdesign" target="_blank">Figma</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-twitter"></i>
-                            <a href="https://twitter.com/dabergotzDesign" target="_blank">Twitter</a>
-                        </li>
+                </div>
+
+                <div class="about__career">
+                
+                        <h3 class="about__title">Development Career</h3>
+
+                        <ul class="about__career-tree">
                         
-                                       
-                    </ul>
-                </div>
-            </div>
-    
-            <!-- Email modal -->
-            <div class="mailModal">
-                <div class="mailModal__Content">
-                    <h1>Send me a message</h1>
-                <span class="closeMail">                    
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" fill="black"/>
-                        <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="white"/>
-                        <line x1="20.7071" y1="18.2929" x2="45.1164" y2="42.7022" stroke="white" stroke-width="2"/>
-                        <line x1="19.2929" y1="43.4082" x2="43.7022" y2="18.9989" stroke="white" stroke-width="2"/>
-                        </svg>
-                </span>
-    
-                <div id="form-main">
-                    <div id="form-div">
-                    <form class="form" id="form1" method="POST" action="https://formspree.io/f/myyoeqvb" action="../js/contact.js" onsubmit="return formValidation()">
+                            <li>
+                                <p class="career__date">10/2013 - 10/2015</p><p>Education in Game Design - School for Games</p>
+                            </li>
                             
-                    <input type="text" name="_gotcha" style="display:none" />
-                        
-                    <div class="input__wrap">
-                        <input name="name" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,100]] input" id="name" />               
-                        <label for="name" class="input__label">Full Name</label>
-                    </div>
-    
-                    <div class="input__wrap">
-                        <input name="email" type="text" placeholder=" " class="validate[required,custom[email]] input" id="email" />
-                        <label for="email" class="input__label">Email</label>
-                    </div>
-                    
-                    <div class="input__wrap">
-                        <input name="subject" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,30]] input" id="subject" />
-                        <label for="subject" class="input__label">Subject</label>
-                    </div>
-    
-                        
-                        <textarea name="text" class="validate[required,custom[onlyLetter],length[6,300]] input" id="message" placeholder="Your Message"></textarea>
-                        
-    
-                        <div class="submit">
-                        <input type="submit" value="Send Message" class="submit__button" disabled/>
-                        </div>
-    
-                    </form>
-                    </div>
-    
+                            <li>
+                                <p class="career__date">03/2019 - 03/2020</p><p>Education in Web Development - Digital Career Institute (DCI)</p>
+                            </li>
+
+                            <li>
+                                <p class="career__date">11/2022 - 06/2023</p><p>further Education in Web Development - Fachinstitut für Informatik & Grafikdesign (FiGD)</p>
+                            </li>
+
+                            <li>
+                                <p class="career__date">10/2023 - 09/2024</p><p>self education in UI/UX Design - Online</p>
+                            </li>
+
+                            <li>
+                                <p class="career__date">09/2024 - 12/2024</p><p>UI/UX Design study within a Bootcamp - Ironhack</p>
+                            </li>
+                        </ul>
+             
                 </div>
-    
+
+                <div class="about__toolbox auto">
+                    <h3 class="about__title">My Toolbox</h3>
+                    <div class="wrapper">
+                        <ul class="tool__carousel primary">
+                            <li class="tool">Figma</li>
+                            <li class="tool">Affinity Photo/Design</li>
+                            <li class="tool">Rive</li>
+                            <li class="tool">unicorn.studio</li>
+                            <li class="tool">HTML</li>
+                            <li class="tool">CSS</li>
+                            <li class="tool">Sass</li>
+                            <li class="tool">Javascript</li>
+                            <li class="tool">Blender</li>
+                            <li class="tool" style="margin-right: 5em;">Adobe Photoshop</li>
+                        </ul>
+                        <ul class="tool__carousel secondary">
+                            <li class="tool" style="margin-left: 5em;">Figma</li>
+                            <li class="tool">Affinity Photo/Design</li>
+                            <li class="tool">Rive</li>
+                            <li class="tool">unicorn.studio</li>
+                            <li class="tool">HTML</li>
+                            <li class="tool">CSS</li>
+                            <li class="tool">Sass</li>
+                            <li class="tool">Javascript</li>
+                            <li class="tool">Blender</li>
+                            <li class="tool">Adobe Photoshop</li>
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
-        </div>
+
+        </section>
 
 
-    </section>
+        <section id="blog" class="main__section">
+            <div class="title__wrapper">
+                <h1 class="title">what is happening?</h1>
+                <h2>get updates to the site & other projects in my blog, happy reading</h2>
+            </div>
+
+            <a href="./html/blog.html" class="blog__link" >to the blog <span><i data-lucide="chevron-right"></i><i data-lucide="chevron-right"></i><i data-lucide="chevron-right"></i></span></a>
+            
+            <!-- unicorn.studio glass box -->
+            <iframe class="blog__box" src="https://unicorn.studio/embed/G7RkYP74dsw0e3wcE4rv" width="1440px" height="900px" loading="lazy"></iframe>
+
+        </section>
 
 
-    </main>
+        <section id="contact" class="main__section">
+            
+        
+                <h1 class="title">let's chat, hit me up</h1>
+        
+                <div class="contacts__wrapper">
+    
+        
+                    <!-- Messenger -->
+                    <div class="contacts__mails envelope_button">               
+                        <p>send me a message</p> <i data-lucide="mail">mail</i>
+                    </div>
+        
+                    <h5>or</h5>
+        
+                    <!-- Social Channels -->
+                    <div class="contacts__socials">
+        
+                        <h5 class="mobile__healine-socials">get in touch</h5>
+                
+                        <ul>
+                            <li>
+                                <i class="socials__link" data-lucide="dribbble"></i>                               
+                                <a href="https://dribbble.com/dabergotzDesign" data-text="Dribbble" target="_blank">Dribbble</a>                            
+                            </li>
+                            <li>
+                                <i class="socials__link" data-lucide="linkedin"></i>
+                                <a href="https://www.linkedin.com/in/dennisdabergotz/" data-text="LinkedIn" target="_blank">LinkedIn</a>
+                            </li>
+                            <li>
+                                <i class="socials__link" data-lucide="github"></i>
+                                <a href="https://github.com/dabergotzDesign" data-text="Github" target="_blank">Github</a>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-behance socials__link" style="scale: 0.9;"></i>
+                                <a href="https://www.behance.net/dabergotzDesign" data-text="Behance" target="_blank">Behance</a>
+                            </li>
+                            
+                                        
+                        </ul>
+                    </div>
+
+                </div>
+        
+                <!-- Email modal -->
+                <div class="mailModal">
+                    <div class="mailModal__Content">
+                        <h1>Send me a message</h1>
+                    <span class="closeMail">                    
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" fill="black"/>
+                            <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="white"/>
+                            <line x1="20.7071" y1="18.2929" x2="45.1164" y2="42.7022" stroke="white" stroke-width="2"/>
+                            <line x1="19.2929" y1="43.4082" x2="43.7022" y2="18.9989" stroke="white" stroke-width="2"/>
+                            </svg>
+                    </span>
+        
+                    <div id="form-main">
+                        <!-- <div id="form-wrapper"> -->
+                        <form class="form" id="form1" method="POST" action="https://formspree.io/f/myyoeqvb" action="../js/contact.js" onsubmit="return formValidation()">
+                                
+                        <input type="text" name="_gotcha" style="display:none" />
+                            
+                        <div class="input__wrap">
+                            <input name="name" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,100]] input" id="name" />               
+                            <label for="name" class="input__label">Full Name</label>
+                        </div>
+        
+                        <div class="input__wrap">
+                            <input name="email" type="text" placeholder=" " class="validate[required,custom[email]] input" id="email" />
+                            <label for="email" class="input__label">Email</label>
+                        </div>
+                        
+                        <div class="input__wrap">
+                            <input name="subject" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,30]] input" id="subject" />
+                            <label for="subject" class="input__label">Subject</label>
+                        </div>
+        
+                            
+                            <textarea name="text" class="validate[required,custom[onlyLetter],length[6,300]] input" id="message" placeholder="Your Message"></textarea>
+                            
+        
+                            <div class="submit">
+                            <input type="submit" value="Send Message" class="submit__button" disabled/>
+                            </div>
+        
+                        </form>
+                        <!-- </div> -->
+        
+                    </div>
+        
+                </div>
+            </div>
+
+
+         </section>
+        
+         <a href="#top" class="toTop">get back to top <i data-lucide="chevron-up"></i></a>
+  
+
+        <iframe class="ddesign__bg-city" src="https://unicorn.studio/embed/KrWSHdEO830n5AO9S3tf" width="1440px" height="900px" loading="lazy"></iframe>
+
+
+    </div>
+
 
     <footer>
 
-        <p>made by Dennis Dabergotz</p>
+        <div class="wrapper">
+            <p>made by Dennis Dabergotz</p>
+            <p class="tools">tools used <br> Figma, Affinity Design, Rive, unicorn.studio</p>
+        </div>
 
         <img src="img/dddesign_logo_transparent.png" height="2048px" width="2048px" alt="ddesign logo">
 
-        <img class="watermark" src="img/dddesign_logo_transparent.png" height="2048px" width="2048px" alt="ddesign logo">
+        <img class="watermark" src="./img/svg/ddesign_logo.svg" height="2048px" width="2048px" alt="ddesign logo">
 
     </footer>
 
-    <!-- Splash Screen Overlay -->
-    <!-- <div class="splash">
-        <div class="spinner"></div>
-        <img src="./img/dddesign_logo_transparent.png" height="2048" width="2048" alt="logo">
-    </div> -->
+    </main>
+
+    <div class="loading">
+        <canvas id="canvas-loading" width="500" height="500"></canvas>
+        <iframe class="logo-loading" src="https://unicorn.studio/embed/qx1CX5xw1o0wztFyOlg1" loading="lazy"></iframe>
+    </div>
     
 </body>
+
+<script>
+
+    const menu_mb = document.querySelector(".menu");
+    const nav_mb = document.querySelector(".menu__nav")
+
+    menu_mb.addEventListener("click", ()=>{
+        nav_mb.classList.toggle("hidden");
+    })
+
+</script>
+
 </html>

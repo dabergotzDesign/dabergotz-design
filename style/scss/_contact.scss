@@ -3,6 +3,7 @@ $media-laptop: 1024px;
 $media-tablet: 768px;
 $media-mobile: 450px;
 
+
 //.page{
 
     //&__contact{
@@ -18,34 +19,33 @@ $media-mobile: 450px;
             padding: 3em;
         
             margin: auto;
+            margin-bottom: 10em;
             
-            background-image: url("../../img/backgrounds/bg_contact_AI.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            box-shadow: inset 40em 80em var(--bg-dark-transparent);
+            //box-shadow: inset 40em 80em var(--c-dark-transparent-50);
 
 
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
 
                   
             
             .title{
-                color: var(--text-light);
+                color: var(--c-orange);
+                text-shadow: 0 0 4px rgba($color: #f2f2f2, $alpha: 0.5);
                 text-align: center;
                 text-transform: uppercase;
                 font-size: var(--size-h2);
                 font-family: var(--font-poppins);
                 font-weight: 200;
 
-                //background-color: var(--bg-dark-transparent);
                 width: 100%;
-                //padding-top: 6rem;
                 margin: 1em;
-
+           
                 @media screen and (max-width: $media-tablet) {
                     font-size: 1.8rem;
                 }
@@ -60,11 +60,33 @@ $media-mobile: 450px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    gap: 12rem;
+                    gap: 8em;
+                    position: relative;
 
                     height: auto;
                     width: 100%;
-                    //background-color: var(--bg-dark-transparent);
+                    margin: auto;
+                    
+                    /* background */
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+    
+                        background:linear-gradient(90deg, transparent, var(--c-blue), var(--c-light-transparent-50), var(--c-blue), transparent) , url("../../img/backgrounds/stripes_bw_horizontal.png");
+                        background-size: contain;
+                        background-repeat: repeat-x;
+                        background-position: center;
+                        opacity: 0.25;
+                        z-index: -1;
+
+                        @media screen and (max-width: $media-mobile) {
+                            background:linear-gradient(90deg, transparent, var(--c-blue), var(--c-light-transparent-50), var(--c-blue), transparent);
+                        }
+                    }
 
                     @media screen and (max-width: $media-tablet) {
                         gap: 8rem;
@@ -80,7 +102,7 @@ $media-mobile: 450px;
 
                     h4{
                         text-transform: capitalize;
-                        font-family: var(--font-space-mono);
+                        font-family: var(--font-space);
                         font-weight: 600;
                         font-size: 2rem;
                         letter-spacing: 1px;
@@ -91,10 +113,11 @@ $media-mobile: 450px;
 
                     }
 
+                    
                     //the "or"
                     h5{
                         display: none;
-                        color: var(--text-light);
+                        color: var(--c-light);
                         font-family: var(--font-poppins);
                         font-weight: 400;
                         text-transform: uppercase;
@@ -108,10 +131,10 @@ $media-mobile: 450px;
                 }
 
                 &__mails{
-                    font-family: var(--font-space-mono);
+                    font-family: var(--font-space);
                     text-align: center;
                     transition: all 0.3s ease;
-                    color: var(--text-light);
+                    color: var(--c-light);
                     
                     @media screen and (max-width: $media-tablet){
                         padding: 1rem;                        
@@ -121,12 +144,12 @@ $media-mobile: 450px;
                     &:hover{
                         cursor: pointer;
                         scale: 1.2;
-                        text-shadow: 0 0 2px var(--text-dark);
+                        text-shadow: 0 0 2px var(--c-dark);
                     }
                     
                     &:active{
-                        color: var(--bg-dark-grey);
-                        text-shadow: 0 0 4px var(--text-light);
+                        color: var(--c-blue);
+                        text-shadow: 0 0 4px var(--c-light);
                     }
                     
                     p{
@@ -141,18 +164,17 @@ $media-mobile: 450px;
                     }
                     
                     //envelope button
-                    i{
-                        font-size: 12rem;
-                        font-variation-settings: 
-                        'FILL' 0,
-                        'wght' 100;
-
-                        @media screen and (max-width: $media-tablet) {
-                            font-size: 8rem;
+                    svg{                        
+                        scale: 4;
+                        stroke-width: 1px;      
+                        
+                        &:hover{
+                            content: attr(data-lucide("mail-open"));
                         }
 
                         @media screen and (max-width: $media-mobile) {
-                            font-size: 7rem;
+                            scale: 2;
+                            margin-top: 1em;
                         }
                     }
 
@@ -161,32 +183,13 @@ $media-mobile: 450px;
                 &__socials{
 
                     text-align: center;
-                    color: var(--text-light);
+                    color: var(--c-light);
                     position: relative;
-
-                    //divider pole
-                    &::before{
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: -32%;
-                        margin-right: 2rem;
-
-                        width: 2px;
-                        height: 100%;
-                        background-color: var(--bg-light);
-
-                        @media screen and (max-width: $media-mobile){
-                            display: none;                  
-                        }
-
-                    }
-
-                                                           
+                                                     
 
                     div{
                         font-size: 1.5rem;
-                        font-family: var(--font-hepta);
+                        font-family: var(--font-space);
 
                         @media screen and (max-width: $media-mobile) {
                             /* font-size: 1rem;
@@ -200,15 +203,38 @@ $media-mobile: 450px;
                         li{
                             list-style: none;
                             font-size: 2.3rem;
-                            font-family: var(--font-hepta);
+                            font-family: var(--font-comfortaa);
                             
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
-                            
+                                                        
                             padding: 1rem 0;
                             margin: 0.5rem;
                             transition: all 0.3s ease;
+                            position: relative;
+
+                            &:hover{
+                                
+                                a{                                   
+                                    animation: text-glitch 0.5s infinite ease-in-out alternate-reverse; 
+                                    
+                                    @media screen and (max-width: $media-mobile) {
+                                        animation: none;
+                                    }
+                                }
+
+                                svg,
+                                i{   
+                                    mix-blend-mode: lighten;                            
+                                    animation: icon-glitch 0.3s infinite alternate-reverse;
+                                    
+                                    @media screen and (max-width: $media-mobile) {
+                                        animation: none;
+                                    }
+                                }
+
+                            }
                             
                             @media screen and (max-width: $media-tablet) {
                                 padding: 0.5rem 0;
@@ -216,54 +242,54 @@ $media-mobile: 450px;
                             }
                             
                             
-                            
-                            
-                            &:hover{
-
-                            color: var(--text-light);
-                            text-shadow: 0 0 2px var(--bg-dark);
-                            scale: 1.2;
-                            
-                            @media screen and (max-width: $media-tablet) {
-                                scale: 1;
-                                text-shadow: none;
+                        svg{
+                            margin-right: 1em;
+                            @media screen and (max-width: $media-mobile) {
+                                margin-right: 0.5em;
                             }
+                        }   
+                        
+                        i{
+                            margin-right: 0.5em;
 
-                            //hover effect                            
-                            a{
-                                color: var(--text-light);
+                            @media screen and (max-width: $media-mobile) {
+                                font-size: 1.2rem;
+                                margin-right: 1em;
                             }
                         }
                         
-                        
                         a{
+                            
                             text-decoration: none;
                             text-align: left;
 
-                            color: var(--text-light);
+                            color: var(--c-light);
                             font-size: var(--size-h5);
-                            font-family: var(--font-poppins);
+                            font-family: var(--font-comfortaa);
                             letter-spacing: 2px;
-
-                            padding-left: 1rem;
-                            position: relative;
+                            //background-color: black;
+                            mix-blend-mode: lighten;
 
                             &::after{
                                 content: '';
                                 position: absolute;
                                 top: 0;
-                                left: -30%;
-                                //background-color: red;
-                                width: 10vw;
+                                left: 0;
+                                width: 100%;
                                 height: 100%;
+
+                                //background-color: red;
+                                border-radius: 0.5em;
+
                             }
+                           
 
                             @media screen and (max-width: $media-tablet) {
                                 font-size: 1.8rem;
                             }
                                                         
                             @media screen and (max-width: $media-mobile) {
-                                color: var(--text-light);
+                                color: var(--c-light);
                                 font-size: var(--size-p);
                             }
                         }
@@ -285,18 +311,32 @@ $media-mobile: 450px;
 
                 animation: popIn 0.3s ease;
 
+                #form-main{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    width: 100%;
+                    padding: 1em;
+                }
+
+                .form{
+                    width: 100%;
+                }
+
                 &.out{
                     animation: popOut 0.3s ease;
                 }
 
                 &__Content{
-                    background:#111;
+                    background: var(--c-dark);
                     margin: 10% auto;
                     padding: 20px;
-                    border: 1px solid var(--text-light);
+                    border: 1px solid var(--c-light);
+                    border-radius: 0.25em;
                     width: 60%;
                     height: auto;
-                    color: var(--text-light);
+                    color: var(--c-light);
                                      
                     animation: moveIn 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
                                      
@@ -326,11 +366,12 @@ $media-mobile: 450px;
 
                     h1{
                         margin: 1rem 0;
+                        margin-left: 0.5em;
                         margin-bottom: 4rem;
 
-                        font-family: var(--font-poppins);
+                        font-family: var(--font-comfortaa);
                         font-size: var(--size-h2);
-                        font-weight: 400;
+                        font-weight: 300;
 
                         @media screen and (max-width: $media-tablet) {
                             font-size: 1.8rem;
@@ -344,22 +385,22 @@ $media-mobile: 450px;
                     }
 
                     .closeMail{
-                        //color: var(--text-light);
-                        //outline: 2px solid var(--bg-light);
-                        border-radius: 50%;
-                        //padding: 0 12px;
-                        float: right;
-                        //font-size: 2.5rem;
-                        //font-weight: bold;
+                        border-radius: 50%;         
+                        float: right;                 
 
                         position: absolute;
-                        top: 1%;
-                        right: 1%;
+                        top: -5%;
+                        right: -3%;
+
+                        svg{
+                            border-radius: 50%;
+                            outline: 8px solid var(--c-dark);
+                        }
 
                         &:hover,
                         &:focus{
                             cursor: pointer;
-                            color:var(--text-light);
+                            color:var(--c-light);
                         }
 
                         @media screen and (max-width: $media-tablet) {
@@ -376,44 +417,44 @@ $media-mobile: 450px;
                     .input{
 
                         &__wrap{                            
-                            width:80%;
+                            width:100%;
                             height: 50px;
                             position: relative;
 
-                            outline: 1px solid var(--text-light);
+                            outline: 1px solid var(--c-blue);
+                            border-radius: 0.25em;
                             margin-bottom: 2.5rem;
-                            margin-left: 1.2rem;
-
-                            @media screen and (max-width: $media-laptop) {
-                                margin-left: 0;
-                            }
-
+                           
+                            
                             @media screen and (max-width: $media-tablet) {
                                 width: 100%;
                             }
 
                             .input{                                
 
-                                    color:var(--text-light);
+                                    color:var(--c-light);
                                     font-family: var(--font-poppins);
                                     font-weight:300;
                                     font-size: 1.2rem;
-                                    background-color: var(--bg-dark);
+                                 
+                                    background-color: var(--c-dark);
                                     padding: .8rem;
                                     width: 100%;
                                     height: 100%;
                                     border: none;
-                                    outline: 1px solid var(--bg-lightgrey);
+                                    
+                                    box-shadow: 0 0 20px rgba($color: #00AEFF, $alpha: 0.5) inset;
 
                                     &:not(:placeholder-shown){
-                                        background-color: var(--bg-dark);
+                                        background-color: var(--c-dark);
                                     }
                                 
 
                                 &:focus,
                                 &:not(:placeholder-shown){
-                                    background-color: var(--bg-dark);
-                                    border: 2px solid var(--bg-light);
+                                    background: var(--c-dark);
+                                    box-shadow: none;
+                                    border: none;
                                     outline: none;
                                     height: 100%;
                                     width: 100%;
@@ -425,10 +466,13 @@ $media-mobile: 450px;
                                 {
                                     font-size: 0.8rem;
                                     position: absolute;
-                                    top: -12%;
-                                    left: 1%; 
+                                    top: -50%;
+                                    left: 0; 
                                     padding: 0 0.5rem;
-                                    background-color: var(--bg-dark);                           
+                                    text-shadow: none;
+                                    background-color: var(--c-dark);
+                                    outline: 1px solid var(--c-blue);
+                                    border-radius: 0.25em;                        
                                 }
 
 
@@ -445,10 +489,13 @@ $media-mobile: 450px;
                                                 
 
                         &__label{
-                            color: var(--bg-lightgrey);
-                            font-family: var(--font-poppins);
+                            background-color: var(--c-dark);
+                            color: var(--c-blue);
+                            font-family: var(--font-space);
                             font-size: 1.2rem;
                             font-weight: 400;
+                            text-shadow: 0 0 4px var(--c-blue);
+                            text-transform: uppercase;
                             letter-spacing: 3px;
                             transition: all 0.3s ease;
 
@@ -470,17 +517,18 @@ $media-mobile: 450px;
                     }
 
                     textarea{
-                        background-color: var(--bg-dark);
-                        color: var(--text-light);
+                        background-color: var(--c-dark);
+                        color: var(--c-light);
                         padding: 0.5rem;
                         width: 100%;
+                        border-radius: 0.25em;
 
                         font-size: var(--size-p);
-                        font-family: var(--font-hepta);
+                        font-family: var(--font-space);
                         letter-spacing: 1.5px;
 
                         &:focus{
-                            outline: 2px solid var(--bg-light);
+                            outline: 1px solid var(--c-blue);
                         }
 
                         @media screen and (max-width: $media-tablet) {
@@ -504,37 +552,32 @@ $media-mobile: 450px;
 
                     .submit{
                         &__button{
-                            font-family: var(--font-poppins);
+                            font-family: var(--font-space);
                             font-weight: 500;
                             font-size: 1.5rem;
                             letter-spacing: 0.2rem;
 
-                            float:left;
                             width: 100%;
                             margin-top: 2rem;
                             padding: 1.1rem 0;
 
-                            border: var(--text-light) solid 1px;
-                            background-color: var(--bg-dark);
-                            color: var(--text-light);
+                            border: var(--c-light) solid 1px;
+                            border-radius: 0.5em;
+                            background-color: var(--c-dark);
+                            color: var(--c-light);
                             cursor:pointer;
 
-                            -webkit-transition: all 0.3s;
-                            -moz-transition: all 0.3s;
                             transition: all 0.3s;
                             position: relative;
 
-                            &:hover{
-                                color: var(--text-dark);
-                                background-color: var(--text-light);
-                                border-color: var(--bg-dark);
-                                box-shadow: 0 0 1rem var(--bg-darkgrey) inset;
+                            &:hover:not(:disabled){
+                                color: var(--c-light);
+                                background-color: var(--c-blue);
+                                border-color: var(--c-light);
                             }
 
                             &:disabled{
-                                background-color: var(--bg-darkgrey);
-                                border-color: var(--bg-lightgrey);
-                                color: var(--text-disabled);
+                                opacity: 0.5;
                                 cursor: not-allowed;
                             }
 
@@ -591,21 +634,41 @@ $media-mobile: 450px;
             }
         }
 
-        /* .title{
-
-            opacity: 0;
-
-            text-align: center;
-            text-transform: uppercase;
-            text-shadow: 0 0 4px var(--bg-dark);
-            
-            font-family: var(--font-space-mono);
-            font-size: 2.5rem;
-            font-weight: 400;
-
-            letter-spacing: 4px;
-            color: var(--text-light);
-        } */
+        @keyframes text-glitch {
+            0% {
+                text-shadow:2px 1px var(--c-blue), -2px -1px var(--c-purple);
+              }
+              25% {
+                text-shadow: -1px -2px var(--c-blue), 2px 1px var(--c-purple);
+              }
+              50% {
+                text-shadow:2px 1px var(--c-blue), -2px -1px var(--c-purple);
+              }
+              75% {
+                text-shadow:-2px -1px var(--c-blue), -2px -1px var(--c-purple);
+              }
+              100% {
+                text-shadow:2px 0 var(--c-blue), 2px -1px var(--c-purple);
+              }
+          }
+          
+        @keyframes icon-glitch {
+            0% {
+                filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px -1px var(--c-purple));
+              }
+              25% {
+                filter: drop-shadow(-1px -2px var(--c-blue)) drop-shadow(2px 1px var(--c-purple));
+              }
+              50% {
+                filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px 1px var(--c-purple));
+              }
+              75% {
+                filter: drop-shadow(-2px -1px var(--c-blue)) drop-shadow(-2px -1px var(--c-purple));
+              }
+              100% {
+                filter: drop-shadow(2px 0 var(--c-blue)) drop-shadow(2px -1px var(--c-purple));
+              }
+        }
 
 
     //}

@@ -7,34 +7,412 @@ $width: 20vw;
 $height: 36vh;
 
 
-@mixin activeCard($width){
-    @if $width == 'active' {
-        width: $width;
-    }
-    @else{
-        width: 8vw;
-    }
+@mixin background(){
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
 
-    //on tablet
-    @if $width == 'active-t'{
-        width: 100%;
-        height: 24vh;
+    @media screen and (max-width: $media-mobile) {
+          background-size: cover;      
     }
-    /* @else{
-        height: 0;
-    } */
-
-    //on mobile
-    @if $width == 'active-m'{
-        width: 100%;
-        height: $height;
-    }
-    /* @else{
-        height: 0;
-    } */
-        
 }
 
+
+
+.slider{
+
+    &__container{
+        width: 100%;
+        height: 80vh;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+
+        @media screen and (max-width: $media-tablet) {
+            height: 50vh;
+            background-color: var(--c-dark);   
+        }
+
+        @media screen and (max-width: $media-mobile) {
+            height: 40vh;
+            margin: 0;
+        }
+
+        &:hover{
+            .next{
+                right: 0;
+            }
+
+            .prev{
+                left: 0;
+            }
+        }
+
+        
+        .slide{
+            display: none;
+            width: 100%;
+            height: 100%;
+ 
+            position: relative;
+
+            &.active{
+                display: block;
+            }
+          
+
+            &__button{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 8px;
+                z-index: 1;
+                padding: 1em 0.6em;
+                margin: auto;
+                width: fit-content;
+                position: absolute;
+                bottom: 15%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                font-family: var(--font-space);
+                font-weight: 300;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                text-align: center;
+                text-shadow: 1px 1px var(--c-dark-transparent-25);
+                text-decoration: none;
+                border: 2px solid var(--c-light);
+                border-radius: 0.5em;
+                background-color: var(--c-light-transparent-50);
+                backdrop-filter: blur(10px);
+                color: var(--c-light);
+                transition: all 0.2s ease;
+
+                @media screen and (max-width: $media-tablet) {
+                    font-size: 1rem;
+                    
+                }
+
+                @media screen and (max-width: $media-mobile) {
+                    font-size: 0.8rem;
+                    padding: 0.5em 0.6em;
+                }
+
+                &:hover{
+                    animation: button-glitch 0.5s infinite linear;
+
+                    @media screen and (max-width: $media-tablet) {
+                        animation: none;
+                    }
+                }
+
+                svg{
+                    filter: drop-shadow(1px 1px var(--c-dark-transparent-25));
+
+                    @media screen and (max-width: $media-tablet) {
+                            scale: 0.8;
+                    }
+
+                    @media screen and (max-width: $media-mobile) {
+                        scale: 0.7;
+                    }
+                }
+
+            }
+
+            
+
+            &.home{
+                background: url("../../img/home_slideshow/cyberpunk_ad_Home.jpg");
+                @include background();
+                
+
+                    /* HOME SLIDE ONLY */
+                    .text{
+                        color: var(--c-light);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 16em;
+                        margin: auto;
+                        padding: 2em;
+                        background: var(--c-dark-transparent-25);
+                        backdrop-filter: blur(8px);
+                        width: 100%;
+                        height: 100%;
+                        
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        @media screen and (max-width: $media-tablet) {
+                            gap: 2.5em;
+                        }
+
+                        @media screen and (max-width: $media-mobile) {
+                            gap: 0;
+                        }
+
+                        p{
+                            width: 45%;
+                            font-size: 2rem;
+                            font-family: var(--font-comfortaa);
+                            line-height: 45px;
+
+                            
+
+                            @media screen and (max-width: $media-tablet) {
+                                font-size: 1.2rem;
+                                width: 70%;
+                            }
+
+                            @media screen and (max-width: $media-mobile) {
+                                font-size: 1rem;
+                                width: 100%;
+                            }
+                        }
+                        
+                        h4,span{
+                            font-family: var(--font-space);
+                            font-size: 5rem;
+                            font-weight: 300;
+                            text-align: center;
+                            text-transform: uppercase;
+                            text-orientation: upright;
+                            writing-mode: vertical-rl;
+                            letter-spacing: 6px;
+                            text-shadow: 4px 2px var(--c-dark-transparent-50);
+
+                            @media screen and (max-width: $media-tablet) {
+                                font-size: 3rem;
+                                font-weight: 600;
+                            }
+
+                            @media screen and (max-width: $media-mobile) {
+                                font-size: 2rem;
+                            }
+                        }
+
+                        h4{
+                            position: relative;
+                        }
+
+                        span{
+                            position: absolute;
+                            top: 32%;
+                            left: 70%;
+                            font-size: 4rem;
+                            margin: auto;
+                            opacity: 0.5;
+
+                            @media screen and (max-width: $media-tablet) {
+                                font-size: 2rem;
+                                font-weight: 400;
+                            }
+
+                            @media screen and (max-width: $media-mobile) {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+            }
+
+            &.portfolio{
+                background: url("../../img/home_slideshow/cyberpunk_ad_Portfolio.jpg");
+                @include background();
+            }
+
+            &.about{
+                background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../../img/home_slideshow/cyberpunk_ad_About.jpg");
+                @include background();
+                
+                position: relative;
+
+                .text__wrapper{
+                    color: var(--c-light);
+                    font-family: var(--font-comfortaa);
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    line-height: 40px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 1em;
+                    width: 40%;
+
+                    position: absolute;
+                    top: 42%;
+                    right: 25%;
+                    margin: auto;    
+                    
+                    @media screen and (max-width: $media-mobile) {
+                        font-size: 0.8rem;
+                        width: 60%;
+                        right: 50%;
+                        top: 45%;
+                        transform: translateX(50%);
+                        gap: 0;
+                    }
+
+                }
+            }
+
+            &.blog{
+                background: url("../../img/home_slideshow/cyberpunk_ad_Blog.jpg");
+                @include background();
+
+                .wrapper{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    color: var(--c-light);
+                    font-family: var(--font-comfortaa);
+                    font-size: var(--size-h2);
+                    font-weight: 200;
+                    text-align: center;
+                    text-transform: uppercase;
+                    width: 100%;
+                    padding: 1em 0;
+                    background-color: #0d0d0dcc;
+
+                    @media screen and (max-width: $media-mobile) {
+                        font-size: 1rem;
+                    }
+
+                    p{
+                        width: 60%;
+                        margin: auto;
+                    }
+
+                }
+            }
+
+            &.contact{
+                background: url("../../img/home_slideshow/cyberpunk_ad_Contact.jpg");
+                @include background();
+            }
+
+                
+            p{
+                user-select: none;
+            }
+
+        }
+
+        .indicators{
+            position: absolute;
+            left: 50%;
+            bottom: 2%;
+            transform: translateX(-50%);
+            z-index: 10;
+
+            // SLider dots
+            .dot{
+                cursor: pointer;
+                height: 6px;
+                width: 32px;
+                margin: 0 0.3em;
+                background-color: var(--c-light-transparent-50);
+                border-radius: 0.5em;
+                display: inline-block;
+                transition: all 0.3s ease;
+                position: relative;
+
+                @media screen and (max-width: $media-mobile) {
+                    width: 1em;
+                    height: 0.25em;
+                }
+
+                &.active,
+                &:hover{
+                    background-color: var(--c-blue);
+                }
+
+                &:hover{
+
+                    &::after{
+                        opacity: 1;
+
+                        @media screen and (max-width: $media-tablet) {
+                            opacity: 0;
+                        }
+                    }
+
+                }
+
+                &::after{
+                    opacity: 0;
+                    position: absolute;
+                    top: -50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    content: attr(data-text);
+                    color: var(--c-light);
+                    background-color: var(--c-blue);
+                    font-family: var(--font-space);
+                    font-size: 0.8rem;
+                    padding: 0.5em 1em;
+                    border-radius: 0.5em;
+                }
+
+            }
+        }
+
+        .prev,
+        .next{
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: fit-content;
+            height: 100%;
+            margin: auto;
+            padding: 1em;
+     
+            color: var(--c-light);
+            background-color: var(--c-dark-transparent-50);
+            transition: all 0.6s ease;
+            user-select: none;
+
+            display: grid;
+            place-content: center;
+
+            @media screen and (max-width: $media-tablet) {
+                height: fit-content;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 0.25em;
+            }
+
+            i{
+                margin: auto;
+                scale: 1.4;                
+            }
+        }
+
+        .next{
+            right: -10%;
+
+            @media screen and (max-width: $media-tablet) {
+                right: 0;
+            }
+        }
+
+        .prev{
+            left: -10%;
+
+            @media screen and (max-width: $media-tablet) {
+                left: 0;
+            }
+        }
+
+    }
+
+
+}
 
 
 //.page{
@@ -51,12 +429,11 @@ $height: 36vh;
             align-items: center;
             gap: 8em;
 
-            
+                        
             margin: auto;
-            //margin-left: 15%;
             height: auto;
             width: 100%;
-            //background-image: url("../../img/backgrounds/bg_home_AI.jpg");
+
             background-size: cover;
             background-position: center center;
 
@@ -65,7 +442,7 @@ $height: 36vh;
            
             //overflow: hidden;
             position: relative;
-            z-index: 1;
+            z-index: 3;
 
             @media screen and (max-width: $media-tablet) {
                 gap: 1em
@@ -73,27 +450,11 @@ $height: 36vh;
 
             @media screen and (max-width: $media-mobile) {
                 gap: 0;
-                height: 120vh;
+                height: 40vh;
             }
-          
-           
-            /* &::after{
-                content: '';
-                position: absolute;
-                right: 0;
-                top: 0;
-                
-                z-index: -1;
-                background-color: var(--bg-dark-transparent);
-                height: 100%;
-                width: 0; //gets added via animation - 
-                
-                transition: all 0.3s ease;
-                
-                //animation: slideIn 2s forwards;
-                
-                } */
-                
+            
+            
+                        
             //black transparent background
             .bg-home{
                 position: absolute;
@@ -101,7 +462,6 @@ $height: 36vh;
                 right: 0;
                 width: 85%;
                 height: 115%;
-                background-color: var(--bg-dark-transparent);
                 z-index: -1;
 
                 iframe{
@@ -118,582 +478,6 @@ $height: 36vh;
                 }
             }
 
-            video{
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                width: 100%;
-                height: auto;
-                z-index: -2;
-
-                filter: blur(4px);
-
-                @media screen and (max-width: $media-laptop) {
-                    height: 120vh;
-                    width: auto;    
-                }
-
-                @media screen and (max-width: $media-tablet) {
-                    //width: auto;
-                    height: 100vh;
-                }
-       
-            }
-
-            .welcome{
-
-
-                ///!!!ACCORDION
-                &_accordion_container{
-       
-                    width: 90%;
-                    height: 45vh;
-                    margin-left: 20%;
-                    margin-top: 4%;
-
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    padding: 1rem;
-
-                    @media screen and (max-width: $media-laptop) {
-                        height: 40vh;
-                    }
-
-                    @media screen and (max-width: $media-tablet) {
-                        flex-flow: column nowrap;
-                        align-items: center;
-                        justify-content: space-between;
-                        width: 80%;
-                        margin-top: 2%;
-                        margin-left: 0;
-                        height: 42vh;
-                    }
-
-                    @media screen and (max-width: $media-mobile) {
-                        height: 50vh;
-                        //margin-top: 8%;
-                    }
-                    
-                    .accordion{
-
-                        
-                        &__card{
-                            @include activeCard('active');
-                            
-                            display: flex;
-                            align-items: center;
-                            justify-content: flex-start;
-                            
-                            //background-color: var(--bg-dark-transparent);
-                            height: 100%;
-                            width: auto;
-                            outline: thin solid var(--text-light);
-                            position: relative;
-
-                            &:nth-of-type(3){
-                                .accordion__image{
-                                    box-shadow: none;
-                                }
-                            }
-
-                            @media screen and (max-width: $media-tablet) {
-
-                                @include activeCard('active-t');
-                                flex-flow: column nowrap;
-                                
-                            }
-
-                           
-                            @media screen and (max-width: $media-mobile) {
-
-                                @include activeCard('active-m');
-
-                            }
-                            
-                            .panel{
-                                
-                                color: var(--text-light);
-                                
-                                width: 0; //hover sets to 500px
-                                height: 100%;
-                                overflow: hidden;
-                                padding: 2.5% 0;
-                                                   
-                                text-align: center;
-                                font-family: var(--font-hepta);
-                                font-size: var(--size-p);
-                                line-height: 140%;
-                                
-                                transition: all 0.5s ease;
-
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-
-                                backdrop-filter: blur(12px);
-
-                                @media screen and (max-width: $media-tablet) {
-                                    padding: 0;
-                                    height: 0;  //unchecked state                                 
-                                }
-                                                                                                   
-                                @media screen and (max-width: $media-mobile) {
-                                    padding: 0;
-                                }
-                
-                             
-
-                                //headline inside panel
-                                h2{
-                                    font-family: var(--font-poppins);
-                                    font-weight: 400;
-                                    text-transform: uppercase;
-
-                                    @media screen and (max-width: $media-laptop) {
-                                        font-size: 1rem;
-                                        font-weight: 600;
-                                        letter-spacing: 2px;
-                                        margin-top: 0.5rem;
-                                    }
-
-                                    @media screen and (max-width: $media-tablet) {
-                                        visibility: hidden;
-                                    }
-                                }
-
-                                p{
-                                    padding: 1rem;
-                                    text-wrap: pretty;
-
-                                    @media screen and (max-width: $media-laptop) {
-                                        font-size: 0.8rem;
-                                        padding: 0.5rem 0.6rem; 
-                                    }
-
-                                    @media screen and (max-width: $media-tablet) {
-                                        line-height: 135%;
-                                    }
-
-                                    @media screen and (max-width: $media-mobile) {
-                                        padding-top: 0.25rem;
-                                        font-size: 0.7rem;
-                                        line-height: 144%;
-                                    }
-
-                                }
-
-                                #home__bottom-text{
-                                    @media screen and (max-width: $media-mobile) {
-                                        visibility: hidden;
-                                    }
-                                }
-
-                                a{
-                                    color: var(--text-link);
-                                    text-decoration: none;
-                                    z-index: 1;
-                                    cursor: pointer;
-                                                                        
-                                    
-                                    i{
-                                        transition: all 0.3s ease;
-                                    }
-
-                                    &:hover{
-                                        text-decoration: underline;
-                                    }
-
-                                    @media screen and (max-width: $media-laptop) {
-                                        font-size: 0.7rem;
-                                        margin-bottom: 0.5rem;
-                                        padding: 0;
-                                        padding-bottom: 1rem;
-                                    }
-
-                                    @media screen and (max-width: $media-mobile) {
-                                        margin-bottom: 1rem;
-                                    }
-
-
-                                }
-
-
-                            }
-
-                            /*
-                            &:hover{
-                                width: 20vw;
-                            }
-                            
-                            &:hover .panel{
-                                width: 20vw;
-                            }
-
-                            */
-
-                            label{
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-
-                                //background-color: red;
-                                cursor: pointer;
-
-                                width: 100%;
-                                height: 100%;
-
-                            }
-
-                            input[type="radio"]{
-                                display: none;
-                            }
-
-                            input[type="radio"]:checked ~ .panel{
-                                width: $width;
-
-                                @media screen and (max-width: $media-tablet) {
-                                    height: $height;
-                                    width: 100%;
-                                }
-                                
-                                @media screen and (max-width: $media-mobile) {
-                                    height: $height;
-                                    width: 100%;
-                                }
-                            }
-                                                        
-                        }
-                        
-                        &__image{
-
-                            color: var(--text-light);
-
-                            background-position: center center; 
-                            background-size: cover;
-                            background-repeat: no-repeat;
-                            height: 100%;
-                            width: 8vw;
-                            box-shadow: inset 0 50em rgba(0,0,0,0.7);
-
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-
-                            @media screen and (max-width: $media-tablet) {
-                                height: 8vh;
-                                width: 100%;
-                                padding: 1em;
-                            }
-
-                            @media screen and (max-width: $media-mobile) {
-                                width: 100%;
-                                height: 12vh;
-                                padding: 1.2rem;
-                            }
-                            
-                            //label title
-                            h2{
-                                font-size: var(--size-h4);
-                                font-family: var(--font-poppins);
-                                font-weight: 300;
-                                                                
-                                text-align: center;
-                                text-transform: uppercase;
-                                text-orientation: upright;
-                                writing-mode: vertical-rl;
-
-                                @media screen and (max-width: $media-laptop) {
-                                    font-size: 1.25rem;
-                                }
-
-                                @media screen and (max-width: $media-tablet) {
-                                    text-orientation: sideways;
-                                    writing-mode: horizontal-tb;
-                                }
-
-                            }
-
-                            &.home{
-                                background-image: url("../../img/backgrounds/bg_home_AI.jpg");
-                            }
-
-                            &.portfolio{
-                                background-image: url("../../img/backgrounds/bg_portfolio_AI.jpg");
-                            }
-
-                            &.about{
-                                background-image: url("../../img/backgrounds/hexagons.jpg");
-                            }
-
-                            &.blog{
-                                background-image: url("../../img/backgrounds/ddesign_blog_bg.jpg");
-                            }
-
-                            &.contact{
-                                background-image: url("../../img/backgrounds/bg_contact_AI.jpg");
-                            }
-
-                        }
-
-
-                    }
-                }
-
-                
-        
-                
-                &__box{
-                    
-                    width: 90%;
-                    //margin-left: 10%;
-                    position: relative;
-
-                    display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: flex-start;
-                    align-items: center;
-
-                    @media screen and (max-width: $media-mobile) {
-                        margin-left: 0;
-                    }
-
-                    .divider{
-                        width: 0; //with animation to 20vw
-                        opacity: 0;
-                        margin: 2rem;
-                        animation: divider 2s 2s forwards;                        
-                    }
-
-                    .welcome__card-container{
-                        
-                        overflow-y: scroll;
-
-                        height: 50vh;
-
-                        display: flex;
-                        flex-flow: column nowrap;
-                        align-items: center;
-
-                        margin-top: 6rem;
-                        margin-bottom: 8rem;
-
-                        &::-webkit-scrollbar{
-                            appearance: none;
-                            width: 2px;
-                        }
-
-                        &::-webkit-scrollbar-thumb{
-                            background-color: var(--bg-light);
-                        }
-
-                        
-
-                        @media screen and (max-width: $media-tablet) {
-                            height: 100%;
-                            justify-content: space-between;
-                            margin:auto;
-                        }
-                    
-
-                        .welcome__card{
-
-                            height: 380px;
-                            width: 65%;
-                            margin-top: 2rem;
-                            margin-bottom: 3rem;
-
-                            position: relative;
-
-                            @media screen and (max-width: $media-tablet) {
-                               margin-bottom: 2rem;
-                               height: fit-content;
-                            }
-
-                                                                                   
-                            .card{
-                                &__img{
-
-                                    position: relative;
-                                    margin-bottom: 1.2rem;
-                                    height: auto;
-                                    width: 100%;
-                                                                    
-                                    outline: 1px solid var(--bg-light);
-                                    background-size: cover;
-                                    background-repeat: no-repeat;
-                                    background-position: center;
-
-                                    
-                                                                                                            
-                                    //card title background images
-                                    &.home{
-                                        background-image: url("../../img/backgrounds/bg_home_AI.jpg");
-                                    }
-
-                                    &.portfolio{
-                                        background-image: url("../../img/backgrounds/bg_portfolio_AI.jpg");
-                                    }
-
-                                    &.about{
-                                        background-image: url("../../img/backgrounds/bg_about_AI.jpg");
-                                    }
-
-                                    &.blog{
-                                        background-image: url("../../img/backgrounds/bg_blog_AI.jpg");
-                                    }
-
-                                    &.contact{
-                                        background-image: url("../../img/backgrounds/bg_contact_AI.jpg");
-                                    }
-
-                                    
-                                                                        
-                                    h2{ 
-                                        
-                                        text-align: center;
-                                        color: var(--text-light);
-                                        font-family: var(--font-poppins);
-                                        font-size: var(--size-h2);
-                                        font-weight: 300;
-                                        text-transform: uppercase;
-
-                                        box-shadow: inset 0 8rem rgba(0,0,0,0.5);
-                                        height: 100%;
-                                        width: 100%;
-                                        padding: 1rem;  
-                                                                                
-                                        @media screen and (max-width: $media-mobile) {
-                                            font-size: 1.5rem;
-                                        }                                 
-                                        
-                                        
-                                    }
-
-                                }
-
-                                &__text{
-                                    color: var(--text-light);
-                                    font-size: 20px;
-                                    font-family: var(--font-hepta);
-                                    padding: 0.5rem;
-
-                                    @media screen and (max-width: $media-mobile) {
-                                        font-size: 1rem;
-                                        line-height: 150%;
-                                        width: 125%;
-                                    }
-                                    
-                                }
-                            }
-
-                            a{
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-
-                                height: 100%;
-                                width: 100%;
-                                cursor: pointer;
-                                //background-color: red;
-
-                                &:hover,
-                                &:focus{
-                                    outline: thin solid var(--bg-light);
-                                }
-                            }
-
-                        }
-
-                    }
-                  
-                    
-                }
-
-                //Welcome section logo
-                &__logo{
-                    width: calc(270px * 1.2);
-                    height: calc(154px * 1.2);
-
-                }
-                
-                //Welcome box title
-                &__title{
-                    overflow: hidden;
-
-                    color: var(--text-light);
-                    font-family: var(--font-poppins);
-                    font-weight: 300;
-                    font-size: var(--size-h1);
-        
-                    text-align: center;
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
-
-                    padding: 0 3rem;
-
-                    .mask{
-                        overflow: hidden;
-                    }
-
-                    /* @media screen and (max-width: $media-laptop) {
-                        font-size: var(--size-h4);
-                    }
-
-
-                    @media screen and (max-width: $media-tablet) {
-                        font-size: 54px;
-                        font-weight: 600;
-
-                    }
-
-                    @media screen and (max-width: $media-mobile) {
-                        font-size: 0.6rem;
-                        padding-bottom: 1rem;
-                    } */
-
-                    //headline & subheadline
-                    h1{
-                        position: relative;
-                        //transform: translateX(200%);
-                        text-shadow: 0 0 4px var(--text-dark);
-                        font-family: var(--font-poppins);
-                        font-weight: 100;
-                        //animation: letters 2.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-                        //animation-delay: 2s;
-
-                        @media screen and (max-width: $media-tablet) {
-                            font-size: 2.5rem;                                                        
-                        }
-
-                        @media screen and (max-width: $media-mobile) {
-                            font-weight: 300;
-                            font-size: 1.1rem;
-                        }
-
-                    }
-
-                    #subheadline{
-                        font-size: var(--size-h2);
-
-                        @media screen and (max-width: $media-laptop) {
-                            font-size: 22px;
-                        }
-
-                        
-                        @media screen and (max-width: $media-mobile) {
-                            font-size: 0.7rem;
-                            padding-top: 0.25rem;
-                        }
-                    }
-                    
-                }
-        
-                
-            }
         }
     //}
 
@@ -702,40 +486,20 @@ $height: 36vh;
 //}
 
 
-@keyframes slideIn {
-    to{
-        width: 100%;
+@keyframes button-glitch {
+    0% {
+    filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px -1px magenta);
+    }
+    25% {
+    filter: drop-shadow(-1px -2px var(--c-blue)) drop-shadow(2px 1px magenta);
+    }
+    50% {
+    filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px 1px magenta);
+    }
+    75% {
+    filter: drop-shadow(-2px -1px var(--c-blue)) drop-shadow(-2px -1px magenta);
+    }
+    100% {
+    filter: drop-shadow(2px 0 var(--c-blue)) drop-shadow(2px -1px magenta);
     }
 }
-
-
-/* @media screen and (max-width: $media-tablet) {
-        @keyframes slideIn {
-            to{
-                width: 100%;
-            }
-        }
-} */
-
-
-@keyframes letters {
-    to{
-        transform: translateX(0);
-    }
-}
-
-
-@keyframes unfold{
-    to{
-        height: 42vh;
-    }
-}
-
-@keyframes divider {
-    to{
-        width: 20vw;
-        opacity: 1;
-    }
-}
-
-

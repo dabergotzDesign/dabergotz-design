@@ -3,33 +3,32 @@ $media-laptop: 1024px;
 $media-tablet: 768px;
 $media-mobile: 450px;
 
+$width-card-open: 30em;
+$width-card-open-t: 20em;
+$width-card-open-m: 12em;
+$width-card-default: 7em;
+$width-card-default-t: 6em;
+$width-card-default-m: 5em;
 
 
 /* MIXIN */
-@mixin panel-text {
+/* @mixin panel-text {
     text-align: center;
-    font-family: var(--font-hepta);
+    font-family: var(--font-space);
     font-size: clamp(1rem, 1.2vw, 2rem);
     padding: .25rem 1.5rem;
     margin-bottom: 1rem;
     line-height: 2.5vh;
+} */
+
+@mixin bgPortfolio {
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
-//.page{
-    //&__portfolio{
-        
-        
-       //overflow: hidden;
-        //overflow-y: scroll;
-        
-                      
-        //portfolio{  
-            
             #portfolio{
                 
-                background-image: linear-gradient(var(--bg-darkgrey), var(--bg-dark));
-
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -39,7 +38,7 @@ $media-mobile: 450px;
                 //overflow: hidden;
                 height: auto;
                 padding: 6em;
-              
+                      
                 @media screen and (max-width: $media-tablet) {
                     padding-top: 4rem;
                 }
@@ -47,26 +46,32 @@ $media-mobile: 450px;
                 @media screen and (max-width: $media-mobile) {
                     height: fit-content;
                     padding: 0;
-                    padding-top: 4rem;
-                    gap: 2em;
+                    margin-bottom: 1em;
+                }
+
+                .mask{
+                    overflow: hidden;
                 }
 
                 .title{
 
-                    color: var(--text-light);
+                    color: var(--c-orange);
+                    text-shadow: 0 0 4px rgba($color: #f2f2f2, $alpha: 0.5);
                     text-align: center;
                     text-transform: uppercase;
                     font-size: var(--size-h2);
-                    font-family: var(--font-poppins);
-                    font-weight: 200;
+                    font-family: var(--font-comfortaa);
+                    font-weight: 300;
 
+                
                     @media screen and (max-width: $media-tablet) {
                         font-size: 1.2rem;
                     }   
 
     
                     @media screen and (max-width: $media-mobile) {
-                       width: auto;
+                       font-size: 1rem;
+                       margin: 0 0.25em;
                     }
                     
                 }
@@ -80,64 +85,311 @@ $media-mobile: 450px;
                         width: 100%;
 
                     }
+
+
+                /* ACCORDION */
+                .accordion{                    
+                    
+                    &__container{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        margin: auto;
+                        overflow-y: hidden;
+
+                        @media screen and (max-width: $media-tablet) {
+                            scale: 0.9;
+                            margin: 0 25%;
+                        }
+
+                        @media screen and (max-width: $media-mobile) {
+                            scale: 0.8;                            
+                        }
+                                                                       
+                        .accordion__card-wrapper{
+                            margin: auto 0.5em;
+                            margin-top: 2em; 
+                            margin-bottom: 6px;                         
+                            width: fit-content;
+                            height: auto;
+                            border-radius: 1em;
+                            cursor: pointer;
+                            //overflow: hidden;
+
+                            position: relative;
+
+                            @media screen and (max-width: $media-tablet) {
+                                margin-top: 0;
+                            }
+
+                                                                                    
+                            &:hover .card__thumbnail{
+                                cursor: pointer;
+                                animation: pulse 1s infinite linear;
+
+                                @media screen and (max-width: $media-tablet) {
+                                    animation: none;
+                                }
+                            }
+                            
+                            input[type="radio"]{
+                                display: none;
+                            }
+
+                            input[type="radio"]:checked ~ .card__thumbnail{
+                                width: $width-card-open;
+
+                                @media screen and (max-width: $media-tablet) {
+                                    width: $width-card-open-t;
+                                }
+
+                                @media screen and (max-width: $media-mobile) {
+                                    width: $width-card-open-m;
+                                }
+                                
+                                                                
+                                &.card-1{
+                                    background: linear-gradient(0deg, rgba(0, 174, 255, 0) 0%, rgba(0, 174, 255, 0) 100%), url("../../img/portfolio/traveler_companion.png");
+                                    background-position: 20%;
+                                    @include bgPortfolio()
+                                }
+
+                                &.card-2{
+                                
+                                    background: linear-gradient(0deg, rgba(106, 0, 255, 0) 0%, rgba(106, 0, 255, 0) 100%), url("../../img/portfolio/remscape_1.png");
+                                    background-position: 32%;
+                                    @include bgPortfolio()
+                                }
+
+                                &.card-3{                                
+                                    background: linear-gradient(0deg, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0) 100%), url("../../img/portfolio/asozial-thumbnail.jpg");
+                                    background-position: 20%;
+                                    @include bgPortfolio()
+                                }
+
+                                &.card-4{                                
+                                    background: linear-gradient(0deg, rgba(255, 157, 0, 0) 0%, rgba(255, 157, 0, 0) 100%), url("../../img/portfolio/vm_throne.png");
+                                    background-position: 50%;
+                                    @include bgPortfolio()
+                                }
+
+                               
+                            }
+
+                            input[type="radio"]:checked ~ .mask{
+
+                                width: $width-card-open;
+
+                                @media screen and (max-width: $media-tablet) {
+                                    width: $width-card-open-t;
+                                }
+
+                                @media screen and (max-width: $media-mobile) {
+                                    width: $width-card-open-m;
+                                }
+
+                                .card__title{
+                                    visibility: visible;
+                                }
+                            
+                                
+                            }
+
+                            input[type="radio"]:checked ~ .button__info{
+                                visibility: visible;
+                                bottom: 5%;                                
+                            }
+
+                            label{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 0.5em;
+                                //background-color: red;
+                            }
+
+                                                        
+                            .mask{
+                                width: 0;
+                                overflow: hidden;
+                                transition: all 0.3s linear;
+                            }
+
+                            .card__title{
+                                visibility: hidden;
+                                color: var(--c-light);
+                                padding: 0.8em;
+                                margin-bottom: 0.5em;
+                                
+                                text-align: center;
+                                font-family: var(--font-space);
+                                font-weight: 400;
+                                font-size: 1.4rem;
+                                white-space: nowrap;
+                                border-radius: 0.5em;
+
+                                @media screen and (max-width: $media-mobile) {
+                                    font-size: 0.65rem;
+                                }
+                                
+                                &.title{
+
+                                    &-1{
+                                        background: linear-gradient(180deg, #00AEFF 0%, rgba(0, 174, 255, 0.25) 10%, rgba(0, 174, 255, 0.25) 90%, #00AEFF 100%);
+                                    }
+
+                                    &-2{
+                                        background: linear-gradient(180deg, #6A00FF 0%, rgba(106, 0, 255, 0.25) 10%, rgba(106, 0, 255, 0.25) 90%, #6A00FF 100%);
+                                    }
+
+                                    &-3{
+                                        background: linear-gradient(180deg, #F2F2F2 0%, rgba(242, 242, 242, 0.25) 10%, rgba(242, 242, 242, 0.25) 90%, #F2F2F2 100%);
+                                    }
+
+                                    &-4{
+                                        background: linear-gradient(180deg, #FF9D00 0%, rgba(255, 157, 0, 0.25) 10%, rgba(255, 157, 0, 0.25) 90%, #FF9D00 100%);
+                                    }
+                                }
+                            }
+
+                            
+
+                            .card__thumbnail{
+                                width: 7em;
+                                height: 40em;
+                                                     
+                                border-radius: 1em;
+                                transition: all 0.3s ease;
+
+                                @media screen and (max-width: $media-tablet) {
+                                    height: 35em;
+                                }
+
+                                @media screen and (max-width: $media-mobile) {
+                                    width: 5em;
+                                    height: 25em;
+                                    border-radius: 0.8em;
+                                }
+                               
+                                                                
+                                &.card-1{
+                                    background: linear-gradient(0deg, rgba(0, 174, 255, 0.50) 0%, rgba(0, 174, 255, 0.50) 100%), url("../../img/portfolio/traveler_companion.png");
+                                    background-position: 35%;
+                                    @include bgPortfolio()
+                                }
+
+                                &.card-2{
+                                
+                                    background: linear-gradient(0deg, rgba(106, 0, 255, 0.50) 0%, rgba(106, 0, 255, 0.50) 100%), url("../../img/portfolio/remscape_1.png");
+                                    background-position: 48%;
+                                    @include bgPortfolio()
+                                }
+
+                                &.card-3{                                
+                                    background: linear-gradient(0deg, rgba(240, 240, 240, 0.25) 0%, rgba(240, 240, 240, 0.25) 100%), url("../../img/portfolio/asozial-thumbnail.jpg");
+                                    background-position: 48%;
+                                    @include bgPortfolio()
+                                }
+
+                                &.card-4{                                
+                                    background: linear-gradient(0deg, rgba(255, 157, 0, 0.50) 0%, rgba(255, 157, 0, 0.50) 100%), url("../../img/portfolio/vm_throne.png");
+                                    background-position: 50%;
+                                    @include bgPortfolio()
+                                }
+
+
+                                                                
+                            }
+
+                            .button__info{
+                                visibility: hidden;
+
+                                position: absolute;
+                                bottom: -8%; //comes in when card is active
+                                left: 50%;
+                                transform: translateX(-50%);
+                                margin: auto;
+                                padding: 0.5em 1em;
+                                border-radius: 0.5em;
+
+                                text-align: center;
+                                text-decoration: none;
+                                font-family: var(--font-space);
+                                font-size: 1.2rem;
+                                color: var(--c-light);
+                                background: var(--c-light-transparent-25);
+                                backdrop-filter: blur(4px);
+                                cursor: pointer;
+
+                                transition: all 0.3s ease;
+
+                                @media screen and (max-width: $media-mobile) {
+                                    font-size: 1rem;
+                                    text-shadow: 1px 2px var(--c-dark);
+                                    backdrop-filter: blur(8px);
+                                }
+
+                                &:hover {
+                                    animation: glitch 0.5s infinite alternate-reverse;
+
+                                    @media screen and (max-width: $media-tablet) {
+                                        animation: none;
+                                    }
+                                }
+
+                            }
+
+                            
+                        }
+
+                    }
+
+
+                }
   
 
                     .modal{
 
-                        /* &__wrapper{
-                            display: none;  
-                        } */
-
+            
                         //Modal container
                         &__container{
                                                         
                             position: fixed;
-                            top:0;
+                            top: 0;
                             left: 0;
-                            z-index: 99;
+                            z-index: 999;
 
-                            background-color: var(--bg-dark-transparent);
+                            background-color: var(--c-dark-transparent-50);
     
                             width: 100%;
                             height: 100%;
                             
                             display: none;
+                            place-content: center;
 
-                            flex-flow: column nowrap;
+                            /* flex-flow: column nowrap;
                             justify-content: center;
-                            align-items: flex-start;
+                            align-items: flex-start; */
                             padding: 4em;
 
-                            animation: blowUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-
-                            &.out{
-                                animation: blowUpBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-                            }
                             
+                            &.active{
+                                display: grid;
+                            }
 
                             @media screen and (max-width: $media-tablet) {
                                 padding: 0;
                             }
 
-                          
                             .close{
                                 position: absolute;
                                 top: 8%;
-                                right: 4%;
-                                margin: auto;
-                                
-                                //scale: 1.2;
-                                //padding: 0 0.3em 0 0.15em;
-                                //outline: thin var(--bg-light) solid;
-                                                                
-                                //font-size: 2.8rem;
-                                //text-align: center;
-                                //color: var(--text-light);
+                                right: 15%;
+                                margin: auto;                         
                                 cursor: pointer;
-                                
-                                //outline: 2px solid var(--bg-light);
-                                //background-color: var(--bg-dark-transparent);
-                                
+              
                                 border-radius: 50%;
                                 z-index: 99;
                                 
@@ -162,113 +414,69 @@ $media-mobile: 450px;
                             }
 
 
-                            //Modal Cards
-                            .modal{
+                            .prtfl__modal{
+                                display: none;
+                                place-content: center;
+                                width: 100%;
+                                height: auto;
+                                margin: auto;
+                                padding: 2em;                                                                        
+                                background-color: var(--c-dark);
+                                outline: 1px var(--c-light) solid;
+                                border-radius: 0.25em;
+                                scale: 1;
+                                overflow: hidden;
+                                position: relative;
 
+                                &.active-content{
+                                    display: grid;
+                                }
                                 
-                                &__card-1,
-                                &__card-2,
-                                &__card-3{
-                                    display: none;
-                                    place-content: center;
-                                    width: 100%;
-                                    height: auto;
-                                    margin: auto;                                                                        
-                                    background-color: var(--bg-dark);
-                                    outline: 1px var(--bg-light) solid;
-                                    scale: 1;
-                                    overflow: hidden;
-                                    position: relative;
-
-                                    
-                                    @media screen and (max-width: $media-tablet) {
-                                        height: 100vh;
-                                        scale: 0.9;
-                                    }
-
-                                    
-                                    @media screen and (max-width: $media-mobile) {
-                                        scale: 0.85;
-                                    }
-
-                                    ///MODAL
-                                    .slider{
-                                        display: flex;
-                                        
-                                        @media screen and (max-width: $media-tablet) {
-                                            position: absolute;
-                                            top: 0;
-                                        }                                        
-
-                                        img{
-                                            max-width: 100%;
-                                            object-fit: contain;
-                                            height: auto;
-                                        }
-                                    }
-
-
-                                    /*
-                                    .slider__wrapper{
-                                        width: 100%;
-                                        height: calc(1080px / 2);
-                                        overflow: hidden;
-                                        margin: auto;
-                                                                            
-
-                                        @media screen and (max-width: $media-tablet-wide) {
-                                            width: 100%;
-                                            height: 50%;
-                                        }
-
-                                        @media screen and (max-width: $media-tablet) {
-                                            width: auto;
-                                            height: auto;
-                                        }
-
-                                        .slider{
-                                            display: flex;
-                                            width: 100%;
-                                            height: auto;
-                                                                                   
-                                            animation: slide 16s infinite;
-                                            
-                                            img{
-                                                display: block;
-        
-                                                width: 100%;
-                                                height: auto;
-                                                object-fit: cover;
-
-        
-                                                //margin: auto;
-                                                margin-bottom: 2rem;
-                                                //border: 1px solid var(--bg-light);
-        
-                                                @media screen and (max-width: $media-tablet-wide) {
-                                                    width: 100%;
-                                                    height: 50%;
-                                                }
-
-                                                @media screen and (max-width: $media-tablet) {
-                                                    width: 50%;
-                                                    height: fit-content;
-                                                }
-
-                                                
-                                            }
-
-                                            
-
-                                        }
-                                    }
-                                    */
-                                                                                                                                            
-  
-                                    
+                                @media screen and (max-width: $media-tablet) {
+                                    height: 100vh;
+                                    width: 100vw;
+                                    scale: 0.9;
                                 }
 
                                 
+                                @media screen and (max-width: $media-mobile) {
+                                    scale: 0.85;
+                                }
+
+                  
+                                ///MODAL
+                                .modal__cards{
+                                    width: 100%;
+                                    height: auto;
+                                                                        
+                                    @media screen and (max-width: $media-tablet) {
+                                        position: absolute;
+                                        top: 0;
+                                    } 
+                                    
+                                    #p_canvas{
+
+                                        &-1,
+                                        &-2,
+                                        &-3,
+                                        &-4{
+                                            width: 100%;
+                                            height: auto;
+                                        }
+
+                                    }
+
+                                }                                                                                                          
+
+                                
+                            }
+                          
+                            
+                            //Modal Cards
+                            .modal{
+                                
+                                
+                                                                
                                 &__card{
                                     &-info{
 
@@ -280,10 +488,14 @@ $media-mobile: 450px;
                                         height: auto;
                                         padding: 1em;
                                         
-                                        background-color: var(--bg-dark-transparent);
+                                        background-color: rgba($color: #0d0d0d, $alpha: 0.7);
 
                                         @media screen and (max-width: $media-laptop) {
                                             height: 65%;
+                                        }
+
+                                        @media screen and (max-width: $media-tablet) {
+                                            height: 50vh;
                                         }
 
                                         @media screen and (max-width: $media-mobile) {
@@ -295,9 +507,9 @@ $media-mobile: 450px;
 
                                             text-align: center;
                                             text-transform: uppercase;
-                                            color: var(--text-light);
+                                            color: var(--c-light);
     
-                                            font-family: var(--font-poppins);
+                                            font-family: var(--font-comfortaa);
                                             font-size: var(--size-h3);
                                             font-weight: 400;
     
@@ -337,10 +549,15 @@ $media-mobile: 450px;
                                             
                                         }
 
+                                        .shorts__wrapper{
+                                            display: flex;
+                                            justify-content: space-between;
+                                        }
                                         
-                                        .shorts{
-                                            color: var(--text-light);
-                                            font-family: var(--font-poppins);
+                                        .shorts,
+                                        .tools{
+                                            color: var(--c-light);
+                                            font-family: var(--font-space);
                                             font-size:var(--size-p);
                                             font-weight: 300;
                                             text-transform: uppercase;
@@ -375,16 +592,57 @@ $media-mobile: 450px;
                                             } */
 
                                             a{
-                                                color: var(--text-light);
+                                                color: var(--c-light);
                                                 padding: 1rem 1.5rem;
                                                 margin: 1rem;
 
                                                 text-decoration: none;
                                                 text-transform: uppercase;
                                                 text-align: center;
-                                                font-family: var(--font-poppins);
+                                                font-family: var(--font-space);
                                                 font-size: 1rem;
-                                                outline: 1px solid var(--bg-light);
+                                                outline: 1px solid var(--c-light);
+                                                border-radius: 0.5em;
+                                                transition: all 0.3s ease;
+                                                position: relative;
+
+                                                &:hover{
+                                                    background-color: rgba($color: #f2f2f2, $alpha: 0.25);
+                                                    backdrop-filter: blur(8px);
+
+                                                    @media screen and (max-width: $media-tablet) {
+                                                        background-color: transparent;
+                                                    }
+                                                }
+
+                                                &:hover::after{
+                                                    opacity: 1;
+
+                                                    @media screen and (max-width: $media-tablet) {
+                                                        opacity: 0;
+                                                    }
+                                                }
+
+                            
+                                                &::after{
+                                                    opacity: 0;
+                                                   
+                                                    content: attr(data-text);
+                                                    position: absolute;
+                                                    bottom: -2.4em;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    width: fit-content;
+                                                    height: auto;
+                                                    background-color: var(--c-blue);
+                                                    white-space: nowrap;
+                                                    font-size: 0.8rem;
+                                                    letter-spacing: 3px;
+                                                    padding: 0.25em 0.5em; 
+                                                    border-radius: 0.25em;
+                                                    transition: all 0.3s ease;
+                                                    
+                                                }
 
                                                 @media screen and (max-width: $media-laptop) {
                                                     margin: 0 1rem;
@@ -399,9 +657,9 @@ $media-mobile: 450px;
                                         }
 
                                         .info{
-                                            color: var(--text-light);
+                                            color: var(--c-light);
                                             font-size: clamp(1.2rem, 12vw, 0.6rem);
-                                            font-family: var(--font-hepta);
+                                            font-family: var(--font-comfortaa);
                                             width: 50%;
                                             text-wrap: pretty;
                                             line-height: 155%;
@@ -437,8 +695,8 @@ $media-mobile: 450px;
 
                                         .card{
                                             &__shorts{
-                                                color: var(--text-light);
-                                                font-family: var(--font-poppins);
+                                                color: var(--c-light);
+                                                font-family: var(--font-comfortaa);
                                                 font-size:var(--size-p);
                                                 font-weight: 300;
                                                 text-transform: uppercase;
@@ -466,15 +724,15 @@ $media-mobile: 450px;
                                                 }
 
                                                 a{
-                                                    color: var(--text-light);
+                                                    color: var(--c-light);
                                                     padding: 1rem 1.5rem;
                                                     margin: 1rem;
 
                                                     text-decoration: none;
                                                     text-transform: uppercase;
                                                     text-align: center;
-                                                    font-family: var(--font-poppins);
-                                                    outline: 1px solid var(--bg-light);
+                                                    font-family: var(--font-comfortaa);
+                                                    outline: 1px solid var(--c-light);
 
                                                     @media screen and (max-width: $media-tablet) {
                                                         margin: 0;
@@ -490,8 +748,8 @@ $media-mobile: 450px;
 
                                             &__info-text{
                                                 width: 50%;
-                                                color: var(--text-light);
-                                                font-family: var(--font-hepta);
+                                                color: var(--c-light);
+                                                font-family: var(--font-comfortaa);
                                                 text-wrap: balance;
                                                 line-height: 155%;
                                                 letter-spacing: 2px;
@@ -580,7 +838,7 @@ $media-mobile: 450px;
                             border: none;
                             cursor: pointer;
                             font-size: var(--size-h1);
-                            color: var(--text-light);
+                            color: var(--c-light);
                             //background-color: red; //to check on the whole button
                             height: 80%;
                             width: 15%;
@@ -665,8 +923,8 @@ $media-mobile: 450px;
                             }
 
                             figcaption{
-                                color: var(--text-light);
-                                font-family: var(--font-poppins);
+                                color: var(--c-light);
+                                font-family: var(--font-comfortaa);
                                 font-size: var(--size-h4);
                                 text-align: center;
 
@@ -757,486 +1015,28 @@ $media-mobile: 450px;
 
                 }
 
-                @keyframes blowUp {
-                    0%{
-                        transform: scale(0);
-                        opacity: 0;
-                    }
-                    100%{
-                        transform: scale(1);
-                        opacity: 1;
-                    }
-                }
 
-                @keyframes blowUpBack {
-                    to{
-                        transform: scale(0);
-                        opacity: 0;
-                    }
-                }
+/* Hover for cards */                
+@keyframes glitch {
+    0% {
+    filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px -1px magenta);
+    }
+    25% {
+    filter: drop-shadow(-1px -2px var(--c-blue)) drop-shadow(2px 1px magenta);
+    }
+    50% {
+    filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px 1px magenta);
+    }
+    75% {
+    filter: drop-shadow(-2px -1px var(--c-blue)) drop-shadow(-2px -1px magenta);
+    }
+    100% {
+    filter: drop-shadow(2px 0 var(--c-blue)) drop-shadow(2px -1px magenta);
+    }
+}
+
+@keyframes pulse {
+    0%{box-shadow: 0 0 0 4px var(--c-light);}
+    100%{box-shadow: 0 0 0 8px transparent;}
+}
 
-                /* @keyframes slide {
-                    0%{
-                        transform: translateX(0);
-                    }
-                    5%{
-                        transform: translateX(0);
-                    }
-                    25%{
-                        transform: translateX(-33.33%);
-                    }
-                    35%{
-                        transform: translateX(-33.33%);
-                    }
-                    50%{
-                        transform: translateX(-66.66%);
-                    }
-                    60%{
-                        transform: translateX(-66.66%);
-                    }
-                    75%{
-                        transform: translateX(-33.33%);
-                    }
-                    85%{
-                        transform: translateX(-33.33%);
-                    }
-                    95%{
-                        transform: translateX(0);
-                    }                    
-                    100%{
-                        transform: translateX(0);
-                    }
-                }
-
-                @keyframes slideM {
-                    0%{
-                        transform: translateX(0);
-                    }
-                    5%{
-                        transform: translateX(0);
-                    }
-                    25%{
-                        transform: translateX(-100%);
-                    }
-                    35%{
-                        transform: translateX(-100%);
-                    }
-                    50%{
-                        transform: translateX(-200%);
-                    }
-                    60%{
-                        transform: translateX(-200%);
-                    }
-                    75%{
-                        transform: translateX(-100%);
-                    }
-                    85%{
-                        transform: translateX(-100%);
-                    }
-                    95%{
-                        transform: translateX(0);
-                    }                    
-                    100%{
-                        transform: translateX(0);
-                    }
-                } */
-
-                
-                /*  
-                &__content{
-                       
-                    background-attachment: fixed;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-
-                    height: 640px;
-                    width: 960px;
-
-                    max-width: 100%;
-                    max-height: 100%;
-
-                    display: block;
-                    margin: auto;
-                    width: 80%;
-                                        
-
-                    transition: all .8s ease;
-                    position: relative;
-
-                    @media screen and (max-width: $media-tablet) {
-                        background-size: cover;
-                    }
-
-                    &:hover,
-                    &:focus{
-                        height: 720px;
-                        width: 1080px;
-
-                        .image__text{
-                            height: 460px;
-
-                            .button__icon{
-                                content: 'f078';
-                            }
-                        }
-
-                        .image__description{
-                            color: rgba($color: var(--text-light), $alpha: 1.0);
-                        }
-
-                        .portfolio__link{
-                            opacity: 1;
-                        }
-
-                        
-                    }
-                    
-    
-                    &.image{
-                        &__port-1{
-                            background-image: url("../../img/portfolio/weeb_shop.png");
-                        }
-
-                        &__port-2{
-                            background-image: url("../../img/portfolio/genshin_teams_light_size.jpg");
-                        }
-
-                        &__port-3{
-                            background-image: url("../../img/portfolio/WallOfWishes_site.jpg");
-                        }
-
-                        &__port-4{
-                            background-image: url("../../img/portfolio/to-do-lists.png");
-                        }
-                    }
-                        
-
-                    .image{
-                        
-                        &__text{
-                            display: flex;
-                            flex-flow: column nowrap;
-                            align-items: center;
-
-                            position: absolute;
-                            bottom: 0;
-
-                            padding: 1rem;
-                            width: 100%;
-                            height: 60px;
-                            overflow: hidden;
-
-                            color: var(--text-light);
-                            background-color: var(--bg-dark-transparent);
-                            border: thin solid var(--text-light);
-                            transition: height 0.5s ease;
-                            
-                        }
-
-                        &__data{
-                            p{
-                                font-family: var(--font-hepta);
-                                padding: 4px 0;
-                            }
-                        }
-
-                        &__title{
-                            text-align: center;
-                            text-transform: capitalize;
-
-                            font-family: var(--font-space-mono);
-                            font-weight: 700;
-
-                            padding: .5rem;
-                        }
-
-                        &__description{
-                            @include panel-text;
-
-                            &-time{
-                                padding-left: 1rem;
-                            }
-                        }
-                    }
-                }
-
-                &__link{                          
-
-                    opacity: 0;
-                    
-                    text-align: center;
-                    text-transform: uppercase;
-                    text-decoration: none;
-
-                    font-size: 1rem;
-                    font-weight: 700;
-                    font-family: var(--font-space-mono);
-                    letter-spacing: 3px;
-                    color: var(--text-light);
-                    border-radius: .25rem;
-
-                    display: block;
-                    padding: .5rem;
-                    margin-top: 0.5rem;
-                    width: fit-content;
-                    transition: all 0.3s ease;
-
-                    @media screen and (max-width: 500px) {
-                        outline: thin solid var(--bg-light);
-                    }
-
-                    &:hover,
-                    &:focus{
-                        outline: thin solid var(--text-light);
-                    }
-
-                    &:active{
-                        box-shadow: -1px -1px 4px inset var(--bg-light);
-                    }
-                }
-
-                &__wrapper-mobile{
-                    display: block;
-                    
-                    overflow-x: scroll;
-                    position: relative; 
-                                                          
-                    @media screen and (max-width: $media-tablet) {
-                        display: block;
-                        margin-left: 5%;
-                    }
-
-                    .progress__bar{
-                        position: fixed;
-                        top: 4%;
-                        left: 12.5%;
-                        margin: 1rem;
-
-                        width: 50vw;
-                        height: 4px;
-                        border-radius: 0.5rem;
-                        
-                        background-color: var(--bg-lightgrey);
-                        outline: 1px solid var(--bg-light);
-                        transition: all 0.3s ease;
-
-                        .progress{
-                            background-color: var(--bg-dark);
-                            height: 4px;
-                            width: 0;
-                        }
-
-                    }
-                }
-
-                &__container-mobile{
-                    display: block;
-                    width: 400vw; //based on number of sections (4)
-                    height: 90vh;
-                    background-color: var(--bg-dark-transparent);
-                                                            
-                    margin-left: 10%;
-
-                    @media screen and (max-width: $media-tablet){
-                        display: flex;
-                        align-items: flex-start;
-                        justify-content: space-evenly;
-                    }
-
-                                        
-                    section{
-                        width: 100vw;
-                        height: 80%;
-                        padding: 1.8rem;
-                        display: flex;
-                        flex-flow: column nowrap;
-                        align-items: center;
-                        justify-content: flex-start;
-
-                        @media screen and (max-width: 500px) {
-                            padding: 1rem;
-                        }
-                    }
-
-                    h1{
-                        color: var(--text-light);
-                        font-size: 1.2rem;
-                        font-family: var(--font-space-mono);
-                        padding-left: 2rem;
-                        padding: 0.25rem;
-
-                        @media screen and (max-width: 500px) {
-                            font-size: 1rem;
-                        }
-                    }
-
-
-                    .col{  
-                        
-                        position: relative;
-                        display: flex;
-                        flex-flow: column nowrap;
-
-
-                        @media screen and (max-width: 500px) {
-                            width: 80vw;
-                        }
-                        
-                        img{
-                            display: block;
-                            margin: auto;
-                            
-                            max-width: 100%;
-                            height: auto;
-
-                            @media screen and (max-width: 500px) {
-                                max-width: 80%;
-                            }
-                        }
-
-                        p{
-                            color: var(--text-light);
-                            font-family: var(--font-hepta);
-                            font-size: clamp(1rem, 1.5vw, 2rem);
-                            line-height: 1.3rem;
-                            padding: 0.25rem;
-
-                            @media screen and (max-width: 500px) {
-                                font-size: 0.9rem;
-                            }
-                            
-
-                            span{
-                                padding-left: 0.5rem;
-                            }
-
-                        }
-
-                        .link__mobile{
-                            color: var(--text-light);
-                            text-align: center;
-                            text-decoration: none;
-                            text-transform: uppercase;
-                            font-family: var(--font-space-mono);
-                            letter-spacing: 2px;
-
-                            margin: 0.25rem;
-                            padding: 0.5rem;
-                            outline: thin solid var(--bg-light);
-                            border-radius: 0.5rem;
-
-                            display: flex; //for the one button with two links in it
-                            align-items: center;
-                            justify-content: center;
-
-
-                            @media screen and (max-width: 500px) {
-                                font-size: 0.9rem;
-                                padding: 0.4rem;
-                            }
-
-                            a{
-                                color: var(--text-light);
-                                text-decoration: none;
-                            }
-
-                        }
-                    }
-                    
-                /*     .accordion
-                    {
-                        background-color: var(--bg-dark);
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-
-                        text-align: center;
-                        font-family: var(--font-space-mono);
-                        font-size: 1.5rem;
-                        font-weight: 700;
-                        letter-spacing: 2px;
-                        
-
-                        outline: none;
-                        border: none;
-
-                        padding: 1.1rem;
-                        width: 100%;
-                        height: 240px;
-                     
-                        transition: all 0.3s ease;
-                        position: relative;
-
-                                                                      
-
-                        &.active{
-                            background-color: var(--bg-dark-grey);
-                        }
-
-                        &.piece-1{
-                            background-image: url("../../img/portfolio/weeb_shop.png");
-                            color: $accordion-text;
-                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
-
-                        }
-
-                        &.piece-2{
-                            background-image: url("../../img/portfolio/genshin_teams_light-version.png");
-                            color: var(--text-light);
-                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
-                        }
-
-                        &.piece-3{
-                            background-image: url("../../img/portfolio/WallOfWishes_site.jpg");
-                            color: var(--text-light);
-                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
-                        }
-
-                        &.piece-4{
-                            background-image: url("../../img/portfolio/to-do-lists.png");
-                            color: var(--text-light);
-                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
-                        }
-                       
-
-                    }
-
-
-                    .panel{
-                        max-height: 0;
-                        padding: 0 1.1rem;
-                        background-color: var(--bg-dark);
-                        border-left: thin solid var(--bg-light);
-                        border-right: thin solid var(--bg-light);
-                        overflow: hidden;
-                        transition: max-height 0.3s ease;
-
-                        .accordion{
-                            &__title{
-                                text-align: center;
-                                color: var(--text-light);
-                                font-family: var(--font-space-mono);
-                            }
-
-                            &__description{
-                                @include panel-text;
-                                color: var(--text-light);
-                                font-size: 0.9rem;
-
-                                span{
-                                    padding-left: 0.5rem;
-                                }
-                            }
-                        }
-                    } 
-                }
-
-                */
-
-                
-
-                
-            //}
-    //}
-//}
