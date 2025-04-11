@@ -200,6 +200,10 @@ $color-lightgrey: #bbb;
         &__wrapper{
             z-index: 1;
             width: 50%;
+
+            @media screen and (max-width: $media-mobile) {
+                width: 80%;
+            }
         }
     }
 

@@ -68,17 +68,17 @@ gsap.from(about_title, {
 tl.to( about_intro, {height: '100%', opacity: 1})
 tl.to( about_career, {height: '125%', opacity: 1})
 
-mm.add({isMobile: '(max-width:450px)',
+mm.add({isMobile: '(max-width: 425px)',
         isTablet: '(max-width: 768px)'
 }, (context)=>{
     let {isMobile, isTablet} = context.conditions;
 
     if(isMobile){
-        tl.to(about_career, {height: '170%', opacity: 1})
+        tl.to(about_career, {height: '180%', opacity: 1})
         tl.to( about_intro, {height: '105%', opacity: 1})
     }
     if(isTablet){
-        tl.to(about_career, {height: '150%', opacity: 1})
+        tl.to(about_career, {height: '180%', opacity: 1})
         tl.to( about_intro, {height: '100%', opacity: 1})
     }
 })

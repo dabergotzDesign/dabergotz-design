@@ -71,7 +71,7 @@ $height: 36vh;
                 margin: auto;
                 width: fit-content;
                 position: absolute;
-                bottom: 15%;
+                bottom: 12%;
                 left: 50%;
                 transform: translateX(-50%);
 
@@ -165,6 +165,7 @@ $height: 36vh;
                             @media screen and (max-width: $media-tablet) {
                                 font-size: 1.2rem;
                                 width: 70%;
+                                line-height: 24px;
                             }
 
                             @media screen and (max-width: $media-mobile) {
@@ -245,7 +246,11 @@ $height: 36vh;
                     position: absolute;
                     top: 42%;
                     right: 25%;
-                    margin: auto;    
+                    margin: auto;   
+                    
+                    @media screen and (max-width: $media-tablet) {
+                        line-height: 18px;
+                    }
                     
                     @media screen and (max-width: $media-mobile) {
                         font-size: 0.8rem;
