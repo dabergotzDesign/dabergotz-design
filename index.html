@@ -24,7 +24,7 @@
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
-    <script src="https://unpkg.com/@rive-app/canvas"></script>
+    <script src="https://unpkg.com/@rive-app/webgl2"></script>
 
     <script src="./js/gsap.js" defer></script>
     <script src="./js/portfolio.js" defer></script>
@@ -83,16 +83,16 @@
         
         <i data-lucide="mouse" class="scroll__indicator"></i>
         
-        <iframe class="ddesign__logo-bg" src="https://unicorn.studio/embed/qx1CX5xw1o0wztFyOlg1" loading="lazy"></iframe>
+        <div class="ddesign__logo-bg" data-us-project="uYC4McR6iDUPcARdr1Ah"></div>
     </div>
 
     <div class="content" id="content">
 
         <section id="home" class="main__section">
-            
-            <div class="slider__container">
 
-                <!-- SLIDE: Home -->
+            <!-- <div class="slider__container">
+
+                SLIDE: Home
                 <div class="slide home">                                    
                     <div class="text">
                         <p>Meet Dennis Dabergotz an UI/UX Designer & Web Developer at the start of his career. 
@@ -104,12 +104,12 @@
                     </div>
                 </div>
 
-                <!-- SLIDE: Portfolio -->
+                SLIDE: Portfolio
                 <div class="slide portfolio">
                     <a href="#portfolio" class="slide__button">check it out<i data-lucide="chevron-right"></i></a>
                 </div>
 
-                <!-- SLIDE: About -->
+                SLIDE: About
                 <div class="slide about">
                     <div class="text__wrapper">
                         <p>Curious who is behind the work and get a face of the Dev behind the scene?</p>
@@ -118,7 +118,7 @@
                     <a href="#about" class="slide__button">learn more<i data-lucide="chevron-right"></i></a>
                 </div>
 
-                <!-- SLIDE: Blog -->
+                SLIDE: Blog
                 <div class="slide blog">
                     <div class="wrapper">
                         <p>What is happening outside of my portfolio and what else do I like to show?</p>
@@ -126,12 +126,12 @@
                     <a href="#blog" class="slide__button">get the news<i data-lucide="chevron-right"></i></a>
                 </div>
 
-                <!-- SLIDE: Contact -->
+                SLIDE: Contact
                 <div class="slide contact">
                     <a href="#contact" class="slide__button">get in contact<i data-lucide="chevron-right"></i></a>
                 </div>
 
-                <!-- Controls -->
+                Controls
                  <a class="prev" onclick="plusSlides(-1)"><i data-lucide="chevron-left"></i></a>
                  <a class="next" onclick="plusSlides(1)"><i data-lucide="chevron-right"></i></a>
 
@@ -143,8 +143,17 @@
                     <span class="dot" data-text="Contact" onclick="currentSlide(5)"></span>
                 </div>
 
-            </div>
+            </div> -->
 
+            <div class="home__text">
+                <p>
+                    Meet Dennis Dabergotz a <span>UI/UX Designer</span> with a front-end web development at the start of his career. 
+
+                    On this website you'll find out more about me and my work.
+                    When there's something to design, just sign me up.
+                </p>
+                <img src="./img/dddesign_logo_transparent.png" width="2048px" height="2048px" alt="">
+            </div>
             
         </section>
 
@@ -154,7 +163,48 @@
                 <h1 class="title">Intuitive Designs, Impactful Experiences</h1>
             </div>
 
-            <!-- //// ACCORDION //// -->
+            <!-- //// GALLERY • DESKTOP PORTFOLIO //// -->
+             <div class="portfolio__wrapper">
+                <div class="portfolio__info">
+                    <ul>
+                        <li><h3>traveler companion</h3><p>UI Design for a companion app with the game “Genshin Impact”</p></li>
+                        <li><h3>REMscape</h3><p>Sleep tracker + Dream Journal app (UI Design Prototype)</p></li>
+                        <li><h3>asozial</h3><p>Match Feature Design for a social connection app</p></li>
+                        <li><h3>Valar Morghulis</h3><p>Fan-made website for the series “Game of Thrones”</p></li>
+                    </ul>
+                </div>
+                <div class="portfolio__gallery">
+                    
+                    <div class="portfolio__card">
+                        <canvas id="canvas-1" width="540px" height="720px"></canvas>
+                        <a href="#modal-1" class="g_info  info-1">learn more</a>
+                    </div>
+
+                    <div class="portfolio__card">
+                        <canvas id="canvas-2" width="540px" height="720px"></canvas>
+                        <a href="#modal-2" class="g_info info-2">learn more</a>
+                    </div>
+
+                    <div class="portfolio__card">
+                        <canvas id="canvas-3" width="540px" height="720px"></canvas>
+                        <a href="#modal-3" class="g_info info-3">learn more</a>
+                    </div>
+
+                    <div class="portfolio__card">
+                        <canvas id="canvas-4" width="540px" height="720px"></canvas>
+                        <a href="#modal-4" class="g_info info-4">learn more</a>
+                    </div>
+
+                </div>
+
+                <div class="gallery__controls">
+                        <div class="prev"><i data-lucide="move-left"></i></div>
+                        <div class="next"><i data-lucide="move-right"></i></div>
+                </div>
+
+             </div>
+
+            <!-- //// ACCORDION • MOBILE PORTFOLIO //// -->
              <div class="accordion__container">
 
                 <!-- Traveler Companion -->
@@ -207,7 +257,9 @@
                 </div>
 
              </div>
-                            
+
+
+                                         
             
             <!-- /// PORTFOLIO MODAL /// -->
 
@@ -591,7 +643,7 @@
          <a href="#top" class="toTop">get back to top <i data-lucide="chevron-up"></i></a>
   
 
-        <iframe class="ddesign__bg-city" src="https://unicorn.studio/embed/KrWSHdEO830n5AO9S3tf" width="1440px" height="900px" loading="lazy"></iframe>
+         <div class="ddesign__bg" data-us-project="zHCxnrlbVOnRuLGgVhtl"></div>
 
 
     </div>
@@ -629,5 +681,11 @@
     })
 
 </script>
+
+<script type="text/javascript">!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};
+var i=document.createElement("script");
+i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.20/dist/unicornStudio.umd.js",i.onload=function()
+{window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();</script>
+
 
 </html>

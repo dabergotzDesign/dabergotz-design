@@ -17,6 +17,7 @@ carousel.addEventListener("mousedown", e =>{
     isDown = true;
     startX = e.pageX - carousel.offsetLeft;
     scrollLeft = carousel.scrollLeft;
+    carousel.style.cursor = "grabbing";
 });
 
 carousel.addEventListener("mousemove", e =>{
@@ -29,10 +30,12 @@ carousel.addEventListener("mousemove", e =>{
 
 carousel.addEventListener("mouseup", () => {
     isDown = false;
+    carousel.style.cursor = "default";
 })
 
 carousel.addEventListener("mouseleave", ()=>{
     isDown = false;
+    carousel.style.cursor = "default";
 
     if(!toolbox.classList.contains("auto")){
         toolbox.classList.add("auto");

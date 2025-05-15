@@ -32,7 +32,7 @@ gsap.from(card, {
 
 
 /* ABOUT */
-
+/*
 const about_title = document.querySelector("#about .title");
 const about_intro = document.querySelector(".about__intro");
 const about_career = document.querySelector(".about__career");
@@ -82,7 +82,7 @@ mm.add({isMobile: '(max-width: 425px)',
         tl.to( about_intro, {height: '100%', opacity: 1})
     }
 })
-
+*/
 
 
 
@@ -93,7 +93,7 @@ const blog = document.querySelector("#blog");
 gsap.set(blog, {gap: '100em', opacity: 0})
 
 gsap.to(blog, {
-    duration: 3,
+    duration: 1,
     ease: 'elastic.in(i, 0.3)',
     gap: '2em',
     opacity: 1,

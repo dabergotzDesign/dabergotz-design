@@ -59,7 +59,7 @@ $color-lightgrey: #bbb;
     position: relative;
     overflow: hidden;
 
-    margin: 20em auto;
+    margin-bottom: 20em;
     
     display: flex;
     align-items: center;
@@ -70,6 +70,9 @@ $color-lightgrey: #bbb;
         gap: 0;
         width: 100vw;
         padding: 1.2em;
+
+        background:rgba($color: #6A00FF, $alpha: 0.25);
+        mix-blend-mode: plus-lighter;
     }
 
     @media screen and (max-width: $media-mobile) {
@@ -170,6 +173,11 @@ $color-lightgrey: #bbb;
             transform: translate(-50%, -50%);
 
             border: none;
+
+            @media screen and (max-width: $media-tablet) {
+                display: none;
+            }
+
         }
 
     }
@@ -378,8 +386,9 @@ $color-lightgrey: #bbb;
                     border: thin solid var(--c-light);
                     border-radius: 0.25em;
 
-                    padding: 1rem;
-                    margin: 1.5rem 0;
+                    padding: 1em;
+                    padding-bottom: 4em;
+                    margin: 1.5em 0;
                     width: 100%;
                     position: relative;
 
@@ -493,7 +502,7 @@ $color-lightgrey: #bbb;
 
                             figure{
                                 figcaption{
-                                    color: var(--c-light);
+                                    color: var(--c-light-transparent-50);
                                     text-align: center;
                                     padding: 0.5rem;
                                     font-family: var(--font-poppins);
@@ -718,6 +727,7 @@ $color-lightgrey: #bbb;
                             color: var(--c-light);
                             font-family: var(--font-poppins);
                             letter-spacing: 1px;
+                            background-color: var(--c-dark);
                         }
                         
                     }

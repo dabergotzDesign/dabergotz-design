@@ -30,7 +30,7 @@ $media-mobile: 450px;
     width: 100%;
     z-index: -10;
     opacity: 0.25;
-    background: linear-gradient(to top, var(--c-purple), transparent), url("../../img/backgrounds/stripes_bw_horizontal.png");
+    background: linear-gradient(to top, var(--c-purple), transparent);
     background-size: 10%;
     filter: saturate(200%);
 }
@@ -45,16 +45,21 @@ $media-mobile: 450px;
                 
                 display: flex;
                 flex-flow: column nowrap;
-                align-items: center;
-                justify-content: center;
+                /* align-items: center;
+                justify-content: center; */
                                
                 position: relative;
+                margin-bottom: 70em;
+
+                @media screen and (max-width: $media-tablet) {
+                        margin-bottom: 90em;
+                }
                          
 
                 @media screen and (max-width: $media-mobile) {
                     gap:0;
                     justify-content: flex-start;
-                    margin-bottom: 70em;
+                    margin-bottom: 60em;
                 }
 
                 .mask{
@@ -64,22 +69,35 @@ $media-mobile: 450px;
                 .title{
                     color: var(--c-orange);
                     text-shadow: 0 0 4px rgba($color: #f2f2f2, $alpha: 0.5);
-                    text-align: center;
                     text-transform: uppercase;
                     font-size: var(--size-h2);
                     font-family: var(--font-comfortaa);
                     font-weight: 300;
+                    margin-left: 5em;
+                    position: relative;
+
+                    &::after{
+                        position: absolute;
+                        bottom: 1%;
+                        left: 0;
+                        content: '';
+                        height: 1px;
+                        width: 50vw;
+                        background-color: var(--c-orange);
+                    }
                     
                  
                     @media screen and (max-width: $media-tablet) {
                         font-size: 1.5rem;
                         font-weight: 300;
-                        letter-spacing: 2px;
+                        margin-left: 2em;
                     }
 
                     @media screen and (max-width: $media-mobile) {
                         font-size: 1.2rem;
                         padding: 0.5rem;
+                        margin-left: 0.12em;
+                        margin-bottom: 1em;
                     }
                 }
             }
@@ -257,7 +275,6 @@ $media-mobile: 450px;
                 h3{
                     @include title();
                     //text-shadow: 1px 1px 4px var(--text-dark);
-                    text-transform: uppercase;
                     margin-top: 2rem;
 
                     @media screen and (max-width: $media-tablet) {
@@ -310,6 +327,18 @@ $media-mobile: 450px;
                     font-weight: 300;
                     color: var(--c-orange);
                     text-shadow: 0 0 4px rgba($color: #f2f2f2, $alpha: 0.5);
+                    position: relative;
+
+                    &::after{
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        content: '';
+                        height: 1px;
+                        width: 24vw;
+                        background-color: var(--c-orange);
+                        transform: translate(-50%,-50%);
+                    }
                 }
 
                 .wrapper{
@@ -413,7 +442,7 @@ $media-mobile: 450px;
 
                 &::after{
                     @include holo_bg();
-                    background: linear-gradient(to bottom, var(--c-purple), transparent), url("../../img/backgrounds/stripes_bw_horizontal.png");
+                    background: linear-gradient(to bottom, var(--c-purple), transparent);
                     background-size: 10%;
                     border-radius: 1em 1em 0 0;
 
