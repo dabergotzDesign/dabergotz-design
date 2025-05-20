@@ -196,17 +196,47 @@ body{
             canvas{
                 width: 65%;
                 height: 100%;
+
+                @media screen and (max-width: $media-tablet) {                
+                    display: none;
+                } 
             }
 
-            @media screen and (max-width: $media-tablet) {                
-                scale: 1.5;
-                transform: translate(20%, 100%);
-            } 
 
-            @media screen and (max-width: $media-mobile) {                
-                scale: 2.5;
-                transform: translate(27%, 125%);
-            }            
+
+            &__mobile{
+                display: none;
+
+                color: var(--c-light);
+                transform: translateY(90%);
+
+                 @media screen and (max-width: $media-tablet) {                
+                    display: block;
+                } 
+                
+                h1{
+                    font-family: var(--font-neon);
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+
+                    -webkit-text-stroke-width: 0.5px;
+                    -webkit-text-stroke-color: var(--c-orange);
+                    text-shadow: 0 0 8px var(--c-orange);
+                  
+                    transition: all 0.3s ease;
+                }
+
+                h2{
+                    font-family: var(--font-poppins);
+                    font-size: 1rem;
+                    font-weight: 100;
+                    text-shadow: 1px 0 2px var(--c-dark);
+
+                    margin-top: 0.5rem;
+                }
+
+            }
+      
 
         }
 
