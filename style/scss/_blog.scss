@@ -10,7 +10,7 @@ $color-lightgrey: #bbb;
     text-transform: uppercase;
     font-size: var(--size-h3);
     font-family: var(--font-comfortaa);
-    font-weight: 300;
+    font-weight: 200;
 
     //padding-top: 4rem;
 }
@@ -186,8 +186,25 @@ $color-lightgrey: #bbb;
     
     .title{
         @include titles();
-        font-weight: 700;
         color: var(--c-orange);
+        margin-bottom: 0.5em;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 80%;
+            background-color: var(--c-orange);
+
+            @media screen and (max-width: $media-mobile) {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+            }
+        }
       
            
         @media screen and (max-width: $media-laptop) {

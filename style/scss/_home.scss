@@ -427,7 +427,7 @@ $height: 36vh;
         align-items: center;
         justify-content: center;
 
-        height: 50vh;
+        height: 60vh;
         background-color: var(--c-dark-transparent-50);
 
         @media screen and (max-width: $media-mobile) {                
@@ -436,7 +436,7 @@ $height: 36vh;
 
         p{
             color: var(--c-light);
-            text-transform: uppercase;
+            //text-transform: uppercase;
 
             font-family: var(--font-poppins);
             font-size: 1.5rem;

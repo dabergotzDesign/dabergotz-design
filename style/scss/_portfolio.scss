@@ -121,6 +121,9 @@ $width-card-default-m: 5em;
                 height: fit-content;
                 margin: 2em auto;
                 position: relative;
+                padding: 2em 4em;
+                padding-top: 0;
+                padding-left: 0;
 
                 transition: all 0.3s ease-in-out;
 
@@ -137,7 +140,7 @@ $width-card-default-m: 5em;
                 .gallery__controls{
 
                     position: absolute;
-                    bottom: 2%;
+                    bottom: 5%;
                     left: 20%;
                     
                     display: flex;
@@ -182,11 +185,11 @@ $width-card-default-m: 5em;
                 h3{
                     text-transform: uppercase;
                     font-weight: 400;
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
 
                 p{
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     font-weight: 200;
                     width: 80%;
                 }
@@ -194,7 +197,7 @@ $width-card-default-m: 5em;
 
             &__gallery{
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: space-between;
                 gap: 1em;
 
@@ -204,6 +207,7 @@ $width-card-default-m: 5em;
                 width: 100vw;
                 padding: 3em;
                 padding-right: 32em;
+                padding-top: 0;
 
                 overflow-x: scroll;
                 overflow-y: hidden;
@@ -214,6 +218,8 @@ $width-card-default-m: 5em;
 
                     position: relative;
                     margin: auto 0.5em;
+                    width: 70vw;
+                    height: 70vh;
 
                     &:hover a{
                         animation: glitch 0.5s infinite alternate-reverse;                        
@@ -223,14 +229,12 @@ $width-card-default-m: 5em;
                         
                         width: 540px;
                         height: 720px;
-                        //scale: 1.8;
                         object-fit: contain
                     }
   
                     
                     a{    
                         @include info_btn();
-
                         width: 50%;
 
                     }
