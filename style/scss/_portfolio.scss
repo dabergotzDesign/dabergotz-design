@@ -738,37 +738,37 @@ $width-card-default-m: 5em;
                                         .links{
 
                                             margin: 2em 0;
-
+                                                                                   
                                             @media screen and (max-width: $media-laptop) {
                                                 display: flex;
                                                 align-items: flex-start;
                                                 justify-content: center;
-
+                                                
                                                 margin: 1em 0;
                                             }
-
+                                            
                                             /* @media screen and (max-width: $media-mobile) {
                                                 margin: 1em 0;
-                                            } */
+                                                } */
+                                                
+                                                a{
+                                                    color: var(--c-light);
+                                                    padding: 1rem 1.5rem;
+                                                    margin: 1rem;
 
-                                            a{
-                                                color: var(--c-light);
-                                                padding: 1rem 1.5rem;
-                                                margin: 1rem;
-
-                                                text-decoration: none;
-                                                text-transform: uppercase;
-                                                text-align: center;
-                                                font-family: var(--font-space);
-                                                font-size: 1rem;
-                                                outline: 1px solid var(--c-light);
-                                                border-radius: 0.5em;
-                                                transition: all 0.3s ease;
-                                                position: relative;
+                                                    text-decoration: none;
+                                                    text-transform: uppercase;
+                                                    text-align: center;
+                                                    font-family: var(--font-space);
+                                                    font-size: 1rem;
+                                                    outline: 1px solid var(--c-light);
+                                                    border-radius: 0.5em;
+                                                    transition: all 0.3s ease;
+                                                    position: relative;
 
                                                 &:hover{
+                                                    backdrop-filter: blur(12px);
                                                     background-color: rgba($color: #f2f2f2, $alpha: 0.25);
-                                                    backdrop-filter: blur(8px);
 
                                                     @media screen and (max-width: $media-tablet) {
                                                         background-color: transparent;

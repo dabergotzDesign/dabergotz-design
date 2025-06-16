@@ -7,6 +7,7 @@ let captionText = document.querySelector(".caption");
 
 let getImg = document.querySelectorAll(".blog__img");
 
+
 getImg.forEach((getImg)=>{
     getImg.onclick=function(){
         modalBlog.classList.remove("disabled");
@@ -27,6 +28,16 @@ close.addEventListener("click",()=>{
         modalBlog.classList.add("disabled");
     }
 });
+
+
+window.addEventListener("keydown", e =>{
+
+    if(e.key === "Escape" && modalBlog.classList.contains("active")){
+        modalBlog.classList.remove("active")
+        modalBlog.classList.add("disabled")
+    }
+
+})
 
 window.onclick = function(event){
     if(event.target == modalBlog){
@@ -142,5 +153,3 @@ window.addEventListener("load", () => {
         }
     })
 })
-
-

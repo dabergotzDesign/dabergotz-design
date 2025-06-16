@@ -55,7 +55,7 @@ const r_gallery_3 = new rive.Rive({
 const r_gallery_4 = new rive.Rive({
         src: "../rive/portfolio_cards.riv",
         canvas: document.getElementById("canvas-4"),
-        artboard: "glass_card-vm",
+        artboard: "glass_card-gdy",
         autoplay: true,
         stateMachines: "card_states",
         onLoad: () => {
@@ -154,9 +154,9 @@ for (let [index, g_trigger] of g_triggerArr) {
       const r_portfolio_4 = new rive.Rive({
         src: "../rive/portfolio_cards.riv",
         canvas: document.getElementById("p_canvas-4"),
-        artboard: "VM_cards",
+        artboard: "GDY_cards",
         autoplay: true,
-        stateMachines: "carousel_ani",
+        stateMachines: "cards_fan",
         onLoad: () => {
           r_portfolio_4.resizeDrawingSurfaceToCanvas();
         },
