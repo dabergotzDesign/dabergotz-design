@@ -246,9 +246,9 @@ for (let [index, trigger] of triggerArray) {
       const r_portfolio_4 = new rive.Rive({
         src: "../rive/portfolio_cards.riv",
         canvas: document.getElementById("p_canvas-4"),
-        artboard: "VM_cards",
+        artboard: "GDY_cards",
         autoplay: true,
-        stateMachines: "carousel_ani",
+        stateMachines: "cards_fan",
         onLoad: () => {
           r_portfolio_4.resizeDrawingSurfaceToCanvas();
         },
