@@ -30,7 +30,7 @@ $media-mobile: 450px;
     width: 100%;
     z-index: -10;
     opacity: 0.25;
-    background: linear-gradient(to top, var(--c-purple), transparent);
+    //background: linear-gradient(to top, var(--c-purple), transparent);
     background-size: 10%;
     filter: saturate(200%);
 }
@@ -67,7 +67,8 @@ $media-mobile: 450px;
                 }
 
                 .title{
-                    color: var(--c-orange);
+                    //color: var(--c-orange);
+                    color: var(--c-light);
                     text-shadow: 0 0 4px rgba($color: #f2f2f2, $alpha: 0.5);
                     text-transform: uppercase;
                     font-size: var(--size-h2);
@@ -83,7 +84,8 @@ $media-mobile: 450px;
                         content: '';
                         height: 1px;
                         width: 50vw;
-                        background-color: var(--c-orange);
+                        //background-color: var(--c-orange);
+                        background-color: var(--c-light);
                     }
                     
                  
@@ -130,6 +132,10 @@ $media-mobile: 450px;
                 gap: 1rem;
                 width: auto;
                 overflow: hidden;
+
+                box-shadow: 0 -6px 4px var(--c-light);
+                border-radius: 1rem;
+                background: linear-gradient(to bottom, var(--c-dark-transparent-50), transparent);
                              
                 @media screen and (max-width: $media-laptop) {
                     width: 90%;
@@ -155,6 +161,11 @@ $media-mobile: 450px;
                 flex-direction: column;
                 align-items: center;
                 position: relative;
+
+                box-shadow: 0 6px 4px var(--c-light);
+                border-radius: 1rem;
+                background: linear-gradient(to top, var(--c-dark-transparent-50), transparent);
+
 
                 @media screen and (max-width: $media-laptop) {
                     width: 90%;
@@ -325,7 +336,7 @@ $media-mobile: 450px;
                     @include title();
                     text-transform: uppercase;
                     font-weight: 300;
-                    color: var(--c-orange);
+                    color: var(--c-light);
                     text-shadow: 0 0 4px rgba($color: #f2f2f2, $alpha: 0.5);
                     position: relative;
 
@@ -336,7 +347,7 @@ $media-mobile: 450px;
                         content: '';
                         height: 1px;
                         width: 24vw;
-                        background-color: var(--c-orange);
+                        background-color: var(--c-light);
                         transform: translate(-50%,-50%);
                     }
                 }
@@ -366,8 +377,10 @@ $media-mobile: 450px;
                     font-size: 1.6rem;
                     padding: 0.8em 1.5em;
                     white-space: nowrap;
-                    background: linear-gradient(90deg, transparent, var(--c-blue), transparent);
+                    //background: linear-gradient(90deg, transparent, var(--c-blue), transparent);
+                    background: rgba($color: #f2f2f2, $alpha: 0.1);
                     backdrop-filter: blur(8px);
+                    border: 1px solid var(--c-light);
                     border-radius: 4em;
                     user-select: none;
 
@@ -442,7 +455,7 @@ $media-mobile: 450px;
 
                 &::after{
                     @include holo_bg();
-                    background: linear-gradient(to bottom, var(--c-purple), transparent);
+                    //background: linear-gradient(to bottom, var(--c-purple), transparent);
                     background-size: 10%;
                     border-radius: 1em 1em 0 0;
 
