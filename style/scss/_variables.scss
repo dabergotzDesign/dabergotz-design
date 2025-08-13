@@ -1,33 +1,34 @@
 
 //Colors
 :root{
-    --text-link: rgb(0, 174, 255);
     --c-dark: #0d0d0d;
     --c-dark-transparent-50: rgba(13,13,13,0.5);
     --c-dark-transparent-25: rgba(13,13,13,0.25);
     --c-light: #f2f2f2;
     --c-light-transparent-50: rgba(242, 242, 242, 0.5);
-    --c-light-transparent-25: rgba(242, 242, 242, 0.25);
-    --c-blue: #00AEFF;
-    --c-purple: #6A00FF;
-    --c-orange: #FF9D00; 
+    --c-light-transparent-10: rgba(242, 242, 242, 0.1);
+    --c-highlight: #FF006D;
 }
 
 //Font Sizes
 :root{
-    --size-h1: 2.5vw;
-    --size-h2: 2.2vw;
-    --size-h3: 2vw;
-    --size-h4: 1.5vw;
-    --size-p: 1.2rem;
+   --size-8: 0.5rem;
+   --size-16: 1rem;
+   --size-24: 1.5rem;
+   --size-32: 2rem;
+   --size-48: 2.5rem;
+   --size-56: 3rem;
+   --size-64: 3.5rem;
+   --size-72: 4rem;
+   --size-80: 4.5rem;
+   --size-88: 5rem;
+   --size-96: 5.5rem;
 }
 
 //Fonts
 :root{
-    --font-poppins: 'Poppins', sans-serif; //used for paragraphs & Headlines
-    --font-space: 'Space Grotesk'; //used for labels, buttons
-    --font-comfortaa: 'Comfortaa'; //used for main headlines
-    --font-neon: 'Tilt Neon'; //used for welcome page title & subtitle
+    --font-comfortaa: 'Comfortaa'; //used for text
+    --font-noto: 'Noto Sans JP';
 }
 
 
