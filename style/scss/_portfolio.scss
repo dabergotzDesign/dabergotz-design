@@ -154,8 +154,10 @@ $media-mobile: 450px;
 
             &__wrapper{
                 display: flex;
+                flex-flow: column nowrap;
                 align-items: center;
                 justify-content: space-between;
+                gap: var(--size-96);
 
                 height: fit-content;
                 margin: 2em auto;
@@ -257,18 +259,15 @@ $media-mobile: 450px;
 
                     position: relative;
                     margin: auto 0.5em;
-                    width: 70vw;
-                    height: 70vh;
-
+                   
                     &:hover a{
                         animation: glitch 0.5s infinite alternate-reverse;                        
                     }
                     
                     canvas{
                         
-                        width: 540px;
-                        height: 720px;
-                        object-fit: contain
+                        width: 100%;
+                        object-fit: contain;
                     }
   
                     

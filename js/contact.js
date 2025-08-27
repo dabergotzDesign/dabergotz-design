@@ -125,7 +125,7 @@ let form = document.querySelector(".form");
 let submitBtn = document.querySelector(".submit__button");
 
 form.addEventListener("change", ()=>{
-    //submitBtn.disabled = true;
+    submitBtn.disabled = true;
 
     if(msgName.value != ""){
         submitBtn.disabled = false;

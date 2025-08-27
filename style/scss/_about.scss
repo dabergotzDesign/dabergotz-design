@@ -4,7 +4,6 @@ $media-tablet: 768px;
 $media-mobile: 480px;
 
 
-
 @mixin title {
     font-family: var(--font-noto);
     font-weight: 400;
@@ -86,34 +85,21 @@ $media-mobile: 480px;
                     color: var(--c-orange);
                     text-shadow: 0 0 4px rgba($color: #f2f2f2, $alpha: 0.5);
                     text-transform: uppercase;
-                    font-size: var(--size-h2);
-                    font-family: var(--font-comfortaa);
-                    font-weight: 300;
-                    margin-left: 2.5em;
-                    position: relative;
-
-                    &::after{
-                        position: absolute;
-                        bottom: 1%;
-                        left: 0;
-                        content: '';
-                        height: 1px;
-                        width: 50vw;
-                        //background-color: var(--c-orange);
-                        background-color: var(--c-light);
-                    }
+                    font-size: var(--size-96);
+                    font-family: var(--font-noto);
+                    font-weight: 900;
                     
+                    -webkit-text-stroke: 2px var(--c-light);
+                                      
                  
                     @media screen and (max-width: $media-tablet) {
-                        font-size: 1.5rem;
-                        font-weight: 300;
-                        margin-left: 2em;
+                        font-size: var(--size-56);
                     }
 
                     @media screen and (max-width: $media-mobile) {
-                        font-size: 1.2rem;
+                        -webkit-text-stroke: 1px var(--c-light);
+                        font-size: var(--size-48);
                         padding: 0.5rem;
-                        margin-left: 0.12em;
                         margin-bottom: 1em;
                     }
                 }
@@ -135,7 +121,6 @@ $media-mobile: 480px;
                 width: auto;
          
                 @media screen and (max-width: $media-tablet) {
-
                 }                
                 
                 @media screen and (max-width: $media-mobile) {

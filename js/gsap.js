@@ -136,7 +136,7 @@ splitTitle.forEach((char, i)=>{
 
 /* CONTACT */
 
-const contact_title = document.querySelector("#contact .title");
+/* const contact_title = document.querySelector("#contact .title");
 const contacts = document.querySelector(".contacts__wrapper");
 
 gsap.set(contact_title, {xPercent: '-100'});
@@ -158,4 +158,4 @@ gsap.to(contacts, {
     transformOrigin: 'center center',
     opacity: 1,
     scrollTrigger: {trigger: '#contact'}
-})
+}) */
