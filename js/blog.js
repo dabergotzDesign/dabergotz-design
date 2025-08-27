@@ -47,9 +47,9 @@ window.onclick = function(event){
 };
 
 //SLider - comparison blog post
-document.querySelector(".compare #compare-ip").addEventListener("input", (e)=>{
+/* document.querySelector(".compare #compare-ip").addEventListener("input", (e)=>{
     document.querySelector(".compare .before .after").style.width= (+e.target.value) + "px";
-});
+}); */
 
 
 /* Pagination */
@@ -63,6 +63,8 @@ const pageNumbers = document.querySelector("#page__numbers"),
 const pageLimit = 10;
 const pageCount = Math.ceil(listItems.length / pageLimit);
 let currentPage = 1;
+
+
 
 const disableButton = (button) => {
     button.classList.add("disabled");

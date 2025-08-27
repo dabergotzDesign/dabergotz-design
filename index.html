@@ -11,7 +11,7 @@
     <!-- FONTS, ICONS -->
     <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@master/src/app/ci.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@master/src/app/ci.min.css"/>
 
     <!-- Comfortaa -->
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
@@ -29,17 +29,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
     <script src="https://unpkg.com/@rive-app/webgl2"></script>
-
+  
     <script src="./js/gsap.js" defer></script>
     <script src="./js/portfolio.js" defer></script>
-    <script src="./js/about.js" defer></script>
     <script src="./js/contact.js" defer></script>
     <script src="./js/welcome_title.js" defer></script>
+    <script src="./js/resume_dl.js" defer></script>
 
     <script src="./js/splash.js" defer></script>
-    <script src="./js/home_slider.js" defer></script>
     <script src="./js/lucide.js" defer></script>
     <script src="./js/smooth-scroll.js" defer></script>
+    <script src="./js/cursor.js" defer></script>
  
     
     <title>dabergotzDesign - UI/UX Design & Frontend Development</title>
@@ -47,10 +47,11 @@
 </head>
 <body>
 
-    
+ <div class="custom_cursor"></div>
        
 <main class="main">
 
+   
     <!-- anchor -->
     <div id="top"></div>
 
@@ -60,11 +61,11 @@
 
         <nav>
             <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#blog">blog</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li class="hover"><a href="#home">home</a></li>
+                <li class="hover"><a href="#portfolio">portfolio</a></li>
+                <li class="hover"><a href="#about">about</a></li>
+                <li class="hover"><a href="#blog">blog</a></li>
+                <li class="hover"><a href="#contact">contact</a></li>
             </ul>
         </nav>
     </div>
@@ -85,14 +86,19 @@
     </div>
     
     <div class="splash">
-        <div class="welcome">
+
+        <canvas id="canvas" width="1440" height="500" ></canvas>
+
+
+        <div class="welcome__mobile">
             <h1>innovating user Experience</h1>
             <h2>Hey there, I’m <span>Dennis Dabergotz</span>, <span>UI/UX Designer</span>, blending the latest trends and tech to craft intuitive interfaces that turn everyday interactions into moments of delight.</h2>
         </div>
         
         <i data-lucide="mouse" class="scroll__indicator"></i>
         
-        <div class="ddesign__logo-bg" data-us-project="uYC4McR6iDUPcARdr1Ah"></div>
+        <!-- unicorn vending machine bg -->
+        <div class="ddesign__VM-bg" data-us-project="uYC4McR6iDUPcARdr1Ah"></div>
     </div>
 
     <div class="content" id="content">
@@ -100,13 +106,11 @@
         <section id="home" class="main__section">
 
             <div class="home__text">
-                <p>
-                    Meet Dennis Dabergotz a <span>UI/UX Designer</span> with a front-end web development background at the start of his career. 
-
-                    Find out more about me and my work down below. <br>
-                    When there's something to design, just sign me up.
+                <p class="reveal">
+                    Meet <span class="underline">Dennis Dabergotz</span>, a <span style="color: var(--c-highlight);">UI/UX Designer</span> with a front-end web development background. 
+                    <br> Explore my work and creations below - if there’s something to design, count me in.
                 </p>
-                <img src="./img/dddesign_logo_transparent.png" width="2048px" height="2048px" alt="">
+                <img src="./img/dddesign_logo_transparent.png" width="2048px" height="2048px" alt="dabergotzDesign logo">
             </div>
             
         </section>
@@ -114,47 +118,27 @@
         <section id="portfolio" class="main__section">
 
             <div class="mask">
-                <h1 class="title">Intuitive Designs, Impactful Experiences</h1>
+                <h1>creations</h1>
+                <h2 class="title">Intuitive Designs, Impactful Experiences</h2>
             </div>
 
             <!-- //// GALLERY • DESKTOP PORTFOLIO //// -->
              <div class="portfolio__wrapper">
-                <div class="portfolio__info">
-                    <ul>
-                        <li><h3>traveler companion</h3><p>UI Design for a companion app with the game “Genshin Impact”</p></li>
-                        <li><h3>REMscape</h3><p>Sleep tracker + Dream Journal app (UI Design Prototype)</p></li>
-                        <li><h3>asozial</h3><p>Match Feature Design for a social connection app</p></li>
-                        <li><h3>Go Duck Yourself</h3><p>Prototype for a "Rubber Duck Debugging" App</p></li>
-                    </ul>
-                </div>
-                <div class="portfolio__gallery">
-                    
-                    <div class="portfolio__card">
-                        <canvas id="canvas-1" width="540px" height="720px"></canvas>
-                        <a href="#modal-1" class="g_info  info-1">learn more</a>
-                    </div>
+                
+                <!-- Portfolio piece 01 - REMscape -->
+                 <div class="portfolio__card p_canvas-1">
+                    <canvas id="canvas-1" width="1700px" height="560px"></canvas>
+                 </div>
 
-                    <div class="portfolio__card">
-                        <canvas id="canvas-2" width="540px" height="720px"></canvas>
-                        <a href="#modal-2" class="g_info info-2">learn more</a>
-                    </div>
+                <!-- Portfolio piece 02 - Asozial -->
+                 <div class="portfolio__card p_canvas-2">
+                    <canvas id="canvas-2" width="1700px" height="560px"></canvas>
+                 </div>
 
-                    <div class="portfolio__card">
-                        <canvas id="canvas-3" width="540px" height="720px"></canvas>
-                        <a href="#modal-3" class="g_info info-3">learn more</a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <canvas id="canvas-4" width="540px" height="720px"></canvas>
-                        <a href="#modal-4" class="g_info info-4">learn more</a>
-                    </div>
-
-                </div>
-
-                <div class="gallery__controls">
-                        <div class="prev"><i data-lucide="move-left"></i></div>
-                        <div class="next"><i data-lucide="move-right"></i></div>
-                </div>
+                 <!-- Portfolio piece 03 - Go Duck Yourself -->
+                 <div class="portfolio__card p_canvas-3">
+                    <canvas id="canvas-3" width="1700px" height="560px"></canvas>
+                 </div>
 
              </div>
 
@@ -162,7 +146,7 @@
              <div class="accordion__container">
 
                 <!-- Traveler Companion -->
-                <div class="accordion__card-wrapper">
+                <!-- <div class="accordion__card-wrapper">
 
                     <label for="c1"></label>
                     <input type="radio" name="card" id="c1">
@@ -172,7 +156,7 @@
                     </div>
                     <div class="card__thumbnail card-1"></div>
                     <a href="#modal-1" class="button__info info-1">learn more</a>
-                </div>
+                </div> -->
 
                 <!-- REMscape -->
                 <div class="accordion__card-wrapper">
@@ -217,7 +201,7 @@
             
             <!-- /// PORTFOLIO MODAL /// -->
 
-                <div class="modal__container">
+                <!-- <div class="modal__container">
 
                     <div class="close">
                         <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -228,7 +212,6 @@
                         </svg>
                     </div>
 
-                    <!-- Traveler Companion  -->
                     <div class="prtfl__modal" id="modal-1">
                         <div class="modal__cards">
                             <canvas id="p_canvas-1" width="1200" height="700"></canvas>
@@ -271,7 +254,6 @@
                         </div>
                     </div>
 
-                    <!-- REMscape -->
                     <div class="prtfl__modal" id="modal-2">
                         <div class="modal__cards">
                             <canvas id="p_canvas-2" width="1200" height="700"></canvas>
@@ -308,7 +290,6 @@
                         </div>
                     </div>
 
-                    <!-- asozial  -->
                     <div class="prtfl__modal" id="modal-3">
                         <div class="modal__cards">
                             <canvas id="p_canvas-3" width="1200" height="700"></canvas>
@@ -345,7 +326,6 @@
                         </div>
                     </div>
 
-                    <!-- Go Duck Yourself  -->
                     <div class="prtfl__modal" id="modal-4">
                         <div class="modal__cards">
                             <canvas id="p_canvas-4" width="1200" height="700"></canvas>
@@ -382,101 +362,95 @@
                         </div>
                     </div>
     
-                </div>
-            <!-- </div> -->
-        
+                </div> -->
+                 
 
         </section>
 
 
         <section id="about" class="main__section">
          
-            <h1 class="title">Yep, that's me</h1>
+            <h1 class="title">about</h1>
            
 
             <div class="about__container">
 
                 <div class="about__intro">
                     <div class="about__text">
+                        
+                        <h3 class="about__title">Yep, that's me</h3>
                                                 
-                        <div class="about__intro-text">
-                        <h3 class="about__title">May I introduce myself</h3>
+                        <!-- <div class="about__intro-text"> -->
                         <p class="about__description">
-                            Hello everyone, I'm Dennis Dabergotz, a Front-End Web Developer with a passion for design, games, and technology. 
+                            Hello everyone, I'm <span style="color: var(--c-highlight);">Dennis Dabergotz</span>, a <strong>Front-End Web Developer</strong> with a passion for design, games, and technology.
                             Originating from a hands-on crafting background, I transitioned to the digital realm at the School for Games, initially aiming to become a Game Developer.
                         </p>
                         <p class="about__description">
                             However, upon graduation, I was steered towards Web Development due to its stability compared to game development. 
-                            I quickly grew fond of Web Development, particularly the Front-End and Design aspects. 
-                            This led me to explore UI/UX Design through online courses and self-study. Now, I'm keen to pursue a career as a UI/UX Designer.
+                            I quickly grew fond of Web Development, particularly the Front-End and Design aspects. This led me to explore <strong>UI/UX Design</strong> through bootcamps, online courses and self-study.
+                            Now, I'm keen to pursue a career as a UI/UX Designer.
                         </p>
                         
-                    </div>
-
-                </div>
                 </div>
 
-                <div class="about__career">
-                
-                        <h3 class="about__title">Development Career</h3>
+                <button class="download__cv hover">Get my resume <i data-lucide="download"></i></button>
 
-                        <ul class="about__career-tree">
-                        
-                            <li>
-                                <p class="career__date">10/2013 - 10/2015</p><p>Education in Game Design - School for Games</p>
-                            </li>
-                            
-                            <li>
-                                <p class="career__date">03/2019 - 03/2020</p><p>Education in Web Development - Digital Career Institute (DCI)</p>
-                            </li>
-
-                            <li>
-                                <p class="career__date">11/2022 - 06/2023</p><p>further Education in Web Development - Fachinstitut für Informatik & Grafikdesign (FiGD)</p>
-                            </li>
-
-                            <li>
-                                <p class="career__date">10/2023 - 09/2024</p><p>self education in UI/UX Design - Online</p>
-                            </li>
-
-                            <li>
-                                <p class="career__date">09/2024 - 12/2024</p><p>UI/UX Design study within a Bootcamp - Ironhack</p>
-                            </li>
-
-                            <li>
-                                <p class="career__date">02/2025 - today</p><p>Freelance UI/UX Design - DDesign.dabergotzdesign</p>
-                            </li>
-                        </ul>
-             
                 </div>
 
-                <div class="about__toolbox auto">
+                <div class="about__toolbox">
                     <h3 class="about__title">My Toolbox</h3>
-                    <div class="wrapper">
-                        <ul class="tool__carousel primary">
-                            <li class="tool">Figma</li>
-                            <li class="tool">Affinity Photo/Design</li>
-                            <li class="tool">Rive</li>
-                            <li class="tool">unicorn.studio</li>
-                            <li class="tool">HTML</li>
-                            <li class="tool">CSS</li>
-                            <li class="tool">Sass</li>
-                            <li class="tool">Javascript</li>
-                            <li class="tool">Blender</li>
-                            <li class="tool" style="margin-right: 5em;">Adobe Photoshop</li>
+
+                    <div class="tools">
+                        <ul class="first_row">
+                            <li class="tool hover">
+                                <img height="32" width="32" src="https://cdn.simpleicons.org/figma/white" />
+                                <a href="https://www.figma.com/" target="_blank">Figma</a>
+                            </li>
+                            <li class="tool hover">
+                                <img height="32" width="32" src="https://cdn.simpleicons.org/rive/white" />
+                                <a href="https://www.rive.app" target="_blank">Rive</a>
+                            </li>
+                            <li class="tool hover">
+                                <img height="32" width="32" src="./img/svg/unicorn_logo.svg" />
+                                <a href="https://www.unicorn.studio/" target="_blank">unicorn.studio</a>
+                            </li>
+                            <li class="tool hover">
+                                <img height="32" width="32" src="https://cdn.simpleicons.org/affinityphoto/white" />
+                                <a href="https://affinity.serif.com/en-us/photo/" target="_blank">Affinity Photo</a>
+                            </li>
+                            <li class="tool hover">
+                                <img height="32" width="32" src="https://cdn.simpleicons.org/affinitydesigner/white" />
+                                <a href="https://affinity.serif.com/en-us/designer/" target="_blank">Affinity Designer</a>
+                            </li>                                                       
                         </ul>
-                        <ul class="tool__carousel secondary">
-                            <li class="tool" style="margin-left: 5em;">Figma</li>
-                            <li class="tool">Affinity Photo/Design</li>
-                            <li class="tool">Rive</li>
-                            <li class="tool">unicorn.studio</li>
-                            <li class="tool">HTML</li>
-                            <li class="tool">CSS</li>
-                            <li class="tool">Sass</li>
-                            <li class="tool">Javascript</li>
-                            <li class="tool">Blender</li>
-                            <li class="tool">Adobe Photoshop</li>
+                        <ul class="second_row">
+                            <li class="tool hover">
+                                <img height="32" width="32" src="https://cdn.simpleicons.org/html5/white" />
+                                <a href="https://html.com/html5/" target="_blank">HTML</a>
+                            </li>
+                            <li class="tool hover">
+                                <img height="32" width="32" src="https://cdn.simpleicons.org/css/white" />
+                                <a href="https://www.w3schools.com/Css/" target="_blank">CSS</a>
+                            </li>
+                            <li class="tool hover">
+                                <img height="32" width="32" src="https://cdn.simpleicons.org/sass/white" />
+                                <a href="https://sass-lang.com/" target="_blank">Sass</a>
+                            </li>
+                            <li class="tool hover">
+                                <img height="32" width="32" src="https://cdn.simpleicons.org/javascript/white" />
+                                <a href="https://www.javascript.com/" target="_blank">Javascript</a>
+                            </li>
+                            <li class="tool hover">
+                                <img height="32" width="32" src="./img/svg/ps_logo.svg" />
+                                <a href="https://www.adobe.com/products/photoshop.html" target="_blank">Photoshop</a>
+                            </li> 
+                            <li class="tool hover">
+                                <img height="32" width="32" src="https://cdn.simpleicons.org/blender/white" />
+                                <a href="https://www.blender.org/" target="_blank">Blender</a>
+                            </li>
                         </ul>
                     </div>
+
                 </div>
                 
             </div>
@@ -484,54 +458,80 @@
         </section>
 
 
-        <section id="blog" class="main__section">
-            <div class="title__wrapper">
-                <h1 class="title">what is happening?</h1>
-                <h2>get updates to the site & other projects in my blog, happy reading</h2>
-            </div>
+    <section id="blog" class="main__section">
+        <h1 class="blog__title">blog</h1>
 
-            <a href="./html/blog.html" class="blog__link" >to the blog <span><i data-lucide="chevron-right"></i><i data-lucide="chevron-right"></i><i data-lucide="chevron-right"></i></span></a>
-            
-            <!-- unicorn.studio glass box -->
-            <iframe class="blog__box" src="https://unicorn.studio/embed/G7RkYP74dsw0e3wcE4rv" width="1440px" height="900px" loading="lazy"></iframe>
+        <div class="title__wrapper">
+            <h1 class="title letters">what is happening?</h1>
+            <h2>Get updates to the site & other projects in my blog, happy reading</h2>
+        </div>
 
-        </section>
+        <a href="./html/blog.html" class="blog__link hover" >to the blog <i data-lucide="arrow-right" width="64px" height="64px"></i></a>
+        
+    </section>
 
 
         <section id="contact" class="main__section">
             
-        
-                <h1 class="title">let's chat, hit me up</h1>
-        
-                <div class="contacts__wrapper">
-    
+            <h1 class="title">contact</h1>
+            
+            <div class="contacts__wrapper">
+                
+                    <h2 class="subtitle">let's chat, hit me up</h2>
         
                     <!-- Messenger -->
-                    <div class="contacts__mails envelope_button">               
-                        <p>send me a message</p> <i data-lucide="mail">mail</i>
-                    </div>
+                <div class="contacts__mail">               
+                    <div class="mailForm">      
+
+                        <form class="form" id="form1" method="POST" action="https://formspree.io/f/myyoeqvb" action="../js/contact.js" onsubmit="return formValidation()">
+                                                            
+                        <div class="input__wrap hover">
+                            <input name="name" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,100]] input" id="name" />               
+                            <label for="name" class="input__label">Full Name</label>
+                        </div>
         
+                        <div class="input__wrap hover">
+                            <input name="email" type="text" placeholder=" " class="validate[required,custom[email]] input" id="email" />
+                            <label for="email" class="input__label">Email</label>
+                        </div>
+                        
+                        <div class="input__wrap hover">
+                            <input name="subject" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,30]] input" id="subject" />
+                            <label for="subject" class="input__label">Subject</label>
+                        </div>
+        
+                            
+                            <textarea name="text" class="validate[required,custom[onlyLetter],length[6,300]] input" id="message" placeholder="What's your message?"></textarea>
+                            
+    
+                            <input type="submit" value="Send Message →" class="submit hover" disabled/>
+                                   
+                        </form>
+        
+            </div>
+                    </div>
+                    
+                    <!-- mobile only -->
                     <h5>or</h5>
         
                     <!-- Social Channels -->
                     <div class="contacts__socials">
-        
-                        <h5 class="mobile__healine-socials">get in touch</h5>
-                
+                        <h2 class="socials__title">get in touch</h2>
+                                 
                         <ul>
-                            <li>
-                                <i class="socials__link" data-lucide="dribbble"></i>                               
+                            <li class="hover">
+                                <i class="socials__link fa-brands fa-dribbble"></i>                               
                                 <a href="https://dribbble.com/dabergotzDesign" data-text="Dribbble" target="_blank">Dribbble</a>                            
                             </li>
-                            <li>
-                                <i class="socials__link" data-lucide="linkedin"></i>
+                            <li class="hover">
+                                <i class="socials__link fa-brands fa-linkedin"></i>
                                 <a href="https://www.linkedin.com/in/dennisdabergotz/" data-text="LinkedIn" target="_blank">LinkedIn</a>
                             </li>
-                            <li>
-                                <i class="socials__link" data-lucide="github"></i>
+                            <li class="hover">
+                                <i class="socials__link fa-brands fa-github"></i>
                                 <a href="https://github.com/dabergotzDesign" data-text="Github" target="_blank">Github</a>
                             </li>
-                            <li>
+                            <li class="hover">
                                 <i class="fa-brands fa-behance socials__link" style="scale: 0.9;"></i>
                                 <a href="https://www.behance.net/dabergotzDesign" data-text="Behance" target="_blank">Behance</a>
                             </li>
@@ -543,7 +543,7 @@
                 </div>
         
                 <!-- Email modal -->
-                <div class="mailModal">
+                <!-- <div class="mailModal">
                     <div class="mailModal__Content">
                         <h1>Send me a message</h1>
                     <span class="closeMail">                    
@@ -556,23 +556,22 @@
                     </span>
         
                     <div id="form-main">
-                        <!-- <div id="form-wrapper"> -->
                         <form class="form" id="form1" method="POST" action="https://formspree.io/f/myyoeqvb" action="../js/contact.js" onsubmit="return formValidation()">
                                 
                         <input type="text" name="_gotcha" style="display:none" />
                             
                         <div class="input__wrap">
-                            <input name="name" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,100]] input" id="name" />               
+                            <input name="name" type="text" placeholder="Full Name" class="validate[required,custom[onlyLetter],length[0,100]] input" id="name" />               
                             <label for="name" class="input__label">Full Name</label>
                         </div>
         
                         <div class="input__wrap">
-                            <input name="email" type="text" placeholder=" " class="validate[required,custom[email]] input" id="email" />
+                            <input name="email" type="text" placeholder="email" class="validate[required,custom[email]] input" id="email" />
                             <label for="email" class="input__label">Email</label>
                         </div>
                         
                         <div class="input__wrap">
-                            <input name="subject" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,30]] input" id="subject" />
+                            <input name="subject" type="text" placeholder="subject" class="validate[required,custom[onlyLetter],length[0,30]] input" id="subject" />
                             <label for="subject" class="input__label">Subject</label>
                         </div>
         
@@ -584,18 +583,16 @@
                             <input type="submit" value="Send Message" class="submit__button" disabled/>
                             </div>
         
-                        </form>
-                        <!-- </div> -->
-        
+                        </form>        
                     </div>
         
                 </div>
-            </div>
+            </div> -->
 
 
          </section>
         
-         <a href="#top" class="toTop">get back to top <i data-lucide="chevron-up"></i></a>
+         <a href="#top" class="toTop hover">get back to top <i data-lucide="arrow-up"></i></a>
   
 
          <div class="ddesign__bg" data-us-project="zHCxnrlbVOnRuLGgVhtl"></div>
@@ -633,7 +630,9 @@
 
     menu_mb.addEventListener("click", ()=>{
         nav_mb.classList.toggle("hidden");
-    })
+    });
+
+    const vmBG = document.querySelector(".ddesign__VM-bg canvas");
 
 </script>
 

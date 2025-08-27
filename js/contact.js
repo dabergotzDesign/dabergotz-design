@@ -1,5 +1,5 @@
 /* MAIL MODAL */
-const mailM = document.querySelector(".mailModal");
+/* const mailM = document.querySelector(".mailModal");
 const open = document.querySelector(".envelope_button");
 const close = document.querySelector(".closeMail");
 
@@ -27,7 +27,7 @@ window.onclick = function(e){
         
         mailM.style.display = "none";
     }
-}
+} */
 
 
 /* MESSENGER VALIDATION */
@@ -40,10 +40,10 @@ const mailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 
 let form = document.querySelector(".form");
-let submitBtn = document.querySelector(".submit__button");
+let submitBtn = document.querySelector(".submit");
 
 form.addEventListener("change", ()=>{
-    //submitBtn.disabled = true;
+    submitBtn.disabled = true;
 
     if(msgName.value != ""){
         submitBtn.disabled = false;

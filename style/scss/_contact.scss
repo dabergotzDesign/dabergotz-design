@@ -4,6 +4,21 @@ $media-tablet: 768px;
 $media-mobile: 450px;
 
 
+@mixin formInput{
+    background-color: var(--c-dark);
+    border: 1px solid var(--c-light);
+    border-radius: var(--size-8);
+    margin: 4px;
+    padding: var(--size-16);
+    width: 80%;
+
+    color: var(--c-light);
+    font-size: var(--size-24);
+    font-family: var(--font-comfortaa);
+    cursor: none;
+}
+
+
 //.page{
 
     //&__contact{
@@ -16,10 +31,11 @@ $media-mobile: 450px;
 
             height: auto;
             width: 100%;
-            padding: 3em;
-        
+                  
             margin: auto;
             margin-bottom: 10em;
+            padding: var(--size-80) var(--size-16);
+
             
             background-size: cover;
             background-repeat: no-repeat;
@@ -31,74 +47,50 @@ $media-mobile: 450px;
             flex-flow: column nowrap;
             align-items: center;
             justify-content: space-between;
+            gap: var(--size-32);
+
+            @media screen and (max-width: $media-mobile) {
+                gap: var(--size-16);
+            }
 
                   
             
             .title{
-                color: var(--c-light);
-                text-shadow: 0 0 4px rgba($color: #f2f2f2, $alpha: 0.5);
+                
+                color: var(--c-dark);
+                font-size: var(--size-96);
+                font-family: var(--font-noto);
+                font-weight: 900;
                 text-transform: uppercase;
-                font-size: var(--size-h2);
-                font-family: var(--font-comfortaa);
-                font-weight: 200;
 
-                width: 100%;
-                margin: 1em;
+                align-self: flex-start;
 
-                &::after{
-                    position: absolute;
-                    bottom: 1%;
-                    left: 0;
-                    content: '';
-                    height: 1px;
-                    width: 50vw;
-                    background-color: var(--c-light);
-                }
+                -webkit-text-stroke: 2px var(--c-light);
            
                 @media screen and (max-width: $media-tablet) {
-                    font-size: 1.8rem;
+                    font-size: var(--size-64);
                 }
 
                 @media screen and (max-width: $media-mobile) {
-                    font-size: 1.2rem;
+                    font-size: var(--size-48);
                 }
             }
            
             .contacts{
                 &__wrapper{
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    gap: 8em;
+
                     position: relative;
 
                     height: auto;
                     width: 100%;
                     margin: auto;
                     
-                    /* background */
-                    &::after{
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-    
-                        background:linear-gradient(90deg, transparent, var(--c-light-transparent-50), var(--c-dark-transparent-50), var(--c-light-transparent-50), transparent);
-                        background-size: contain;
-                        background-repeat: repeat-x;
-                        background-position: center;
-                        opacity: 0.25;
-                        z-index: -1;
-
-                        @media screen and (max-width: $media-mobile) {
-                            background:linear-gradient(90deg, transparent, var(--c-light-transparent-50), var(--c-light-transparent-50), var(--c-light-transparent-50), transparent);
-                        }
-                    }
-
                     @media screen and (max-width: $media-tablet) {
-                        gap: 8rem;
+                        gap: var(--size-8);
                     }
 
                     @media screen and (max-width: $media-mobile) {
@@ -109,11 +101,27 @@ $media-mobile: 450px;
                         gap: 0;
                     }
 
+                    .subtitle{
+                        align-self: flex-start;
+
+                        color: var(--c-highlight);
+                        font-family: var(--font-noto);
+                        font-size: var(--size-48);
+                        font-weight: 200;
+                        text-transform: uppercase;
+
+                        @media screen and (max-width: $media-mobile) {
+                            font-size: var(--size-24);
+                            font-weight: 400;
+                        }
+
+                    }
+
                     h4{
                         text-transform: capitalize;
                         font-family: var(--font-space);
                         font-weight: 600;
-                        font-size: 2rem;
+                        font-size: var(--size-32);
                         letter-spacing: 1px;
 
                         @media screen and (max-width: $media-mobile) {
@@ -127,10 +135,12 @@ $media-mobile: 450px;
                     h5{
                         display: none;
                         color: var(--c-light);
-                        font-family: var(--font-poppins);
+                        font-family: var(--font-comfortaa);
+                        font-size: var(--size-24);
                         font-weight: 400;
                         text-transform: uppercase;
-                        padding: 1rem;
+                        padding: var(--size-16);
+                        margin-top: var(--size-16);
 
                         @media screen and (max-width: $media-mobile) {
                             display: block;
@@ -139,52 +149,22 @@ $media-mobile: 450px;
 
                 }
 
-                &__mails{
-                    font-family: var(--font-space);
-                    text-align: center;
-                    transition: all 0.3s ease;
-                    color: var(--c-light);
-                    
-                    @media screen and (max-width: $media-tablet){
-                        padding: 1rem;                        
-                    }
-                    
-                    
-                    &:hover{
-                        cursor: pointer;
-                        scale: 1.2;
-                        text-shadow: 0 0 2px var(--c-dark);
-                    }
-                    
-                    &:active{
-                        color: var(--c-light);
-                        text-shadow: 0 0 4px var(--c-light);
-                    }
-                    
-                    p{
-                        display: none;
-                        font-family: var(--font-poppins);
-                        text-transform: uppercase;
-                        padding: 0.5rem;
+                &__mail{
+                    width: 100%;
+                    padding: var(--size-72) var(--size-96);
+                    border: 1px solid var(--c-light);
+                    border-radius: var(--size-8);
+                    background-color: var(--c-dark);
 
-                        @media screen and (max-width: $media-mobile) {
-                            display: block;
-                        }
-                    }
-                    
-                    //envelope button
-                    svg{                        
-                        scale: 4;
-                        stroke-width: 1px;      
-                        
-                        &:hover{
-                            content: attr(data-lucide("mail-open"));
-                        }
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    justify-content: center;
 
-                        @media screen and (max-width: $media-mobile) {
-                            scale: 2;
-                            margin-top: 1em;
-                        }
+                    @media screen and (max-width: $media-tablet) {
+                        padding: var(--size-16);
+                        padding-top: var(--size-56);
+                        margin-top: var(--size-16);
                     }
 
                 }
@@ -194,20 +174,57 @@ $media-mobile: 450px;
                     text-align: center;
                     color: var(--c-light);
                     position: relative;
-                                                     
+                    margin-top: var(--size-32);
+                    padding: var(--size-72);
+                    padding-left: 0;
+                    width: 100%;
 
-                    div{
+                    @media screen and (max-width: $media-tablet) {
+                        padding: var(--size-16);
+                    }
+                                           
+                    .socials__title{
+                        color: var(--c-highlight);
+                        text-align: left;
+                        text-transform: uppercase;
+                        font-family: var(--font-noto);
+                        font-size: var(--size-48);
+                        font-weight: 200;
+
+                        width: 100%;
+
+                        @media screen and (max-width: $media-tablet) {                            
+                            font-weight: 400;
+                        }
+
+                        @media screen and (max-width: $media-mobile) {
+                            font-size: var(--size-32);
+                        }
+
+                    }
+
+                    /* div{
                         font-size: 1.5rem;
                         font-family: var(--font-space);
 
                         @media screen and (max-width: $media-mobile) {
-                            /* font-size: 1rem;
-                            padding-bottom: 1rem; */
+                            
                         }
-                    }
+                    } */
 
                     ul{
                         padding-left: 0;
+                        padding-right: var(--size-80);
+
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: flex-end;
+                        justify-content: space-between;
+
+                        @media screen and (max-width: $media-mobile) {
+                            padding: 0;
+                        }
+
                                               
                         li{
                             list-style: none;
@@ -217,17 +234,25 @@ $media-mobile: 450px;
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
+                            gap: var(--size-16);
                                                         
                             padding: 1rem 0;
                             margin: 0.5rem;
                             transition: all 0.3s ease;
                             position: relative;
 
+                            @media screen and (max-width: $media-mobile) {
+                                gap:0;
+                            }
+
                             &:hover{
+
+                                cursor: none;
                                 
                                 a{                                   
-                                    //animation: text-glitch 0.5s infinite ease-in-out alternate-reverse; 
-                                    color: var(--c-orange);
+                                    color: var(--c-highlight);
+                                    
+                                    cursor: none;
                                     
                                     @media screen and (max-width: $media-mobile) {
                                         animation: none;
@@ -235,11 +260,8 @@ $media-mobile: 450px;
                                 }
 
                                 svg,
-                                i{   
-                                    mix-blend-mode: lighten;                            
-                                    //animation: icon-glitch 0.3s infinite alternate-reverse;
-                                    color: var(--c-orange);
-                                    
+                                i{                             
+                                    color: var(--c-highlight);                                    
                                                                         
                                     @media screen and (max-width: $media-mobile) {
                                         animation: none;
@@ -259,14 +281,18 @@ $media-mobile: 450px;
                             @media screen and (max-width: $media-mobile) {
                                 margin-right: 0.5em;
                             }
-                        }   
+                        } 
                         
                         i{
-                            margin-right: 0.5em;
+                            font-size: var(--size-64);
+
+                            @media screen and (max-width: $media-tablet) {
+                                font-size: var(--size-48);
+                            }
 
                             @media screen and (max-width: $media-mobile) {
-                                font-size: 1.2rem;
-                                margin-right: 1em;
+                                font-size: var(--size-32);
+                                margin-right: var(--size-16);
                             }
                         }
                         
@@ -276,8 +302,9 @@ $media-mobile: 450px;
                             text-align: left;
 
                             color: var(--c-light);
-                            font-size: var(--size-h5);
-                            font-family: var(--font-comfortaa);
+                            font-size: var(--size-64);
+                            font-family: var(--font-noto);
+                            font-weight: 200;
                             letter-spacing: 2px;
                             //background-color: black;
                             mix-blend-mode: lighten;
@@ -310,18 +337,138 @@ $media-mobile: 450px;
             }
         }
 
-            .mailModal{
-                display: none;
-                position: fixed;
-                z-index: 99;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: auto;
-                background: rgba(0, 0, 0, 0.4);
 
-                animation: popIn 0.3s ease;
+        .mailForm{
+
+            width: 100%;
+            
+                      
+            form{
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-evenly;
+                align-items: flex-start;
+                gap: var(--size-56);
+
+                @media screen and (max-width: $media-mobile) {
+                    gap:var(--size-32)
+                }
+
+            }
+
+            .input{
+
+                @include formInput;
+
+                @media screen and (max-width: $media-tablet) {
+                    width: 100%;                    
+                }
+
+                @media screen and (max-width: $media-mobile) {
+                    font-size: var(--size-16);
+                    padding: var(--size-8);
+                    transform: translateX(-2%);
+                }
+
+                &:focus,
+                &:not(:placeholder-shown){
+                   border-color: var(--c-highlight);
+
+                   background-color: rgba($color: #f2f2f2, $alpha: 0.1);
+                }
+
+                &:focus + label,
+                &:not(:placeholder-shown) + label{
+                   top: -32%;
+                   left: 0;
+                   border: 1px solid var(--c-highlight);
+                   border-radius: var(--size-8);
+                   font-size: var(--size-16);
+
+                   @media screen and (max-width: $media-mobile) {
+                        font-size: var(--size-8);
+                    }
+                }
+
+                &__wrap{                    
+                    position: relative;
+                    width: 100%;
+                                       
+                    label{
+                        position: absolute;
+                        left: 1.5%;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        color: var(--c-light);
+                        font-size: var(--size-24);
+                        font-family: var(--font-comfortaa);
+                        padding: var(--size-8);
+
+                        transition: all 0.3s ease;
+
+                        @media screen and (max-width: $media-mobile) {
+                            font-size: var(--size-16);
+                            padding: 4px;
+                        }
+                    }
+
+                }
+  
+            }
+
+            textarea{
+                @include formInput;
+                resize: vertical;
+                height: 240px;
+            }
+
+            .submit{
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: var(--size-8);
+
+                width: 80%;
+                margin-top: var(--size-16);
+                padding: var(--size-16) var(--size-32);
+
+                border: 1px solid var(--c-light);
+                border-radius: var(--size-80);
+                background-color: var(--c-dark); 
+
+                font-size: var(--size-32);
+                font-family: var(--font-noto);
+                color: var(--c-light); 
+
+                cursor: none;
+
+                @media screen and (max-width: $media-mobile) {
+                    font-size: var(--size-16);
+                }
+
+                
+                &:hover{
+                    cursor: none;
+                    background-color: var(--c-light-transparent-10);
+                }
+
+                &:disabled{
+                    opacity: 0.25;
+                }
+
+            }
+
+            
+
+            
+        }
+
+
+   /*          .mailForm{                
+                
 
                 #form-main{
                     display: flex;
@@ -602,7 +749,7 @@ $media-mobile: 450px;
 
                   }
               }
-        }
+        } */
 
         @keyframes popIn {
             0%{
@@ -689,4 +836,4 @@ $media-mobile: 450px;
 
     
 
-//}
+}

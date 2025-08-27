@@ -1,11 +1,20 @@
 
 /* LINKS */
-const g_triggers = document.querySelectorAll(".g_info");
+/* const g_triggers = document.querySelectorAll(".g_info");
 const g_triggerArr = Array.from(g_triggers).entries();
 
 
 const triggers = document.getElementsByClassName('button__info');
-const triggerArray = Array.from(triggers).entries();
+const triggerArray = Array.from(triggers).entries(); */
+
+/* CANVAS RESPONSIVE */
+/* const canvas = document.querySelectorAll(".portfolio__card canvas");
+let heightRatio = 0.1;
+
+canvas.forEach(c => {
+c.height = c.width * heightRatio;
+
+}); */
 
 
 /* MODAL */
@@ -15,16 +24,16 @@ const closeButton = document.querySelector('.close');
 
 
 /* GALLERY */
-const g_next = document.querySelector(".gallery__controls .next"),
+/* const g_next = document.querySelector(".gallery__controls .next"),
       g_prev = document.querySelector(".gallery__controls .prev"),
-      gallery = document.querySelector(".portfolio__gallery");
+      gallery = document.querySelector(".portfolio__gallery"); */
 
 const r_gallery_1 = new rive.Rive({
         src: "../rive/portfolio_cards.riv",
         canvas: document.getElementById("canvas-1"),
-        artboard: "glass_card-tc",
+        artboard: "RM - card",
         autoplay: true,
-        stateMachines: "card_states",
+        stateMachines: "card hover",
         onLoad: () => {
           r_gallery_1.resizeDrawingSurfaceToCanvas();
         },
@@ -33,9 +42,9 @@ const r_gallery_1 = new rive.Rive({
 const r_gallery_2 = new rive.Rive({
         src: "../rive/portfolio_cards.riv",
         canvas: document.getElementById("canvas-2"),
-        artboard: "glass_card-rs",
+        artboard: "A - card",
         autoplay: true,
-        stateMachines: "card_states",
+        stateMachines: "card hover",
         onLoad: () => {
           r_gallery_2.resizeDrawingSurfaceToCanvas();
         },
@@ -44,15 +53,15 @@ const r_gallery_2 = new rive.Rive({
 const r_gallery_3 = new rive.Rive({
         src: "../rive/portfolio_cards.riv",
         canvas: document.getElementById("canvas-3"),
-        artboard: "glass_card-a",
+        artboard: "GDY - card",
         autoplay: true,
-        stateMachines: "card_states",
+        stateMachines: "card hover",
         onLoad: () => {
           r_gallery_3.resizeDrawingSurfaceToCanvas();
         },
 });
 
-const r_gallery_4 = new rive.Rive({
+/* const r_gallery_4 = new rive.Rive({
         src: "../rive/portfolio_cards.riv",
         canvas: document.getElementById("canvas-4"),
         artboard: "glass_card-gdy",
@@ -61,12 +70,25 @@ const r_gallery_4 = new rive.Rive({
         onLoad: () => {
           r_gallery_4.resizeDrawingSurfaceToCanvas();
         },
-});
+}); */
+
+/* RIVE EVENTS */
+function onRiveEvent(riveEvent){
+  const eventData = riveEvent.data;
+  if(eventData.name === "view"){
+    window.open(eventData.url);
+  }
+  if(eventData.name === "explore"){
+    window.open(eventData.url);
+  }
+}
+
+r_gallery_1.on(rive.EventType.RiveEvent ,onRiveEvent);
 
 
 
 /* Gallery controls, scroll */
-g_next.addEventListener("click", ()=>{
+/* g_next.addEventListener("click", ()=>{
 
   let scrollAmount = 0;
 
@@ -94,10 +116,11 @@ g_prev.addEventListener("click", ()=>{
   }, 25);
 
 
-});
+}); */
 
 
 /* MODAL*/
+/*
 for (let [index, g_trigger] of g_triggerArr) {
   const toggleModal = () => {
     modals[index].classList.toggle('active-content');
@@ -277,5 +300,6 @@ for (let [index, trigger] of triggerArray) {
 
 
 }
+*/
 
 

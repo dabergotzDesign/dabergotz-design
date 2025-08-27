@@ -1,3 +1,31 @@
+/* HOME */
+
+gsap.registerPlugin(ScrollTrigger);
+
+const splitTypes = document.querySelectorAll(".reveal");
+
+splitTypes.forEach((word, i)=>{
+   
+    const text = new SplitType(word, {types: 'words'});
+
+    gsap.fromTo(text.words, {
+
+        opacity: 0.2 
+
+    },{
+        opacity: 1,
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: word,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            scrub: false,
+            markers: false,
+            toggleActions: 'play play reverse none'
+        }
+    })
+})
+
 
 /* PORTFOLIO */
 
@@ -30,81 +58,38 @@ gsap.from(card, {
 
 
 
-
-/* ABOUT */
-/*
-const about_title = document.querySelector("#about .title");
-const about_intro = document.querySelector(".about__intro");
-const about_career = document.querySelector(".about__career");
-let mm = gsap.matchMedia();
-
-const tl = gsap.timeline({
-    duration: 1,
-    ease: 'power4.in',
-    height: 0,
-    opacity: 0,
-    delay: 0.5,
-    scrollTrigger:{
-        trigger: '#about'
-    }
-})
-
-gsap.set(about_intro, {height: 0, opacity: 0});
-gsap.set(about_career, {height: 0, opacity: 0});
-
-
-
-gsap.from(about_title, {
-    duration: 0.5,
-    yPercent: 5,
-    opacity: 0,
-    delay: 0.3,
-    ease: 'none',
-    scrollTrigger: {
-        trigger: '#about'
-    }
-});
-
-tl.to( about_intro, {height: '100%', opacity: 1})
-tl.to( about_career, {height: '125%', opacity: 1})
-
-mm.add({isMobile: '(max-width: 425px)',
-        isTablet: '(max-width: 768px)'
-}, (context)=>{
-    let {isMobile, isTablet} = context.conditions;
-
-    if(isMobile){
-        tl.to(about_career, {height: '180%', opacity: 1})
-        tl.to( about_intro, {height: '105%', opacity: 1})
-    }
-    if(isTablet){
-        tl.to(about_career, {height: '180%', opacity: 1})
-        tl.to( about_intro, {height: '100%', opacity: 1})
-    }
-})
-*/
-
-
-
 /* BLOG */
 
-const blog = document.querySelector("#blog");
+const splitTitle = document.querySelectorAll(".letters");
 
-gsap.set(blog, {gap: '100em', opacity: 0})
+splitTitle.forEach((char, i)=>{
+   
+    const text = new SplitType(char, {types: 'chars'});
 
-gsap.to(blog, {
-    duration: 1,
-    ease: 'elastic.in(i, 0.3)',
-    gap: '2em',
-    opacity: 1,
-    scrollTrigger: {trigger: '#blog'}
+    gsap.fromTo(text.chars, {
+
+        y: '-100%',
+        opacity: 0
+
+    },{
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top',
+            end: 'bottom',
+            scrub: false,
+            markers: false,
+            //toggleActions: 'play play reverse revers'
+        }
+    })
 })
-
 
 
 /* CONTACT */
 
-const contact_title = document.querySelector("#contact .title");
+/* const contact_title = document.querySelector("#contact .title");
 const contacts = document.querySelector(".contacts__wrapper");
 
 gsap.set(contact_title, {xPercent: '-100'});
@@ -126,4 +111,4 @@ gsap.to(contacts, {
     transformOrigin: 'center center',
     opacity: 1,
     scrollTrigger: {trigger: '#contact'}
-})
+}) */

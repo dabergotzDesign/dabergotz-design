@@ -9,8 +9,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&family=Tilt+Neon&display=swap" rel="stylesheet">
+
+    <!-- Comfortaa -->
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Noto Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -24,24 +28,30 @@
     <script src="../js/smooth-scroll.js" defer></script>
     <script src="../js/lucide.js" defer></script>
     <script src="../js/blog.js" defer></script>
+    <script src="../js/cursor.js" defer></script>
+
 
 </head>
-<body class="page__blog">
-        
-    <main class="blog__main">
+<body>
+
+   <div class="custom_cursor"></div>
+
+  <main class="page__blog">
+
+  <div class="blog__main">
         <h1 class="page__headline">What is happening?</h1>
 
       <!-- complete Blog -->
 
     <section class="blog__section" id="page__list" data-current-page="1" aria-live="polite">
 
-    <!-- Blog Post Start -->
+                <!-- Blog Post Start -->
       <div class="post">
         <h3>Update 4.1</h3>
         <div class="date">15/05/2025</div>
         <article class="blog__article">
           <figure>
-            <img class="blog__img" src="../img/blog-imgs/ddesign_vm_bg_noLogo.jpg" width="1920" height="1080" alt="ddesign vending machine background">
+            <img class="blog__img hover" src="../img/blog-imgs/ddesign_vm_bg_noLogo.jpg" width="1920" height="1080" alt="ddesign vending machine background">
             <figcaption>dabergotzDesign background of vending machine</figcaption>
         </figure>
         
@@ -71,7 +81,7 @@
       <div class="date">10/04/2025</div>
       <article class="blog__article">
         <figure>
-            <img class="blog__img" src="../img/blog-imgs/ddesign_process.png" width="1440" height="1080" alt="dabergotzDesign website design evolution">
+            <img class="blog__img hover" src="../img/blog-imgs/ddesign_process.png" width="1440" height="1080" alt="dabergotzDesign website design evolution">
             <figcaption>Evolution of dabergotzDesign site</figcaption>
         </figure>
       
@@ -80,7 +90,7 @@
         <p>To bring in new stuff like Rive, unicorn.studio & a new idea, dabergotzDesign is now launched in 4.0!</p>   
         
         <figure>
-          <img class="blog__img" src="../img/blog-imgs/website-old.png" width="1920" height="1008" alt="dabergotzDesign website on Jimdo">
+          <img class="blog__img hover" src="../img/blog-imgs/website-old.png" width="1920" height="1008" alt="dabergotzDesign website on Jimdo">
           <figcaption>dabergotzDesign on Jimdo</figcaption>
         </figure>
 
@@ -92,7 +102,7 @@
         </p>
 
         <figure>
-          <img class="blog__img" src="../img/blog-imgs/dabergotzdesign_2.0.jpg" width="1920" height="978" alt="dabergotzDesign version 2.0">
+          <img class="blog__img hover" src="../img/blog-imgs/dabergotzdesign_2.0.jpg" width="1920" height="978" alt="dabergotzDesign version 2.0">
           <figcaption>dabergotzDesign version 2.0</figcaption>
         </figure>
 
@@ -102,7 +112,7 @@
         </p>
 
         <figure>
-          <img class="blog__img" src="../img/blog-imgs/ddesign_3.2.jpg" width="1920" height="1080" alt="dabergotzDesign version 3.2">
+          <img class="blog__img hover" src="../img/blog-imgs/ddesign_3.2.jpg" width="1920" height="1080" alt="dabergotzDesign version 3.2">
           <figcaption>dabergotzDesign version 3.2</figcaption>
         </figure>
 
@@ -128,7 +138,7 @@
         <div class="date">06/01/2025</div>
         <article class="blog__article">
           <figure>
-            <img class="blog__img" src="../img/blog-imgs/holoList_thumbnail.png" width="1440" height="810" alt="holoList case study thumbnail">
+            <img class="blog__img hover" src="../img/blog-imgs/holoList_thumbnail.png" width="1440" height="810" alt="holoList case study thumbnail">
             <figcaption>holoList - AR Work enhancing App</figcaption>
         </figure>
         
@@ -148,7 +158,7 @@
         <div class="date">12/12/2024</div>
         <article class="blog__article">
           <figure>
-            <img class="blog__img" src="../img/blog-imgs/CS asozial - Thumbnail.png" width="1440" height="1280" alt="asozial case study thumbnail">
+            <img class="blog__img hover" src="../img/blog-imgs/CS asozial - Thumbnail.png" width="1440" height="1280" alt="asozial case study thumbnail">
             <figcaption>asozial - social platform</figcaption>
         </figure>
         
@@ -169,7 +179,7 @@
         <div class="date">17/11/2024</div>
         <article class="blog__article">
           <figure>
-            <img class="blog__img" src="../img/blog-imgs/00 Behance slide - Thumbnail.png" width="2333" height="2016" alt="Twitch redesign case study thumbnail">
+            <img class="blog__img hover" src="../img/blog-imgs/00 Behance slide - Thumbnail.png" width="2333" height="2016" alt="Twitch redesign case study thumbnail">
             <figcaption>Twitch redesign</figcaption>
         </figure>
         
@@ -190,7 +200,7 @@
         <div class="date">21/10/2024</div>
         <article class="blog__article">
           <figure>
-            <img class="blog__img" src="../img/blog-imgs/shakespeare_and_sons.webp" width="1920" height="956" alt="Shakespeare & Sons website">
+            <img class="blog__img hover" src="../img/blog-imgs/shakespeare_and_sons.webp" width="1920" height="956" alt="Shakespeare & Sons website">
             <figcaption>Shakespeare & Sons website</figcaption>
         </figure>
         
@@ -212,7 +222,7 @@
         <div class="date">03/10/2024</div>
         <article class="blog__article">
           <figure>
-            <img class="blog__img" src="../img/blog-imgs/Mock-up_supermarket.png" width="2540" height="1818" alt="Mock-up of Tablet (with the Software) in Supermarket">
+            <img class="blog__img hover" src="../img/blog-imgs/Mock-up_supermarket.png" width="2540" height="1818" alt="Mock-up of Tablet (with the Software) in Supermarket">
             <figcaption>Mock-up of Tablet (with the Software) in Supermarket</figcaption>
         </figure>
           
@@ -233,7 +243,7 @@
         <article class="blog__article">
             
             <figure>
-              <img class="blog__img" src="../img/blog-imgs/30daysuiux Challanges_scaled.png" width="1920" height="1080" alt="30daysuiux thumbnail">
+              <img class="blog__img hover" src="../img/blog-imgs/30daysuiux Challanges_scaled.png" width="1920" height="1080" alt="30daysuiux thumbnail">
               <figcaption>13 challenges of the 30daysuiux</figcaption>
           </figure>
 
@@ -264,7 +274,7 @@
         <article class="blog__article">
             
             <figure>
-              <img class="blog__img" src="../img/blog-imgs/streamhub/streamhub_thumbnail.png" width="1920" height="1080" alt="Stream Hub App thumbnail">
+              <img class="blog__img hover" src="../img/blog-imgs/streamhub/streamhub_thumbnail.png" width="1920" height="1080" alt="Stream Hub App thumbnail">
               <figcaption>Stream Hub App</figcaption>
           </figure>
 
@@ -280,7 +290,7 @@
             </p>
 
             <figure>
-              <img class="blog__img" src="../img/blog-imgs/streamhub/home_page.png" width="908" height="1080" alt="Stream Hub App home page">
+              <img class="blog__img hover" src="../img/blog-imgs/streamhub/home_page.png" width="908" height="1080" alt="Stream Hub App home page">
               <figcaption>Stream Hub App - Home Page</figcaption>
           </figure>
 
@@ -303,7 +313,7 @@
             </p>
 
             <figure>
-              <img class="blog__img" src="../img/blog-imgs/streamhub/Streamer_site.png"  width="908" height="1080" alt="Stream Hub App streamer page">
+              <img class="blog__img hover" src="../img/blog-imgs/streamhub/Streamer_site.png"  width="908" height="1080" alt="Stream Hub App streamer page">
               <figcaption>Stream Hub App - Streamer Page</figcaption>
           </figure>
 
@@ -327,7 +337,7 @@
         <article class="blog__article">
             
             <figure>
-              <img class="blog__img" src="../img/blog-imgs/traveler_companion_start_page.png" width="1920" height="1080" alt="Genshin Teams App">
+              <img class="blog__img hover" src="../img/blog-imgs/traveler_companion_start_page.png" width="1920" height="1080" alt="Genshin Teams App">
               <figcaption>Traveler Companion App Start Page</figcaption>
           </figure>
 
@@ -352,7 +362,7 @@
         <article class="blog__article">
             
             <figure>
-              <img class="blog__img" src="../img/portfolio/genshin_app.jpg" width="1920" height="1080" alt="Genshin Teams App">
+              <img class="blog__img hover" src="../img/portfolio/genshin_app.jpg" width="1920" height="1080" alt="Genshin Teams App">
               <figcaption>Genshin Teams App Ver. 0.2</figcaption>
           </figure>
 
@@ -373,7 +383,7 @@
         <article class="blog__article">
             
             <figure>
-              <img class="blog__img" src="../img/blog-imgs/webflow_messagemail.jpg" width="1920" height="1080" alt="Message Mail App in Webflow">
+              <img class="blog__img hover" src="../img/blog-imgs/webflow_messagemail.jpg" width="1920" height="1080" alt="Message Mail App in Webflow">
               <figcaption>In Webflow recreated app MessageMail</figcaption>
           </figure>
 
@@ -402,7 +412,7 @@
             </p>
 
             <figure>
-              <img class="blog__img" src="../img/blog-imgs/Figma_ddesign_wireframe.png" width="1917px" height="1080px" alt="Figma Wireframe">
+              <img class="blog__img hover" src="../img/blog-imgs/Figma_ddesign_wireframe.png" width="1917px" height="1080px" alt="Figma Wireframe">
               <figcaption>Figma Wireframe</figcaption>
           </figure>
 
@@ -411,7 +421,7 @@
             </p>
 
             <figure>
-              <img class="blog__img" src="../img/blog-imgs/Figma_ddesign.png" width="1444px" height="988px" alt="Figma Design">
+              <img class="blog__img hover" src="../img/blog-imgs/Figma_ddesign.png" width="1444px" height="988px" alt="Figma Design">
               <figcaption>Figma Design</figcaption>
           </figure>
 
@@ -465,7 +475,7 @@
         <article class="blog__article">
           <h4>The Blender Donut</h4>
           <figure>
-              <img class="blog__img" src="../img/blog-imgs/Donut_with_Coffee.png" width="1503px" height="1080px" alt="Donuts with Coffee">
+              <img class="blog__img hover" src="../img/blog-imgs/Donut_with_Coffee.png" width="1503px" height="1080px" alt="Donuts with Coffee">
           </figure>
           <p>
             If you make your way to Blender there is no way around on the famous Blender Donut by Blender Guru.
@@ -479,7 +489,7 @@
           </p>
           <h4>A Cosy Japanese Room</h4>
           <figure>
-              <img class="blog__img" src="../img/blog-imgs/Japanese_Home_scale.png" width="1056px" height="1080px" alt="Blender render Japanese Room">
+              <img class="blog__img hover" src="../img/blog-imgs/Japanese_Home_scale.png" width="1056px" height="1080px" alt="Blender render Japanese Room">
           </figure>
           <p>
             To step up the donut, but kind of the same idea, was to build a scene with the japanese sweets called Dangos. 
@@ -515,12 +525,12 @@
 
                 <div class="compare__single-images">
                   <figure>
-                    <img class="blog__img lazy" src="../img/blog-imgs/compare_before.png" width="640px" height="320px" alt="old design background">
+                    <img class="blog__img hover lazy" src="../img/blog-imgs/compare_before.png" width="640px" height="320px" alt="old design background">
                     <figcaption>Old Design</figcaption>
                   </figure>
 
                   <figure>
-                    <img class="blog__img lazy" src="../img/blog-imgs/compare_after.png" width="1434px" height="605" alt="updated design background">
+                    <img class="blog__img hover lazy" src="../img/blog-imgs/compare_after.png" width="1434px" height="605" alt="updated design background">
                     <figcaption>New Design</figcaption>
                   </figure>
                 </div>
@@ -548,7 +558,7 @@
         <h3>The Meadows - 80lv</h3>
         <div class="date">29/11/2021</div>
         <article class="blog__article">
-          <img class="blog__img lazy" src="../img/blog-imgs/Meadows_80lvl.png" width="1434px" height="605" alt="Meadows UE4">
+          <img class="blog__img hover lazy" src="../img/blog-imgs/Meadows_80lvl.png" width="1434px" height="605" alt="Meadows UE4">
         <p>
            The Meadows are originally from David Holland <a href="https://80.lv/articles/meadows-creating-stylized-nature-in-ue4/" target="_blank">who shared his work on 80lv.</a> <br>
            Inspired by the project I decided to recreate it, as close I could get. 
@@ -559,8 +569,8 @@
         </p>
                                       
         </div>
-      </div>
-      
+    
+              
       <!-- Blog Post End -->
         
       <!-- Blog Post Start -->
@@ -568,7 +578,7 @@
         <h3>Destiny's Wall of Wishes</h3>
         <div class="date">26/10/2021</div>
         <article class="blog__article">
-          <img class="blog__img lazy" src="../img/blog-imgs/WallOfWishes_site.jpg" width="1920px" height="965px" alt="Wall of Wishes">
+          <img class="blog__img hover lazy" src="../img/blog-imgs/WallOfWishes_site.jpg" width="1920px" height="965px" alt="Wall of Wishes">
           <p>
             Destiny 2 has a feature that is inside a Raid (a 6 Player activity) which let's you make a 'wish'.
             To make a wish you have to shoot panels on a wall. What the effect the wish gives you, is to find out for yourself.
@@ -577,7 +587,7 @@
             I started the project with the idea to learn more with React and go beyond of the stuff I already know.
             Recreating the game feature with React and Javascript, also showing the effects of the wishes as close as possible. 
           </p>
-          <img class="blog__img lazy" src="../img/blog-imgs/WallOfWishes_riven.jpg" width="1920px" height="965px" alt="Riven">
+          <img class="blog__img hover lazy" src="../img/blog-imgs/WallOfWishes_riven.jpg" width="1920px" height="965px" alt="Riven">
           <p>
             This project turned out so good and gave me the opportunity to work on many Javascript/React stuff that I have not touched before.
             A lot of gained knowledge, frustration & enjoyment and fun got into Wall of Wishes.
@@ -587,8 +597,7 @@
             <a href="https://dabergotzdesign.github.io/wallofwishes/" target="_blank">Wall of Wishes</a>          
           </p>
         </div>
-      </div>
-      
+         
       <!-- Blog Post End -->
 
         <!-- Blog Post Start -->
@@ -604,7 +613,7 @@
                   What I needed to get out of that loop was a simple project to get back into a workflow.
                   The simplest thing I came up with was the Kame House from Dragonball. <br> I small island, a small House and three palm trees, simple.
                  </p>
-              <img class="blog__img lazy" src="../img/blog-imgs/Kame House/HighresScreenshot00000.png" width="1985px" height="1117px"  alt="Kame House Scene in UE4">
+              <img class="blog__img hover lazy" src="../img/blog-imgs/Kame House/HighresScreenshot00000.png" width="1985px" height="1117px"  alt="Kame House Scene in UE4">
               <p>
                Blockout was as fast as Instant Transmission by Son Goku. Same for most part of the modeling. <br>
                Had a little stoke when I did the bush assets. But they turn out better than expected. <br>
@@ -625,12 +634,12 @@
                 Love how the project came out way better than I thought. Learn alot with Unreal Engine, make better Materials, Lighting and modeling over all.
               </p>
 
-              <img class="blog__img lazy" src="../img/blog-imgs/Kame House/KameHouse_blockout.png" width="1985px" height="1117px" alt="Kame House Blockout">
+              <img class="blog__img hover lazy" src="../img/blog-imgs/Kame House/KameHouse_blockout.png" width="1985px" height="1117px" alt="Kame House Blockout">
               <p>
                The blockout house was slightly smaller than the end-result, also what's not used are plants and the scene fill objects like the sunbrella with table.
               </p>
 
-              <img class="blog__img lazy" src="../img/blog-imgs/Kame House/KameHouse_layers.png" width="815px" height="1059px" alt="Kame House Scene layers">
+              <img class="blog__img hover lazy" src="../img/blog-imgs/Kame House/KameHouse_layers.png" width="815px" height="1059px" alt="Kame House Scene layers">
               <p>
                A cut through to some layers. Lighting only, complete scene and wireframe
               </p>
@@ -648,18 +657,17 @@
               <p>
               For the final project for the DCI (Digital Career Institute) I had the idea on a game in which the player will build a website.
                </p>
-            <img class="blog__img lazy" src="../img/blog-imgs/logo_WDS_bg.png" width="1920px" height="1080px"  alt="WebDevSim Game Logo">
+            <img class="blog__img hover lazy" src="../img/blog-imgs/logo_WDS_bg.png" width="1920px" height="1080px"  alt="WebDevSim Game Logo">
             <p>
               &lt;WebDevSim/&gt; is about to teach the basics in web development for people to don't know where to start.
               Like in Text Adventures or other text-based video games you have to write things down and interact with the game environment.
             </p>
-            <img class="blog__img lazy" src="../img/blog-imgs/WDS_screenshot_3.png" width="1920px" height="1080px" alt="WebDevSim Game">
+            <img class="blog__img hover lazy" src="../img/blog-imgs/WDS_screenshot_3.png" width="1920px" height="1080px" alt="WebDevSim Game">
             <p style="text-align: center; padding: 1rem;">
               Try out the game for yourself: <a href="https://web-dev-sim.herokuapp.com/" width="1920px" height="1080px" target="_blank">Play it</a>
             </p>
                                         
           </div>
-        </div>
         
         <!-- Blog Post End -->
 
@@ -669,7 +677,7 @@
             <div class="date">08/01/2020</div>
             <article class="blog__article">
               <!-- Concept -->
-              <img src="../img/blog-imgs/sylvain-sarrailh-highundergardenarstation.jpg" width="1344px" height="756px"  class="blog__img lazy" alt="concept art by Proletariat Inc.">
+              <img src="../img/blog-imgs/sylvain-sarrailh-highundergardenarstation.jpg" width="1344px" height="756px"  class="blog__img hover lazy" alt="concept art by Proletariat Inc.">
               <p>
                   I started with a concept art (see image above) where I was looking for an interesting light and room layout.
               </p>
@@ -684,7 +692,7 @@
                 </p>
 
                 <!-- Blockout -->
-                <img src="../img/blog-imgs/scene_blockout.png" width="1408px" height="652px" class="blog__img lazy" alt="blockout scene">
+                <img src="../img/blog-imgs/scene_blockout.png" width="1408px" height="652px" class="blog__img hover lazy" alt="blockout scene">
                 <p>
                   The Blockout phase was quickly done. Some of the models were a good challenge for me, but that's what I've needed to get
                   a better workaround with 3D Modeling, as I want to get better with it.
@@ -692,7 +700,7 @@
                
                 
                 <!-- first Build -->
-                <img src="../img/blog-imgs/scene_firstAsset_build.png" width="1933px" height="1092px" class="blog__img lazy" alt="first build">
+                <img src="../img/blog-imgs/scene_firstAsset_build.png" width="1933px" height="1092px" class="blog__img hover lazy" alt="first build">
                 <p>
                   The first asset complete build. Since Unreal was relatively new to me, creating these different materials and set them
                   up in the scene on the models and see how they interact with the lighting. Not gonna lie I had a blast when I made the
@@ -711,7 +719,7 @@
                 </p>
 
                 <!-- final -->
-                <img src="../img/blog-imgs/scene_finish.png" width="1599px" height="900px" class="blog__img lazy" alt="final build">
+                <img src="../img/blog-imgs/scene_finish.png" width="1599px" height="900px" class="blog__img hover lazy" alt="final build">
                 <p>
                   All must-have assets are in scene, lighting and post-processing had it's final touches. It's done...for now.<br/>
                   The scene itself is complete, but it will have some "live" into it. There are still some empty spaces, also notice
@@ -738,7 +746,7 @@
                     R.I.P old website.
                       <br>2017-2019
                    </p>
-                <img class="blog__img lazy" src="../img/blog-imgs/website-old.png" alt="Website old style">
+                <img class="blog__img hover lazy" src="../img/blog-imgs/website-old.png" alt="Website old style">
                 <p>
                    Now that I am feeling more comfortable with the Unreal Engine, I think it was time to combine these newly learned skills
                    with Web design.
@@ -758,20 +766,24 @@
             
             <!-- Blog Post End -->
 
-      </section>
 
+
+    </section> <!-- blog__section end -->
+    
+
+  
       <!-- BLOG Page Navigation -->
       <div class="bottom__nav">
-        <button class="page__previous" id="prev-button" aria-label="previous page"><i data-lucide="chevron-left"></i></button>
+        <button class="page__previous hover" id="prev-button" aria-label="previous page"><i data-lucide="arrow-left"></i></button>
         <div id="page__numbers"></div>
-        <button class="page__next" id="next-button" aria-label="next page"><i data-lucide="chevron-right"></i></button>
+        <button class="page__next hover" id="next-button" aria-label="next page"><i data-lucide="arrow-right"></i></button>
       </div>
 
 
       <!-- Modal -->
       <div class="modal__blog disabled">
         <!-- close button -->
-        <span class="close">
+        <span class="close hover">
           <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" fill="black"/>
             <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="white"/>
@@ -785,15 +797,19 @@
         </figure>
       </div>
 
+    </div> <!-- blog__main end -->
+
 
     <!-- back to top button -->
-    <a href="#top" class="scroll__top"><i data-lucide="chevron-up"></i></a>
+    <a href="#top" class="scroll__top hover"><i data-lucide="arrow-up"></i></a>
 
     <!-- back to home page -->
-    <a href="../index.html" class="backHome"><span><i data-lucide="chevron-left"></i></span> back to home</a>
-    <a href="../index.html" class="backHome__mobile"><i data-lucide="chevron-left"></i></a>
+    <a href="../index.html" class="backHome hover"><i data-lucide="arrow-left"></i><span>back to home</span></a>
+    <a href="../index.html" class="backHome__mobile"><i data-lucide="arrow-left"></i></a>
 
-    </main>
+  </main>
+           
+  
 
     <!-- Splash Screen Overlay -->
     <!-- <div class="splash">
