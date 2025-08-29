@@ -9,7 +9,7 @@ const triggerArray = Array.from(triggers).entries(); */
 
 /* CANVAS RESPONSIVE */
 /* const canvas = document.querySelectorAll(".portfolio__card canvas");
-let heightRatio = 0.1;
+let heightRatio = 1.5;
 
 canvas.forEach(c => {
 c.height = c.width * heightRatio;
@@ -84,6 +84,8 @@ function onRiveEvent(riveEvent){
 }
 
 r_gallery_1.on(rive.EventType.RiveEvent ,onRiveEvent);
+r_gallery_2.on(rive.EventType.RiveEvent ,onRiveEvent);
+r_gallery_3.on(rive.EventType.RiveEvent ,onRiveEvent);
 
 
 

@@ -10,32 +10,14 @@ $width-card-default: 7em;
 $width-card-default-t: 6em;
 $width-card-default-m: 5em;
 
+/* Portfolio cards text - tablet/mobile only */
+@mixin card_text {
+    width: auto;
+    font-family: var(--font-comfortaa);
+    font-size: var(--size-16);
 
-@mixin bgPortfolio {
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@mixin info_btn{
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: auto;
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
-
-    text-align: center;
-    text-decoration: none;
-    font-family: var(--font-space);
-    font-size: 1.2rem;
-    color: var(--c-light);
-    background: var(--c-light-transparent-25);
-    backdrop-filter: blur(4px);
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-
+    letter-spacing: 1px;
+    line-height: 120%;
 }
 
 
@@ -45,7 +27,6 @@ $width-card-default-m: 5em;
                 display: flex;
                 flex-direction: column;
                 
-                //overflow: hidden;
                 height: auto;
                 padding: var(--size-80) 0;
                
@@ -56,13 +37,19 @@ $width-card-default-m: 5em;
 
                 @media screen and (max-width: $media-mobile) {
                     height: fit-content;
-                    padding-left: var(--size-24);
                     margin-bottom: 1em;
+
+                    align-items: center;
+                    justify-content: center;
                 }
 
                 .mask{
                     overflow-y: hidden;
                     width: 100%;
+
+                    @media screen and (max-width: $media-mobile) {
+                        padding-left: var(--size-8);                
+                    }
 
                     h1{
                         color: var(--c-dark);
@@ -169,28 +156,9 @@ $width-card-default-m: 5em;
                 }
 
 
-                .gallery__controls{
-
-                    position: absolute;
-                    bottom: 5%;
-                    left: 20%;
-                    
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    gap: 4em;
-
-                    .prev,
-                    .next{
-                        color: var(--c-light);
-                        scale: 1.5;
-                        transition: scale 0.2s linear;
-                        
-
-                        &:hover{
-                            scale: 2;
-                        }
-                    }
+                canvas{
+                        width: 100%;
+                        object-fit: contain;
                 }
 
             }
@@ -227,305 +195,247 @@ $width-card-default-m: 5em;
                 }
             }
 
-            &__gallery{
-                display: flex;
-                align-items: flex-start;
-                justify-content: space-between;
-                gap: 1em;
-
-                position: relative;
-
-                height: fit-content;
-                width: 100vw;
-                padding: 3em;
-                padding-right: 32em;
-                padding-top: 0;
-
-                overflow-x: scroll;
-                overflow-y: hidden;
-                scroll-snap-type: x proximity;
-
-                
-                .portfolio__card{
-
-                    position: relative;
-                    margin: auto 0.5em;
-                   
-                    &:hover a{
-                        animation: glitch 0.5s infinite alternate-reverse;                        
-                    }
-                    
-                    canvas{
-                        
-                        width: 100%;
-                        object-fit: contain;
-                    }
-  
-                    
-                    a{    
-                        @include info_btn();
-                        width: 50%;
-
-                    }
-                }
-
-            }
-
             
         }
 
 
-                /* ACCORDION */
-                .accordion{                    
+                /* MOBILE/TABLET MODE */
+                .mobile{                    
                     
                     &__container{
-                        display: none;
-            
+                        display: none;            
                         margin: auto;
+                        margin-top: var(--size-32);
                         overflow-y: hidden;
 
+                        flex-flow: column wrap;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: var(--size-48);
+
+                        
                         @media screen and (max-width: $media-tablet) {
                             display: flex;
-                            align-items: center;
-                            justify-content: flex-start;
-
-                            scale: 0.9;
                         }
 
                         @media screen and (max-width: $media-mobile) {
-                            margin: 0 -5%;
-                            align-items: flex-start;                            
+                            width: 95%;
+                            margin: 0;
+                            margin: var(--size-24);
+                            overflow: visible;       
                         }
                                                                        
-                        .accordion__card-wrapper{
-                            margin: auto 0.5em;
-                            margin-top: 2em; 
-                            margin-bottom: 6px;                         
-                            width: fit-content;
+                        .card__wrapper{
+                                                    
+                            width: 100%;
                             height: auto;
-                            border-radius: 1em;
-                            cursor: pointer;
-                            //overflow: hidden;
 
-                            position: relative;
+                            background-color: var(--c-dark);
+                            border: 1px solid var(--c-light);
 
-                            @media screen and (max-width: $media-tablet) {
-                                margin-top: 0;
+                            border-radius: var(--size-16);                         
+
+                            @media screen and (max-width: $media-mobile) {
+                                width: 95%;
+                                transform: translateX(-2%);
                             }
-
-                            /*
-                                                                                    
-                            &:hover .card__thumbnail{
-                                cursor: pointer;
-                                width: $width-card-open;
-                                //animation: pulse 1s infinite linear;
-
-                                
-                                @media screen and (max-width: $media-tablet) {
-                                    animation: none;
-                                }
-                            }
-
-                            &:hover .mask{
-                                width: $width-card-open;
-
-                                .card__title {
-                                    visibility: visible;
-                                }
-                            }
-
-                            &:hover .button__info{
-                                visibility: visible;
-                                bottom: 5%;
-                            }
-
-                            */
-
-                            
-
-                                                        
-                            input[type="radio"]{
-                                display: none;
-                            }
-
-                            input[type="radio"]:checked ~ .card__thumbnail{
-                                width: $width-card-open;
-
-                                @media screen and (max-width: $media-tablet) {
-                                    width: $width-card-open-t;
-                                }
-
-                                @media screen and (max-width: $media-mobile) {
-                                    width: $width-card-open-m;
-                                }
-                                
-                                                                
-                                &.card-1{
-                                    background: linear-gradient(0deg, rgba(0, 174, 255, 0) 0%, rgba(0, 174, 255, 0) 100%), url("../../img/portfolio/traveler_companion.png");
-                                    background-position: 20%;
-                                    @include bgPortfolio();
-                                }
-
-                                
-                                &.card-2{
-                                
-                                    background: linear-gradient(0deg, rgba(106, 0, 255, 0) 0%, rgba(106, 0, 255, 0) 100%), url("../../img/portfolio/remscape_1.png");
-                                    background-position: 32%;
-                                    @include bgPortfolio()
-                                }
-
-                                &.card-3{                                
-                                    background: linear-gradient(0deg, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0) 100%), url("../../img/portfolio/asozial-thumbnail.jpg");
-                                    background-position: 20%;
-                                    @include bgPortfolio()
-                                }
-
-                                &.card-4{                                
-                                    background: linear-gradient(0deg, rgba(255, 157, 0, 0) 0%, rgba(255, 157, 0, 0) 100%), url("../../img/portfolio/GDY_thumbnail_mobile.jpg");
-                                    background-position: 50%;
-                                    @include bgPortfolio()
-                                }
-
-                               
-                            }
-
-                            input[type="radio"]:checked ~ .mask{
-
-                                width: $width-card-open;
-
-                                @media screen and (max-width: $media-tablet) {
-                                    width: $width-card-open-t;
-                                }
-
-                                @media screen and (max-width: $media-mobile) {
-                                    width: $width-card-open-m;
-                                }
-
-                                .card__title{
-                                    visibility: visible;
-                                }
-                            
-                                
-                            }
-
-                            input[type="radio"]:checked ~ .button__info{
-                                visibility: visible;
-                                bottom: 5%;                                
-                            }
-
-                            label{
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                border-radius: 0.5em;
-                                //background-color: red;
-                            }
-
-                                                        
-                            .mask{
-                                width: 0;
-                                overflow: hidden;
-                                transition: all 0.3s linear;
-                            }
-
-                            .card__title{
-                                visibility: hidden;
-                                color: var(--c-light);
-                                padding: 0.8em;
-                                margin-bottom: 0.5em;
-                                
-                                text-align: center;
-                                font-family: var(--font-space);
-                                font-weight: 400;
-                                font-size: 1.4rem;
-                                white-space: nowrap;
-                                border-radius: 0.5em;
-
-                                @media screen and (max-width: $media-mobile) {
-                                    font-size: 0.65rem;
-                                }
-                                
-                                &.title{
-
-                                    &-1{
-                                        background: linear-gradient(180deg, #00AEFF 0%, rgba(0, 174, 255, 0.25) 10%, rgba(0, 174, 255, 0.25) 90%, #00AEFF 100%);
-                                    }
-
-                                    &-2{
-                                        background: linear-gradient(180deg, #6A00FF 0%, rgba(106, 0, 255, 0.25) 10%, rgba(106, 0, 255, 0.25) 90%, #6A00FF 100%);
-                                    }
-
-                                    &-3{
-                                        background: linear-gradient(180deg, #F2F2F2 0%, rgba(242, 242, 242, 0.25) 10%, rgba(242, 242, 242, 0.25) 90%, #F2F2F2 100%);
-                                    }
-
-                                    &-4{
-                                        background: linear-gradient(180deg, #FF9D00 0%, rgba(255, 157, 0, 0.25) 10%, rgba(255, 157, 0, 0.25) 90%, #FF9D00 100%);
-                                    }
-                                }
-                            }
-
-                            
+                          
 
                             .card__thumbnail{
-                                width: 7em;
-                                height: 40em;
-                                                     
-                                border-radius: 1em;
+                                
+                                overflow: hidden;     
+                                border-radius: var(--size-16);
                                 transition: all 0.3s ease;
 
-                                @media screen and (max-width: $media-tablet) {
-                                    height: 35em;
-                                }
-
                                 @media screen and (max-width: $media-mobile) {
-                                    width: 5em;
-                                    height: 25em;
-                                    border-radius: 0.8em;
-                                }
-                               
-                                                                
-                                &.card-1{
-                                    background: linear-gradient(0deg, rgba(0, 174, 255, 0.50) 0%, rgba(0, 174, 255, 0.50) 100%), url("../../img/portfolio/traveler_companion.png");
-                                    background-position: 35%;
-                                    @include bgPortfolio()
+                                    
                                 }
 
-                                &.card-2{
-                                
-                                    background: linear-gradient(0deg, rgba(106, 0, 255, 0.50) 0%, rgba(106, 0, 255, 0.50) 100%), url("../../img/portfolio/remscape_1.png");
-                                    background-position: 48%;
-                                    @include bgPortfolio()
+                                .thumbnail{
+                                    width: 100%;
+                                    height: auto;
+                                    object-fit: cover;
                                 }
-
-                                &.card-3{                                
-                                    background: linear-gradient(0deg, rgba(240, 240, 240, 0.25) 0%, rgba(240, 240, 240, 0.25) 100%), url("../../img/portfolio/asozial-thumbnail.jpg");
-                                    background-position: 48%;
-                                    @include bgPortfolio()
-                                }
-
-                                &.card-4{                                
-                                    background: linear-gradient(0deg, rgba(255, 157, 0, 0.50) 0%, rgba(255, 157, 0, 0.50) 100%), url("../../img/portfolio/GDY_thumbnail_mobile.jpg");
-                                    background-position: 50%;
-                                    @include bgPortfolio()
-                                }
-
-
-                                                                
+                                                                                          
                             }
 
-                            .button__info{
-                                @include info_btn();
-                                
-                                visibility: hidden;
-                                bottom: -8%;
-                                
+                            .card__info{
+
+                                color: var(--c-light);
+                                padding: var(--size-24);
+
+                                display: flex;
+                                flex-flow: column wrap;
+                                align-items: flex-start;
+                                justify-content: space-evenly;
+                                gap: var(--size-16);
+
                                 @media screen and (max-width: $media-mobile) {
-                                    font-size: 1rem;
-                                    text-shadow: 1px 2px var(--c-dark);
-                                    backdrop-filter: blur(8px);
+                                    display: block;
+                                    padding: var(--size-8);
+                                }
+
+
+                                .info{
+
+                
+                                    &__title{
+                                        color: var(--c-highlight);
+                                        font-size: var(--size-32);
+                                        font-family: var(--font-noto);
+                                        font-weight: 300;
+                                        text-transform: uppercase;
+                                        
+                                        @media screen and (max-width: $media-mobile) {
+                                            font-size: var(--size-24);
+                                            padding: var(--size-16) 0;
+                                        }
+
+                                    }
+
+                                    &__short{
+                                        font-family: var(--font-comfortaa);
+                                        font-size: var(--size-24);
+                                        margin-bottom: var(--size-8);
+
+                                        @media screen and (max-width: $media-mobile) {
+                                            font-size: var(--size-16);
+                                            font-weight: 900;
+                                            
+                                        }
+                                    }
+
+                                    &__description{
+                                        @include card_text();
+
+                                        @media screen and (max-width: $media-mobile) {
+                                            line-height: normal;
+                                            word-wrap: break-word;
+                                            font-size: 14px;
+                                        }
+                                    }
+
+                                    &__problem{
+
+                                        @media screen and (max-width: $media-mobile) {
+                                            padding: var(--size-16) 0;
+                                        }
+                                
+                                        .problem{
+
+                                            &__title{
+                                                font-size: var(--size-24);
+                                                font-family: var(--font-comfortaa);
+                                                text-transform: uppercase;
+
+                                                @media screen and (max-width: $media-mobile) {
+                                                    font-size: var(--size-16);
+                                                    color: var(--c-highlight);
+                                                }
+                                            }
+
+                                            &__statement{
+                                                @include card_text();
+
+                                                @media screen and (max-width: $media-mobile) {
+                                                    font-size: 14px;
+                                                }
+                                                
+                                            }
+
+                                        }
+
+                                    }
+
+                                    &__shorts{
+                                        display: flex;
+                                        align-items: flex-start;
+                                        justify-content: space-between;
+                                        gap: var(--size-64);
+
+                                        @media screen and (max-width: $media-mobile) {
+                                            gap: var(--size-8)
+                                        }
+
+                                        .shorts{
+
+                                            @media screen and (max-width: $media-mobile) {
+                                                padding: var(--size-16) 0;
+                                            }
+
+                                            &__what,
+                                            &__when,
+                                            &__do{
+
+                                                h1{
+                                                    font-family: var(--font-comfortaa);
+                                                    text-transform: uppercase;
+
+                                                    @media screen and (max-width: $media-mobile) {
+                                                        font-size: var(--size-16);
+                                                        color: var(--c-highlight);
+                                                        margin-bottom: var(--size-4);                                                        
+                                                    }
+                                                }
+
+                                                p{
+                                                    font-family: var(--font-comfortaa);
+
+                                                    @media screen and (max-width: $media-mobile) {
+                                                        line-height: 140%;
+                                                        font-size: 14px;
+                                                    }
+                                                }
+
+                                            }
+
+                                        }
+
+
+                                    }
+
+                                    &__links{
+
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        width: 100%;
+
+                                        margin-top: var(--size-16);
+                                        padding: var(--size-16) var(--size-56);
+
+                                        @media screen and (max-width: $media-mobile) {
+                                            padding: 0;
+                                            margin-bottom: var(--size-8);
+                                            gap: var(--size-24);
+                                        }
+
+                                        .link{
+
+                                            &__explore,
+                                            &__prototype{
+                                                color: var(--c-light);
+                                                text-decoration: none;
+                                                text-align: center;
+                                                text-transform: uppercase;
+                                                font-family: var(--font-comfortaa);
+                                                outline: 1px solid var(--c-light);
+                                                border-radius: var(--size-80);
+
+                                                padding: var(--size-16) var(--size-24);
+
+                                                @media screen and (max-width: $media-mobile) {
+                                                    padding: var(--size-8) var(--size-16);
+                                                    font-size: 12px;
+                                                    width: 100%;
+                                                }
+
+                                            }
+
+                                        }
+
+                                    }
+
                                 }
 
                             }
@@ -539,7 +449,7 @@ $width-card-default-m: 5em;
                 }
   
 
-                    .modal{
+                    /* .modal{
 
             
                         //Modal container
@@ -558,9 +468,6 @@ $width-card-default-m: 5em;
                             display: none;
                             place-content: center;
 
-                            /* flex-flow: column nowrap;
-                            justify-content: center;
-                            align-items: flex-start; */
                             padding: 4em;
 
                             
@@ -601,400 +508,15 @@ $width-card-default-m: 5em;
                                     scale: 0.5;
                                 }
                             }
-
-
-                            .prtfl__modal{
-                                display: none;
-                                place-content: center;
-                                width: 100%;
-                                height: auto;
-                                margin: auto;
-                                padding: 2em;                                                                        
-                                background-color: var(--c-dark);
-                                outline: 1px var(--c-light) solid;
-                                border-radius: 0.25em;
-                                scale: 1;
-                                overflow: hidden;
-                                position: relative;
-
-                                &.active-content{
-                                    display: grid;
-                                }
-                                
-                                @media screen and (max-width: $media-tablet) {
-                                    height: 100vh;
-                                    width: 100vw;
-                                    scale: 0.9;
-                                }
-
-                                
-                                @media screen and (max-width: $media-mobile) {
-                                    scale: 0.85;
-                                }
-
-                  
-                                ///MODAL
-                                .modal__cards{
-                                    width: 100%;
-                                    height: auto;
-                                                                        
-                                    @media screen and (max-width: $media-tablet) {
-                                        position: absolute;
-                                        top: 0;
-                                    } 
-                                    
-                                    #p_canvas{
-
-                                        &-1,
-                                        &-2,
-                                        &-3,
-                                        &-4{
-                                            width: 100%;
-                                            height: auto;
-                                        }
-
-                                    }
-
-                                }                                                                                                          
-
-                                
-                            }
-                          
-                            
-                            //Modal Cards
-                            .modal{
-                                
-                                
-                                                                
-                                &__card{
-                                    &-info{
-
-                                        position: absolute;
-                                        bottom: 0;
-                                        left: 0;
-
-                                        width: 100%;
-                                        height: auto;
-                                        padding: 1em;
-                                        
-                                        background-color: rgba($color: #0d0d0d, $alpha: 0.7);
-
-                                        @media screen and (max-width: $media-laptop) {
-                                            height: 65%;
-                                        }
-
-                                        @media screen and (max-width: $media-tablet) {
-                                            height: 50vh;
-                                        }
-
-                                        @media screen and (max-width: $media-mobile) {
-                                            height: 70vh;
-                                        }
-
-                                        //Modal Portfolio title
-                                        h1{
-
-                                            text-align: center;
-                                            text-transform: uppercase;
-                                            color: var(--c-light);
-    
-                                            font-family: var(--font-comfortaa);
-                                            font-size: var(--size-h3);
-                                            font-weight: 400;
-    
-                                            padding: 0.5rem;
-                                            margin: auto;
-
-                                            
-                                            @media screen and (max-width: $media-tablet) {
-                                                font-size: 17px;
-                                                font-weight: 600;
-                                                padding: 0.8rem;
-                                            }                                            
-                                        }
-                                                                            
-                                        .card__content{
-                                            display: flex;
-                                            align-items: flex-start;
-                                            justify-content: center;
-                                            gap: 8em;
-                                                                                        
-                                            
-                                             @media screen and (max-width: $media-laptop) {
-                                                gap: 6em;
-                                            }
-
-                                            @media screen and (max-width: $media-tablet) {
-                                                gap: 4em;
-                                            }
-
-                                            @media screen and (max-width: $media-mobile) {
-                                                align-items: flex-start;
-                                                justify-content: space-between;
-                                                flex-flow: column-reverse wrap;
-                                                gap: 2em;
-                                            }
-
-                                            
-                                        }
-
-                                        .shorts__wrapper{
-                                            display: flex;
-                                            justify-content: space-between;
-                                        }
-                                        
-                                        .shorts,
-                                        .tools{
-                                            color: var(--c-light);
-                                            font-family: var(--font-space);
-                                            font-size:var(--size-p);
-                                            font-weight: 300;
-                                            text-transform: uppercase;
-                                            padding: 0.5rem;
-                                            margin: 0.5rem;
-
-                                            @media screen and (max-width: $media-laptop) {
-                                                font-size: 0.9rem;
-                                            }
-
-                                        
-                                            @media screen and (max-width: $media-laptop) {
-                                                display: inline-block;
-                                            }
-
-                                        }
-
-                                        .links{
-
-                                            margin: 2em 0;
-                                                                                   
-                                            @media screen and (max-width: $media-laptop) {
-                                                display: flex;
-                                                align-items: flex-start;
-                                                justify-content: center;
-                                                
-                                                margin: 1em 0;
-                                            }
-                                            
-                                            /* @media screen and (max-width: $media-mobile) {
-                                                margin: 1em 0;
-                                                } */
-                                                
-                                                a{
-                                                    color: var(--c-light);
-                                                    padding: 1rem 1.5rem;
-                                                    margin: 1rem;
-
-                                                    text-decoration: none;
-                                                    text-transform: uppercase;
-                                                    text-align: center;
-                                                    font-family: var(--font-space);
-                                                    font-size: 1rem;
-                                                    outline: 1px solid var(--c-light);
-                                                    border-radius: 0.5em;
-                                                    transition: all 0.3s ease;
-                                                    position: relative;
-
-                                                &:hover{
-                                                    backdrop-filter: blur(12px);
-                                                    background-color: rgba($color: #f2f2f2, $alpha: 0.25);
-
-                                                    @media screen and (max-width: $media-tablet) {
-                                                        background-color: transparent;
-                                                    }
-                                                }
-
-                                                &:hover::after{
-                                                    opacity: 1;
-
-                                                    @media screen and (max-width: $media-tablet) {
-                                                        opacity: 0;
-                                                    }
-                                                }
-
-                            
-                                                &::after{
-                                                    opacity: 0;
-                                                   
-                                                    content: attr(data-text);
-                                                    position: absolute;
-                                                    bottom: -2.4em;
-                                                    left: 50%;
-                                                    transform: translateX(-50%);
-                                                    width: fit-content;
-                                                    height: auto;
-                                                    background-color: var(--c-blue);
-                                                    white-space: nowrap;
-                                                    font-size: 0.8rem;
-                                                    letter-spacing: 3px;
-                                                    padding: 0.25em 0.5em; 
-                                                    border-radius: 0.25em;
-                                                    transition: all 0.3s ease;
-                                                    
-                                                }
-
-                                                @media screen and (max-width: $media-laptop) {
-                                                    margin: 0 1rem;
-                                                }
-
-                                                @media screen and (max-width: $media-mobile) {
-                                                    padding: 0.5rem;
-                                                    font-size: 0.9rem;
-                                                }
-                                            }
-                                            
-                                        }
-
-                                        .info{
-                                            color: var(--c-light);
-                                            font-size: clamp(1.2rem, 12vw, 0.6rem);
-                                            font-family: var(--font-comfortaa);
-                                            width: 50%;
-                                            text-wrap: pretty;
-                                            line-height: 155%;
-                                            letter-spacing: 2px;
-                                            padding: 1rem;
-
-                                            max-width: 65ch;
-
-                                            p:nth-of-type(2){
-                                                margin-top: 1em;
-                                            }
-
-                                            @media screen and (max-width: $media-laptop) {
-                                                width: 80%;
-                                                font-size: 0.85rem;
-                                            }
-
-                                            @media screen and (max-width: $media-tablet) {
-                                                font-size: 0.9rem;
-                                            }
-                                            
-
-                                            @media screen and (max-width: $media-mobile) {
-                                                height: 24vh;
-                                                width: 100%;
-                                                padding: 0;
-                                                font-size: 0.65rem;
-                                                line-height: 200%;
-                                                text-wrap: wrap;
-                                            }
-                                        }
-
-
-                                        .card{
-                                            &__shorts{
-                                                color: var(--c-light);
-                                                font-family: var(--font-comfortaa);
-                                                font-size:var(--size-p);
-                                                font-weight: 300;
-                                                text-transform: uppercase;
-                                                padding: 0.5rem;
-                                                margin: 0.5rem;
-
-                                                @media screen and (max-width: $media-mobile) {
-                                                    padding: 0.25rem;
-                                                    margin: 0.25rem;
-                                                    display: inline-block;
-                                                    margin-left: 1rem;
-
-                                                    font-size: 0.9rem;
-                                                }
-                                              
-                                            }
-
-                                            &__links{
-
-                                                display: flex;
-                                                justify-content: space-between;
-
-                                                @media screen and (max-width: $media-mobile) {
-                                                    flex-direction: row;
-                                                }
-
-                                                a{
-                                                    color: var(--c-light);
-                                                    padding: 1rem 1.5rem;
-                                                    margin: 1rem;
-
-                                                    text-decoration: none;
-                                                    text-transform: uppercase;
-                                                    text-align: center;
-                                                    font-family: var(--font-comfortaa);
-                                                    outline: 1px solid var(--c-light);
-
-                                                    @media screen and (max-width: $media-tablet) {
-                                                        margin: 0;
-                                                    }
-
-                                                    @media screen and (max-width: $media-mobile) {
-                                                        padding: 0.5rem;
-                                                        font-size: 0.9rem;
-                                                    }
-
-                                                }
-                                            }
-
-                                            &__info-text{
-                                                width: 50%;
-                                                color: var(--c-light);
-                                                font-family: var(--font-comfortaa);
-                                                text-wrap: balance;
-                                                line-height: 155%;
-                                                letter-spacing: 2px;
-                                                padding: 1rem;
-                                                
-                                                /* @media screen and (max-width: $media-tablet-wide) {
-                                                    width: 60%;
-                                                    line-height: 125%;
-                                                    padding: 0.8rem;
-                                                } */
-
-                                                @media screen and (max-width: $media-tablet) {
-                                                    //height: 240px;
-                                                    overflow-y: scroll;
-                                                    padding-top: 0;
-                                                }
-
-                                                @media screen and (max-width: $media-mobile) {
-                                                    //height: 220px;
-                                                    width: 100%;
-                                                    font-size: 0.6rem;
-                                                    line-height: 200%;
-                                                    text-wrap: wrap;
-                                                }
-
-                                                p{
-                                                    padding: 0.5rem;
-                                                   
-                                                    
-                                                    @media screen and (max-width: $media-tablet) {
-                                                        font-size: 1rem;
-                                                        letter-spacing: 3px;
-                                                        padding: 1rem;
-                                                    }
-
-                                                    @media screen and (max-width: $media-mobile) {
-                                                        font-size: 0.85rem;
-                                                    }
-                                                }
-
-                                            }
-                                        }
-
-                                    }
-                                }
-
-                            }
                             
                         }
 
-                    }
+                    } */
         
                 }
 
                 //portfolio container
-                .container{
+                /* .container{
                     
                     margin: 1rem;
                     //margin-left: 10%;
@@ -1015,11 +537,7 @@ $width-card-default-m: 5em;
                         align-items: center;
                         justify-content: center;
                         //position: relative;
-
-                        /* @media screen and (max-width: $media-tablet) {
-                            flex-flow: column nowrap;
-                        } */
-                        
+                       
 
                         .slider__button-left,
                        .slider__button-right{
@@ -1033,10 +551,6 @@ $width-card-default-m: 5em;
                             width: 15%;
                             padding: 1rem;
                             transition: all 0.3s ease;
-
-                            /* &:focus{
-                                border: 2px solid var(--bg-light);
-                            } */
 
                             
                             @media screen and (max-width: $media-tablet) {
@@ -1202,30 +716,6 @@ $width-card-default-m: 5em;
                        }
                     }
 
-                }
+                } */
 
-
-/* Hover for cards */                
-@keyframes glitch {
-    0% {
-    filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px -1px magenta);
-    }
-    25% {
-    filter: drop-shadow(-1px -2px var(--c-blue)) drop-shadow(2px 1px magenta);
-    }
-    50% {
-    filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px 1px magenta);
-    }
-    75% {
-    filter: drop-shadow(-2px -1px var(--c-blue)) drop-shadow(-2px -1px magenta);
-    }
-    100% {
-    filter: drop-shadow(2px 0 var(--c-blue)) drop-shadow(2px -1px magenta);
-    }
-}
-
-@keyframes pulse {
-    0%{box-shadow: 0 0 0 4px var(--c-light);}
-    100%{box-shadow: 0 0 0 8px transparent;}
-}
 
