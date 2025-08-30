@@ -40,7 +40,6 @@ const pause = document.querySelector(".pauseBG"),
 
 pause.addEventListener("click", ()=>{
   const splash_bg = document.querySelector(".ddesign__VM-bg"); 
-
   splash_bg.classList.toggle("paused");
 
   if(pauseIcon.classList.contains("fa-pause")){
