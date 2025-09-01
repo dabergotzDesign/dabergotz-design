@@ -446,7 +446,8 @@ body{
                             text-align: left;
                             text-transform: uppercase;
                             padding: var(--size-16);
-                            //padding-left: 11.5vw;
+                            margin: auto;
+                            margin-left: 10vw;
 
                             
                             @media screen and (max-width: $media-mobile) {
