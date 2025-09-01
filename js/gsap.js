@@ -128,7 +128,7 @@ splitTitle.forEach((char, i)=>{
             end: 'bottom',
             scrub: false,
             markers: false,
-            //toggleActions: 'play play reverse revers'
+            //toggleActions: 'play play reverse reverse'
         }
     })
 })
