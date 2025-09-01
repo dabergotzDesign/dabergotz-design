@@ -676,7 +676,7 @@ body{
 
                             @media screen and (max-width: $media-mobile) {
                                 font-size: 0.8rem;
-                                padding: 1rem 0.25rem;
+                                padding: var(--size-16) var(--size-4);
                                 text-wrap: wrap;
                                 line-height: 140%;
                             }
