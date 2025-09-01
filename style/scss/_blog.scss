@@ -1,6 +1,6 @@
 //media variables
-$media-laptop: 1024px;
-$media-tablet: 768px;
+$media-laptop: 1440px;
+$media-tablet: 1024px;
 $media-mobile: 450px;
 
 $color-lightgrey: #bbb;
@@ -57,7 +57,11 @@ body{
 
     display: flex;
     flex-flow: column nowrap;
-    height: 80vh;
+    height: 100vh;
+
+    @media screen and (max-width: $media-laptop) {
+        padding-top: var(--size-96);
+    }
 
     
     @media screen and (max-width: $media-tablet) {
@@ -70,6 +74,7 @@ body{
         flex-direction: column;
         height: fit-content;
         margin-bottom: var(--size-64);
+        background-color: var(--c-dark-transparent-50);
     }
 
 

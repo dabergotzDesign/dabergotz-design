@@ -77,11 +77,11 @@ splitTitle.forEach((char, i)=>{
         stagger: 0.1,
         scrollTrigger: {
             trigger: char,
-            start: 'top',
-            end: 'bottom',
+            start: 'top 80%',
+            end: 'bottom 20%',
             scrub: false,
             markers: false,
-            //toggleActions: 'play play reverse revers'
+            //toggleActions: 'play play reverse reverse'
         }
     })
 })

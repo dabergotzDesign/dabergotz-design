@@ -1,5 +1,5 @@
 //media variables
-//$media-laptop: 1024px;
+$media-laptop: 1440px;
 $media-tablet: 1024px;
 $media-mobile: 450px;
 
@@ -33,6 +33,10 @@ $height: 36vh;
         height: 100vh;
         background-color: var(--c-dark-transparent-50);
 
+        @media screen and (max-width: $media-laptop) {
+            height: 120vh;
+        }
+
         @media screen and (max-width: $media-tablet) {
             height: 80vh;
         }
@@ -62,6 +66,10 @@ $height: 36vh;
 
             width: 100vw;
             line-height: 124%;
+
+            @media screen and (max-width: $media-laptop) {
+                font-size: var(--size-80);
+            }
 
             
             .underline{
