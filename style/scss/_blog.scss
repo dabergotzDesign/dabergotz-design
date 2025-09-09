@@ -489,6 +489,19 @@ body{
                             }
                         }
 
+                        ul{
+                            color: var(--c-light);
+                            font-size: 18px;
+                            font-family: var(--font-comfortaa);
+
+                            margin: auto;
+                            margin-left: 12vw;
+                            
+                            li{
+                                padding: var(--size-4);
+                            }
+                        }
+
 
                             figure{
                                 figcaption{
