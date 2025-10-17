@@ -61,16 +61,16 @@ const r_gallery_3 = new rive.Rive({
         },
 });
 
-/* const r_gallery_4 = new rive.Rive({
+const r_gallery_4 = new rive.Rive({
         src: "../rive/portfolio_cards.riv",
         canvas: document.getElementById("canvas-4"),
-        artboard: "glass_card-gdy",
+        artboard: "DRD - card",
         autoplay: true,
-        stateMachines: "card_states",
+        stateMachines: "card hover",
         onLoad: () => {
           r_gallery_4.resizeDrawingSurfaceToCanvas();
         },
-}); */
+});
 
 /* RIVE EVENTS */
 function onRiveEvent(riveEvent){
@@ -86,6 +86,7 @@ function onRiveEvent(riveEvent){
 r_gallery_1.on(rive.EventType.RiveEvent ,onRiveEvent);
 r_gallery_2.on(rive.EventType.RiveEvent ,onRiveEvent);
 r_gallery_3.on(rive.EventType.RiveEvent ,onRiveEvent);
+r_gallery_4.on(rive.EventType.RiveEvent ,onRiveEvent);
 
 
 
