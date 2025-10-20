@@ -198,28 +198,6 @@ $width-card-default-m: 5em;
             
         }
 
-        .more__projects{
-
-            text-align: center;
-            text-decoration: none;
-            color: var(--c-highlight);
-            
-            font-size: var(--size-24);
-            font-family: var(--font-comfortaa);
-            text-transform: uppercase;
-            
-            margin: auto;
-            padding: var(--size-16);
-            width: 80%;
-            border-radius: var(--size-16);
-
-            &:hover{
-                background-color: var(--c-highlight);
-                color: var(--c-dark);
-            }
-        }
-
-
                 /* MOBILE/TABLET MODE */
                 .mobile{                    
                     
@@ -468,6 +446,27 @@ $width-card-default-m: 5em;
 
 
                 }
+
+                .more__projects{
+
+            text-align: center;
+            text-decoration: none;
+            color: var(--c-highlight);
+            
+            font-size: var(--size-24);
+            font-family: var(--font-comfortaa);
+            text-transform: uppercase;
+            
+            margin: auto;
+            padding: var(--size-16);
+            width: 80%;
+            border-radius: var(--size-16);
+
+            &:hover{
+                background-color: var(--c-highlight);
+                color: var(--c-dark);
+            }
+        }
   
 
                     /* .modal{
