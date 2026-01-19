@@ -124,13 +124,12 @@ gsap.from(card, {
 const tools = document.querySelectorAll(".tool");
 const toolbox = document.querySelector(".about__toolbox");
 
-gsap.set(tools, {scale:0, transformOrigin: 'center center'});
+gsap.set(tools, { opacity: 0, transformOrigin: 'center center'});
 
 gsap.to(tools, {
-
-    scale: 1,
+    opacity: 1,
     duration: 0.5,
-    ease: 'elastic.out(1, 0.5)',
+    ease: 'elastic.in(0.3, 1)',
     stagger: 0.2,
     scrollTrigger: {
         trigger: toolbox,

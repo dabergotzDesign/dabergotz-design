@@ -207,7 +207,7 @@ $media-mobile: 480px;
                     width: 100%;
                     margin-top: var(--size-32);
                     cursor: none;
-
+                   
                     @media screen and (max-width: $media-tablet) {
                         flex-direction: row;
                         gap: var(--size-16);
@@ -243,7 +243,7 @@ $media-mobile: 480px;
                     height: auto;
                     padding: var(--size-8) var(--size-16);
                     border-radius: var(--size-80);
-                    transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease;
 
                     position: relative;
                  
