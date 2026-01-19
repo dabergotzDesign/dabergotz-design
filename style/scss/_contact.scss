@@ -49,7 +49,7 @@ $media-mobile: 450px;
                 padding: var(--size-32);
             }
 
-            @media screen and (max-width: $media-mobile) {
+            /* @media screen and (max-width: $media-mobile) {
                 gap: var(--size-16);
                 padding: var(--size-16);
             }

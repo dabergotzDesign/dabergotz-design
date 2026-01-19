@@ -349,7 +349,9 @@ $media-mobile: 480px;
 
                     width: 100%;
                     height: auto;
-                    padding: var(--size-8);
+                    padding: var(--size-8) var(--size-16);
+                    border-radius: var(--size-80);
+                    transition: all 0.3s ease-in-out;
 
                     position: relative;
                  

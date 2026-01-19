@@ -75,7 +75,7 @@ splitTypes.forEach((word, i)=>{
             end: 'bottom 20%',
             scrub: false,
             markers: false,
-            toggleActions: 'play play reverse none'
+            toggleActions: 'play play none none'
         }
     })
 })
@@ -104,6 +104,28 @@ gsap.from(galleryImgs, {
 });
 
 
+/* ABOUT */
+const tools = document.querySelectorAll(".tool");
+const toolbox = document.querySelector(".about__toolbox");
+
+gsap.set(tools, {scale:0, transformOrigin: 'center center'});
+
+gsap.to(tools, {
+
+    scale: 1,
+    duration: 0.5,
+    ease: 'elastic.out(1, 0.5)',
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: toolbox,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: false,
+        toggleActions: 'play play none reverse'
+    }
+
+});
+
 
 /* BLOG */
 
@@ -128,7 +150,7 @@ splitTitle.forEach((char, i)=>{
             end: 'bottom',
             scrub: false,
             markers: false,
-            //toggleActions: 'play play reverse reverse'
+            toggleActions: 'play play none reverse'
         }
     })
 })
@@ -136,11 +158,14 @@ splitTitle.forEach((char, i)=>{
 
 /* CONTACT */
 
-/* const contact_title = document.querySelector("#contact .title");
+const contact_title = document.querySelector("#contact .subtitle");
 const contacts = document.querySelector(".contacts__wrapper");
+const social = document.querySelector(".contacts__socials");
+const socials = document.querySelectorAll(".contacts__socials li");
 
 gsap.set(contact_title, {xPercent: '-100'});
 gsap.set(contacts, {width: 0, opacity: 0});
+gsap.set(socials, {xPercent: 200, opacity: 0});
 
 gsap.to(contact_title, {
     duration: 0.8,
@@ -158,4 +183,20 @@ gsap.to(contacts, {
     transformOrigin: 'center center',
     opacity: 1,
     scrollTrigger: {trigger: '#contact'}
-}) */
+});
+
+
+gsap.to(socials, {
+    xPercent: 0,
+    opacity: 1,
+    duration: 0.5,
+    stagger: 0.2,
+    ease: 'power4.out',
+    scrollTrigger: {
+        trigger: social,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: false,
+        toggleActions: 'play play none reverse'
+    }
+});
