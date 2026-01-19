@@ -21,7 +21,7 @@ splitTypes.forEach((word, i)=>{
             end: 'bottom 20%',
             scrub: false,
             markers: false,
-            toggleActions: 'play play reverse none'
+            toggleActions: 'play play none none'
         }
     })
 })
@@ -31,6 +31,68 @@ splitTypes.forEach((word, i)=>{
 
 const portfolio_title = document.querySelector("#portfolio .title");
 const card = document.querySelectorAll("#portfolio .accordion__card-wrapper");
+const hL = document.querySelector(".p_canvas-4");
+
+const hL_thumb = document.querySelector(".p_canvas-4 .thumbnail"),
+    hL_logo = document.querySelector(".p_canvas-4 .hololist__logo");
+
+const fetti = document.querySelector(".confetti"),
+        fettiCannon = document.querySelector(".confetti__cannon"),
+        fettiPaper = document.querySelectorAll(".confetti__paper");
+
+// Confetti Animation on Hover
+
+gsap.set(fettiCannon, {opacity: 0, transformOrigin: 'bottom center'});
+gsap.set(fettiPaper, {scale:0, xPercent:-40, yPercent: -45, transformOrigin: 'center center'});
+
+let tl = gsap.timeline({ paused: true, reversed: true});
+
+tl.to(fettiCannon, {
+    opacity: 1,
+    rotation: -20,
+    duration: 0.3,
+    ease: 'power4.out',
+  })
+.to(hL_thumb, {
+    scale: 2,
+    duration: 0.5,
+
+},"-=0.5")
+.to(hL_logo, {
+    scale: 1.5,
+    duration: 0.5,
+},"-=0.5")
+.to(fettiPaper, {
+    scale: 1,
+    xPercent: -20,
+    yPercent: -60,
+    duration: 0.3,
+    ease: 'power4.out',
+}, "+=0.01")
+.to(fettiCannon, {
+    opacity: 0,
+    yPercent: -20,
+    rotation: 20,
+    duration: 0.3,
+    ease: 'power4.out',
+}, "+=0.1")
+.to(fettiPaper, {
+    yPercent: -20,
+    opacity: 0,
+    duration: 1,
+    ease: 'power1.out',
+},"-=0.5");
+
+
+
+hL.addEventListener("mouseenter", ()=>{
+    tl.reversed() ? tl.play() : tl.reverse();
+});
+
+
+hL.addEventListener("mouseleave", ()=>{
+    tl.reversed() ? tl.play() : tl.reverse();
+});
 
 
 gsap.from(portfolio_title, {
@@ -40,7 +102,8 @@ gsap.from(portfolio_title, {
     ease: 'none',
     delay: 0.5,
     scrollTrigger: {
-        trigger: "#portfolio"
+        trigger: "#portfolio",
+        toggleActions: 'play play none reverse'
     }
 })
 
@@ -54,8 +117,30 @@ gsap.from(card, {
         trigger: '#portfolio'
     }
     
-}, "<=.5")
+}, "-=.5")
 
+
+/* ABOUT */
+const tools = document.querySelectorAll(".tool");
+const toolbox = document.querySelector(".about__toolbox");
+
+gsap.set(tools, {scale:0, transformOrigin: 'center center'});
+
+gsap.to(tools, {
+
+    scale: 1,
+    duration: 0.5,
+    ease: 'elastic.out(1, 0.5)',
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: toolbox,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: false,
+        toggleActions: 'play play none reverse'
+    }
+
+});
 
 
 /* BLOG */
@@ -81,7 +166,7 @@ splitTitle.forEach((char, i)=>{
             end: 'bottom 20%',
             scrub: false,
             markers: false,
-            //toggleActions: 'play play reverse reverse'
+            toggleActions: 'play play none reverse'
         }
     })
 })
@@ -89,11 +174,14 @@ splitTitle.forEach((char, i)=>{
 
 /* CONTACT */
 
-/* const contact_title = document.querySelector("#contact .title");
+const contact_title = document.querySelector("#contact .subtitle");
 const contacts = document.querySelector(".contacts__wrapper");
+const social = document.querySelector(".contacts__socials");
+const socials = document.querySelectorAll(".contacts__socials li");
 
 gsap.set(contact_title, {xPercent: '-100'});
 gsap.set(contacts, {width: 0, opacity: 0});
+gsap.set(socials, {xPercent: 200, opacity: 0});
 
 gsap.to(contact_title, {
     duration: 0.8,
@@ -111,4 +199,20 @@ gsap.to(contacts, {
     transformOrigin: 'center center',
     opacity: 1,
     scrollTrigger: {trigger: '#contact'}
-}) */
+});
+
+
+gsap.to(socials, {
+    xPercent: 0,
+    opacity: 1,
+    duration: 0.5,
+    stagger: 0.2,
+    ease: 'power4.out',
+    scrollTrigger: {
+        trigger: social,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: false,
+        toggleActions: 'play play none reverse'
+    }
+});
