@@ -140,7 +140,7 @@ body{
     }
 
 
-    /* what is happening - main page */
+    /* what is happening - subtitle main page */
     .title{
 
         font-family: var(--font-noto);
@@ -160,11 +160,9 @@ body{
 
         @media screen and (max-width: $media-mobile) {
             width: 80vw;
-           
+            -webkit-text-stroke: 1px var(--c-light);
             font-size: var(--size-24);
             font-weight: 400;
-            padding-top: var(--size-16);
-            text-align: center;
         }
 
         &__wrapper{
@@ -358,9 +356,8 @@ body{
                     flex-flow: column nowrap;
                     align-items: center;
                     padding-top: var(--size-8);
-
-                    margin-left: 0;
-                    margin-right: 0;
+                    gap: var(--size-24);
+                    margin: 0;
                 }
             } 
 
@@ -376,6 +373,10 @@ body{
                     margin: 1.5em 0;
                     width: 100%;
                     position: relative;
+
+                    @media screen and (max-width: $media-mobile) {
+                        margin: 0;
+                    }
 
                     &::after{
                         content: '';

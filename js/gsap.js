@@ -180,7 +180,6 @@ const socials = document.querySelectorAll(".contacts__socials li");
 
 gsap.set(contact_title, {xPercent: '-100'});
 gsap.set(contacts, {width: 0, opacity: 0});
-gsap.set(socials, {xPercent: 200, opacity: 0});
 
 gsap.to(contact_title, {
     duration: 0.8,
@@ -200,6 +199,11 @@ gsap.to(contacts, {
     scrollTrigger: {trigger: '#contact'}
 });
 
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 1440px)", ()=>{
+
+gsap.set(socials, {xPercent: 200, opacity: 0});
 
 gsap.to(socials, {
     xPercent: 0,
@@ -214,4 +218,6 @@ gsap.to(socials, {
         scrub: false,
         toggleActions: 'play play none reverse'
     }
+})
+
 });

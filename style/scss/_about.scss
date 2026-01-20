@@ -57,7 +57,7 @@ $media-mobile: 480px;
                 @media screen and (max-width: $media-mobile) {
                     gap:0;
                     justify-content: flex-start;
-                    margin-bottom: 80em;
+                    margin-bottom: 40em;
                 }
 
                 .mask{
@@ -82,7 +82,6 @@ $media-mobile: 480px;
                         -webkit-text-stroke: 1px var(--c-light);
                         font-size: var(--size-48);
                         padding: 0.5rem;
-                        margin-bottom: 1em;
                     }
                 }
             }
@@ -335,7 +334,7 @@ $media-mobile: 480px;
                 position: relative;
 
 
-                @media screen and (max-width: $media-tablet) {
+                @media screen and (min-width: $media-tablet) {
                     flex-flow: column nowrap;
                     justify-content: flex-start;
                     gap:0;

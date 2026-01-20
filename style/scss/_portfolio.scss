@@ -146,25 +146,28 @@ $width-card-default-m: 5em;
 
                 transition: all 0.3s ease-in-out;
 
+                @media screen and (max-width: $media-mobile) {
+                   padding: 2em 0.5em;
+               }
+
                 ::-webkit-scrollbar{
                     visibility: hidden;
                     scroll-behavior: smooth;
                 }
 
-                 @media screen and (max-width: $media-tablet) {
-                    display: none;
-                }
-
-
+                
+                
                 canvas{
-                        width: 100%;
-                        object-fit: contain;
+                    width: 100%;
+                    object-fit: contain;
                 }
-
+                
             }
-
+            
             &__card{
-
+                
+            
+            
                 .wrap{
                     display: flex;
                     align-items: center;
@@ -345,6 +348,11 @@ $width-card-default-m: 5em;
         
                     }
                 }
+                
+            //portfolio card end
+            @media screen and (max-width: $media-tablet) {
+                   display: none;
+               }
 
             }
 
@@ -555,6 +563,11 @@ $width-card-default-m: 5em;
                                                     font-family: var(--font-comfortaa);
                                                     text-transform: uppercase;
 
+                                                    @media screen and (max-width: $media-tablet) {
+                                                        font-size: var(--size-24);
+                                                        margin-bottom: var(--size-4);
+                                                    }
+
                                                     @media screen and (max-width: $media-mobile) {
                                                         font-size: var(--size-16);
                                                         color: var(--c-highlight);
@@ -632,7 +645,7 @@ $width-card-default-m: 5em;
 
                 }
 
-                .more__projects{
+            .more__projects{
 
             text-align: center;
             text-decoration: none;
@@ -652,275 +665,7 @@ $width-card-default-m: 5em;
                 color: var(--c-dark);
             }
         }
-  
+          
+   }
 
-                    /* .modal{
-
-            
-                        //Modal container
-                        &__container{
-                                                        
-                            position: fixed;
-                            top: 0;
-                            left: 0;
-                            z-index: 999;
-
-                            background-color: var(--c-dark-transparent-50);
-    
-                            width: 100%;
-                            height: 100%;
-                            
-                            display: none;
-                            place-content: center;
-
-                            padding: 4em;
-
-                            
-                            &.active{
-                                display: grid;
-                            }
-
-                            @media screen and (max-width: $media-tablet) {
-                                padding: 0;
-                            }
-
-                            .close{
-                                position: absolute;
-                                top: 8%;
-                                right: 15%;
-                                margin: auto;                         
-                                cursor: pointer;
-              
-                                border-radius: 50%;
-                                z-index: 99;
-                                
-                                @media screen and (max-width: $media-laptop) {
-                                    scale: 0.9;
-                                    top: 12%;
-                                    right: 3%;
-                                }
-
-                                @media screen and (max-width: $media-tablet) {
-                                    top: 2%;
-                                    right: 2%;
-                                    scale: 0.8;
-                                }
-
-                                
-                                @media screen and (max-width: $media-mobile) {
-                                    right: 42%;
-                                    top: 92%;
-                                    scale: 0.5;
-                                }
-                            }
-                            
-                        }
-
-                    } */
-        
-                }
-
-                //portfolio container
-                /* .container{
-                    
-                    margin: 1rem;
-                    //margin-left: 10%;
-                    scale: 0.95;
-                    width: 80vw;
-                    
-                                        
-                    @media screen and (max-width: $media-mobile) {
-                        margin: auto;
-                        //transform: translateX(50%);
-                        scale: 0.85;
-                    }
-
-                    .slider{
-
-                       &__wrapper{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        //position: relative;
-                       
-
-                        .slider__button-left,
-                       .slider__button-right{
-                            background: none;
-                            border: none;
-                            cursor: pointer;
-                            font-size: var(--size-h1);
-                            color: var(--c-light);
-                            //background-color: red; //to check on the whole button
-                            height: 80%;
-                            width: 15%;
-                            padding: 1rem;
-                            transition: all 0.3s ease;
-
-                            
-                            @media screen and (max-width: $media-tablet) {
-                               font-size: 2rem;
-                               padding: 1rem;
-                            }
-
-                            @media screen and (max-width: $media-mobile) {
-                                font-size: 24px;
-                                width: 50%;
-                                padding: 0 1.2rem;
-                            }
-
-
-                       }
-
-                       //button icons left & right
-                       .slider__button-right:hover i,
-                       .slider__button-left:hover i{                        
-                          scale: 1.2;                                           
-                       }
-
-                       //Slider Cards
-                       .card{
-
-                        margin: 2rem;
-                        transition: all 0.5s ease;
-                        
-                        //card wrapper
-                        &__wrapper{
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            //position: relative; 
-                            
-                            @media screen and (max-width: $media-mobile) {
-                               margin-bottom: 3rem;
-                            }
-                        }
-
-                        &__image{
-                            
-                            position: relative;
-                            
-                            width: 100%;
-                            height: 100%;
-                            
-                            
-                            img{
-                                width: 50vw;
-                                height: 70vh;
-                                object-fit: cover;
-
-                                
-                                @media screen and (max-width: $media-tablet) {
-                                    height: 45vh;
-                                }
-
-                                
-                                @media screen and (max-width: $media-mobile) {
-                                    height: 30vh;
-                                }
-                                
-                            }
-
-                            .card__info{
-                                position: absolute;
-                                bottom:0;
-                                left:0;
-                                background-color: var(--bg-dark-transparent);
-                                padding: 2%;
-                                width: 100%;
-                            }
-
-                            figcaption{
-                                color: var(--c-light);
-                                font-family: var(--font-comfortaa);
-                                font-size: var(--size-h4);
-                                text-align: center;
-
-                                @media screen and (max-width: $media-tablet) {
-                                    font-size: var(--size-p);
-                                }
-                            }
-                        }
-
-                        &.current{
-                            transform: translateX(0);
-                            filter: brightness(0.5);
-
-                        }
-                        
-                        &.previous{
-                            transform: translateX(80%);
-                            filter: brightness(0.5);
-                                
-                        }
-                        
-                        &.next{
-                            transform: translateX(-80%);
-                            filter: brightness(0.5);
-                        }
-
-                        //button action classes
-                        &.active{
-                            z-index: 5;
-                            outline: 2px solid var(--bg-light);
-                            scale: 1.1;
-                            filter: brightness(1);
-                            cursor: pointer;
-
-                            &:hover,
-                            &:focus{
-                                box-shadow: 0 0 1rem var(--bg-light);
-                            }
-
-                            @media screen and (max-width: $media-tablet) {
-                                scale: 1.2;
-                            }
-                        }
-
-                       }
-
-                       }
-
-                       //button positions
-                       &__button-left{
-                        position: absolute;
-                        top: 10%;
-                        left: 0;
-                        z-index: 90;
-                        
-
-                       
-                        @media screen and (max-width: $media-tablet) {
-                            left: -5%;                            
-                        }
-
-                    
-                        @media screen and (max-width: $media-mobile) {
-                            top: 5%;
-                            left: -30%;
-                        }
-
-                       }
-
-                       &__button-right{
-                        position: absolute;
-                        top: 10%;
-                        right: 0;
-                        z-index: 90;
-
-                                                                       
-                        @media screen and (max-width: $media-tablet) {
-                            right: -5%;
-                        }
-
-                        @media screen and (max-width: $media-mobile) {
-                            top: 5%;
-                            right: -30%;
-                        }
-    
-                       }
-                    }
-
-                } */
-
-
+ 

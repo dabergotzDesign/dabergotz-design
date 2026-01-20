@@ -73,6 +73,7 @@ $media-mobile: 450px;
 
                 @media screen and (max-width: $media-mobile) {
                     font-size: var(--size-48);
+                    -webkit-text-stroke: 1px var(--c-light);
                 }
             }
            
