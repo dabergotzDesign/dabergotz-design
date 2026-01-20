@@ -100,7 +100,6 @@ $media-mobile: 480px;
                         -webkit-text-stroke: 1px var(--c-light);
                         font-size: var(--size-48);
                         padding: 0.5rem;
-                        margin-bottom: 1em;
                     }
                 }
             }
@@ -415,7 +414,7 @@ $media-mobile: 480px;
                 gap: var(--size-24);
 
 
-                @media screen and (max-width: $media-tablet) {
+                @media screen and (min-width: $media-tablet) {
                     flex-flow: column nowrap;
                     justify-content: flex-start;
                     gap: var(--size-8);

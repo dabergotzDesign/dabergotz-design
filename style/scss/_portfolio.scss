@@ -145,25 +145,28 @@ $media-mobile: 450px;
 
                 transition: all 0.3s ease-in-out;
 
+                @media screen and (max-width: $media-mobile) {
+                   padding: 2em 0.5em;
+               }
+
                 ::-webkit-scrollbar{
                     visibility: hidden;
                     scroll-behavior: smooth;
                 }
 
-                 @media screen and (max-width: $media-tablet) {
-                    display: none;
-                }
-
-
+                
+                
                 canvas{
-                        width: 100%;
-                        object-fit: contain;
+                    width: 100%;
+                    object-fit: contain;
                 }
-
+                
             }
-
+            
             &__card{
-
+                
+            
+            
                 .wrap{
                     display: flex;
                     align-items: center;
@@ -344,6 +347,11 @@ $media-mobile: 450px;
         
                     }
                 }
+                
+            //portfolio card end
+            @media screen and (max-width: $media-tablet) {
+                   display: none;
+               }
 
             }
 
@@ -554,6 +562,11 @@ $media-mobile: 450px;
                                                     font-family: var(--font-comfortaa);
                                                     text-transform: uppercase;
 
+                                                    @media screen and (max-width: $media-tablet) {
+                                                        font-size: var(--size-24);
+                                                        margin-bottom: var(--size-4);
+                                                    }
+
                                                     @media screen and (max-width: $media-mobile) {
                                                         font-size: var(--size-16);
                                                         color: var(--c-highlight);
@@ -631,7 +644,7 @@ $media-mobile: 450px;
 
                 }
 
-                .more__projects{
+            .more__projects{
 
             text-align: center;
             text-decoration: none;
@@ -2589,3 +2602,4 @@ $media-mobile: 450px;
 
 
 
+ 
