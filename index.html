@@ -49,6 +49,10 @@
     <script src="./js/lucide.js" defer></script>
     <script src="./js/smooth-scroll.js" defer></script>
     <script src="./js/cursor.js" defer></script>
+
+    <!-- Lottie -->
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script>
+
  
     
     <title>dabergotzDesign - UI/UX Design & Frontend Development</title>
@@ -98,13 +102,18 @@
 
          <button class="pauseBG hover"><i class="fa-solid fa-pause"></i></button>
 
-        <canvas id="canvas" width="1440" height="500" ></canvas>
-
-
-        <div class="welcome__mobile">
-            <h1>innovating user Experience</h1>
+         <!-- /// Title -->
+        <!-- <canvas id="canvas" width="1440" height="500" ></canvas> -->
+         <div class="welcome">
+            <h1 aria-label="Innovating User Experience">innovating user Experience</h1>
             <h2>Hey there, I’m <span>Dennis Dabergotz</span>, <span>UI/UX Designer</span>, blending the latest trends and tech to craft intuitive interfaces that turn everyday interactions into moments of delight.</h2>
         </div>
+
+
+        <!-- <div class="welcome__mobile">
+            <h1>innovating user Experience</h1>
+            <h2>Hey there, I’m <span>Dennis Dabergotz</span>, <span>UI/UX Designer</span>, blending the latest trends and tech to craft intuitive interfaces that turn everyday interactions into moments of delight.</h2>
+        </div> -->
         
         <i data-lucide="mouse" class="scroll__indicator"></i>
         
@@ -137,37 +146,148 @@
              <div class="portfolio__wrapper">
                 
                 <!-- Portfolio piece 01 - REMscape -->
-                 <div class="portfolio__card p_canvas-1">
+                 <!-- <div class="portfolio__card p_canvas-1">
                     <canvas id="canvas-1" width="1700px" height="560px" ></canvas>
-                 </div>
+                 </div> -->
 
-                <!-- Portfolio piece 02 - Asozial -->
-                 <div class="portfolio__card p_canvas-2">
-                    <canvas id="canvas-2" width="1700px" height="560px"></canvas>
-                 </div>
-
-                 <!-- Portfolio piece 03 - Go Duck Yourself -->
-                 <div class="portfolio__card p_canvas-3">
-                    <canvas id="canvas-3" width="1700px" height="560px"></canvas>
-                 </div>
-
-                 <!-- Portfolio piece 04 - Hololist -->
-                 <div class="portfolio__card p_canvas-4">
-                    <!-- <canvas id="canvas-4" width="1700px" height="560px"></canvas> -->
+                <div class="portfolio__card p_canvas-1">
                      <div class="wrap">
                         <div class="portfolio__thumbnail">
-                            <figure>
-                               <img class="thumbnail" src="./img/portfolio/holoList_portfolio_BG.jpg" alt="background image holoList portfolio">
-                               <img src="./img/portfolio/animations assets/hololist/Logo_colors.png" alt="holoList logo" class="hololist__logo">
-                               <div class="confetti">
-                                   <img src="./img/portfolio/animations assets/hololist/confetti_cannon.png" alt="confetti cannon" class="confetti__cannon">
-                                   <img src="./img/portfolio/animations assets/hololist/Confetti.png" alt="confetti paper" class="confetti__paper">
-                               </div>
-                            </figure>
+                            <lottie-player class="lottie" id="lottie_p1" src="./lottie/remscape.json" background="transparent" speed="1"></lottie-player>
                         </div>
                          <div class="portfolio__info">
                             <div class="heading">
-                                <h1 class="info__title">Hololist - Make your work more fun!</h1>
+                                <h1 class="info__title">REMscape</h1>
+                                <h2 class="info__short">Sleep tracker + Dream Journal App (Prototype)</h2>
+                                <p class="info__description">
+                                A sleep tracker companion app with a dream journal REMscape is a sleep tracker and dream journal that analyzes your chronotype to optimize your sleep.
+                                 Track your sleep patterns, journalize your dreams, and wake up feeling refreshed and energized every morning.
+                                </p>
+                            </div>
+                            <div class="problem">
+                                <h1>problem?</h1>
+                                <p class="problem__statement">
+                                    Busy people struggling with sleep need to find a way to establish a better sleeping routine because lack of sleep affects them to function throughout the day
+                                </p>
+                            </div>
+                            <div class="shorts">
+                                <div class="shorts__what">
+                                    <h1>what used?</h1>
+                                    <p class="tools">Figma, Affinity, Adobe Photoshop</p>
+                                </div>
+                                <div class="shorts__when">
+                                    <h1>when?</h1>
+                                    <p class="date">Oct-Nov 2024</p>
+                                </div><div class="shorts__do">
+                                    <h1>what i did?</h1>
+                                    <p class="tools">Research, Design, Testing</p>
+                                </div>
+                            </div>
+
+                            <div class="info__links">
+                                <a class="link__explore hover" href="https://www.behance.net/gallery/212660155/REMscape" target="_blank">explore</a>
+                                <a class="link__prototype hover" href="https://www.figma.com/proto/xfHZWTrEJ2fLo94m92pDWC/REMscape?page-id=120%3A747&node-id=321-245&p=f&viewport=345%2C149%2C0.2&t=0slq8We50eQzv2xY-1&scaling=scale-down&content-scaling=fixed" target="_blank">view prototype</a>
+                         </div>
+                     </div>
+                     </div>
+             </div>
+
+                <!-- Portfolio piece 02 - Asozial -->
+                 <div class="portfolio__card p_canvas-2">
+                     <div class="wrap">
+                        <div class="portfolio__thumbnail">
+                            <lottie-player class="lottie" id="lottie_p2" src="./lottie/asozial.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                         <div class="portfolio__info">
+                            <div class="heading">
+                                <h1 class="info__title">ASOZIAL - SOCIAL MEDIA FOR THE ANTI-SOCIAL DEVELOPER</h1>
+                                <h2 class="info__short">'asozial' noun: German for being anti-social. </h2>
+                                <p class="info__description">
+                                I worked for a client on the matching system for the social website 'asozial',
+                                 creating a Tinder-like feature tailored for developers - think Tinder meets LinkedIn,
+                                  designed to help devs connect, collaborate, and network. The design followed the client’s existing style for a cohesive look.
+                                </p>
+                            </div>
+                            <div class="problem">
+                                <h1>problem?</h1>
+                                <p class="problem__statement">
+                                    How can we effectively connect developers interested in working on projects with those offering them?
+                                </p>
+                            </div>
+                            <div class="shorts">
+                                <div class="shorts__what">
+                                    <h1>what used?</h1>
+                                    <p class="tools">Figma, Affinity Design, Adobe Photoshop</p>
+                                </div>
+                                <div class="shorts__when">
+                                    <h1>when?</h1>
+                                    <p class="date">Nov-Dec 2024</p>
+                                </div><div class="shorts__do">
+                                    <h1>what i did?</h1>
+                                    <p class="tools">Research, Design, Wireframing, Testing, Prototyping</p>
+                                </div>
+                            </div>
+
+                            <div class="info__links">
+                                <a class="link__explore hover" href="https://www.behance.net/gallery/214598859/asozial-Case-Study-(Matching)-Dennis-Dabergotz" target="_blank">explore</a>
+                                <a class="link__prototype hover" href="https://www.figma.com/proto/HFwKti3Ucl0BnzMdfVPsTu/-DENNIS---Team---%7C-FINAL-PROJECT%E2%80%94-asozial?page-id=8370%3A386&node-id=8374-1744&p=f&viewport=683%2C543%2C0.07&t=eCR3K96tTuZfsOj5-1&scaling=contain&content-scaling=fixed&starting-point-node-id=8374%3A1744" target="_blank">view prototype</a>
+                         </div>
+                     </div>
+                     </div>
+             </div>
+
+                 <!-- Portfolio piece 03 - Go Duck Yourself -->
+                 <div class="portfolio__card p_canvas-3">
+                     <div class="wrap">
+                        <div class="portfolio__thumbnail">
+                            <lottie-player class="lottie" id="lottie_p3" src="./lottie/GDY.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                         <div class="portfolio__info">
+                            <div class="heading">
+                                <h1 class="info__title">GO DUCK YOURSELF (YES, WE MEAN CODE)</h1>
+                                <h2 class="info__short">A Rubber Duck Debugging App</h2>
+                                <p class="info__description">
+                                Frustrated, you stare at your code as error messages pile up. You retreat to a quiet spot, explaining your code to a rubber duck - but it offers no feedback.
+                                What if an app could listen, encourage, and guide you forward?
+                                </p>
+                            </div>
+                            <div class="problem">
+                                <h1>problem?</h1>
+                                <p class="problem__statement">
+                                    How can we support the frustrated programmer/coder without intervene to much and let them solve their bugs.
+                                </p>
+                            </div>
+                            <div class="shorts">
+                                <div class="shorts__what">
+                                    <h1>what used?</h1>
+                                    <p class="tools">Figma, Affinity Design, Adobe Photoshop</p>
+                                </div>
+                                <div class="shorts__when">
+                                    <h1>when?</h1>
+                                    <p class="date">Jun-Jul 2025</p>
+                                </div><div class="shorts__do">
+                                    <h1>what i did?</h1>
+                                    <p class="tools">Branding, Research, Wireframing, Design, Prototyping</p>
+                                </div>
+                            </div>
+
+                            <div class="info__links">
+                                <a class="link__explore hover" href="https://www.behance.net/gallery/228057571/Go-Duck-Yourself(Yes-we-mean-code)" target="_blank">explore</a>
+                                <a class="link__prototype hover" href="https://www.figma.com/proto/Ce4xQ5QbeVsUY85YSweX7A/Rubber-Duck-Debugging?page-id=1%3A2&node-id=222-1435&p=f&viewport=494%2C25%2C0.24&t=WXtS6jURHdUaKvc5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=222%3A1435" target="_blank">view prototype</a>
+                         </div>
+                     </div>
+                     </div>
+             </div>
+
+                 <!-- Portfolio piece 04 - Hololist -->
+                 <div class="portfolio__card p_canvas-4">
+                     <div class="wrap">
+                        <div class="portfolio__thumbnail">
+                            <lottie-player class="lottie" id="lottie_p4" src="./lottie/HoloList.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                         <div class="portfolio__info">
+                            <div class="heading">
+                                <h1 class="info__title">HOLOLIST - MAKE YOUR WORK MORE FUN!</h1>
                                 <h2 class="info__short">Your smart glasses companion for easy work</h2>
                                 <p class="info__description">
                                 Make your work more fun in the office with this companion app. Just link the Hololist App with your smart glasses and forget the days of monotonous, repetitive and boring work.
@@ -186,10 +306,13 @@
                                 </div>
                                 <div class="shorts__when">
                                     <h1>when?</h1>
-                                    <p class="date">Oct-Jan 2025 (original), <br> Dez-Jan 2026 (re-design)</p>
+                                    <p class="date">
+                                    Oct-Jan 2025 (original)
+                                    Dez-Jan 2026 (Re-Design)
+                                    </p>
                                 </div><div class="shorts__do">
                                     <h1>what i did?</h1>
-                                    <p class="tools">Research, Design, Prototyping, Wireframing, Re-Design</p>
+                                    <p class="tools">Branding, Research, Wireframing, Design, Prototyping</p>
                                 </div>
                             </div>
 
@@ -200,6 +323,7 @@
                      </div>
                      </div>
              </div>
+
 
             <!-- //// TABLET/MOBILE PORTFOLIO //// -->
              <div class="mobile__container">

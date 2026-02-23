@@ -187,14 +187,20 @@ $width-card-default-m: 5em;
 
                         &__thumbnail{
 
-                        background-color: #fbfbfb;
-                        width: 50%;
+                        background-color: var(--c-dark);
+                        width: 70%;
                         height: 100%;
                         display: flex;
                         flex-flow: column nowrap;
                         align-items: center;
                         justify-content: center;
                         overflow: hidden;
+
+                        .lottie{
+                            width: 100%;
+                            height: fit-content;
+                            object-fit: contain;
+                        }
 
                         figure{
                             width: 100%;
@@ -261,6 +267,10 @@ $width-card-default-m: 5em;
                             padding: 1em;  
                             
                             color: var(--c-light);
+
+                            p{
+                                line-height: 130%;
+                            }
 
                             .heading{
                                 h1{

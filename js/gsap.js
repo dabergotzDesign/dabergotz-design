@@ -1,3 +1,26 @@
+/* TITLE */
+const title = document.querySelector(".welcome h1");
+const subtitle = document.querySelector(".welcome h2");
+
+const titleSplit = new SplitType(title, {types: 'chars, words'});
+
+gsap.from(titleSplit.chars, {
+    x: '-100%',
+    opacity: 0,
+    duration: 0.1,
+    ease: 'elastic.in(0.5, 1)',
+    stagger: 0.1
+});
+
+const subtitleSplit = new SplitType(subtitle, {types: 'chars, words'});
+
+gsap.from(subtitleSplit.words, {
+    opacity: 0,
+    duration: 0.5,
+    ease: 'power1.in',
+    stagger: 0.05,
+});
+
 /* HOME */
 
 gsap.registerPlugin(ScrollTrigger);
@@ -168,7 +191,7 @@ splitTitle.forEach((char, i)=>{
             toggleActions: 'play play none reverse'
         }
     })
-})
+});
 
 
 /* CONTACT */
