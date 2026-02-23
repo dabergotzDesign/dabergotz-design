@@ -152,7 +152,7 @@ splitTitle.forEach((char, i)=>{
             toggleActions: 'play play none reverse'
         }
     })
-})
+});
 
 
 /* CONTACT */
