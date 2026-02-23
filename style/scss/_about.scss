@@ -47,17 +47,17 @@ $media-mobile: 480px;
                 flex-flow: column nowrap;
                                 
                 position: relative;
-                margin-bottom: 56em;
+                //margin-bottom: 56em;
 
                 @media screen and (max-width: $media-tablet) {
-                    margin-bottom: 90em;
+                    //margin-bottom: 90em;
                 }
                          
 
                 @media screen and (max-width: $media-mobile) {
                     gap:0;
                     justify-content: flex-start;
-                    margin-bottom: 40em;
+                    //margin-bottom: 40em;
                 }
 
                 .mask{

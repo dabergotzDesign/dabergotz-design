@@ -58,12 +58,9 @@ body{
     display: flex;
     flex-flow: column nowrap;
     height: 100vh;
+    padding-top: var(--size-96);
 
-    @media screen and (max-width: $media-laptop) {
-        padding-top: var(--size-96);
-    }
-
-    
+        
     @media screen and (max-width: $media-tablet) {
         gap: 0;
         width: 100vw;
@@ -93,7 +90,7 @@ body{
 
         @media screen and (max-width: $media-mobile) {
             font-size: var(--size-48);
-            -webkit-text-stroke: 1px var(--c-light);
+            -webkit-text-stroke: 2px var(--c-light);
         }
     }
     
@@ -160,7 +157,7 @@ body{
 
         @media screen and (max-width: $media-mobile) {
             width: 80vw;
-            -webkit-text-stroke: 1px var(--c-light);
+            //-webkit-text-stroke: 1px var(--c-light);
             font-size: var(--size-24);
             font-weight: 400;
         }

@@ -203,16 +203,19 @@ body{
                 height: fit-content; 
                 width: 40vw;
                 
-                transition: height 0.3s ease;
+                transition: all 0.3s ease;
 
                 &.hidden{
+                    transition: all 0.3s ease; 
                     height: 0;
+                    margin: 0;
                 }
             }
 
             ul{
                 display: flex;
                 flex-flow: column nowrap;
+                gap: var(--size-8);
                                  
                 li{
                     list-style: none;
@@ -242,11 +245,11 @@ body{
     }
 
     &__section{
-        height: 100vh;
+        height: fit-content;
         //margin-bottom: 36em;
 
         @media screen and (max-width: $media-mobile) {
-             margin-bottom: 32em;   
+             //margin-bottom: 32em;   
         }
     }
 
@@ -301,12 +304,12 @@ body{
             gap: var(--size-16);
 
             @media screen  and (max-width: $media-tablet) {
-                transform: translateY(-25%);
+                //transform: translateY(-25%);
                 width: 100%;
             }
 
             @media screen and (max-width: $media-mobile) {
-                transform: translateY(-50%);
+                transform: translateY(0);
                 //margin-left: var(--size-32);
                 padding: var(--size-16) var(--size-16);
                 line-height: var(--size-32);

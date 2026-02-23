@@ -29,7 +29,7 @@ const splitTypes = document.querySelectorAll(".reveal");
 
 splitTypes.forEach((word, i)=>{
    
-    const text = new SplitType(word, {types: 'words'});
+    const text = new SplitType(word, {types: 'words, lines'});
 
     gsap.fromTo(text.words, {
 
