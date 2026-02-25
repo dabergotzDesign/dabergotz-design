@@ -1,3 +1,4 @@
+ /*
  const r_title = new rive.Rive({
   src: "./rive/ddesign_title.riv",
   canvas: document.getElementById("canvas"),
@@ -8,6 +9,7 @@
     r_title.resizeDrawingSurfaceToCanvas();
   },
 });
+*/
 
 /* PAUSE BG */
 const pause = document.querySelector(".pauseBG"),

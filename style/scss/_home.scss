@@ -29,8 +29,9 @@ $height: 36vh;
         justify-content: center;
    
         padding: clamp(0.5em, 4vw, 20em);
-
-        height: 100vh;
+        
+        height: fit-content;
+        width: 100%;
         background-color: var(--c-dark-transparent-50);
 
         @media screen and (max-width: $media-laptop) {
@@ -38,13 +39,12 @@ $height: 36vh;
         }
 
         @media screen and (max-width: $media-tablet) {
-            height: 80vh;
+            //height: 80vh;
         }
 
         @media screen and (max-width: $media-mobile) {                
             height: auto;
-            width: 120vw;
-        } 
+        }
 
         .reveal{
             padding: var(--size-72);
@@ -61,15 +61,11 @@ $height: 36vh;
             text-transform: uppercase;
 
             font-family: var(--font-noto);
-            font-size: var(--size-96);
+            font-size: clamp(1rem, 3.8vw, 5rem);
             font-weight: 900;
 
             width: 100vw;
             line-height: 124%;
-
-            @media screen and (max-width: $media-laptop) {
-                font-size: var(--size-80);
-            }
 
             
             .underline{
@@ -106,15 +102,6 @@ $height: 36vh;
                 }
             }
 
-            @media screen and (max-width: $media-tablet) {                
-                font-size: 1.2rem;
-                width: 80%;
-            } 
-
-            @media screen and (max-width: $media-mobile) {                
-                font-size: 1.2rem;
-                width: 100%;
-            } 
 
             /* span{
                 color: var(--c-highlight);

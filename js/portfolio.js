@@ -53,7 +53,7 @@ const closeButton = document.querySelector('.close');
 /* GALLERY */
 /* const g_next = document.querySelector(".gallery__controls .next"),
       g_prev = document.querySelector(".gallery__controls .prev"),
-      gallery = document.querySelector(".portfolio__gallery"); */
+      gallery = document.querySelector(".portfolio__gallery");
 
 const r_gallery_1 = new rive.Rive({
         src: "../rive/portfolio_cards.riv",
@@ -98,8 +98,10 @@ const r_gallery_4 = new rive.Rive({
           r_gallery_4.resizeDrawingSurfaceToCanvas();
         },
 });
+*/
 
 /* RIVE EVENTS */
+/*
 function onRiveEvent(riveEvent){
   const eventData = riveEvent.data;
   if(eventData.name === "view"){
@@ -115,3 +117,4 @@ r_gallery_2.on(rive.EventType.RiveEvent ,onRiveEvent);
 r_gallery_3.on(rive.EventType.RiveEvent ,onRiveEvent);
 r_gallery_4.on(rive.EventType.RiveEvent ,onRiveEvent);
 
+*/
