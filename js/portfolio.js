@@ -139,6 +139,7 @@ playVideo.forEach(vid => {
     
     vid.addEventListener("click", togglePlay);
 });
+*/
 
 const playVideos = document.querySelectorAll(".article__container figure video");
 

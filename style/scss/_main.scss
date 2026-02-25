@@ -729,7 +729,7 @@ body{
         }
 
         /* Rive title */
-        #canvas{
+        /* #canvas{
                 width: 80vw;
                 height: auto;
                 object-fit: contain;
@@ -749,7 +749,7 @@ body{
                 @media screen and (max-width: $media-mobile) {                
                     display: none;
                 } 
-            }
+            } */
 
         .welcome{
 
@@ -954,13 +954,14 @@ body{
             height: 100vh;
             filter: brightness(80%);
             border: none;
-            z-index: -10;  
+            z-index: -10;
+            background: url("../../img/backgrounds/ddesign_vm_bg_noLogo.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 95% center;
 
             &.paused{
                 background: url("../../img/backgrounds/ddesign_vm_bg_noLogo.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: 95% center;
             }
 
             &.paused canvas{
