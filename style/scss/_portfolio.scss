@@ -167,7 +167,7 @@ $width-card-default-m: 5em;
             
             &__card{
                 
-            
+                min-height: 500px;
             
                 .wrap{
                     display: flex;
@@ -271,6 +271,7 @@ $width-card-default-m: 5em;
 
                             p{
                                 line-height: 130%;
+                                letter-spacing: 1px;
                             }
 
                             .heading{
