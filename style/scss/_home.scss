@@ -32,15 +32,10 @@ $height: 36vh;
         
         height: fit-content;
         width: 100%;
+        min-width: 120vw;
         background-color: var(--c-dark-transparent-50);
 
-        @media screen and (max-width: $media-laptop) {
-            height: 120vh;
-        }
-
-        @media screen and (max-width: $media-tablet) {
-            //height: 80vh;
-        }
+       
 
         @media screen and (max-width: $media-mobile) {                
             height: auto;

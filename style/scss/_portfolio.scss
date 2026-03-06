@@ -165,7 +165,7 @@ $media-mobile: 450px;
             
             &__card{
                 
-            
+                min-height: 500px;
             
                 .wrap{
                     display: flex;
@@ -269,6 +269,7 @@ $media-mobile: 450px;
 
                             p{
                                 line-height: 130%;
+                                letter-spacing: 1px;
                             }
 
                             .heading{
