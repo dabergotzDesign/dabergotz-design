@@ -437,13 +437,10 @@ body{
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 animation: mouseScroll 0.8s infinite alternate ease-in-out;
-            }
 
-            @media screen and (max-width: $media-mobile) {
-                position: absolute;
-                bottom: 25%;
-                left: 50%;
-                transform: translateX(-50%);
+                @media screen and (max-width: $media-tablet) {                
+                    font-size: 7px;
+                }
             }
         }
          
