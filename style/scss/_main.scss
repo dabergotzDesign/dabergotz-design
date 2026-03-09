@@ -417,8 +417,27 @@ body{
             scale: 1.5;
             margin: auto;
             margin-top: var(--size-32);
+            display: flex;
+            justify-content: space-between;
+            gap: var(--size-16);
 
-            animation: mouseScroll 0.8s infinite linear alternate-reverse;
+            .line{
+                height: 1px;
+                width: 56px;
+                background-color: var(--c-light-transparent-10);
+                margin: auto;
+            }
+
+            .scroll{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: var(--font-comfortaa);
+                font-size: var(--size-8);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                animation: mouseScroll 0.8s infinite alternate ease-in-out;
+            }
 
             @media screen and (max-width: $media-mobile) {
                 position: absolute;
