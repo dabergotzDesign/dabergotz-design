@@ -144,10 +144,30 @@ gsap.from(card, {
 
 
 /* ABOUT */
+const about_container = document.querySelector("#about");
+const about_box = document.querySelector(".about__intro");
+const about_title = document.querySelector(".about__text h3");
+const about_text = document.querySelectorAll(".about__description");
+const download = document.querySelector(".download__cv");
+
+
 const tools = document.querySelectorAll(".tool");
 const toolbox = document.querySelector(".about__toolbox");
 
 gsap.set(tools, { opacity: 0, transformOrigin: 'center center'});
+gsap.set(about_box, {width:0, height:0, opacity:0, transformOrigin: 'center center'});
+gsap.set(about_title, {opacity: 0});
+gsap.set(about_text, {opacity: 0});
+gsap.set(download, {opacity: 0});
+
+let aboutTl = gsap.timeline({defaults: {ease: 'power4.inOut', duration: 0.8}, scrollTrigger: {trigger: about_container, start: 'top 80%', end: 'bottom 20%', toggleActions: 'play play none none'}});
+
+aboutTl.to(about_box, {width: '100%', height: '100%', opacity: 1})
+.to(about_title, {opacity: 1, duration: 0.5}, "-=0.5")
+.to(about_text, {opacity: 1, duration: 1, stagger: 0.2}, "-=0.3")
+.to(download, {opacity: 1, duration: 1,}, "-=0.3")
+   
+
 
 gsap.to(tools, {
     opacity: 1,
