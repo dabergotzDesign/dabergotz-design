@@ -249,11 +249,7 @@ body{
 
     &__section{
         height: fit-content;
-        //margin-bottom: 36em;
-
-        @media screen and (max-width: $media-mobile) {
-             //margin-bottom: 32em;   
-        }
+        margin-bottom: 8em;
     }
 
     .space{
@@ -603,12 +599,12 @@ body{
                 } 
             }
 
-            @media screen and (max-width: $media-tablet) {                
+            /* @media screen and (max-width: $media-tablet) {                
                 background: url("../../img/dddesign_logo_transparent.png");
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-            } 
+            } */ 
     
         }
     }
