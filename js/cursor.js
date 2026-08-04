@@ -5,6 +5,7 @@ const desktop = window.matchMedia("(min-width: 1024px) and (hover: hover) and (p
 
 if (desktop.matches) {
 
+
 document.addEventListener('mousemove', e =>{
     cursor.style.left = e.pageX + 'px';
     cursor.style.top = e.pageY + 'px';
@@ -16,8 +17,10 @@ window.addEventListener("mousedown", ()=>{
 })
 
 window.addEventListener("mouseup", ()=>{
-    cursor.style.backgroundColor = "#0d0d0d";
+    cursor.style.backgroundColor = "#0d0d0d50";
 })
+
+
 
 hover.forEach(e => {
     e.addEventListener("mouseenter", ()=>{
@@ -90,7 +93,8 @@ hover.forEach(e => {
         }
         
     })
-});
+
+    });
 
 
     /* Hover return */

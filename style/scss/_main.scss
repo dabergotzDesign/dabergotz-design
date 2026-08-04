@@ -145,6 +145,8 @@ body{
 }
 
 
+
+
 .sidebar{
     position: fixed;
 }
@@ -562,8 +564,10 @@ body{
     .top__menu{
         display: flex;
         align-items: flex-end;
-        justify-content: flex-end;
-        width: fit-content;
+        justify-content: space-between;
+        width: 100%;
+
+        position: relative;
 
         padding-left: var(--size-80);
         padding-top: 0;
@@ -694,7 +698,7 @@ body{
                     text-decoration: none;
 
                     @media screen and (max-width: $media-tablet) {
-                            font-size: var(--size-8);
+                        font-size: var(--size-8);
                     }
                 }
             }
@@ -721,7 +725,7 @@ body{
         margin-top: 16vh;
 
         position: relative;
-        z-index: 3;
+        z-index: 100;
 
        
         @media screen and (max-width: $media-tablet) {
@@ -1039,7 +1043,7 @@ body{
             color: var(--c-highlight);
             background: var(--c-dark);
             font-family: var(--font-noto);
-            font-size: var(--size-24);
+            font-size: var(--size-16);
             text-decoration: none;
             text-transform: capitalize;
             border: 2px solid var(--c-highlight);
@@ -1078,6 +1082,22 @@ body{
              
     }
 
+
+}
+
+.case_study{
+
+    .top__menu-mobile{
+
+        @media screen and (max-width:$media-tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            backdrop-filter: blur(8px);            
+        }
+
+    }
 
 }
 

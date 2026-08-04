@@ -21,6 +21,16 @@ gsap.from(titleSplit.words, {
     delay: 3.5,
     y: '100%',
     opacity: 0,
+    duration: 1,
+    ease: 'power4.in',
+    stagger: 0.1,
+    delay: 0.5
+});
+
+// Animate bullet points on page load
+gsap.from(bulletPoints, {
+    opacity: 0,
+    x: -50,
     duration: 0.5,
     ease: 'power4.in',
     stagger: 0.1,
@@ -53,6 +63,8 @@ navTimeline.to(nav, {
     stagger: 0.1,
     delay: 0.005
 });
+
+
 
 /* HOME */
 

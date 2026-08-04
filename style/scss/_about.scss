@@ -518,7 +518,7 @@ $media-mobile: 480px;
                         
                         strong{
                             font-weight: 700;
-                            -webkit-text-stroke: 1px var(--c-light);
+                            letter-spacing: 2px;
                         }
 
                         @media screen and (max-width: $media-tablet) {
