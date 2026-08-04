@@ -14,14 +14,12 @@ footer{
     backdrop-filter: blur(10px);
     color: var(--c-light);
  
-    //position: relative;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     
     padding: 2.5em 4em;
-    z-index: 2;
+    z-index: 99;
 
     @media screen and (max-width: $media-tablet) {
         padding: 0.8rem 6rem;

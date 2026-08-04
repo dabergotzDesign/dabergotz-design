@@ -6,17 +6,23 @@
     --c-dark-transparent-25: rgba(13,13,13,0.25);
     --c-light: #f2f2f2;
     --c-light-transparent-50: rgba(242, 242, 242, 0.5);
+    --c-light-transparent-25: rgba(242, 242, 242, 0.25);
     --c-light-transparent-10: rgba(242, 242, 242, 0.1);
     --c-highlight: #FF006D;
+    --c-highlight-green: #00FF6A;
+    --c-highlight-yellow: #FFFF00;
+    --c-highlight-red: #FF0000;
 }
 
 //Font Sizes
 :root{
     --size-4: 0.25rem;
    --size-8: 0.5rem;
+   --size-12: 0.75rem;
    --size-16: 1rem;
    --size-24: 1.5rem;
    --size-32: 2rem;
+   --size-40: 2.25rem;
    --size-48: 2.5rem;
    --size-56: 3rem;
    --size-64: 3.5rem;
@@ -28,7 +34,8 @@
 
 //Fonts
 :root{
-    --font-comfortaa: 'Comfortaa', Arial, sans-serif; //used for text
+    /* --font-comfortaa: 'Comfortaa', Arial, sans-serif; //used for text */
+    --font-space: 'Space Grotesk', Arial, sans-serif; //used for body text
     --font-noto: 'Noto Sans JP', Helvetica, sans-serif; //used for titles
 }
 

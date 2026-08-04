@@ -20,15 +20,17 @@
     <!-- FONTS, ICONS -->
     <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@master/src/app/ci.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@master/src/app/ci.min.css"/> -->
 
-    <!-- Comfortaa -->
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-
-    <!-- Noto Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Noto Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Space Grotesk -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
 
 
 
@@ -36,8 +38,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
-    <script src="https://unpkg.com/@rive-app/webgl2"></script>
+    <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>  
+    <!-- <script src="https://unpkg.com/@rive-app/webgl2"></script> -->
   
     <script src="./js/gsap.js" defer></script>
     <script src="./js/portfolio.js" defer></script>
@@ -61,9 +63,7 @@
 
  <div class="custom_cursor"></div>
        
-<main class="main">
-
-   
+<main class="main">   
     <!-- anchor -->
     <div id="top"></div>
 
@@ -71,13 +71,13 @@
 
         <img src="./img/dddesign_logo_transparent.png" alt="dabergotzDesign logo">
 
-        <nav>
+        <nav class="menu__nav">
             <ul>
-                <li class="hover"><a href="#home">home</a></li>
-                <li class="hover"><a href="#portfolio">portfolio</a></li>
-                <li class="hover"><a href="#about">about</a></li>
-                <li class="hover"><a href="#blog">blog</a></li>
-                <li class="hover"><a href="#contact">contact</a></li>
+                <li class="hover hover_nav"><a href="#home">home</a></li>
+                <li class="hover hover_nav"><a href="#portfolio">portfolio</a></li>
+                <li class="hover hover_nav"><a href="#about">about</a></li>
+                <li class="hover hover_nav"><a href="#blog">blog</a></li>
+                <li class="hover hover_nav"><a href="#contact">contact</a></li>
             </ul>
         </nav>
     </div>
@@ -99,28 +99,30 @@
     
     <div class="splash">
 
-         <button class="pauseBG hover"><i class="fa-solid fa-pause"></i></button>
+         <button class="pauseBG hover hover_pause"><i class="fa-solid fa-pause"></i></button>
 
          <!-- /// Title -->
         <!-- <canvas id="canvas" width="1440" height="500" ></canvas> -->
          <div class="welcome">
+            <div class="quick__info">
+                <div class="available"><span class="dot_indicator"></span> Looking for work</div>
+                <div class="location"><i data-lucide="map-pin"></i> Berlin, Germany</div>
+            </div>
             <h1 aria-label="Innovating User Experience">Reimagining the Modern Web</h1>
-           <!--  <h2>Hey there, I’m <span>Dennis Dabergotz</span>, <span>UI/UX Designer</span>, 
-                blending the latest trends and tech to craft intuitive interfaces that turn everyday interactions into moments of delight.</h2> -->
-         <h2>
+
+         <!-- <h2>
             Meet <span class="underline">Dennis Dabergotz</span>, a <span style="color: var(--c-highlight);">UI & Web Designer</span> with a front-end web development background. 
             <br> Explore my work and creations below - if there’s something to design, count me in.
-         </h2>
+         </h2> -->
+
+         <ul class="info__bulletpoints">
+            <li><span class="bullet_point"><i data-lucide="chevron-right"></i></span>Name: Dennis Dabergotz</li>
+            <li><span class="bullet_point"><i data-lucide="chevron-right"></i></span> Specialization: UI & Web Design</li>
+            <li><span class="bullet_point"><i data-lucide="chevron-right"></i></span> Background: Front-end Web Development</li>
+            <li><span class="bullet_point"><i data-lucide="chevron-right"></i></span> Experience: 3+ years in UI/UX Design and Front-end Development</li>
+         </ul>
         
         </div>
-
-
-        <!-- <div class="welcome__mobile">
-            <h1>innovating user Experience</h1>
-            <h2>Hey there, I’m <span>Dennis Dabergotz</span>, <span>UI/UX Designer</span>, blending the latest trends and tech to craft intuitive interfaces that turn everyday interactions into moments of delight.</h2>
-        </div> -->
-        
-        <!-- <i data-lucide="mouse" class="scroll__indicator"></i> -->
 
         <div class="scroll__indicator">
             <div class="line"></div>
@@ -159,99 +161,37 @@
             <!-- //// GALLERY • DESKTOP PORTFOLIO //// -->
              <div class="portfolio__wrapper">
                 
-                <!-- Portfolio piece 01 - REMscape -->
-                 <!-- <div class="portfolio__card p_canvas-1">
-                    <canvas id="canvas-1" width="1700px" height="560px" ></canvas>
-                 </div> -->
-
-                <div class="portfolio__card p_canvas-1">
-                     <div class="wrap">
-                        <div class="portfolio__thumbnail">
-                            <lottie-player class="lottie" id="lottie_p1" src="./lottie/remscape.json" background="transparent" speed="1"></lottie-player>
+                <!-- Portfolio piece 01 - Remember Our Tales -->
+                <div class="portfolio__card">
+                    <div class="card__thumbnail"><video><source src="./video/portfolio/RoT/RoT - Thumbnail.webm" type="video/webm"></video></div>
+                    <div class="card__info">
+                        <h1>Creating a <span>living archive</span> of human lives and legacies.</h1>
+                        <div class="tag__wrapper">
+                            <div class="tag">UI/UX Design</div>
+                            <div class="tag">Branding</div>
+                            <div class="tag">Archive</div>
                         </div>
-                         <div class="portfolio__info">
-                            <div class="heading">
-                                <h1 class="info__title">REMscape</h1>
-                                <h2 class="info__short">Sleep tracker + Dream Journal App (Prototype)</h2>
-                                <p class="info__description">
-                                A sleep tracker companion app with a dream journal REMscape is a sleep tracker and dream journal that analyzes your chronotype to optimize your sleep.
-                                 Track your sleep patterns, journalize your dreams, and wake up feeling refreshed and energized every morning.
-                                </p>
-                            </div>
-                            <div class="problem">
-                                <h1>problem?</h1>
-                                <p class="problem__statement">
-                                    Busy people struggling with sleep need to find a way to establish a better sleeping routine because lack of sleep affects them to function throughout the day
-                                </p>
-                            </div>
-                            <div class="shorts">
-                                <div class="shorts__what">
-                                    <h1>what used?</h1>
-                                    <p class="tools">Figma, Affinity, Adobe Photoshop</p>
-                                </div>
-                                <div class="shorts__when">
-                                    <h1>when?</h1>
-                                    <p class="date">Oct-Nov 2024</p>
-                                </div><div class="shorts__do">
-                                    <h1>what i did?</h1>
-                                    <p class="tools">Research, Design, Testing</p>
-                                </div>
-                            </div>
+                    </div>
+                    <a class="link hover hover_portfolio" href="./html/cs_rememberourtales.html"></a>
+                </div>
 
-                            <div class="info__links">
-                                <a class="link__explore hover" href="https://www.behance.net/gallery/212660155/REMscape" target="_blank">explore</a>
-                                <a class="link__prototype hover" href="https://www.figma.com/proto/xfHZWTrEJ2fLo94m92pDWC/REMscape?page-id=120%3A747&node-id=321-245&p=f&viewport=345%2C149%2C0.2&t=0slq8We50eQzv2xY-1&scaling=scale-down&content-scaling=fixed" target="_blank">view prototype</a>
-                         </div>
-                     </div>
-                     </div>
-             </div>
 
                 <!-- Portfolio piece 02 - Asozial -->
-                 <div class="portfolio__card p_canvas-2">
-                     <div class="wrap">
-                        <div class="portfolio__thumbnail">
-                            <lottie-player class="lottie" id="lottie_p2" src="./lottie/asozial.json" background="transparent" speed="1"></lottie-player>
+                <div class="portfolio__card">
+                    <div class="card__thumbnail"><video><source src="./video/portfolio/CS asozial - Intro animation.webm" type="video/webm"></video></div>
+                    <div class="card__info">
+                        <h1>finding the right <span>match</span> for developers! creating a tinder like experience to let developers find their next projects.</h1>
+                        <div class="tag__wrapper">
+                            <div class="tag">UI/UX Design</div>
+                            <div class="tag">Matching System</div>
+                            <div class="tag">Social Media</div>
                         </div>
-                         <div class="portfolio__info">
-                            <div class="heading">
-                                <h1 class="info__title">ASOZIAL - SOCIAL MEDIA FOR THE ANTI-SOCIAL DEVELOPER</h1>
-                                <h2 class="info__short">'asozial' noun: German for being anti-social. </h2>
-                                <p class="info__description">
-                                I worked for a client on the matching system for the social website 'asozial',
-                                 creating a Tinder-like feature tailored for developers - think Tinder meets LinkedIn,
-                                  designed to help devs connect, collaborate, and network. The design followed the client’s existing style for a cohesive look.
-                                </p>
-                            </div>
-                            <div class="problem">
-                                <h1>problem?</h1>
-                                <p class="problem__statement">
-                                    How can we effectively connect developers interested in working on projects with those offering them?
-                                </p>
-                            </div>
-                            <div class="shorts">
-                                <div class="shorts__what">
-                                    <h1>what used?</h1>
-                                    <p class="tools">Figma, Affinity Design, Adobe Photoshop</p>
-                                </div>
-                                <div class="shorts__when">
-                                    <h1>when?</h1>
-                                    <p class="date">Nov-Dec 2024</p>
-                                </div><div class="shorts__do">
-                                    <h1>what i did?</h1>
-                                    <p class="tools">Research, Design, Wireframing, Testing, Prototyping</p>
-                                </div>
-                            </div>
-
-                            <div class="info__links">
-                                <a class="link__explore hover" href="https://www.behance.net/gallery/214598859/asozial-Case-Study-(Matching)-Dennis-Dabergotz" target="_blank">explore</a>
-                                <a class="link__prototype hover" href="https://www.figma.com/proto/HFwKti3Ucl0BnzMdfVPsTu/-DENNIS---Team---%7C-FINAL-PROJECT%E2%80%94-asozial?page-id=8370%3A386&node-id=8374-1744&p=f&viewport=683%2C543%2C0.07&t=eCR3K96tTuZfsOj5-1&scaling=contain&content-scaling=fixed&starting-point-node-id=8374%3A1744" target="_blank">view prototype</a>
-                         </div>
-                     </div>
-                     </div>
-             </div>
+                    </div>
+                    <a class="link hover hover_portfolio" href="./html/cs_asozial.html"></a>
+                </div>
 
                  <!-- Portfolio piece 03 - Go Duck Yourself -->
-                 <div class="portfolio__card p_canvas-3">
+                 <!-- <div class="portfolio__card p_canvas-3">
                      <div class="wrap">
                         <div class="portfolio__thumbnail">
                             <lottie-player class="lottie" id="lottie_p3" src="./lottie/GDY.json" background="transparent" speed="1"></lottie-player>
@@ -287,14 +227,13 @@
 
                             <div class="info__links">
                                 <a class="link__explore hover" href="https://www.behance.net/gallery/228057571/Go-Duck-Yourself(Yes-we-mean-code)" target="_blank">explore</a>
-                                <a class="link__prototype hover" href="https://www.figma.com/proto/Ce4xQ5QbeVsUY85YSweX7A/Rubber-Duck-Debugging?page-id=1%3A2&node-id=222-1435&p=f&viewport=494%2C25%2C0.24&t=WXtS6jURHdUaKvc5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=222%3A1435" target="_blank">view prototype</a>
-                         </div>
+                            </div>
                      </div>
                      </div>
-             </div>
+             </div> -->
 
                  <!-- Portfolio piece 04 - Hololist -->
-                 <div class="portfolio__card p_canvas-4">
+                 <!-- <div class="portfolio__card p_canvas-4">
                      <div class="wrap">
                         <div class="portfolio__thumbnail">
                             <lottie-player class="lottie" id="lottie_p4" src="./lottie/HoloList.json" background="transparent" speed="1"></lottie-player>
@@ -332,99 +271,49 @@
 
                             <div class="info__links">
                                 <a class="link__explore hover" href="https://www.behance.net/gallery/215958577/holoList-Case-Study" target="_blank">explore</a>
-                                <a class="link__prototype hover" href="https://www.figma.com/proto/hViStKpNoc32o0JZsMQHjM/holoList?page-id=0%3A1&node-id=22-6366&viewport=390%2C427%2C0.21&t=vw3yXRHZku7JfDBr-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2" target="_blank">view prototype</a>
-                         </div>
+                            </div>
                      </div>
                      </div>
-             </div>
+             </div> -->
 
 
             <!-- //// TABLET/MOBILE PORTFOLIO //// -->
              <div class="mobile__container">
 
-                <!-- REMscape -->
-                <div class="card__wrapper">
+                <!-- Remember Our Tales -->
+                 <div class="card__wrapper">
                     <div class="card__thumbnail">
-                        <img class="thumbnail" src="./img/portfolio/ddesign - REMscape_thumbnail.png" alt="remscape thumbnail">
+                        <img class="thumbnail RoT" src="./img/portfolio/cs_rememberourtales/RoT-thumbnail_mobile.jpg" alt="Remember Our Tales - The Human Archive thumbnail">
                     </div>
-                    <div class="card__info">
-                        <div class="info">
-                            <h1 class="info__title">remscape</h1>
-                            <h2 class="info__short">Sleep tracker + Dream Journal app (UI Design Prototype)</h2>
-                            <p class="info__description">
-                            A sleep tracker companion app with a dream journal REMscape is a sleep tracker and dream journal that analyzes your chronotype to optimize your sleep.
-                            Track your sleep patterns, journalize your dreams, 
-                            and wake up feeling refreshed and energized every morning.</p>
-                        </div>
-                        <div class="info__problem">
-                            <h1 class="problem__title">problem?</h1>
-                            <p class="problem__statement">
-                            Busy people struggling with sleep need to find a way to establish a better sleeping routine 
-                            because lack of sleep affects them to function throughout the day.</p>
-                        </div>
-                        <div class="info__shorts">
-                            <div class="shorts__what">
-                                <h1>what used?</h1>
-                                <p class="tools">Figma, Affinity Designer, Photoshop</p>
-                            </div>
-                            <div class="shorts__when">
-                                <h1>when?</h1>
-                                <p class="date">Oct-Nov 2024</p>
-                            </div><div class="shorts__do">
-                                <h1>what i did?</h1>
-                                <p class="tools">Research, Wireframing, Testing, Prototyping</p>
-                            </div>
-                        </div>
-                        <div class="info__links">
-                            <a class="link__explore" href="https://www.behance.net/gallery/212660155/REMscape" target="_blank">explore</a>
-                            <a class="link__prototype" href="https://www.figma.com/design/xfHZWTrEJ2fLo94m92pDWC/REMscape?node-id=120-747&t=R4ZW6sPYAwPzMQqm-1" target="_blank">view prototype</a>
+                    <div class="card__info-mobile">
+                        <h1>Creating a <span>living archive</span> of human lives and legacies.</h1>
+                        <div class="tag__wrapper">
+                            <div class="tag">UI/UX Design</div>
+                            <div class="tag">Branding</div>
+                            <div class="tag">Archive</div>
                         </div>
                     </div>
+                    <a class="link" href="./html/cs_rememberourtales.html"> explore</a>
                 </div>
-
+               
                 <!-- asozial -->
                 <div class="card__wrapper">
                     <div class="card__thumbnail">
-                        <img class="thumbnail" src="./img/portfolio/asozial-thumbnail.jpg" alt="asozial social platform thumbnail">
+                        <img class="thumbnail asozial" src="./img/portfolio/cs_asozial/asozial_thumbnail_mobile.jpg" alt="asozial social platform thumbnail">
                     </div>
-                    <div class="card__info">
-                        <div class="info">
-                            <h1 class="info__title">ASOZIAL - SOCIAL MEDIA FOR THE ANTI-SOCIAL DEVELOPER</h1>
-                            <h2 class="info__short">'asozial' noun: German for being anti-social.</h2>
-                            <p class="info__description">
-                            Final project at Ironhack, I worked on the matching system for the social website asozial. 
-                            The project’s style was based directly on the client’s existing website, ensuring a cohesive design.
-                            My main task was developing a Tinder-like matching system tailored for developers - think of it as Tinder meets LinkedIn, designed to help devs connect, collaborate, and network.
-                            </p>
-                        </div>
-                        <div class="info__problem">
-                            <h1 class="problem__title">problem?</h1>
-                            <p class="problem__statement">
-                                How can we effectively connect developers interested in working on projects with those offering them?
-                            </p>
-                        </div>
-                        <div class="info__shorts">
-                            <div class="shorts__what">
-                                <h1>what used?</h1>
-                                <p class="tools">Figma, Affinity Designer, Photoshop</p>
-                            </div>
-                            <div class="shorts__when">
-                                <h1>when?</h1>
-                                <p class="date">Dec-Jan 2024 / 2025</p>
-                            </div><div class="shorts__do">
-                                <h1>what i did?</h1>
-                                <p class="tools">Research, Wireframing, Testing, Prototyping</p>
-                            </div>
-                        </div>
-                        <div class="info__links">
-                            <a class="link__explore" href="https://www.behance.net/gallery/214598859/asozial-Case-Study-(Matching)-Dennis-Dabergotz" target="_blank">explore</a>
-                            <a class="link__prototype" href="https://www.figma.com/proto/HFwKti3Ucl0BnzMdfVPsTu/-DENNIS---Team---%7C-FINAL-PROJECT%E2%80%94-asozial?page-id=8370%3A386&node-id=8374-1744&p=f&viewport=683%2C543%2C0.07&t=eCR3K96tTuZfsOj5-1&scaling=contain&content-scaling=fixed&starting-point-node-id=8374%3A1744" target="_blank">view prototype</a>
+                    <div class="card__info-mobile">
+                        <h1>finding the right <span>match</span> for developers! creating a tinder like experience to let developers find their next projects.</h1>
+                        <div class="tag__wrapper">
+                            <div class="tag">UI/UX Design</div>
+                            <div class="tag">Matching System</div>
+                            <div class="tag">Social Media</div>
                         </div>
                     </div>
+                    <a class="link" href="./html/cs_asozial.html"> explore</a>
                 </div>
 
                 <!-- Go Duck Yourself -->
-                 <div class="card__wrapper">
+                <!--  <div class="card__wrapper">
                     <div class="card__thumbnail">
                         <img class="thumbnail" src="./img/portfolio/GDY_thumbnail_mobile.jpg" alt="Go Duck Yourself thumbnail">
                     </div>
@@ -461,10 +350,10 @@
                             <a class="link__prototype" href="https://www.figma.com/proto/Ce4xQ5QbeVsUY85YSweX7A/Rubber-Duck-Debugging?page-id=1%3A2&node-id=38-1176&p=f&viewport=342%2C224%2C0.24&t=bdzP8Yvn9jnfM4Vi-1&scaling=scale-down&content-scaling=fixed" target="_blank">view prototype</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Hololist -->
-                 <div class="card__wrapper">
+                <!--  <div class="card__wrapper">
                     <div class="card__thumbnail">
                         <img class="thumbnail" src="./img/blog-imgs/holoList/00_Thumbnail.png" alt="holoList thumbnail">
                     </div>
@@ -500,12 +389,12 @@
                             <a class="link__prototype" href="https://www.figma.com/proto/hViStKpNoc32o0JZsMQHjM/holoList?page-id=0%3A1&node-id=22-6366&viewport=390%2C427%2C0.21&t=vw3yXRHZku7JfDBr-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2" target="_blank">view prototype</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
 
              </div>
 
-             <a class="more__projects hover" href="https://www.behance.net/dabergotzDesign" target="_blank">even more projects</a>
+             <a class="more__projects hover hover_portfolio" href="https://www.behance.net/dabergotzDesign" target="_blank">even more projects</a>
 
         </section>
 
@@ -524,18 +413,21 @@
                                                 
                         <!-- <div class="about__intro-text"> -->
                         <p class="about__description">
-                            Hello everyone, I'm <span style="color: var(--c-highlight);">Dennis Dabergotz</span>, a former <strong>Front-End Web Developer</strong> with a passion for design, games, and technology.
-                            Originating from a hands-on crafting background, I transitioned to the digital realm at the School for Games, initially aiming to become a Game Developer.
+                            Hello everyone, I'm <span style="color: var(--c-highlight);">Dennis Dabergotz</span>, a <strong>UI & Web Designer</strong> with a background in Game Development and Front-End Web Development.
+                             My career began at the School for Games, where I studied Game Development and discovered my passion for creating digital experiences.
                         </p>
                         <p class="about__description">
-                            However, upon graduation, I was steered towards Web Development due to its stability compared to game development. 
-                            I quickly grew fond of Web Development, particularly the Front-End and Design aspects. This led me to explore <strong>UI/UX Design</strong> through bootcamps, online courses and self-study.
-                            Now, I'm keen to pursue a career in UI & Web Design.
+                            After transitioning into Front-End Web Development, I found myself increasingly drawn to the design side of the process-crafting intuitive interfaces, 
+                            improving user experiences, and bringing ideas to life visually. This interest led me to expand my skills through <strong>UI/UX Design</strong> training, online courses,
+                             and continuous self-learning.
+                        </p>
+                        <p class="about__description">
+                            Today, I leverage both my technical and creative expertise to design engaging, user-focused websites and digital products.
                         </p>
                         
                 </div>
 
-                <button class="download__cv hover">Get my resume <i data-lucide="download"></i></button>
+                <button class="download__cv hover hover_dl">Get my resume <i data-lucide="download"></i></button>
 
                 </div>
 
@@ -544,45 +436,45 @@
 
                     <div class="tools">
                         <ul class="first_row">
-                            <li class="tool hover">
+                            <li class="tool hover hover_nav">
                                 <img height="32" width="32" src="https://cdn.simpleicons.org/figma/white" />
                                 <a href="https://www.figma.com/" target="_blank">Figma</a>
                             </li>
-                            <li class="tool hover">
+                            <li class="tool hover hover_nav">
                                 <img height="32" width="32" src="https://cdn.simpleicons.org/rive/white" />
                                 <a href="https://www.rive.app" target="_blank">Rive</a>
                             </li>
-                            <li class="tool hover">
+                            <li class="tool hover hover_nav">
                                 <img height="32" width="32" src="./img/svg/unicorn_logo.svg" />
                                 <a href="https://www.unicorn.studio/" target="_blank">unicorn.studio</a>
                             </li>
-                            <li class="tool hover">
+                            <li class="tool hover hover_nav">
                                 <img height="32" width="32" src="./img/svg/affinity_icon.svg" />
                                 <a href="https://affinity.serif.com/en-us/photo/" target="_blank">Affinity</a>
                             </li>
-                            <li class="tool hover">
+                            <li class="tool hover hover_nav">
                                 <img height="32" width="32" src="./img/svg/ps_logo.svg" />
                                 <a href="https://www.adobe.com/products/photoshop.html" target="_blank">Photoshop</a>
                             </li>                                                     
                         </ul>
                         <ul class="second_row">
-                            <li class="tool hover">
+                            <li class="tool hover hover_nav">
                                 <img height="32" width="32" src="https://cdn.simpleicons.org/html5/white" />
                                 <a href="https://html.com/html5/" target="_blank">HTML</a>
                             </li>
-                            <li class="tool hover">
+                            <li class="tool hover hover_nav">
                                 <img height="32" width="32" src="https://cdn.simpleicons.org/css/white" />
                                 <a href="https://www.w3schools.com/Css/" target="_blank">CSS</a>
                             </li>
-                            <li class="tool hover">
+                            <li class="tool hover hover_nav">
                                 <img height="32" width="32" src="https://cdn.simpleicons.org/sass/white" />
                                 <a href="https://sass-lang.com/" target="_blank">Sass</a>
                             </li>
-                            <li class="tool hover">
+                            <li class="tool hover hover_nav">
                                 <img height="32" width="32" src="https://cdn.simpleicons.org/javascript/white" />
                                 <a href="https://www.javascript.com/" target="_blank">Javascript</a>
                             </li>
-                            <li class="tool hover">
+                            <li class="tool hover hover_nav">
                                 <img height="32" width="32" src="https://cdn.simpleicons.org/claude/white" />
                                 <a href="https://www.claude.ai/" target="_blank">Claude</a>
                             </li>
@@ -604,7 +496,7 @@
                 <h2>Get updates to the site & other projects in my blog, happy reading</h2>
             </div>
 
-            <a href="./html/blog.html" class="blog__link hover" >to the blog <i data-lucide="arrow-right" width="64px" height="64px"></i></a>
+            <a href="./html/blog.html" class="blog__link hover hover_nav" >to the blog <i data-lucide="arrow-right" width="64px" height="64px"></i></a>
             
         </section>
 
@@ -623,26 +515,26 @@
 
                         <form class="form" id="form1" method="POST" action="https://formspree.io/f/myyoeqvb" action="../js/contact.js" onsubmit="return formValidation()">
                                                             
-                        <div class="input__wrap hover">
+                        <div class="input__wrap hover hover_input">
                             <input name="name" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,100]] input" id="name" />               
                             <label for="name" class="input__label">Full Name</label>
                         </div>
         
-                        <div class="input__wrap hover">
+                        <div class="input__wrap hover hover_input">
                             <input name="email" type="text" placeholder=" " class="validate[required,custom[email]] input" id="email" />
                             <label for="email" class="input__label">Email</label>
                         </div>
                         
-                        <div class="input__wrap hover">
+                        <div class="input__wrap hover hover_input">
                             <input name="subject" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,30]] input" id="subject" />
                             <label for="subject" class="input__label">Subject</label>
                         </div>
         
                             
-                            <textarea name="text" class="validate[required,custom[onlyLetter],length[6,300]] input" id="message" placeholder="What's your message?"></textarea>
+                            <textarea name="text" class="validate[required,custom[onlyLetter],length[6,300]] input hover hover_input" id="message" placeholder="What's your message?"></textarea>
                             
     
-                            <input type="submit" value="Send Message →" class="submit hover" disabled/>
+                            <input type="submit" value="Send Message →" class="submit hover hover_submit" disabled/>
                                    
                         </form>
         
@@ -681,7 +573,7 @@
                 </div>
          </section>
         
-         <a href="#top" class="toTop hover">get back to top <i data-lucide="arrow-up"></i></a>
+         <a href="#top" class="toTop hover hover_nav">get back to top <i data-lucide="arrow-up"></i></a>
   
 
          <div class="ddesign__bg" data-us-project="zHCxnrlbVOnRuLGgVhtl"></div>

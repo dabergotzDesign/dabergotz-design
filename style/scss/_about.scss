@@ -37,8 +37,7 @@ $media-mobile: 480px;
 
 
         #about{
-
-                padding-top: 6rem;
+                height: fit-content;
                 background-size: cover;
                 background-position: center center;
                 background-repeat: no-repeat;
@@ -272,7 +271,7 @@ $media-mobile: 480px;
                         color: var(--c-light);
                         text-decoration: none;
                         font-size: var(--size-32);
-                        font-family: var(--font-comfortaa);
+                        font-family: var(--font-space);
                         font-weight: 700;
                         text-align: center;
                         width:100%;
@@ -383,17 +382,22 @@ $media-mobile: 480px;
                     }
         
                     &__description{
-                        font-family: var(--font-comfortaa);
+                        font-family: var(--font-space);
                         font-size: var(--size-32);
                         font-weight: 300;                        
                         padding: 1.5rem 0.25rem;
                         margin: auto;
                         width: 100%;
                         line-height: 140%;
+
+                        
+                        @media screen and (max-width: $media-mobile) {
+                            font-weight: 400;
+                        }
                         
                         strong{
                             font-weight: 700;
-                            -webkit-text-stroke: 1px var(--c-light);
+                            letter-spacing: 2px;
                         }
 
                         @media screen and (max-width: $media-tablet) {

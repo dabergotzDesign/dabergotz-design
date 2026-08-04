@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/css/style.css">
+    <link rel="shortcut icon" href="../img/logo_favicon.png" type="image/x-icon">
+
+
+    
+    <!-- FONTS, ICONS -->
+    <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@master/src/app/ci.min.css"/> -->
+
+    <!-- Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+
+
+    <!-- GSAP, ScrollTrigger, Lenis, Rive -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/@rive-app/webgl2"></script>
+  
+    <!--<script src="../js/gsap.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+    <script src="../js/welcome_title.js" defer></script>
+    <script src="../js/resume_dl.js" defer></script> -->
+    <script src="../js/case_studies.js" defer></script>
+    <script src="../js/portfolio.js" defer></script>
+    
+    <script src="../js/lucide.js" defer></script>
+    <script src="../js/smooth-scroll.js" defer></script>
+    <script src="../js/cursor.js" defer></script>
+    
+    <!-- Lottie -->
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script>
+
+ 
+    
+    <title>dabergotzDesign - UI/UX Design & Frontend Development</title>
+
+</head>
+<body>
+
+    <div class="custom_cursor"></div>
+
+    <!-- back to top button -->
+    <a href="#top" class="scroll__top hover hover_up"><i data-lucide="arrow-up"></i></a>
+
+    <main class="main case_study">
+        <!-- anchor -->
+    <div id="top"></div>
+
+    <div class="top__menu">
+        <img src="../img/dddesign_logo_transparent.png" alt="dabergotzDesign logo">
+    <!--
+
+        <nav class="hidden">
+            <ul>
+                <li class="hover hover_nav"><a href="../index.html">home</a></li>
+                <li class="hover hover_nav"><a href="../index.html#portfolio">portfolio</a></li>
+                <li class="hover hover_nav"><a href="../index.html#about">about</a></li>
+                <li class="hover hover_nav"><a href="../index.html#blog">blog</a></li>
+                <li class="hover hover_nav"><a href="../index.html#contact">contact</a></li>
+            </ul>
+        </nav>
+    -->
+    </div>
+
+    <div class="top__menu-mobile">
+        <img class="cs__menu-image" src="../img/dddesign_logo_transparent.png" alt="dabergotzDesign logo">
+        <!--
+        <a href="javascript:void(0);" class="menu">
+            <i data-lucide="menu"></i>
+        </a>
+        <nav class="menu__nav hidden">
+            <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="../index.html#portfolio">portfolio</a></li>
+                <li><a href="../index.html#about">about</a></li>
+                <li><a href="../index.html#blog">blog</a></li>
+                <li><a href="../index.html#contact">contact</a></li>
+            </ul>
+        </nav>
+        -->
+    </div>
+
+    <section id="asozial" class="main__section">
+        <div class="navbar__wrapper">
+        <nav class="cs__sidenav">
+                <ul>
+                    <li class="active hover hover_nav"><a href="#top">intro</a></li>
+                    <li class="hover hover_nav"><a href="#mission">mission</a></li>
+                    <li class="hover hover_nav"><a href="#solution">solution</a></li>
+                    <li class="hover hover_nav"><a href="#research">research</a></li>
+                    <li class="hover hover_nav"><a href="#decisions">decisions</a></li>
+                    <li class="hover hover_nav"><a href="#visuals">visuals</a></li>
+                    <li class="hover hover_nav"><a href="#reflection">reflection</a></li>
+                </ul>
+                <a class="button__back hover hover_back" href="../index.html#portfolio"><i data-lucide="arrow-left"></i></a>
+            </nav>
+            <button class="button__hide hidden"><i data-lucide="chevron-left"></i></button>
+            <button class="button__show"><i data-lucide="chevron-right"></i></button>
+        </div>
+        <div class="cs__content">
+
+            <div id="intro" class="cs__intro">
+                <div class="cs__intro-card">
+                    <div class="cs__intro-description">
+                        <h5>01/ Intro</h5>
+                        <h1 class="cs__intro_title">Asozial - Social Media for the anti-social developers</h1>
+                        <p>
+                            Asozial is a social media platform designed for anti-social developers who prefer to communicate through code and minimalistic interfaces.
+                        </p>
+                    </div>
+                    <div class="cs__intro-info">
+                        <div>
+                            <h5>Role</h5>
+                            <p>UI/UX Design, Research, Testing</p>
+                        </div>
+                        <div>
+                            <h5>Tools</h5>
+                            <p>Figma, Affinity</p>
+                        </div>
+                        <div>
+                            <h5>Duration</h5>
+                            <p>4 weeks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="mission" class="cs__mission">
+                <div class="cs__heading">
+                    <h5>02/ Mission</h5>
+                    <h1 class="cs__title">Merging LinkedIn and Tinder together, to let Developers connect without the social pressure</h1>
+                </div>
+                <article class="cs__article">
+                    <div class="article__container-text">
+                        <h5>The Problem</h5>
+                            <p>
+                            Graduated. Motivated. Ready to build. <br>
+                            But finding the right project or collaborators is often harder than expected. 
+                            Although platforms like LinkedIn, GitHub Explore, CodeTriage, and many others provide plenty of opportunities, 
+                            the sheer volume of options makes it difficult to discover projects that truly match your skills and interests.                    
+                            </p>
+                    </div>
+                    <div class="article__container">
+                        <figure>
+                            <video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;"><source src="../video/portfolio/asozialCS_githubExplore.mp4" type="video/mp4" autoplay muted></video>
+                            <i data-lucide="play"></i>
+                            <figcaption>GitHub Explore overview</figcaption>
+                        </figure>
+                        <div class="article__container-images">
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/CodeTriage.png" alt="CodeTriage projects overview">
+                                <figcaption>CodeTriage projects overview</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/LinkedIn groups.png" alt="LinkedIn groups web development">
+                                <figcaption>LinkedIn groups - Web Development</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div id="solution" class="cs__solution">
+                <div class="cs__heading">
+                    <h5>03/ Solution</h5>
+                    <h1 class="cs__title">get the developers together and let them find their right project</h1>
+                </div>
+                <article class="cs__article">
+                    <div class="article__container-text">
+                        <h5>your github is your profile</h5>
+                            <p>
+                            Imagine turning your GitHub profile into a matchmaking profile for developers.
+                            </p>
+                            <p>
+                            Let your code, projects, and open-source contributions speak for themselves. <br>
+                             Match with developers who share your interests or discover projects that need your skills.
+                            </p>
+                            <p>
+                            Build together, grow your network, and unlock new career opportunities.                 
+                            </p>
+                    </div>
+                    <div class="article__container">
+                        <figure>
+                            <video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;"><source src="../video/portfolio/asozialCS_matching.mp4" type="video/mp4" autoplay muted></video>
+                            <i data-lucide="play"></i>
+                            <figcaption>GitHub Explore overview</figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </div>
+
+            <div id="research" class="cs__research">
+                <div class="cs__heading">
+                    <h5>04/ Research</h5>
+                    <h1 class="cs__title">How does the project find its way to the developer, and vice versa?</h1>
+                </div>
+                <article class="cs__article">
+
+                    <div class="article__container-text">
+                        <h5>Source problem</h5>
+                            <p>
+                            With a background in web development, I knew the problem well:                    
+                            </p>
+                            <p>
+                            Junior developers need experience to get hired, but finding the right projects to gain that experience is often overwhelming.
+                            </p>
+                            
+                    </div>
+                    <hr>
+                    <div class="article__container-text">
+                        <h5>what we have</h5>
+                            <p>
+                                Looking for Social Media specified for Web Developers:                    
+                            </p>
+                            <ul>
+                                <li>Dev.to</li>
+                                <li>LinkedIn Groups</li>
+                                <li>GitHub Explore</li>
+                                <li>CodeTriage</li>
+                                <li>& a lot of sites alike</li>
+                            </ul>
+                            <p>This mass on social media can be overwhelming for new developers.</p>
+                            
+                    </div>
+                    <hr>
+                    <div class="article__container-text">
+                        <h5>interview findings</h5>
+                            <p>
+                            Breaking into tech shouldn't be this hard.                    
+                            </p>
+                            <p>
+                               New developers are expected to have experience before they can get hired, 
+                               yet gaining that experience isn't easy. They turn to hackathons, open-source, and side projects to build their portfolios, 
+                               only to face an overwhelming number of options and little guidance on where to start. 
+                            </p>                            
+                    </div>
+
+                </article>
+            </div>
+
+            <div id="decisions" class="cs__decisions">
+                <div class="cs__heading">
+                    <h5>05/ Decisions</h5>
+                    <h1 class="cs__title">Meet, collaborate, get experience,
+                    a platform for developers to share experience</h1>
+                </div>
+                <article class="cs__article">
+                    <div class="article__container-text">
+                        <h5>use github as base</h5>
+                            <p>
+                            GitHub already contains everything needed to showcase a developer's skills. By analyzing a developer's profile and comparing it with other developers or the requirements of a project, it's easy to identify compatible matches - making it simpler to connect the right people with the right opportunities.                 
+                            </p>
+                    </div>
+                    <div class="article__container">
+                        <figure>
+                            <img class="imgCS" src="../img/portfolio/cs_asozial/signIn.png" alt="asozial landing page">
+                            <figcaption>Asozial landing page</figcaption>
+                        </figure>
+
+                        <div class="article__container-text">
+                        <h5>show your project, gather collaborators</h5>
+                            <p>
+                            Have a project you'd like to share? Turn your GitHub repository into a project profile and match with developers who want to contribute.
+                            Showcase your idea, pitch your vision, highlight the tech stack, and find teammates who are excited to build it with you.                
+                            </p>
+                    </div>
+                    <div class="article__container-images">
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/UserProfile_default.png" alt="User Match card collapsed">
+                                <figcaption>User Match card collapsed</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/UserProfile.png" style="height:100%" alt="User Match card expanded">
+                                <figcaption>User Match card expanded</figcaption>
+                            </figure>
+                        </div>
+                    <div class="article__container-images">
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/Match Project card.png" alt="Project Match card expanded">
+                                <figcaption>Project Match card expanded</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/Match Project card_default.png" alt="Project Match card collapsed">
+                                <figcaption>Project Match card collapsed</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                    
+                </article>
+            </div>
+
+            <div id="visuals" class="cs__visuals">
+                <div class="cs__heading">
+                    <h5>06/ Visuals</h5>
+                    <h1 class="cs__title">just like code, minimal can be enough</h1>
+                </div>
+                <article class="cs__article">
+                    <div class="article__container">
+                    <div class="article__container-text">
+                        <h5>simplicity meets functionality</h5>
+                            <p>
+                            Inspired by GitHub's visual identity, the interface uses a minimal black-and-white palette with accent colors highlighting interactions and key profile elements.
+                             Thoughtful spacing and component placement create depth while maintaining a clean visual hierarchy.         
+                            </p>
+                    </div>
+                    <div class="article__container-images column">
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/typeface.png" alt="Asozial typeface - Kanit">
+                                <figcaption>Asozial typeface - Kanit</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/Colors.png" alt="Asozial color palette">
+                                <figcaption>Asozial color palette</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/tags.png" alt="tech stack tags">
+                                <figcaption>Tech Stack tags</figcaption>
+                            </figure>
+                            <div class="iconography">
+                                <h2>Icon set: Lucide</h2>
+                            </div>
+                        </div>
+                    </div>               
+                </article>
+            </div>
+
+            <div id="reflection" class="cs__reflection">
+                <div class="cs__heading">
+                    <h5>07/ Reflection</h5>
+                    <h1 class="cs__title">we found each other, we worked together, the project is done, now what? lessons learned.</h1>
+                </div>
+                <article class="cs__article">
+
+                    <div class="article__container">
+
+                        <div class="article__container-imgText">
+
+                            <img class="imgCS" src="../img/portfolio/cs_asozial/users & projects CTAs.png" alt="matching users or projects">
+
+                            <div>
+                                <h5>Confront with the core feature from the start</h5>
+                                <p>
+                                    Using Tinder firsthand gave me a clear understanding of its matching mechanics. 
+                                    That insight helped shape the user journey, making it easier to adapt the experience to a platform built for developers.                 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="article__container-imgText">
+                            
+                            <div>
+                                <h5>be more creative with a simple style</h5>
+                                <p>
+                                    The generous spacing leaves room for improvement. While the minimalist layout enhances readability, 
+                                    some areas feel underutilized. Subtle decorative elements, such as the bear mascot, 
+                                    and additional micro-interactions could make the interface feel more engaging without compromising its clean aesthetic.                
+                                </p>
+                            </div>
+
+                            <img class="imgCS" src="../img/portfolio/cs_asozial/180644770.png" alt="asozial mascot logo variant">
+
+                        </div>
+
+                        <div class="article__container-imgText">
+    
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/asozial - MockUp on City Street.webp" alt="asozial landing page mock-up">
+    
+                                <div>
+                                    <h5>A project for the future</h5>
+                                    <p>
+                                        With a background in web development, I understood the target audience and the challenges they face. That perspective helped me design a matching platform focused on making it easier to discover collaborators and projects.
+                                        Although development of “Asozial” is currently on hold, I still believe in the concept. With the right execution, it has the potential to become a go-to platform for developers looking for projects, collaborators, or new career opportunities.                
+                                    </p>
+                                </div>
+                            </div>
+
+                    </div>
+
+                                    
+ 
+                </article>
+                
+            </div>
+
+            <a href="./cs_rememberourtales.html" class="next_project">next project <i data-lucide="arrow-right"></i></a>
+
+        </div>
+    </section>
+
+    </main>
+
+    <div class="cs__modal m_disabled">
+        <!-- close -->
+         <div class="img__close hover hover_close"><i data-lucide="x"></i></div>
+         <figure class="modal__figure">
+            <img class="modal__img">
+            <figcaption class="modal__caption"></figcaption>
+         </figure>
+    </div>
+
+    <footer>
+
+        <div class="wrapper">
+            <p>made by Dennis Dabergotz</p>
+            <p class="tools">tools used <br> Figma, Affinity, Jitter, unicorn.studio</p>
+        </div>
+
+        <img class="imgCS" src="../img/dddesign_logo_transparent.png" height="2048px" width="2048px" alt="ddesign logo">
+
+        <img class="imgCS" class="watermark" src="../img/svg/ddesign_logo.svg" height="2048px" width="2048px" alt="ddesign logo">
+
+    </footer>
+</body>
+</html>

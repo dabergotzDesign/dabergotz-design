@@ -127,7 +127,7 @@ $height: 36vh;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
-            gap: 8em;
+            gap: 12em;
 
                         
             margin: auto;
@@ -149,7 +149,7 @@ $height: 36vh;
             }
 
             @media screen and (max-width: $media-mobile) {
-                gap: 0;
+                gap: 0.5em;
                 height: 40vh;
             }
             

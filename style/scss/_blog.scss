@@ -9,7 +9,7 @@ $color-lightgrey: #bbb;
     color: var(--c-light);
     text-transform: uppercase;
     font-size: var(--size-h3);
-    font-family: var(--font-comfortaa);
+    font-family: var(--font-space);
     font-weight: 200;
 
     //padding-top: 4rem;
@@ -119,6 +119,7 @@ body{
         @media screen and (max-width: $media-mobile) {
             font-size: var(--size-16);
             padding: var(--size-16);
+            margin-top: var(--size-16);
         }
 
         &:hover{
@@ -181,7 +182,7 @@ body{
     //sub headline
     h2{
 
-        font-family: var(--font-comfortaa);
+        font-family: var(--font-space);
         font-size: var(--size-32);
         color: var(--c-light);
         width: 50%;
@@ -461,7 +462,7 @@ body{
                         }
                         
                         p{
-                            font-family: var(--font-comfortaa);
+                            font-family: var(--font-space);
                             font-size: 18px;
                             line-height: 130%;
                             letter-spacing: 1px;
@@ -491,7 +492,7 @@ body{
                         ul{
                             color: var(--c-light);
                             font-size: 18px;
-                            font-family: var(--font-comfortaa);
+                            font-family: var(--font-space);
 
                             margin: auto;
                             margin-left: 12vw;
@@ -507,7 +508,7 @@ body{
                                     color: var(--c-light-transparent-50);
                                     text-align: center;
                                     padding: 0.5rem;
-                                    font-family: var(--font-comfortaa);
+                                    font-family: var(--font-space);
 
                                     @media screen and (max-width: $media-mobile) {
                                         padding: 0.1rem;
@@ -725,7 +726,7 @@ body{
                             
                             text-align: center;
                             color: var(--c-light);
-                            font-family: var(--font-comfortaa);
+                            font-family: var(--font-space);
                             letter-spacing: 1px;
                             background-color: var(--c-dark);
 

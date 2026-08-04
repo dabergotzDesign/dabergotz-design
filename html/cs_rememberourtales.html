@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/css/style.css">
+    <link rel="shortcut icon" href="../img/logo_favicon.png" type="image/x-icon">
+
+
+    
+    <!-- FONTS, ICONS -->
+    <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@master/src/app/ci.min.css"/> -->
+
+    <!-- Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+
+
+    <!-- GSAP, ScrollTrigger, Lenis, Rive -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/@rive-app/webgl2"></script>
+  
+    <!--<script src="../js/gsap.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+    <script src="../js/welcome_title.js" defer></script>
+    <script src="../js/resume_dl.js" defer></script> -->
+    <script src="../js/case_studies.js" defer></script>
+    <script src="../js/portfolio.js" defer></script>
+    
+    <script src="../js/lucide.js" defer></script>
+    <script src="../js/smooth-scroll.js" defer></script>
+    <script src="../js/cursor.js" defer></script>
+    
+    <!-- Lottie -->
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script>
+
+ 
+    
+    <title>dabergotzDesign - UI/UX Design & Frontend Development</title>
+
+</head>
+<body>
+
+    <div class="custom_cursor"></div>
+
+    <!-- back to top button -->
+    <a href="#top" class="scroll__top hover hover_up"><i data-lucide="arrow-up"></i></a>
+
+    <main class="main case_study">
+        <!-- anchor -->
+    <div id="top"></div>
+
+    <div class="top__menu">
+        <img src="../img/dddesign_logo_transparent.png" alt="dabergotzDesign logo">
+    <!--
+
+        <nav class="hidden">
+            <ul>
+                <li class="hover hover_nav"><a href="../index.html">home</a></li>
+                <li class="hover hover_nav"><a href="../index.html#portfolio">portfolio</a></li>
+                <li class="hover hover_nav"><a href="../index.html#about">about</a></li>
+                <li class="hover hover_nav"><a href="../index.html#blog">blog</a></li>
+                <li class="hover hover_nav"><a href="../index.html#contact">contact</a></li>
+            </ul>
+        </nav>
+    -->
+    </div>
+
+    <div class="top__menu-mobile">
+        <img class="cs__menu-image" src="../img/dddesign_logo_transparent.png" alt="dabergotzDesign logo">
+        <!--
+        <a href="javascript:void(0);" class="menu">
+            <i data-lucide="menu"></i>
+        </a>
+        <nav class="menu__nav hidden">
+            <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="../index.html#portfolio">portfolio</a></li>
+                <li><a href="../index.html#about">about</a></li>
+                <li><a href="../index.html#blog">blog</a></li>
+                <li><a href="../index.html#contact">contact</a></li>
+            </ul>
+        </nav>
+        -->
+    </div>
+
+    <section id="rememberourtales" class="main__section">
+        <div class="navbar__wrapper">
+        <nav class="cs__sidenav">
+                <ul>
+                    <li class="active hover hover_nav"><a href="#top">intro</a></li>
+                    <li class="hover hover_nav"><a href="#mission">mission</a></li>
+                    <li class="hover hover_nav"><a href="#solution">solution</a></li>
+                    <li class="hover hover_nav"><a href="#research">research</a></li>
+                    <li class="hover hover_nav"><a href="#decisions">decisions</a></li>
+                    <li class="hover hover_nav"><a href="#visuals">visuals</a></li>
+                    <li class="hover hover_nav"><a href="#reflection">reflection</a></li>
+                </ul>
+                <a class="button__back hover hover_back" href="../index.html#portfolio"><i data-lucide="arrow-left"></i></a>
+            </nav>
+            <button class="button__hide hidden"><i data-lucide="chevron-left"></i></button>
+            <button class="button__show"><i data-lucide="chevron-right"></i></button>
+        </div>
+        <div class="cs__content">
+
+            <div id="intro" class="cs__intro">
+                <div class="cs__intro-card">
+                    <div class="cs__intro-description">
+                        <h5>01/ Intro</h5>
+                        <h1 class="cs__intro_title">remember our tales - Archive for human history</h1>
+                        <p>
+                            Archiving every human in history to keep them and keep their legacy alive.
+                            Preserving special stories, biographies and people everyone should have been heard about.
+                        </p>
+                    </div>
+                    <div class="cs__intro-info">
+                        <div>
+                            <h5>Role</h5>
+                            <p>UI/UX Design, Lead Design, Research, Testing</p>
+                        </div>
+                        <div>
+                            <h5>Tools</h5>
+                            <p>Figma, Affinity, Google Stitch, HTML, CSS, JS</p>
+                        </div>
+                        <div>
+                            <h5>Duration</h5>
+                            <p>Ongoing (8+ months)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="mission" class="cs__mission">
+                <div class="cs__heading">
+                    <h5>02/ Mission</h5>
+                    <h1 class="cs__title">The impossible mission of archiving human history of every human</h1>
+                </div>
+                <article class="cs__article">
+                    <div class="article__container-text">
+                        <h5>The Vision</h5>
+                            <p>
+                                We want to preserve human history by documenting every life, because everyone has a story worth telling. Too many lives fade into obscurity, even though their experiences, memories, and impact deserve to be remembered.                  
+                            </p>
+                    </div>
+                    <div class="article__container">
+                        <figure>
+                            <video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;"><source src="../video/portfolio/RoT/home_prototype.webm" type="video/mp4" autoplay muted></video>
+                            <i data-lucide="play"></i>
+                            <figcaption>Remember Our Tales - Home page</figcaption>
+                        </figure>
+                        <div class="article__container-images">
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Wall of Faces.jpg" alt="Section Wall of Faces">
+                                <figcaption>Wall of Faces</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Bio mock-up.png" alt="Obituary protoype design">
+                                <figcaption>Obituary - Protoype Design</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="article__container-text">
+                        <h5>Disclaimer: Please Read!</h5>
+                            <p>
+                                The project “Remember Our Tales” is for the moment presented in a prototype, the Wordpress site is still in an older state, with the new design not implemented.
+                            </p>
+                            <div class="prototype__container">
+                                <a class="hover hover_nav" href="https://dabergotzdesign.github.io/RememberOurTales_prototype/index.html" target="_blank">Prototype</a>
+                            </div>
+                    </div>
+
+                </article>
+            </div>
+
+            <div id="solution" class="cs__solution">
+                <div class="cs__heading">
+                    <h5>03/ Solution</h5>
+                    <h1 class="cs__title">Making the impossible possible to the eternal life. keep people alive through an online archive.</h1>
+                </div>
+                <article class="cs__article">
+                    <div class="article__container-text">
+                        <h5>legacy that lives on</h5>
+                            <p>
+                                Our obituaries celebrate a person's entire life, highlighting their greatest achievements and defining moments through written stories, an interactive timeline, and a photo gallery featuring images provided by their family or loved ones.                
+                            </p>
+                            <p>
+                                To ensure every story is authentic, we work closely with our customers, who provide the information and materials needed to bring each life to life. 
+                            </p>
+                    </div>
+                    <div class="article__container">
+                        <figure>
+                            <video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;"><source src="../video/portfolio/RoT/obituary_prototype.webm" type="video/mp4" autoplay muted></video>
+                            <i data-lucide="play"></i>
+                            <figcaption>Archive - Obituary Profile (AI Placeholder)</figcaption>
+                        </figure>
+                    </div>
+                    <div class="article__container-text">
+                        <h5>Share the stories and contribute</h5>
+                            <p>
+                            Anyone with a story to share can help preserve the legacy of someone they loved. As we work with the memories and personal data of those who have passed, we treat every story and every piece of material with the utmost care and respect.
+                            </p>
+                    </div>
+                    <div class="article__container">
+                        
+                        <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/send_story_form.png" alt="send a story form">
+                                <figcaption>Send a Story Form</figcaption>
+                        </figure>
+
+
+                        <!-- <figure>
+                            <video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;"><source src="../video/portfolio/RoT/obituary_prototype.webm" type="video/mp4" autoplay muted></video>
+                            <i data-lucide="play"></i>
+                            <figcaption>Contribute - Share a story form</figcaption>
+                        </figure> -->
+                    </div>
+                </article>
+            </div>
+
+            <div id="research" class="cs__research">
+                <div class="cs__heading">
+                    <h5>04/ Research</h5>
+                    <h1 class="cs__title">take it further over obituaries.</h1>
+                </div>
+                <article class="cs__article">
+                    
+                    <div class="article__container">
+
+                        <div class="article__container-imgText">
+
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Screenshot 2026-07-20 101129.png" alt="legacy.com">
+                                <figcaption>Legacy.com</figcaption>
+                            </figure>
+
+                            <div>
+                                <h5>faces upon faces</h5>
+                                <p>
+                                    To design a platform centered around personal biographies, I researched obituaries and similar websites that showcase people's life stories. 
+                                    While some features felt inappropriate for a respectful memorial platform, 
+                                    others - such as "On This Day" and obituary comments - inspired ideas that could encourage meaningful engagement without compromising the project's purpose.                 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="article__container-imgText">
+                            
+                            <div>
+                                <h5>Obituaries and learning from medieval age</h5>
+                                <p>
+                                    I began by analyzing the visual language of traditional obituaries, focusing on color palettes, typography, and decorative elements. The first concepts for Remember Our Tales were primarily black, white, and grey with subtle accent colors. 
+                                    <br> After learning from a colleague that lavender was historically associated with mourning, I incorporated the color into the evolving stylescapes, giving the project its distinctive visual identity.              
+                                </p>
+                            </div>
+
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Stylescapes.png" alt="stylescapes">
+                                <figcaption>Stylescapes</figcaption>
+                            </figure>
+
+                        </div>
+
+                        <div class="article__container-imgText">
+                            
+                                <figure>
+                                    <img class="imgCS" src="../img/portfolio/cs_rememberourtales/RoT_comaparison.jpg" alt="cut through old design and new">
+                                    <figcaption>Comparison of old & new design</figcaption>
+                                </figure>
+    
+                                <div>
+                                    <h5>A project for the future</h5>
+                                    <p>
+                                        With a background in web development, I understood the target audience and the challenges they face. That perspective helped me design a matching platform focused on making it easier to discover collaborators and projects.
+                                        Although development of “Asozial” is currently on hold, I still believe in the concept. With the right execution, it has the potential to become a go-to platform for developers looking for projects, collaborators, or new career opportunities.                
+                                    </p>
+                                </div>
+                            </div>
+
+                    </div>
+
+
+                </article>
+            </div>
+
+            <div id="decisions" class="cs__decisions">
+                <div class="cs__heading">
+                    <h5>05/ Decisions</h5>
+                    <h1 class="cs__title">everyone can contribute to the stories.</h1>
+                </div>
+                <article class="cs__article">
+                                 
+                    <div class="article__container">
+
+                        <div class="article__container-imgText">
+
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/home_old_design.png" alt="old Remember Our Tales home page">
+                                <figcaption>old Remember Our Tales home page</figcaption>
+                            </figure>
+
+                            <div>
+                                <h5>Bring the elements together</h5>
+                                <p>
+                                Although the website already contained some content when I joined the project, several pages were incomplete or entirely empty. 
+                                Before expanding the site, I restructured existing page layouts, researched the missing content, and refined how we wanted to present the project.
+                                </p>
+                                <p>
+                                    Based on this foundation, I introduced new page sections, designed entirely new pages, and added features that strengthened the overall experience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="article__container-imgText">
+                            
+                            <div>
+                                <h5>What can we do with wordpress?</h5>
+                                <p>
+                                   Working within the limitations of the current free WordPress plan was one of the project's main challenges. While designing the pages and design system, I had to balance creative ideas with what was technically feasible. To validate concepts early, I regularly switched between Figma and WordPress, testing designs directly in the CMS before refining them in Figma.
+                                </p>
+                                <p>
+                                    If the project evolves with a more flexible WordPress plan, I see opportunities to introduce richer interactions, animations, and even shader-based effects—bringing a more modern feel while staying true to the established visual identity.
+                                </p>
+                            </div>
+
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Stylescapes.png" alt="stylescapes">
+                                <figcaption>Stylescapes</figcaption>
+                            </figure>
+
+                        </div>
+
+                    </div>
+
+                </article>
+            </div>
+
+            <div id="visuals" class="cs__visuals">
+                <div class="cs__heading">
+                    <h5>06/ Visuals</h5>
+                    <h1 class="cs__title">keep it respectful and dignified.</h1>
+                </div>
+                <article class="cs__article">
+                    <div class="article__container">
+                    <div class="article__container-text">
+                        <h5>Use what’s given & learn from the past</h5>
+                            <p>
+                            Obituaries served as the primary inspiration for the visual design. My goal was to move beyond the initial black-and-white concept and create a more cohesive visual identity. Rather than using pure black and white, I introduced softer tones and reduced the number of accent colors to establish a clearer hierarchy. After exploring options such as gold and deep ink blue, lavender proved to be the perfect fit—not only visually, but also because of its historical association with mourning.
+                            </p>
+                            <p>
+                                Typography followed the same philosophy of elegance and clarity. A refined serif typeface is paired with a clean sans-serif for interface elements, while a handwritten display font adds a personal touch to obituary name banners.
+                            </p>
+                    </div>
+                    <div class="article__container-images column">
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Fonts.jpg" alt="Remember Our Tales typefaces">
+                                <figcaption>Typefaces</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Colors.jpg" alt="Remember Our Tales color palette">
+                                <figcaption>Color palette</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/shades.jpg" alt="color shades">
+                                <figcaption>Color Shades</figcaption>
+                            </figure>
+                            <div class="iconography">
+                                <h2>Icon set: Font Awesome</h2>
+                            </div>
+                        </div>
+                    </div>               
+                </article>
+            </div>
+
+            <div id="reflection" class="cs__reflection">
+                <div class="cs__heading">
+                    <h5>07/ Reflection</h5>
+                    <h1 class="cs__title">Looking back and forward</h1>
+                </div>
+                <article class="cs__article">
+
+                    <div class="article__container">
+
+                        <div class="article__container-imgText">
+
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Google_Stitch_ds.png" alt="Google Stitch Design System">
+                                <figcaption>Google Stitch Design System</figcaption>
+                            </figure>
+
+                            <div>
+                                <h5>Artificial Intelligence or artificial team mate?</h5>
+                                <p>
+                                    Using Google Stitch to generate initial page concepts significantly accelerated the design process. By providing a style guide and generating multiple layout variations for each page, I could quickly combine the strongest ideas into polished designs. This iterative workflow made building pages feel modular and highly efficient.                 
+                                </p>
+                                <p>
+                                    Since Stitch's built-in design system was limited, many generated components had to be refined to match the project's visual identity and design system. Although AI greatly increased the speed of exploration and layout creation, achieving a production-ready result still required careful editing and design decisions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="article__container-imgText">
+                            
+                            <div>
+                                <h5>a live prototype?!</h5>
+                                <p>
+                                    To create a realistic interactive prototype, I explored different approaches that would allow the design from Figma to be translated into a functional experience while still supporting fast iteration. Several AI-based tools, including Claude and Figma Make, were tested, but none provided a sufficiently efficient solution without significant investment.                
+                                </p>
+                                <p>
+                                    FigmaToCode became the most practical approach without using a MCP. By converting copied Figma frames into HTML with inline CSS or Tailwind styling, it allowed me to quickly transform static designs into interactive prototypes that closely resembled the final product.
+                                </p>
+                            </div>
+
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/prototype.png" alt="remember our tales prototype">
+                                <figcaption>Remember Our Tales prototype</figcaption>
+                            </figure>
+
+                        </div>
+
+                        <div class="article__container-imgText">
+                            
+                                <figure>
+                                    <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Mock-up_stones.jpg" alt="remember our tales landing page mock-up">
+                                    <figcaption>Remember Our Tales landing page mock-up</figcaption>
+                                </figure>
+    
+                                <div>
+                                    <h5>ongoing project</h5>
+                                    <p>
+                                        Remember Our Tales is a collaborative project created by freelancers who contribute their time alongside their jobs, studies, families, and personal lives. While this makes the development process gradual, everyone involved continues to move the project forward and bring the vision closer to reality.
+                                    </p>
+                                    <p>
+                                        As the project is still in an ongoing iteration and design phase, with the current foundation built on WordPress, this case study presents the prototype and the design direction for Remember Our Tales.
+                                    </p>
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div class="seperation_line"></div>
+
+                    <div class="article__container-text">
+                        <h5>Disclaimer: Please Read!</h5>
+                            <p>
+                                The project “Remember Our Tales” is for the moment presented in a prototype, the Wordpress site is still in an older state, with the new design not implemented.
+                            </p>
+                            <div class="prototype__container">
+                                <a class="hover hover_nav" href="https://dabergotzdesign.github.io/RememberOurTales_prototype/index.html" target="_blank">Prototype</a>
+                            </div>
+                    </div>
+                        
+                    <div>
+
+                    </div>    
+ 
+                </article>
+                
+            </div>
+
+            <a href="./cs_asozial.html" class="next_project">next project <i data-lucide="arrow-right"></i></a>
+
+        </div>
+    </section>
+
+    </main>
+
+    <div class="cs__modal m_disabled">
+        <!-- close -->
+         <div class="img__close hover hover_close"><i data-lucide="x"></i></div>
+         <figure class="modal__figure">
+            <img class="modal__img">
+            <figcaption class="modal__caption"></figcaption>
+         </figure>
+    </div>
+
+    <footer>
+
+        <div class="wrapper">
+            <p>made by Dennis Dabergotz</p>
+            <p class="tools">tools used <br> Figma, Affinity, Jitter, unicorn.studio</p>
+        </div>
+
+        <img class="imgCS" src="../img/dddesign_logo_transparent.png" height="2048px" width="2048px" alt="ddesign logo">
+
+        <img class="imgCS" class="watermark" src="../img/svg/ddesign_logo.svg" height="2048px" width="2048px" alt="ddesign logo">
+
+    </footer>
+</body>
+</html>

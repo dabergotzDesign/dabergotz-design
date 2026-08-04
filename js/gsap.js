@@ -1,25 +1,40 @@
 /* TITLE */
-const title = document.querySelector(".welcome h1");
-const subtitle = document.querySelector(".welcome h2");
+const quickInfo = document.querySelector(".quick__info");
+const welcomeTitle = document.querySelector(".welcome h1");
+const bulletPoints = document.querySelectorAll(".info__bulletpoints li");
 
-const titleSplit = new SplitType(title, {types: 'chars, words'});
-
-gsap.from(titleSplit.chars, {
-    x: '-100%',
+// Animate quick_info on page load
+gsap.from(quickInfo, {
     opacity: 0,
-    duration: 0.1,
-    ease: 'elastic.in(0.5, 1)',
-    stagger: 0.1
+    y: -50,
+    duration: 0.8,
+    ease: 'power2.out',
+    delay: 0.5
 });
 
-const subtitleSplit = new SplitType(subtitle, {types: 'chars, words'});
+// Animate h1 on page load
+const titleSplit = new SplitType(welcomeTitle, {types: 'chars, words'});
 
-gsap.from(subtitleSplit.words, {
+gsap.from(titleSplit.words, {
+    y: '100%',
     opacity: 0,
+    duration: 1,
+    ease: 'power4.in',
+    stagger: 0.1,
+    delay: 0.5
+});
+
+// Animate bullet points on page load
+gsap.from(bulletPoints, {
+    opacity: 0,
+    x: -50,
     duration: 0.5,
-    ease: 'power1.in',
-    stagger: 0.05,
+    ease: 'power2.out',
+    stagger: 0.2,
+    delay: 0.7
 });
+
+
 
 /* HOME */
 
