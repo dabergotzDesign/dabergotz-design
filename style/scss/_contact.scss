@@ -13,7 +13,7 @@ $media-mobile: 450px;
     width: 100%;
 
     color: var(--c-light);
-    font-size: var(--size-24);
+    font-size: var(--size-16);
     font-family: var(--font-space);
     cursor: none;
 }
@@ -33,10 +33,7 @@ $media-mobile: 450px;
             width: 100%;
                   
             margin: auto;
-            //margin-bottom: 10em;
-            //padding: var(--size-80) var(--size-16);
-
-            
+                        
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -78,18 +75,21 @@ $media-mobile: 450px;
             }
            
             .contacts{
+
                 &__wrapper{
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     justify-content: center;
-                    align-items: center;
-                    gap: var(--size-16);
+                    align-items: flex-start;
+                    gap: var(--size-48);
 
                     position: relative;
 
                     height: auto;
                     width: 100%;
                     margin: auto;
+                    padding: var(--size-72) 0;
+                    padding-top: var(--size-48);
                     
                     @media screen and (max-width: $media-tablet) {
                         gap: var(--size-8);
@@ -158,9 +158,9 @@ $media-mobile: 450px;
                 justify-content: space-between;
                 align-items: center;
                 gap: 1rem;
-                width: 100%;
+                width: 40vw;
                 height: auto;
-                padding: var(--size-72);
+                padding: var(--size-48);
                 overflow: hidden;
 
                 box-shadow: 2px 8px 0 6px var(--c-highlight);
@@ -172,19 +172,18 @@ $media-mobile: 450px;
                         padding: var(--size-16);
                         padding-top: var(--size-56);
                         margin-top: var(--size-16);
+                        width: 100%;
                     }
 
                 }
 
                 &__socials{
 
-                    text-align: center;
+                    text-align: right;
                     color: var(--c-light);
                     position: relative;
-                    margin-top: var(--size-32);
-                    padding: var(--size-72);
-                    padding-left: 0;
                     width: 100%;
+                    padding-right:var(--size-96);
 
                     @media screen and (max-width: $media-tablet) {
                         padding: var(--size-16);
@@ -192,11 +191,12 @@ $media-mobile: 450px;
                                            
                     .socials__title{
                         color: var(--c-highlight);
-                        text-align: left;
+                        text-align: right;
                         text-transform: uppercase;
                         font-family: var(--font-noto);
                         font-size: var(--size-48);
                         font-weight: 300;
+                        
 
                         width: 100%;
 
@@ -210,18 +210,10 @@ $media-mobile: 450px;
 
                     }
 
-                    /* div{
-                        font-size: 1.5rem;
-                        font-family: var(--font-space);
-
-                        @media screen and (max-width: $media-mobile) {
-                            
-                        }
-                    } */
-
+                  
                     ul{
                         padding-left: 0;
-                        padding-right: var(--size-80);
+                        
 
                         display: flex;
                         flex-flow: column nowrap;
@@ -344,14 +336,24 @@ $media-mobile: 450px;
             }
         }
 
+        .mail__wrapper{
+            .subtitle{
+                margin-bottom: var(--size-24);
+            }
+        }
 
         .mailForm{
 
-            width: 100%;
+            width: 40vw;
+
+            @media screen and (max-width: $media-mobile) {
+                    gap:var(--size-32);
+                    width: 100%;
+            }
                        
                       
             form{
-                width: 80vw;
+                width: 40vw;
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: space-evenly;
@@ -360,7 +362,8 @@ $media-mobile: 450px;
                 padding: 0 5%;
 
                 @media screen and (max-width: $media-mobile) {
-                    gap:var(--size-32)
+                    gap:var(--size-32);
+                    width: 100%;
                 }
 
             }
@@ -411,7 +414,7 @@ $media-mobile: 450px;
                         transform: translateY(-50%);
 
                         color: var(--c-light);
-                        font-size: var(--size-24);
+                        font-size: var(--size-16);
                         font-family: var(--font-space);
                         padding: var(--size-8);
 
@@ -430,7 +433,7 @@ $media-mobile: 450px;
             textarea{
                 @include formInput;
                 resize: vertical;
-                height: 240px;
+                height: 16vh;
             }
 
             .submit{
@@ -448,7 +451,7 @@ $media-mobile: 450px;
                 border-radius: var(--size-80);
                 background-color: var(--c-dark); 
 
-                font-size: var(--size-32);
+                font-size: var(--size-24);
                 font-family: var(--font-noto);
                 color: var(--c-light); 
 
@@ -456,6 +459,7 @@ $media-mobile: 450px;
 
                 @media screen and (max-width: $media-mobile) {
                     font-size: var(--size-16);
+                    padding: var(--size-8) var(--size-16);
                 }
 
                 
@@ -477,7 +481,15 @@ $media-mobile: 450px;
 
 
 
-        @keyframes popIn {
+ 
+
+    //}
+
+    //}    
+
+}
+
+       @keyframes popIn {
             0%{
                 scale: 0;
             }
@@ -554,12 +566,3 @@ $media-mobile: 450px;
                 filter: drop-shadow(2px 0 var(--c-blue)) drop-shadow(2px -1px var(--c-purple));
               }
         }
-
-
-    //}
-
-    //}
-
-    
-
-}
