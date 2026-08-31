@@ -463,9 +463,9 @@ body{
                         
                         p{
                             font-family: var(--font-space);
-                            font-size: 18px;
-                            line-height: 130%;
-                            letter-spacing: 1px;
+                            font-size: 20px;
+                            line-height: 28px;
+                            letter-spacing: 1.5%;
                             text-wrap: pretty;
 
                             margin: auto;
@@ -485,7 +485,7 @@ body{
                             }
                             
                             a{
-                                color: var(--text-link);
+                                color: var(--c-highlight);
                             }
                         }
 
@@ -543,6 +543,100 @@ body{
                                     width: 100%;
                                 }
                             }
+
+                        /* Slider */
+                        .slider__container{
+                            max-width: 40vw;
+                            margin: auto;
+                            position: relative;
+
+                            .slide{
+                                display: none;
+                                outline: 2px solid var(--c-light);
+
+                                figure img{
+                                    width: 100%;
+                                    height: auto;
+                                    object-fit: contain;
+                                }
+
+                                figcaption{
+                                    color: var(--c-light);
+                                    font-family: var(--font-noto);
+                                    text-align: center;
+                                    padding: var(--size-8);
+
+                                    @media screen and (max-width: $media-tablet) {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+
+                            .prev, .next{
+                                cursor: pointer;
+                                position: absolute;
+                                top: 50%;
+                                width: auto;
+                                margin-top: -22px;
+                                padding: var(--size-16);
+                                color: white;
+                                font-weight: bold;
+                                font-size: var(--size-16);
+                                transition: 0.6s ease;
+                                border-radius: 0 3px 3px 0;
+                                user-select: none;
+
+                                i,svg{
+                                    color: var(--c-highlight);
+
+                                    @media screen and (max-width: $media-tablet) {
+                                        width: var(--size-12);
+                                        height: var(--size-12);
+                                    }
+                                }
+                            }
+
+                            .prev:hover, .next:hover {
+                                background-color: var(--c-dark-transparent-50);
+                            }
+
+                            .next{
+                                right: 0;
+                                border-radius: 3px 0 0 3px;
+                            }
+
+                            .dots__container{
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: max-content;
+                            }
+
+                            .dot {
+                                cursor: pointer;
+                                height: var(--size-16);
+                                width: var(--size-16);
+                                margin: 0 2px;
+                                background-color: var(--c-light-transparent-50);
+                                border-radius: 50%;
+                                display: inline-block;
+                                transition: background-color 0.6s ease;
+                            }
+
+                            .active, .dot:hover {
+                                background-color: var(--c-highlight);
+                            }
+
+                            /* Fading animation */
+                            .fade {
+                                animation-name: fade;
+                                animation-duration: 1.5s;
+                            }
+
+                        }
+
+                        
+
 
                     }
 
@@ -936,4 +1030,9 @@ body{
     100% {
     filter: drop-shadow(2px 0 var(--c-blue)) drop-shadow(2px -1px magenta);
     }
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
