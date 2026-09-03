@@ -47,6 +47,7 @@
     <script src="./js/welcome_title.js" defer></script>
     <script src="./js/resume_dl.js" defer></script>
     <script src="./js/topNav.js" defer></script>
+    <script src="./js/blog_update.js" defer></script>
 
 
     <script src="./js/lucide.js" defer></script>
@@ -501,14 +502,45 @@
 
 
         <section id="blog" class="main__section">
-            <h1 class="blog__title">blog</h1>
 
-            <div class="title__wrapper">
-                <h1 class="title letters">what is happening?</h1>
-                <h2>Get updates to the site & other projects in my blog, happy reading</h2>
+            <div class="blog__container-front">
+                <h1 class="blog__title">blog</h1>
+    
+                <div class="title__wrapper">
+                    <h1 class="title letters">what is happening?</h1>
+                    <h2>Get updates to the site & other projects in my blog, happy reading</h2>
+                </div>
+    
+                <a href="./html/blog.html" class="blog__link hover hover_nav" >to the blog <i data-lucide="arrow-right" width="64px" height="64px"></i></a>
             </div>
 
-            <a href="./html/blog.html" class="blog__link hover hover_nav" >to the blog <i data-lucide="arrow-right" width="64px" height="64px"></i></a>
+            <div class="teaser__cards-container">
+                <div class="teaser__card-wrapper">
+                    <div class="teaser__card hover active">
+                        <img class="teaser__thumbnail" src="#" alt="" width="1920px" height="1080px">
+                        <h1 class="teaser__title">active</h1>
+                        <a class="teaser__link hover hover_nav" href="./html/blog.html#post-1"></a>
+                    </div>
+    
+                    <div class="teaser__card middle">
+                        <img class="teaser__thumbnail" src="#" alt="" width="1920px" height="1080px">
+                        <h1 class="teaser__title">middle</h1>
+                        <a class="teaser__link hover hover_nav" href="./html/blog.html#post-2"></a>                        
+                    </div>
+    
+                    <div class="teaser__card bottom">
+                        <img class="teaser__thumbnail" src="#" alt="" width="1920px" height="1080px">
+                        <h1 class="teaser__title">bottom</h1>
+                        <a class="teaser__link hover hover_nav" href="./html/blog.html#post-3"></a>                        
+                    </div>
+                </div>
+
+                <div class="slider_controls">
+                    <button class="next-card">Next <span><i data-lucide="arrow-right"></i></span></button>
+                </div>
+                
+            </div>
+
             
         </section>
 

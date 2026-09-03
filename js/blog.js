@@ -155,3 +155,11 @@ window.addEventListener("load", () => {
         }
     })
 })
+
+/* Blog ID's */
+const blogPosts = document.querySelectorAll(".post");
+
+blogPosts.forEach((post, index) => {
+    post.setAttribute("id", "post-" + (index + 1));
+});
+
