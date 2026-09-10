@@ -2878,21 +2878,7 @@ $media-mobile: 450px;
                                 padding: var(--size-32) 0;
                             }
                             
-                            video{
-                                min-width: 100%;
-                                min-height: 100%;
-                                width: 64vw;
-                                height: auto;
-                                object-fit: cover;
-                                position: relative;
-                                @include border_image();
-                                
-                               
-                                @media screen and (max-width: $media-tablet) {
-                                    width: 80vw;
-                                }
-                            }
-
+                            
                             &-imgText{
                                 display: flex;
                                 align-items: center;
@@ -3005,11 +2991,27 @@ $media-mobile: 450px;
                                     align-content: space-between;
                                 }
 
-                                &:hover{
+                                video{
+                                min-width: 100%;
+                                min-height: 100%;
+                                width: 64vw;
+                                height: auto;
+                                object-fit: cover;
+                                position: relative;
+                                @include border_image();
+                              
+                                                                   
+                                    @media screen and (max-width: $media-tablet) {
+                                        width: 80vw;
+                                    }
+                                }
+
+                                /* Play button */
+                                /* &:hover{
                                     i,svg{
                                         display: none;
                                     }
-                                }
+                                } */
 
                                   i,svg{
                                     position: absolute;
@@ -3023,6 +3025,10 @@ $media-mobile: 450px;
                                     width: 64px;
                                     height: 64px;
                                     z-index: 10;
+
+                                    &.playing{
+                                        display: none;
+                                    }
 
                                     @media screen and (max-width: $media-tablet) {
                                         top: 40%;

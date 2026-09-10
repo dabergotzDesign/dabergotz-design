@@ -108,5 +108,68 @@ menuButtonHide.addEventListener("click", ()=>{
 });
 
 
+/* toggle play */
+/* const playVideo = document.querySelectorAll(".article__container figure video");
+const btnPlay = document.querySelector(".article__container figure i");
+
+
+playVideo.forEach(vid => {
+
+    
+    function togglePlay(){
+        if(vid.paused || vid.ended){
+            vid.play();
+        }else{
+            vid.pause();
+            vid.currentTime = 0;
+        }
+    }
+    
+    vid.addEventListener("click", togglePlay);
+}); */
+
+const playVideos = document.querySelectorAll(".article__container figure video");
+
+playVideos.forEach((video) => {
+    const figure = video.closest("figure");
+    const getPlayButton = () => figure.querySelector("i, svg");
+
+    video.onmouseover = null;
+    video.onmouseout = null;
+
+    const syncPlayButton = () => {
+        const playButton = getPlayButton();
+
+        if (playButton) {
+            playButton.classList.toggle("playing", !video.paused && !video.ended);
+        }
+    };
+
+    const togglePlay = (event) => {
+        if (!event.target.closest("video, i, svg")) return;
+
+        if (video.paused || video.ended) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    };
+
+    figure.addEventListener("click", togglePlay);
+    video.addEventListener("play", syncPlayButton);
+    video.addEventListener("pause", syncPlayButton);
+    video.addEventListener("ended", syncPlayButton);
+    syncPlayButton();
+});
+
+
+
+
+/* playVideo.addEventListener("play", ()=>{
+    btnPlay.classList.add("play");
+});
+playVideo.addEventListener("paused", ()=>{
+    btnPlay.classList.remove("play");
+}); */
 
 
