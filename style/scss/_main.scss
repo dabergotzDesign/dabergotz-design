@@ -770,29 +770,6 @@ body{
             margin-top: 12vh;
         }
 
-        /* Rive title */
-        /* #canvas{
-                width: 80vw;
-                height: auto;
-                object-fit: contain;
-
-                position: absolute;
-                top: 4%;
-                left: 0;
-
-                transform: translateX(-5%);
-
-                @media screen and (max-width: $media-tablet) {
-                    transform: translateX(-4%);
-                    top: 16%;
-                    width: 100vw;
-                }
-
-                @media screen and (max-width: $media-mobile) {                
-                    display: none;
-                } 
-            } */
-
         .welcome{
 
             padding-left: var(--size-80);

@@ -5,6 +5,7 @@ const desktop = window.matchMedia("(min-width: 1024px) and (hover: hover) and (p
 
 if (desktop.matches) {
 
+if (desktop.matches) {
 
 document.addEventListener('mousemove', e =>{
     cursor.style.left = e.pageX + 'px';
