@@ -1,6 +1,8 @@
 const cursor = document.querySelector('.custom_cursor');
 const hover = document.querySelectorAll(".hover");
+const desktop = window.matchMedia("(min-width: 1024px) and (hover: hover) and (pointer: fine)");
 
+if (desktop.matches) {
 
 document.addEventListener('mousemove', e =>{
     cursor.style.left = e.pageX + 'px';
@@ -46,7 +48,7 @@ hover.forEach(e => {
 
                 //Portfolio assets
                 const portfolioCards = document.querySelectorAll(".portfolio__card");
-                const portfolioVideo = portfolioCards[0].querySelector("video");
+                //const portfolioVideo = portfolioCards[0].querySelector("video");
 
                 portfolioCards.forEach(card => {
                     card.addEventListener("mouseenter", ()=>{
@@ -83,3 +85,4 @@ hover.forEach(e => {
         }
     })
 });
+}
