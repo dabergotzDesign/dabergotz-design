@@ -1,5 +1,12 @@
 const cursor = document.querySelector('.custom_cursor');
 const hover = document.querySelectorAll(".hover");
+<<<<<<< Updated upstream
+=======
+const desktop = window.matchMedia("(min-width: 1024px) and (hover: hover) and (pointer: fine)");
+
+
+if (desktop.matches) {
+>>>>>>> Stashed changes
 
 document.addEventListener('mousemove', e =>{
     cursor.style.left = e.pageX + 'px';
@@ -18,11 +25,90 @@ window.addEventListener("mouseup", ()=>{
 hover.forEach(e => {
     e.addEventListener("mouseenter", ()=>{
         cursor.classList.add("state_hover");
+<<<<<<< Updated upstream
+=======
+        
+        if(e.classList.contains("hover_pause")){
+            cursor.innerHTML = "<i class='fa-solid fa-pause'></i>";
+        }
+
+        if(e.classList.contains("hover_nav")){
+            cursor.innerHTML = "<i class='fa-solid fa-arrow-up-right-from-square'></i>";
+        }
+
+        if(e.classList.contains("hover_close")){
+            cursor.innerHTML = "<i class='fa-solid fa-close'> close</i>";
+        }
+
+        if(e.classList.contains("hover_back")){
+            cursor.innerHTML = "<i class='fa-solid fa-arrow-left'> back</i>";
+        }
+
+        if(e.classList.contains("hover_copy")){
+            cursor.innerHTML = "<i class='fa-solid fa-copy'></i>";
+        }
+
+        if(e.classList.contains("hover_portfolio")){
+            cursor.innerHTML = "<i class='fa-solid fa-arrow-up-right-from-square'> explore</i>";
+            e.classList.add("play");
+
+            if(e.classList.contains("play")){
+
+                //Portfolio assets
+                const portfolioCards = document.querySelectorAll(".portfolio__card");
+                //const portfolioVideo = portfolioCards[0].querySelector("video");
+
+                portfolioCards.forEach(card => {
+                    const video = card.querySelector("video");
+                    
+                    card.addEventListener("mouseenter", ()=>{
+                        video.play();
+                    })
+                    
+                    card.addEventListener("mouseleave", ()=>{
+                        video.pause();
+                        video.currentTime = 0;
+                    })
+                });
+
+                    
+
+            }
+            
+        }
+
+        if(e.classList.contains("hover_dl")){
+            cursor.innerHTML = "<i class='fa-solid fa-download'></i>";
+        }
+
+        if(e.classList.contains("hover_input")){
+            cursor.innerHTML = "<i class='fa-solid fa-pen'></i>";
+        }
+
+        if(e.classList.contains("hover_submit") && !e.disabled){
+            cursor.innerHTML = "<i class='fa-solid fa-arrow-right'></i>";
+        }else if(e.classList.contains("hover_submit") && e.disabled){
+            cursor.innerHTML = "<i class='fa-solid fa-xmark'></i>";
+        }
+        
+>>>>>>> Stashed changes
     })
 });
 
+<<<<<<< Updated upstream
 hover.forEach(e => {
     e.addEventListener("mouseleave", ()=>{
         cursor.classList.remove("state_hover");
     })
 });
+=======
+
+    /* Hover return */
+    hover.forEach(e => {
+        e.addEventListener("mouseleave", ()=>{
+            cursor.classList.remove("state_hover");
+        })
+    })
+
+}
+>>>>>>> Stashed changes

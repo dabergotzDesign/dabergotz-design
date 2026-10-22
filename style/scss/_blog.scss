@@ -56,23 +56,43 @@ body{
 #blog{
 
     display: flex;
+<<<<<<< Updated upstream
     flex-flow: column nowrap;
     height: 80vh;
 
     
+=======
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--size-96);
+    width: 100%;
+    height: fit-content;
+    margin-right: var(--size-80);
+    padding-top: var(--size-96);
+        
+>>>>>>> Stashed changes
     @media screen and (max-width: $media-tablet) {
+        height: min-content;
         gap: 0;
         width: 100vw;
         padding: 1.2em;
+        background: var(--c-dark-transparent-50);
     }
 
     @media screen and (max-width: $media-mobile) {
         flex-direction: column;
+<<<<<<< Updated upstream
         height: fit-content;
         margin-bottom: var(--size-64);
+=======
+        margin-bottom: var(--size-4);
+        background-color: var(--c-dark);
+>>>>>>> Stashed changes
     }
 
 
+<<<<<<< Updated upstream
     .blog__title{
         color: var(--c-dark);
         font-size: var(--size-96);
@@ -87,6 +107,100 @@ body{
         }
 
         @media screen and (max-width: $media-mobile) {
+=======
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        align-content: space-between;
+        justify-content: center;
+        gap: var(--size-24);
+        width: max-content;
+        padding: var(--size-24);
+        background: var(--c-dark);
+        border: 2px solid var(--c-highlight);
+        border-radius: var(--size-16);
+
+
+        position: relative;
+
+
+
+        @media screen and (max-width: $media-tablet) {
+            align-items: center;
+        }
+        
+        .blog__title{
+            color: var(--c-dark);
+            font-size: var(--size-64);
+            font-family: var(--font-noto);
+            font-weight: 900;
+            text-transform: uppercase;
+    
+            -webkit-text-stroke: 2px var(--c-light);
+    
+            @media screen and (max-width: $media-mobile) {
+                font-size: var(--size-56);
+            }
+    
+            @media screen and (max-width: $media-mobile) {
+                font-size: var(--size-48);
+                -webkit-text-stroke: 2px var(--c-light);
+            }
+        }
+        
+        .blog__link{       
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: var(--size-16);
+    
+            width: fit-content;
+            background-color: var(--c-dark);
+            outline: 1px solid var(--c-light);
+            border-radius: var(--size-80);
+            padding: var(--size-16)  var(--size-32);
+    
+            cursor: none;
+                 
+            color: var(--c-light);
+            text-decoration: none;
+            text-transform: uppercase;
+    
+            font-family: var(--font-noto);
+            font-size: var(--size-32);
+
+            @media screen and (max-width: $media-tablet) {
+                font-size: var(--size-24);
+            }
+    
+            @media screen and (max-width: $media-mobile) {
+                font-size: var(--size-16);
+                padding: var(--size-16);
+                margin-top: var(--size-16);
+            }
+    
+            &:hover{
+                background-color: var(--c-light-transparent-10);
+            }
+    
+            /* icon */
+            i,svg{
+    
+                @media screen and (max-width: $media-tablet) {
+                    width: var(--size-24);
+                    height: var(--size-24);
+                }
+    
+            }
+    
+        }
+    
+    
+        /* what is happening - subtitle main page */
+        .title{
+    
+            font-family: var(--font-noto);
+>>>>>>> Stashed changes
             font-size: var(--size-48);
             -webkit-text-stroke: 1px var(--c-light);
         }
@@ -164,6 +278,66 @@ body{
 
         &__wrapper{
             
+<<<<<<< Updated upstream
+=======
+            &.bottom{
+                z-index: 1;
+                transform: translate(8%, 8%);
+            }
+
+            &.middle{
+                z-index: 2;
+                transform: translate(4%, 4%);
+            }
+
+            &.active{
+                z-index: 3;
+            }
+
+            &-wrapper{
+                display: flex;
+                flex-flow: column nowrap;
+                transition: transform 0.3s ease;
+                position: relative;
+            }
+        }
+
+        .teaser{
+
+            &__thumbnail{
+                width: 40vw;
+                height: 32vh;
+                object-fit: cover;
+                border-top-left-radius: var(--size-16);
+                border-top-right-radius: var(--size-16);
+            }
+
+            &__title{
+                font-family: var(--font-noto);
+                font-size: var(--size-24);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: var(--c-light);
+                text-align: center;
+                padding: var(--size-16) var(--size-8);
+            }
+
+            &__link{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+        /* .slider_controls{
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+>>>>>>> Stashed changes
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -174,7 +348,12 @@ body{
             @media screen and (max-width: $media-mobile) {
                 width: 80%;
             }
+<<<<<<< Updated upstream
         }
+=======
+        } */
+
+>>>>>>> Stashed changes
     }
 
     //sub headline

@@ -29,7 +29,7 @@ $media-mobile: 450px;
 
         #contact{
 
-            height: auto;
+            height: min-content;
             width: 100%;
                   
             margin: auto;
@@ -47,18 +47,25 @@ $media-mobile: 450px;
             flex-flow: column nowrap;
             align-items: center;
             justify-content: space-between;
+<<<<<<< Updated upstream
             gap: var(--size-32);
 
             @media screen and (max-width: $media-mobile) {
                 gap: var(--size-16);
             }
+=======
 
-                  
+>>>>>>> Stashed changes
+
+            @media screen and (max-width: $media-mobile) {
+                padding: 0;
+            }
+                        
             
             .title{
                 
                 color: var(--c-dark);
-                font-size: var(--size-96);
+                font-size: var(--size-64);
                 font-family: var(--font-noto);
                 font-weight: 900;
                 text-transform: uppercase;
@@ -85,12 +92,24 @@ $media-mobile: 450px;
 
                     position: relative;
 
+                    background: var(--c-dark);
+                    border: 1px solid var(--c-highlight);
+                    border-radius: var(--size-16);
+                    box-shadow: 2px 8px 0 6px var(--c-highlight);
                     height: auto;
                     width: 100%;
                     margin: auto;
+<<<<<<< Updated upstream
+=======
+                    padding: var(--size-72) var(--size-80);
+                    padding-top: var(--size-48);
+                    overflow: hidden;
+>>>>>>> Stashed changes
                     
                     @media screen and (max-width: $media-tablet) {
                         gap: var(--size-8);
+                        background: var(--c-dark);
+                        box-shadow: none;
                     }
 
                     @media screen and (max-width: $media-mobile) {
@@ -99,6 +118,7 @@ $media-mobile: 450px;
                         align-items: center;
                         justify-content: center;
                         gap: 0;
+                        padding: var(--size-8);
                     }
 
                     .subtitle{
@@ -110,7 +130,7 @@ $media-mobile: 450px;
                         font-weight: 200;
                         text-transform: uppercase;
 
-                        @media screen and (max-width: $media-mobile) {
+                        @media screen and (max-width: $media-tablet) {
                             font-size: var(--size-24);
                             font-weight: 400;
                         }
@@ -156,10 +176,27 @@ $media-mobile: 450px;
                     border-radius: var(--size-8);
                     background-color: var(--c-dark);
 
+<<<<<<< Updated upstream
                     display: flex;
                     flex-flow: column nowrap;
                     align-items: center;
                     justify-content: center;
+=======
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+                width: 40vw;
+                height: auto;
+                padding: var(--size-48);
+                overflow: hidden;
+
+                //box-shadow: 2px 8px 0 6px var(--c-highlight);
+                border: 1px solid var(--c-light);
+                border-radius: 1rem;
+                background-color: var(--c-dark);
+>>>>>>> Stashed changes
 
                     @media screen and (max-width: $media-tablet) {
                         padding: var(--size-16);
@@ -179,6 +216,8 @@ $media-mobile: 450px;
                     padding-left: 0;
                     width: 100%;
 
+                    
+
                     @media screen and (max-width: $media-tablet) {
                         padding: var(--size-16);
                     }
@@ -194,6 +233,7 @@ $media-mobile: 450px;
                         width: 100%;
 
                         @media screen and (max-width: $media-tablet) {                            
+                            font-size: var(--size-24);
                             font-weight: 400;
                         }
 
@@ -224,7 +264,6 @@ $media-mobile: 450px;
                         @media screen and (max-width: $media-mobile) {
                             padding: 0;
                         }
-
                                               
                         li{
                             list-style: none;
@@ -244,6 +283,7 @@ $media-mobile: 450px;
                             @media screen and (max-width: $media-mobile) {
                                 gap:0;
                             }
+
 
                             &:hover{
 
@@ -297,31 +337,17 @@ $media-mobile: 450px;
                         }
                         
                         a{
-                            
+                            display: block;
                             text-decoration: none;
                             text-align: left;
+                            position: relative;
 
                             color: var(--c-light);
                             font-size: var(--size-64);
                             font-family: var(--font-noto);
                             font-weight: 200;
                             letter-spacing: 2px;
-                            //background-color: black;
-                            mix-blend-mode: lighten;
-
-                            &::after{
-                                content: '';
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-
-                                //background-color: red;
-                                border-radius: 0.5em;
-
-                            }
-                           
+                                          
 
                             @media screen and (max-width: $media-tablet) {
                                 font-size: 1.8rem;
@@ -445,7 +471,7 @@ $media-mobile: 450px;
 
                 cursor: none;
 
-                @media screen and (max-width: $media-mobile) {
+                @media screen and (max-width: $media-tablet) {
                     font-size: var(--size-16);
                 }
 
@@ -501,6 +527,7 @@ $media-mobile: 450px;
                                      
                     position: relative;
 
+<<<<<<< Updated upstream
                     &.out{
                         animation: moveOut 0.3s ease;
                     }
@@ -752,6 +779,10 @@ $media-mobile: 450px;
         } */
 
         @keyframes popIn {
+=======
+/*
+       @keyframes popIn {
+>>>>>>> Stashed changes
             0%{
                 scale: 0;
             }
@@ -828,6 +859,7 @@ $media-mobile: 450px;
                 filter: drop-shadow(2px 0 var(--c-blue)) drop-shadow(2px -1px var(--c-purple));
               }
         }
+<<<<<<< Updated upstream
 
 
     //}
@@ -837,3 +869,6 @@ $media-mobile: 450px;
     
 
 }
+=======
+              */
+>>>>>>> Stashed changes
