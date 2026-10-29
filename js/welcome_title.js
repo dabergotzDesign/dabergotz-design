@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
  /*
  const r_title = new rive.Rive({
   src: "./rive/ddesign_title.riv",
@@ -11,42 +10,6 @@
   },
 });
 */
-=======
-/* Greetings */
-const greetingsH2 = document.querySelectorAll(".welcome__text h2");
-
-let i = 0;
-
-function revealGreeting() {
-  setTimeout(function () {
-    const greeting = greetingsH2[i];
-    greeting.classList.add("greeting");
-
-    const greetingSplit = new SplitType(greeting, { types: "chars, words" });
-
-    gsap.from(greetingSplit.chars, {
-      y: 50,
-      opacity: 0,
-      stagger: 0.03,
-      duration: 0.4,
-      ease: "back.out(1.7)"
-    });
-
-    setTimeout(function () {
-      greetingSplit.revert();
-      greeting.classList.remove("greeting");
-      i = (i + 1) % greetingsH2.length;
-      revealGreeting();
-    }, 5000);
-  }, 100);
-}
-
-if (greetingsH2.length > 0) {
-  revealGreeting();
-}
-
-
->>>>>>> Stashed changes
 
 /* PAUSE BG */
 const pause = document.querySelector(".pauseBG"),
