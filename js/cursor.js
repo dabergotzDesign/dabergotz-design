@@ -40,11 +40,22 @@ hover.forEach(e => {
             cursor.innerHTML = "<i class='fa-solid fa-arrow-left'> back</i>";
         }
 
-        if(e.classList.contains("hover_portfolio")){
-            cursor.innerHTML = "<i class='fa-solid fa-arrow-up-right-from-square'> explore</i>";
-            e.classList.add("play");
+<<<<<<< Updated upstream
+=======
+        if(e.classList.contains("hover_up")){
+            cursor.innerHTML = "<i class='fa-solid fa-arrow-up'></i>";
+        }
 
-            if(e.classList.contains("play")){
+        if(e.classList.contains("hover_copy")){
+            cursor.innerHTML = "<i class='fa-solid fa-copy'></i>";
+        }
+
+>>>>>>> Stashed changes
+        if(e.classList.contains("hover_portfolio")){
+            cursor.innerHTML = "<i class='fa-solid fa-arrow-up-right-from-square'> view project</i>";
+            //e.classList.add("play");
+
+            /* if(e.classList.contains("play")){
 
                 //Portfolio assets
                 const portfolioCards = document.querySelectorAll(".portfolio__card");
@@ -54,9 +65,23 @@ hover.forEach(e => {
                     card.addEventListener("mouseenter", ()=>{
                         const video = card.querySelector("video");
                         video.play();
+<<<<<<< Updated upstream
                     })});
 
             }
+=======
+                    })
+                    
+                    card.addEventListener("mouseleave", ()=>{
+                        video.pause();
+                        video.currentTime = 0;
+                    })
+                });
+                   
+
+            } */
+            
+>>>>>>> Stashed changes
         }
 
         if(e.classList.contains("hover_dl")){
@@ -75,6 +100,7 @@ hover.forEach(e => {
         
     })
 
+<<<<<<< Updated upstream
     });
 
 hover.forEach(e => {
@@ -86,3 +112,14 @@ hover.forEach(e => {
     })
 });
 }
+=======
+
+    /* Hover return */
+    hover.forEach(e => {
+        e.addEventListener("mouseleave", ()=>{
+            cursor.classList.remove("state_hover");
+        })
+    })
+
+}
+>>>>>>> Stashed changes

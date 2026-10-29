@@ -18,7 +18,7 @@ const titleSplit = new SplitType(welcomeTitle, {types: 'chars, words'});
 gsap.from(titleSplit.words, {
     y: '100%',
     opacity: 0,
-    duration: 1,
+    duration: 0.5,
     ease: 'power4.in',
     stagger: 0.1,
     delay: 0.5
@@ -36,6 +36,32 @@ gsap.from(bulletPoints, {
 
 
 
+<<<<<<< Updated upstream
+=======
+gsap.set(nav, {opacity: 0, xPercent: 100});
+gsap.set(navItems, {opacity: 0});
+
+const navTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".splash",
+        start: "1% top",
+        toggleActions: "play none none reverse"
+    }
+});
+
+navTimeline.to(nav, {
+    opacity: 1,
+    xPercent: 0,
+    duration: 0.1,
+    ease: "power4.out"
+}).to(navItems, {
+    opacity: 1,
+    duration: 0.1,
+    stagger: 0.1,
+    delay: 0.005
+});
+
+>>>>>>> Stashed changes
 /* HOME */
 
 gsap.registerPlugin(ScrollTrigger);
@@ -52,7 +78,7 @@ splitTypes.forEach((word, i)=>{
 
     },{
         opacity: 1,
-        stagger: 0.1,
+        stagger: 0.05,
         scrollTrigger: {
             trigger: word,
             start: 'top 80%',
@@ -67,6 +93,7 @@ splitTypes.forEach((word, i)=>{
 
 /* PORTFOLIO */
 
+<<<<<<< Updated upstream
 const portfolio_title = document.querySelector("#portfolio .title");
 const card = document.querySelectorAll("#portfolio .accordion__card-wrapper");
 const hL = document.querySelector(".p_canvas-4");
@@ -157,6 +184,8 @@ gsap.from(card, {
     
 }, "-=.5")
 
+=======
+>>>>>>> Stashed changes
 
 /* ABOUT */
 const about_container = document.querySelector("#about");
@@ -197,7 +226,10 @@ gsap.to(tools, {
         toggleActions: 'play play none reverse'
     }
 
+<<<<<<< Updated upstream
 });
+=======
+>>>>>>> Stashed changes
 
 
 /* BLOG */
@@ -220,7 +252,11 @@ splitTitle.forEach((char, i)=>{
         scrollTrigger: {
             trigger: char,
             start: 'top 80%',
+<<<<<<< Updated upstream
             end: 'bottom 20%',
+=======
+            end: 'bottom',
+>>>>>>> Stashed changes
             scrub: false,
             markers: false,
             toggleActions: 'play play none reverse'
@@ -231,7 +267,11 @@ splitTitle.forEach((char, i)=>{
 
 /* CONTACT */
 
+<<<<<<< Updated upstream
 const contact_title = document.querySelector("#contact .subtitle");
+=======
+const contact_title = document.querySelector("#contact .title");
+>>>>>>> Stashed changes
 const contacts = document.querySelector(".contacts__wrapper");
 const social = document.querySelector(".contacts__socials");
 const socials = document.querySelectorAll(".contacts__socials li");
@@ -255,6 +295,7 @@ gsap.to(contacts, {
     transformOrigin: 'center center',
     opacity: 1,
     scrollTrigger: {trigger: '#contact'}
+<<<<<<< Updated upstream
 });
 
 let mm = gsap.matchMedia();
@@ -279,3 +320,6 @@ gsap.to(socials, {
 })
 
 });
+=======
+})
+>>>>>>> Stashed changes

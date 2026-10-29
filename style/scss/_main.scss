@@ -23,10 +23,17 @@ $media-mobile: 450px;
 
 
 body,html{
+<<<<<<< Updated upstream
     height: 100%;
     //overflow-x: hidden;
 
     cursor: none; //custom cursor enabled
+=======
+    height: min-content;
+    overflow: hidden;
+
+    //cursor: none; //custom cursor enabled
+>>>>>>> Stashed changes
 
     ::selection,
     ::moz-selection,
@@ -34,10 +41,31 @@ body,html{
         background-color: var(--c-highlight);
         color: var(--c-light);
     }
+<<<<<<< Updated upstream
+=======
+}
+
+.preloader{
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    @media screen and (max-width: $media-mobile) {
+        display: none;        
+    }
+
+    &.fadeout{
+        animation: fadeOut 1s alternate;
+    }
+>>>>>>> Stashed changes
 }
 
 
 body{
+<<<<<<< Updated upstream
     background: url("../../img/backgrounds/dddesign_logo_transparent_opacity25.png"), var(--c-dark);
     background-size: 50vw;
     background-position: 50% center;
@@ -45,6 +73,20 @@ body{
     background-repeat: no-repeat;
     position: relative;
     
+=======
+    position: relative;
+       
+    /* dotted BG */
+    --dot-bg: var(--c-dark);
+  --dot-color: var(--c-highlight-blue);
+  --dot-size: 1px;
+  --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+        
+>>>>>>> Stashed changes
     &.stopScroll{
         height: 100%;
         overflow: hidden;
@@ -55,14 +97,24 @@ body{
 
 .custom_cursor{
     position: absolute;
+<<<<<<< Updated upstream
     width: 30px;
     height: 30px;
     //background-color: #FF006D;
+=======
+    width: var(--size-16);
+    height: var(--size-16);
+
+>>>>>>> Stashed changes
     color: transparent;
     outline: 4px solid var(--c-light);
     margin: 0;
     border-radius: 50%;
+<<<<<<< Updated upstream
     z-index: 1000;
+=======
+    z-index: 10000;
+>>>>>>> Stashed changes
     mix-blend-mode: difference;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -71,6 +123,7 @@ body{
     &.state_hover{
 
         outline: none;
+<<<<<<< Updated upstream
         width: 40px;
         height: 40px;
         text-shadow: 2px 2px 0 var(--c-highlight);
@@ -82,6 +135,16 @@ body{
         width: 40px;
         height: 40px;
         animation: pulse 1s infinite ease; */
+=======
+        width: max-content;
+        height: var(--size-24);
+        padding: var(--size-4) var(--size-16);
+        border-radius: var(--size-8);
+        backdrop-filter: blur(8px);
+
+        background: var(--c-light-transparent-10);
+        //text-shadow: 2px 2px 0 var(--c-highlight);
+>>>>>>> Stashed changes
         z-index: 1000;
 
         display: flex;
@@ -89,7 +152,7 @@ body{
         justify-content: center;
         font-family: var(--font-noto);
         font-size: var(--size-16);
-        font-weight: 700;
+        font-weight: 400;
         text-transform: uppercase;
         text-align: center;
         text-wrap: nowrap;
@@ -123,9 +186,12 @@ body{
     cursor: none;
 }
 
+<<<<<<< Updated upstream
 
 
 
+=======
+>>>>>>> Stashed changes
 .sidebar{
     position: fixed;
 }
@@ -135,8 +201,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     overflow-x: hidden;
      
+<<<<<<< Updated upstream
     height: fit-content;
     width: auto;
     position: relative;
@@ -159,6 +227,410 @@ body{
     }
     
 
+=======
+    height: min-content;
+    width: auto;
+    position: relative;
+
+    background: radial-gradient(transparent, var(--c-dark));
+    background-size: cover;
+    background-position: 50% center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    /* logo background */
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+       
+        width: 100%;
+        height: 100%;
+
+        background: url("../../img/logo/ddesign_logo_5.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 25vw;
+        background-attachment: fixed;
+        opacity: 0.5;
+        z-index: -1;
+
+        @media screen and (max-width: $media-tablet) {
+            background-size: 50vw;
+        }
+    
+    }
+
+   
+
+    .quick__menu{
+        z-index: 999;
+        background: var(--c-dark);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--size-8) var(--size-80);
+        width: 100%;
+        height: fit-content;
+
+        @media screen and (max-width: $media-tablet) {
+            position: fixed;
+            top: 0;
+            left: 0;                                    
+        }
+
+        @media screen and (max-width: $media-mobile) {
+            padding: var(--size-8) var(--size-24);
+        }
+
+        .logo{
+
+            display: flex;
+            align-items: center;
+
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                width: 12%;
+                height: 12%;
+                object-fit: contain;
+
+                @media screen and (max-width: $media-mobile) {
+                    width: var(--size-24);
+                    height: var(--size-24);
+                }
+            }
+
+            &__text{
+                color: var(--c-light);
+                font-family: var(--font-space);
+                font-weight: 700;
+                letter-spacing: 2px;
+                padding-left: var(--size-12);
+
+                @media screen and (max-width: $media-tablet) {
+                    display: none;
+                }
+            };
+        }
+
+
+        .links{
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: var(--size-16);
+
+            @media screen and (max-width: $media-tablet) {
+                display: none;
+            }
+
+            
+            .link{
+                color: var(--c-highlight);
+                width: var(--size-24);
+                height: var(--size-24);
+                display: grid;
+                place-content: center;
+                position: relative;
+
+                &:hover svg, &:hover i{
+                    color: var(--c-light);
+                    scale: 1.5;
+                    cursor: none;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                & a{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &__mail{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: var(--size-8);
+                    width: fit-content;
+                    padding: var(--size-4) var(--size-8);
+                    border-radius: var(--size-80);
+
+                    position: relative;
+
+                    i,svg{
+                        color: var(--c-highlight);
+                    }
+
+                    /* Tooltip */
+                    .tooltip{
+                        opacity: 0;
+                        visibility: hidden;
+
+                        position: absolute;
+                        top: 120%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        text-align: center;
+                        white-space: pre;
+                        background: var(--c-dark);
+                        padding: var(--size-4) var(--size-8);
+                        width: fit-content;
+
+                        color: var(--c-highlight);
+                        font-size: var(--size-16);
+                        font-family: var(--font-space);
+                    }
+
+                    &:hover{
+                        background-color: var(--c-highlight);
+                        cursor: pointer;
+
+                        i,svg, #email-copy{
+                            color: var(--c-dark);
+                        }
+
+                        .tooltip{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+
+            #email-copy{
+                background: transparent;
+                border: none;
+                color: var(--c-highlight);
+                font-family: var(--font-noto);
+
+                -webkit-user-select: none; /* Safari */        
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* IE10+/Edge */
+                user-select: none; /* Standard */
+
+                &:focus,
+                &:active{
+                    outline: none;
+                }
+            }
+
+            .resume{
+                button{
+                    color: var(--c-highlight);
+                    background: var(--c-dark);
+                    border: 1px solid var(--c-highlight);
+                    border-radius: var(--size-80);
+                    padding: var(--size-4) var(--size-16);
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: var(--size-4);
+
+                    &:hover{
+                        background: var(--c-highlight);
+                        color: var(--c-dark);
+                        cursor: none;
+                    }
+                }
+            }
+
+        }
+    }
+
+    /* quick menu - mobile */
+    .mobile__menu{
+
+        @media screen and (min-width: $media-tablet) {
+            display: none;
+        }
+
+    
+        &-icon{
+            background: transparent;
+            border: none;
+
+            i,svg{
+                color: var(--c-highlight);
+            }
+        }
+
+        .menu{
+            //display: none;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: -100%;
+            z-index: 10000;
+            
+            transition: all 0.3s ease;
+
+            h1{
+                color: var(--c-dark);
+                font-family: var(--font-space);
+                font-size: var(--size-24);
+                text-transform: uppercase;
+            }
+
+            .m__nav{
+
+                padding: var(--size-4);
+                padding-top: var(--size-24);
+
+                ul{
+                    list-style: none;
+                                    
+                    li{
+                        padding: var(--size-8) 0;
+
+                        a{
+                            text-decoration: none;
+                            color: var(--c-dark);
+                            font-family: var(--font-noto);
+                            font-size: var(--size-24);
+                        }
+                    }
+                }
+
+            }
+
+            .m__links{
+                display: flex;
+                flex-direction: column;
+                align-content: space-between;
+                justify-items: flex-end;
+                gap: var(--size-8);
+
+                padding: var(--size-4);
+                padding-top: var(--size-24);
+
+                .social__container{
+                    padding: var(--size-16) 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--size-4);
+                }
+
+                .links__container{
+                    display: flex;
+                    padding: var(--size-8);
+                }
+
+                .link,
+                .link__mail{
+                    display: flex;
+                    padding: var(--size-8);
+
+                    i{
+                        font-size: var(--size-32);
+                    }
+                }
+
+                .link__mail{
+                    width: min-content;
+                    padding: var(--size-4) var(--size-8);
+                    border: 1px solid var(--c-dark);
+                    border-radius: var(--size-80);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                                        
+                    i,svg{
+                        width: var(--size-24);
+                        height: var(--size-24);
+                    }
+
+                    #email-copy{
+                        color: var(--c-dark);
+                        background-color: transparent;
+                        border: none;
+                        padding-left: var(--size-4);
+                        font-weight: 700;
+                    }
+
+                    .tooltip{
+                        display: none;
+                    }
+                }
+
+                .resume button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: var(--size-4);
+                    width: min-content;
+                    white-space: pre;
+
+                    background: var(--c-highlight);
+                    border: 1px solid var(--c-dark);
+                    border-radius: var(--size-80);
+                    color: var(--c-dark);
+                    padding: var(--size-8) var(--size-24);
+
+                    font-weight: 700;
+
+                    i,svg{
+                        width: var(--size-16);
+                        height: var(--size-16);
+                    }
+
+                }
+            }
+
+            .close{
+                position: absolute;
+                bottom: 2%;
+                right: 45%;
+                margin: auto;
+                padding: var(--size-8);
+                width: var(--size-48);
+                height: var(--size-48);
+
+                background: var(--c-dark);
+                color: var(--c-highlight);
+                border-radius: var(--size-80);
+
+                display: grid;
+                place-content: center;
+
+            }
+
+            /* mobile menu */
+            &.open{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                
+                padding: var(--size-8) var(--size-16);
+                background-color: var(--c-highlight);
+
+                right: 0;
+
+                @media screen and (max-width: $media-tablet) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 0 var(--size-48);
+                }
+
+                @media screen and (max-width: $media-mobile) {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+    }
+
+    /* actually side menu */
+>>>>>>> Stashed changes
     .top__menu{
         display: flex;
         align-items: flex-end;
@@ -167,6 +639,7 @@ body{
 
         position: relative;
 
+<<<<<<< Updated upstream
         padding: 1em 0;
         padding-left: var(--size-80);
         padding-top: 0;
@@ -174,6 +647,28 @@ body{
         
            
         @media screen and (max-width: $media-mobile) {
+=======
+        padding-left: var(--size-80);
+        padding-top: 0;
+        z-index: 999;
+
+        &-cs{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 12vh;
+
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                width: 12vh;
+                height: auto;
+            }
+        }        
+                  
+        @media screen and (max-width: $media-tablet) {
+>>>>>>> Stashed changes
             display: none;
         }
 
@@ -185,8 +680,14 @@ body{
             object-fit: contain;
         }
 
+<<<<<<< Updated upstream
         .menu__nav{
             position: fixed;
+=======
+
+        .menu__nav-icons{
+            //display: none;
+>>>>>>> Stashed changes
             @include navigation;
 
             &.scrolled{
@@ -220,8 +721,42 @@ body{
                     flex-flow: column nowrap;
                     align-items: center;
                     justify-content: center;
+<<<<<<< Updated upstream
+=======
+            }
+        
+
+            li{
+                position: relative;
+
+                i,svg{
+                    color: var(--c-light);
+                    width: var(--size-16);
+                    height: auto;
+                }
+
+                &:hover svg{
+                    color: var(--c-highlight);
+                    scale: 1.5;
+                    cursor: none;
+                    transition: all 0.3s ease-in-out;
+>>>>>>> Stashed changes
                 }
             }
+<<<<<<< Updated upstream
+=======
+
+                        
+            a{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 1px;
+                width: 100%;
+                height: 100%;
+            }
+
+>>>>>>> Stashed changes
         }
 
 
@@ -265,6 +800,7 @@ body{
                 }
             }
         }
+<<<<<<< Updated upstream
 
         /* NAVIGATION MOBILE */
         &-mobile{
@@ -354,6 +890,18 @@ body{
         @media screen and (max-width: $media-mobile) {
             padding: var(--size-80) var(--size-8);
         }
+=======
+   }
+
+    &__section{
+        height: max-content;
+        //margin-bottom: 8em;
+        padding: var(--size-80);
+
+        /* @media screen and (max-width: $media-mobile) {
+             margin-bottom: 32em;   
+        } */
+>>>>>>> Stashed changes
     }
 
     .space{
@@ -375,10 +923,16 @@ body{
         }
 
         .welcome{
+<<<<<<< Updated upstream
             
             //transform: translateY(-25%);
             //margin-left: var(--size-72);
             width: 80vw;
+=======
+
+            padding-left: var(--size-80);
+            width: 100vw;
+>>>>>>> Stashed changes
             margin-bottom: 12vh;
             display: flex;
             flex-direction: column;
@@ -505,6 +1059,7 @@ body{
                                 
 
                 @media screen and (max-width: $media-mobile) {
+<<<<<<< Updated upstream
                     font-size: var(--size-48);
                 }
             }
@@ -582,6 +1137,18 @@ body{
             }
       
 
+=======
+                    font-size: var(--size-24);
+                }
+
+                .highlight{
+                    color: var(--c-light);
+                    font-family: var(--font-space);
+                    font-weight: 700;
+                }
+            }
+
+>>>>>>> Stashed changes
         }
 
         .scroll__indicator{
@@ -707,12 +1274,28 @@ body{
     .content{
         position: relative;
         width: 100%;
+<<<<<<< Updated upstream
+=======
+        height: min-content;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        //gap: var(--size-80);
+>>>>>>> Stashed changes
         
 
         .toTop{
             position: absolute;
+<<<<<<< Updated upstream
             right: 5%;
             bottom:2.5%;
+=======
+            right: 10%;
+            bottom: 1%;
+            transform: translateX(-50%);
+>>>>>>> Stashed changes
             margin: auto;
             padding: var(--size-16) var(--size-32);
 
@@ -727,7 +1310,11 @@ body{
             font-size: var(--size-16);
             text-decoration: none;
             text-transform: capitalize;
+<<<<<<< Updated upstream
             //border: 2px solid var(--c-light);
+=======
+            border: 2px solid var(--c-highlight);
+>>>>>>> Stashed changes
             border-radius: var(--size-80);
 
             transition: all 0.3s ease;
@@ -739,8 +1326,16 @@ body{
             }
 
             @media screen and (max-width: $media-mobile) {
+<<<<<<< Updated upstream
                 bottom: 1.5%;
                 width: 70%;
+=======
+                bottom: 1%;
+                left: 0;
+                transform: translateX(-80%);
+                margin: auto;
+                width: min-content;
+>>>>>>> Stashed changes
                 justify-content: center;
                 gap: var(--size-8);
                 padding: var(--size-8);
@@ -757,6 +1352,7 @@ body{
             }
         }
              
+<<<<<<< Updated upstream
         .ddesign__bg-city,
         .ddesign__bg{
             position: fixed;
@@ -785,6 +1381,8 @@ body{
             } */ 
     
         }
+=======
+>>>>>>> Stashed changes
     }
 
 

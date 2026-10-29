@@ -37,7 +37,7 @@ $media-mobile: 450px;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            //box-shadow: inset 40em 80em var(--c-dark-transparent-50);
+            background: var(--c-dark);
 
 
             display: flex;
@@ -45,10 +45,21 @@ $media-mobile: 450px;
             align-items: center;
             justify-content: space-between;
             
+<<<<<<< Updated upstream
+=======
+            @media screen and (max-width: $media-tablet) {
+                padding: var(--size-32);
+            }
+>>>>>>> Stashed changes
 
             /* @media screen and (max-width: $media-mobile) {
                 gap: var(--size-16);
+<<<<<<< Updated upstream
             } */
+=======
+                padding: var(--size-16);
+            }
+>>>>>>> Stashed changes
 
                   
             
@@ -92,7 +103,11 @@ $media-mobile: 450px;
                     padding-top: var(--size-48);
                     
                     @media screen and (max-width: $media-tablet) {
+<<<<<<< Updated upstream
                         gap: var(--size-8);
+=======
+                        padding: var(--size-16);
+>>>>>>> Stashed changes
                     }
 
                     @media screen and (max-width: $media-mobile) {
@@ -112,6 +127,14 @@ $media-mobile: 450px;
                         font-weight: 300;
                         text-transform: uppercase;
 
+<<<<<<< Updated upstream
+=======
+                        @media screen and (max-width: $media-tablet) {
+                            white-space: pre;
+                            font-size: var(--size-32);
+                        }
+
+>>>>>>> Stashed changes
                         @media screen and (max-width: $media-mobile) {
                             font-size: var(--size-24);
                             font-weight: 400;
@@ -127,7 +150,7 @@ $media-mobile: 450px;
                         letter-spacing: 1px;
 
                         @media screen and (max-width: $media-mobile) {
-                            font-size: 1.2rem;
+                            font-size: var(--size-24);
                         }
 
                     }
@@ -142,7 +165,7 @@ $media-mobile: 450px;
                         font-weight: 400;
                         text-transform: uppercase;
                         padding: var(--size-16);
-                        margin-top: var(--size-16);
+                        //margin-top: var(--size-16);
 
                         @media screen and (max-width: $media-mobile) {
                             display: block;
@@ -157,12 +180,13 @@ $media-mobile: 450px;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                gap: 1rem;
+                gap: var(--size-16);
                 width: 40vw;
                 height: auto;
                 padding: var(--size-48);
                 overflow: hidden;
 
+<<<<<<< Updated upstream
                 box-shadow: 2px 8px 0 6px var(--c-highlight);
                 border-top: 1px solid var(--c-highlight);
                 border-radius: 1rem;
@@ -172,6 +196,16 @@ $media-mobile: 450px;
                         padding: var(--size-16);
                         padding-top: var(--size-56);
                         margin-top: var(--size-16);
+=======
+
+                border: 2px solid var(--c-light);
+                border-radius: var(--size-8);
+                background-color: var(--c-dark);
+
+                    @media screen and (max-width: $media-tablet) {
+                        align-items: flex-start;
+                        padding: var(--size-48) var(--size-8);
+>>>>>>> Stashed changes
                         width: 100%;
                     }
 
@@ -186,6 +220,10 @@ $media-mobile: 450px;
                     padding-right:var(--size-96);
 
                     @media screen and (max-width: $media-tablet) {
+                        padding: 0;
+                    }
+
+                    @media screen and (max-width: $media-mobile) {
                         padding: var(--size-16);
                     }
                                            
@@ -201,11 +239,15 @@ $media-mobile: 450px;
                         width: 100%;
 
                         @media screen and (max-width: $media-tablet) {                            
+<<<<<<< Updated upstream
                             font-weight: 400;
+=======
+                            font-weight: 300;
+                            font-size: var(--size-32);
+>>>>>>> Stashed changes
                         }
 
                         @media screen and (max-width: $media-mobile) {
-                            font-size: var(--size-32);
                         }
 
                     }
@@ -235,13 +277,14 @@ $media-mobile: 450px;
                             justify-content: flex-start;
                             gap: var(--size-16);
                                                         
-                            padding: 1rem 0;
-                            margin: 0.5rem;
+                            padding: var(--size-16) 0;
+                            //margin: 0.5rem;
                             transition: all 0.3s ease;
                             position: relative;
 
                             @media screen and (max-width: $media-mobile) {
                                 gap:0;
+                                padding: var(--size-4) 0;
                             }
 
                             &:hover{
@@ -328,7 +371,7 @@ $media-mobile: 450px;
                                                         
                             @media screen and (max-width: $media-mobile) {
                                 color: var(--c-light);
-                                font-size: var(--size-p);
+                                font-size: var(--size-24);
                             }
                         }
                     }
@@ -337,9 +380,17 @@ $media-mobile: 450px;
         }
 
         .mail__wrapper{
+<<<<<<< Updated upstream
             .subtitle{
                 margin-bottom: var(--size-24);
             }
+=======
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: space-between;
+            gap: var(--size-16);
+>>>>>>> Stashed changes
         }
 
         .mailForm{
@@ -399,7 +450,7 @@ $media-mobile: 450px;
                    font-size: var(--size-16);
 
                    @media screen and (max-width: $media-mobile) {
-                        font-size: var(--size-8);
+                        font-size: var(--size-12);
                     }
                 }
 
