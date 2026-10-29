@@ -57,10 +57,14 @@ body{
 
     display: flex;
     flex-flow: row nowrap;
+<<<<<<< Updated upstream
+    gap: var(--size-16);
+=======
     align-items: flex-start;
     justify-content: space-between;
     gap: var(--size-96);
     width: 100vw;
+>>>>>>> Stashed changes
     height: fit-content;
     margin-right: var(--size-80);
     padding-top: var(--size-96);
@@ -73,13 +77,22 @@ body{
     @media screen and (max-width: $media-tablet) {
         gap: 0;
         width: 100vw;
+<<<<<<< Updated upstream
+        padding: 1.2em;
+=======
         padding: var(--size-24);
+>>>>>>> Stashed changes
     }
 
     @media screen and (max-width: $media-mobile) {
         flex-direction: column;
+<<<<<<< Updated upstream
+        height: fit-content;
+        margin-bottom: var(--size-64);
+=======
         align-items: center;
         height: min-content;
+>>>>>>> Stashed changes
         background-color: var(--c-dark-transparent-50);
     }
 
@@ -90,6 +103,10 @@ body{
         align-items: flex-start;
         align-content: space-between;
         gap: var(--size-24);
+<<<<<<< Updated upstream
+        width: 100%;
+        position: relative;
+=======
         width: max-content;
 
         position: relative;
@@ -98,10 +115,6 @@ body{
         border: 2px solid var(--c-light);
         border-radius: var(--size-16);
         padding: var(--size-24);
-
-        @media screen and (max-width: $media-laptop) {
-            font-size: 2.4rem;               
-        }
 
         @media screen and (max-width: $media-tablet) {
             align-items: center;
@@ -113,6 +126,7 @@ body{
             padding: var(--size-8);
         }
 
+>>>>>>> Stashed changes
         
         .blog__title{
             color: var(--c-dark);
@@ -152,7 +166,11 @@ body{
             text-transform: uppercase;
     
             font-family: var(--font-noto);
+<<<<<<< Updated upstream
+            font-size: var(--size-32);
+=======
             font-size: var(--size-24);
+>>>>>>> Stashed changes
     
             @media screen and (max-width: $media-mobile) {
                 font-size: var(--size-16);
@@ -172,8 +190,13 @@ body{
                 height: var(--size-24);
     
                 @media screen and (max-width: $media-mobile) {
+<<<<<<< Updated upstream
+                    width: var(--size-24);
+                    height: var(--size-24);
+=======
                     width: var(--size-16);
                     height: var(--size-16);
+>>>>>>> Stashed changes
                 }
     
             }
@@ -184,7 +207,11 @@ body{
         /* what is happening - subtitle main page */
         .title{
     
+<<<<<<< Updated upstream
+            font-family: var(--font-noto);
+=======
             font-family: var(--font-space);
+>>>>>>> Stashed changes
             font-size: var(--size-48);
             font-weight: 300;
             text-transform: uppercase;
@@ -224,11 +251,18 @@ body{
         //sub headline
         h2{
     
+<<<<<<< Updated upstream
+            font-family: var(--font-space);
+            font-size: var(--size-32);
+            color: var(--c-light);
+            width: 50%;
+=======
             font-family: var(--font-noto);
             font-size: var(--size-32);
             font-weight: 400;
             color: var(--c-light);
             width: 30vw;
+>>>>>>> Stashed changes
             line-height: 135%;
     
             @media screen and (max-width: $media-laptop) {
@@ -236,6 +270,16 @@ body{
             }
     
             @media screen and (max-width: $media-tablet) {
+<<<<<<< Updated upstream
+                font-size: 1.2rem;
+            }
+    
+            @media screen and (max-width: $media-mobile) {
+                font-size: 1rem;
+                width: 100%;
+                padding-top: var(--size-8);
+                margin: auto;
+=======
                 font-size: var(--size-24);
                 width: 80vw;
             }
@@ -244,6 +288,7 @@ body{
                 font-size: var(--size-16);
                 width: 90vw;
                 //margin: auto;
+>>>>>>> Stashed changes
             }
         }
 
@@ -254,10 +299,6 @@ body{
         height: 56vh;
         overflow: hidden;
         position: relative;
-
-        @media screen and (max-width: $media-laptop) {
-            padding-top: 0.5em;         
-        }
 
         @media screen and (max-width: $media-tablet) {
             display: none;
@@ -327,7 +368,7 @@ body{
 
         }
 
-        /* .slider_controls{
+        .slider_controls{
             position: absolute;
             bottom: 10%;
             left: 50%;
@@ -356,8 +397,13 @@ body{
 
                 i,svg{
                     color: var(--c-light);
+<<<<<<< Updated upstream
+                    width: var(--size-32);
+                    height: var(--size-32);
+=======
                     width: var(--size-24);
                     height: var(--size-24);
+>>>>>>> Stashed changes
                 }
 
                 &:hover{
@@ -365,7 +411,11 @@ body{
                     backdrop-filter: blur(4px);
                 }
             }
+<<<<<<< Updated upstream
+        }
+=======
         } */
+>>>>>>> Stashed changes
 
     }
 
@@ -381,11 +431,8 @@ body{
         background: url("../../img/backgrounds/scene.webp");
         background-position: 50% center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-attachment: fixed;
-
-        //position: relative;
-
 
         //position: relative;
         
@@ -456,13 +503,6 @@ body{
                     width: 100%;
                     opacity: 1;
                }
-            }
-
-            @media screen and (max-width: $media-laptop) {
-                scale: 0.9;
-                left: 0;
-                padding: 0.5em;
-                font-size: 0.9rem;      
             }
 
             @media screen and (max-width: $media-laptop) {
@@ -583,20 +623,9 @@ body{
                         }
                     }
 
-                    .fade-in{
-                        opacity: 0;
-                        transform: translateY(60%);
-                        transition: all 0.5s ease-out;
-        
-                        &.active{
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-
                     h3{
                         color: var(--c-highlight);
-                        font-family: var(--font-space);
+                        font-family: var(--font-noto);
                         font-size: var(--size-48);
                         font-weight: 400;
                         margin: 0.1em 0.3em;
@@ -634,7 +663,7 @@ body{
                         }
 
                         h4{
-                            font-family: var(--font-space);
+                            font-family: var(--font-noto);
                             font-weight: 400;
                             font-size: var(--size-24);
                             letter-spacing: 3px;
@@ -652,7 +681,7 @@ body{
                         }
                         
                         p{
-                            font-family: var(--font-noto);
+                            font-family: var(--font-space);
                             font-size: 20px;
                             line-height: 28px;
                             letter-spacing: 1.5%;
@@ -673,29 +702,9 @@ body{
                                 text-wrap: wrap;
                                 line-height: 140%;
                             }
-
-                            @media screen and (max-width: $media-mobile) {
-                                font-size: 0.8rem;
-                                padding: var(--size-16) var(--size-4);
-                                text-wrap: wrap;
-                                line-height: 140%;
-                            }
                             
                             a{
                                 color: var(--c-highlight);
-                            }
-                        }
-
-                        ul{
-                            color: var(--c-light);
-                            font-size: 18px;
-                            font-family: var(--font-space);
-
-                            margin: auto;
-                            margin-left: 12vw;
-                            
-                            li{
-                                padding: var(--size-4);
                             }
                         }
 
@@ -740,10 +749,6 @@ body{
                                 border: thin solid var(--c-light);
                                 transition: all .3s ease;
                                 cursor: none;
-
-                                @media screen and (max-width: $media-laptop) {
-                                    width: 90%;
-                                }
 
                                 @media screen and (max-width: $media-laptop) {
                                     width: 90%;
@@ -1200,3 +1205,54 @@ body{
       transform: scale(1);
     }
   }
+
+//button animation
+@keyframes chevron-left {
+    from{
+        color: var(--c-light);
+    }
+    to{
+        color: var(--c-dark);
+    }
+}
+
+@keyframes chevron-center {
+    from{
+        color: var(--c-light);
+    }
+    to{
+        color: var(--c-dark);
+    }
+}
+
+@keyframes chevron-right {
+    from{
+        color: var(--c-light);
+    }
+    to{
+        color: var(--c-dark);
+    }
+}
+
+@keyframes blog-glitch {
+    0% {
+        filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px -1px magenta);
+    }
+    25% {
+    filter: drop-shadow(-1px -2px var(--c-blue)) drop-shadow(2px 1px magenta);
+    }
+    50% {
+    filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px 1px magenta);
+    }
+    75% {
+    filter: drop-shadow(-2px -1px var(--c-blue)) drop-shadow(-2px -1px magenta);
+    }
+    100% {
+    filter: drop-shadow(2px 0 var(--c-blue)) drop-shadow(2px -1px magenta);
+    }
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}

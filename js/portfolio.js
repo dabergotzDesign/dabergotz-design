@@ -1,3 +1,56 @@
+<<<<<<< Updated upstream
+/* LOTTIE */
+
+/* // Portfolio 01 // */
+/*
+const p1 = document.querySelector(".p_canvas-1"),
+p2 = document.querySelector(".p_canvas-2"),
+p3 = document.querySelector(".p_canvas-3"),
+p4 = document.querySelector(".p_canvas-4"),
+lottie_p1 = document.getElementById("lottie_p1"),
+lottie_p2 = document.getElementById("lottie_p2"),
+lottie_p3 = document.getElementById("lottie_p3"),
+lottie_p4 = document.getElementById("lottie_p4");
+
+p1.addEventListener("mouseenter", () => {
+  lottie_p1.play();
+});
+
+p1.addEventListener("mouseleave", () => {
+  lottie_p1.stop();
+});
+
+p2.addEventListener("mouseenter", () => {
+  lottie_p2.play();
+});
+
+p2.addEventListener("mouseleave", () => {
+  lottie_p2.stop();
+});
+
+p3.addEventListener("mouseenter", () => {
+  lottie_p3.play();
+});
+
+p3.addEventListener("mouseleave", () => {
+  lottie_p3.stop();
+});
+
+p4.addEventListener("mouseenter", () => {
+  lottie_p4.play();
+});
+
+p4.addEventListener("mouseleave", () => {
+  lottie_p4.stop();
+});
+*/
+
+/* const portfolioCards = document.querySelectorAll(".portfolio__card");
+
+portfolioCards.forEach((card) => {
+  
+}); */
+=======
 /* /// CASE STUDY PAGES /// */
 
 /* SIDENAV */
@@ -112,18 +165,6 @@ menuButtonHide.addEventListener("click", ()=>{
 /* const playVideo = document.querySelectorAll(".article__container figure video");
 const btnPlay = document.querySelector(".article__container figure i");
 
-/* Portfolio - modal images */
-
-const slider = gsap.utils.toArray(".slider img")
-
-const workTL = gsap.timeline({
-    defaults: {
-        ease: 'power1.inOut',
-        delay: 3,
-        duration: 1,
-        repeatDelay: 0.5,
-        yoyo: true
-    }
 
 playVideo.forEach(vid => {
 
@@ -138,8 +179,7 @@ playVideo.forEach(vid => {
     }
     
     vid.addEventListener("click", togglePlay);
-});
-*/
+}); */
 
 const playVideos = document.querySelectorAll(".article__container figure video");
 
@@ -184,3 +224,4 @@ playVideos.forEach((video) => {
 playVideo.addEventListener("paused", ()=>{
     btnPlay.classList.remove("play");
 }); */
+>>>>>>> Stashed changes

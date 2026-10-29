@@ -2,9 +2,6 @@ const cursor = document.querySelector('.custom_cursor');
 const hover = document.querySelectorAll(".hover");
 const desktop = window.matchMedia("(min-width: 1024px) and (hover: hover) and (pointer: fine)");
 
-
-if (desktop.matches) {
-
 if (desktop.matches) {
 
 document.addEventListener('mousemove', e =>{
@@ -43,6 +40,8 @@ hover.forEach(e => {
             cursor.innerHTML = "<i class='fa-solid fa-arrow-left'> back</i>";
         }
 
+<<<<<<< Updated upstream
+=======
         if(e.classList.contains("hover_up")){
             cursor.innerHTML = "<i class='fa-solid fa-arrow-up'></i>";
         }
@@ -51,6 +50,7 @@ hover.forEach(e => {
             cursor.innerHTML = "<i class='fa-solid fa-copy'></i>";
         }
 
+>>>>>>> Stashed changes
         if(e.classList.contains("hover_portfolio")){
             cursor.innerHTML = "<i class='fa-solid fa-arrow-up-right-from-square'> view project</i>";
             //e.classList.add("play");
@@ -62,10 +62,14 @@ hover.forEach(e => {
                 //const portfolioVideo = portfolioCards[0].querySelector("video");
 
                 portfolioCards.forEach(card => {
-                    const video = card.querySelector("video");
-                    
                     card.addEventListener("mouseenter", ()=>{
+                        const video = card.querySelector("video");
                         video.play();
+<<<<<<< Updated upstream
+                    })});
+
+            }
+=======
                     })
                     
                     card.addEventListener("mouseleave", ()=>{
@@ -77,6 +81,7 @@ hover.forEach(e => {
 
             } */
             
+>>>>>>> Stashed changes
         }
 
         if(e.classList.contains("hover_dl")){
@@ -95,8 +100,19 @@ hover.forEach(e => {
         
     })
 
+<<<<<<< Updated upstream
     });
 
+hover.forEach(e => {
+    e.addEventListener("mouseleave", ()=>{
+        cursor.classList.remove("state_hover");
+        if(e.classList.contains("hover_portfolio")){
+            e.classList.remove("play");
+        }
+    })
+});
+}
+=======
 
     /* Hover return */
     hover.forEach(e => {
@@ -106,3 +122,4 @@ hover.forEach(e => {
     })
 
 }
+>>>>>>> Stashed changes

@@ -1,17 +1,20 @@
 //media variables
-$media-laptop: 1440px;
+$media-laptop: 1200px;
 $media-tablet: 1024px;
 $media-mobile: 450px;
 
-/* MIXIN */
-/* @mixin panel-text {
-    text-align: center;
+$width-card-open: 30em;
+$width-card-open-t: 20em;
+$width-card-open-m: 12em;
+$width-card-default: 7em;
+$width-card-default-t: 6em;
+$width-card-default-m: 5em;
+
+/* Portfolio cards text - tablet/mobile only */
+@mixin card_text {
+    width: auto;
     font-family: var(--font-space);
-    font-size: clamp(1rem, 1.2vw, 2rem);
-    padding: .25rem 1.5rem;
-    margin-bottom: 1rem;
-    line-height: 2.5vh;
-} */
+    font-size: var(--size-16);
 
     letter-spacing: 1px;
     line-height: 120%;
@@ -24,6 +27,18 @@ $media-mobile: 450px;
 
     @media screen and (max-width: $media-tablet) {
         box-shadow: 1px 4px 0 2px var(--c-highlight);
+    }
+}
+
+@mixin image{
+    width: 36vw;
+    height: auto;
+    object-fit: contain;
+    @include border_image();
+
+    @media screen and (max-width: $media-tablet) {
+        width: 80vw;
+        height: 100%;
     }
 }
 
@@ -44,25 +59,33 @@ $media-mobile: 450px;
 
 
 
-
 #portfolio{
 
                 display: flex;
                 flex-direction: column;
                 
+<<<<<<< Updated upstream
+                height: auto;
+=======
                 height: min-content;
                 background: var(--c-dark-transparent-50);
                 margin-top: 10vh;
+>>>>>>> Stashed changes
                             
                       
                 @media screen and (max-width: $media-tablet) {
                     padding: 0;                    
                 }
 
-                @media screen and (max-width: $media-mobile) {                
-                    
+                @media screen and (max-width: $media-mobile) {
+                    height: fit-content;
                     margin-bottom: 1em;
+<<<<<<< Updated upstream
+                    margin-top: 20vh;
+
+=======
                 
+>>>>>>> Stashed changes
                     align-items: center;
                     justify-content: center;
                 }
@@ -78,8 +101,13 @@ $media-mobile: 450px;
                     h1{
                         color: var(--c-dark);
                         text-transform: uppercase;
+<<<<<<< Updated upstream
+                        font-size: var(--size-96);
+                        font-family: var(--font-noto);
+=======
                         font-size: var(--size-64);
                         font-family: var(--font-space);
+>>>>>>> Stashed changes
                         font-weight: 900;
                         position: relative;
 
@@ -98,8 +126,9 @@ $media-mobile: 450px;
 
                     h2{
                         color: var(--c-highlight);
-                        font-family: var(--font-space);
-                        font-size: var(--size-64);
+                        font-family: var(--font-noto);
+                        font-weight: 400;
+                        font-size: var(--size-24);
                         text-transform: uppercase;
 
                         @media screen and (max-width: $media-tablet) {
@@ -136,6 +165,7 @@ $media-mobile: 450px;
                 height: fit-content;
                 margin: 2em auto;
                 position: relative;
+<<<<<<< Updated upstream
                 padding: var(--size-80);
                 
                 transition: all 0.3s ease-in-out;
@@ -143,288 +173,7 @@ $media-mobile: 450px;
                 @media screen and (max-width: $media-mobile) {
                    padding: 4vw 2vw;
                }
-
-                ::-webkit-scrollbar{
-                    visibility: hidden;
-                    scroll-behavior: smooth;
-                }
-
-                
-                
-                canvas{
-                    width: 100%;
-                    object-fit: contain;
-                }
-                
-            }
-            
-            &__card{
-
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-                justify-content: space-evenly;
-                gap:var(--size-48);
-                padding: var(--size-16);
-                border-radius: var(--size-16);
-
-                position: relative;
-
-                &:has(a:hover){
-                    background: linear-gradient( -45deg, var(--c-light-transparent-10), transparent);
-                    backdrop-filter: blur(8px);
-                }
-
-
-                a{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: var(--size-16);
-                    transition: all 0.3s ease-in-out;
-
-                    &:hover{
-                        box-shadow: 4px 8px var(--c-light-transparent-25);
-                    }
-                }
-                                
-
-            @media screen and (max-width: $media-tablet) {
-                   display: none;
-               }
-  
-
-               .card{
-
-                &__thumbnail{
-
-
-                    width: 100%;
-                    height:56vh;
-                                      
-                    border: 1px solid var(--c-highlight);
-                    border-radius: var(--size-16);
-                    box-shadow: 8px 8px 0 var(--c-highlight);
-
-                    video{
-                        min-width: 100%;
-                        min-height: 100%;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: var(--size-16);
-                    }
-                }
-
-                &__info{
-                    @include card_info();
-
-                    h1{
-                        text-shadow: 2px 2px 0 var(--c-dark);
-                    }
-
-
-                    span{
-                        color: var(--c-highlight);
-                    }
-
-                    .tag__wrapper{
-                        display: flex;
-                        align-items: center;
-                        justify-content: flex-start;
-                        gap: var(--size-16);
-                        margin-top: var(--size-16);                        
-
-                        .tag{
-                            color: var(--c-light);
-                            font-family: var(--font-space);
-                            font-size: var(--size-16);
-                            text-transform: uppercase;
-                            padding: var(--size-8) var(--size-16);
-                            border-radius: var(--size-4);
-                            border: 1px solid var(--c-light);
-                        }
-                    }
-                }
-
-            }
-
-
-        }
-
-            
-        }
-
-                /* MOBILE/TABLET MODE */
-                .mobile{                    
-                    
-                    &__container{
-                        display: none;            
-                        margin: auto;
-                        margin-top: var(--size-32);
-                        overflow-y: hidden;
-
-                        flex-flow: column wrap;
-                        align-items: center;
-                        justify-content: space-between;
-                        gap: var(--size-48);
-
-                        
-                        @media screen and (max-width: $media-tablet) {
-                            display: flex;
-                        }
-
-                        @media screen and (max-width: $media-mobile) {
-                            width: 95%;
-                            margin: 0;
-                            margin: var(--size-24);
-                            overflow: visible;       
-                        }
-
-                        .card{
-
-                            &__wrapper{
-
-                                position: relative;
-
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                                        
-                                width: 100%;
-                                height: auto;
-                                padding: var(--size-8) var(--size-4);
-                                
-                                background-color: var(--c-dark);
-                                border: 1px solid var(--c-light);
-    
-                                border-radius: var(--size-16);                         
-    
-                                @media screen and (max-width: $media-mobile) {
-                                    width: 95%;
-                                    height: fit-content;
-                                }
-
-                                .link{
-                                   color: var(--c-highlight);
-                                   text-decoration: none;
-                                   text-transform: uppercase;
-                                   font-family: var(--font-space);
-                                   padding: var(--size-4) var(--size-16);
-                                   border-radius: var(--size-80);
-                                   outline: 1px solid var(--c-light);
-
-                                   &::after{
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    content: '';
-                                   }
-
-                                }
-                                                          
-                            }
-
-                            &__thumbnail{
-                                
-                                overflow: hidden;     
-                                border-radius: var(--size-16);
-                                transition: all 0.3s ease;
-                                
-                                .thumbnail{
-                                    width: 100%;
-                                    height: auto;
-                                    object-fit: cover;
-
-                                    &.asozial{
-                                        filter: brightness(120%);
-                                    }
-                                }
-                                                                                          
-                            }
-
-                            &__info-mobile{
-                                @include card_info();
-
-                                span{
-                                    color: var(--c-highlight);
-                                }
-
-                                h1{
-                                    @media screen and (max-width: $media-mobile){
-                                        padding: var(--size-8) var(--size-4);
-                                    }
-                                }
-
-                                .tag__wrapper{
-
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    gap: var(--size-8);
-                                    margin-top: var(--size-4);
-                                    
-                                    .tag{
-                                        padding: var(--size-4);
-                                        background-color: var(--c-light-transparent-10);
-                                        text-align: center;
-                                        letter-spacing: 1.5px;
-                                        backdrop-filter: blur(10px);
-                                        border-radius: var(--size-4);
-                                    }
-                                }
-                            }
-
-
-                        }
-                                                                       
-
-                    }
-
-
-                }
-
-            .more__projects{
-
-            text-align: center;
-            text-decoration: none;
-            color: var(--c-highlight);
-            
-            font-size: var(--size-24);
-            font-family: var(--font-space);
-            text-transform: uppercase;
-            
-            margin: auto;
-            padding: var(--size-16);
-            width: 80%;
-            border-radius: var(--size-16);
-
-            &:hover{
-                background-color: var(--c-highlight);
-                color: var(--c-dark);
-            }
-        }
-  
-
-
-        /* GALLERY */
-        .portfolio{
-
-            &__wrapper{
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: center;
-                justify-content: space-between;
-                gap: var(--size-96);
-
-                height: fit-content;
-                margin: 2em auto;
-                position: relative;
+=======
                 padding: 2em 4em;
                 padding-top: 0;
                 padding-left: 0;
@@ -440,12 +189,23 @@ $media-mobile: 450px;
                    margin-top: 12vh;
                    gap: 0;
                } 
+>>>>>>> Stashed changes
 
                 ::-webkit-scrollbar{
                     visibility: hidden;
                     scroll-behavior: smooth;
                 }
 
+<<<<<<< Updated upstream
+                
+                
+                canvas{
+                    width: 100%;
+                    object-fit: contain;
+                }
+                
+            }
+=======
                  
                 /* canvas{
                     width: 100%;
@@ -600,6 +360,7 @@ $media-mobile: 450px;
             align-items: center;
             justify-content: center;
             gap: var(--size-24);
+>>>>>>> Stashed changes
             
             h1{
                 font-family: var(--font-space);
@@ -720,15 +481,12 @@ $media-mobile: 450px;
             &__card{
 
                 display: flex;
-                flex-flow: column nowrap;
-                align-items: flex-start;
-                //justify-content: space-evenly;
-                align-content: space-evenly;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-evenly;
                 gap:var(--size-48);
                 padding: var(--size-16);
                 border-radius: var(--size-16);
-
-                width: 100%;
 
                 position: relative;
 
@@ -748,7 +506,7 @@ $media-mobile: 450px;
                     transition: all 0.3s ease-in-out;
 
                     &:hover{
-                        box-shadow: 4px 8px var(--c-highlight);
+                        box-shadow: 4px 8px var(--c-light-transparent-25);
                     }
                 }
                                 
@@ -766,9 +524,9 @@ $media-mobile: 450px;
                     width: 100%;
                     height:56vh;
                                       
-                    border: 1px solid var(--c-light);
+                    border: 1px solid var(--c-highlight);
                     border-radius: var(--size-16);
-                    //box-shadow: 8px 8px 0 var(--c-highlight);
+                    box-shadow: 8px 8px 0 var(--c-highlight);
 
                     video{
                         min-width: 100%;
@@ -802,9 +560,8 @@ $media-mobile: 450px;
                         .tag{
                             color: var(--c-light);
                             font-family: var(--font-space);
-                            font-size: var(--size-12);
+                            font-size: var(--size-16);
                             text-transform: uppercase;
-                            white-space: pre;
                             padding: var(--size-8) var(--size-16);
                             border-radius: var(--size-4);
                             border: 1px solid var(--c-light);
@@ -814,37 +571,8 @@ $media-mobile: 450px;
 
             }
 
-            &__info{
 
-                width: 20vw;
-                align-self: flex-start;
-
-                ul{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: center;
-                    gap: 4em;
-                }
-
-                li{
-                    list-style: none;
-                    color: var(--c-light);
-                    font-family: var(--font-poppins);
-                }
-
-                h3{
-                    text-transform: uppercase;
-                    font-weight: 400;
-                    font-size: 1.5rem;
-                }
-
-                p{
-                    font-size: 1.2rem;
-                    font-weight: 200;
-                    width: 80%;
-                }
-            }
+        }
 
             
             }
@@ -916,17 +644,177 @@ $media-mobile: 450px;
             }
         }
 
+<<<<<<< Updated upstream
+                /* MOBILE/TABLET MODE */
+                .mobile{                    
+                    
+                    &__container{
+                        display: none;            
+                        margin: auto;
+                        margin-top: var(--size-32);
+                        overflow-y: hidden;
+=======
 
         hr{
             width: 100%;
             border-color: var(--c-light-transparent-25);
         }
+>>>>>>> Stashed changes
 
         .shorts{
 
+<<<<<<< Updated upstream
+                        
+                        @media screen and (max-width: $media-tablet) {
+                            display: flex;
+                        }
+
+                        @media screen and (max-width: $media-mobile) {
+                            width: 95%;
+                            margin: 0;
+                            margin: var(--size-24);
+                            overflow: visible;       
+                        }
+
+                        .card{
+
+                            &__wrapper{
+
+                                position: relative;
+
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                                        
+                                width: 100%;
+                                height: auto;
+                                padding: var(--size-8) var(--size-4);
+                                
+                                background-color: var(--c-dark);
+                                border: 1px solid var(--c-light);
+    
+                                border-radius: var(--size-16);                         
+    
+                                @media screen and (max-width: $media-mobile) {
+                                    width: 95%;
+                                    height: fit-content;
+                                }
+
+                                .link{
+                                   color: var(--c-highlight);
+                                   text-decoration: none;
+                                   text-transform: uppercase;
+                                   font-family: var(--font-space);
+                                   padding: var(--size-4) var(--size-16);
+                                   border-radius: var(--size-80);
+                                   outline: 1px solid var(--c-light);
+
+                                   &::after{
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    content: '';
+                                   }
+
+                                }
+                                                          
+                            }
+
+                            &__thumbnail{
+                                
+                                overflow: hidden;     
+                                border-radius: var(--size-16);
+                                transition: all 0.3s ease;
+                                
+                                .thumbnail{
+                                    width: 100%;
+                                    height: auto;
+                                    object-fit: cover;
+
+                                    &.asozial{
+                                        filter: brightness(120%);
+                                    }
+                                }
+                                                                                          
+                            }
+
+                            &__info-mobile{
+                                @include card_info();
+
+                                span{
+                                    color: var(--c-highlight);
+                                }
+
+                                h1{
+                                    @media screen and (max-width: $media-mobile){
+                                        padding: var(--size-8) var(--size-4);
+                                    }
+                                }
+
+                                .tag__wrapper{
+
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    gap: var(--size-8);
+                                    margin-top: var(--size-4);
+                                    
+                                    .tag{
+                                        padding: var(--size-4);
+                                        background-color: var(--c-light-transparent-10);
+                                        text-align: center;
+                                        letter-spacing: 1.5px;
+                                        backdrop-filter: blur(10px);
+                                        border-radius: var(--size-4);
+                                    }
+                                }
+                            }
+
+
+                        }
+                                                                       
+
+                    }
+
+
+                }
+
+            .more__projects{
+
+            text-align: center;
+            text-decoration: none;
+            color: var(--c-highlight);
+            
+            font-size: var(--size-24);
+            font-family: var(--font-space);
+            text-transform: uppercase;
+            
+            margin: auto;
+            padding: var(--size-16);
+            width: 80%;
+            border-radius: var(--size-16);
+
+            &:hover{
+                background-color: var(--c-highlight);
+                color: var(--c-dark);
+            }
+        }
+
+
+        /* SIDE PROJECTS */
+
+        .sideProjects{
+=======
+>>>>>>> Stashed changes
             display: flex;
             align-items: center;
             justify-content: space-between;
+<<<<<<< Updated upstream
+            gap: var(--size-24);
+=======
             width: 100%;
             padding: var(--size-24);
 
@@ -938,6 +826,7 @@ $media-mobile: 450px;
                 grid-template-columns: repeat(2, 1fr);
                 align-items: start;
             }
+>>>>>>> Stashed changes
 
             h1{
                 color: var(--c-light);
@@ -996,7 +885,7 @@ $media-mobile: 450px;
                 text-transform: uppercase;
                 letter-spacing: 3px;
 
-                @media screen and (max-width: $media-tablet){
+                @media screen and (max-width: $media-mobile){
                     font-size: var(--size-24);
                 }
 
@@ -1006,6 +895,57 @@ $media-mobile: 450px;
                 }
             }
 
+<<<<<<< Updated upstream
+            .sides__container{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--size-48);
+                padding: var(--size-32);
+                width: 80vw;
+                overflow-x: auto;
+
+                /* > * {
+                    flex: 0 0 100%;
+                } */
+
+                &:hover .group{
+                    animation-play-state: paused;
+                }
+
+                .group{
+                    display: flex;
+                    gap: var(--size-72);
+                    padding-right: var(--size-24);
+                    
+                    will-change: transform;
+                    animation: scrolling 10s linear infinite;
+                }
+
+                .sides__card{   
+                    
+                    position: relative;
+
+                    &:has(a:hover){
+
+                        img{
+                            box-shadow: 8px 8px 0 var(--c-highlight);
+                        }
+                    }
+                    
+                    img{
+                        width: 24vw;
+                        height: 100%;
+                        object-fit: cover;
+                        outline: 2px solid var(--c-light);
+                        border-radius: var(--size-16);
+                        transition: all 0.3s ease-in-out;
+
+                        @media screen and (max-width: $media-mobile){
+                            width: 64vw;
+                        }
+                    }
+=======
         .content{
 
             display: flex;
@@ -1026,97 +966,6 @@ $media-mobile: 450px;
                     padding-top: 0;
                 }
 
-
-/* Hover for cards */                
-@keyframes glitch {
-    0% {
-    filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px -1px magenta);
-    }
-    25% {
-    filter: drop-shadow(-1px -2px var(--c-blue)) drop-shadow(2px 1px magenta);
-    }
-    50% {
-    filter: drop-shadow(2px 1px var(--c-blue)) drop-shadow(-2px 1px magenta);
-    }
-    75% {
-    filter: drop-shadow(-2px -1px var(--c-blue)) drop-shadow(-2px -1px magenta);
-    }
-    100% {
-    filter: drop-shadow(2px 0 var(--c-blue)) drop-shadow(2px -1px magenta);
-    }
-}
-
-@keyframes pulse {
-    0%{box-shadow: 0 0 0 4px var(--c-light);}
-    100%{box-shadow: 0 0 0 8px transparent;}
-}
-
-                /* @keyframes slide {
-                    0%{
-                        transform: translateX(0);
-                    }
-                    5%{
-                        transform: translateX(0);
-                    }
-                    25%{
-                        transform: translateX(-33.33%);
-                    }
-                    35%{
-                        transform: translateX(-33.33%);
-                    }
-                    50%{
-                        transform: translateX(-66.66%);
-                    }
-                    60%{
-                        transform: translateX(-66.66%);
-                    }
-                    75%{
-                        transform: translateX(-33.33%);
-                    }
-                    85%{
-                        transform: translateX(-33.33%);
-                    }
-                    95%{
-                        transform: translateX(0);
-                    }                    
-                    100%{
-                        transform: translateX(0);
-                    }
-                }
-
-                @keyframes slideM {
-                    0%{
-                        transform: translateX(0);
-                    }
-                    5%{
-                        transform: translateX(0);
-                    }
-                    25%{
-                        transform: translateX(-100%);
-                    }
-                    35%{
-                        transform: translateX(-100%);
-                    }
-                    50%{
-                        transform: translateX(-200%);
-                    }
-                    60%{
-                        transform: translateX(-200%);
-                    }
-                    75%{
-                        transform: translateX(-100%);
-                    }
-                    85%{
-                        transform: translateX(-100%);
-                    }
-                    95%{
-                        transform: translateX(0);
-                    }                    
-                    100%{
-                        transform: translateX(0);
-                    }
-                } */
-
                 
                 @media screen and (max-width: $media-mobile){
                     gap: var(--size-12);
@@ -1130,246 +979,6 @@ $media-mobile: 450px;
                         margin: auto;
                     }
                 }
-
-                &__wrapper-mobile{
-                    display: block;
-                    
-                    overflow-x: scroll;
-                    position: relative; 
-                                                          
-                    @media screen and (max-width: $media-tablet) {
-                        display: block;
-                        margin-left: 5%;
-                    }
-
-                    .progress__bar{
-                        position: fixed;
-                        top: 4%;
-                        left: 12.5%;
-                        margin: 1rem;
-
-                        width: 50vw;
-                        height: 4px;
-                        border-radius: 0.5rem;
-                        
-                        background-color: var(--bg-lightgrey);
-                        outline: 1px solid var(--bg-light);
-                        transition: all 0.3s ease;
-
-                        .progress{
-                            background-color: var(--bg-dark);
-                            height: 4px;
-                            width: 0;
-                        }
-
-                    }
-                }
-
-                &__container-mobile{
-                    display: block;
-                    width: 400vw; //based on number of sections (4)
-                    height: 90vh;
-                    background-color: var(--bg-dark-transparent);
-                                                            
-                    margin-left: 10%;
-
-                    @media screen and (max-width: $media-tablet){
-                        display: flex;
-                        align-items: flex-start;
-                        justify-content: space-evenly;
-                    }
-
-                                        
-                    section{
-                        width: 100vw;
-                        height: 80%;
-                        padding: 1.8rem;
-                        display: flex;
-                        flex-flow: column nowrap;
-                        align-items: center;
-                        justify-content: flex-start;
-
-                        @media screen and (max-width: 500px) {
-                            padding: 1rem;
-                        }
-                    }
-
-                    h1{
-                        color: var(--text-light);
-                        font-size: 1.2rem;
-                        font-family: var(--font-space-mono);
-                        padding-left: 2rem;
-                        padding: 0.25rem;
-
-                        @media screen and (max-width: 500px) {
-                            font-size: 1rem;
-                        }
-                    }
-
-
-                    .col{  
-                        
-                        position: relative;
-                        display: flex;
-                        flex-flow: column nowrap;
-
-
-                        @media screen and (max-width: 500px) {
-                            width: 80vw;
-                        }
-                        
-                        img{
-                            display: block;
-                            margin: auto;
-                            
-                            max-width: 100%;
-                            height: auto;
-
-                            @media screen and (max-width: 500px) {
-                                max-width: 80%;
-                            }
-                        }
-
-                        p{
-                            color: var(--text-light);
-                            font-family: var(--font-hepta);
-                            font-size: clamp(1rem, 1.5vw, 2rem);
-                            line-height: 1.3rem;
-                            padding: 0.25rem;
-
-                            @media screen and (max-width: 500px) {
-                                font-size: 0.9rem;
-                            }
-                            
-
-                            span{
-                                padding-left: 0.5rem;
-                            }
-
-                        }
-
-                        .link__mobile{
-                            color: var(--text-light);
-                            text-align: center;
-                            text-decoration: none;
-                            text-transform: uppercase;
-                            font-family: var(--font-space-mono);
-                            letter-spacing: 2px;
-
-                            margin: 0.25rem;
-                            padding: 0.5rem;
-                            outline: thin solid var(--bg-light);
-                            border-radius: 0.5rem;
-
-                            display: flex; //for the one button with two links in it
-                            align-items: center;
-                            justify-content: center;
-
-
-                            @media screen and (max-width: 500px) {
-                                font-size: 0.9rem;
-                                padding: 0.4rem;
-                            }
-
-                            a{
-                                color: var(--text-light);
-                                text-decoration: none;
-                            }
-
-                        }
-                    }
-                    
-                /*     .accordion
-                    {
-                        background-color: var(--bg-dark);
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-
-                        text-align: center;
-                        font-family: var(--font-space-mono);
-                        font-size: 1.5rem;
-                        font-weight: 700;
-                        letter-spacing: 2px;
-                        
-
-                        outline: none;
-                        border: none;
-
-                        padding: 1.1rem;
-                        width: 100%;
-                        height: 240px;
-                     
-                        transition: all 0.3s ease;
-                        position: relative;
-
-                                                                      
-
-                        &.active{
-                            background-color: var(--bg-dark-grey);
-                        }
-
-                        &.piece-1{
-                            background-image: url("../../img/portfolio/weeb_shop.png");
-                            color: $accordion-text;
-                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
-
-                        }
-
-                        &.piece-2{
-                            background-image: url("../../img/portfolio/genshin_teams_light-version.png");
-                            color: var(--text-light);
-                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
-                        }
-
-                        &.piece-3{
-                            background-image: url("../../img/portfolio/WallOfWishes_site.jpg");
-                            color: var(--text-light);
-                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
-                        }
-
-                        &.piece-4{
-                            background-image: url("../../img/portfolio/to-do-lists.png");
-                            color: var(--text-light);
-                            text-shadow: 0 0 2px var(--bg-dark), 0 0 4px var(--bg-dark);
-                        }
-                       
-
-                    }
-
-
-                    .panel{
-                        max-height: 0;
-                        padding: 0 1.1rem;
-                        background-color: var(--bg-dark);
-                        border-left: thin solid var(--bg-light);
-                        border-right: thin solid var(--bg-light);
-                        overflow: hidden;
-                        transition: max-height 0.3s ease;
-
-                        .accordion{
-                            &__title{
-                                text-align: center;
-                                color: var(--text-light);
-                                font-family: var(--font-space-mono);
-                            }
-
-                            &__description{
-                                @include panel-text;
-                                color: var(--text-light);
-                                font-size: 0.9rem;
-
-                                span{
-                                    padding-left: 0.5rem;
-                                }
-                            }
-                        }
-                    } 
-                }
-
-                */
-
-                
 
                 
                 img{
@@ -1393,6 +1002,7 @@ $media-mobile: 450px;
                     font-family: var(--font-noto);
                     letter-spacing: 3px;
                     padding: var(--size-24) 0;
+>>>>>>> Stashed changes
 
                     a{
                         color: var(--c-highlight);
@@ -1732,19 +1342,31 @@ $media-mobile: 450px;
 
                             h1{
                                 color: var(--c-light);
+<<<<<<< Updated upstream
+                                font-family: var(--font-noto);
+=======
                                 font-family: var(--font-space);
+>>>>>>> Stashed changes
                                 font-size: var(--size-32);
                                 font-weight: 900;
                                 text-transform: uppercase;
 
                                 @media screen and (max-width: $media-tablet) {
+<<<<<<< Updated upstream
+                                    font-size: var(--size-16);
+=======
                                     font-size: var(--size-24);
+>>>>>>> Stashed changes
                                 }
                             }
 
                             h5{
                                 color: var(--c-highlight);
+<<<<<<< Updated upstream
+                                font-family: var(--font-noto);
+=======
                                 font-family: var(--font-space);
+>>>>>>> Stashed changes
                                 font-size: var(--size-16);
                                 font-weight: 400;
                                 text-transform: uppercase;
@@ -1758,18 +1380,27 @@ $media-mobile: 450px;
                             }
 
                             p{
+<<<<<<< Updated upstream
+                                font-family: var(--font-space);
+=======
                                 font-family: var(--font-noto);
+>>>>>>> Stashed changes
                                 font-size: var(--size-16);
                                 line-height: 28px;
                                 width: 80%;   
                                 
                                 @media screen and (max-width: $media-tablet) {
+<<<<<<< Updated upstream
+                                    width: 100%;
+                                    line-height: 20px;
+=======
                                     width: 80%;
                                     line-height: 20px;
                                 }
 
                                 @media screen and (max-width: $media-mobile) {
                                     width: 100%;
+>>>>>>> Stashed changes
                                 }
                             }
                         }
@@ -1789,9 +1420,12 @@ $media-mobile: 450px;
                             color: var(--c-light);
 
                             @media screen and (max-width: $media-tablet) {
+<<<<<<< Updated upstream
+=======
                                 flex-direction: row;
                                 justify-content: flex-start;
                                 gap: var(--size-32);
+>>>>>>> Stashed changes
                                 width: 100%;
                                 padding: var(--size-24);
                             }
@@ -1803,7 +1437,11 @@ $media-mobile: 450px;
 
                             h5{
                                 color: var(--c-highlight);
+<<<<<<< Updated upstream
+                                font-family: var(--font-noto);
+=======
                                 font-family: var(--font-space);
+>>>>>>> Stashed changes
                                 font-size: var(--size-16);
                                 font-weight: 400;
                                 text-transform: uppercase;
@@ -1818,10 +1456,17 @@ $media-mobile: 450px;
                             }
 
                             p{
+<<<<<<< Updated upstream
+                                font-family: var(--font-space);
+                                font-size: var(--size-24); 
+                                
+                                @media screen and (max-width: $media-mobile) {
+=======
                                 font-family: var(--font-noto);
                                 font-size: var(--size-24); 
                                 
                                 @media screen and (max-width: $media-tablet) {
+>>>>>>> Stashed changes
                                     font-size: var(--size-16);
                                 }
                             }
@@ -1870,7 +1515,11 @@ $media-mobile: 450px;
 
                     h5{
                         color: var(--c-highlight);
+<<<<<<< Updated upstream
+                        font-family: var(--font-noto);
+=======
                         font-family: var(--font-space);
+>>>>>>> Stashed changes
                         font-size: var(--size-16);
                         font-weight: 300;
                         text-transform: uppercase;
@@ -1888,7 +1537,11 @@ $media-mobile: 450px;
                   
                     p{
                         color: var(--c-light);
+<<<<<<< Updated upstream
+                        font-family: var(--font-space);
+=======
                         font-family: var(--font-noto);
+>>>>>>> Stashed changes
                         font-size: var(--size-24);
                         line-height: 32px;
                         letter-spacing: 0.6px;
@@ -1947,10 +1600,13 @@ $media-mobile: 450px;
                                 padding: var(--size-32) 0;
                             }
                             
+<<<<<<< Updated upstream
+=======
                             /* &-grid{
                                 display: grid;
                                 place-content: start space-evenly;
                             } */
+>>>>>>> Stashed changes
                             
                             &-imgText{
                                 display: flex;
@@ -1985,7 +1641,19 @@ $media-mobile: 450px;
                                 
 
                                 img{
+<<<<<<< Updated upstream
+                                    width: 24vw;
+                                    height: auto;
+                                    object-fit: contain;
+                                    @include border_image();
+
+                                    @media screen and (max-width: $media-tablet) {
+                                        width: 80vw;
+                                        height: 100%;
+                                    }
+=======
                                     @include image();
+>>>>>>> Stashed changes
                                 }
 
                                 div{
@@ -2005,6 +1673,12 @@ $media-mobile: 450px;
                             
                             &-images{
                                 display: flex;
+<<<<<<< Updated upstream
+                                flex-flow: row wrap;
+                                align-items: center;
+                                justify-content: space-evenly;
+                                gap: var(--size-32);
+=======
                                 flex-flow: row nowrap;
                                 align-items: center;
                                 justify-content: space-evenly;
@@ -2017,6 +1691,7 @@ $media-mobile: 450px;
                                 @media screen and (max-width: $media-tablet) {
                                     flex-flow: column nowrap;
                                 }
+>>>>>>> Stashed changes
                                 
                                 .iconography{
                                     display: flex;
@@ -2080,14 +1755,27 @@ $media-mobile: 450px;
                                 }
 
                                 /* Play button */
+<<<<<<< Updated upstream
+                                /* &:hover{
+                                    i,svg{
+                                        display: none;
+                                    }
+                                } */
+
+=======
                                 
+>>>>>>> Stashed changes
                                   i,svg{
                                     position: absolute;
                                     top: 50%;
                                     left: 50%;
                                     transform: translate(-50%, -50%);
                                     color: var(--c-highlight);
+<<<<<<< Updated upstream
+                                    background-color: var(--c-dark-transparent-50);
+=======
                                     background-color: var(--c-light-transparent-10);
+>>>>>>> Stashed changes
                                     border-radius: 50%;
                                     padding: var(--size-16);
                                     width: 64px;
@@ -2104,11 +1792,30 @@ $media-mobile: 450px;
                                 }
 
                                 img{
+<<<<<<< Updated upstream
+                                    width: 32vw;
+                                    height: auto;
+                                    @include border_image();
+
+                                    @media screen and (max-width: $media-tablet) {
+                                        width: 80vw;
+                                    }
+                                }
+
+                                .imgCS{
+                                    width: 48vw;
+                                    height: auto;
+
+                                    @media screen and (max-width: $media-tablet){
+                                        width: 80vw;
+                                    }
+=======
                                     @include image();
                                 }
 
                                 .imgCS{
                                     @include image();
+>>>>>>> Stashed changes
                                 }
 
                                 figcaption{
@@ -2271,934 +1978,7 @@ $media-mobile: 450px;
             width: var(--size-32);
             height: var(--size-32);
 
-            @media screen and (max-width: $media-mobile) {
-                width: var(--size-24);
-                height: var(--size-24);          
-            }
-        }
-
-    }
-
-    .modal{
-
-        &__figure{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: var(--size-32);
-            margin: auto;
-        }
-
-        &__img{
-            margin: auto;
-            max-width: 100%;
-            max-height: 100%;
-            width: 42vw;
-            height: auto;
-            object-fit: contain;
-
-            border: 1px solid var(--c-highlight);
-            border-radius: var(--size-16);
-            background: var(--c-dark);
-
-            @media screen and (max-width: $media-mobile) {
-                width: 96vw;                        
-            }
-        }
-
-        &__caption{
-            margin: auto;
-            display: block;
-
-            background: var(--c-dark);
-            color: var(--c-light);
-
-            font-family: var(--font-space);
-            font-size: var(--size-16);
-            text-transform: capitalize;
-            padding: var(--size-8) var(--size-16);
-            border-radius: var(--size-80);
-            white-space: pre;
-
-            @media screen and (max-width: $media-mobile) {
-                font-size: var(--size-12);        
-            }
-
-        }
-
-    }
-
-
-}
-
-
-
-/* ANIMATIONS */
-@keyframes scrolling {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  } 
-
-
-
-
-/* //////// CASE STUDIES //////// */
-.scroll__top{
-    position: fixed;
-    bottom: 10%;
-    right: 2em;
-    z-index: 99;
-
-    color: var(--c-light);
-    background-color: var(--c-dark-transparent-50);
-    border-radius: 50%;
-    padding: var(--size-16);
-    width: var(--size-48);
-    height: var(--size-48);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: all 0.3s ease-in-out;
-
-     @media screen and (max-width: $media-tablet) {
-        scale: 0.8;  
-        right:0;   
-    }
-
-    svg{
-        scale: 4;
-
-        @media screen and (max-width: $media-tablet) {
-                scale: 1;    
-        }
-    }
-
-    &:hover{
-        background-color: var(--c-highlight);
-        color: var(--c-dark);
-        cursor: none;
-    }
-
-    @media screen and (max-width:$media-tablet) {
-        svg{
-            scale:3;
-        }
-    }
-
-}
-
-#asozial,
-#rememberourtales{
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    padding-top: 0;
-
-    .navbar__wrapper{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: fit-content;
-        height: 100%;
-        z-index: 1;
-
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: flex-start;
-
-        background: var(--c-dark-transparent-50);
-        backdrop-filter: blur(8px);
-
-        /* Sidenav mobile menu buttons */
-            .button__hide,
-            .button__show{
-                display: grid;
-                place-content: center;
-                padding: var(--size-4);
-                background: var(--c-light-transparent-10);
-                border: none;
-                border-radius: var(--size-4);
-                color: var(--c-light);
-                height: 10vh;
-
-                &.hidden{
-                    display: none;
-                }
-
-                &:active{
-                    background-color: var(--c-dark-transparent-25);
-                }
-
-                /* hidden on Desktop */
-                @media screen and (min-width:$media-tablet) {
-                    display: none;
-                }
-            }
-            
-
-        @media screen and (max-width: $media-tablet) {
-            transform: translateY(0);
-            flex-flow: row nowrap;
-        }
-    }
-   
-    .cs{
-
-        &__sidenav{
-
-            display: flex;
-            /* position: fixed;
-            top: 0;
-            left: 0;
-            right: 0; */
-
-            transform: translateY(25%);
-            width: 10vw;
-            height: fit-content;
-      
-            padding-top: var(--size-64);
-                        
-            position: relative;
-            transition: width 0.3s ease-in-out;
-
-            &.hidden{
-                width: 0;
-                overflow: hidden;
-            }
-
-            &.open{
-                width: 50vw;
-                padding-top: 0;
-            }
-
-            
-            ul{
-
-                //padding-top: var(--size-64);
-
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: var(--size-24);
-
-                li{
-                    list-style: none;
-                    font-family: var(--font-space);
-                    font-size: 1.2rem;
-                    text-transform: capitalize;
-                    transition: all 0.3s ease;
-                    color: var(--c-light);
-                    font-size: var(--size-16);
-                    padding: var(--size-4) var(--size-16);
-
-                    
-                    &:hover{
-                        color: var(--c-highlight);
-                        cursor: none;
-                    }
-
-                    a{
-                        text-decoration: none;
-                        color: inherit;
-                        cursor: none;
-                    }
-
-                    &.active a{
-                        color: var(--c-highlight);
-                    }
-                }
-            }
-
-            .button__back{
-                display: grid;
-                place-content: center;
-                color: var(--c-light);
-                position: absolute;
-                bottom: -25%;
-                left: 15%;
-                width: var(--size-64);
-                height: auto;
-
-                @media screen and (max-width: $media-tablet) {
-                    bottom: 35%;
-                }
-            }
-
-        @media screen and (max-width: $media-tablet) {
-            transform: translateY(15%);
-            width: 0;
-            overflow: hidden;
-            height: 100%;
-        }
-
-
-        }
-
-        &__content{
-  
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: var(--size-96);
-            width: 100vw;
-            height: 100%;
-            
-
-            background-color: var(--c-dark-transparent-50);
-
-            @media screen and (max-width: $media-tablet) {
-                gap: var(--size-48);
-            }
-
-            .cs{
-
-                &__heading{
-
-                    padding: 0 var(--size-64);
-
-                    @media screen and (max-width: $media-tablet) {
-                        padding: 0;
-                    }
-
-                    h5{
-                        color: var(--c-highlight);
-                        font-family: var(--font-noto);
-                        font-size: var(--size-16);
-                        font-weight: 400;
-                        text-transform: uppercase;
-                        letter-spacing: 1.4px;
-                        line-height: 20px;
-                        padding-bottom: var(--size-4);
-
-                        @media screen and (max-width: $media-tablet) {
-                            font-size: var(--size-12);
-                        }
-                    }
-
-                    h1{
-                        color: var(--c-light);
-                        font-family: var(--font-noto);
-                        font-size: var(--size-40);
-                        font-weight: 900;
-                        text-transform: uppercase;
-                        width: 70%;
-
-                        @media screen and (max-width: $media-tablet) {
-                            font-size: var(--size-16);
-                            width: 100%;
-                        }
-                    }
-
-                }
-
-
-                &__intro{
-
-                //background-color: red;
-                background-position: center center;
-                background-size:contain;
-                height: 100vh;
-                width: 100vw;
-
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                justify-content: center;
-
-                @media screen and (max-width: $media-tablet) {
-                    background-position: 50% 10%;
-                }
-
-                &-card{
-                    display: flex;
-                    flex-flow: row nowrap;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    padding: var(--size-16), var(--size-32);
-                    transform: translate(-10%, -25%);
-                    width: 40vw;             
-
-                    background-color: var(--c-dark);
-                    border: 1px solid var(--c-highlight);
-                    border-radius: var(--size-16);
-                    
-                    @media screen and (max-width: $media-tablet) {
-                        flex-flow: column nowrap;
-                        transform: translate(5%, 15%);
-                        width: 100vw;
-                        scale: 0.8;
-                    }
-
-                    .cs__intro{
-
-                        &-description{
-                            display: flex;
-                            flex-direction: column;
-                            align-items: flex-start;
-                            justify-content: space-evenly;
-                            gap: var(--size-16);
-
-                            width: 50%;
-                            height: 100%;
-                            padding: var(--size-32);
-                            
-                            color: var(--c-light);
-
-                            @media screen and (max-width: $media-tablet) {
-                                width: 100%;
-                                gap: var(--size-8);
-                                padding: var(--size-24);
-                            }
-
-                            @media screen and (max-width: $media-mobile) {
-                                width: 100%;
-                                gap: var(--size-8);
-                                padding: var(--size-12);
-                            }
-
-                            h1{
-                                color: var(--c-light);
-                                font-family: var(--font-noto);
-                                font-size: var(--size-32);
-                                font-weight: 900;
-                                text-transform: uppercase;
-
-                                @media screen and (max-width: $media-tablet) {
-                                    font-size: var(--size-16);
-                                }
-                            }
-
-                            h5{
-                                color: var(--c-highlight);
-                                font-family: var(--font-noto);
-                                font-size: var(--size-16);
-                                font-weight: 400;
-                                text-transform: uppercase;
-                                letter-spacing: 1.4px;
-                                line-height: 20px;
-                                padding-bottom: var(--size-4);
-
-                                @media screen and (max-width: $media-tablet) {
-                                    font-size: var(--size-12);
-                                }
-                            }
-
-                            p{
-                                font-family: var(--font-space);
-                                font-size: var(--size-16);
-                                line-height: 28px;
-                                width: 80%;   
-                                
-                                @media screen and (max-width: $media-tablet) {
-                                    width: 100%;
-                                    line-height: 20px;
-                                }
-                            }
-                        }
-
-                        &-info{
-                            display: flex;
-                            flex-direction: column;
-                            align-items: flex-start;
-                            justify-content: space-evenly;
-                            gap: var(--size-16);
-
-                            width: 50%;
-                            height: 100%;
-                            padding: var(--size-32);
-                            padding-top: var(--size-64);
-
-                            color: var(--c-light);
-
-                            @media screen and (max-width: $media-tablet) {
-                                width: 100%;
-                                padding: var(--size-24);
-                            }
-
-                            @media screen and (max-width: $media-mobile) {
-                                width: 100%;
-                                padding: var(--size-12);
-                            }
-
-                            h5{
-                                color: var(--c-highlight);
-                                font-family: var(--font-noto);
-                                font-size: var(--size-16);
-                                font-weight: 400;
-                                text-transform: uppercase;
-                                letter-spacing: 1.4px;
-                                line-height: 20px;
-                                padding-bottom: var(--size-4);
-
-                                @media screen and (max-width: $media-tablet) {
-                                    font-size: var(--size-12);
-                                    font-weight: 400;
-                                }
-                            }
-
-                            p{
-                                font-family: var(--font-space);
-                                font-size: var(--size-24); 
-                                
-                                @media screen and (max-width: $media-mobile) {
-                                    font-size: var(--size-16);
-                                }
-                            }
-                        }
-
-                    }    
-                    
-                }
-
-            }
-
-            /* PADDING FOR SECTIONS OUTSIDE OF INTRO */
-            &__mission,
-            &__solution,
-            &__research,
-            &__decisions,
-            &__visuals,
-            &__reflection{
-                padding: var(--size-72) var(--size-96);
-                padding-left: 10vw;
-
-                @media screen and (max-width: $media-tablet) {
-                    padding: var(--size-8) var(--size-24);
-                    padding-left: 12vw;   
-                }
-            }
-
-             &__mission,
-             &__solution,
-             &__research,
-             &__decisions,
-             &__visuals,
-             &__reflection{
-
-                background: var(--c-dark-transparent-50);
-                width: 100%;
-                height: fit-content;
-               
-                .cs__article{
-
-                    padding: var(--size-48) var(--size-96);
-
-                    @media screen and (max-width: $media-tablet) {
-                        padding: var(--size-8) var(--size-4);
-                    }
-
-                    h5{
-                        color: var(--c-highlight);
-                        font-family: var(--font-noto);
-                        font-size: var(--size-16);
-                        font-weight: 300;
-                        text-transform: uppercase;
-                        letter-spacing: 0.6px;
-                        margin-bottom: var(--size-24);
-
-                        @media screen and (max-width: $media-tablet) {
-                            font-size: var(--size-12);
-                            margin-bottom: var(--size-16);
-                            font-weight: 400;
-                            letter-spacing: 1px;
-                        }
-                    }
-
-                  
-                    p{
-                        color: var(--c-light);
-                        font-family: var(--font-space);
-                        font-size: var(--size-24);
-                        line-height: 32px;
-                        letter-spacing: 0.6px;
-                        padding: var(--size-8) 0;
-                        width: 60%;
-
-                        @media screen and (max-width: $media-tablet) {
-                            font-size: var(--size-16);
-                            line-height: var(--size-24);
-                            width: 100%;
-                        }
-                    }
-
-                    ul{
-
-                        padding-left: var(--size-96);
-
-                        @media screen and (max-width: $media-tablet) {
-                            padding-left: var(--size-48);
-                        }
-
-                        li{
-                            color: var(--c-light);
-                            font-family: var(--font-space);
-                            font-size: var(--size-24);
-                            line-height: 32px;
-                            letter-spacing: 0.6px;
-                            padding: var(--size-8) 0;
-
-                            @media screen and (max-width: $media-tablet) {
-                                font-size: var(--size-16);
-                                line-height: var(--size-24);
-                                letter-spacing: normal;
-                                padding: var(--size-4) 0;
-                            }
-                        }
-                    }
-
-                    hr{
-                        margin: var(--size-48) 0;
-                        opacity: 0.25;
-                    }
-
-                    .article{
-
-                        &__container{
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: space-evenly;
-                            gap: var(--size-32);
-                            padding: var(--size-96) 0;
-
-                            
-                            @media screen and (max-width: $media-tablet) {
-                                padding: var(--size-32) 0;
-                            }
-                            
-                            
-                            &-imgText{
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                gap: var(--size-64);
-                                
-                                padding: var(--size-24) var(--size-32);
-
-                                &:nth-child(2){
-                                    p, h5{
-                                        text-align: right;
-                                        width: 100%;
-                                    }
-
-                                }
-
-                                @media screen and (max-width: $media-tablet) {
-                                    gap: var(--size-24);
-                                    flex-direction: column;
-
-                                    &:nth-child(2){
-                                        display: flex;
-                                        flex-direction: column-reverse;
-
-                                        p,h5{
-                                            text-align: left;
-                                        }
-                                    }
-                                }
-
-                                
-
-                                img{
-                                    width: 24vw;
-                                    height: auto;
-                                    object-fit: contain;
-                                    @include border_image();
-
-                                    @media screen and (max-width: $media-tablet) {
-                                        width: 80vw;
-                                        height: 100%;
-                                    }
-                                }
-
-                                div{
-                                    width: 100%;
-                                    height: auto;  
-                                    
-                                    p{
-                                        width: 90%;
-                                    }
-                                }
-                            }
-
-                            &-text{
-                                padding: var(--size-24) 0;
-                            }
-
-                            
-                            &-images{
-                                display: flex;
-                                flex-flow: row wrap;
-                                align-items: center;
-                                justify-content: space-evenly;
-                                gap: var(--size-32);
-                                
-                                .iconography{
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    justify-content: center;
-                                    gap: var(--size-16);
-                                    width: 100%;
-                                    padding: var(--size-32) var(--size-96);
-                                    @include border_image();
-
-                                    @media screen and (max-width: $media-tablet) {
-                                        padding: var(--size-16) var(--size-32);
-                                    }
-
-                                    h2{
-                                        color: var(--c-light);
-                                        font-family: var(--font-space);
-                                        font-size: var(--size-48);
-                                        font-weight: 400;
-                                        line-height: 32px;
-
-                                        @media screen and (max-width: $media-tablet) {
-                                            font-size: var(--size-24);
-                                        }
-                                    }
-
-                                    
-                                }
-
-                                &.column{
-                                    flex-direction: column;
-                                }
-                            }
-
-           
-
-                            figure{
-                                position: relative;
-
-                                @media screen and (max-width: $media-tablet){
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    align-content: space-between;
-                                }
-
-                                video{
-                                min-width: 100%;
-                                min-height: 100%;
-                                width: 64vw;
-                                height: auto;
-                                object-fit: cover;
-                                position: relative;
-                                @include border_image();
-                              
-                                                                   
-                                    @media screen and (max-width: $media-tablet) {
-                                        width: 80vw;
-                                    }
-                                }
-
-                                /* Play button */
-                                /* &:hover{
-                                    i,svg{
-                                        display: none;
-                                    }
-                                } */
-
-                                  i,svg{
-                                    position: absolute;
-                                    top: 50%;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-                                    color: var(--c-highlight);
-                                    background-color: var(--c-dark-transparent-50);
-                                    border-radius: 50%;
-                                    padding: var(--size-16);
-                                    width: 64px;
-                                    height: 64px;
-                                    z-index: 10;
-
-                                    &.playing{
-                                        display: none;
-                                    }
-
-                                    @media screen and (max-width: $media-tablet) {
-                                        top: 40%;
-                                    }
-                                }
-
-                                img{
-                                    width: 32vw;
-                                    height: auto;
-                                    @include border_image();
-
-                                    @media screen and (max-width: $media-tablet) {
-                                        width: 80vw;
-                                    }
-                                }
-
-                                .imgCS{
-                                    width: 48vw;
-                                    height: auto;
-
-                                    @media screen and (max-width: $media-tablet){
-                                        width: 80vw;
-                                    }
-                                }
-
-                                figcaption{
-                                    color: var(--c-light);
-                                    font-family: var(--font-space);
-                                    font-size: var(--size-16);
-                                    line-height: 32px;
-                                    text-align: center;
-                                    padding-top: var(--size-8);
-                                }
-
-                            }
-                        }
-
-                    }
-
-                       .seperation_line{
-                            margin: var(--size-16) 0;
-                            width: 100%;
-                            height: 1px;
-                            background-color: var(--c-light);
-                            opacity: 0.5;
-                        }
-
-                }
-
-            }
-             
-
-            }
-
-            .next_project{
-                color: var(--c-light);
-                margin: auto;
-
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: var(--size-16);
-
-                text-decoration: none;
-                font-size: var(--size-40);
-                font-family: var(--font-space);
-                text-transform: uppercase;
-                letter-spacing: 1.2px;
-
-                @media screen and (max-width: $media-tablet) {
-                    font-size: var(--size-24);
-                    gap: var(--size-4);
-                }
-
-                i,svg{
-                    width: var(--size-40);
-                    height: auto;
-                }
-
-                &:hover{
-                    color: var(--c-highlight);
-                }
-            }
-
-        }
-    }
-
-}
-
-/* Intro Background Images */
-#asozial .cs__intro{
-    background: url('../../img/portfolio/cs_asozial/asozial\ -\ MockUp\ on\ City\ Street.webp') no-repeat center center;
-}
-
-#rememberourtales .cs__intro{
-    background: url('../../img/portfolio/cs_rememberourtales/Mock-up_stones.jpg') no-repeat center center;
-    background-position: 50% 50%;
-
-    .cs__intro-card{
-        transform: translate(-20%, 2%);
-
-        @media screen and (max-width: $media-tablet) {
-            transform: translate(8%, -5%);
-        }
-    }
-}
-
-/* CS adjustments */
-#rememberourtales {
-    .prototype__container{
-        width: max-content;
-        margin: auto;
-        margin-top: var(--size-48);
-
-        a{
-            text-decoration: underline;
-            color: var(--c-highlight);
-            font-size: var(--size-64);
-            font-family: var(--font-space);
-            font-weight: bold;
-            letter-spacing: 0.6px;
-            cursor: none;
-        }
-    }
-}
-
-
-/* SIDE PROJECTS MODAL */
-.modal{
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--c-dark-transparent-50);
-    backdrop-filter: blur(16px);
-
-    &:target{
-        display: flex;
-        pointer-events: auto;
-    }
-
-    &__container{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        margin: auto;
-        width: 80%;
-        background-color: var(--c-dark);
-        border: 2px solid var(--c-highlight);
-        border-radius: 8px;
-
-        display: flex;
-        flex-flow: row nowrap;
-
-        @media screen and (max-width: $media-tablet){
-            width: fit-content;
-            height: 90vh;
-            width: 90vw;
-        }
-
-        @media screen and (max-width: $media-mobile){
-            flex-flow: column nowrap;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
-
+<<<<<<< Updated upstream
         .img__container{
             overflow: hidden;
             max-width: 100%;
@@ -3307,55 +2087,82 @@ $media-mobile: 450px;
             }
 
         .content{
+=======
+            @media screen and (max-width: $media-mobile) {
+                width: var(--size-24);
+                height: var(--size-24);          
+            }
+        }
 
+    }
+
+    .modal{
+>>>>>>> Stashed changes
+
+        &__figure{
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            width: 80vw;
-                                   
-            &__gallery{
-                display: flex;
-                align-items: flex-start;
-                justify-content: space-between;
-                gap: var(--size-48);
-                width: 100%;
-                padding-top: var(--size-24);
+            align-items: center;
+            justify-content: center;
+            gap: var(--size-32);
+            margin: auto;
+        }
 
-                @media screen and (max-width: $media-tablet){
-                    padding-top: 0;
-                }
+        &__img{
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+            width: 42vw;
+            height: auto;
+            object-fit: contain;
 
-                
-                @media screen and (max-width: $media-mobile){
-                    gap: var(--size-12);
-                    padding-top: 0;
+            border: 1px solid var(--c-highlight);
+            border-radius: var(--size-16);
+            background: var(--c-dark);
 
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+            @media screen and (max-width: $media-mobile) {
+                width: 96vw;                        
+            }
+        }
 
-                    img:nth-child(3){
-                        grid-column: span 2;
-                        margin: auto;
-                    }
-                }
+        &__caption{
+            margin: auto;
+            display: block;
 
-                
-                img{
-                    float: left;
-                    width: 16vw;
-                    height: 32vh;
-                    object-fit: contain;
-                  
-                    @media screen and (max-width: $media-mobile){
-                        width: 32vw;
-                        height: 12vh;
-                    }
-                }
+            background: var(--c-dark);
+            color: var(--c-light);
+
+            font-family: var(--font-space);
+            font-size: var(--size-16);
+            text-transform: capitalize;
+            padding: var(--size-8) var(--size-16);
+            border-radius: var(--size-80);
+            white-space: pre;
+
+            @media screen and (max-width: $media-mobile) {
+                font-size: var(--size-12);        
             }
 
-            &__text{
+        }
 
+    }
+
+
+}
+
+
+
+/* ANIMATIONS */
+@keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } 
+
+<<<<<<< Updated upstream
                 p{
                     color: var(--c-light);
                     font-size: var(--size-24);
@@ -3415,3 +2222,8 @@ $media-mobile: 450px;
       transform: translateX(-100%);
     }
   }
+=======
+
+
+
+>>>>>>> Stashed changes

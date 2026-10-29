@@ -45,14 +45,21 @@ $media-mobile: 450px;
             align-items: center;
             justify-content: space-between;
             
+<<<<<<< Updated upstream
+=======
             @media screen and (max-width: $media-tablet) {
                 padding: var(--size-32);
             }
+>>>>>>> Stashed changes
 
             /* @media screen and (max-width: $media-mobile) {
                 gap: var(--size-16);
+<<<<<<< Updated upstream
+            } */
+=======
                 padding: var(--size-16);
             }
+>>>>>>> Stashed changes
 
                   
             
@@ -70,10 +77,6 @@ $media-mobile: 450px;
            
                 @media screen and (max-width: $media-tablet) {
                     font-size: var(--size-64);
-                }
-
-                @media screen and (max-width: $media-tablet) {
-                    font-size: 1.8rem;
                 }
 
                 @media screen and (max-width: $media-mobile) {
@@ -100,7 +103,11 @@ $media-mobile: 450px;
                     padding-top: var(--size-48);
                     
                     @media screen and (max-width: $media-tablet) {
+<<<<<<< Updated upstream
+                        gap: var(--size-8);
+=======
                         padding: var(--size-16);
+>>>>>>> Stashed changes
                     }
 
                     @media screen and (max-width: $media-mobile) {
@@ -120,11 +127,14 @@ $media-mobile: 450px;
                         font-weight: 300;
                         text-transform: uppercase;
 
+<<<<<<< Updated upstream
+=======
                         @media screen and (max-width: $media-tablet) {
                             white-space: pre;
                             font-size: var(--size-32);
                         }
 
+>>>>>>> Stashed changes
                         @media screen and (max-width: $media-mobile) {
                             font-size: var(--size-24);
                             font-weight: 400;
@@ -176,6 +186,17 @@ $media-mobile: 450px;
                 padding: var(--size-48);
                 overflow: hidden;
 
+<<<<<<< Updated upstream
+                box-shadow: 2px 8px 0 6px var(--c-highlight);
+                border-top: 1px solid var(--c-highlight);
+                border-radius: 1rem;
+                background-color: var(--c-dark);
+
+                    @media screen and (max-width: $media-tablet) {
+                        padding: var(--size-16);
+                        padding-top: var(--size-56);
+                        margin-top: var(--size-16);
+=======
 
                 border: 2px solid var(--c-light);
                 border-radius: var(--size-8);
@@ -184,6 +205,7 @@ $media-mobile: 450px;
                     @media screen and (max-width: $media-tablet) {
                         align-items: flex-start;
                         padding: var(--size-48) var(--size-8);
+>>>>>>> Stashed changes
                         width: 100%;
                     }
 
@@ -217,8 +239,12 @@ $media-mobile: 450px;
                         width: 100%;
 
                         @media screen and (max-width: $media-tablet) {                            
+<<<<<<< Updated upstream
+                            font-weight: 400;
+=======
                             font-weight: 300;
                             font-size: var(--size-32);
+>>>>>>> Stashed changes
                         }
 
                         @media screen and (max-width: $media-mobile) {
@@ -305,14 +331,6 @@ $media-mobile: 450px;
                             @media screen and (max-width: $media-tablet) {
                                 font-size: var(--size-48);
                             }
-                        }   
-                        
-                        i{
-                            font-size: var(--size-64);
-
-                            @media screen and (max-width: $media-tablet) {
-                                font-size: var(--size-48);
-                            }
 
                             @media screen and (max-width: $media-mobile) {
                                 font-size: var(--size-32);
@@ -362,11 +380,17 @@ $media-mobile: 450px;
         }
 
         .mail__wrapper{
+<<<<<<< Updated upstream
+            .subtitle{
+                margin-bottom: var(--size-24);
+            }
+=======
             display: flex;
             flex-direction: column;
             align-items: center;
             align-content: space-between;
             gap: var(--size-16);
+>>>>>>> Stashed changes
         }
 
         .mailForm{
@@ -451,6 +475,7 @@ $media-mobile: 450px;
                             font-size: var(--size-16);
                             padding: 4px;
                         }
+                    }
 
                 }
   
@@ -483,7 +508,7 @@ $media-mobile: 450px;
 
                 cursor: none;
 
-                @media screen and (max-width: $media-tablet) {
+                @media screen and (max-width: $media-mobile) {
                     font-size: var(--size-16);
                     padding: var(--size-8) var(--size-16);
                 }
@@ -504,6 +529,7 @@ $media-mobile: 450px;
 
             
         }
+
 
 
  
@@ -590,6 +616,4 @@ $media-mobile: 450px;
               100% {
                 filter: drop-shadow(2px 0 var(--c-blue)) drop-shadow(2px -1px var(--c-purple));
               }
-        }
-              */
         }

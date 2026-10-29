@@ -1,12 +1,17 @@
+<<<<<<< Updated upstream
+/* top nav */
+const nav = document.querySelector('.menu__nav');
+=======
 /* Side nav */
 const _nav = document.querySelector('.menu__nav');
+>>>>>>> Stashed changes
 const navIcons = document.querySelector('.menu__nav-icons');
 
 const setNavState = () => {
   const scrolledPastThreshold = window.scrollY > 1;
 
-  if (_nav) {
-    _nav.classList.toggle('scrolled', scrolledPastThreshold);
+  if (nav) {
+    nav.classList.toggle('scrolled', scrolledPastThreshold);
     navIcons.classList.toggle('scrolled', scrolledPastThreshold);
   }
 
@@ -14,6 +19,9 @@ const setNavState = () => {
 };
 
 window.addEventListener('scroll', setNavState, { passive: true });
+<<<<<<< Updated upstream
+window.addEventListener('load', setNavState);
+=======
 window.addEventListener('load', setNavState);
 
 /* quick menu - copy email */
@@ -63,3 +71,4 @@ const initTimer = ()=>{
 
 dl_btn.addEventListener("click", initTimer);
 
+>>>>>>> Stashed changes
