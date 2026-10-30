@@ -1,15 +1,3 @@
-<<<<<<< Updated upstream
- const r_title = new rive.Rive({
-  src: "./rive/ddesign_title.riv",
-  canvas: document.getElementById("canvas"),
-  autoplay: true,
-  artboard: "Innovating 5.0",
-  stateMachines: "reveal state",
-  onLoad: () => {
-    r_title.resizeDrawingSurfaceToCanvas();
-  },
-});
-=======
 /* Greetings */
 const greetingsH2 = document.querySelectorAll(".welcome__text h2");
 
@@ -44,7 +32,6 @@ if (greetingsH2.length > 0) {
 }
 
 
->>>>>>> Stashed changes
 
 /* PAUSE BG */
 const pause = document.querySelector(".pauseBG"),

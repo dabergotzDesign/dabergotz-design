@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 /* TITLE */
 const quickInfo = document.querySelector(".quick__info");
 const welcomeTitle = document.querySelector(".welcome h1");
@@ -23,7 +21,7 @@ gsap.from(titleSplit.words, {
     delay: 3.5,
     y: '100%',
     opacity: 0,
-    duration: 1,
+    duration: 0.5,
     ease: 'power4.in',
     stagger: 0.1,
 });
@@ -56,7 +54,6 @@ navTimeline.to(nav, {
     delay: 0.005
 });
 
->>>>>>> Stashed changes
 /* HOME */
 
 const splitTypes = document.querySelectorAll(".reveal");
@@ -71,7 +68,7 @@ splitTypes.forEach((word, i)=>{
 
     },{
         opacity: 1,
-        stagger: 0.1,
+        stagger: 0.05,
         scrollTrigger: {
             trigger: word,
             start: 'top 80%',
@@ -85,49 +82,6 @@ splitTypes.forEach((word, i)=>{
 
 
 /* PORTFOLIO */
-
-/* const portfolio_title = document.querySelector("#portfolio .title");
-const card = document.querySelectorAll("#portfolio .accordion__card-wrapper");
-<<<<<<< Updated upstream
-=======
-const hL = document.querySelector(".p_canvas-4");
-
-const hL_thumb = document.querySelector(".p_canvas-4 .thumbnail"),
-    hL_logo = document.querySelector(".p_canvas-4 .hololist__logo");
-
-const fetti = document.querySelector(".confetti"),
-        fettiCannon = document.querySelector(".confetti__cannon"),
-        fettiPaper = document.querySelectorAll(".confetti__paper");
->>>>>>> Stashed changes
-
-
-gsap.from(portfolio_title, {
-    duration:0.5,
-    yPercent: 80,
-    opacity: 0,
-    ease: 'none',
-    delay: 0.5,
-    scrollTrigger: {
-        trigger: "#portfolio"
-    }
-})
-
-gsap.from(card, {
-    duration: 1,
-    yPercent: 100,
-    ease: 'power4.in',
-    delay: 0.5,
-    stagger: 0.5,
-    scrollTrigger: {
-        trigger: '#portfolio'
-    }
-    
-<<<<<<< Updated upstream
-}, "<=.5")
-
-
-=======
-}, "-=.5") */
 
 
 /* ABOUT */
@@ -149,7 +103,6 @@ gsap.from(galleryImgs, {
     }
 });
 
->>>>>>> Stashed changes
 
 
 /* BLOG */
@@ -171,7 +124,7 @@ splitTitle.forEach((char, i)=>{
         stagger: 0.1,
         scrollTrigger: {
             trigger: char,
-            start: 'top',
+            start: 'top 80%',
             end: 'bottom',
             scrub: false,
             markers: false,
@@ -183,7 +136,7 @@ splitTitle.forEach((char, i)=>{
 
 /* CONTACT */
 
-/* const contact_title = document.querySelector("#contact .title");
+const contact_title = document.querySelector("#contact .title");
 const contacts = document.querySelector(".contacts__wrapper");
 
 gsap.set(contact_title, {xPercent: '-100'});
@@ -205,4 +158,4 @@ gsap.to(contacts, {
     transformOrigin: 'center center',
     opacity: 1,
     scrollTrigger: {trigger: '#contact'}
-}) */
+})

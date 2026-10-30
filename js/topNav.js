@@ -1,9 +1,9 @@
-/* top nav */
+/* Side nav */
 const _nav = document.querySelector('.menu__nav');
 const navIcons = document.querySelector('.menu__nav-icons');
 
 const setNavState = () => {
-  const scrolledPastThreshold = window.scrollY > 10;
+  const scrolledPastThreshold = window.scrollY > 1;
 
   if (_nav) {
     _nav.classList.toggle('scrolled', scrolledPastThreshold);
@@ -52,3 +52,14 @@ closeHam.addEventListener("click", ()=>{
 function navClose(){
   mobileMenu.classList.remove("open");
 }
+
+/* resume download */
+const dl_btn = document.querySelector(".download__cv");
+const fileLink = "https://drive.google.com/uc?export=download&id=1HBCR7tp9m3J8y1CeV6WCzDnGsNMHYjzQ";
+
+const initTimer = ()=>{
+    location.href = fileLink;
+}
+
+dl_btn.addEventListener("click", initTimer);
+

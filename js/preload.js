@@ -11,6 +11,4 @@ window.addEventListener("load", ()=>{
 
     }, 3000);
 
-
-
 });

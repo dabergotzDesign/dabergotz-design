@@ -1,307 +1,173 @@
+/* /// CASE STUDY PAGES /// */
 
-/* LINKS */
-/* const g_triggers = document.querySelectorAll(".g_info");
-const g_triggerArr = Array.from(g_triggers).entries();
+/* SIDENAV */
+(() => {
+    const sidenav = document.querySelector('.cs__sidenav');
+
+    if (!sidenav) return;
+
+    const navItems = Array.from(sidenav.querySelectorAll('li'));
+    const sections = Array.from(document.querySelectorAll('.cs__content > div[id]'));
+
+    if (!navItems.length || !sections.length || navItems.length !== sections.length) return;
+
+    const setActiveItem = (activeIndex) => {
+        navItems.forEach((item, index) => {
+            item.classList.toggle('active', index === activeIndex);
+        });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        const visibleEntry = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleEntry) {
+            const activeIndex = sections.indexOf(visibleEntry.target);
+            if (activeIndex !== -1) {
+                setActiveItem(activeIndex);
+            }
+        } else {
+            setActiveItem(-1);
+        }
+    }, {
+        threshold: [0.2, 0.4, 0.6, 0.8],
+        rootMargin: '-20% 0px -20% 0px'
+    });
+
+    sections.forEach((section) => observer.observe(section));
+})();
+
+/* image expand */
+// Get the modal
+const modalCS = document.querySelector(".cs__modal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+let modalContent = document.querySelector(".modal__img");
+let modalCaption = document.querySelector(".modal__caption");
+
+let modalImg = document.querySelectorAll(".imgCS");
 
 
-const triggers = document.getElementsByClassName('button__info');
-const triggerArray = Array.from(triggers).entries(); */
-
-/* CANVAS RESPONSIVE */
-/* const canvas = document.querySelectorAll(".portfolio__card canvas");
-let heightRatio = 1.5;
-
-canvas.forEach(c => {
-c.height = c.width * heightRatio;
-
-}); */
-
-
-/* MODAL */
-const container = document.querySelector(".modal__container");
-const modals = document.querySelectorAll('.prtfl__modal');
-const closeButton = document.querySelector('.close');
-
-
-/* GALLERY */
-/* const g_next = document.querySelector(".gallery__controls .next"),
-      g_prev = document.querySelector(".gallery__controls .prev"),
-      gallery = document.querySelector(".portfolio__gallery"); */
-
-const r_gallery_1 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("canvas-1"),
-        artboard: "RM - card",
-        autoplay: true,
-        stateMachines: "card hover",
-        onLoad: () => {
-          r_gallery_1.resizeDrawingSurfaceToCanvas();
-        },
-  });
-
-const r_gallery_2 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("canvas-2"),
-        artboard: "A - card",
-        autoplay: true,
-        stateMachines: "card hover",
-        onLoad: () => {
-          r_gallery_2.resizeDrawingSurfaceToCanvas();
-        },
+modalImg.forEach((modalImg)=>{
+    modalImg.onclick=function(){
+        modalCS.classList.remove("m_disabled");
+        modalCS.classList.add("m_active");
+        modalContent.src=this.src;
+        modalCaption.innerHTML=this.alt;
+    } 
 });
 
-const r_gallery_3 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("canvas-3"),
-        artboard: "GDY - card",
-        autoplay: true,
-        stateMachines: "card hover",
-        onLoad: () => {
-          r_gallery_3.resizeDrawingSurfaceToCanvas();
-        },
+// Get the <span> element that closes the modal
+let csClose = document.querySelector(".m_close");
+
+// When the user clicks on <span> (x), close the modal
+// close image in modalBlog
+csClose.addEventListener("click",()=>{
+    if(modalCS.classList.contains("m_active")){
+        modalCS.classList.remove("m_active");
+        modalCS.classList.add("m_disabled");
+    }
 });
 
-/* const r_gallery_4 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("canvas-4"),
-        artboard: "glass_card-gdy",
-        autoplay: true,
-        stateMachines: "card_states",
-        onLoad: () => {
-          r_gallery_4.resizeDrawingSurfaceToCanvas();
-        },
-}); */
 
-/* RIVE EVENTS */
-function onRiveEvent(riveEvent){
-  const eventData = riveEvent.data;
-  if(eventData.name === "view"){
-    window.open(eventData.url);
-  }
-  if(eventData.name === "explore"){
-    window.open(eventData.url);
-  }
-}
+window.addEventListener("keydown", e =>{
 
-r_gallery_1.on(rive.EventType.RiveEvent ,onRiveEvent);
-r_gallery_2.on(rive.EventType.RiveEvent ,onRiveEvent);
-r_gallery_3.on(rive.EventType.RiveEvent ,onRiveEvent);
-
-
-
-/* Gallery controls, scroll */
-/* g_next.addEventListener("click", ()=>{
-
-  let scrollAmount = 0;
-
-  let slideTimer = setInterval(function(){
-    gallery.scrollLeft += 20;
-    scrollAmount += 5;
-    if(scrollAmount >= 100){
-      window.clearInterval(slideTimer)
+    if(e.key === "Escape" && modalCS.classList.contains("m_active")){
+        modalCS.classList.remove("m_active")
+        modalCS.classList.add("m_disabled")
     }
-  }, 25);
 
+})
 
+window.onclick = function(event){
+    if(event.target == modalCS){
+        modalCS.classList.remove("m_active");
+        modalCS.classList.add("m_disabled");
+    };
+};
+
+const sideNav = document.querySelector(".cs__sidenav"),
+menuButtonHide = document.querySelector(".button__hide"),
+menuButtonShow = document.querySelector(".button__show");
+
+menuButtonShow.addEventListener("click", ()=>{
+    menuButtonHide.classList.remove("hidden");
+    menuButtonShow.classList.add("hidden");
+
+    sideNav.classList.remove("hidden");
+    sideNav.classList.add("open");
 });
 
-g_prev.addEventListener("click", ()=>{
+menuButtonHide.addEventListener("click", ()=>{
+    menuButtonShow.classList.remove("hidden");
+    menuButtonHide.classList.add("hidden");
 
-  let scrollAmount = 0;
+    sideNav.classList.remove("open");
+    sideNav.classList.add("hidden");
+});
 
-  let slideTimer = setInterval(function(){
-    gallery.scrollLeft -= 20;
-    scrollAmount += 5;
-    if(scrollAmount >= 100){
-      window.clearInterval(slideTimer)
+
+/* toggle play */
+/* const playVideo = document.querySelectorAll(".article__container figure video");
+const btnPlay = document.querySelector(".article__container figure i");
+
+
+playVideo.forEach(vid => {
+
+    
+    function togglePlay(){
+        if(vid.paused || vid.ended){
+            vid.play();
+        }else{
+            vid.pause();
+            vid.currentTime = 0;
+        }
     }
-  }, 25);
-
-
+    
+    vid.addEventListener("click", togglePlay);
 }); */
 
+const playVideos = document.querySelectorAll(".article__container figure video");
 
-/* MODAL*/
-/*
-for (let [index, g_trigger] of g_triggerArr) {
-  const toggleModal = () => {
-    modals[index].classList.toggle('active-content');
-    container.classList.toggle("active");
+playVideos.forEach((video) => {
+    const figure = video.closest("figure");
+    const getPlayButton = () => figure.querySelector("i, svg");
 
+    video.onmouseover = null;
+    video.onmouseout = null;
 
-    if(modals[0].classList.contains('active-content')){
+    const syncPlayButton = () => {
+        const playButton = getPlayButton();
 
-      const r_portfolio_1 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("p_canvas-1"),
-        artboard: "TC_cards",
-        autoplay: true,
-        stateMachines: "cards_fan",
-        onLoad: () => {
-          r_portfolio_1.resizeDrawingSurfaceToCanvas();
-        },
-      });
-      
-    }
+        if (playButton) {
+            playButton.classList.toggle("playing", !video.paused && !video.ended);
+        }
+    };
 
-    if(modals[1].classList.contains('active-content')){
+    const togglePlay = (event) => {
+        if (!event.target.closest("video, i, svg")) return;
 
-      const r_portfolio_2 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("p_canvas-2"),
-        artboard: "RS_cards",
-        autoplay: true,
-        stateMachines: "cards_fan",
-        onLoad: () => {
-          r_portfolio_2.resizeDrawingSurfaceToCanvas();
-        },
-      });
-      
-    }
+        if (video.paused || video.ended) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    };
 
-    if(modals[2].classList.contains('active-content')){
-
-      const r_portfolio_3 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("p_canvas-3"),
-        artboard: "A_cards",
-        autoplay: true,
-        stateMachines: "carousel_ani",
-        onLoad: () => {
-          r_portfolio_3.resizeDrawingSurfaceToCanvas();
-        },
-      });
-      
-    }
-
-    if(modals[3].classList.contains('active-content')){
-
-      const r_portfolio_4 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("p_canvas-4"),
-        artboard: "GDY_cards",
-        autoplay: true,
-        stateMachines: "cards_fan",
-        onLoad: () => {
-          r_portfolio_4.resizeDrawingSurfaceToCanvas();
-        },
-      });
-      
-    }
-
-  }
-  g_trigger.addEventListener("click", toggleModal);
-  
-  closeButton.addEventListener("click", ()=>{
-      container.classList.remove("active");
-      if(modals[index].classList.contains("active-content")){
-        modals[index].classList.remove("active-content");
-      }
-  });
-
-  container.addEventListener("click", e => {
-    if (e.target == container) {
-      container.classList.remove("active");
-      if(modals[index].classList.contains("active-content")){
-        modals[index].classList.remove("active-content");
-      }
-    }
-  })
-
-
-}
+    figure.addEventListener("click", togglePlay);
+    video.addEventListener("play", syncPlayButton);
+    video.addEventListener("pause", syncPlayButton);
+    video.addEventListener("ended", syncPlayButton);
+    syncPlayButton();
+});
 
 
 
 
-
-for (let [index, trigger] of triggerArray) {
-  const toggleModal = () => {
-    modals[index].classList.toggle('active-content');
-    container.classList.toggle("active");
-
-
-    if(modals[0].classList.contains('active-content')){
-
-      const r_portfolio_1 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("p_canvas-1"),
-        artboard: "TC_cards",
-        autoplay: true,
-        stateMachines: "cards_fan",
-        onLoad: () => {
-          r_portfolio_1.resizeDrawingSurfaceToCanvas();
-        },
-      });
-      
-    }
-
-    if(modals[1].classList.contains('active-content')){
-
-      const r_portfolio_2 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("p_canvas-2"),
-        artboard: "RS_cards",
-        autoplay: true,
-        stateMachines: "cards_fan",
-        onLoad: () => {
-          r_portfolio_2.resizeDrawingSurfaceToCanvas();
-        },
-      });
-      
-    }
-
-    if(modals[2].classList.contains('active-content')){
-
-      const r_portfolio_3 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("p_canvas-3"),
-        artboard: "A_cards",
-        autoplay: true,
-        stateMachines: "carousel_ani",
-        onLoad: () => {
-          r_portfolio_3.resizeDrawingSurfaceToCanvas();
-        },
-      });
-      
-    }
-
-    if(modals[3].classList.contains('active-content')){
-
-      const r_portfolio_4 = new rive.Rive({
-        src: "../rive/portfolio_cards.riv",
-        canvas: document.getElementById("p_canvas-4"),
-        artboard: "GDY_cards",
-        autoplay: true,
-        stateMachines: "cards_fan",
-        onLoad: () => {
-          r_portfolio_4.resizeDrawingSurfaceToCanvas();
-        },
-      });
-      
-    }
-
-  }
-  trigger.addEventListener("click", toggleModal);
-  
-  closeButton.addEventListener("click", ()=>{
-      container.classList.remove("active");
-      if(modals[index].classList.contains("active-content")){
-        modals[index].classList.remove("active-content");
-      }
-  });
-
-  container.addEventListener("click", e => {
-    if (e.target == container) {
-      container.classList.remove("active");
-      if(modals[index].classList.contains("active-content")){
-        modals[index].classList.remove("active-content");
-      }
-    }
-  })
-
-
-}
-*/
-
-
+/* playVideo.addEventListener("play", ()=>{
+    btnPlay.classList.add("play");
+});
+playVideo.addEventListener("paused", ()=>{
+    btnPlay.classList.remove("play");
+}); */

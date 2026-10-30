@@ -3,8 +3,6 @@ $media-laptop: 1440px;
 $media-tablet: 1024px;
 $media-mobile: 450px;
 
-<<<<<<< Updated upstream
-=======
 @mixin navigation{
     position: fixed;
     top: 50%;
@@ -19,7 +17,6 @@ $media-mobile: 450px;
     transition: all 0.3s ease-in-out;
 }
 
->>>>>>> Stashed changes
 *{
     margin: 0;
     padding: 0;
@@ -28,12 +25,9 @@ $media-mobile: 450px;
 
 
 body,html{
-    height: 100%;
+    height: min-content;
     overflow: hidden;
 
-<<<<<<< Updated upstream
-    cursor: none; //custom cursor enabled
-=======
     //cursor: none; //custom cursor enabled
 
     ::selection,
@@ -42,7 +36,6 @@ body,html{
         background-color: var(--c-highlight);
         color: var(--c-light);
     }
->>>>>>> Stashed changes
 }
 
 .preloader{
@@ -64,15 +57,11 @@ body,html{
 
 
 body{
-<<<<<<< Updated upstream
-    background-color: var(--c-dark);
-=======
->>>>>>> Stashed changes
     position: relative;
-
+       
     /* dotted BG */
     --dot-bg: var(--c-dark);
-  --dot-color: var(--c-light-transparent-25);
+  --dot-color: var(--c-highlight-blue);
   --dot-size: 1px;
   --dot-space: 22px;
 	background:
@@ -90,40 +79,30 @@ body{
 
 .custom_cursor{
     position: absolute;
-<<<<<<< Updated upstream
-    width: 30px;
-    height: 30px;
-    background-color: var(--c-dark);
-    outline: 2px solid var(--c-light);
-    margin: 0;
-    border-radius: 50%;
-    z-index: 999;
-=======
-    width: 16px;
-    height: 16px;
-    //background-color: #FF006D;
+    width: var(--size-16);
+    height: var(--size-16);
+
     color: transparent;
     outline: 4px solid var(--c-light);
     margin: 0;
     border-radius: 50%;
     z-index: 10000;
->>>>>>> Stashed changes
     mix-blend-mode: difference;
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: width 0.3s, height 0.3s;
 
     &.state_hover{
-<<<<<<< Updated upstream
-        outline: 2px solid var(--c-highlight);
-        box-shadow: 0 0 0 0 rgba($color: #f2f2f2, $alpha: 1);
-        animation: pulse 1s infinite ease;
-=======
 
         outline: none;
-        width: 40px;
-        height: 40px;
-        text-shadow: 2px 2px 0 var(--c-highlight);
+        width: max-content;
+        height: var(--size-24);
+        padding: var(--size-4) var(--size-16);
+        border-radius: var(--size-8);
+        backdrop-filter: blur(8px);
+
+        background: var(--c-light-transparent-10);
+        //text-shadow: 2px 2px 0 var(--c-highlight);
         z-index: 1000;
 
         display: flex;
@@ -131,7 +110,7 @@ body{
         justify-content: center;
         font-family: var(--font-noto);
         font-size: var(--size-16);
-        font-weight: 700;
+        font-weight: 400;
         text-transform: uppercase;
         text-align: center;
         text-wrap: nowrap;
@@ -152,7 +131,6 @@ body{
             padding: var(--size-4) var(--size-16);
             border-radius: var(--size-16);
         }
->>>>>>> Stashed changes
     }
 
     @media screen and (max-width: $media-tablet) {
@@ -166,10 +144,6 @@ body{
     cursor: none;
 }
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 .sidebar{
     position: fixed;
 }
@@ -179,48 +153,46 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     overflow-x: hidden;
      
-    height: fit-content;
-    width: 100%;
+    height: min-content;
+    width: auto;
     position: relative;
 
-<<<<<<< Updated upstream
-    padding-left: var(--size-80);
-
-    background-position: center;
+    background: radial-gradient(transparent, var(--c-dark));
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    //background-color: var(--c-dark);
-
-    //visibility: hidden;
-=======
-    background: url("../../img/logo/ddesign_logo_5.png"), var(--c-dark-transparent-50);
-    background-size: 25vw;
     background-position: 50% center;
     background-attachment: fixed;
     background-repeat: no-repeat;
->>>>>>> Stashed changes
 
-    
-    @media screen and (max-width: $media-tablet) {
-<<<<<<< Updated upstream
-        padding-left: var(--size-32);
-    }
-
-    @media screen and (max-width: $media-mobile) {
-        padding-left: 0;
-=======
-        background-size: 50vw;
->>>>>>> Stashed changes
-    }
-    
-
-    .quick__menu{
-        position: fixed;
+    /* logo background */
+    &::after{
+        content: '';
+        position: absolute;
         top: 0;
         left: 0;
+       
+        width: 100%;
+        height: 100%;
+
+        background: url("../../img/logo/ddesign_logo_5.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 25vw;
+        background-attachment: fixed;
+        opacity: 0.5;
+        z-index: -1;
+
+        @media screen and (max-width: $media-tablet) {
+            background-size: 50vw;
+        }
+    
+    }
+
+   
+
+    .quick__menu{
         z-index: 999;
         background: var(--c-dark);
         display: flex;
@@ -229,6 +201,12 @@ body{
         padding: var(--size-8) var(--size-80);
         width: 100%;
         height: fit-content;
+
+        @media screen and (max-width: $media-tablet) {
+            position: fixed;
+            top: 0;
+            left: 0;                                    
+        }
 
         @media screen and (max-width: $media-mobile) {
             padding: var(--size-8) var(--size-24);
@@ -412,13 +390,15 @@ body{
         }
 
         .menu{
-            display: none;
-
+            //display: none;
+            width: 100vw;
+            height: 100vh;
             position: absolute;
             top: 0;
-            right: 0;
+            right: -100%;
             z-index: 10000;
             
+            transition: all 0.3s ease;
 
             h1{
                 color: var(--c-dark);
@@ -560,8 +540,7 @@ body{
                 padding: var(--size-8) var(--size-16);
                 background-color: var(--c-highlight);
 
-                width: 100vw;
-                height: 100vh;
+                right: 0;
 
                 @media screen and (max-width: $media-tablet) {
                     flex-direction: row;
@@ -585,21 +564,26 @@ body{
         justify-content: flex-end;
         width: fit-content;
 
-<<<<<<< Updated upstream
-        margin: auto;
-        margin-right: 0;
-        //margin-left: var(--size-72);
-        padding: 1em 0;
-           
-        @media screen and (max-width: $media-mobile) {
-=======
         padding-left: var(--size-80);
         padding-top: 0;
         z-index: 999;
-        
+
+        &-cs{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 12vh;
+
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                width: 12vh;
+                height: auto;
+            }
+        }        
                   
         @media screen and (max-width: $media-tablet) {
->>>>>>> Stashed changes
             display: none;
         }
 
@@ -611,16 +595,6 @@ body{
             object-fit: contain;
         }
 
-<<<<<<< Updated upstream
-        nav{
-            margin: auto;
-            margin-right: var(--size-32); 
-            margin-bottom: 0;
-            position: relative;
-            
-            &::after{
-                content: '';
-=======
 
         .menu__nav-icons{
             //display: none;
@@ -636,6 +610,12 @@ body{
 
             li{
                 position: relative;
+
+                i,svg{
+                    color: var(--c-light);
+                    width: var(--size-16);
+                    height: auto;
+                }
 
                 &:hover svg{
                     color: var(--c-highlight);
@@ -674,20 +654,14 @@ body{
 
                         
             a{
->>>>>>> Stashed changes
                 position: absolute;
                 bottom: 0;
                 right: 0;
                 height: 1px;
                 width: 100%;
-<<<<<<< Updated upstream
-                background-color: var(--c-light);
-            }
-=======
                 height: 100%;
             }
 
->>>>>>> Stashed changes
         }
 
         ul{
@@ -712,7 +686,7 @@ body{
 
                 a{
                     color: var(--c-light);
-                    font-family: var(--font-comfortaa);
+                    font-family: var(--font-space);
                     font-weight: 900;
                     letter-spacing: var(--size-8);
                     text-transform: uppercase;
@@ -724,96 +698,16 @@ body{
                 }
             }
         }
-<<<<<<< Updated upstream
-
-        /* NAVIGATION MOBILE */
-        &-mobile{
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 99;
-            width: 100%;
-
-            margin: auto;
-            padding: var(--size-16);
-            background-color: var(--c-dark-transparent-50);
-          
-            display: none;
-            flex-flow: column nowrap;
-            align-items: flex-start;
-            justify-content: flex-start;
-
-            @media screen and (max-width: $media-mobile) {
-                display: flex;
-            }
-
-
-            /* menu icon */
-            .menu{
-                color: var(--c-highlight);
-                scale: 1.5;
-                padding-left: var(--size-8);
-            }
-
-            nav{
-                margin: 1em 0;
-                overflow: hidden;
-                height: fit-content; 
-                width: 40vw;
-                
-                transition: height 0.3s ease;
-
-                &.hidden{
-                    height: 0;
-                }
-            }
-
-            ul{
-                display: flex;
-                flex-flow: column nowrap;
-                                 
-                li{
-                    list-style: none;
-                    padding: 0.5em;
-                    margin: 4px;
-                    background: rgba($color: #FF006D, $alpha: 1);
-                    border-radius: var(--size-24);
-                
-                    a{
-                        color: var(--c-light);
-                        font-size: var(--size-16);
-                        font-family: var(--font-noto);
-                        font-weight: 400;
-                        text-transform: uppercase;
-                        text-decoration: none;
-                        padding: var(--size-8);
-                            
-                        &:hover{
-                            text-shadow: 0 0 4px var(--c-light);
-                            font-weight: 700;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    &__section{
-        height: 100vh;
-        //margin-bottom: 36em;
-=======
    }
 
     &__section{
-        height: min-content;
+        height: max-content;
         //margin-bottom: 8em;
         padding: var(--size-80);
->>>>>>> Stashed changes
 
-        @media screen and (max-width: $media-mobile) {
+        /* @media screen and (max-width: $media-mobile) {
              margin-bottom: 32em;   
-        }
+        } */
     }
 
 
@@ -857,58 +751,14 @@ body{
             }
 
         .welcome{
-<<<<<<< Updated upstream
-            
-            transform: translateY(-50%);
-            margin-left: var(--size-72);
-=======
 
             padding-left: var(--size-80);
             width: 100vw;
             margin-bottom: 12vh;
->>>>>>> Stashed changes
             display: flex;
             flex-direction: column;
             gap: var(--size-16);
 
-<<<<<<< Updated upstream
-            @media screen and (max-width: $media-mobile) {
-                transform: translateY(-50%);
-                margin-left: var(--size-32);
-                line-height: var(--size-32);
-            }
-
-            h1{
-                color: var(--c-highlight);
-                font-family: var(--font-noto);
-                font-size: var(--size-96);
-                font-weight: 900;
-                text-transform: uppercase;
-                text-shadow: 0 2px 2px var(--c-dark-transparent-50);
-
-                @media screen and (max-width: $media-mobile) {
-                    font-size: var(--size-48);
-                }
-            }
-
-            h2{
-                color: var(--c-light);
-                font-family: var(--font-comfortaa);
-                font-size: var(--size-32);
-                font-weight: 100;
-                line-height: 48px;
-                letter-spacing: 16%;
-                width: 60%;
-                text-shadow: 0 2px 2px var(--c-dark-transparent-50);
-
-                @media screen and (max-width: $media-mobile) {
-                    font-size: var(--size-16);
-                    width: 100%;
-                    line-height: 20px;
-                }
-
-                span{
-=======
             @media screen  and (max-width: $media-tablet) {
                 width: 100%;
                 margin-bottom: 4vh;
@@ -1055,60 +905,10 @@ body{
                 .highlight{
                     color: var(--c-light);
                     font-family: var(--font-space);
->>>>>>> Stashed changes
                     font-weight: 700;
                 }
             }
 
-<<<<<<< Updated upstream
-            /* WELCOME BLOCK */
-            &__mobile{
-                display: none;
-
-                color: var(--c-light);
-                padding: var(--size-16) var(--size-8);
-                transform: translateY(90%);
-
-                 @media screen and (max-width: $media-mobile) {                
-                    display: block;
-                    transform: translateY(-25%);
-                    background-color: var(--c-dark-transparent-50);
-                } 
-
-                
-                h1{
-                    font-family: var(--font-noto);
-                    font-size: 2.5rem;
-                    text-transform: uppercase;
-                    color: var(--c-highlight);                  
-                  
-                    transition: all 0.3s ease;
-
-                    @media screen and (max-width: $media-mobile) {
-                        line-height: 90%;
-                        text-shadow: 2px 0 4px var(--c-dark-transparent-25);
-                    }
-                }
-
-                h2{
-                    font-family: var(--font-comfortaa);
-                    font-size: 1rem;
-                    font-weight: 100;
-                    text-shadow: 1px 0 2px var(--c-dark);
-
-                    margin-top: 0.5rem;
-
-                    @media screen and (max-width: $media-mobile) {
-                        text-shadow: 2px 0 4px var(--c-dark);
-                         line-height: 142%;
-                    }
-                }
-
-            }
-      
-
-=======
->>>>>>> Stashed changes
         }
 
         .scroll__indicator{
@@ -1116,14 +916,30 @@ body{
             scale: 1.5;
             margin: auto;
             margin-top: var(--size-32);
+            display: flex;
+            justify-content: space-between;
+            gap: var(--size-16);
 
-            animation: mouseScroll 0.8s infinite linear alternate-reverse;
+            .line{
+                height: 1px;
+                width: 56px;
+                background-color: var(--c-light-transparent-10);
+                margin: auto;
+            }
 
-            @media screen and (max-width: $media-mobile) {
-                position: absolute;
-                bottom: 25%;
-                left: 50%;
-                transform: translateX(-50%);
+            .scroll{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: var(--font-space);
+                font-size: var(--size-8);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                animation: mouseScroll 0.8s infinite alternate ease-in-out;
+
+                @media screen and (max-width: $media-tablet) {                
+                    font-size: 7px;
+                }
             }
         }
          
@@ -1197,21 +1013,18 @@ body{
     .content{
         position: relative;
         width: 100%;
-<<<<<<< Updated upstream
-=======
-        height: fit-content;
->>>>>>> Stashed changes
+        height: min-content;
 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        gap: var(--size-80);
+        //gap: var(--size-80);
         
         .toTop{
             position: absolute;
-            left: 50%;
-            bottom:2.5%;
+            right: 10%;
+            bottom: 1%;
             transform: translateX(-50%);
             margin: auto;
             padding: var(--size-16) var(--size-32);
@@ -1227,15 +1040,11 @@ body{
             font-size: var(--size-24);
             text-decoration: none;
             text-transform: capitalize;
-            border: 2px solid var(--c-light);
+            border: 2px solid var(--c-highlight);
             border-radius: var(--size-80);
 
             transition: all 0.3s ease;
 
-<<<<<<< Updated upstream
-            @media screen and (max-width: $media-mobile) {
-                width: 70%;
-=======
             @media screen and (max-width: $media-tablet) {
                 bottom: 2%;
                 right: 20%;
@@ -1245,8 +1054,8 @@ body{
                 bottom: 1%;
                 left: 0;
                 transform: translateX(-80%);
+                margin: auto;
                 width: min-content;
->>>>>>> Stashed changes
                 justify-content: center;
                 gap: var(--size-8);
                 padding: var(--size-8);
@@ -1265,37 +1074,6 @@ body{
             }
         }
              
-<<<<<<< Updated upstream
-        .ddesign__bg-city,
-        .ddesign__bg{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -99;
-    
-            border: none;
-            width: 100%;
-            height: 100%;
-            filter: brightness(25%);
-            
-
-            canvas{
-                @media screen and (max-width: $media-tablet) {                
-                    display: none;
-                } 
-            }
-
-            @media screen and (max-width: $media-tablet) {                
-                background: url("../../img/dddesign_logo_transparent.png");
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-            } 
-    
-        }
-=======
->>>>>>> Stashed changes
     }
 
 

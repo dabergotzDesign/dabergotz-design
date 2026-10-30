@@ -1,12 +1,9 @@
 const cursor = document.querySelector('.custom_cursor');
 const hover = document.querySelectorAll(".hover");
-<<<<<<< Updated upstream
-=======
 const desktop = window.matchMedia("(min-width: 1024px) and (hover: hover) and (pointer: fine)");
 
 
 if (desktop.matches) {
->>>>>>> Stashed changes
 
 document.addEventListener('mousemove', e =>{
     cursor.style.left = e.pageX + 'px';
@@ -25,8 +22,6 @@ window.addEventListener("mouseup", ()=>{
 hover.forEach(e => {
     e.addEventListener("mouseenter", ()=>{
         cursor.classList.add("state_hover");
-<<<<<<< Updated upstream
-=======
         
         if(e.classList.contains("hover_pause")){
             cursor.innerHTML = "<i class='fa-solid fa-pause'></i>";
@@ -44,15 +39,19 @@ hover.forEach(e => {
             cursor.innerHTML = "<i class='fa-solid fa-arrow-left'> back</i>";
         }
 
+        if(e.classList.contains("hover_up")){
+            cursor.innerHTML = "<i class='fa-solid fa-arrow-up'></i>";
+        }
+
         if(e.classList.contains("hover_copy")){
             cursor.innerHTML = "<i class='fa-solid fa-copy'></i>";
         }
 
         if(e.classList.contains("hover_portfolio")){
-            cursor.innerHTML = "<i class='fa-solid fa-arrow-up-right-from-square'> explore</i>";
-            e.classList.add("play");
+            cursor.innerHTML = "<i class='fa-solid fa-arrow-up-right-from-square'> view project</i>";
+            //e.classList.add("play");
 
-            if(e.classList.contains("play")){
+            /* if(e.classList.contains("play")){
 
                 //Portfolio assets
                 const portfolioCards = document.querySelectorAll(".portfolio__card");
@@ -70,10 +69,9 @@ hover.forEach(e => {
                         video.currentTime = 0;
                     })
                 });
+                   
 
-                    
-
-            }
+            } */
             
         }
 
@@ -91,17 +89,9 @@ hover.forEach(e => {
             cursor.innerHTML = "<i class='fa-solid fa-xmark'></i>";
         }
         
->>>>>>> Stashed changes
     })
 });
 
-<<<<<<< Updated upstream
-hover.forEach(e => {
-    e.addEventListener("mouseleave", ()=>{
-        cursor.classList.remove("state_hover");
-    })
-});
-=======
 
     /* Hover return */
     hover.forEach(e => {
@@ -111,4 +101,3 @@ hover.forEach(e => {
     })
 
 }
->>>>>>> Stashed changes
