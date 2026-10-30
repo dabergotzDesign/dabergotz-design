@@ -57,10 +57,7 @@ body{
 
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--size-96);
-    width: 100vw;
+    gap: var(--size-16);
     height: fit-content;
     margin-right: var(--size-80);
     padding-top: var(--size-96);
@@ -73,13 +70,13 @@ body{
     @media screen and (max-width: $media-tablet) {
         gap: 0;
         width: 100vw;
-        padding: var(--size-24);
+        padding: 1.2em;
     }
 
     @media screen and (max-width: $media-mobile) {
         flex-direction: column;
-        align-items: center;
-        height: min-content;
+        height: fit-content;
+        margin-bottom: var(--size-64);
         background-color: var(--c-dark-transparent-50);
     }
 
@@ -90,25 +87,8 @@ body{
         align-items: flex-start;
         align-content: space-between;
         gap: var(--size-24);
-        width: max-content;
-
+        width: 100%;
         position: relative;
-
-        background-color: var(--c-dark);
-        border: 2px solid var(--c-light);
-        border-radius: var(--size-16);
-        padding: var(--size-24);
-
-        @media screen and (max-width: $media-tablet) {
-            align-items: center;
-            width: 100%;
-        }
-
-        @media screen and (max-width: $media-mobile) {
-            width: min-content;
-            padding: var(--size-8);
-        }
-
         
         .blog__title{
             color: var(--c-dark);
@@ -137,24 +117,23 @@ body{
     
             width: fit-content;
             background-color: var(--c-dark);
-            outline: 1px solid var(--c-highlight);
+            outline: 1px solid var(--c-light);
             border-radius: var(--size-80);
-            padding: var(--size-8)  var(--size-24);
+            padding: var(--size-16)  var(--size-32);
     
             cursor: none;
                  
-            color: var(--c-highlight);
+            color: var(--c-light);
             text-decoration: none;
             text-transform: uppercase;
     
             font-family: var(--font-noto);
-            font-size: var(--size-24);
+            font-size: var(--size-32);
     
             @media screen and (max-width: $media-mobile) {
                 font-size: var(--size-16);
-                padding: var(--size-8) var(--size-16);
-                gap: var(--size-4);
-                align-self: center;
+                padding: var(--size-16);
+                margin-top: var(--size-16);
             }
     
             &:hover{
@@ -163,13 +142,10 @@ body{
     
             /* icon */
             i,svg{
-
-                width: var(--size-24);
-                height: var(--size-24);
     
                 @media screen and (max-width: $media-mobile) {
-                    width: var(--size-16);
-                    height: var(--size-16);
+                    width: var(--size-24);
+                    height: var(--size-24);
                 }
     
             }
@@ -180,7 +156,7 @@ body{
         /* what is happening - subtitle main page */
         .title{
     
-            font-family: var(--font-space);
+            font-family: var(--font-noto);
             font-size: var(--size-48);
             font-weight: 300;
             text-transform: uppercase;
@@ -220,11 +196,10 @@ body{
         //sub headline
         h2{
     
-            font-family: var(--font-noto);
+            font-family: var(--font-space);
             font-size: var(--size-32);
-            font-weight: 400;
             color: var(--c-light);
-            width: 30vw;
+            width: 50%;
             line-height: 135%;
     
             @media screen and (max-width: $media-laptop) {
@@ -232,14 +207,14 @@ body{
             }
     
             @media screen and (max-width: $media-tablet) {
-                font-size: var(--size-24);
-                width: 80vw;
+                font-size: 1.2rem;
             }
     
             @media screen and (max-width: $media-mobile) {
-                font-size: var(--size-16);
-                width: 90vw;
-                //margin: auto;
+                font-size: 1rem;
+                width: 100%;
+                padding-top: var(--size-8);
+                margin: auto;
             }
         }
 
@@ -319,7 +294,7 @@ body{
 
         }
 
-        /* .slider_controls{
+        .slider_controls{
             position: absolute;
             bottom: 10%;
             left: 50%;
@@ -348,8 +323,8 @@ body{
 
                 i,svg{
                     color: var(--c-light);
-                    width: var(--size-24);
-                    height: var(--size-24);
+                    width: var(--size-32);
+                    height: var(--size-32);
                 }
 
                 &:hover{
@@ -357,7 +332,7 @@ body{
                     backdrop-filter: blur(4px);
                 }
             }
-        } */
+        }
 
     }
 
@@ -370,14 +345,14 @@ body{
     &__blog{
 
         overflow-x: hidden;
-        background: url("../../img/backgrounds/scene.webp");
-        background-position: 50% center;
+        background: url("../../img/backgrounds/ddesign_logo_render.jpg"), linear-gradient(to bottom, var(--c-dark), #111);
+        background-position: center center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-attachment: fixed;
 
         //position: relative;
-        
+
 
         &::-webkit-scrollbar{
             width: 5px;
@@ -401,9 +376,9 @@ body{
             font-size: 2rem;
             text-decoration: none;
             color: var(--c-light);
-            padding: 6px var(--size-12);
 
             background-color: var(--c-dark);
+            padding: var(--size-16);
             outline: thin solid var(--c-light);
             border-radius: var(--size-80);
 
@@ -417,11 +392,6 @@ body{
                 right: 0.5%;
                 padding: var(--size-8);
                 scale: 0.75;
-            }
-
-            i,svg{
-                width: var(--size-24);
-                height: var(--size-24);
             }
 
         }
@@ -526,7 +496,7 @@ body{
             .post{                
                     background-color: var(--c-dark);
                     border: thin solid var(--c-light);
-                    border-radius: var(--size-12);
+                    border-radius: 0.25em;
 
                     padding: var(--size-24);
                     padding-bottom: 4em;
@@ -1001,8 +971,7 @@ body{
                         height: auto;
                         object-fit: contain;
 
-                        border: 2px solid var(--c-light);
-                        background: var(--c-dark-transparent-50);
+                        box-shadow: 8px 8px 4px rgba($color: #f2f2f2, $alpha: 0.15);
 
                         @media screen and (max-width: $media-tablet) {
                             width: 72vw;

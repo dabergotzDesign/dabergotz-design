@@ -55,7 +55,7 @@ syncBlogData();
 
 /* Slider controls */
 const teaserCardWrapper = document.querySelector('.teaser__card-wrapper');
-//const nextCardButton = document.querySelector('.next-card');
+const nextCardButton = document.querySelector('.next-card');
 let isTeaserAnimating = false;
 
 function setTeaserCardPositions(cards) {
@@ -66,7 +66,7 @@ function setTeaserCardPositions(cards) {
 }
 
 function showNextTeaserCard() {
-    if (isTeaserAnimating || !teaserCardWrapper || typeof gsap === 'undefined') {
+    if (isTeaserAnimating || !teaserCardWrapper || !nextCardButton || typeof gsap === 'undefined') {
         return;
     }
 
@@ -78,7 +78,7 @@ function showNextTeaserCard() {
     }
 
     isTeaserAnimating = true;
-    //nextCardButton.disabled = true;
+    nextCardButton.disabled = true;
 
     gsap.to(frontCard, {
         yPercent: 130,
@@ -97,13 +97,11 @@ function showNextTeaserCard() {
                 ease: 'power4.out',
                 onComplete: () => {
                     isTeaserAnimating = false;
-                    //nextCardButton.disabled = false;
+                    nextCardButton.disabled = false;
                 }
             });
         }
     });
 }
 
-setInterval(showNextTeaserCard, 5000);
-
-//nextCardButton?.addEventListener('click', showNextTeaserCard);
+nextCardButton?.addEventListener('click', showNextTeaserCard);
