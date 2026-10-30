@@ -2,6 +2,7 @@ const cursor = document.querySelector('.custom_cursor');
 const hover = document.querySelectorAll(".hover");
 const desktop = window.matchMedia("(min-width: 1024px) and (hover: hover) and (pointer: fine)");
 
+
 if (desktop.matches) {
 
 document.addEventListener('mousemove', e =>{
@@ -15,10 +16,8 @@ window.addEventListener("mousedown", ()=>{
 })
 
 window.addEventListener("mouseup", ()=>{
-    cursor.style.backgroundColor = "#0d0d0d50";
+    cursor.style.backgroundColor = "#0d0d0d";
 })
-
-
 
 hover.forEach(e => {
     e.addEventListener("mouseenter", ()=>{
@@ -40,23 +39,40 @@ hover.forEach(e => {
             cursor.innerHTML = "<i class='fa-solid fa-arrow-left'> back</i>";
         }
 
-        if(e.classList.contains("hover_portfolio")){
-            cursor.innerHTML = "<i class='fa-solid fa-arrow-up-right-from-square'> explore</i>";
-            e.classList.add("play");
+        if(e.classList.contains("hover_up")){
+            cursor.innerHTML = "<i class='fa-solid fa-arrow-up'></i>";
+        }
 
-            if(e.classList.contains("play")){
+        if(e.classList.contains("hover_copy")){
+            cursor.innerHTML = "<i class='fa-solid fa-copy'></i>";
+        }
+
+        if(e.classList.contains("hover_portfolio")){
+            cursor.innerHTML = "<i class='fa-solid fa-arrow-up-right-from-square'> view project</i>";
+            //e.classList.add("play");
+
+            /* if(e.classList.contains("play")){
 
                 //Portfolio assets
                 const portfolioCards = document.querySelectorAll(".portfolio__card");
                 //const portfolioVideo = portfolioCards[0].querySelector("video");
 
                 portfolioCards.forEach(card => {
+                    const video = card.querySelector("video");
+                    
                     card.addEventListener("mouseenter", ()=>{
-                        const video = card.querySelector("video");
                         video.play();
-                    })});
+                    })
+                    
+                    card.addEventListener("mouseleave", ()=>{
+                        video.pause();
+                        video.currentTime = 0;
+                    })
+                });
+                   
 
-            }
+            } */
+            
         }
 
         if(e.classList.contains("hover_dl")){
@@ -74,15 +90,14 @@ hover.forEach(e => {
         }
         
     })
-
-    });
-
-hover.forEach(e => {
-    e.addEventListener("mouseleave", ()=>{
-        cursor.classList.remove("state_hover");
-        if(e.classList.contains("hover_portfolio")){
-            e.classList.remove("play");
-        }
-    })
 });
+
+
+    /* Hover return */
+    hover.forEach(e => {
+        e.addEventListener("mouseleave", ()=>{
+            cursor.classList.remove("state_hover");
+        })
+    })
+
 }
