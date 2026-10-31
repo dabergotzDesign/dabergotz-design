@@ -1,3 +1,9 @@
+/* OBSERVER */
+
+
+
+
+
 /* TITLE */
 const quickInfo = document.querySelector(".quick__info");
 const welcomeTitle = document.querySelector(".welcome h1");
