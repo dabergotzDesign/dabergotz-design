@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/css/style.css">
+    <link rel="shortcut icon" href="./img/logo/ddesign_logo_5_circle.png" type="image/x-icon">
+
+    
+    <!-- FONTS, ICONS -->
+    <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Space Grotesk -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- GSAP, ScrollTrigger, Lenis, Rive -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.27/dist/lenis.css">  
+    <!-- <script src="https://unpkg.com/@rive-app/webgl2"></script> -->
+
+    <script src="./js/preload.js" defer></script>  
+    <script src="./js/gsap.js" defer></script>
+    <script src="./js/portfolio.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+    <script src="./js/welcome_title.js" defer></script>
+    <script src="./js/topNav.js" defer></script>
+    <script src="./js/blog_update.js" defer></script>
+
+    <!-- <script src="./js/splash.js" defer></script> -->
+    <script src="./js/lucide.js" defer></script>
+    <script src="./js/smooth-scroll.js" defer></script>
+    <script src="./js/cursor.js" defer></script>
+
+    <!-- Lottie -->
+     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script> -->
+     <!-- Unicorn Studio -->
+    <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.4.2/dist/unicornStudio.umd.js"></script>
+
+ 
+    
+    <title>dabergotzDesign - UI/UX Design & Frontend Development</title>
+
+</head>
+<body>
+    <!-- anchor -->
+    <div id="top"></div>
+
+ <div class="custom_cursor"></div>
+
+ <div class="preloader">
+    <video muted height="1080" width="1920" muted autoplay>
+        <source src="./video/ddesign_logo_intro.mp4" type="video/mp4">
+    </video>
+ </div>
+       
+<main class="main">   
+
+    <div class="quick__menu">
+        <div class="logo">
+            <img src="./img/logo/ddesign_logo_5.svg" alt="dabergotzDesign logo" width="2048px" height="2048px">
+            <span class="logo__text">dabergotzDesign</span>
+        </div>
+        <div class="links">    
+            <div class="link__mail hover hover_copy" onclick="copyEmail()" onmouseout="outFunc()">
+                <i data-lucide="mail"></i>
+                <input type="text" value="d.dabergotz@gmx.de" id="email-copy" readonly>
+                <div class="tooltip">copy to clipboard</div>            
+            </div>
+            <div class="link link__linkedin"><i class="fa-brands fa-linkedin"><a href="https://www.linkedin.com/in/dennisdabergotz/" target="_blank"></a></i></div>
+            <div class="link link__dribbble"><i class="fa-brands fa-dribbble"><a href="https://dribbble.com/dabergotzDesign" target="_blank"></a></i></div>
+            <div class="link link__behance"><i class="fa-brands fa-behance"><a href="https://www.behance.net/dabergotzDesign" target="_blank"></a></i></div>
+            <div class="link link__instagram"><i class="fa-brands fa-instagram"><a href="#" target="_blank"></a></i></div>
+            <div class="link link__youtube"><i class="fa-brands fa-youtube"><a href="https://www.youtube.com/@dennisdabergotz5883" target="_blank"></a></i></div>
+            <div class="resume">
+                <button class="download__cv hover hover_dl">Get my resume <i data-lucide="download"></i></button>
+            </div>
+        </div>
+
+        <!-- mobile menu -->
+         <div class="mobile__menu">
+            <button class="mobile__menu-icon"><i data-lucide="menu"></i></button>
+
+            <div class="menu">
+
+                <div class="close"><i data-lucide="x"></i></div>
+
+                <div class="m__nav">
+                    <h1>Navigation</h1>
+                    <ul>
+                        <li><a href="#top" onclick="navClose()">Home</a></li>
+                        <li><a href="#portfolio" onclick="navClose()">Portfolio</a></li>
+                        <li><a href="#about" onclick="navClose()">About</a></li>
+                        <li><a href="#blog" onclick="navClose()">Blog</a></li>
+                        <li><a href="#contact" onclick="navClose()">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="m__links">
+
+                    <h1>Socials & Info</h1>
+
+                    <div class="social__container">
+                        <div class="link__mail hover hover_copy" onclick="copyEmail()" onmouseout="outFunc()">
+                            <i data-lucide="mail"></i>
+                            <input type="text" value="d.dabergotz@gmx.de" id="email-copy" readonly>
+                            <div class="tooltip">copy to clipboard</div>            
+                        </div>
+                        <div class="links__container">
+                            <div class="link link__linkedin"><i class="fa-brands fa-linkedin"><a href="https://www.linkedin.com/in/dennisdabergotz/" target="_blank"></a></i></div>
+                            <div class="link link__dribbble"><i class="fa-brands fa-dribbble"><a href="https://dribbble.com/dabergotzDesign" target="_blank"></a></i></div>
+                            <div class="link link__behance"><i class="fa-brands fa-behance"><a href="https://www.behance.net/dabergotzDesign" target="_blank"></a></i></div>
+                            <div class="link link__instagram"><i class="fa-brands fa-instagram"><a href="#" target="_blank"></a></i></div>
+                            <div class="link link__youtube"><i class="fa-brands fa-youtube"><a href="https://www.youtube.com/@dennisdabergotz5883" target="_blank"></a></i></div>
+                        </div>
+                        <div class="resume">
+                            <button class="download__cv hover hover_dl">Get my resume <i data-lucide="download"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+    </div>
+
+    <div class="content" id="content">
+    
+        <div class="top__menu">
+        
+                    <nav class="menu__nav-icons">
+                        <ul>
+                            <li class="hover hover_nav" data-hover="Home"><i data-lucide="house"></i><a href="#top"></a></li>
+                            <li class="hover hover_nav" data-hover="Portfolio"><i data-lucide="briefcase-business"></i><a href="#portfolio"></a></li>
+                            <li class="hover hover_nav" data-hover="About"><i data-lucide="user"></i><a href="#about"></a></li>
+                            <li class="hover hover_nav" data-hover="Blog"><i data-lucide="notebook-pen"></i><a href="#blog"></a></li>
+                            <li class="hover hover_nav" data-hover="Contact"><i data-lucide="mail"></i><a href="#contact"></a></li>
+                        </ul>
+                    </nav>
+        </div>
+
+        <section id="#home">
+           
+            <div class="splash">
+    
+                <button class="pauseBG hover hover_pause"><i class="fa-solid fa-pause"></i></button>
+    
+                <div class="welcome">
+                    <div class="quick__info">
+                        <div class="available"><span class="dot_indicator"></span> Open to work</div>
+                        <div class="location"><i data-lucide="map-pin"></i> Berlin, Germany</div>
+                    </div>
+                    <div class="greetings__container">
+                        <img src="./img/about/Hi_emote.png" alt="">
+                        <div class="welcome__text">
+                            <h2 class="greeting">Welcome</h2>
+                            <h2>Willkommen</h2>
+                            <h2>Welkom</h2>
+                            <h2>Bienvenue</h2>
+                            <h2>Bienvenidos</h2>
+                            <h2>ようこそ</h2>               
+                        </div>
+                    </div>
+    
+                    <h1 aria-label="I'm Dennis, a UI & Web Designer blending game dev, front-end skills, and UX to create engaging, intuitive digital experiences.">I'm <span class="highlight">Dennis</span>, a <span class="highlight" style="color: var(--c-highlight);">UI & Web Designer</span> blending <span class="highlight" style="font-weight: 500;text-wrap: balance;">game dev, front-end skills, and UX</span> to create engaging, intuitive digital experiences.</h1>
+                
+                </div>
+    
+                <div class="scroll__indicator">
+                    <div class="line"></div>
+                    <div class="scroll">
+                        <p>scroll</p>
+                        <i data-lucide="chevron-down" width="24px" height="24px"></i>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                
+                <!-- unicorn vending machine bg -->
+                 <div class="ddesign__VM-bg" data-us-project="uYC4McR6iDUPcARdr1Ah"></div>
+               
+                
+            </div>
+        </section>
+
+        <section id="portfolio" class="main__section">
+
+            <!-- <div class="mask">
+                <h1>creations</h1>
+                <h2 class="title">Intuitive Designs, Impactful Experiences</h2>
+            </div> -->
+
+            <!-- //// GALLERY • DESKTOP PORTFOLIO //// -->
+             <div class="portfolio__wrapper">
+                
+                <div class="cards__container">
+
+                    <!-- Portfolio piece 01 - Remember Our Tales -->
+                    <div class="portfolio__card">
+                        <div class="card__thumbnail"><video autoplay muted playsinline><source src="./video/portfolio/RoT/RoT_prtfl_clip.webm" type="video/webm"></video></div>
+                        <div class="card__info">
+                            <h1>Creating a <span>living archive</span> of human lives and legacies.</h1>
+                            <div class="tag__wrapper">
+                                <div class="tag">UI/UX Design</div>
+                                <div class="tag">Branding</div>
+                                <div class="tag">Archive</div>
+                            </div>
+                        </div>
+                        <a class="link hover hover_portfolio" href="./html/cs_rememberourtales.html"></a>
+                    </div>
+    
+    
+                    <!-- Portfolio piece 02 - Asozial -->
+                    <div class="portfolio__card">
+                        <div class="card__thumbnail"><video autoplay muted playsinline><source src="./video/portfolio/asozial/CS asozial - Intro animation.webm" type="video/webm"></video></div>
+                        <div class="card__info">
+                            <h1>finding the right <span>match</span> for developers! creating a tinder like experience to let developers find their next projects.</h1>
+                            <div class="tag__wrapper">
+                                <div class="tag">UI/UX Design</div>
+                                <div class="tag">Matching System</div>
+                                <div class="tag">Social Media</div>
+                            </div>
+                        </div>
+                        <a class="link hover hover_portfolio" href="./html/cs_asozial.html"></a>
+                    </div>
+                    
+                </div>
+
+                <!-- //// TABLET/MOBILE PORTFOLIO //// -->
+             <div class="mobile__container">
+                <!-- Remember Our Tales -->
+                 <div class="card__wrapper">
+                    <div class="card__thumbnail">
+                        <img class="thumbnail RoT" src="./img/portfolio/cs_rememberourtales/RoT-thumbnail_mobile.jpg" alt="Remember Our Tales - The Human Archive thumbnail">
+                    </div>
+                    <div class="card__info-mobile">
+                        <h1>Creating a <span>living archive</span> of human lives and legacies.</h1>
+                        <div class="tag__wrapper">
+                            <div class="tag">UI/UX Design</div>
+                            <div class="tag">Branding</div>
+                            <div class="tag">Archive</div>
+                        </div>
+                    </div>
+                    <a class="link" href="./html/cs_rememberourtales.html"> explore</a>
+                </div>
+               
+                <!-- asozial -->
+                <div class="card__wrapper">
+                    <div class="card__thumbnail">
+                        <img class="thumbnail asozial" src="./img/portfolio/cs_asozial/asozial_thumbnail_mobile.jpg" alt="asozial social platform thumbnail">
+                    </div>
+                    <div class="card__info-mobile">
+                        <h1>finding the right <span>match</span> for developers! creating a tinder like experience to let developers find their next projects.</h1>
+                        <div class="tag__wrapper">
+                            <div class="tag">UI/UX Design</div>
+                            <div class="tag">Matching System</div>
+                            <div class="tag">Social Media</div>
+                        </div>
+                    </div>
+                    <a class="link" href="./html/cs_asozial.html"> explore</a>
+                </div>
+
+
+             </div>
+                
+                <div class="sideProjects">
+                    
+                    <h1>side projects - creations that i like to share</h1>
+    
+                    <div class="sides__container">
+                        <div class="sides__card hover hover_portfolio" style="grid-area: box-1;">
+                            <img src="./img/portfolio/sideProjects/rs/ddesign - REMscape_thumbnail.png" width="1920px" height="1080px" alt="remscape - a sleep companion app">
+                            <a class="hover hover-nav" href="#openModal_rs" id="modal__rs"></a>
+                        </div>
+    
+                        <div class="sides__card hover hover_portfolio" style="grid-area: box-2;">
+                            <img src="./img/portfolio/sideProjects/gdy/Case Study GoDuckYourself - Thumbnail.png" width="1920px" height="1080px" alt="Go Duck Yourself - a rubber duck debugging app">
+                            <a class="hover hover-nav" href="#openModal_gdy" id="modal__gdy"></a>
+                        </div>
+    
+                        <div class="sides__card hover hover_portfolio" style="grid-area: box-3;">
+                            <img src="./img/portfolio/sideProjects/hl/hl_thumbnail.jpg" width="1920px" height="1080px" alt="HoloList - make your work more fun">
+                            <a class="hover hover-nav" href="#openModal_hl"></a>
+                        </div>
+                        
+                        <div class="sides__card hover hover_portfolio" style="grid-area: box-4;">
+                            <img src="./img/portfolio/sideProjects/dc26/Thumbnail.jpg" width="1920px" height="1080px" alt="Design Course Challenges - 9 Design Challenges with AI">
+                            <a class="hover hover-nav" href="#openModal_dc26"></a>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+
+
+
+        </section>
+
+
+        <section id="about" class="main__section">
+                
+            <div class="about__container">
+
+                <div class="about__intro">
+                    <div class="about__text">
+                        
+                        <img class="profile__image" src="./img/about/ddabergotz.jpg" alt="image of Dennis Dabergotz">
+
+                        <div class="about__text-wrap">
+                            <h3 class="about__title">Yep, that's me</h3>
+                                                    
+                            <p class="about__description">
+                            When I’m not busy creating designs, you’ll probably find me rocking out at a concert, taking on a tough boss and slaying his minions in a game, or diving down a rabbit hole of code and interface experiments just for the fun of it. I enjoy tinkering with ideas, exploring new tools, and figuring out how things work behind the scenes — because curiosity doesn’t clock out when the workday ends.
+                            </p>
+                            <p class="about__description">
+                                And when I’m not chasing the next creative spark or virtual victory, I’m spending quality time with family and friends, recharging my batteries and enjoying the little things. Whether it’s through music, gaming, coding, or simply hanging out with the people I care about, I like to keep a healthy mix of creativity, adventure, and downtime in my life.
+                            </p> 
+                        </div>                        
+                    </div>
+
+                    <div class="gallery">
+                        <figure class="image__wrap">
+                            <img src="./img/about/gallery/1744017909682.jpg" alt="">
+                            <figcaption>Usability Testessen Berlin - 2025</figcaption>
+                        </figure>  
+                        <figure class="image__wrap">
+                            <img src="./img/about/gallery/IMG_20220601_212229.jpg" alt="">
+                            <figcaption>Korn concert - 2023</figcaption>
+                        </figure> 
+                        <figure class="image__wrap">
+                            <img src="./img/about/gallery/London_15.JPG" alt="">
+                            <figcaption>London trip 2015</figcaption>
+                        </figure> 
+                        <figure class="image__wrap">
+                            <img src="./img/about/gallery/Linkin Park_Streetgig 041.jpg" alt="">
+                            <figcaption>Linkin Park Streetgig 2012</figcaption>
+                        </figure>                       
+                    </div>
+
+                </div>
+
+                <div class="about__toolbox">
+                    <h3 class="about__title">My Toolbox</h3>
+
+                    <div class="tools">
+
+                            <div class="carousel">
+                                <ul class="first_row group">
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/figma/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/claude/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="./img/svg/unicorn_logo.svg" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="./img/svg/affinity_icon.svg" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="./img/svg/ps_logo.svg" />
+                                    </li>                                                     
+                                </ul>
+                                <ul aria-hidden class="first_row group">
+                                    <li class="tool hover hover_nav">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/figma/white" />
+                                    </li>
+                                    <li class="tool hover hover_nav">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/claude/white" />
+                                    </li>
+                                    <li class="tool hover hover_nav">
+                                        <img height="32" width="32" src="./img/svg/unicorn_logo.svg" />
+                                    </li>
+                                    <li class="tool hover hover_nav">
+                                        <img height="32" width="32" src="./img/svg/affinity_icon.svg" />
+                                    </li>
+                                    <li class="tool hover hover_nav">
+                                        <img height="32" width="32" src="./img/svg/ps_logo.svg" />
+                                    </li>                                                     
+                                </ul>                           
+                            </div>
+
+                            <div class="carousel">
+                                <ul class="second_row group">
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/html5/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/css/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/sass/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/javascript/white" />
+                                    </li>
+                                </ul>
+                                <ul aria-hidden class="second_row group">
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/html5/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/css/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/sass/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/javascript/white" />
+                                    </li>
+                                </ul>
+                            </div>
+                                               
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </section>
+
+
+    <section id="blog" class="main__section">
+        <!-- <h1 class="blog__title">blog</h1> -->
+
+            <div class="blog__container-front">
+                <!-- <h1 class="blog__title">blog</h1> -->
+    
+                <div class="title__wrapper">
+                    <h1 class="title letters">what is happening?</h1>
+                    <h2>Get updates to the site & other projects in my blog, happy reading</h2>
+                </div>
+    
+                <a href="./html/blog.html" class="blog__link hover hover_nav" >to the blog <i data-lucide="arrow-right" width="64px" height="64px"></i></a>
+            </div>
+
+            <div class="teaser__cards-container">
+                <div class="teaser__card-wrapper">
+                    <div class="teaser__card hover active">
+                        <img class="teaser__thumbnail" src="#" alt="" width="1920px" height="1080px">
+                        <h1 class="teaser__title">active</h1>
+                        <a class="teaser__link hover hover_nav" href="./html/blog.html#post-1"></a>
+                    </div>
+    
+                    <div class="teaser__card middle">
+                        <img class="teaser__thumbnail" src="#" alt="" width="1920px" height="1080px">
+                        <h1 class="teaser__title">middle</h1>
+                        <a class="teaser__link hover hover_nav" href="./html/blog.html#post-2"></a>                        
+                    </div>
+    
+                    <div class="teaser__card bottom">
+                        <img class="teaser__thumbnail" src="#" alt="" width="1920px" height="1080px">
+                        <h1 class="teaser__title">bottom</h1>
+                        <a class="teaser__link hover hover_nav" href="./html/blog.html#post-3"></a>                        
+                    </div>
+                </div>
+
+                <!-- <div class="slider_controls">
+                    <button class="next-card">Next <span><i data-lucide="arrow-right"></i></span></button>
+                </div> -->
+                
+            </div>
+
+            
+    </section>
+
+
+    <section id="contact" class="main__section">
+            
+            <!-- <h1 class="title">contact</h1> -->
+            
+            <div class="contacts__wrapper">
+                
+            <div class="mail__wrapper">
+                
+                <h2 class="subtitle">let's chat, hit me up</h2>
+                
+                <!-- Messenger -->
+                <div class="contacts__mail">   
+                                
+                        
+                            <div class="mailForm">      
+
+                                    <form class="form" id="form1" method="POST" action="https://formspree.io/f/myyoeqvb" action="../js/contact.js" onsubmit="return formValidation()">
+                                                                        
+                                    <div class="input__wrap hover hover_input">
+                                        <input name="name" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,100]] input" id="name" />               
+                                        <label for="name" class="input__label">Full Name</label>
+                                    </div>
+                    
+                                    <div class="input__wrap hover hover_input">
+                                        <input name="email" type="text" placeholder=" " class="validate[required,custom[email]] input" id="email" />
+                                        <label for="email" class="input__label">Email</label>
+                                    </div>
+                                    
+                                    <div class="input__wrap hover hover_input">
+                                        <input name="subject" type="text" placeholder=" " class="validate[required,custom[onlyLetter],length[0,30]] input" id="subject" />
+                                        <label for="subject" class="input__label">Subject</label>
+                                    </div>
+                    
+                                        
+                                        <textarea name="text" class="validate[required,custom[onlyLetter],length[6,300]] input hover hover_input" id="message" placeholder="What's your message?"></textarea>
+                                        
+                
+                                        <input type="submit" value="Send Message →" class="submit hover hover_submit" disabled/>
+                                            
+                                    </form>
+                    
+                            </div>
+                    </div>
+            </div>
+                    
+                    <!-- mobile only -->
+                    <h5>or</h5>
+        
+                    <!-- Social Channels -->
+                    <div class="contacts__socials">
+                        <h2 class="socials__title">get in touch</h2>
+                                 
+                        <ul>
+                            <li class="hover hover_nav">
+                                <a href="https://www.linkedin.com/in/dennisdabergotz/" data-text="LinkedIn" target="_blank">LinkedIn</a>
+                            </li>
+                            <li class="hover hover_nav">                               
+                                <a href="https://dribbble.com/dabergotzDesign" data-text="Dribbble" target="_blank">Dribbble</a>                            
+                            </li>
+                             <li class="hover hover_nav">
+                                <a href="https://www.behance.net/dabergotzDesign" data-text="Behance" target="_blank">Behance</a>
+                            </li>
+                            <li class="hover hover_nav">
+                                <a href="https://www.instagram.com/dabergotzdesign/" data-text="Instagram" target="_blank">Instagram</a>
+                            </li>
+                            <li class="hover hover_nav">
+                                <a href="https://www.youtube.com/@dennisdabergotz5883" data-text="Youtube" target="_blank">Youtube</a>
+                            </li>                         
+                        </ul>
+                    </div>
+
+                </div>
+    </section>
+        
+         <a href="#top" class="toTop hover"><i data-lucide="arrow-up"></i></a>
+  
+    </div>
+
+
+    <!-- <footer>
+
+        <div class="wrapper">
+            <p>made by Dennis Dabergotz</p>
+            <p class="tools">tools used <br> Figma, Affinity Design, Rive, unicorn.studio</p>
+        </div>
+
+        <img src="img/dddesign_logo_transparent.png" height="2048px" width="2048px" alt="ddesign logo">
+
+        <img class="watermark" src="./img/svg/ddesign_logo.svg" height="2048px" width="2048px" alt="ddesign logo">
+
+    </footer> -->
+
+    </main>
+    
+    <!-- SIDE PROJECTS MODALS -->
+     <div class="modal modal__rs" id="openModal_rs">
+         <div class="modal__container">
+            <a href="#close" title="Close" class="modal__close hover hover_close"><i data-lucide="circle-x"></i></a>
+            <div class="img__container">
+                <img src="./img/portfolio/sideProjects/rs/rs_MU_home.jpg" alt="POV of using REMscape">
+            </div>
+            <div class="modal__content">
+                <div class="content">
+                    <h1>Remscape - A sleep companion app</h1>
+                    <div class="shorts">
+                        <div class="short__tools">
+                            <h1>Tools</h1>
+                            <p>Photoshop, Figma</p>
+                        </div>
+                        <div class="short__role">
+                            <h1>Role</h1>
+                            <p>UI/UX Design, Branding,Testing</p>
+                        </div>
+                        <div class="short__duration">
+                            <h1>Duration</h1>
+                            <p>2 Weeks</p>
+                        </div>
+                        <div class="short__team">
+                            <h1>Team</h1>
+                            <p>2 people</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="content__text">
+                        <p>REMscape is a sleep tracker and dream journal that analyzes your chronotype to optimize your sleep. Track your sleep patterns, journalize your dreams, and wake up feeling refreshed and energized every morning.</p>
+                    </div>
+                    <div class="content__gallery">
+                        <img src="./img/portfolio/sideProjects/rs/mock-up_bed.png" width="1080px" height="1920px" alt="">
+                        <img src="./img/portfolio/sideProjects/rs/screens.png" width="1080px" height="1920px" alt="">
+                        <img src="./img/portfolio/sideProjects/rs/rs_MU_home.jpg" alt="" width="1080px" height="1920px">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <div class="modal modal__gdy" id="openModal_gdy">
+        <div class="modal__container">
+            <a href="#close" title="Close" class="modal__close hover hover_close"><i data-lucide="circle-x"></i></a>
+            <div class="img__container">
+                <img src="./img/portfolio/sideProjects/gdy/gdy-mockup.jpg" alt="POV of using Go Duck Yourself">
+            </div>
+            <div class="modal__content">
+                <div class="content">
+                    <h1>Go Duck Yourself - A Rubber Duck Debugging App</h1>
+                    <div class="shorts">
+                        <div class="short__tools">
+                            <h1>Tools</h1>
+                            <p>Affinity, Figma</p>
+                        </div>
+                        <div class="short__role">
+                            <h1>Role</h1>
+                            <p>UI/UX Design</p>
+                        </div>
+                        <div class="short__duration">
+                            <h1>Duration</h1>
+                            <p>1 1/2 Weeks</p>
+                        </div>
+                        <div class="short__team">
+                            <h1>Team</h1>
+                            <p>1 people</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="content__text">
+                        <p>Feeling akward while talking to a rubber duck? Talk to your phone and get supported by a digital duck while debugging!</p>
+                    </div>
+                    <div class="content__gallery">
+                        <img src="./img/portfolio/sideProjects/gdy/GDY_rubber2digital.jpg" width="1080px" height="1920px" alt="">
+                        <img src="./img/portfolio/sideProjects/gdy/Screenshot - settings.png" width="1080px" height="1920px" alt="">
+                        <img src="./img/portfolio/sideProjects/gdy/GDY_screens.jpg" alt="" width="1080px" height="1920px">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <div class="modal modal__rs" id="openModal_hl">
+        <div class="modal__container">
+            <a href="#close" title="Close" class="modal__close hover hover_close"><i data-lucide="circle-x"></i></a>
+            <div class="img__container">
+                <img src="./img/portfolio/sideProjects/hl/Home_phone_mock-up.png" alt="POV of using REMscape">
+            </div>
+            <div class="modal__content">
+                <div class="content">
+                    <h1>HoloList - a work companion app</h1>
+                    <div class="shorts">
+                        <div class="short__tools">
+                            <h1>Tools</h1>
+                            <p>Affinity, Figma, Davinci Resolve</p>
+                        </div>
+                        <div class="short__role">
+                            <h1>Role</h1>
+                            <p>UI/UX Design</p>
+                        </div>
+                        <div class="short__duration">
+                            <h1>Duration</h1>
+                            <p>3 Weeks</p>
+                        </div>
+                        <div class="short__team">
+                            <h1>Team</h1>
+                            <p>1 person</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="content__text">
+                        <p>HoloList is a productivitiy enhancing app that makes your work more engaging and fun. Forget the days of doing boring & monotonous tasks.</p>
+                    </div>
+                    <div class="content__gallery">
+                        <img src="./img/portfolio/sideProjects/hl/hl_pov_bg.jpg" width="1080px" height="1920px" alt="">
+                        <img src="./img/portfolio/sideProjects/hl/hl_smartglasses_pov.jpg" alt="" width="1080px" height="1920px">
+                        <img src="./img/portfolio/sideProjects/hl/hl_mobile_process.jpg" width="1080px" height="1920px" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div class="modal modal__dc26" id="openModal_dc26">
+        <div class="modal__container">
+            <a href="#close" title="Close" class="modal__close hover hover_close"><i data-lucide="circle-x"></i></a>
+            <div class="img__container">
+                <img src="./img/portfolio/sideProjects/dc26/mock-up_challenge08.jpg" alt="Design Course Challenges">
+            </div>
+            <div class="modal__content">
+                <div class="content">
+                    <h1>Design Course 2026 AI-Native Design Challenge</h1>
+                    <div class="shorts">
+                        <div class="short__tools">
+                            <h1>Tools</h1>
+                            <p>Affinity, Figma, Claude, Paper, Pen, Google Stitch and many more</p>
+                        </div>
+                        <div class="short__role">
+                            <h1>Role</h1>
+                            <p>UI/UX Design, Web Design, Branding</p>
+                        </div>
+                        <div class="short__duration">
+                            <h1>Duration</h1>
+                            <p>4 Weeks</p>
+                        </div>
+                        <div class="short__team">
+                            <h1>Team</h1>
+                            <p>1 Person</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="content__text">
+                        <p>
+                          I participated in the Design Course 2026 AI-Native Design Challenge, hosted by Gary Simon, alongside hundreds of designers and aspiring designers from around the world.
+                            Each challenge explored a different aspect of modern design, from Figma fundamentals to AI-powered workflows using tools like Claude, AI design tools, and Unicorn Studio.
+                            
+                            <p style="padding: 0;">
+                                Explore the challenges and join the journey <a href="https://designcourse.com/app/foundations/2026-uiux/week-1/challenge-introduction/1">here</a>.
+                            </p>
+                        </p>
+                    </div>
+                    <div class="content__gallery">
+                        <img src="./img/portfolio/sideProjects/dc26/VIBEX - revised.png" width="1920px" height="1080px" alt="">
+                        <img src="./img/portfolio/sideProjects/dc26/pentacon_mock-up.jpg" alt="" width="1920px" height="1080px">
+                        <img src="./img/portfolio/sideProjects/dc26/Challenge06_screenshot.jpg" width="1920px" height="1080px" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+</body>
+
+<script type="text/javascript">
+
+!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading")
+{document.addEventListener("DOMContentLoaded",function(){
+    u.init()
+})}
+    else{
+        u.init()
+    }}
+        else{window.UnicornStudio={isInitialized:!1};
+
+        var i=document.createElement("script");
+
+        i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.4.2/dist/unicornStudio.umd.js",i.onload=function()
+        {if(document.readyState==="loading")
+            {document.addEventListener("DOMContentLoaded",function()
+            {UnicornStudio.init()}
+            )}else
+                {UnicornStudio.init()}}
+                ,(document.head||document.body).appendChild(i)
+}}();
+
+
+</script>
+</html>
