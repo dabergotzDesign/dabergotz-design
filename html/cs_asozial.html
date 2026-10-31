@@ -5,49 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/css/style.css">
-    <link rel="shortcut icon" href="../img/logo/ddesign_logo_5_circle.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/logo_favicon.png" type="image/x-icon">
+
 
     
     <!-- FONTS, ICONS -->
     <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@master/src/app/ci.min.css"/> -->
+
+    <!-- Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- Noto Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Space Grotesk -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
 
     <!-- GSAP, ScrollTrigger, Lenis, Rive -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.27/dist/lenis.css">  
-    <!-- <script src="https://unpkg.com/@rive-app/webgl2"></script> -->
-
-    <!-- <script src="../js/preload.js" defer></script>  
-    <script src="../js/gsap.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/@rive-app/webgl2"></script>
+  
+    <!--<script src="../js/gsap.js" defer></script>
     <script src="../js/contact.js" defer></script>
     <script src="../js/welcome_title.js" defer></script>
-    <script src="../js/topNav.js" defer></script>
-    <script src="../js/blog_update.js" defer></script> -->
-
-    <!-- <script src="./js/splash.js" defer></script> -->
+    <script src="../js/resume_dl.js" defer></script> -->
+    <script src="../js/case_studies.js" defer></script>
     <script src="../js/portfolio.js" defer></script>
+    
     <script src="../js/lucide.js" defer></script>
     <script src="../js/smooth-scroll.js" defer></script>
     <script src="../js/cursor.js" defer></script>
-
+    
     <!-- Lottie -->
-     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script> -->
-     <!-- Unicorn Studio -->
-    <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.4.2/dist/unicornStudio.umd.js"></script>
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script>
 
  
     
@@ -65,8 +61,38 @@
         <!-- anchor -->
     <div id="top"></div>
 
-    <div class="top__menu-cs">
-        <img width="2000" height="2000" src="../img/logo/ddesign_logo_5_circle.png" alt="dabergotzDesign logo">
+    <div class="top__menu">
+        <img src="../img/dddesign_logo_transparent.png" alt="dabergotzDesign logo">
+    <!--
+
+        <nav class="hidden">
+            <ul>
+                <li class="hover hover_nav"><a href="../index.html">home</a></li>
+                <li class="hover hover_nav"><a href="../index.html#portfolio">portfolio</a></li>
+                <li class="hover hover_nav"><a href="../index.html#about">about</a></li>
+                <li class="hover hover_nav"><a href="../index.html#blog">blog</a></li>
+                <li class="hover hover_nav"><a href="../index.html#contact">contact</a></li>
+            </ul>
+        </nav>
+    -->
+    </div>
+
+    <div class="top__menu-mobile">
+        <img class="cs__menu-image" src="../img/dddesign_logo_transparent.png" alt="dabergotzDesign logo">
+        <!--
+        <a href="javascript:void(0);" class="menu">
+            <i data-lucide="menu"></i>
+        </a>
+        <nav class="menu__nav hidden">
+            <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="../index.html#portfolio">portfolio</a></li>
+                <li><a href="../index.html#about">about</a></li>
+                <li><a href="../index.html#blog">blog</a></li>
+                <li><a href="../index.html#contact">contact</a></li>
+            </ul>
+        </nav>
+        -->
     </div>
 
     <section id="asozial" class="main__section">
@@ -128,7 +154,8 @@
                     </div>
                     <div class="article__container">
                         <figure>
-                            <img src="../img/portfolio/cs_asozial/Github explore.png" alt="Github Explore overview">
+                            <video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;"><source src="../video/portfolio/asozialCS_githubExplore.mp4" type="video/mp4" autoplay muted></video>
+                            <i data-lucide="play"></i>
                             <figcaption>GitHub Explore overview</figcaption>
                         </figure>
                         <div class="article__container-images">
@@ -162,9 +189,9 @@
                     </div>
                     <div class="article__container">
                         <figure>
-                            <video width="1920" height="1080" muted><source src="../video/portfolio/asozial/asozial_matching.mp4" type="video/mp4"></video>
+                            <video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;"><source src="../video/portfolio/asozialCS_matching.mp4" type="video/mp4" autoplay muted></video>
                             <i data-lucide="play"></i>
-                            <figcaption>How we match</figcaption>
+                            <figcaption>GitHub Explore overview</figcaption>
                         </figure>
                     </div>
                 </article>
@@ -207,7 +234,7 @@
                     <div class="article__container-text">
                         <h5>interview findings</h5>
                             <p>
-                            Breaking into tech shouldn’t be this hard.New developers need experience to get hired, but gaining that experience is a challenge in itself. Hackathons, open-source, and side projects offer opportunities, yet the overwhelming number of options can make finding the right starting point difficult. 
+                            Breaking into tech shouldn’t be this hard. New developers need experience to get hired, but gaining that experience is a challenge in itself. Hackathons, open-source, and side projects offer opportunities, yet the overwhelming number of options can make finding the right starting point difficult. 
                             </p>                            
                     </div>
 
@@ -239,28 +266,27 @@
                             Showcase your idea, pitch your vision, highlight the tech stack, and find teammates who are excited to build it with you.                
                             </p>
                     </div>
-                   
-                        <div class="article__container-images">
-                                <figure>
-                                    <img class="imgCS" src="../img/portfolio/cs_asozial/UserProfile_default.png" alt="User Match card collapsed">
-                                    <figcaption>User Match card collapsed</figcaption>
-                                </figure>
-                                <figure>
-                                    <img class="imgCS" src="../img/portfolio/cs_asozial/UserProfile.png" style="height:100%" alt="User Match card expanded">
-                                    <figcaption>User Match card expanded</figcaption>
-                                </figure>
+                    <div class="article__container-images">
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/UserProfile_default.png" alt="User Match card collapsed">
+                                <figcaption>User Match card collapsed</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/UserProfile.png" style="height:100%" alt="User Match card expanded">
+                                <figcaption>User Match card expanded</figcaption>
+                            </figure>
                         </div>
-                        <div class="article__container-images">
-                                <figure>
-                                    <img class="imgCS" src="../img/portfolio/cs_asozial/Match Project card.png" alt="Project Match card expanded">
-                                    <figcaption>Project Match card expanded</figcaption>
-                                </figure>
-                                <figure>
-                                    <img class="imgCS" src="../img/portfolio/cs_asozial/Match Project card_default.png" alt="Project Match card collapsed">
-                                    <figcaption>Project Match card collapsed</figcaption>
-                                </figure>
+                    <div class="article__container-images">
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/Match Project card.png" alt="Project Match card expanded">
+                                <figcaption>Project Match card expanded</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/Match Project card_default.png" alt="Project Match card collapsed">
+                                <figcaption>Project Match card collapsed</figcaption>
+                            </figure>
                         </div>
-             
+
                     </div>
                     
                 </article>
@@ -282,9 +308,20 @@
                     </div>
                     <div class="article__container-images column">
                             <figure>
-                                <img class="imgCS" src="../img/portfolio/cs_asozial/Visuals.jpg" alt="Asozial Visuals - typeface, colors">
-                                <figcaption>Asozial Visuals - Typeface, Colors</figcaption>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/typeface.png" alt="Asozial typeface - Kanit">
+                                <figcaption>Asozial typeface - Kanit</figcaption>
                             </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/Colors.png" alt="Asozial color palette">
+                                <figcaption>Asozial color palette</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_asozial/tags.png" alt="tech stack tags">
+                                <figcaption>Tech Stack tags</figcaption>
+                            </figure>
+                            <div class="iconography">
+                                <h2>Icon set: Lucide</h2>
+                            </div>
                         </div>
                     </div>               
                 </article>
@@ -352,14 +389,14 @@
 
     <div class="cs__modal m_disabled">
         <!-- close -->
-         <div class="m_close hover hover_close"><i data-lucide="x"></i></div>
+         <div class="img__close hover hover_close"><i data-lucide="x"></i></div>
          <figure class="modal__figure">
             <img class="modal__img">
             <figcaption class="modal__caption"></figcaption>
          </figure>
     </div>
 
-    <!-- <footer>
+    <footer>
 
         <div class="wrapper">
             <p>made by Dennis Dabergotz</p>
@@ -370,6 +407,6 @@
 
         <img class="imgCS" class="watermark" src="../img/svg/ddesign_logo.svg" height="2048px" width="2048px" alt="ddesign logo">
 
-    </footer> -->
+    </footer>
 </body>
 </html>
