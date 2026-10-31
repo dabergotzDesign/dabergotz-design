@@ -37,7 +37,7 @@ $media-mobile: 480px;
 
 
         #about{
-                height: min-content;
+                height: fit-content;
                 background-size: cover;
                 background-position: center center;
                 background-repeat: no-repeat;
@@ -46,12 +46,17 @@ $media-mobile: 480px;
                 flex-flow: column nowrap;
                                 
                 position: relative;
-                                      
+                //margin-bottom: 56em;
+
+                @media screen and (max-width: $media-tablet) {
+                    //margin-bottom: 90em;
+                }
+                         
 
                 @media screen and (max-width: $media-mobile) {
                     gap:0;
                     justify-content: flex-start;
-                    padding: 0;
+                    //margin-bottom: 40em;
                 }
 
                 .mask{
@@ -95,7 +100,6 @@ $media-mobile: 480px;
                 width: auto;
          
                 @media screen and (max-width: $media-tablet) {
-
                 }                
                 
                 @media screen and (max-width: $media-mobile) {
@@ -113,8 +117,12 @@ $media-mobile: 480px;
                 width: 100%;
                 height: auto;
                 padding: var(--size-72);
-                align-self: center;
-                              
+                overflow: hidden;
+
+                box-shadow: 2px 8px 0 6px var(--c-highlight);
+                border-top: 1px solid var(--c-highlight);
+                border-radius: 1rem;
+                background-color: var(--c-dark);                
                              
                 @media screen and (max-width: $media-tablet) {
                     padding: var(--size-24);
@@ -147,9 +155,7 @@ $media-mobile: 480px;
                     color: var(--c-light);
 
                     @media screen and (max-width: $media-tablet) {
-                        width: 120vw;
-                        padding: 0;
-                        transform: translateX(-5%);
+                        font-size: var(--size-24);
                     }
 
                     @media screen and (max-width: $media-mobile) {
@@ -199,8 +205,7 @@ $media-mobile: 480px;
                     width: 100%;
                     margin-top: var(--size-32);
                     cursor: none;
-
-                                       
+                   
                     @media screen and (max-width: $media-tablet) {
                         flex-direction: row;
                         gap: var(--size-16);
@@ -240,21 +245,32 @@ $media-mobile: 480px;
 
                     position: relative;
                  
+                    &:hover{
+                        background-color: var(--c-light-transparent-10);
+                                           
+
+                       a{
+                            color: var(--c-highlight);
+                            cursor: none;
+                        }
+
+                        img{
+                            filter: drop-shadow(2px 4px var(--c-highlight));
+                        }
+                        
+                    }
+
                                         
                     img{
                         width: 16%;
                         height: auto;
                         object-fit: contain;
-
-                        @media screen and (max-width: $media-mobile) {
-                            width: 12vw;
-                        }
                     }
 
                     a{
                         color: var(--c-light);
                         text-decoration: none;
-                        font-size: var(--size-16);
+                        font-size: var(--size-32);
                         font-family: var(--font-space);
                         font-weight: 700;
                         text-align: center;
@@ -366,12 +382,8 @@ $media-mobile: 480px;
                     }
         
                     &__description{
-
-                        text-align: left;                        
-                        color: var(--c-light);
-                        
-                        font-family: var(--font-noto);
-                        font-size: var(--size-24);
+                        font-family: var(--font-space);
+                        font-size: var(--size-32);
                         font-weight: 300;                        
                         padding: 1.5rem 0.25rem;
                         margin: auto;

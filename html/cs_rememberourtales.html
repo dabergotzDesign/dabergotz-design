@@ -5,49 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/css/style.css">
-    <link rel="shortcut icon" href="../img/logo/ddesign_logo_5_circle.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/logo_favicon.png" type="image/x-icon">
+
 
     
     <!-- FONTS, ICONS -->
     <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@master/src/app/ci.min.css"/> -->
+
+    <!-- Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- Noto Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Space Grotesk -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
 
     <!-- GSAP, ScrollTrigger, Lenis, Rive -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.27/dist/lenis.css">  
-    <!-- <script src="https://unpkg.com/@rive-app/webgl2"></script> -->
-
-    <!-- <script src="../js/preload.js" defer></script>  
-    <script src="../js/gsap.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/@rive-app/webgl2"></script>
+  
+    <!--<script src="../js/gsap.js" defer></script>
     <script src="../js/contact.js" defer></script>
     <script src="../js/welcome_title.js" defer></script>
-    <script src="../js/topNav.js" defer></script>
-    <script src="../js/blog_update.js" defer></script> -->
-
-    <!-- <script src="./js/splash.js" defer></script> -->
+    <script src="../js/resume_dl.js" defer></script> -->
+    <script src="../js/case_studies.js" defer></script>
     <script src="../js/portfolio.js" defer></script>
+    
     <script src="../js/lucide.js" defer></script>
     <script src="../js/smooth-scroll.js" defer></script>
     <script src="../js/cursor.js" defer></script>
-
+    
     <!-- Lottie -->
-     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script> -->
-     <!-- Unicorn Studio -->
-    <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.4.2/dist/unicornStudio.umd.js"></script>
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script>
 
  
     
@@ -65,12 +61,40 @@
         <!-- anchor -->
     <div id="top"></div>
 
-    <div class="top__menu-cs">
-        <img src="../img/logo/ddesign_logo_5.svg" alt="dabergotzDesign logo">
+    <div class="top__menu">
+        <img src="../img/dddesign_logo_transparent.png" alt="dabergotzDesign logo">
+    <!--
 
+        <nav class="hidden">
+            <ul>
+                <li class="hover hover_nav"><a href="../index.html">home</a></li>
+                <li class="hover hover_nav"><a href="../index.html#portfolio">portfolio</a></li>
+                <li class="hover hover_nav"><a href="../index.html#about">about</a></li>
+                <li class="hover hover_nav"><a href="../index.html#blog">blog</a></li>
+                <li class="hover hover_nav"><a href="../index.html#contact">contact</a></li>
+            </ul>
+        </nav>
+    -->
     </div>
 
-  
+    <div class="top__menu-mobile">
+        <img class="cs__menu-image" src="../img/dddesign_logo_transparent.png" alt="dabergotzDesign logo">
+        <!--
+        <a href="javascript:void(0);" class="menu">
+            <i data-lucide="menu"></i>
+        </a>
+        <nav class="menu__nav hidden">
+            <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="../index.html#portfolio">portfolio</a></li>
+                <li><a href="../index.html#about">about</a></li>
+                <li><a href="../index.html#blog">blog</a></li>
+                <li><a href="../index.html#contact">contact</a></li>
+            </ul>
+        </nav>
+        -->
+    </div>
+
     <section id="rememberourtales" class="main__section">
         <div class="navbar__wrapper">
         <nav class="cs__sidenav">
@@ -131,7 +155,7 @@
                     </div>
                     <div class="article__container">
                         <figure>
-                            <video width="1920" height="1080"><source src="../video/portfolio/RoT/RoT-start.mp4" type="video/mp4" autoplay muted></video>
+                            <video><source src="../video/portfolio/RoT/RoT-start.mp4" type="video/mp4" autoplay muted></video>
                             <i data-lucide="play"></i>
                             <figcaption>Remember Our Tales - Home page</figcaption>
                         </figure>
@@ -173,12 +197,9 @@
                     </div>
                     <div class="article__container">
                         <figure>
-                            <video width="1920" height="1080" type="video/mp4" muted>
-                            <source src="../video/portfolio/RoT/RoT_obituary.mp4" >
-                            </video>
+                            <video><source src="../video/portfolio/RoT/RoT-obituary.mp4" type="video/mp4" autoplay muted></video>
                             <i data-lucide="play"></i>
-                            <figcaption>Archive - Obituary Profile (Example)</figcaption>
-
+                            <figcaption>Archive - Obituary Profile (AI Placeholder)</figcaption>
                         </figure>
                     </div>
                     <div class="article__container-text">
@@ -187,8 +208,14 @@
                     </div>
                     <div class="article__container">
                         
+                        <!-- <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/send_story_form.png" alt="send a story form">
+                                <figcaption>Send a Story Form</figcaption>
+                        </figure> -->
+
+
                         <figure>
-                            <video width="1920" height="1080" muted><source src="../video/portfolio/RoT/RoT_form.mp4" type="video/mp4"></video>
+                            <video><source src="../video/portfolio/RoT/RoT-form.mp4" type="video/mp4" autoplay muted></video>
                             <i data-lucide="play"></i>
                             <figcaption>Contribute - Share a story form</figcaption>
                         </figure>
@@ -208,7 +235,7 @@
                         <div class="article__container-imgText">
 
                             <figure>
-                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Legacy_dot_com.png" alt="legacy.com">
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Screenshot 2026-07-20 101129.png" alt="legacy.com">
                                 <figcaption>Legacy.com</figcaption>
                             </figure>
 
@@ -269,7 +296,7 @@
                         <div class="article__container-imgText">
 
                             <figure>
-                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/RoT_home_old.png" alt="old Remember Our Tales home page">
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/home_old_design.png" alt="old Remember Our Tales home page">
                                 <figcaption>old Remember Our Tales home page</figcaption>
                             </figure>
 
@@ -318,9 +345,20 @@
                     </div>
                     <div class="article__container-images column">
                             <figure>
-                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/RoT_visuals.jpg" alt="Remember Our Tales visuals - Typefaces, Color">
-                                <figcaption>Remember Our Tales visuals - Typefaces, Color</figcaption>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Fonts.jpg" alt="Remember Our Tales typefaces">
+                                <figcaption>Typefaces</figcaption>
                             </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/Colors.jpg" alt="Remember Our Tales color palette">
+                                <figcaption>Color palette</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="imgCS" src="../img/portfolio/cs_rememberourtales/shades.jpg" alt="color shades">
+                                <figcaption>Color Shades</figcaption>
+                            </figure>
+                            <div class="iconography">
+                                <h2>Icon set: Font Awesome</h2>
+                            </div>
                         </div>
                     </div>               
                 </article>
@@ -416,14 +454,14 @@
 
     <div class="cs__modal m_disabled">
         <!-- close -->
-         <div class="m_close hover hover_close"><i data-lucide="x"></i></div>
+         <div class="img__close hover hover_close"><i data-lucide="x"></i></div>
          <figure class="modal__figure">
             <img class="modal__img">
             <figcaption class="modal__caption"></figcaption>
          </figure>
     </div>
 
-    <!-- <footer>
+    <footer>
 
         <div class="wrapper">
             <p>made by Dennis Dabergotz</p>
@@ -434,6 +472,6 @@
 
         <img class="imgCS" class="watermark" src="../img/svg/ddesign_logo.svg" height="2048px" width="2048px" alt="ddesign logo">
 
-    </footer> -->
+    </footer>
 </body>
 </html>
