@@ -20,8 +20,7 @@
     <!-- FONTS, ICONS -->
     <script src="https://kit.fontawesome.com/1db917ceaa.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/coloured-icons@master/src/app/ci.min.css"/> -->
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -38,9 +37,11 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>  
+    <script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.27/dist/lenis.css">  
     <!-- <script src="https://unpkg.com/@rive-app/webgl2"></script> -->
-  
+
+    <script src="./js/preload.js" defer></script>  
     <script src="./js/gsap.js" defer></script>
     <script src="./js/portfolio.js" defer></script>
     <script src="./js/contact.js" defer></script>
@@ -55,7 +56,9 @@
     <script src="./js/cursor.js" defer></script>
 
     <!-- Lottie -->
-     <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script>
+     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script> -->
+     <!-- Unicorn Studio -->
+    <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.4.2/dist/unicornStudio.umd.js"></script>
 
  
     
@@ -74,85 +77,88 @@
 
         <img src="./img/dddesign_logo_transparent.png" alt="dabergotzDesign logo">
 
-        <nav class="menu__nav">
-            <ul>
-                <li class="hover hover_nav"><a href="#home">home</a></li>
-                <li class="hover hover_nav"><a href="#portfolio">portfolio</a></li>
-                <li class="hover hover_nav"><a href="#about">about</a></li>
-                <li class="hover hover_nav"><a href="#blog">blog</a></li>
-                <li class="hover hover_nav"><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
-
-        <nav class="menu__nav-icons">
-            <ul>
-                <li class="hover hover_nav"><i data-lucide="house"></i><a href="#top"></a></li>
-                <li class="hover hover_nav"><i data-lucide="briefcase-business"></i><a href="#portfolio"></a></li>
-                <li class="hover hover_nav"><i data-lucide="user"></i><a href="#about"></a></li>
-                <li class="hover hover_nav"><i data-lucide="notebook-pen"></i><a href="#blog"></a></li>
-                <li class="hover hover_nav"><i data-lucide="mail"></i><a href="#contact"></a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="top__menu-mobile">
-        <a href="javascript:void(0);" class="menu">
-            <i data-lucide="menu"></i>
-        </a>
-        <nav class="menu__nav hidden">
-            <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#blog">blog</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
-    </div>
-    
-    <div class="splash">
-
-         <button class="pauseBG hover hover_pause"><i class="fa-solid fa-pause"></i></button>
-
-         <!-- /// Title -->
-        <!-- <canvas id="canvas" width="1440" height="500" ></canvas> -->
-         <div class="welcome">
-            <div class="quick__info">
-                <div class="available"><span class="dot_indicator"></span> Looking for work</div>
-                <div class="location"><i data-lucide="map-pin"></i> Berlin, Germany</div>
+    <div class="quick__menu">
+        <div class="logo">
+            <img src="./img/logo/ddesign_logo_5.svg" alt="dabergotzDesign logo" width="2048px" height="2048px">
+            <span class="logo__text">dabergotzDesign</span>
+        </div>
+        <div class="links">    
+            <div class="link__mail hover hover_copy" onclick="copyEmail()" onmouseout="outFunc()">
+                <i data-lucide="mail"></i>
+                <input type="text" value="d.dabergotz@gmx.de" id="email-copy" readonly>
+                <div class="tooltip">copy to clipboard</div>            
             </div>
-            <h1 aria-label="Innovating User Experience">Reimagining the Modern Web</h1>
-
-         <!-- <h2>
-            Meet <span class="underline">Dennis Dabergotz</span>, a <span style="color: var(--c-highlight);">UI & Web Designer</span> with a front-end web development background. 
-            <br> Explore my work and creations below - if there’s something to design, count me in.
-         </h2> -->
-
-         <ul class="info__bulletpoints">
-            <li><span class="bullet_point"><i data-lucide="chevron-right"></i></span>Name: Dennis Dabergotz</li>
-            <li><span class="bullet_point"><i data-lucide="chevron-right"></i></span> Specialization: UI & Web Design</li>
-            <li><span class="bullet_point"><i data-lucide="chevron-right"></i></span> Background: Front-end Web Development</li>
-            <li><span class="bullet_point"><i data-lucide="chevron-right"></i></span> Experience: 3+ years in UI/UX Design and Front-end Development</li>
-         </ul>
-        
+            <div class="link link__linkedin"><i class="fa-brands fa-linkedin"><a href="https://www.linkedin.com/in/dennisdabergotz/" target="_blank"></a></i></div>
+            <div class="link link__dribbble"><i class="fa-brands fa-dribbble"><a href="https://dribbble.com/dabergotzDesign" target="_blank"></a></i></div>
+            <div class="link link__behance"><i class="fa-brands fa-behance"><a href="https://www.behance.net/dabergotzDesign" target="_blank"></a></i></div>
+            <div class="link link__instagram"><i class="fa-brands fa-instagram"><a href="#" target="_blank"></a></i></div>
+            <div class="link link__youtube"><i class="fa-brands fa-youtube"><a href="https://www.youtube.com/@dennisdabergotz5883" target="_blank"></a></i></div>
+            <div class="resume">
+                <button class="download__cv hover hover_dl">Get my resume <i data-lucide="download"></i></button>
+            </div>
         </div>
 
-        <div class="scroll__indicator">
-            <div class="line"></div>
-            <div class="scroll">
-                <p>scroll</p>
-                <i data-lucide="chevron-down" width="24px" height="24px"></i>
+        <!-- mobile menu -->
+         <div class="mobile__menu">
+            <button class="mobile__menu-icon"><i data-lucide="menu"></i></button>
+
+            <div class="menu">
+
+                <div class="close"><i data-lucide="x"></i></div>
+
+                <div class="m__nav">
+                    <h1>Navigation</h1>
+                    <ul>
+                        <li><a href="#top" onclick="navClose()">Home</a></li>
+                        <li><a href="#portfolio" onclick="navClose()">Portfolio</a></li>
+                        <li><a href="#about" onclick="navClose()">About</a></li>
+                        <li><a href="#blog" onclick="navClose()">Blog</a></li>
+                        <li><a href="#contact" onclick="navClose()">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="m__links">
+
+                    <h1>Socials & Info</h1>
+
+                    <div class="social__container">
+                        <div class="link__mail hover hover_copy" onclick="copyEmail()" onmouseout="outFunc()">
+                            <i data-lucide="mail"></i>
+                            <input type="text" value="d.dabergotz@gmx.de" id="email-copy" readonly>
+                            <div class="tooltip">copy to clipboard</div>            
+                        </div>
+                        <div class="links__container">
+                            <div class="link link__linkedin"><i class="fa-brands fa-linkedin"><a href="https://www.linkedin.com/in/dennisdabergotz/" target="_blank"></a></i></div>
+                            <div class="link link__dribbble"><i class="fa-brands fa-dribbble"><a href="https://dribbble.com/dabergotzDesign" target="_blank"></a></i></div>
+                            <div class="link link__behance"><i class="fa-brands fa-behance"><a href="https://www.behance.net/dabergotzDesign" target="_blank"></a></i></div>
+                            <div class="link link__instagram"><i class="fa-brands fa-instagram"><a href="#" target="_blank"></a></i></div>
+                            <div class="link link__youtube"><i class="fa-brands fa-youtube"><a href="https://www.youtube.com/@dennisdabergotz5883" target="_blank"></a></i></div>
+                        </div>
+                        <div class="resume">
+                            <button class="download__cv hover hover_dl">Get my resume <i data-lucide="download"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="line"></div>
-        </div>
-        
-        <!-- unicorn vending machine bg -->
-        <div class="ddesign__VM-bg" data-us-project="uYC4McR6iDUPcARdr1Ah"></div>
+
+         </div>
+
     </div>
 
     <div class="content" id="content">
-
-        <!-- <section id="home" class="main__section">
+    
+        <section id="home" class="main__section">
+        <div class="top__menu">
+        
+                    <nav class="menu__nav-icons">
+                        <ul>
+                            <li class="hover hover_nav" data-hover="Home"><i data-lucide="house"></i><a href="#top"></a></li>
+                            <li class="hover hover_nav" data-hover="Portfolio"><i data-lucide="briefcase-business"></i><a href="#portfolio"></a></li>
+                            <li class="hover hover_nav" data-hover="About"><i data-lucide="user"></i><a href="#about"></a></li>
+                            <li class="hover hover_nav" data-hover="Blog"><i data-lucide="notebook-pen"></i><a href="#blog"></a></li>
+                            <li class="hover hover_nav" data-hover="Contact"><i data-lucide="mail"></i><a href="#contact"></a></li>
+                        </ul>
+                    </nav>
+        </div>
 
             <div class="home__text">
                 <p class="reveal">
@@ -161,8 +167,7 @@
                 </p>
                 <img src="./img/dddesign_logo_transparent.png" width="2048px" height="2048px" alt="dabergotzDesign logo">
             </div>
-            
-        </section> -->
+        </section>
 
         <section id="portfolio" class="main__section">
 
@@ -174,125 +179,41 @@
             <!-- //// GALLERY • DESKTOP PORTFOLIO //// -->
              <div class="portfolio__wrapper">
                 
-                <!-- Portfolio piece 01 - Remember Our Tales -->
-                <div class="portfolio__card">
-                    <div class="card__thumbnail"><video autoplay muted playsinline><source src="./video/portfolio/RoT/RoT - Thumbnail.webm" type="video/webm"></video></div>
-                    <div class="card__info">
-                        <h1>Creating a <span>living archive</span> of human lives and legacies.</h1>
-                        <div class="tag__wrapper">
-                            <div class="tag">UI/UX Design</div>
-                            <div class="tag">Branding</div>
-                            <div class="tag">Archive</div>
+                <div class="cards__container">
+
+                    <!-- Portfolio piece 01 - Remember Our Tales -->
+                    <div class="portfolio__card">
+                        <div class="card__thumbnail"><video autoplay muted playsinline><source src="./video/portfolio/RoT/RoT_prtfl_clip.webm" type="video/webm"></video></div>
+                        <div class="card__info">
+                            <h1>Creating a <span>living archive</span> of human lives and legacies.</h1>
+                            <div class="tag__wrapper">
+                                <div class="tag">UI/UX Design</div>
+                                <div class="tag">Branding</div>
+                                <div class="tag">Archive</div>
+                            </div>
                         </div>
+                        <a class="link hover hover_portfolio" href="./html/cs_rememberourtales.html"></a>
                     </div>
-                    <a class="link hover hover_portfolio" href="./html/cs_rememberourtales.html"></a>
+    
+    
+                    <!-- Portfolio piece 02 - Asozial -->
+                    <div class="portfolio__card">
+                        <div class="card__thumbnail"><video autoplay muted playsinline><source src="./video/portfolio/asozial/CS asozial - Intro animation.webm" type="video/webm"></video></div>
+                        <div class="card__info">
+                            <h1>finding the right <span>match</span> for developers! creating a tinder like experience to let developers find their next projects.</h1>
+                            <div class="tag__wrapper">
+                                <div class="tag">UI/UX Design</div>
+                                <div class="tag">Matching System</div>
+                                <div class="tag">Social Media</div>
+                            </div>
+                        </div>
+                        <a class="link hover hover_portfolio" href="./html/cs_asozial.html"></a>
+                    </div>
+                    
                 </div>
 
-
-                <!-- Portfolio piece 02 - Asozial -->
-                <div class="portfolio__card">
-                    <div class="card__thumbnail"><video autoplay muted playsinline><source src="./video/portfolio/CS asozial - Intro animation.webm" type="video/webm"></video></div>
-                    <div class="card__info">
-                        <h1>finding the right <span>match</span> for developers! creating a tinder like experience to let developers find their next projects.</h1>
-                        <div class="tag__wrapper">
-                            <div class="tag">UI/UX Design</div>
-                            <div class="tag">Matching System</div>
-                            <div class="tag">Social Media</div>
-                        </div>
-                    </div>
-                    <a class="link hover hover_portfolio" href="./html/cs_asozial.html"></a>
-                </div>
-
-                 <!-- Portfolio piece 03 - Go Duck Yourself -->
-                 <!-- <div class="portfolio__card p_canvas-3">
-                     <div class="wrap">
-                        <div class="portfolio__thumbnail">
-                            <lottie-player class="lottie" id="lottie_p3" src="./lottie/GDY.json" background="transparent" speed="1"></lottie-player>
-                        </div>
-                         <div class="portfolio__info">
-                            <div class="heading">
-                                <h1 class="info__title">GO DUCK YOURSELF (YES, WE MEAN CODE)</h1>
-                                <h2 class="info__short">A Rubber Duck Debugging App</h2>
-                                <p class="info__description">
-                                Frustrated, you stare at your code as error messages pile up. You retreat to a quiet spot, explaining your code to a rubber duck - but it offers no feedback.
-                                What if an app could listen, encourage, and guide you forward?
-                                </p>
-                            </div>
-                            <div class="problem">
-                                <h1>problem?</h1>
-                                <p class="problem__statement">
-                                    How can we support the frustrated programmer/coder without intervene to much and let them solve their bugs.
-                                </p>
-                            </div>
-                            <div class="shorts">
-                                <div class="shorts__what">
-                                    <h1>what used?</h1>
-                                    <p class="tools">Figma, Affinity Design, Adobe Photoshop</p>
-                                </div>
-                                <div class="shorts__when">
-                                    <h1>when?</h1>
-                                    <p class="date">Jun-Jul 2025</p>
-                                </div><div class="shorts__do">
-                                    <h1>what i did?</h1>
-                                    <p class="tools">Branding, Research, Wireframing, Design, Prototyping</p>
-                                </div>
-                            </div>
-
-                            <div class="info__links">
-                                <a class="link__explore hover" href="https://www.behance.net/gallery/228057571/Go-Duck-Yourself(Yes-we-mean-code)" target="_blank">explore</a>
-                            </div>
-                     </div>
-                     </div>
-             </div> -->
-
-                 <!-- Portfolio piece 04 - Hololist -->
-                 <!-- <div class="portfolio__card p_canvas-4">
-                     <div class="wrap">
-                        <div class="portfolio__thumbnail">
-                            <lottie-player class="lottie" id="lottie_p4" src="./lottie/HoloList.json" background="transparent" speed="1"></lottie-player>
-                        </div>
-                         <div class="portfolio__info">
-                            <div class="heading">
-                                <h1 class="info__title">HOLOLIST - MAKE YOUR WORK MORE FUN!</h1>
-                                <h2 class="info__short">Your smart glasses companion for easy work</h2>
-                                <p class="info__description">
-                                Make your work more fun in the office with this companion app. Just link the Hololist App with your smart glasses and forget the days of monotonous, repetitive and boring work.
-                                </p>
-                            </div>
-                            <div class="problem">
-                                <h1>problem?</h1>
-                                <p class="problem__statement">
-                                    What are ways to improve engagement and add fun while working on repetitive or monotonous tasks?
-                                </p>
-                            </div>
-                            <div class="shorts">
-                                <div class="shorts__what">
-                                    <h1>what used?</h1>
-                                    <p class="tools">Figma, Affinity, Davinci Resolve</p>
-                                </div>
-                                <div class="shorts__when">
-                                    <h1>when?</h1>
-                                    <p class="date">
-                                    Oct-Jan 2025 (original)
-                                    Dez-Jan 2026 (Re-Design)
-                                    </p>
-                                </div><div class="shorts__do">
-                                    <h1>what i did?</h1>
-                                    <p class="tools">Branding, Research, Wireframing, Design, Prototyping</p>
-                                </div>
-                            </div>
-
-                            <div class="info__links">
-                                <a class="link__explore hover" href="https://www.behance.net/gallery/215958577/holoList-Case-Study" target="_blank">explore</a>
-                            </div>
-                     </div>
-                     </div>
-             </div> -->
-
-
-            <!-- //// TABLET/MOBILE PORTFOLIO //// -->
+                <!-- //// TABLET/MOBILE PORTFOLIO //// -->
              <div class="mobile__container">
-
                 <!-- Remember Our Tales -->
                  <div class="card__wrapper">
                     <div class="card__thumbnail">
@@ -339,29 +260,22 @@
                             What if an app could listen, encourage, and guide you forward?
                             </p>
                         </div>
-                        <div class="info__problem">
-                            <h1 class="problem__title">problem?</h1>
-                            <p class="problem__statement">
-                            How can we support the frustrated programmer/coder without intervene to much and let them solve their bugs.
-                        </p>
+    
+                        <div class="sides__card hover hover_portfolio" style="grid-area: box-2;">
+                            <img src="./img/portfolio/sideProjects/gdy/Case Study GoDuckYourself - Thumbnail.png" width="1920px" height="1080px" alt="Go Duck Yourself - a rubber duck debugging app">
+                            <a class="hover hover-nav" href="#openModal_gdy" id="modal__gdy"></a>
                         </div>
-                        <div class="info__shorts">
-                            <div class="shorts__what">
-                                <h1>what used?</h1>
-                                <p class="tools">Figma, Affinity Designer, Photoshop</p>
-                            </div>
-                            <div class="shorts__when">
-                                <h1>when?</h1>
-                                <p class="date">Jun-Jul 2025</p>
-                            </div><div class="shorts__do">
-                                <h1>what i did?</h1>
-                                <p class="tools">Branding, Research, Wireframing, Testing, Prototyping</p>
-                            </div>
+    
+                        <div class="sides__card hover hover_portfolio" style="grid-area: box-3;">
+                            <img src="./img/portfolio/sideProjects/hl/hl_thumbnail.jpg" width="1920px" height="1080px" alt="HoloList - make your work more fun">
+                            <a class="hover hover-nav" href="#openModal_hl"></a>
                         </div>
-                        <div class="info__links">
-                            <a class="link__explore" href="https://www.behance.net/gallery/228057571/Go-Duck-Yourself(Yes-we-mean-code)" target="_blank">explore</a>
-                            <a class="link__prototype" href="https://www.figma.com/proto/Ce4xQ5QbeVsUY85YSweX7A/Rubber-Duck-Debugging?page-id=1%3A2&node-id=38-1176&p=f&viewport=342%2C224%2C0.24&t=bdzP8Yvn9jnfM4Vi-1&scaling=scale-down&content-scaling=fixed" target="_blank">view prototype</a>
+                        
+                        <div class="sides__card hover hover_portfolio" style="grid-area: box-4;">
+                            <img src="./img/portfolio/sideProjects/dc26/Thumbnail.jpg" width="1920px" height="1080px" alt="Design Course Challenges - 9 Design Challenges with AI">
+                            <a class="hover hover-nav" href="#openModal_dc26"></a>
                         </div>
+                        
                     </div>
                 </div> -->
 
@@ -404,8 +318,10 @@
                     </div>
                 </div> -->
                 
+            </div>
+            
+            
 
-             </div>
 
              <div class="sideProjects">
                 <h1>side projects - creations that i like to share</h1>
@@ -445,34 +361,44 @@
 
 
         <section id="about" class="main__section">
-         
-            <h1 class="title">about</h1>
-           
-
+                
             <div class="about__container">
 
                 <div class="about__intro">
                     <div class="about__text">
                         
-                        <h3 class="about__title">Yep, that's me</h3>
-                                                
-                        <!-- <div class="about__intro-text"> -->
-                        <p class="about__description">
-                            Hello everyone, I'm <span style="color: var(--c-highlight);">Dennis Dabergotz</span>, a <strong>UI & Web Designer</strong> with a background in Game Development and Front-End Web Development.
-                             My career began at the School for Games, where I studied Game Development and discovered my passion for creating digital experiences.
-                        </p>
-                        <p class="about__description">
-                            After transitioning into Front-End Web Development, I found myself increasingly drawn to the design side of the process-crafting intuitive interfaces, 
-                            improving user experiences, and bringing ideas to life visually. This interest led me to expand my skills through <strong>UI/UX Design</strong> training, online courses,
-                             and continuous self-learning.
-                        </p>
-                        <p class="about__description">
-                            Today, I leverage both my technical and creative expertise to design engaging, user-focused websites and digital products.
-                        </p>
-                        
-                </div>
+                        <img class="profile__image" src="./img/about/ddabergotz.jpg" alt="image of Dennis Dabergotz">
 
-                <button class="download__cv hover hover_dl">Get my resume <i data-lucide="download"></i></button>
+                        <div class="about__text-wrap">
+                            <h3 class="about__title">Yep, that's me</h3>
+                                                    
+                            <p class="about__description">
+                            When I’m not busy creating designs, you’ll probably find me rocking out at a concert, taking on a tough boss and slaying his minions in a game, or diving down a rabbit hole of code and interface experiments just for the fun of it. I enjoy tinkering with ideas, exploring new tools, and figuring out how things work behind the scenes — because curiosity doesn’t clock out when the workday ends.
+                            </p>
+                            <p class="about__description">
+                                And when I’m not chasing the next creative spark or virtual victory, I’m spending quality time with family and friends, recharging my batteries and enjoying the little things. Whether it’s through music, gaming, coding, or simply hanging out with the people I care about, I like to keep a healthy mix of creativity, adventure, and downtime in my life.
+                            </p> 
+                        </div>                        
+                    </div>
+
+                    <div class="gallery">
+                        <figure class="image__wrap">
+                            <img src="./img/about/gallery/1744017909682.jpg" alt="">
+                            <figcaption>Usability Testessen Berlin - 2025</figcaption>
+                        </figure>  
+                        <figure class="image__wrap">
+                            <img src="./img/about/gallery/IMG_20220601_212229.jpg" alt="">
+                            <figcaption>Korn concert - 2023</figcaption>
+                        </figure> 
+                        <figure class="image__wrap">
+                            <img src="./img/about/gallery/London_15.JPG" alt="">
+                            <figcaption>London trip 2015</figcaption>
+                        </figure> 
+                        <figure class="image__wrap">
+                            <img src="./img/about/gallery/Linkin Park_Streetgig 041.jpg" alt="">
+                            <figcaption>Linkin Park Streetgig 2012</figcaption>
+                        </figure>                       
+                    </div>
 
                 </div>
 
@@ -480,50 +406,75 @@
                     <h3 class="about__title">My Toolbox</h3>
 
                     <div class="tools">
-                        <ul class="first_row">
-                            <li class="tool hover hover_nav">
-                                <img height="32" width="32" src="https://cdn.simpleicons.org/figma/white" />
-                                <a href="https://www.figma.com/" target="_blank">Figma</a>
-                            </li>
-                            <!-- <li class="tool hover hover_nav">
-                                <img height="32" width="32" src="https://cdn.simpleicons.org/rive/white" />
-                                <a href="https://www.rive.app" target="_blank">Rive</a>
-                            </li> -->
-                            <li class="tool hover hover_nav">
-                                <img height="32" width="32" src="https://cdn.simpleicons.org/claude/white" />
-                                <a href="https://www.claude.ai/" target="_blank">Claude</a>
-                            </li>
-                            <li class="tool hover hover_nav">
-                                <img height="32" width="32" src="./img/svg/unicorn_logo.svg" />
-                                <a href="https://www.unicorn.studio/" target="_blank">unicorn.studio</a>
-                            </li>
-                            <li class="tool hover hover_nav">
-                                <img height="32" width="32" src="./img/svg/affinity_icon.svg" />
-                                <a href="https://affinity.serif.com/en-us/photo/" target="_blank">Affinity</a>
-                            </li>
-                            <li class="tool hover hover_nav">
-                                <img height="32" width="32" src="./img/svg/ps_logo.svg" />
-                                <a href="https://www.adobe.com/products/photoshop.html" target="_blank">Photoshop</a>
-                            </li>                                                     
-                        </ul>
-                        <ul class="second_row">
-                            <li class="tool hover hover_nav">
-                                <img height="32" width="32" src="https://cdn.simpleicons.org/html5/white" />
-                                <a href="https://html.com/html5/" target="_blank">HTML</a>
-                            </li>
-                            <li class="tool hover hover_nav">
-                                <img height="32" width="32" src="https://cdn.simpleicons.org/css/white" />
-                                <a href="https://www.w3schools.com/Css/" target="_blank">CSS</a>
-                            </li>
-                            <li class="tool hover hover_nav">
-                                <img height="32" width="32" src="https://cdn.simpleicons.org/sass/white" />
-                                <a href="https://sass-lang.com/" target="_blank">Sass</a>
-                            </li>
-                            <li class="tool hover hover_nav">
-                                <img height="32" width="32" src="https://cdn.simpleicons.org/javascript/white" />
-                                <a href="https://www.javascript.com/" target="_blank">Javascript</a>
-                            </li>
-                        </ul>
+
+                            <div class="carousel">
+                                <ul class="first_row group">
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/figma/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/claude/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="./img/svg/unicorn_logo.svg" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="./img/svg/affinity_icon.svg" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="./img/svg/ps_logo.svg" />
+                                    </li>                                                     
+                                </ul>
+                                <ul aria-hidden class="first_row group">
+                                    <li class="tool hover hover_nav">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/figma/white" />
+                                    </li>
+                                    <li class="tool hover hover_nav">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/claude/white" />
+                                    </li>
+                                    <li class="tool hover hover_nav">
+                                        <img height="32" width="32" src="./img/svg/unicorn_logo.svg" />
+                                    </li>
+                                    <li class="tool hover hover_nav">
+                                        <img height="32" width="32" src="./img/svg/affinity_icon.svg" />
+                                    </li>
+                                    <li class="tool hover hover_nav">
+                                        <img height="32" width="32" src="./img/svg/ps_logo.svg" />
+                                    </li>                                                     
+                                </ul>                           
+                            </div>
+
+                            <div class="carousel">
+                                <ul class="second_row group">
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/html5/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/css/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/sass/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/javascript/white" />
+                                    </li>
+                                </ul>
+                                <ul aria-hidden class="second_row group">
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/html5/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/css/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/sass/white" />
+                                    </li>
+                                    <li class="tool">
+                                        <img height="32" width="32" src="https://cdn.simpleicons.org/javascript/white" />
+                                    </li>
+                                </ul>
+                            </div>
+                                               
                     </div>
 
                 </div>
@@ -533,7 +484,8 @@
         </section>
 
 
-        <section id="blog" class="main__section">
+    <section id="blog" class="main__section">
+        <!-- <h1 class="blog__title">blog</h1> -->
 
             <div class="blog__container-front">
                 <h1 class="blog__title">blog</h1>
@@ -574,10 +526,10 @@
             </div>
 
             
-        </section>
+    </section>
 
 
-        <section id="contact" class="main__section">
+    <section id="contact" class="main__section">
             
             <h1 class="title">contact</h1>
             
@@ -620,7 +572,7 @@
                     
                             </div>
                     </div>
-            </div>
+                </div>
                     
                     <!-- mobile only -->
                     <h5>or</h5>
@@ -631,27 +583,25 @@
                                  
                         <ul>
                             <li class="hover hover_nav">
-                                <i class="socials__link fa-brands fa-dribbble"></i>                               
+                                <a href="https://www.linkedin.com/in/dennisdabergotz/" data-text="LinkedIn" target="_blank">LinkedIn</a>
+                            </li>
+                            <li class="hover hover_nav">                               
                                 <a href="https://dribbble.com/dabergotzDesign" data-text="Dribbble" target="_blank">Dribbble</a>                            
                             </li>
                              <li class="hover hover_nav">
-                                <i class="fa-brands fa-behance socials__link" style="scale: 0.9;"></i>
                                 <a href="https://www.behance.net/dabergotzDesign" data-text="Behance" target="_blank">Behance</a>
                             </li>
                             <li class="hover hover_nav">
-                                <i class="socials__link fa-brands fa-linkedin"></i>
-                                <a href="https://www.linkedin.com/in/dennisdabergotz/" data-text="LinkedIn" target="_blank">LinkedIn</a>
+                                <a href="https://www.instagram.com/dabergotzdesign/" data-text="Instagram" target="_blank">Instagram</a>
                             </li>
                             <li class="hover hover_nav">
-                                <i class="socials__link fa-brands fa-github"></i>
-                                <a href="https://github.com/dabergotzDesign" data-text="Github" target="_blank">Github</a>
-                            </li>
-                                                                   
+                                <a href="https://www.youtube.com/@dennisdabergotz5883" data-text="Youtube" target="_blank">Youtube</a>
+                            </li>                         
                         </ul>
                     </div>
 
                 </div>
-         </section>
+    </section>
         
          <a href="#top" class="toTop hover hover_nav"><i data-lucide="arrow-up"></i></a>
   
@@ -662,7 +612,7 @@
     </div>
 
 
-    <footer>
+    <!-- <footer>
 
         <div class="wrapper">
             <p>made by Dennis Dabergotz</p>
@@ -673,7 +623,7 @@
 
         <img class="watermark" src="./img/svg/ddesign_logo.svg" height="2048px" width="2048px" alt="ddesign logo">
 
-    </footer>
+    </footer> -->
 
     </main>  
     
@@ -760,7 +710,7 @@
         </div>
      </div>
 
-    <div class="modal modal__rs" id="openModal_hl">
+    <div class="modal modal__hl" id="openModal_hl">
         <div class="modal__container">
             <a href="#close" title="Close" class="modal__close hover hover_close"><i data-lucide="circle-x"></i></a>
             <div class="img__container">
@@ -801,18 +751,78 @@
         </div>
      </div>
 
+     <div class="modal modal__dc26" id="openModal_dc26">
+        <div class="modal__container">
+            <a href="#close" title="Close" class="modal__close hover hover_close"><i data-lucide="circle-x"></i></a>
+            <div class="img__container">
+                <img src="./img/portfolio/sideProjects/dc26/mock-up_challenge08.jpg" alt="Design Course Challenges">
+            </div>
+            <div class="modal__content">
+                <div class="content">
+                    <h1>Design Course 2026 AI-Native Design Challenge</h1>
+                    <div class="shorts">
+                        <div class="short__tools">
+                            <h1>Tools</h1>
+                            <p>Affinity, Figma, Claude, Paper, Pen, Google Stitch and many more</p>
+                        </div>
+                        <div class="short__role">
+                            <h1>Role</h1>
+                            <p>UI/UX Design, Web Design, Branding</p>
+                        </div>
+                        <div class="short__duration">
+                            <h1>Duration</h1>
+                            <p>4 Weeks</p>
+                        </div>
+                        <div class="short__team">
+                            <h1>Team</h1>
+                            <p>1 Person</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="content__text">
+                        <p>
+                          I participated in the Design Course 2026 AI-Native Design Challenge, hosted by Gary Simon, alongside hundreds of designers and aspiring designers from around the world.
+                            Each challenge explored a different aspect of modern design, from Figma fundamentals to AI-powered workflows using tools like Claude, AI design tools, and Unicorn Studio.
+                            
+                            <p style="padding: 0;">
+                                Explore the challenges and join the journey <a href="https://designcourse.com/app/foundations/2026-uiux/week-1/challenge-introduction/1">here</a>.
+                            </p>
+                        </p>
+                    </div>
+                    <div class="content__gallery">
+                        <img src="./img/portfolio/sideProjects/dc26/VIBEX - revised.png" width="1920px" height="1080px" alt="">
+                        <img src="./img/portfolio/sideProjects/dc26/pentacon_mock-up.jpg" alt="" width="1920px" height="1080px">
+                        <img src="./img/portfolio/sideProjects/dc26/Challenge06_screenshot.jpg" width="1920px" height="1080px" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
 </body>
 
-<script>
+<script type="text/javascript">
 
-    const menu_mb = document.querySelector(".menu");
-    const nav_mb = document.querySelector(".menu__nav")
+!function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading")
+{document.addEventListener("DOMContentLoaded",function(){
+    u.init()
+})}
+    else{
+        u.init()
+    }}
+        else{window.UnicornStudio={isInitialized:!1};
 
-    menu_mb.addEventListener("click", ()=>{
-        nav_mb.classList.toggle("hidden");
-    });
+        var i=document.createElement("script");
 
-    const vmBG = document.querySelector(".ddesign__VM-bg canvas");
+        i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.4.2/dist/unicornStudio.umd.js",i.onload=function()
+        {if(document.readyState==="loading")
+            {document.addEventListener("DOMContentLoaded",function()
+            {UnicornStudio.init()}
+            )}else
+                {UnicornStudio.init()}}
+                ,(document.head||document.body).appendChild(i)
+}}();
+
 
 </script>
 
