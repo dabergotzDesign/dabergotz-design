@@ -42,6 +42,29 @@ gsap.from(bulletPoints, {
 
 
 
+gsap.set(nav, {opacity: 0, xPercent: 100});
+gsap.set(navItems, {opacity: 0});
+
+const navTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".splash",
+        start: "1% top",
+        toggleActions: "play none none reverse"
+    }
+});
+
+navTimeline.to(nav, {
+    opacity: 1,
+    xPercent: 0,
+    duration: 0.1,
+    ease: "power4.out"
+}).to(navItems, {
+    opacity: 1,
+    duration: 0.1,
+    stagger: 0.1,
+    delay: 0.005
+});
+
 /* HOME */
 
 gsap.registerPlugin(ScrollTrigger);
@@ -72,7 +95,7 @@ splitTypes.forEach((word, i)=>{
 
 
 /* PORTFOLIO */
-
+/* 
 const portfolio_title = document.querySelector("#portfolio .title");
 const card = document.querySelectorAll("#portfolio .accordion__card-wrapper");
 const hL = document.querySelector(".p_canvas-4");
@@ -83,60 +106,6 @@ const hL_thumb = document.querySelector(".p_canvas-4 .thumbnail"),
 const fetti = document.querySelector(".confetti"),
         fettiCannon = document.querySelector(".confetti__cannon"),
         fettiPaper = document.querySelectorAll(".confetti__paper");
-
-// Confetti Animation on Hover
-
-gsap.set(fettiCannon, {opacity: 0, transformOrigin: 'bottom center'});
-gsap.set(fettiPaper, {scale:0, xPercent:-40, yPercent: -45, transformOrigin: 'center center'});
-
-let tl = gsap.timeline({ paused: true, reversed: true});
-
-tl.to(fettiCannon, {
-    opacity: 1,
-    rotation: -20,
-    duration: 0.3,
-    ease: 'power4.out',
-  })
-.to(hL_thumb, {
-    scale: 2,
-    duration: 0.5,
-
-},"-=0.5")
-.to(hL_logo, {
-    scale: 1.5,
-    duration: 0.5,
-},"-=0.5")
-.to(fettiPaper, {
-    scale: 1,
-    xPercent: -20,
-    yPercent: -60,
-    duration: 0.3,
-    ease: 'power4.out',
-}, "+=0.01")
-.to(fettiCannon, {
-    opacity: 0,
-    yPercent: -20,
-    rotation: 20,
-    duration: 0.3,
-    ease: 'power4.out',
-}, "+=0.1")
-.to(fettiPaper, {
-    yPercent: -20,
-    opacity: 0,
-    duration: 1,
-    ease: 'power1.out',
-},"-=0.5");
-
-
-
-hL.addEventListener("mouseenter", ()=>{
-    tl.reversed() ? tl.play() : tl.reverse();
-});
-
-
-hL.addEventListener("mouseleave", ()=>{
-    tl.reversed() ? tl.play() : tl.reverse();
-});
 
 
 gsap.from(portfolio_title, {
@@ -162,7 +131,7 @@ gsap.from(card, {
     }
     
 }, "-=.5")
-
+ */
 
 /* ABOUT */
 const about_container = document.querySelector("#about");

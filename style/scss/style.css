@@ -195,23 +195,6 @@ aside.hidden .sidebar__nav {
 aside.hidden .sidebar__nav-mobile {
   transform: translateX(-100%);
 }
-@media screen and (max-width: 600px) {
-  aside {
-    width: 28vw;
-  }
-}
-aside.hidden {
-  width: 0;
-}
-aside.hidden .sidebar__title {
-  display: none;
-}
-aside.hidden .sidebar__nav {
-  opacity: 0;
-}
-aside.hidden .sidebar__nav-mobile {
-  transform: translateX(-100%);
-}
 aside img {
   height: 77px;
   width: 135px;
@@ -230,7 +213,7 @@ aside img {
     margin-top: 45%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
   aside img {
     scale: 0.9;
     margin-top: 5%;
@@ -273,7 +256,7 @@ aside .navigation .nav__button i {
 aside .navigation .nav__button.menu {
   left: 3%;
 }
-aside .sidebar {
+/* aside .sidebar {
   /*&__controls{
       position: absolute;
       left: 150%;
@@ -307,8 +290,8 @@ aside .sidebar {
 
       }
 
-  }*/
-}
+  }
+} */
 aside .sidebar__title {
   position: relative;
   height: 10%;
@@ -382,19 +365,6 @@ aside .sidebar__nav-item a {
 aside .sidebar__nav-item a[href="#"] {
   outline: thin solid var(--bg-light);
   text-shadow: 0 0 2px var(--text-light);
-}
-@media screen and (max-width: 1024px) {
-  aside .sidebar__nav-item a {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 900px) {
-  aside .sidebar__nav-item a {
-    display: none;
-  }
-}
-aside .sidebar__nav li .active {
-  outline: thin solid var(--bg-light);
 }
 @media screen and (max-width: 1024px) {
   aside .sidebar__nav-item a {
@@ -1109,9 +1079,9 @@ aside .sidebar__nav-mobile .mobile__nav-item a i {
   width: 100%;
 }
 #portfolio .modal {
-  /* &__wrapper{
+  &__wrapper{
       display: none;  
-  } */
+  }
 }
 #portfolio .modal__container {
   position: fixed;
@@ -2456,7 +2426,7 @@ margin: 0 auto; */
   }
 }
 .about__image {
-  /* .about__cv{
+  .about__cv{
       margin: 1rem;
       padding: 1rem;
       background-color: var(--bg-dark);
@@ -2474,7 +2444,7 @@ margin: 0 auto; */
           }
       }
 
-  } */
+  }
 }
 .about__image-portrait {
   max-height: 1956px;
@@ -3219,8 +3189,8 @@ margin: 0 auto; */
 }
 @media screen and (max-width: 600px) {
   #contact .contacts__socials div {
-    /* font-size: 1rem;
-    padding-bottom: 1rem; */
+    font-size: 1rem;
+    padding-bottom: 1rem;
   }
 }
 #contact .contacts__socials ul {

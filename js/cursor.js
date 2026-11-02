@@ -21,6 +21,7 @@ window.addEventListener("mouseup", ()=>{
 
 
 hover.forEach(e => {
+
     e.addEventListener("mouseenter", ()=>{
         cursor.classList.add("state_hover");
         
@@ -75,14 +76,12 @@ hover.forEach(e => {
         
     })
 
-    });
 
-hover.forEach(e => {
-    e.addEventListener("mouseleave", ()=>{
-        cursor.classList.remove("state_hover");
-        if(e.classList.contains("hover_portfolio")){
-            e.classList.remove("play");
-        }
+    /* Hover return */
+    hover.forEach(e => {
+        e.addEventListener("mouseleave", ()=>{
+            cursor.classList.remove("state_hover");
+        })
     })
-});
-}
+
+})};

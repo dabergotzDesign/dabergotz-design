@@ -10,16 +10,17 @@ footer{
     position: fixed;
     bottom: 0;
     overflow: hidden;
-    background: var(--c-dark-transparent-50);
-    backdrop-filter: blur(10px);
+    background: var(--c-dark);
     color: var(--c-light);
  
+    //position: relative;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     
-    padding: 2.5em 4em;
-    z-index: 99;
+    padding: 2em 4em;
+    z-index: 2;
 
     @media screen and (max-width: $media-tablet) {
         padding: 0.8rem 6rem;
