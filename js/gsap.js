@@ -83,6 +83,125 @@ splitTypes.forEach((word, i)=>{
 
 /* PORTFOLIO */
 
+/* Mobile gallery */
+
+const contentGalleries = document.querySelectorAll(".content__gallery");
+const mobileGalleryQuery = window.matchMedia("(max-width: 450px)");
+
+contentGalleries.forEach((gallery) => {
+    const images = Array.from(gallery.querySelectorAll("img"));
+
+    if (images.length < 2) {
+        return;
+    }
+
+    let activeIndex = 0;
+    let pointerStart = null;
+    const controls = document.createElement("div");
+    const previousButton = document.createElement("button");
+    const nextButton = document.createElement("button");
+
+    controls.className = "gallery__controls";
+    controls.setAttribute("aria-label", "Gallery controls");
+
+    previousButton.type = "button";
+    previousButton.className = "gallery__control gallery__control--previous";
+    previousButton.setAttribute("aria-label", "Show previous image");
+    previousButton.textContent = "←";
+
+    nextButton.type = "button";
+    nextButton.className = "gallery__control gallery__control--next";
+    nextButton.setAttribute("aria-label", "Show next image");
+    nextButton.textContent = "→";
+
+    controls.append(previousButton, nextButton);
+    gallery.insertAdjacentElement("afterend", controls);
+
+    const setGalleryMode = () => {
+        gsap.killTweensOf(images);
+
+        if (mobileGalleryQuery.matches) {
+            gallery.classList.add("is-slider");
+            images.forEach((image, index) => {
+                image.classList.toggle("is-active", index === activeIndex);
+                image.setAttribute("aria-hidden", String(index !== activeIndex));
+            });
+            gsap.set(images, { xPercent: 0, opacity: 0 });
+            gsap.set(images[activeIndex], { opacity: 1 });
+            return;
+        }
+
+        gallery.classList.remove("is-slider");
+        images.forEach((image) => {
+            image.classList.remove("is-active");
+            image.removeAttribute("aria-hidden");
+        });
+        gsap.set(images, { clearProps: "transform,opacity" });
+    };
+
+    const showImage = (direction) => {
+        const outgoing = images[activeIndex];
+        activeIndex = (activeIndex + direction + images.length) % images.length;
+        const incoming = images[activeIndex];
+
+        gsap.killTweensOf(images);
+        gsap.set(images, { xPercent: 0, opacity: 0 });
+
+        outgoing.classList.remove("is-active");
+        outgoing.setAttribute("aria-hidden", "true");
+        incoming.classList.add("is-active");
+        incoming.setAttribute("aria-hidden", "false");
+
+        gsap.timeline()
+            .to(outgoing, {
+                xPercent: direction > 0 ? -100 : 100,
+                opacity: 0,
+                duration: 0.45,
+                ease: "power2.inOut"
+            }, 0)
+            .fromTo(incoming, {
+                xPercent: direction > 0 ? 100 : -100,
+                opacity: 0
+            }, {
+                xPercent: 0,
+                opacity: 1,
+                duration: 0.55,
+                ease: "power2.out"
+            }, 0);
+    };
+
+    previousButton.addEventListener("click", () => showImage(-1));
+    nextButton.addEventListener("click", () => showImage(1));
+
+    gallery.addEventListener("pointerdown", (event) => {
+        if (mobileGalleryQuery.matches) {
+            pointerStart = { x: event.clientX, y: event.clientY };
+        }
+    });
+
+    gallery.addEventListener("pointerup", (event) => {
+        if (!pointerStart || !mobileGalleryQuery.matches) {
+            pointerStart = null;
+            return;
+        }
+
+        const deltaX = event.clientX - pointerStart.x;
+        const deltaY = event.clientY - pointerStart.y;
+        pointerStart = null;
+
+        if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+            showImage(deltaX < 0 ? 1 : -1);
+        }
+    });
+
+    gallery.addEventListener("pointercancel", () => {
+        pointerStart = null;
+    });
+
+    mobileGalleryQuery.addEventListener("change", setGalleryMode);
+    setGalleryMode();
+});
+
 
 /* ABOUT */
 const galleryImgs = document.querySelectorAll(".gallery .image__wrap");
